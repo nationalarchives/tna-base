@@ -5866,6 +5866,8 @@ footer {
   color: #fff; }
   footer a:active, footer a:link, footer a:visited {
     color: #fce45c; }
+  footer a:focus {
+    color: #000; }
   footer ul {
     padding: 0;
     margin: 0; }

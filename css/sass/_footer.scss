@@ -6,6 +6,9 @@ footer {
   a:active, a:link, a:visited {
     color: $tna_yellow;
   }
+  a:focus {
+    color: #000;
+  }
   ul {
     padding: 0;
     margin: 0;
