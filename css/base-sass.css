@@ -5854,3 +5854,12 @@ footer {
   color: #fff; }
   footer a {
     color: #fce45c; }
+  footer ul {
+    padding: 0;
+    margin: 0; }
+  footer li {
+    list-style-type: none;
+    padding: 0.25em 0;
+    border-top: 1px dotted #666; }
+  footer li:first-child {
+    border-top: none; }
