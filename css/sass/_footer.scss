@@ -1,0 +1,21 @@
+/* TNA footer styles */
+
+footer {
+  background-color: $tna_dark;
+  color: #fff;
+  a:active, a:link, a:visited {
+    color: $tna_yellow;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style-type: none;
+    padding: 0.25em 0;
+    border-top: 1px dotted $tna_mid;
+  }
+  li:first-child {
+    border-top: none;
+  }
+}

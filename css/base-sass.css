@@ -5838,6 +5838,18 @@ h3 {
 h4 {
   font-size: 1.2em; }
 
+a:active, a:link, a:visited {
+  color: #2A5DB0;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:focus {
+  background-color: #fce45c;
+  outline: 3px solid #ebab00;
+  color: #000; }
+
 /* TNA header styles */
 header {
   background-color: #222;
@@ -5852,7 +5864,7 @@ nav {
 footer {
   background-color: #222;
   color: #fff; }
-  footer a {
+  footer a:active, footer a:link, footer a:visited {
     color: #fce45c; }
   footer ul {
     padding: 0;

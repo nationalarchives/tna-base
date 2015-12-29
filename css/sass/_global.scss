@@ -28,6 +28,19 @@ h4 {
   font-size: 1.2em;
 }
 
+a:active, a:link, a:visited {
+  color: #2A5DB0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus {
+  background-color: $tna_yellow;
+  outline: 3px solid $tna_yellow_dark;
+  color: #000;
+}
+
 /* TNA header styles */
 
 header {
@@ -40,26 +53,4 @@ header {
 nav {
   background-color: $tna_blue;
   color: #fff;
-}
-
-/* TNA footer styles */
-
-footer {
-  background-color: $tna_dark;
-  color: #fff;
-  a {
-    color: $tna_yellow;
-  }
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    list-style-type: none;
-    padding: 0.25em 0;
-    border-top: 1px dotted #666;
-  }
-  li:first-child {
-    border-top: none;
-  }
 }
