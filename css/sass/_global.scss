@@ -1,15 +1,15 @@
 /* TNA global styles */
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $tna_body_font;
   font-size: 16px;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Bitter', serif;
+  font-family: $tna_heading_font;
   font-weight: 400;
   z-index: 2;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 h1 {
@@ -26,4 +26,28 @@ h3 {
 
 h4 {
   font-size: 1.2em;
+}
+
+/* TNA header styles */
+
+header {
+  background-color: $tna_dark;
+  color: #fff;
+}
+
+/* TNA nav styles */
+
+nav {
+  background-color: $tna_blue;
+  color: #fff;
+}
+
+/* TNA footer styles */
+
+footer {
+  background-color: $tna_dark;
+  color: #fff;
+  a {
+    color: $tna_yellow;
+  }
 }

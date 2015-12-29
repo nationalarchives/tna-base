@@ -5817,14 +5817,14 @@ button.close {
 /* TNA colours */
 /* TNA global styles */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", arial, sans-serif;
   font-size: 16px; }
 
 h1, h2, h3, h4 {
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", "Open Sans", arial, serif;
   font-weight: 400;
   z-index: 2;
-  line-height: 1.5; }
+  line-height: 1.6; }
 
 h1 {
   font-size: 1.75em; }
@@ -5837,3 +5837,20 @@ h3 {
 
 h4 {
   font-size: 1.2em; }
+
+/* TNA header styles */
+header {
+  background-color: #222;
+  color: #fff; }
+
+/* TNA nav styles */
+nav {
+  background-color: #405480;
+  color: #fff; }
+
+/* TNA footer styles */
+footer {
+  background-color: #222;
+  color: #fff; }
+  footer a {
+    color: #fce45c; }
