@@ -6139,6 +6139,11 @@ nav {
   background-color: #405480;
   color: #fff; }
 
+/* TNA header styles */
+header {
+  background-color: #222;
+  color: #fff; }
+
 /* TNA footer styles */
 footer {
   background-color: #222;
@@ -6153,6 +6158,7 @@ footer {
   footer li {
     list-style-type: none;
     padding: 0.25em 0;
+    margin: 0;
     border-top: 1px dotted #666; }
   footer li:first-child {
     border-top: none; }
