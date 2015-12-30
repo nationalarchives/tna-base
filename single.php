@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-	<main id="content" role="main">
+	<main id="content" <?php post_class(); ?>>
 		<div class="container">
 			<div class="row">
-				<article id="primary" class="content-area col-xs-12 col-sm-12 col-md-8 col-lg-8">
+				<article id="primary" class="content-area col-xs-12 col-sm-12 col-md-8 col-lg-8" role="main">
 					<p>SINGLE</p>
 					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
