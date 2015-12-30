@@ -1,9 +1,3 @@
-<aside id="secondary" class="sidebar" role="complementary">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
+<aside id="secondary" class="sidebar col-lg-4" role="complementary">
 				<p>SIDEBAR</p>
-			</div>
-		</div>
-	</div>
 </aside>
