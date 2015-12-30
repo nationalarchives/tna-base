@@ -1,0 +1,44 @@
+/* TNA form styles */
+
+input[type="submit"] {
+  background-color: #008484;
+  color: #fff;
+  padding: 0.3em .5em;
+  border: 0;
+  height: 40px; /*this height must match the standalone button class for single field forms */
+  margin: 0;
+}
+input[type="text"], input.width-half, #Email /* the Email ID has been applied to single-field email sign-up forms */ {
+  border: 1px solid #ccc;
+  padding: 2px;
+  height:34px;
+  text-indent: 5px;
+  min-width: 220px;
+  width:auto;
+}
+
+input:focus {
+  outline: 3px solid #ebab00;
+}
+input[type="submit"]:focus, a.button:focus {
+  color: #fff;
+  background-color: #111;
+  background-color: rgba (0,0,0,.75);
+}
+
+/* to allow longer single field search form with alternative border style */
+.input-extended input[type="text"] {
+  position:relative;
+  width:95%;
+  border:1px solid #fff;
+}
+
+.input-extended input[type="submit"] {
+  position: absolute;
+  right:5px;
+  bottom:5px;
+}
+
+.input-extended label {
+  display: none;
+}
