@@ -24,6 +24,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<p>NAV</p>
+				<?php require_once('mega-menu.php') ?>
 			</div>
 		</div>
 	</div>

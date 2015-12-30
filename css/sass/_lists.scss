@@ -1,0 +1,105 @@
+/* TNA list styles */
+
+ul, ol {
+  padding-left: 1.5em;
+  margin: 0 0 1.5em 0; /* for consistency with heading and paragraph margins in articles */
+
+}
+
+ul li	{
+  list-style-image: url("../../img/list-bullet.png");
+}
+ul li, ol li {
+  margin: 0 0 .75em 0;
+  line-height: 1.6;
+}
+
+ul li ul, ol li ol {
+  margin: 1em 0 0 0;
+}
+
+.breather p + ul {
+  /* all ul within or alongside paragraphs should have margins defined by class
+  margin: 1em 0 2em 0; */
+}
+
+ul.no-bullet li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0 10px 0;
+  list-style-image: none;
+  list-style-type: none;
+  margin:0;
+}
+ul.no-bullet li:last-child {
+  border-bottom: 0;
+}
+
+ul.full,
+ul.child, ul.sibling, ul.triplets, ul.quadruplets {
+  float: left;
+  padding-bottom: 10px;
+  width: 96%;
+}
+
+
+ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
+  list-style-image: url("../../img/list-link-bullet.png");
+  width: 96%;
+  float:left;
+  margin-bottom: 1em;
+}
+
+ul.sibling {
+  margin-top: 10px;
+}
+ul.sibling li {
+  font-family: 'Bitter', serif;
+  font-size: 1.2em;
+  padding-bottom: 0 !important;
+}
+
+
+ul.documents li a,
+ul.sibling li a,
+ul.urls li a {
+  display: block; /* increases the selectable area for the benefit of smaller screen users and also forces extraneous information outside the link e.g. file type and size onto a second line for neatness */
+}
+ul.documents li {
+  font-size:.9em;
+  padding:.25em 0;
+  margin: .5em;
+}
+ul.documents li a {
+  font-size: 1.2em !important;
+}
+
+ul.form-selectable {
+  margin:0 0 1.25em 0;
+  padding: 0 1%;
+  width:98%;
+  background-color: rgba(0,0,0,.25);
+}
+ul.form-selectable li {
+  float:left;
+  list-style: none inside;
+  display: inline;
+  width: 100%;
+  margin:0 0.2% 2px 0;
+  /*background-color: rgba(0,0,0,.25); - restore once flexbox applied */
+  font-size:.85em;
+  line-height: 1.5;
+}
+
+ul.form-selectable li span {
+  padding: .25em .5em .25em 0;
+  float:left;
+}
+ul.form-selectable li span label {
+  cursor: pointer;
+}
+
+ul.form-selectable li span input[type=checkbox] {
+  position:relative;
+  top:2px;
+  margin-right: .5em;
+}

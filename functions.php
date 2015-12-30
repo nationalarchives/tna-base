@@ -18,7 +18,7 @@ add_action( 'wp_enqueue_scripts', 'tna_styles' );
 function tna_scripts()
 {
 
-	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js' );
+	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', '', '', true );
 
 	wp_enqueue_script('bootstrap-js');
 

@@ -5813,6 +5813,144 @@ button.close {
  * TNA Base styles
  *
  */
+/* TNA reset browser */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  background: #eee;
+  color: #000;
+  line-height: 1.6;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap; }
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, select {
+  text-transform: none;
+  border: 0; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /*width: auto !important;  added to over-ride WP plug-in table default width of 100% */ }
+
+table td {
+  font-size: .9em;
+  line-height: 1.6; }
+
 /* TNA fonts */
 /* TNA colours */
 /* TNA global styles */
@@ -5850,14 +5988,160 @@ a:focus {
   outline: 3px solid #ebab00;
   color: #000; }
 
+address {
+  font-family: "Bitter", "Open Sans", arial, serif;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 1.166em;
+  margin-bottom: 10px; }
+
+hr {
+  height: 1px;
+  border: 0;
+  margin: 1em 0;
+  clear: both; }
+
+/* TNA list styles */
+ul, ol {
+  padding-left: 1.5em;
+  margin: 0 0 1.5em 0;
+  /* for consistency with heading and paragraph margins in articles */ }
+
+ul li {
+  list-style-image: url("../../img/list-bullet.png"); }
+
+ul li, ol li {
+  margin: 0 0 .75em 0;
+  line-height: 1.6; }
+
+ul li ul, ol li ol {
+  margin: 1em 0 0 0; }
+
+.breather p + ul {
+  /* all ul within or alongside paragraphs should have margins defined by class
+  margin: 1em 0 2em 0; */ }
+
+ul.no-bullet li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0 10px 0;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0; }
+
+ul.no-bullet li:last-child {
+  border-bottom: 0; }
+
+ul.full,
+ul.child, ul.sibling, ul.triplets, ul.quadruplets {
+  float: left;
+  padding-bottom: 10px;
+  width: 96%; }
+
+ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
+  list-style-image: url("../../img/list-link-bullet.png");
+  width: 96%;
+  float: left;
+  margin-bottom: 1em; }
+
+ul.sibling {
+  margin-top: 10px; }
+
+ul.sibling li {
+  font-family: 'Bitter', serif;
+  font-size: 1.2em;
+  padding-bottom: 0 !important; }
+
+ul.documents li a,
+ul.sibling li a,
+ul.urls li a {
+  display: block;
+  /* increases the selectable area for the benefit of smaller screen users and also forces extraneous information outside the link e.g. file type and size onto a second line for neatness */ }
+
+ul.documents li {
+  font-size: .9em;
+  padding: .25em 0;
+  margin: .5em; }
+
+ul.documents li a {
+  font-size: 1.2em !important; }
+
+ul.form-selectable {
+  margin: 0 0 1.25em 0;
+  padding: 0 1%;
+  width: 98%;
+  background-color: rgba(0, 0, 0, 0.25); }
+
+ul.form-selectable li {
+  float: left;
+  list-style: none inside;
+  display: inline;
+  width: 100%;
+  margin: 0 0.2% 2px 0;
+  /*background-color: rgba(0,0,0,.25); - restore once flexbox applied */
+  font-size: .85em;
+  line-height: 1.5; }
+
+ul.form-selectable li span {
+  padding: .25em .5em .25em 0;
+  float: left; }
+
+ul.form-selectable li span label {
+  cursor: pointer; }
+
+ul.form-selectable li span input[type=checkbox] {
+  position: relative;
+  top: 2px;
+  margin-right: .5em; }
+
+/* TNA form styles */
+input[type="submit"] {
+  background-color: #008484;
+  color: #fff;
+  padding: 0.3em .5em;
+  border: 0;
+  height: 40px;
+  /*this height must match the standalone button class for single field forms */
+  margin: 0; }
+
+input[type="text"], input.width-half, #Email {
+  border: 1px solid #ccc;
+  padding: 2px;
+  height: 34px;
+  text-indent: 5px;
+  min-width: 220px;
+  width: auto; }
+
+input:focus {
+  outline: 3px solid #ebab00; }
+
+input[type="submit"]:focus, a.button:focus {
+  color: #fff;
+  background-color: #111;
+  background-color: rgba 0, 0, 0, 0.75; }
+
+/* to allow longer single field search form with alternative border style */
+.input-extended input[type="text"] {
+  position: relative;
+  width: 95%;
+  border: 1px solid #fff; }
+
+.input-extended input[type="submit"] {
+  position: absolute;
+  right: 5px;
+  bottom: 5px; }
+
+.input-extended label {
+  display: none; }
+
+/* TNA breadcrumb styles */
+/* TNA nav styles (Mega-menu) */
+nav {
+  background-color: #405480;
+  color: #fff; }
+
 /* TNA header styles */
 header {
   background-color: #222;
-  color: #fff; }
-
-/* TNA nav styles */
-nav {
-  background-color: #405480;
   color: #fff; }
 
 /* TNA footer styles */
@@ -5874,6 +6158,7 @@ footer {
   footer li {
     list-style-type: none;
     padding: 0.25em 0;
+    margin: 0;
     border-top: 1px dotted #666; }
   footer li:first-child {
     border-top: none; }

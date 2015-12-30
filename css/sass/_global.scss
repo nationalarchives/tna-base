@@ -11,19 +11,15 @@ h1, h2, h3, h4 {
   z-index: 2;
   line-height: 1.6;
 }
-
 h1 {
   font-size: 1.75em;
 }
-
 h2 {
   font-size: 1.5em;
 }
-
 h3 {
   font-size: 1.3em;
 }
-
 h4 {
   font-size: 1.2em;
 }
@@ -41,16 +37,17 @@ a:focus {
   color: #000;
 }
 
-/* TNA header styles */
-
-header {
-  background-color: $tna_dark;
-  color: #fff;
+address {
+  font-family: $tna_heading_font;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 1.166em;
+  margin-bottom: 10px;
 }
 
-/* TNA nav styles */
-
-nav {
-  background-color: $tna_blue;
-  color: #fff;
+hr {
+  height: 1px;
+  border:0;
+  margin: 1em 0;
+  clear: both;
 }
