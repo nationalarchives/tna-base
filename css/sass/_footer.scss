@@ -1,18 +1,16 @@
 /* TNA footer styles */
 
 footer {
+  background-image: url("../img/footer-background.png");
   background-color: $tna_dark;
-  color: #fff;
-  a {
-    tel {
-      color:red;
-    }
-  }
+  background-repeat: no-repeat;
+  background-position: -6em 20px;
+  color: $tna_white;
   a:active, a:link, a:visited {
     color: $tna_yellow;
   }
   a:focus {
-    color: #000;
+    color: $tna_dark;
   }
   ul {
     padding: 0;
@@ -20,6 +18,7 @@ footer {
   }
   li {
     list-style-type: none;
+    list-style-image:none;
     padding: 0.25em 0;
     margin: 0;
     border-top: 1px dotted $tna_mid;
@@ -27,9 +26,17 @@ footer {
   li:first-child {
     border-top: none;
   }
+  .tel {
+    color:$tna_white !important;
+    &:hover {
+      text-decoration:none;
+      cursor: text;
+
+    }
+  }
   .footer-base {
     margin: 1.5em 0 0 0;
-    border-top: 1px dotted #555;
+    border-top: 1px dotted $tna_mid;
     padding: 20px 0 0;
     font-size: .85em;
     .ogl {
