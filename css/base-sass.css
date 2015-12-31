@@ -6162,3 +6162,13 @@ footer {
     border-top: 1px dotted #666; }
   footer li:first-child {
     border-top: none; }
+  footer .footer-base {
+    margin: 2em 0 0 0;
+    border-top: 1px dotted #555;
+    padding: 20px 0 0;
+    font-size: .85em; }
+    footer .footer-base a img {
+      float: right; }
+    footer .footer-base img {
+      float: left;
+      margin: 5px 25px 10px 0; }

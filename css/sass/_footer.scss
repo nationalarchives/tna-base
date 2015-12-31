@@ -22,4 +22,19 @@ footer {
   li:first-child {
     border-top: none;
   }
+  .footer-base {
+    margin: 2em 0 0 0;
+    border-top: 1px dotted #555;
+    padding: 20px 0 0;
+    font-size: .85em;
+    a {
+      img {
+        float:right;
+      }
+    }
+    img {
+      float:left;
+      margin: 5px 25px 10px 0;
+    }
+  }
 }
