@@ -3,6 +3,11 @@
 footer {
   background-color: $tna_dark;
   color: #fff;
+  a {
+    tel {
+      color:red;
+    }
+  }
   a:active, a:link, a:visited {
     color: $tna_yellow;
   }
@@ -23,18 +28,15 @@ footer {
     border-top: none;
   }
   .footer-base {
-    margin: 2em 0 0 0;
+    margin: 1.5em 0 0 0;
     border-top: 1px dotted #555;
     padding: 20px 0 0;
     font-size: .85em;
-    a {
+    .ogl {
       img {
-        float:right;
+        float:left;
+        margin: 5px 25px 10px 0;
       }
-    }
-    img {
-      float:left;
-      margin: 5px 25px 10px 0;
     }
   }
 }

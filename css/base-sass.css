@@ -6148,6 +6148,8 @@ header {
 footer {
   background-color: #222;
   color: #fff; }
+  footer a tel {
+    color: red; }
   footer a:active, footer a:link, footer a:visited {
     color: #fce45c; }
   footer a:focus {
@@ -6163,12 +6165,10 @@ footer {
   footer li:first-child {
     border-top: none; }
   footer .footer-base {
-    margin: 2em 0 0 0;
+    margin: 1.5em 0 0 0;
     border-top: 1px dotted #555;
     padding: 20px 0 0;
     font-size: .85em; }
-    footer .footer-base a img {
-      float: right; }
-    footer .footer-base img {
+    footer .footer-base .ogl img {
       float: left;
       margin: 5px 25px 10px 0; }
