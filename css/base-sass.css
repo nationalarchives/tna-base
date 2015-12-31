@@ -6001,6 +6001,16 @@ hr {
   margin: 1em 0;
   clear: both; }
 
+.breather-top {
+  padding-top: 1em; }
+
+.breather-bottom {
+  padding-bottom: 1em; }
+
+.breather-top-bottom {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
 /* TNA list styles */
 ul, ol {
   padding-left: 1.5em;
@@ -6146,19 +6156,36 @@ header {
 
 /* TNA footer styles */
 footer {
+  background-image: url("../img/footer-background.png");
   background-color: #222;
+  background-repeat: no-repeat;
+  background-position: -6em 20px;
   color: #fff; }
   footer a:active, footer a:link, footer a:visited {
     color: #fce45c; }
   footer a:focus {
-    color: #000; }
+    color: #222; }
   footer ul {
     padding: 0;
     margin: 0; }
   footer li {
     list-style-type: none;
+    list-style-image: none;
     padding: 0.25em 0;
     margin: 0;
     border-top: 1px dotted #666; }
   footer li:first-child {
     border-top: none; }
+  footer .tel {
+    color: #fff !important; }
+    footer .tel:hover {
+      text-decoration: none;
+      cursor: text; }
+  footer .footer-base {
+    margin: 1.5em 0 0 0;
+    border-top: 1px dotted #666;
+    padding: 20px 0 0;
+    font-size: .85em; }
+    footer .footer-base .ogl img {
+      float: left;
+      margin: 5px 25px 10px 0; }
