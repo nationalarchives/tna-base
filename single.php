@@ -4,11 +4,11 @@
 		<div class="container">
 			<div class="row">
 				<main id="main" class="col-xs-12 col-sm-12 col-md-8" role="main">
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<p>SINGLE</p>
-						<h1><?php the_title(); ?></h1>
-						<?php the_content(); ?>
-					</article>
+					<?php
+					while ( have_posts() ) : the_post();
+						get_template_part ( 'content' );
+					endwhile;
+					?>
 				</main>
 				<?php get_sidebar(); ?>
 			</div>
