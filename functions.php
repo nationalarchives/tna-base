@@ -6,7 +6,7 @@
 function tna_styles()
 {
 
-    wp_register_style( 'tna-styles', get_stylesheet_directory_uri() . '/css/base-sass.css', '', '', 'all' );
+    wp_register_style( 'tna-styles', get_stylesheet_directory_uri() . '/css/base-sass.css', array(), '0.1', 'all' );
 	wp_register_style( 'tna-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Bitter', '', '', 'all' );
 
     wp_enqueue_style( 'tna-styles' );
@@ -18,7 +18,7 @@ add_action( 'wp_enqueue_scripts', 'tna_styles' );
 function tna_scripts()
 {
 
-	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', '', '', true );
+	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.6', true );
 
 	wp_enqueue_script('bootstrap-js');
 
