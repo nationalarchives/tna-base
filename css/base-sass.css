@@ -5986,7 +5986,7 @@ a:hover {
 a:focus {
   background-color: #fce45c;
   outline: 3px solid #ebab00;
-  color: #000; }
+  color: #222; }
 
 address {
   font-family: "Bitter", "Open Sans", arial, serif;
@@ -6010,6 +6010,25 @@ hr {
 .breather-top-bottom {
   padding-top: 1em;
   padding-bottom: 1em; }
+
+#goTop {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  text-align: center;
+  background: whiteSmoke;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  position: fixed;
+  top: 47%;
+  right: -100px;
+  background: url(../img/icon-32-top.gif) center center no-repeat rgba(0, 0, 0, 0.66);
+  background-size: cover;
+  z-index: 5000;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%; }
 
 /* TNA list styles */
 ul, ol {
