@@ -41,4 +41,13 @@ Click 'Remote' in SourceTree and you will be shown a full list of repositories y
 
 ### 1.6 Running Grunt
 
-Assuming that the Grunt CLI has been installed follow the instructions on the [Grunt website] (http://gruntjs.com/getting-started#working-with-an-existing-grunt-project)
+Assuming that the Grunt CLI has been installed follow the instructions on the [Grunt website] (http://gruntjs.com/getting-started#working-with-an-existing-grunt-project).
+
+### 1.7 Ignoring NodeJS
+
+* Copy and paste this line of code into the .gitignore using your preferred text editor:
+  ``` 
+  
+  # NodeJS
+  /node_modules/
+  ```
