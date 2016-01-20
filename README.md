@@ -45,7 +45,7 @@ Assuming that the Grunt CLI has been installed follow the instructions on the [G
 
 ### 1.7 Ignoring NodeJS
 
-* Copy and paste this line of code into the .gitignore using your preferred text editor:
+* Copy and paste the line of code below into the .gitignore using your preferred text editor:
   ``` 
   
   # NodeJS
