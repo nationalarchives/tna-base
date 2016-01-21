@@ -2,5 +2,201 @@
 
 header {
   background-color: $tna_dark;
-  color: #fff;
+  color: $tna_white;
+  padding:10px 0;
+}
+
+
+/* Mega menu button  */
+
+#mega-menu-pull-down {
+  background-image: url(../img/menu-collapsed.png);
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-color: $tna_red;
+  display: block;
+  margin: -20px auto 0 auto;
+  position: relative;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  z-index: 2000;
+  top: 30px;
+  /*animation-name*/
+  -webkit-animation-name:subtle-bounce;
+  -moz-animation-name:subtle-bounce;
+  -ms-animation-name:subtle-bounce;
+  -o-animation-name:subtle-bounce;
+  animation-name:subtle-bounce;
+  /*animation-duration*/
+  -webkit-animation-duration:500ms;
+  -moz-animation-duration:500ms;
+  -ms-animation-duration:500ms;
+  -o-animation-duration:500ms;
+  animation-duration:500ms;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count:3;
+  -moz-animation-iteration-count:3;
+  -ms-animation-iteration-count:3;
+  -o-animation-iteration-count:3;
+  animation-iteration-count:3;
+  /*animation-delay*/
+  -webkit-animation-delay:4s;
+  -moz-animation-delay:4s;
+  -ms-animation-delay:4s;
+  -o-animation-delay:4s;
+  animation-delay:4s;
+  @media only screen and (max-width: 767px) {
+    display:none;
+  }
+  span {
+    top:-4px;
+    z-index:999;
+    position:relative;
+    font-size:0.9em;
+  }
+}
+
+@-webkit-keyframes subtle-bounce {
+  0%, 100% { background-position: 50% 100%  }
+  50% { background-position: 50% 110% }
+}
+@-moz-keyframes subtle-bounce {
+  0%, 100% { background-position: 50% 100%  }
+  50% { background-position: 50% 110% }
+}
+@-o-keyframes subtle-bounce {
+  0%, 100% { background-position: 50% 100%  }
+  50% { background-position: 50% 110% }
+}
+@keyframes subtle-bounce {
+  0%, 100% { background-position: 50% 100%  }
+  50% { background-position: 50% 110% }
+}
+
+
+#mega-menu-mobile,
+#search-expander {
+  @media only screen and (min-width: 768px) {
+    display:none;
+  }
+}
+
+#search-field-wrapper,
+#mobile-search-wrapper {
+  position: relative;
+}
+#search-field-wrapper input[type="submit"],
+#mobile-search-wrapper input[type="submit"] {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/search-white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Custom text fields for global search */
+
+#search-field-wrapper input[type="text"] {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 226px;
+  height: 40px;
+  color:$tna_dark;
+}
+
+#scope-selector {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 266px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-image: url(../img/scope-selector.png);
+  background-color: #555;
+  background-size: cover;
+  cursor: pointer;
+
+}
+#globalSearch .expanded {
+  background-image: url(../img/scope-selector-expanded.png);
+}
+
+.search-field-wrapper-medium {
+  float:right;
+  max-width: 331px;
+  margin-right:1em;
+  input[type="text"] {
+    min-width: 70%;
+  }
+}
+
+#search-options {
+  background-color: #333;
+  position: absolute;
+  top: 41px;
+  right: 104px;
+  padding: 5px 5px 5px 5px;
+  width: 202px;
+  z-index: 4000;
+  li {
+    list-style-type: none;
+    list-style-image:none;
+    a {
+      color: #FFF;
+      font-size: 0.9em;
+      padding: 0.5em;
+      display: block;
+      &:hover {
+        background-color: #FCE45C;
+        color: #000;
+      }
+    }
+  }
+}
+
+/* Mega menu button (mobile view only) */
+#mega-menu-mobile {
+  height: 48px;
+  width: 40px;
+  float: left;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative; }
+
+#mega-menu-mobile button {
+  height: 40px;
+  width: 40px;
+  background: url("../images/global/menu-trigram-lrg.png") center no-repeat;
+  border: 0px;
+  z-index: 2;
+  background-color: $tna_red;
+  border-radius: 50%; }
+
+/* 'Search our website/search our records' (mobile view only) */
+#changeDestination {
+  color: #FFF;
+  padding-top: 0.5em; }
+
+#changeDestination label {
+  margin: 0 0.5em; }
+
+
+/* Mega-menu container */
+#nav {
+  ul{
+    list-style-type:none;
+  }
+  li {
+    a {
+      color:$tna-white;
+    }
+  }
 }
