@@ -26,7 +26,7 @@ Click 'Remote' in SourceTree and you will be shown a full list of repositories y
 
 * Select 'Create New Project from Existing Files' 
 * Select 'Web server is installed locally, source files are located under its document root' 
-* Set /Applications/MAMP/htdocs/sites/tna-base-dev as Project Root
+* Set /Applications/MAMP/htdocs/sites/tna-base-dev/wp-content/themes/tna-base as Project Root
 * Specify parameters for a new server as:
   * Name: tna-base-dev
   * Web server root URL: http://tna-base-dev:8888
@@ -35,10 +35,19 @@ Click 'Remote' in SourceTree and you will be shown a full list of repositories y
 ### 1.5 Enable WordPress integration in PhpStorm
 
 * Open the tna-base-dev project in PhpStorm
-* Go to PhpStorm > Preferences > Languages & Frameworks > WordPress
+* Go to PhpStorm > Preferences > Languages & Frameworks > Php > WordPress
 * Check the 'Enable WordPress Integration' box
 * Set the WordPress installation path as the root directory for the tna-base-dev WordPress installation (typically /Applications/MAMP/htdocs/sites/tna-base-dev/)
 
 ### 1.6 Running Grunt
 
-Assuming that the Grunt CLI has been installed follow the instructions on the [Grunt website] (http://gruntjs.com/getting-started#working-with-an-existing-grunt-project)
+Assuming that the Grunt CLI has been installed follow the instructions on the [Grunt website] (http://gruntjs.com/getting-started#working-with-an-existing-grunt-project).
+
+### 1.7 Ignoring NodeJS
+
+* Copy and paste the line of code below into the .gitignore using your preferred text editor:
+  ``` 
+  
+  # NodeJS
+  /node_modules/
+  ```
