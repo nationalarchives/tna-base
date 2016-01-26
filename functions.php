@@ -31,4 +31,6 @@ function tna_scripts()
 }
 add_action( 'wp_enqueue_scripts', 'tna_scripts' );
 
+include 'inc/functions/dimox_breadcrumbs.php';
+
 ?>
