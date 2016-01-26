@@ -5956,7 +5956,8 @@ table td {
 /* TNA global styles */
 body {
   font-family: "Open Sans", arial, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #eee; }
 
 h1, h2, h3, h4 {
   font-family: "Bitter", "Open Sans", arial, serif;
@@ -6010,6 +6011,9 @@ hr {
 .breather-top-bottom {
   padding-top: 1em;
   padding-bottom: 1em; }
+
+.breather {
+  padding: 1em; }
 
 #goTop {
   height: 40px;
@@ -6402,3 +6406,28 @@ footer {
     footer .footer-base .ogl img {
       float: left;
       margin: 5px 25px 10px 0; }
+
+/* TNA template styles */
+/* Default template */
+article {
+  background-color: #fff;
+  margin-bottom: 1.5em; }
+  article .entry-header {
+    padding: 10px 0 0 0;
+    background: url(../img/dot-grey.png); }
+    article .entry-header h1 {
+      font-size: 2em;
+      padding: 4px 10px;
+      background-color: #405480;
+      color: #fff;
+      line-height: 125%;
+      margin: 0 0 0 -10px;
+      display: inline-block; }
+  article .entry-header:after {
+    content: ' ';
+    display: block;
+    height: 10px;
+    margin: 0 0 0 -10px;
+    background: url(../img/heading-flourish.png) no-repeat bottom left; }
+  article .entry-content {
+    padding: 20px; }

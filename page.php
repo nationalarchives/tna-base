@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part ( 'breadcrumb' ); ?>
 
 	<div id="primary" class="content-area">
 		<div class="container">
