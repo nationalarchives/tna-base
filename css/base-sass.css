@@ -6440,3 +6440,24 @@ article {
     background: url(../img/heading-flourish.png) no-repeat bottom left; }
   article .entry-content {
     padding: 20px; }
+
+/* TNA sidebar styles */
+aside {
+  background-color: #fff;
+  margin-bottom: 1.5em; }
+  aside .sidebar-header {
+    padding: 10px 0 0 0;
+    background: url(../img/dot-grey.png); }
+    aside .sidebar-header h2 {
+      padding: 4px 10px;
+      background-color: #405480;
+      color: #fff;
+      line-height: 125%;
+      margin: 0 0 0 -10px;
+      display: inline-block; }
+  aside .side-header:after {
+    content: ' ';
+    display: block;
+    height: 10px;
+    margin: 0 0 0 -10px;
+    background: url(../img/heading-flourish.png) no-repeat bottom left; }
