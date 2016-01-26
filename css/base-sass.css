@@ -5956,8 +5956,7 @@ table td {
 /* TNA global styles */
 body {
   font-family: "Open Sans", arial, sans-serif;
-  font-size: 16px;
-  background-color: #eee; }
+  font-size: 16px; }
 
 h1, h2, h3, h4 {
   font-family: "Bitter", "Open Sans", arial, serif;
@@ -6012,9 +6011,6 @@ hr {
   padding-top: 1em;
   padding-bottom: 1em; }
 
-.breather {
-  padding: 1em; }
-
 #goTop {
   height: 40px;
   width: 40px;
@@ -6033,6 +6029,10 @@ hr {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%; }
+
+#skip-to-main-content {
+  position: absolute;
+  top: -30px; }
 
 /* TNA list styles */
 ul, ol {
@@ -6167,10 +6167,6 @@ input[type="submit"]:focus, a.button:focus {
   display: none; }
 
 /* TNA breadcrumb styles */
-.tna-breadcrumb .breadcrumbs {
-  margin: 1em 0;
-  font-size: .9em; }
-
 /* TNA nav styles (Mega-menu) */
 nav {
   background-color: #405480;
@@ -6253,9 +6249,18 @@ header {
   50% {
     background-position: 50% 110%; } }
 @media only screen and (min-width: 768px) {
-  #mega-menu-mobile,
-  #search-expander {
+  #mega-menu-mobile {
     display: none; } }
+
+#search-expander {
+  height: 2.1em;
+  width: 40px;
+  background: url(../img/search-white.png) center no-repeat;
+  background-size: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer; }
 
 #search-field-wrapper,
 #mobile-search-wrapper {
@@ -6333,14 +6338,14 @@ header {
   overflow: hidden;
   position: relative; }
 
-#mega-menu-mobile button {
+#logo-holder button {
   height: 40px;
   width: 40px;
-  background: url("../images/global/menu-trigram-lrg.png") center no-repeat;
+  background: url("../img/menu-trigram-lrg.png") center no-repeat;
   border: 0px;
   z-index: 2;
   background-color: #cb0d07;
-  border-radius: 50%; }
+  border-radius: 100%; }
 
 /* 'Search our website/search our records' (mobile view only) */
 #changeDestination {
@@ -6351,37 +6356,86 @@ header {
   margin: 0 0.5em; }
 
 /* Mega-menu container */
-#nav h3 a {
-  color: #fff; }
-#nav h3.expanded {
-  background-image: url(../img/minus.png); }
-@media (max-width: 480px) {
-  #nav h3 {
-    background: url(../img/plus.png) 5px 12px no-repeat;
-    padding: 5px 5px 5px 22px;
-    cursor: pointer;
-    text-shadow: none; } }
-#nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-#nav li {
-  font-size: .9em;
+.mega-menu {
+  padding: 0.5em 1em 0 1em;
+  position: relative;
+  z-index: 1;
+  background-color: #405480;
+  color: #EEEEEE; }
+
+.js .mega-menu {
+  display: none; }
+
+/* Turn on mega-menu container for <noscript >  alternative */
+noscript .mega-menu {
+  display: block; }
+
+/* Custom mega menu h3 heading (which includes show/hide facility at mobile view) */
+.mega-menu h3 {
+  background: url("../images/global/plus.png") no-repeat 5px 12px;
+  padding: 5px 5px 5px 22px;
+  cursor: pointer;
+  display: block;
+  text-shadow: none; }
+
+.mega-menu h3.expanded {
+  background-image: url("../images/global/minus.png"); }
+
+/* Custom mega menu list style */
+.mega-menu ul {
+  margin: 10px 0;
+  list-style: none; }
+
+.mega-menu li {
+  font-size: 0.9em;
   list-style-image: none;
-  border-top: 1px dotted #192132;
-  margin: 0; }
-  #nav li a {
-    color: #fff;
-    padding: 4px;
-    display: block;
-    width: 100%; }
-    #nav li a:hover {
-      text-decoration: underline;
-      cursor: pointer; }
-    #nav li a:active, #nav li a:hover {
-      outline: 0; }
-    #nav li a img {
-      width: 100%; }
+  border-top: 1px dotted #192132; }
+
+.mega-menu li:first-child {
+  border-top: 0; }
+
+.mega-menu li:last-child {
+  border-bottom: 0; }
+
+/* Custom mega menu link */
+.mega-menu a {
+  color: #fff;
+  display: block;
+  padding: 4px; }
+
+/* Custom mega menu paragraph */
+.mega-menu p {
+  font-size: 0.9em; }
+
+.mega-menu ul {
+  display: none;
+  padding-bottom: 10px; }
+
+.mega-menu span {
+  background-image: none; }
+
+/* Add images to mega menu */
+.mega-menu img {
+  max-width: 100%; }
+
+.mega-menu img:hover {
+  opacity: 0.9;
+  cursor: pointer; }
+
+@media only screen and (min-width: 320px) {
+  #mobile-logo-holder img {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+    float: none; } }
+@media only screen and (min-width: 480px) {
+  #mobile-logo-holder img {
+    width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+    float: none; } }
+#search-expander .expanded {
+  background: url("../img/close-search.png") center no-repeat; }
 
 /* TNA footer styles */
 footer {
@@ -6418,28 +6472,3 @@ footer {
     footer .footer-base .ogl img {
       float: left;
       margin: 5px 25px 10px 0; }
-
-/* TNA template styles */
-/* Default template */
-article {
-  background-color: #fff;
-  margin-bottom: 1.5em; }
-  article .entry-header {
-    padding: 10px 0 0 0;
-    background: url(../img/dot-grey.png); }
-    article .entry-header h1 {
-      font-size: 2em;
-      padding: 4px 10px;
-      background-color: #405480;
-      color: #fff;
-      line-height: 125%;
-      margin: 0 0 0 -10px;
-      display: inline-block; }
-  article .entry-header:after {
-    content: ' ';
-    display: block;
-    height: 10px;
-    margin: 0 0 0 -10px;
-    background: url(../img/heading-flourish.png) no-repeat bottom left; }
-  article .entry-content {
-    padding: 20px; }
