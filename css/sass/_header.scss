@@ -191,12 +191,38 @@ header {
 
 /* Mega-menu container */
 #nav {
+  div{
+    h3 {
+      a{
+        color:$tna-white;
+      }
+    }
+  }
   ul{
+    margin:0;
+    padding:0;
     list-style-type:none;
   }
   li {
+    font-size: .9em;
+    list-style-image: none;
+    border-top: 1px dotted #192132;
+    margin:0;
     a {
       color:$tna-white;
+      padding:4px;
+      display:block;
+      width:100%;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      &:active,&:hover{
+        outline:0;
+      }
+      img {
+        width:100%;
+      }
     }
   }
 }

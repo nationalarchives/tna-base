@@ -6343,10 +6343,29 @@ header {
   margin: 0 0.5em; }
 
 /* Mega-menu container */
-#nav ul {
-  list-style-type: none; }
-#nav li a {
+#nav div h3 a {
   color: #fff; }
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+#nav li {
+  font-size: .9em;
+  list-style-image: none;
+  border-top: 1px dotted #192132;
+  margin: 0; }
+  #nav li a {
+    color: #fff;
+    padding: 4px;
+    display: block;
+    width: 100%; }
+    #nav li a:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+    #nav li a:active, #nav li a:hover {
+      outline: 0; }
+    #nav li a img {
+      width: 100%; }
 
 /* TNA footer styles */
 footer {
