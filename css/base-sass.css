@@ -5956,7 +5956,8 @@ table td {
 /* TNA global styles */
 body {
   font-family: "Open Sans", arial, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #eee; }
 
 h1, h2, h3, h4 {
   font-family: "Bitter", "Open Sans", arial, serif;
@@ -6010,6 +6011,9 @@ hr {
 .breather-top-bottom {
   padding-top: 1em;
   padding-bottom: 1em; }
+
+.breather {
+  padding: 1em; }
 
 #goTop {
   height: 40px;
@@ -6208,3 +6212,9 @@ footer {
     footer .footer-base .ogl img {
       float: left;
       margin: 5px 25px 10px 0; }
+
+/* TNA template styles */
+/* Default template */
+main article {
+  background-color: #fff;
+  padding: 20px; }
