@@ -73,3 +73,24 @@ $(document).on('click', '#cookieCutter', function(e){
     $('.cookieNotice').hide();
 });
 // ----------------------------------------
+// 3 Binding to document (event delegation)
+// ----------------------------------------
+
+$(document).on('click', '#nav h3', function(e){
+    if($(window).width() < 480) {
+        $(this).parents('nav').find('ul').slideToggle();
+        $(this).toggleClass('expanded');
+        e.preventDefault();
+    } else {
+        return;
+    }
+});
+
+// Bindings to window
+$(window).on({
+    resize: function() {
+        if($(window).width() > 480){
+            $('#nav ul').show();
+        }
+    }
+});

@@ -191,11 +191,15 @@ header {
 
 /* Mega-menu container */
 #nav {
-  div{
-    h3 {
-      a{
-        color:$tna-white;
-      }
+  .mobileOnly {
+    display:none;
+    @media (max-width:479px){
+      display:block;
+    }
+  }
+  h3 {
+    a{
+      color:$tna-white;
     }
   }
   ul{

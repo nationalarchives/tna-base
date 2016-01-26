@@ -6343,7 +6343,12 @@ header {
   margin: 0 0.5em; }
 
 /* Mega-menu container */
-#nav div h3 a {
+#nav .mobileOnly {
+  display: none; }
+  @media (max-width: 479px) {
+    #nav .mobileOnly {
+      display: block; } }
+#nav h3 a {
   color: #fff; }
 #nav ul {
   margin: 0;
