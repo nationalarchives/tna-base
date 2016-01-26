@@ -20,12 +20,5 @@
 	</div>
 </header>
 <nav id="nav" role="navigation">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<p>NAV</p>
-				<?php get_template_part( 'inc/content/mega-menu' ); ?>
-			</div>
-		</div>
-	</div>
+	<?php get_template_part( 'inc/content/mega-menu' ); ?>
 </nav>
