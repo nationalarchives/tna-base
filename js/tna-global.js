@@ -5,6 +5,7 @@
 // ----------------------------------------
 // 1. Back to top
 // 2. Website cookie
+// 3. Mega menu for mobile
 // ----------------------------------------
 
 // 1. Back to top  - Displays a back to top link when the user has scrolled on longer pages.
@@ -44,8 +45,11 @@ tnaCheckForThisCookie = function (name) {
         return true;
     }
 };
+// ----------------------------------------
 
-// 2.3 Cookie notification
+// ----------------------------------------
+// 2.3 Cookie notification ----------------
+// ----------------------------------------
 $(function(){ // All content must be placed within this IIFE.
     if (!tnaCheckForThisCookie("dontShowCookieNotice")) {
         $('<div class="cookieNotice">We use cookies to improve services and ensure they work for you. Read our <a href="http://www.nationalarchives.gov.uk/legal/cookies.htm">cookie policy</a>. <a href="#" id="cookieCutter">Close</a></div>').css({
@@ -73,24 +77,43 @@ $(document).on('click', '#cookieCutter', function(e){
     $('.cookieNotice').hide();
 });
 // ----------------------------------------
-// 3 Binding to document (event delegation)
+
+// ----------------------------------------
+// 3 Mega menu for mobile -----------------
+// ----------------------------------------
+$(document).ready(function(){
+    // When click show the childrens of the main categories
+    $(document).on('click', '#nav h3', function(e){
+        if($(window).width() < 480) {
+            $(this).next("ul").slideToggle("slow");
+            $(this).toggleClass('expanded');
+            e.preventDefault();
+        } else {
+            return;
+        }
+    });
+    // Show/Hide ul on mobile and desktop
+    if($(window).width() < 480) {
+        $('#nav ul').hide();
+        $('#nav ul li.mobileOnly').show();
+
+    }else {
+        $('#nav ul li.mobileOnly').hide();
+    }
+
+    // Bindings to window
+    $(window).on({
+        resize: function() {
+            if($(window).width() > 480){
+                $('#nav ul').show();
+                $('#nav ul li.mobileOnly').hide();
+            } else {
+                $('#nav ul').hide();
+                $('#nav ul li.mobileOnly').show();
+            }
+        }
+    });
+});
 // ----------------------------------------
 
-$(document).on('click', '#nav h3', function(e){
-    if($(window).width() < 480) {
-        $(this).parents('nav').find('ul').slideToggle();
-        $(this).toggleClass('expanded');
-        e.preventDefault();
-    } else {
-        return;
-    }
-});
 
-// Bindings to window
-$(window).on({
-    resize: function() {
-        if($(window).width() > 480){
-            $('#nav ul').show();
-        }
-    }
-});

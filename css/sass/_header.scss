@@ -191,15 +191,18 @@ header {
 
 /* Mega-menu container */
 #nav {
-  .mobileOnly {
-    display:none;
-    @media (max-width:479px){
-      display:block;
-    }
-  }
   h3 {
     a{
       color:$tna-white;
+    }
+    &.expanded {
+      background-image: url(../img/minus.png);
+    }
+    @media (max-width:480px) {
+        background: url(../img/plus.png) 5px 12px no-repeat;
+        padding: 5px 5px 5px 22px;
+        cursor: pointer;
+        text-shadow: none;
     }
   }
   ul{

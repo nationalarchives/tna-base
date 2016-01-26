@@ -6351,13 +6351,16 @@ header {
   margin: 0 0.5em; }
 
 /* Mega-menu container */
-#nav .mobileOnly {
-  display: none; }
-  @media (max-width: 479px) {
-    #nav .mobileOnly {
-      display: block; } }
 #nav h3 a {
   color: #fff; }
+#nav h3.expanded {
+  background-image: url(../img/minus.png); }
+@media (max-width: 480px) {
+  #nav h3 {
+    background: url(../img/plus.png) 5px 12px no-repeat;
+    padding: 5px 5px 5px 22px;
+    cursor: pointer;
+    text-shadow: none; } }
 #nav ul {
   margin: 0;
   padding: 0;

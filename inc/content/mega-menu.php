@@ -28,7 +28,7 @@
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/For students ','WT.ti','Menu - For students ');" href="/education/students/">For students</a></li>
                 </ul>
         </div>
-        <div class="ol-xs-12 col-sm-6 col-md-2">
+        <div class="col-xs-12 col-sm-6 col-md-2">
                 <h3><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/help-with-your-research ','WT.ti','Menu  Help with your research home ');" href="/help-with-your-research">Help with your research</a></h3>
                 <ul>
                     <li class="mobileOnly"><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/help-with-your-research ','WT.ti','Menu  Help with your research home ');" href="/help-with-your-research/">Help with your research home</a></li>
