@@ -6215,6 +6215,25 @@ footer {
 
 /* TNA template styles */
 /* Default template */
-main article {
+article {
   background-color: #fff;
-  padding: 20px; }
+  margin-bottom: 1.5em; }
+  article .entry-header {
+    padding: 10px 0 0 0;
+    background: url(../img/dot-grey.png); }
+    article .entry-header h1 {
+      font-size: 2em;
+      padding: 4px 10px;
+      background-color: #405480;
+      color: #fff;
+      line-height: 125%;
+      margin: 0 0 0 -10px;
+      display: inline-block; }
+  article .entry-header:after {
+    content: ' ';
+    display: block;
+    height: 10px;
+    margin: 0 0 0 -10px;
+    background: url(../img/heading-flourish.png) no-repeat bottom left; }
+  article .entry-content {
+    padding: 20px; }

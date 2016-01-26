@@ -2,9 +2,30 @@
 
 /* Default template */
 
-main {
-  article {
-    background-color: #fff;
+article {
+  background-color: #fff;
+  margin-bottom: 1.5em;
+  .entry-header {
+    padding: 10px 0 0 0;
+    background: url(../img/dot-grey.png);
+    h1 {
+      font-size: 2em;
+      padding: 4px 10px;
+      background-color: $tna_blue;
+      color: #fff;
+      line-height: 125%;
+      margin: 0 0 0 -10px;
+      display: inline-block;
+    }
+  }
+  .entry-header:after {
+    content: ' ';
+    display: block;
+    height: 10px;
+    margin: 0 0 0 -10px;
+    background: url(../img/heading-flourish.png) no-repeat bottom left;
+  }
+  .entry-content {
     padding: 20px;
   }
 }
