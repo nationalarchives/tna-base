@@ -13,8 +13,8 @@ $parentid = $post->post_parent;
 			</a>
 		</h2>
 	</div>
-	<div class="sidebar-nav">
-		<ul>
+	<div class="sidebar-nav clearfix">
+		<ul class="sibling">
 			<?php
 
 			// This uses wp_list_pages to get the list of siblings of the current page. However we're actually showing the children of the parent page. We're also excluding the current page ID ($post->ID) so as not to duplicate it in the navigation and sorting the links by their menu order, as set manually on the WP edit page
