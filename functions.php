@@ -33,4 +33,12 @@ add_action( 'wp_enqueue_scripts', 'tna_scripts' );
 
 include 'inc/functions/dimox_breadcrumbs.php';
 
+	// Remove the emoji from the head section
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+	// Remove wordpress generator meta from head
+	remove_action('wp_head', 'wp_generator');
 ?>
