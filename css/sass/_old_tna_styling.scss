@@ -5,3 +5,10 @@
 #nav {
   padding:.5em 1em 1.5em;
 }
+
+
+  .container {
+    @media (min-width: 1200px) {
+      width: 1240px;
+    }
+}

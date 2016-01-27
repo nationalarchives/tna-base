@@ -6494,3 +6494,7 @@ article {
 /* -------------------------- */
 #nav {
   padding: .5em 1em 1.5em; }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1240px; } }
