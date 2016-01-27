@@ -6443,3 +6443,9 @@ article {
     background: url(../img/heading-flourish.png) no-repeat bottom left; }
   article .entry-content {
     padding: 20px; }
+
+/* -------------------------- */
+/* Old TNA styling ---------- */
+/* -------------------------- */
+#nav {
+  padding: .5em 1em 1.5em; }
