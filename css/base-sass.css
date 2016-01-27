@@ -6424,6 +6424,10 @@ header {
 #search-expander .expanded {
   background: url("../img/close-search.png") center no-repeat; }
 
+#skip-to-main-content {
+  position: absolute;
+  top: -30px; }
+
 /* TNA footer styles */
 footer {
   background-image: url("../img/footer-background.png");
