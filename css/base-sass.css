@@ -6383,6 +6383,29 @@ header {
     #nav li a img {
       width: 100%; }
 
+#mobileGlobalSearch input[type='text'] {
+  width: 100%;
+  border-radius: 0px;
+  border: none;
+  height: 40px; }
+#mobileGlobalSearch input[type='submit'] {
+  background: url(../img/search-white.png) center no-repeat;
+  cursor: pointer;
+  background-color: #008484;
+  width: 40px; }
+#mobileGlobalSearch .input-group-addon {
+  padding: 0px;
+  border: none; }
+
+#logo-holder button {
+  height: 40px;
+  width: 40px;
+  background: url("../img/menu-trigram-lrg.png") center no-repeat;
+  border: 0px;
+  z-index: 2;
+  background-color: #cb0d07;
+  border-radius: 100%; }
+
 /* TNA footer styles */
 footer {
   background-image: url("../img/footer-background.png");

@@ -233,3 +233,35 @@ header {
     }
   }
 }
+
+
+#mobileGlobalSearch {
+  input[type='text'] {
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+    height: 40px;
+  }
+  input[type='submit'] {
+    background: url(../img/search-white.png) center no-repeat;
+    cursor: pointer;
+    background-color: $tna_teal;
+    width: 40px;
+  }
+  .input-group-addon {
+    padding: 0px;
+    border: none;
+  }
+}
+
+#logo-holder {
+  button {
+    height: 40px;
+    width: 40px;
+    background: url("../img/menu-trigram-lrg.png") center no-repeat;
+    border: 0px;
+    z-index: 2;
+    background-color: $tna_red;
+    border-radius: 100%;
+  }
+}
