@@ -6253,9 +6253,18 @@ header {
   50% {
     background-position: 50% 110%; } }
 @media only screen and (min-width: 768px) {
-  #mega-menu-mobile,
-  #search-expander {
+  #mega-menu-mobile {
     display: none; } }
+
+#search-expander {
+  height: 2.1em;
+  width: 40px;
+  background: url(../img/search-white.png) center no-repeat;
+  background-size: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer; }
 
 #search-field-wrapper,
 #mobile-search-wrapper {
@@ -6332,15 +6341,6 @@ header {
   cursor: pointer;
   overflow: hidden;
   position: relative; }
-
-#mega-menu-mobile button {
-  height: 40px;
-  width: 40px;
-  background: url("../images/global/menu-trigram-lrg.png") center no-repeat;
-  border: 0px;
-  z-index: 2;
-  background-color: #cb0d07;
-  border-radius: 50%; }
 
 /* 'Search our website/search our records' (mobile view only) */
 #changeDestination {
