@@ -141,88 +141,90 @@ $(document).ready(function(){
 });
 // ----------------------------------------
 // 5 Search our website -------------------
-
+$(document).ready(function() {
 // Hide search option
-$('#search-options').hide();
+    $('#search-options').hide();
 // $.showExpander()
-$.showExpander = function(){
-    if ($('.expander').length) {
-        $('.expander').delay(200).slideDown(400);
-    }
-};
+    $.showExpander = function () {
+        if ($('.expander').length) {
+            $('.expander').delay(200).slideDown(400);
+        }
+    };
 
 
-/*
- function checkWidth(init) {
- if ($(window).width() < 768) {
- $('#logo-holder a').addClass('hidden-xs');
- } else {
- $('#logo-holder a').removeClass('');
- }
- }
- */
+    /*
+     function checkWidth(init) {
+     if ($(window).width() < 768) {
+     $('#logo-holder a').addClass('hidden-xs');
+     } else {
+     $('#logo-holder a').removeClass('');
+     }
+     }
+     */
 
 // $.customEventer()
-$.customEventer = function(passedObject) {
-    var elementIdOrClass = passedObject.elementIdOrClass,
-        eventToWatch = passedObject.eventToWatch,
-        customEventToTrigger = passedObject.customEventToTrigger;
+    $.customEventer = function (passedObject) {
+        var elementIdOrClass = passedObject.elementIdOrClass,
+            eventToWatch = passedObject.eventToWatch,
+            customEventToTrigger = passedObject.customEventToTrigger;
 
-    $(document).on(eventToWatch, elementIdOrClass, function(){
-        $(document).trigger(customEventToTrigger);
-    });
-};
+        $(document).on(eventToWatch, elementIdOrClass, function () {
+            $(document).trigger(customEventToTrigger);
+        });
+    };
 
 // Generic toggle method. Does not include any bindings since it is designed to be used with
-$.toggleDisplayOfElement = function(toggler, togglee) {
-    $(togglee).toggle();
-    $(toggler).toggleClass('expanded');
-};
+    $.toggleDisplayOfElement = function (toggler, togglee) {
+        $(togglee).toggle();
+        $(toggler).toggleClass('expanded');
+    };
 
-$('.formDestinationChanger').on('click', function() {
-    var placeholder = $(this).attr('data-placeholder'),
-        target = $(this).attr('data-target'),
-        fieldName = $(this).attr('data-fieldName');
+    $('.formDestinationChanger').on('click', function () {
+        var placeholder = $(this).attr('data-placeholder'),
+            target = $(this).attr('data-target'),
+            fieldName = $(this).attr('data-fieldName');
 
-    $.toggleDisplayOfElement('#scope-selector', '#search-options');
+        $.toggleDisplayOfElement('#scope-selector', '#search-options');
 
-    $('#tnaSearch').attr({'placeholder' : placeholder, 'name' : fieldName});
-    $('#globalSearch').attr('action', target);
-});
+        $('#tnaSearch').attr({'placeholder': placeholder, 'name': fieldName});
+        $('#globalSearch').attr('action', target);
+    });
 
 // When click change the arrow position
-$('#scope-selector').click(function() {
-    $('#search-options').toggle();
-    if ($('#search-options:visible').size() != 0) {
-        $(this).addClass('expanded');}
-    else {
-        $(this).removeClass('expanded');}
-});
+    $('#scope-selector').click(function () {
+        $('#search-options').toggle();
+        if ($('#search-options:visible').size() != 0) {
+            $(this).addClass('expanded');
+        }
+        else {
+            $(this).removeClass('expanded');
+        }
+    });
 
-$(document).on('click', '#search-controls li', function(e){
-    $('#search-controls li').removeClass('selected');
-    $(e.target).addClass('selected');
-});
+    $(document).on('click', '#search-controls li', function (e) {
+        $('#search-controls li').removeClass('selected');
+        $(e.target).addClass('selected');
+    });
 
 // Global search - larger screens
-$(document).one('toggleSearchOptionsOnce', function() {
-    $.toggleDisplayOfElement('#scope-selector', '#search-options');
-});
+    $(document).one('toggleSearchOptionsOnce', function () {
+        $.toggleDisplayOfElement('#scope-selector', '#search-options');
+    });
 
-$(document).on('toggleSearchOptions', function() {
-    $.toggleDisplayOfElement('#scope-selector', '#search-options');
-    $(document).off('toggleSearchOptionsOnce');
-});
+    $(document).on('toggleSearchOptions', function () {
+        $.toggleDisplayOfElement('#scope-selector', '#search-options');
+        $(document).off('toggleSearchOptionsOnce');
+    });
 
 // Global search - smaller screens
-$(document).on('change', '.mobileSearchDestinationOption', function(){
-    var target = $(this).attr('data-target'),
-        placeholder = $(this).attr('data-placeholder'),
-        fieldName = $(this).attr('data-fieldName');
-    $('#mobile-search-field').attr({'placeholder' : placeholder, 'name' : fieldName}).focus();
-    $('#mobileGlobalSearch').attr('action', target);
+    $(document).on('change', '.mobileSearchDestinationOption', function () {
+        var target = $(this).attr('data-target'),
+            placeholder = $(this).attr('data-placeholder'),
+            fieldName = $(this).attr('data-fieldName');
+        $('#mobile-search-field').attr({'placeholder': placeholder, 'name': fieldName}).focus();
+        $('#mobileGlobalSearch').attr('action', target);
+    });
 });
-
 // ----------------------------------------
 
 
