@@ -59,12 +59,10 @@
 		<div class="row hidden-lg hidden-md hidden-sm">
 			<div class="col-md-12">
 				<button id="search-expander" style="position: absolute; right: 5px; top: -44px;" class="hasBeenInteractedWith ">&nbsp;</button>
-				<form action="http://www.nationalarchives.gov.uk/search/quick_search.aspx" method="get" id="mobileGlobalSearch" style="display: block;">
+				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch" action="http://www.nationalarchives.gov.uk/search/quick_search.aspx">
 					<div class = "input-group">
-						<input type = "text" placeholder="Search our website...">
-							<span class="input-group-addon">
-								<input type="submit" value="">
-							</span>
+						<input type = "text" placeholder="Search our website..." required aria-required="true" name="mobileSearch">
+						<span class="input-group-addon"><input type="submit" value=""></span>
 					</div>
 					<label>
 						<input name="radioSearchGroup" value="search_website" checked="" type="radio"> Search our website

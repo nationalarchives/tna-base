@@ -177,14 +177,26 @@ $(document).ready(function(){
     $('#search-expander').click(function() {
         $('#mobileGlobalSearch').slideToggle('fast');
     });
-    $('input[name=radioSearchGroup]:radio').click(function() {
-        $(this).parent().attr('action', 'http://www.nationalarchives.gov.uk/search/quick_search.aspx');
-    });
 
-    $('input[value=radioSearchGroup]:radio').click(function() {
-        $(this).parent().attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
+});
+
+
+
+$(document).ready(function() {
+    $('input:radio[name=radioSearchGroup]').change(function() {
+        if (this.value == 'search_website') {
+            console.log('Search');
+            //form.attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
+            $('form').attr('action', 'http://www.nationalarchives.gov.uk/search/quick_search.aspx');
+            $('input[name="mobileSearch"]').attr('placeholder', 'Search our website...');
+        }
+        else if (this.value == 'search_records') {
+            console.log('Records');
+            //form.attr('action', 'http://www.nationalarchives.gov.uk/search/quick_search.aspx');
+            $('form').attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
+            $('input[name="mobileSearch"]').attr('placeholder', 'Search our records...');
+        }
     });
-    //Change placeholder and action url (end)
 });
 
 // ----------------------------------------
