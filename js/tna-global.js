@@ -8,6 +8,7 @@
 // 3. Mega menu for mobile
 // 4. Responsive search
 // 5. Search our website
+// 6. Mega menu toggle
 // ----------------------------------------
 
 // 1. Back to top  - Displays a back to top link when the user has scrolled on longer pages.
@@ -226,6 +227,13 @@ $(document).ready(function() {
     });
 });
 // ----------------------------------------
+// 6 Mega menu Toggle ---------------------
 
+$('#nav').hide();
+$('#mega-menu-pull-down').on('click', function () {
+    $('#nav').slideToggle();
+});
+
+// ----------------------------------------
 
 
