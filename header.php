@@ -61,7 +61,7 @@
 				<button id="search-expander" style="position: absolute; right: 5px; top: -44px;" class="hasBeenInteractedWith ">&nbsp;</button>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch" action="http://www.nationalarchives.gov.uk/search/quick_search.aspx">
 					<div class = "input-group">
-						<input type = "text" placeholder="Search our website..." required aria-required="true" name="mobileSearch">
+						<input type = "text" placeholder="Search our website..." required aria-required="true" name="mobileSearch" value="">
 						<span class="input-group-addon"><input type="submit" value=""></span>
 					</div>
 					<label>
