@@ -6,6 +6,7 @@
 // 1. Back to top
 // 2. Website cookie
 // 3. Mega menu for mobile
+// 4. Responsive search
 // ----------------------------------------
 
 // 1. Back to top  - Displays a back to top link when the user has scrolled on longer pages.
@@ -115,5 +116,29 @@ $(document).ready(function(){
     });
 });
 // ----------------------------------------
+
+// ----------------------------------------
+//  4 Responsive search -------------------
+// ----------------------------------------
+//Hides the responsive search
+$(document).ready(function(){
+    $('#mobileGlobalSearch').css('display','none');
+    //Responsive Search Menu Toggle
+    $('#search-expander').click(function() {
+        $('#mobileGlobalSearch').slideToggle('fast');
+    });
+
+    $('input[name=radioSearchGroup]:radio').click(function() {
+        $(this).parent().attr('action', 'http://www.nationalarchives.gov.uk/search/quick_search.aspx');
+    });
+
+    $('input[value=radioSearchGroup]:radio').click(function() {
+        $(this).parent().attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
+    });
+    //Change placeholder and action url (end)
+
+});
+// ----------------------------------------
+
 
 
