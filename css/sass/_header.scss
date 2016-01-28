@@ -274,18 +274,10 @@ header {
 #mobile-logo-holder {
   img {
     @media  (min-width: 480px) {
-      width: 300px;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      float: none;
+      width: 100%;
     }
     @media  (min-width : 320px) and (max-width: 479px) {
-      width: 200px;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      float: none;
+      width: 100%;
     }
   }
 }
