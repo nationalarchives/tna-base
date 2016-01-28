@@ -6381,7 +6381,6 @@ header {
       background-color: #555;
       background-size: cover;
       cursor: pointer; }
-<<<<<<< HEAD
     header .container #globalSearch .expanded {
       background-image: url(../img/scope-selector-expanded.png); }
     header .container .search-field-wrapper-medium {
@@ -6406,50 +6405,6 @@ header {
   header #skip-to-main-content {
     position: absolute;
     top: -30px; }
-=======
-    #nav li a:active, #nav li a:hover {
-      outline: 0; }
-    #nav li a img {
-      width: 100%; }
-
-#mobileGlobalSearch input[type='text'] {
-  width: 100%;
-  border-radius: 0px;
-  border: none;
-  height: 40px;
-  color: #222; }
-#mobileGlobalSearch input[type='submit'] {
-  background: url(../img/search-white.png) center no-repeat;
-  cursor: pointer;
-  background-color: #008484;
-  width: 40px; }
-#mobileGlobalSearch .input-group-addon {
-  padding: 0px;
-  border: none; }
-
-#logo-holder button {
-  height: 40px;
-  width: 40px;
-  background: url("../img/menu-trigram-lrg.png") center no-repeat;
-  border: 0px;
-  z-index: 2;
-  background-color: #cb0d07;
-  border-radius: 100%; }
-
-@media (min-width: 480px) {
-  #mobile-logo-holder img {
-    width: 100%; } }
-@media (min-width: 320px) and (max-width: 479px) {
-  #mobile-logo-holder img {
-    width: 100%; } }
-
-#search-expander .expanded {
-  background: url("../img/close-search.png") center no-repeat; }
-
-#skip-to-main-content {
-  position: absolute;
-  top: -30px; }
->>>>>>> 056aa9b94d4921ed6bcee00e25ae2b61ef8946d6
 
 /* TNA footer styles */
 footer {
