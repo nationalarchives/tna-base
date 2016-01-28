@@ -50,7 +50,7 @@
 					<input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch" name="search_text" required aria-required="true" >
 					<input type="submit" class="search-button" id="search-button" value="">
 				</form>
-				<ul id="search-options">
+				<ul>
 					<li><a href="#" class="formDestinationChanger" data-target="http://www.nationalarchives.gov.uk/search/quick_search.aspx" data-placeholder="Search our website..." data-fieldName="search_text" role="button" aria-label="Change form destination to search the website">Search our website</a></li>
 					<li><a href="#" class="formDestinationChanger" data-target="http://discovery.nationalarchives.gov.uk/SearchUI/s/res" data-placeholder="Search our records..." data-fieldName="_q" role="button" aria-label="Change form destination to search the catalogue">Search our records</a></li>
 				</ul>

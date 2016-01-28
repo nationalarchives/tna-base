@@ -2,12 +2,51 @@
 /* Old TNA styling ---------- */
 /* -------------------------- */
 
-#nav {
-  padding:.5em 1em 1.5em;
+/* Navigation --------------- */
+nav {
+  &#nav {
+    padding: .5em 1em 1.5em;
+    .col-sm-6 {
+      @media (width: 768px) {
+        width: 33%;
+      }
+    }
+  }
 }
 
+/* Container ---------------- */
 .container {
-    @media (min-width: 1200px) {
-      width: 1240px;
+  @media (min-width: 1200px) {
+    width: 1240px;
+  }
+  main{
+    &#main{
+      &.col-md-8{
+        @media(width:768px){
+          width:65%;
+        }
+      }
     }
+  }
+  aside {
+    &#sidebar{
+      &.col-md-4{
+        width: 34.9%;
+      }
+    }
+  }
 }
+
+footer {
+  #footer {
+    .col-sm-6{
+      @media (width: 768px) {
+        width: 50%;
+        margin:0 0 40px 0;
+      }
+    }
+  }
+}
+
+
+
