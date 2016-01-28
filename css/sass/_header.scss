@@ -164,6 +164,7 @@ header {
         }
       }
     }
+<<<<<<< HEAD
     @-webkit-keyframes subtle-bounce {
       0%, 100% { background-position: 50% 100%  }
       50% { background-position: 50% 110% }
@@ -204,6 +205,51 @@ header {
     }
     #globalSearch .expanded {
       background-image: url(../img/scope-selector-expanded.png);
+=======
+  }
+}
+
+
+#mobileGlobalSearch {
+  input[type='text'] {
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+    height: 40px;
+    color: $tna_dark;
+  }
+  input[type='submit'] {
+    background: url(../img/search-white.png) center no-repeat;
+    cursor: pointer;
+    background-color: $tna_teal;
+    width: 40px;
+  }
+  .input-group-addon {
+    padding: 0px;
+    border: none;
+  }
+}
+
+#logo-holder {
+  button {
+    height: 40px;
+    width: 40px;
+    background: url("../img/menu-trigram-lrg.png") center no-repeat;
+    border: 0px;
+    z-index: 2;
+    background-color: $tna_red;
+    border-radius: 100%;
+  }
+}
+
+#mobile-logo-holder {
+  img {
+    @media  (min-width: 480px) {
+      width: 100%;
+    }
+    @media  (min-width : 320px) and (max-width: 479px) {
+      width: 100%;
+>>>>>>> 056aa9b94d4921ed6bcee00e25ae2b61ef8946d6
     }
     .search-field-wrapper-medium {
       float:right;
