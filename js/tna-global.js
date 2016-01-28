@@ -185,16 +185,20 @@ $(document).ready(function(){
 $(document).ready(function() {
     $('input:radio[name=radioSearchGroup]').change(function() {
         if (this.value == 'search_website') {
-            console.log('Search');
-            //form.attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
-            $('form').attr('action', 'http://www.nationalarchives.gov.uk/search/quick_search.aspx');
-            $('input[name="mobileSearch"]').attr('placeholder', 'Search our website...');
+            //Changes the form action url
+            $('form').attr('action', 'http://www.nationalarchives.gov.uk/search/search_results.aspx');
+            //changes the placeholder
+            $('input[name="QueryText"]').attr('placeholder', 'Search our website...');
+            //changes name
+            $('#mobileGlobalSearch input[name="_q"]').attr('name', 'QueryText');
         }
-        else if (this.value == 'search_records') {
-            console.log('Records');
-            //form.attr('action', 'http://www.nationalarchives.gov.uk/search/quick_search.aspx');
+        else if(this.value == 'search_records') {
+            //Changes the form action url
             $('form').attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
-            $('input[name="mobileSearch"]').attr('placeholder', 'Search our records...');
+            //changes the placeholder
+            $('input[name="QueryText"]').attr('placeholder', 'Search our records...');
+            //changes name
+            $('#mobileGlobalSearch input[name="QueryText"]').attr('name', '_q');
         }
     });
 });
