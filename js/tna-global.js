@@ -88,7 +88,7 @@ $(document).ready(function(){
     // 3 Search our website -------------------
 
     // Hide search option
-    $('#search-options').hide();
+    $('#search-field-wrapper ul').hide();
     // $.showExpander()
     $.showExpander = function(){
         if ($('.expander').length) {
@@ -118,7 +118,7 @@ $(document).ready(function(){
             target = $(this).attr('data-target'),
             fieldName = $(this).attr('data-fieldName');
 
-        $.toggleDisplayOfElement('#scope-selector', '#search-options');
+        $.toggleDisplayOfElement('#scope-selector', '#search-field-wrapper ul');
 
         $('#tnaSearch').attr({'placeholder' : placeholder, 'name' : fieldName});
         $('#globalSearch').attr('action', target);
@@ -126,8 +126,8 @@ $(document).ready(function(){
 
     // When click change the arrow position
     $('#scope-selector').click(function() {
-        $('#search-options').toggle();
-        if ($('#search-options:visible').size() != 0) {
+        $('#search-field-wrapper ul').toggle();
+        if ($('#search-field-wrapper ul:visible').size() != 0) {
             $(this).addClass('expanded');}
         else {
             $(this).removeClass('expanded');}
@@ -140,11 +140,11 @@ $(document).ready(function(){
 
     // Global search - larger screens
     $(document).one('toggleSearchOptionsOnce', function() {
-        $.toggleDisplayOfElement('#scope-selector', '#search-options');
+        $.toggleDisplayOfElement('#scope-selector', '#search-field-wrapper ul');
     });
 
     $(document).on('toggleSearchOptions', function() {
-        $.toggleDisplayOfElement('#scope-selector', '#search-options');
+        $.toggleDisplayOfElement('#scope-selector', '#search-field-wrapper ul');
         $(document).off('toggleSearchOptionsOnce');
     });
 
