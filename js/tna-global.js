@@ -167,19 +167,27 @@ $(document).ready(function(){
     $('#mega-menu-pull-down').on('click', function () {
         $('#nav').slideToggle();
     });
+    $('#mega-menu-mobile').on('click', function () {
+        $('#nav').slideToggle();
+    });
+});
 
-    // ----------------------------------------
-    //  Responsive search
-    // ----------------------------------------
+
+// -----------------------------------------------------------
+//  Responsive search
+// -----------------------------------------------------------
+
+
+$(document).ready(function() {
     //Hides the responsive search
     $('#mobileGlobalSearch').css('display','none');
     //Responsive Search Menu Toggle
     $('#search-expander').click(function() {
         $('#mobileGlobalSearch').slideToggle('fast');
     });
-
 });
 
+// -----------------------------------------------------------
 
 
 $(document).ready(function() {
@@ -202,6 +210,9 @@ $(document).ready(function() {
         }
     });
 });
+
+
+// -----------------------------------------------------------
 
 // ----------------------------------------
 // 3 Mega menu for mobile -----------------
