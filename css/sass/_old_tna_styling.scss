@@ -13,7 +13,23 @@ nav {
     }
   }
 }
-
+/* Header --------------------*/
+header {
+  #mobileGlobalSearch {
+    .input-group {
+      padding:10px 0;
+    }
+    label{
+        font-weight:normal;
+        input[type="radio"]{
+          margin:0 5px 0 5px;
+        }
+    }
+    #changeDestination {
+      padding-top: .5em;
+    }
+  }
+}
 /* Container ---------------- */
 .container {
   @media (min-width: 1200px) {
@@ -31,7 +47,9 @@ nav {
   aside {
     &#sidebar{
       &.col-md-4{
-        width: 34.9%;
+        @media(width:768px){
+          width: 34.9%;
+        }
       }
     }
   }
