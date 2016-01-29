@@ -35,13 +35,13 @@ header {
             list-style-type: none;
             list-style-image:none;
             a {
-              color: #FFF;
+              color: $tna_white;
               font-size: 0.9em;
               padding: 0.5em;
               display: block;
               &:hover {
                 background-color: #FCE45C;
-                color: #000;
+                color: $tna_dark;
               }
             }
           }
@@ -56,7 +56,7 @@ header {
       }
       .col-xs-6 {
         #mega-menu-pull-down {
-          background-image: url(../img/menu-collapsed.png);
+          background-image: $tna_menu_collapsed;
           background-position: 50% 90%;
           background-repeat: no-repeat;
           background-color: $tna_red;
@@ -114,7 +114,7 @@ header {
       #mega-menu-mobile {
         height: 40px;
         width: 40px;
-        background: url("../img/menu-trigram-lrg.png") center no-repeat;
+        background: $tna_menu_trigram_lrg;
         border: 0px;
         z-index: 2;
         background-color: $tna_red;
@@ -136,7 +136,7 @@ header {
         #search-expander {
           height: 2.1em;
           width: 40px;
-          background: url(../img/search-white.png) center no-repeat;
+          background: $tna_search_white;
           background-size: 90%;
           position: absolute;
           top: 0;
@@ -152,7 +152,7 @@ header {
             color: $tna_dark;
           }
           input[type='submit'] {
-            background: url(../img/search-white.png) center no-repeat;
+            background: $tna_search_white;
             cursor: pointer;
             background-color: $tna_teal;
             width: 40px;
@@ -185,7 +185,7 @@ header {
       right: 0;
       width: 40px;
       height: 40px;
-      background-image: url("../img/search-white.png");
+      background-image: $tna_search_white;
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -197,13 +197,13 @@ header {
       width: 40px;
       height: 40px;
       line-height: 40px;
-      background-image: url(../img/scope-selector.png);
+      background-image: $tna_scope_selector;
       background-color: #555;
       background-size: cover;
       cursor: pointer;
     }
     #globalSearch .expanded {
-      background-image: url(../img/scope-selector-expanded.png);
+      background-image: $tna_scope_selector_expanded;
     }
     .search-field-wrapper-medium {
       float:right;
@@ -225,7 +225,7 @@ header {
     }
     /* 'Search our website/search our records' (mobile view only) */
     #changeDestination {
-      color: #FFF;
+      color: $tna_white;
       padding-top: 0.5em; }
     #changeDestination label {
       margin: 0 0.5em; }

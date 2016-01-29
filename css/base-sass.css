@@ -5953,6 +5953,7 @@ table td {
 
 /* TNA fonts */
 /* TNA colours */
+/* TNA Icons/Images */
 /* TNA global styles */
 body {
   font-family: "Open Sans", arial, sans-serif;
@@ -6243,18 +6244,18 @@ header {
         list-style-type: none;
         list-style-image: none; }
         header .container .row #search-field-wrapper ul li a {
-          color: #FFF;
+          color: #fff;
           font-size: 0.9em;
           padding: 0.5em;
           display: block; }
           header .container .row #search-field-wrapper ul li a:hover {
             background-color: #FCE45C;
-            color: #000; }
+            color: #222; }
     @media only screen and (min-width: 768px) {
       header .container .row .col-xs-3 #mega-menu-mobile {
         display: none; } }
     header .container .row .col-xs-6 #mega-menu-pull-down {
-      background-image: url(../img/menu-collapsed.png);
+      background-image: url("../img/menu-collapsed.png");
       background-position: 50% 90%;
       background-repeat: no-repeat;
       background-color: #cb0d07;
@@ -6321,7 +6322,7 @@ header {
     header .container .row .col-md-12 #search-expander {
       height: 2.1em;
       width: 40px;
-      background: url(../img/search-white.png) center no-repeat;
+      background: url("../img/search-white.png") center no-repeat;
       background-size: 90%;
       position: absolute;
       top: 0;
@@ -6334,7 +6335,7 @@ header {
       height: 40px;
       color: #222; }
     header .container .row .col-md-12 #mobileGlobalSearch input[type='submit'] {
-      background: url(../img/search-white.png) center no-repeat;
+      background: url("../img/search-white.png") center no-repeat;
       cursor: pointer;
       background-color: #008484;
       width: 40px; }
@@ -6366,7 +6367,7 @@ header {
       right: 0;
       width: 40px;
       height: 40px;
-      background-image: url("../img/search-white.png");
+      background-image: url("../img/search-white.png") center no-repeat;
       background-repeat: no-repeat;
       background-position: center; }
     header .container #scope-selector {
@@ -6377,12 +6378,12 @@ header {
       width: 40px;
       height: 40px;
       line-height: 40px;
-      background-image: url(../img/scope-selector.png);
+      background-image: url("../img/scope-selector.png");
       background-color: #555;
       background-size: cover;
       cursor: pointer; }
     header .container #globalSearch .expanded {
-      background-image: url(../img/scope-selector-expanded.png); }
+      background-image: url("../img/scope-selector-expanded.png"); }
     header .container .search-field-wrapper-medium {
       float: right;
       max-width: 331px;
@@ -6398,7 +6399,7 @@ header {
       overflow: hidden;
       position: relative; }
     header .container #changeDestination {
-      color: #FFF;
+      color: #fff;
       padding-top: 0.5em; }
     header .container #changeDestination label {
       margin: 0 0.5em; }
@@ -6507,6 +6508,16 @@ nav#nav {
     nav#nav .col-sm-6 {
       width: 33%; } }
 
+/* Header --------------------*/
+header #mobileGlobalSearch .input-group {
+  padding: 10px 0; }
+header #mobileGlobalSearch label {
+  font-weight: normal; }
+  header #mobileGlobalSearch label input[type="radio"] {
+    margin: 0 5px 0 5px; }
+header #mobileGlobalSearch #changeDestination {
+  padding-top: .5em; }
+
 /* Container ---------------- */
 @media (min-width: 1200px) {
   .container {
@@ -6514,8 +6525,9 @@ nav#nav {
 @media (width: 768px) {
   .container main#main.col-md-8 {
     width: 65%; } }
-.container aside#sidebar.col-md-4 {
-  width: 34.9%; }
+@media (width: 768px) {
+  .container aside#sidebar.col-md-4 {
+    width: 34.9%; } }
 
 @media (width: 768px) {
   footer #footer .col-sm-6 {
