@@ -56,15 +56,23 @@ header {
 }
 
 footer {
-  #footer {
+  &#footer {
+    .containter {
+      .row{
+
+      }
+    }
     .col-sm-6{
       @media (width: 768px) {
         width: 50%;
-        margin:0 0 40px 0;
       }
     }
   }
 }
 
-
+.footer-col {
+  @media (max-width:768px){
+    margin:0 0 40px 0 !important;
+  }
+}
 

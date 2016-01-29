@@ -6530,6 +6530,9 @@ header #mobileGlobalSearch #changeDestination {
     width: 34.9%; } }
 
 @media (width: 768px) {
-  footer #footer .col-sm-6 {
-    width: 50%;
-    margin: 0 0 40px 0; } }
+  footer#footer .col-sm-6 {
+    width: 50%; } }
+
+@media (max-width: 768px) {
+  .footer-col {
+    margin: 0 0 40px 0 !important; } }
