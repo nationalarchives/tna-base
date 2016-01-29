@@ -6324,8 +6324,8 @@ header {
       background: url(../img/search-white.png) center no-repeat;
       background-size: 90%;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: -44px;
+      right: 5px;
       cursor: pointer; }
     header .container .row .col-md-12 #mobileGlobalSearch input[type='text'] {
       width: 100%;
