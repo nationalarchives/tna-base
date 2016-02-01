@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php get_template_part ( 'breadcrumb' ); ?>
+<?php get_template_part( 'breadcrumb' ); ?>
 
 	<div id="primary" class="content-area">
 		<div class="container">
@@ -7,11 +7,18 @@
 				<main id="main" class="col-xs-12 col-sm-12 col-md-8" role="main">
 					<?php
 					while ( have_posts() ) : the_post();
-						get_template_part ( 'content' );
+						get_template_part( 'content' );
 					endwhile;
 					?>
 				</main>
-				<?php get_sidebar(); ?>
+				<?php
+				$sidebar = get_post_meta( $post->ID, 'sidebar', true );
+				if ( $sidebar == 'false' ) {
+					// do nothing
+				} else {
+					get_sidebar( $sidebar );
+				}
+				?>
 			</div>
 		</div>
 	</div>
