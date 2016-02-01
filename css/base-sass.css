@@ -6319,10 +6319,19 @@ header {
     @media (min-width: 320px) and (max-width: 479px) {
       header .container .row #mobile-logo-holder img {
         width: 200px; } }
-    header .container .row .col-md-12 #search-expander {
+    header .container .row .col-md-12 .search-expander {
       height: 2.1em;
       width: 40px;
       background: url("../img/search-white.png") center no-repeat;
+      background-size: 90%;
+      position: absolute;
+      top: -44px;
+      right: 5px;
+      cursor: pointer; }
+    header .container .row .col-md-12 .search-close {
+      height: 2.1em;
+      width: 40px;
+      background: url("../img/close-search.png") center no-repeat;
       background-size: 90%;
       position: absolute;
       top: -44px;

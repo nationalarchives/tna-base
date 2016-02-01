@@ -51,7 +51,7 @@
 		</div>
 		<div class="row hidden-lg hidden-md hidden-sm">
 			<div class="col-md-12">
-				<button id="search-expander" class="hasBeenInteractedWith ">&nbsp;</button>
+				<button class="search-expander">&nbsp;</button>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch" action="http://www.nationalarchives.gov.uk/search/search_results.aspx">
 					<div class = "input-group">
 						<input type = "text" placeholder="Search our website..." required aria-required="true" name="QueryText" value="">

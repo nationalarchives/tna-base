@@ -182,10 +182,15 @@ $(document).ready(function() {
     //Hides the responsive search
     $('#mobileGlobalSearch').css('display','none');
     //Responsive Search Menu Toggle
-    $('#search-expander').click(function() {
-        $('#mobileGlobalSearch').slideToggle('fast');
+    $('.search-expander').click(function() {
+      $('#mobileGlobalSearch').slideToggle('fast');
+    });
+    //Add a class and removes the class per click.
+    $('button.search-expander').on('click', function() {
+      $(this).toggleClass('search-close');
     });
 });
+
 
 // -----------------------------------------------------------
 

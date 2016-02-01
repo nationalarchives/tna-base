@@ -133,10 +133,20 @@ header {
     }
     .row {
       .col-md-12 {
-        #search-expander {
+        .search-expander {
           height: 2.1em;
           width: 40px;
           background: $tna_search_white;
+          background-size: 90%;
+          position: absolute;
+          top: -44px;
+          right: 5px;
+          cursor: pointer;
+        }
+        .search-close {
+          height: 2.1em;
+          width: 40px;
+          background: $tna_close_search;
           background-size: 90%;
           position: absolute;
           top: -44px;
