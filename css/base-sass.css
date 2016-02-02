@@ -5958,13 +5958,15 @@ table td {
 body {
   font-family: "Open Sans", arial, sans-serif;
   font-size: 16px;
-  background-color: #eee; }
+  background-color: #eee;
+  line-height: 1.6; }
 
 h1, h2, h3, h4 {
   font-family: "Bitter", "Open Sans", arial, serif;
   font-weight: 400;
   z-index: 2;
-  line-height: 1.6; }
+  line-height: 1.6;
+  letter-spacing: -.025em; }
 
 h1 {
   font-size: 1.75em; }
@@ -5977,6 +5979,9 @@ h3 {
 
 h4 {
   font-size: 1.2em; }
+
+p {
+  margin: 0 0 1.5em; }
 
 a:active, a:link, a:visited {
   color: #2A5DB0;
@@ -6168,9 +6173,11 @@ input[type="submit"]:focus, a.button:focus {
   display: none; }
 
 /* TNA breadcrumb styles */
-.tna-breadcrumb .breadcrumbs {
-  margin: 1em 0;
-  font-size: .9em; }
+.tna-breadcrumb {
+  margin-top: 0.5em; }
+  .tna-breadcrumb .breadcrumbs {
+    margin: 1em 0;
+    font-size: .9em; }
 
 /* TNA nav styles (Mega-menu) */
 nav {
@@ -6213,7 +6220,7 @@ nav {
 header {
   background-color: #222;
   color: #fff;
-  padding: 10px 0; }
+  padding: 0.7em 0 7px 0; }
   header .container {
     /* Mega menu button (mobile view only) */
     /* 'Search our website/search our records' (mobile view only) */ }
@@ -6530,7 +6537,7 @@ header #mobileGlobalSearch #changeDestination {
 /* Container ---------------- */
 @media (min-width: 1200px) {
   .container {
-    width: 1240px; } }
+    width: 1270px; } }
 @media (width: 768px) {
   .container main#main.col-md-8 {
     width: 65%; } }
