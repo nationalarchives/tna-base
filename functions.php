@@ -5,7 +5,7 @@
  */
 function tna_styles() {
 
-	wp_register_style( 'tna-styles', get_stylesheet_directory_uri() . '/css/base-sass.css', array(), '0.1', 'all' );
+	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css', array(), '0.1', 'all' );
 	wp_register_style( 'tna-google-fonts',
 		'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Bitter', '', '', 'all' );
 
