@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part( 'breadcrumb' ); ?>
 
 	<main id="content" role="main">
 		<div class="container">
