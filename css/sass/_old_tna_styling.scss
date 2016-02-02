@@ -32,9 +32,18 @@ header {
 }
 /* Container ---------------- */
 .container {
+  max-width: 1240px;
   @media (min-width: 1200px) {
-    max-width: 1270px;
-    width: 96.4%;
+    width: 94%;
+    padding: 0;
+  }
+  @media (min-width: 992px) {
+    width: 94%;
+    padding: 0;
+  }
+  @media (min-width: 768px) {
+    width: 94%;
+    padding: 0;
   }
   main{
     &#main{

@@ -6541,16 +6541,26 @@ header #mobileGlobalSearch #changeDestination {
   padding-top: .5em; }
 
 /* Container ---------------- */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1270px;
-    width: 96.4%; } }
-@media (width: 768px) {
-  .container main#main.col-md-8 {
-    width: 65%; } }
-@media (width: 768px) {
-  .container aside#sidebar.col-md-4 {
-    width: 34.9%; } }
+.container {
+  max-width: 1240px; }
+  @media (min-width: 1200px) {
+    .container {
+      width: 94%;
+      padding: 0; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 94%;
+      padding: 0; } }
+  @media (min-width: 768px) {
+    .container {
+      width: 94%;
+      padding: 0; } }
+  @media (width: 768px) {
+    .container main#main.col-md-8 {
+      width: 65%; } }
+  @media (width: 768px) {
+    .container aside#sidebar.col-md-4 {
+      width: 34.9%; } }
 
 @media (width: 768px) {
   footer#footer .col-sm-6 {
