@@ -1,0 +1,36 @@
+/* TNA sidebar styles */
+
+aside {
+  margin-bottom: 1.5em;
+  .sidebar-header {
+    padding: 10px 0 0 0;
+    background: url(../img/dot-grey.png);
+    background-color: #fff;
+    h2 {
+      padding: 4px 10px;
+      background-color: $tna_blue;
+      color: #fff;
+      line-height: 125%;
+      margin: 0 0 0 -10px;
+      display: inline-block;
+      a {
+        color: #fff;
+        background-image: url(../img/icon-24-heading-link.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        padding-right: 32px;
+      }
+    }
+  }
+  .sidebar-header:after {
+    content: ' ';
+    display: block;
+    height: 10px;
+    margin: 0 0 0 -10px;
+    background: url(../img/heading-flourish.png) no-repeat bottom left;
+  }
+  .sidebar-nav {
+    background-color: #fff;
+    padding: 20px 0 0 20px;
+  }
+}

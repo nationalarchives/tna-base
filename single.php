@@ -1,15 +1,26 @@
 <?php get_header(); ?>
+<?php get_template_part( 'breadcrumb' ); ?>
 
-<main id="content" role="main">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<p>SINGLE</p>
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
+	<div id="primary" class="content-area">
+		<div class="container">
+			<div class="row">
+				<main id="main" class="col-xs-12 col-sm-12 col-md-8" role="main">
+					<?php
+					while ( have_posts() ) : the_post();
+						get_template_part( 'content' );
+					endwhile;
+					?>
+				</main>
+				<?php
+				$sidebar = get_post_meta( $post->ID, 'sidebar', true );
+				if ( $sidebar == 'false' ) {
+					// do nothing
+				} else {
+					get_sidebar( $sidebar );
+				}
+				?>
 			</div>
 		</div>
 	</div>
-</main>
 
 <?php get_footer(); ?>

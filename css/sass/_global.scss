@@ -3,6 +3,7 @@
 body {
   font-family: $tna_body_font;
   font-size: 16px;
+  background-color: $tna_light;
 }
 
 h1, h2, h3, h4 {
@@ -34,7 +35,7 @@ a:hover {
 a:focus {
   background-color: $tna_yellow;
   outline: 3px solid $tna_yellow_dark;
-  color: #000;
+  color: $tna_dark;
 }
 
 address {
@@ -50,4 +51,38 @@ hr {
   border:0;
   margin: 1em 0;
   clear: both;
+}
+
+.breather-top {
+  padding-top:1em;
+}
+.breather-bottom {
+  padding-bottom:1em;
+}
+.breather-top-bottom{
+  padding-top:1em;
+  padding-bottom:1em;
+}
+.breather {
+  padding: 1em;
+}
+
+#goTop {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  text-align: center;
+  background: whiteSmoke;
+  font-weight: bold;
+  color: $tna_white;
+  text-decoration: none;
+  position: fixed;
+  top: 47%;
+  right: -100px;
+  background: url(../img/icon-32-top.gif) center center no-repeat rgba(0, 0, 0, .66);
+  background-size: cover;
+  z-index: 5000;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }

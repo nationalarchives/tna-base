@@ -7,7 +7,7 @@ ul, ol {
 }
 
 ul li	{
-  list-style-image: url("../../img/list-bullet.png");
+  list-style-image: url("../img/list-bullet.png");
 }
 ul li, ol li {
   margin: 0 0 .75em 0;
@@ -43,7 +43,7 @@ ul.child, ul.sibling, ul.triplets, ul.quadruplets {
 
 
 ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
-  list-style-image: url("../../img/list-link-bullet.png");
+  list-style-image: url("../img/list-link-bullet.png");
   width: 96%;
   float:left;
   margin-bottom: 1em;
