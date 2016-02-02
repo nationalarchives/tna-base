@@ -44,7 +44,9 @@ function dimox_breadcrumbs() {
 
 	if (is_home() || is_front_page()) {
 
-		if ($show_on_home) echo $wrap_before . '<a href="' . $home_link . '">' . $text['home'] . '</a>' . $wrap_after;
+		if ($show_on_home) echo $wrap_before . '<a href="' . $home_link . '">' . $text['home'] . '</a>';
+		if ($pre_crumbs) echo $pre_crumbs;
+		if ($show_on_home) echo $wrap_after;
 
 	} else {
 
@@ -53,11 +55,12 @@ function dimox_breadcrumbs() {
 		if ($show_home_link) echo sprintf($link, $home_link, $text['home']);
 
 		if ( is_page() && !$parent_id ) {
+			if ($pre_crumbs) echo $pre_crumbs;
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
 
 		} elseif ( is_page() && $parent_id ) {
-			if ($show_home_link) echo $sep;
 			if ($pre_crumbs) echo $pre_crumbs;
+			if ($show_home_link) echo $sep;
 			if ($parent_id != $frontpage_id) {
 				$breadcrumbs = array();
 				while ($parent_id) {
@@ -76,12 +79,13 @@ function dimox_breadcrumbs() {
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
 
 		}  elseif ( is_404() ) {
+			if ($pre_crumbs) echo $pre_crumbs;
 			if ($show_home_link && $show_current) echo $sep;
 			if ($show_current) echo $before . $text['404'] . $after;
 
 		} elseif ( is_single() && !is_attachment() ) {
-			if ($show_home_link) echo $sep;
 			if ($pre_crumbs) echo $pre_crumbs;
+			if ($show_home_link) echo $sep;
 			if ( get_post_type() != 'post' ) {
 				$post_type = get_post_type_object(get_post_type());
 				$slug = $post_type->rewrite;
