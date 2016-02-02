@@ -34,7 +34,7 @@
 			<div class="col-xs-6 col-sm-2" id="mobile-logo-holder">
 				<button aria-label="Toggle menu" id="mega-menu-pull-down" class="hidden-xs"><span>Menu</span></button>
 				<a href="http://www.nationalarchives.gov.uk" title="Go to The National Archives homepage" class="hidden-lg hidden-md hidden-sm">
-					<img src="http://www.nationalarchives.gov.uk/wp-content/themes/tna/images/global/logo-white.png" alt="The National Archives" id="logo">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="The National Archives" id="logo">
 				</a>
 			</div>
 			<div class="col-xs-3 col-sm-5" id="search-field-wrapper">
