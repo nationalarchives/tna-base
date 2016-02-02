@@ -6537,7 +6537,8 @@ header #mobileGlobalSearch #changeDestination {
 /* Container ---------------- */
 @media (min-width: 1200px) {
   .container {
-    width: 1270px; } }
+    max-width: 1270px;
+    width: 94%; } }
 @media (width: 768px) {
   .container main#main.col-md-8 {
     width: 65%; } }
