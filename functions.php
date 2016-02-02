@@ -19,7 +19,7 @@ function tna_scripts() {
 
 	wp_register_script( 'global-jquery', get_template_directory_uri() . '/js/jquery-1.11.3.min.js', array(), '1.11.3' );
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
-	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), true );
+	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), '0.1', true );
 
 
 	wp_enqueue_script( 'global-jquery' );
