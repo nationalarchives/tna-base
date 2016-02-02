@@ -6478,7 +6478,14 @@ article {
       padding: 4px 10px;
       background-color: #405480;
       color: #fff;
-      line-height: 125%;
+      line-height: 1.25;
+      margin: 0 0 0 -10px;
+      display: inline-block; }
+    article .entry-header h2 {
+      padding: 4px 10px;
+      background-color: #405480;
+      color: #fff;
+      line-height: 1.5;
       margin: 0 0 0 -10px;
       display: inline-block; }
   article .entry-header:after {
@@ -6489,6 +6496,10 @@ article {
     background: url(../img/heading-flourish.png) no-repeat bottom left; }
   article .entry-content {
     padding: 20px; }
+  article .entry-full-width-content {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 1.5em; }
 
 /* TNA sidebar styles */
 aside {

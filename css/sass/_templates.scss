@@ -3,7 +3,7 @@
 /* Default template */
 
 article {
-  background-color: #fff;
+  background-color: $tna_white;
   margin-bottom: 1.5em;
   .entry-header {
     padding: 10px 0 0 0;
@@ -13,7 +13,15 @@ article {
       padding: 4px 10px;
       background-color: $tna_blue;
       color: #fff;
-      line-height: 125%;
+      line-height: 1.25;
+      margin: 0 0 0 -10px;
+      display: inline-block;
+    }
+    h2 {
+      padding: 4px 10px;
+      background-color: $tna_blue;
+      color: #fff;
+      line-height: 1.5;
       margin: 0 0 0 -10px;
       display: inline-block;
     }
@@ -27,5 +35,10 @@ article {
   }
   .entry-content {
     padding: 20px;
+  }
+  .entry-full-width-content {
+    padding: 20px;
+    background-color: $tna_white;
+    margin-bottom: 1.5em;
   }
 }
