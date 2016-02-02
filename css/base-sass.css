@@ -6320,9 +6320,14 @@ header {
       z-index: 2;
       background-color: #cb0d07;
       border-radius: 100%; }
+    header .container .row #mobile-logo-holder a {
+      display: block; }
     @media (min-width: 480px) {
       header .container .row #mobile-logo-holder img {
-        width: 100%; } }
+        display: block;
+        max-height: 50px;
+        width: auto;
+        margin: 0 auto; } }
     @media (min-width: 320px) and (max-width: 479px) {
       header .container .row #mobile-logo-holder img {
         width: 200px; } }

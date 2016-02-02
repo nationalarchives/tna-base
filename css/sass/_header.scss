@@ -121,9 +121,15 @@ header {
         border-radius: 100%;
       }
       #mobile-logo-holder {
+        a {
+          display: block;
+        }
         img {
           @media  (min-width: 480px) {
-            width: 100%;
+            display: block;
+            max-height: 50px;
+            width: auto;
+            margin: 0 auto;
           }
           @media  (min-width : 320px) and (max-width: 479px) {
             width: 200px;
