@@ -6083,7 +6083,7 @@ ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
   margin-bottom: 1em; }
 
 ul.sibling {
-  margin-top: 10px; }
+  margin: 0; }
 
 ul.sibling li {
   font-family: 'Bitter', serif;
