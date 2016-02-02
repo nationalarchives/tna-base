@@ -5958,13 +5958,15 @@ table td {
 body {
   font-family: "Open Sans", arial, sans-serif;
   font-size: 16px;
-  background-color: #eee; }
+  background-color: #eee;
+  line-height: 1.6; }
 
 h1, h2, h3, h4 {
   font-family: "Bitter", "Open Sans", arial, serif;
   font-weight: 400;
   z-index: 2;
-  line-height: 1.6; }
+  line-height: 1.6;
+  letter-spacing: -.025em; }
 
 h1 {
   font-size: 1.75em; }
@@ -5977,6 +5979,9 @@ h3 {
 
 h4 {
   font-size: 1.2em; }
+
+p {
+  margin: 0 0 1.5em; }
 
 a:active, a:link, a:visited {
   color: #2A5DB0;
@@ -6078,7 +6083,7 @@ ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
   margin-bottom: 1em; }
 
 ul.sibling {
-  margin-top: 10px; }
+  margin: 0; }
 
 ul.sibling li {
   font-family: 'Bitter', serif;
@@ -6168,9 +6173,11 @@ input[type="submit"]:focus, a.button:focus {
   display: none; }
 
 /* TNA breadcrumb styles */
-.tna-breadcrumb .breadcrumbs {
-  margin: 1em 0;
-  font-size: .9em; }
+.tna-breadcrumb {
+  margin-top: 0.5em; }
+  .tna-breadcrumb .breadcrumbs {
+    margin: 1em 0;
+    font-size: .9em; }
 
 /* TNA nav styles (Mega-menu) */
 nav {
@@ -6213,20 +6220,21 @@ nav {
 header {
   background-color: #222;
   color: #fff;
-  padding: 10px 0; }
+  padding: 0.7em 0 7px 0; }
   header .container {
     /* Mega menu button (mobile view only) */
     /* 'Search our website/search our records' (mobile view only) */ }
     header .container .row #search-field-wrapper input[type="text"] {
       position: absolute;
       top: 0;
-      right: 40px;
+      right: 55px;
       width: 226px;
       height: 40px;
       color: #222; }
     header .container .row #search-field-wrapper input[type="submit"] {
       position: absolute;
-      right: 0;
+      right: 15px;
+      right: 15px;
       width: 40px;
       height: 40px;
       background-image: url("../img/search-white.png");
@@ -6260,7 +6268,7 @@ header {
       background-repeat: no-repeat;
       background-color: #cb0d07;
       display: block;
-      margin: -20px auto 0 auto;
+      margin: -15px auto 0 auto;
       position: relative;
       text-align: center;
       height: 60px;
@@ -6313,9 +6321,14 @@ header {
       z-index: 2;
       background-color: #cb0d07;
       border-radius: 100%; }
+    header .container .row #mobile-logo-holder a {
+      display: block; }
     @media (min-width: 480px) {
       header .container .row #mobile-logo-holder img {
-        width: 100%; } }
+        display: block;
+        max-height: 50px;
+        width: auto;
+        margin: 0 auto; } }
     @media (min-width: 320px) and (max-width: 479px) {
       header .container .row #mobile-logo-holder img {
         width: 200px; } }
@@ -6325,8 +6338,8 @@ header {
       background: url("../img/search-white.png") center no-repeat;
       background-size: 90%;
       position: absolute;
-      top: -44px;
-      right: 5px;
+      top: -48px;
+      right: 20px;
       cursor: pointer; }
     header .container .row .col-md-12 .search-close {
       height: 2.1em;
@@ -6383,7 +6396,7 @@ header {
       display: inline-block;
       position: absolute;
       top: 0;
-      right: 266px;
+      right: 281px;
       width: 40px;
       height: 40px;
       line-height: 40px;
@@ -6527,16 +6540,20 @@ header #mobileGlobalSearch label {
 header #mobileGlobalSearch #changeDestination {
   padding-top: .5em; }
 
-/* Container ---------------- */
-@media (min-width: 1200px) {
-  .container {
-    width: 1240px; } }
-@media (width: 768px) {
-  .container main#main.col-md-8 {
-    width: 65%; } }
-@media (width: 768px) {
-  .container aside#sidebar.col-md-4 {
-    width: 34.9%; } }
+/* Container ----------------  */
+.container {
+  max-width: 1240px !important;
+  width: 100% !important;
+  padding: 0 !important; }
+  @media (max-width: 1280px) {
+    .container {
+      width: 94% !important; } }
+  @media (width: 768px) {
+    .container main#main.col-md-8 {
+      width: 65%; } }
+  @media (width: 768px) {
+    .container aside#sidebar.col-md-4 {
+      width: 34.9%; } }
 
 @media (width: 768px) {
   footer#footer .col-sm-6 {

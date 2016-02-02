@@ -3,7 +3,7 @@
 $parentid = $post->post_parent;
 ?>
 
-<aside id="sidebar" class="col-xs-12 col-sm-12 col-md-4" role="complementary">
+<aside id="sidebar" class="col-xs-12 col-sm-4 col-md-4" role="complementary">
 	<div class="sidebar-header">
 		<h2>
 			<a name="inThisSection" href="<?php echo get_permalink($parentid); ?>">
