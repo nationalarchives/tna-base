@@ -27,7 +27,7 @@ function dimox_breadcrumbs() {
 	$show_current   = 1; // 1 - show current page title, 0 - don't show
 	$before         = '<span class="current">'; // tag before the current crumb
 	$after          = '</span>'; // tag after the current crumb
-	$pre_crumbs     = '<span><a href=“#”>About</a></span> <span class="sep">&gt;</span> ';
+	global $pre_crumbs;
 	/* === END OF OPTIONS === */
 
 	global $post;
