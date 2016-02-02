@@ -6540,23 +6540,14 @@ header #mobileGlobalSearch label {
 header #mobileGlobalSearch #changeDestination {
   padding-top: .5em; }
 
-/* Container ---------------- */
+/* Container ----------------  */
 .container {
-  max-width: 1240px;
-  width: 94%;
-  padding: 0; }
-  @media (min-width: 1200px) {
+  max-width: 1240px !important;
+  width: 100% !important;
+  padding: 0 !important; }
+  @media (max-width: 1280px) {
     .container {
-      width: 94%;
-      padding: 0; } }
-  @media (min-width: 992px) {
-    .container {
-      width: 94%;
-      padding: 0; } }
-  @media (min-width: 768px) {
-    .container {
-      width: 94%;
-      padding: 0; } }
+      width: 94% !important; } }
   @media (width: 768px) {
     .container main#main.col-md-8 {
       width: 65%; } }

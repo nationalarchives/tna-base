@@ -30,22 +30,13 @@ header {
     }
   }
 }
-/* Container ---------------- */
+/* Container ----------------  */
 .container {
-  max-width: 1240px;
-  width: 94%;
-  padding: 0;
-  @media (min-width: 1200px) {
-    width: 94%;
-    padding: 0;
-  }
-  @media (min-width: 992px) {
-    width: 94%;
-    padding: 0;
-  }
-  @media (min-width: 768px) {
-    width: 94%;
-    padding: 0;
+  max-width: 1240px !important;
+  width: 100% !important;
+  padding: 0 !important;
+  @media (max-width: 1280px) {
+    width: 94% !important;
   }
   main{
     &#main{
