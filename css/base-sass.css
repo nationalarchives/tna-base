@@ -6338,8 +6338,8 @@ header {
       background: url("../img/search-white.png") center no-repeat;
       background-size: 90%;
       position: absolute;
-      top: -44px;
-      right: 5px;
+      top: -48px;
+      right: 20px;
       cursor: pointer; }
     header .container .row .col-md-12 .search-close {
       height: 2.1em;
@@ -6542,7 +6542,9 @@ header #mobileGlobalSearch #changeDestination {
 
 /* Container ---------------- */
 .container {
-  max-width: 1240px; }
+  max-width: 1240px;
+  width: 94%;
+  padding: 0; }
   @media (min-width: 1200px) {
     .container {
       width: 94%;

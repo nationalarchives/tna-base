@@ -33,6 +33,8 @@ header {
 /* Container ---------------- */
 .container {
   max-width: 1240px;
+  width: 94%;
+  padding: 0;
   @media (min-width: 1200px) {
     width: 94%;
     padding: 0;
