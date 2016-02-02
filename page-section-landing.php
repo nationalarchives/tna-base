@@ -18,7 +18,9 @@ Template Name: Section landing
                                <p>Now a chain-smoking, self-destructive alcoholic with a mean inferiority complex, Jones is the owner and sole employee of Alias Investigations - a small, private-investigative firm specializing in super-human cases. Learn the Wallcrawlers tragic origin and witness amazing fantasy as only Marvel can provide it. But her wit, charm and intelligence just may help her survive through another day. Amazing Spider-Man is the cornerstone of the Marvel Universe.</p>
                            </div>
                            <div class="col-md-4">
-                               <p>The very first appearance of Spider-Man. Once upon a time, Jessica Jones was a costumed super-hero, just not a very good one. But will each partner’s combined strength be enough. But her wit, charm and intelligence just may help her survive through another day.<p>
+                              <div class="well">
+                                   <p>The very first appearance of Spider-Man. Once upon a time, Jessica Jones was a costumed super-hero, just not a very good one. But will each partner’s combined strength be enough. But her wit, charm and intelligence just may help her survive through another day.<p>
+                              </div>
                            </div>
                       </div>
                    </article>

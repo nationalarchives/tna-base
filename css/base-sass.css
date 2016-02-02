@@ -6040,6 +6040,13 @@ hr {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%; }
 
+.well {
+  background-color: #f3f3f3;
+  padding: 20px;
+  margin: 0;
+  border: none;
+  border-radius: 0; }
+
 /* TNA list styles */
 ul, ol {
   padding-left: 1.5em;

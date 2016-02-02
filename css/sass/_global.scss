@@ -92,3 +92,11 @@ hr {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
 }
+
+.well {
+  background-color: $tna_well;
+  padding: 20px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
