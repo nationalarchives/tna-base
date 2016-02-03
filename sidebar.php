@@ -1,13 +1,12 @@
 <?php
 // This gets the parent page ID
 $parent_id = $post->post_parent;
-global $pre_path;
 ?>
 
 <aside id="sidebar" class="col-xs-12 col-sm-4 col-md-4" role="complementary">
 	<div class="sidebar-header">
 		<h2>
-			<a name="inThisSection" href="<?php echo str_replace(home_url(), $pre_path, get_permalink($parent_id)); ?>">
+			<a name="inThisSection" href="<?php echo make_path_relative( get_permalink($parent_id) ); ?>">
 				Also in <?php echo get_the_title($parent_id);?>
 			</a>
 		</h2>
@@ -21,7 +20,7 @@ global $pre_path;
 			// manually on the WP edit page.
 			// We're using depth=1 to ensure we only get the children of the parent page, not grandchildren
 			// See http://codex.wordpress.org/Function_Reference/wp_list_pages for a full list of parameters
-			echo str_replace(home_url(), $pre_path, wp_list_pages('echo=0&title_li=&child_of=$parent_id&sort_column=menu_order&depth=1&exclude=$post->ID'));
+			echo make_path_relative( wp_list_pages("echo=0&title_li=&child_of=$parent_id&sort_column=menu_order&depth=1&exclude=$post->ID") );
 			?>
 		</ul>
 	</div>

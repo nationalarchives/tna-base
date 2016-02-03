@@ -26,6 +26,10 @@ add_filter( 'style_loader_src', 'tna_styles_scripts_relative' );
 function tna_styles_scripts_relative( $url ) {
 	return str_replace( site_url(), '', $url );
 }
+function make_path_relative( $url ) {
+	global $pre_path;
+	return str_replace( site_url(), $pre_path, $url );
+}
 
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
