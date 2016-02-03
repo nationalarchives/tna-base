@@ -30,6 +30,15 @@ function make_path_relative( $url ) {
 	global $pre_path;
 	return str_replace( site_url(), $pre_path, $url );
 }
+function tna_wp_head() {
+	ob_start();
+	wp_head();
+	$wp_head = ob_get_contents();
+	ob_end_clean();
+	global $pre_path;
+	$wp_head = str_replace( site_url(), 'http://www.nationalarchives.gov.uk' . $pre_path, $wp_head );
+	echo $wp_head;
+}
 
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -39,6 +48,8 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // Remove wordpress generator meta from head
 remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'rel_canonical' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 
 // Breadcrumb prefix variable (to be added to child theme)
 global $pre_crumbs;
