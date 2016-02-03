@@ -1,8 +1,6 @@
 <?php
 
-/**
- * Enqueue styles and scripts.
- */
+// Enqueue styles and scripts
 function tna_styles() {
 	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css', array(), '0.1', 'all' );
 	wp_register_style( 'tna-google-fonts',
