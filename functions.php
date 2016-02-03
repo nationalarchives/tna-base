@@ -42,7 +42,9 @@ remove_action( 'wp_head', 'wp_generator' );
 
 // Breadcrumb prefix variable (to be added to child theme)
 global $pre_crumbs;
+global $pre_url;
 $pre_crumbs = ' <span class="sep">&gt;</span> <span><a href="#">About</a></span> ';
+$pre_url = '';
 
 // Includes
 include 'inc/functions/dimox_breadcrumbs.php';
