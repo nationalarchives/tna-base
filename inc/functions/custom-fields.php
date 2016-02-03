@@ -14,8 +14,8 @@ function myfield_add_custom_box() {
 }
 // Prints the box content
 function myfield_meta_box( $post ) {
-    $field_value = get_post_meta( $post->ID, '_myfield_editor', false );
-    wp_editor( $field_value[0], '_myfield_editor',
+    $field_value = get_post_meta( $post->ID, 'feat_box', false );
+    wp_editor( $field_value[0], 'feat_box',
         array(
             'media_buttons' => false,
             'textarea_rows' => 4,
@@ -45,7 +45,7 @@ function myfield_save_postdata( $post_id ) {
         }
     }
     // OK, we're authenticated: we need to find and save the data
-    if ( isset ( $_POST['_myfield_editor'] ) ) {
-        update_post_meta( $post_id, '_myfield_editor', $_POST['_myfield_editor'] );
+    if ( isset ( $_POST['feat_box'] ) ) {
+        update_post_meta( $post_id, 'feat_box', $_POST['feat_box'] );
     }
 }
