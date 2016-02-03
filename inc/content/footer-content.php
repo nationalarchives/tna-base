@@ -71,10 +71,10 @@
 </div>
 <div class="row footer-base">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-9 ogl">
-                <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img alt="Open Government License logo" src="<?php echo get_template_directory_uri(); ?>/img/logo-ogl.png"> </a>
+                <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img alt="Open Government License logo" src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png"> </a>
                 <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/">Open Government Licence v3.0</a>, <br>except where otherwise stated </p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-right">
-                <a title="External website - opens in a new window" href="http://gov.uk/" target="_blank"> <img alt="GOV.UK logo" src="<?php echo get_template_directory_uri(); ?>/img/gov-uk.png"> </a>
+                <a title="External website - opens in a new window" href="http://gov.uk/" target="_blank"> <img alt="GOV.UK logo" src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/gov-uk.png"> </a>
             </div>
 </div>
