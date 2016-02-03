@@ -19,7 +19,12 @@ Template Name: Section landing
                            </div>
                            <div class="col-md-4">
                               <div class="well">
-                                   <p>The very first appearance of Spider-Man. Once upon a time, Jessica Jones was a costumed super-hero, just not a very good one. But will each partner’s combined strength be enough. But her wit, charm and intelligence just may help her survive through another day.<p>
+                                  <p>
+                                    <?php
+                                      $feat_box = get_post_meta(get_the_ID(), 'feat_box', true);
+                                      echo $feat_box;
+                                    ?>
+                                  </p>
                               </div>
                            </div>
                       </div>
