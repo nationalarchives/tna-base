@@ -38,9 +38,9 @@ remove_action( 'wp_head', 'wp_generator' );
 
 // Breadcrumb prefix variable (to be added to child theme)
 global $pre_crumbs;
-global $pre_url;
+global $pre_path;
 $pre_crumbs = ' <span class="sep">&gt;</span> <span><a href="#">About</a></span> ';
-$pre_url = '';
+$pre_path = '';
 
 //Theme Support
 add_theme_support( 'post-thumbnails' );
