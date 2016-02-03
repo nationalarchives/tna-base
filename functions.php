@@ -44,8 +44,12 @@ remove_action( 'wp_head', 'wp_generator' );
 global $pre_crumbs;
 $pre_crumbs = ' <span class="sep">&gt;</span> <span><a href="#">About</a></span> ';
 
+//Theme Support
+add_theme_support( 'post-thumbnails' );
+
 // Includes
 include 'inc/functions/dimox_breadcrumbs.php';
+include 'inc/functions/custom-fields.php';
 
 
 ?>
