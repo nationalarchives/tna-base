@@ -11,22 +11,10 @@ Template Name: Section landing
                <div class="col-md-12">
                    <article>
                       <div class="entry-header">
-                          <h1>Main Title</h1>
+                          <h1><?php the_title(); ?></h1>
                       </div>
                       <div class="row entry-content">
-                           <div class="col-md-8">
-                               <p>Now a chain-smoking, self-destructive alcoholic with a mean inferiority complex, Jones is the owner and sole employee of Alias Investigations - a small, private-investigative firm specializing in super-human cases. Learn the Wallcrawlers tragic origin and witness amazing fantasy as only Marvel can provide it. But her wit, charm and intelligence just may help her survive through another day. Amazing Spider-Man is the cornerstone of the Marvel Universe.</p>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="well">
-                                  <p>
-                                    <?php
-                                      $feat_box = get_post_meta(get_the_ID(), 'feat_box', true);
-                                      echo $feat_box;
-                                    ?>
-                                  </p>
-                              </div>
-                           </div>
+                          <?php change_layout(); ?>
                       </div>
                    </article>
                </div>
