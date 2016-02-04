@@ -57,7 +57,7 @@ global $pre_path;
 $pre_crumbs = ' <span class="sep">&gt;</span> <span><a href="#">About</a></span> ';
 $pre_path = '';
 
-//Theme Support
+// Theme Support
 add_theme_support( 'post-thumbnails' );
 
 // Includes
@@ -65,4 +65,11 @@ include 'inc/functions/dimox_breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
 
 
+/* Alter image sizes for landing page template */
+add_action( 'after_setup_theme', 'tna_theme_setup' );
+function tna_theme_setup() {
+	add_image_size( 'landing-page-thumb', 588, 180, true ); // (cropped)
+	add_image_size( 'landing-page-children-thumb', 300 ); // 300 pixels wide (and unlimited height)
+}
+/* Alter image sizes for landing page template */
 ?>

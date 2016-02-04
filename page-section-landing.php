@@ -2,6 +2,12 @@
 /*
 Template Name: Section landing
 */
+
+/* Variables */
+$content_with_feat_box = '<div class="col-md-8">';
+$content_with_feat_img = '<div class="col-md-6">';
+$feat_box = get_post_meta(get_the_ID(), 'feat_box', true);
+//$feat_img = the_post_thumbnail( 'landing-page-thumb', array( 'class' => 'img-responsive' ) );
 ?>
 <?php get_header(); ?>
 <?php get_template_part ( 'breadcrumb' ); ?>
@@ -11,22 +17,44 @@ Template Name: Section landing
                <div class="col-md-12">
                    <article>
                       <div class="entry-header">
-                          <h1>Main Title</h1>
+                          <h1><?php the_title(); ?></h1>
                       </div>
                       <div class="row entry-content">
-                           <div class="col-md-8">
-                               <p>Now a chain-smoking, self-destructive alcoholic with a mean inferiority complex, Jones is the owner and sole employee of Alias Investigations - a small, private-investigative firm specializing in super-human cases. Learn the Wallcrawlers tragic origin and witness amazing fantasy as only Marvel can provide it. But her wit, charm and intelligence just may help her survive through another day. Amazing Spider-Man is the cornerstone of the Marvel Universe.</p>
-                           </div>
-                           <div class="col-md-4">
-                              <div class="well">
-                                  <p>
-                                    <?php
-                                      $feat_box = get_post_meta(get_the_ID(), 'feat_box', true);
-                                      echo $feat_box;
-                                    ?>
-                                  </p>
-                              </div>
-                           </div>
+                          <?php
+                            if (!empty( $feat_box )) { // This is the custom field block
+                                echo $content_with_feat_box;
+                                if (have_posts()) :
+                                    while (have_posts()) :
+                                        the_post();
+                                        the_content();
+                                        echo '</div>';
+                                        echo '<div class="col-md-4"><div class="well">'.$feat_box.'</div></div>';
+                                    endwhile;
+                                endif;
+                            } elseif (has_post_thumbnail()) { // This is the feature image block.
+                                echo $content_with_feat_img;
+                                if (have_posts()) :
+                                    while (have_posts()) :
+                                        the_post();
+                                        the_content();
+                                        echo '</div>';
+                                        echo '<div class="col-md-6">';
+                                        the_post_thumbnail( 'landing-page-thumb', array( 'class' => 'img-responsive' ) );
+                                        echo '</div>';
+                                    endwhile;
+                                endif;
+                            } elseif (empty($feat_box) && the_post_thumbnail() == null){
+                                echo $content_with_feat_box;
+                                if (have_posts()) :
+                                    while (have_posts()) :
+                                        the_post();
+                                        the_content();
+                                    endwhile;
+                                endif;
+                                echo '</div>';
+                                echo '<div class="col-md-4">&nbsp;</div>';
+                            }
+                          ?>
                       </div>
                    </article>
                </div>
