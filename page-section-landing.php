@@ -20,7 +20,31 @@ Template Name: Section landing
                </div>
            </div>
            <div class="row">
+               <?php
+                 $page_id = get_the_ID(); //Gets the id for the current page.
+
+                 // loop through the sub-pages for the current page.
+                 $childpages = new WP_Query(array(
+                         'post_type' => 'page',
+                         'post_parent' => $page_id,
+                         'posts_per_page' => -1,
+                         'orderby' => 'menu_order date',
+                         'order' => 'ASC'
+                     )
+                 );
+                 while ($childpages->have_posts()) : $childpages->the_post();
+               ?>
                <div class="col-md-6">
+                   <article>
+                       <div class="entry-header">
+                           <h2>Title 1</h2>
+                       </div>
+                       <div class="entry-content">
+                           <p>Avengers Assemble. Earths Mightiest Heroes reunite with their biggest guns at the forefront to take on familiar enemies and new threats alike. The Avengers return. New threats.</p>
+                       </div>
+                   </article>
+               </div>
+               <!--<div class="col-md-6">
                    <article>
                        <div class="entry-header">
                            <h2>Title 1</h2>
@@ -40,6 +64,16 @@ Template Name: Section landing
                        </div>
                    </article>
                </div>
+               <div class="col-md-6">
+                   <article>
+                       <div class="entry-header">
+                           <h2>Title 1</h2>
+                       </div>
+                       <div class="entry-content">
+                           <p>Avengers Assemble. Earths Mightiest Heroes reunite with their biggest guns at the forefront to take on familiar enemies and new threats alike. The Avengers return. New threats.</p>
+                       </div>
+                   </article>
+               </div>-->
            </div>
         </div>
     </main>
