@@ -68,8 +68,60 @@ include 'inc/functions/custom-fields.php';
 /* Alter image sizes for landing page template */
 add_action( 'after_setup_theme', 'tna_theme_setup' );
 function tna_theme_setup() {
-	add_image_size( 'landing-page-thumb', 588, 180, true ); // (cropped)
+	//add_image_size( 'landing-page-thumb', 588, 180, true ); // (cropped)
 	add_image_size( 'landing-page-children-thumb', 300 ); // 300 pixels wide (and unlimited height)
+	set_post_thumbnail_size( 588, 180, array( 'center', 'center')  );
 }
 /* Alter image sizes for landing page template */
-?>
+
+
+/* Gets the first sentence from the content area of a page. */
+if (!function_exists('first_sentence')) :
+	function first_sentence($content)
+	{
+		$content = strip_tags($content);
+		$pos = strpos($content, ".");
+		return substr($content, 0, $pos + 1);
+	}
+endif;
+
+
+function change_layout() {
+	global $post;
+	$content_with_feat_box = '<div class="col-md-8">';
+	$content_with_feat_img = '<div class="col-md-6">';
+	$feat_box = get_post_meta(get_the_ID(), 'feat_box', true);
+	if (!empty( $feat_box )) { // This is the custom field block
+		echo $content_with_feat_box;
+		if (have_posts()) :
+			while (have_posts()) :
+				the_post();
+				the_content();
+				echo '</div>';
+				echo '<div class="col-md-4"><div class="well">'.$feat_box.'</div></div>';
+			endwhile;
+		endif;
+	} elseif (has_post_thumbnail()) { // This is the feature image block.
+		echo $content_with_feat_img;
+		if (have_posts()) :
+			while (have_posts()) :
+				the_post();
+				the_content();
+				echo '</div>';
+				echo '<div class="col-md-6">';
+				the_post_thumbnail( '', array( 'class' => 'img-responsive' ) );
+				echo '</div>';
+			endwhile;
+		endif;
+	} elseif (empty($feat_box) && the_post_thumbnail() == null){
+		echo $content_with_feat_box;
+		if (have_posts()) :
+			while (have_posts()) :
+				the_post();
+				the_content();
+			endwhile;
+		endif;
+		echo '</div>';
+		echo '<div class="col-md-4">&nbsp;</div>';
+	}
+}
