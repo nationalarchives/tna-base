@@ -6,6 +6,8 @@
 	<meta content="initial-scale = 1.0" name="viewport">
 	<title><?php wp_title(''); ?></title>
 	<?php tna_wp_head(); ?>
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />
 	<!-- Fav Icon -->
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
