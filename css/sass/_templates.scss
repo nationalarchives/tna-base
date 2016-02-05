@@ -35,5 +35,10 @@ article {
   }
   .entry-content {
     padding: 20px;
+    .thumbnail {
+      margin-bottom: 10px;
+      border:none;
+      padding:0;
+    }
   }
 }

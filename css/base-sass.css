@@ -6503,6 +6503,10 @@ article {
     background: url(../img/heading-flourish.png) no-repeat bottom left; }
   article .entry-content {
     padding: 20px; }
+    article .entry-content .thumbnail {
+      margin-bottom: 10px;
+      border: none;
+      padding: 0; }
 
 /* TNA sidebar styles */
 aside {
