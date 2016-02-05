@@ -27,7 +27,6 @@ function dimox_breadcrumbs() {
 	$show_current   = 1; // 1 - show current page title, 0 - don't show
 	$before         = '<span class="current">'; // tag before the current crumb
 	$after          = '</span>'; // tag after the current crumb
-	global $pre_crumbs;
 	/* === END OF OPTIONS === */
 
 	global $post;
@@ -42,10 +41,19 @@ function dimox_breadcrumbs() {
 	$parent_id      = $post->post_parent;
 	$sep            = ' ' . $sep_before . $sep . $sep_after . ' ';
 
+	// TNA additional breadcrumbs
+	global $pre_crumbs;
+	if ( $pre_crumbs ) {
+		foreach ($pre_crumbs as $crumb_name => $crumb_path) {
+			global $pre_crumbs_st;
+			$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span><a href="' . $crumb_path . '">'. $crumb_name . '</a></span> ';
+		}
+	}
+
 	if (is_home() || is_front_page()) {
 
 		if ($show_on_home) echo $wrap_before . '<a href="' . $home_link . '">' . $text['home'] . '</a>';
-		if ($pre_crumbs) echo $pre_crumbs;
+		if ($pre_crumbs_st) echo $pre_crumbs_st;
 		if ($show_on_home) echo $wrap_after;
 
 	} else {
@@ -55,11 +63,11 @@ function dimox_breadcrumbs() {
 		if ($show_home_link) echo sprintf($link, $home_link, $text['home']);
 
 		if ( is_page() && !$parent_id ) {
-			if ($pre_crumbs) echo $pre_crumbs;
+			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
 
 		} elseif ( is_page() && $parent_id ) {
-			if ($pre_crumbs) echo $pre_crumbs;
+			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_home_link) echo $sep;
 			if ($parent_id != $frontpage_id) {
 				$breadcrumbs = array();
@@ -79,12 +87,12 @@ function dimox_breadcrumbs() {
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
 
 		}  elseif ( is_404() ) {
-			if ($pre_crumbs) echo $pre_crumbs;
+			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_home_link && $show_current) echo $sep;
 			if ($show_current) echo $before . $text['404'] . $after;
 
 		} elseif ( is_single() && !is_attachment() ) {
-			if ($pre_crumbs) echo $pre_crumbs;
+			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_home_link) echo $sep;
 			if ( get_post_type() != 'post' ) {
 				$post_type = get_post_type_object(get_post_type());
