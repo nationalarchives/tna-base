@@ -20,8 +20,18 @@ function tna_wp_head() {
     echo $wp_head;
 }
 
-// Breadcrumb prefix variable (to be added to child theme)
-global $pre_crumbs;
-global $pre_path;
-$pre_crumbs = ' <span class="sep">&gt;</span> <span><a href="#">About</a></span> ';
-$pre_path = '';
+// Breadcrumb and url path variables (to be added to child theme)
+function tnatheme_globals() {
+	global $pre_path;
+	global $pre_crumbs;
+	$pre_crumbs = array(
+		'About us' => '/about/',
+		'Our role' => '/about/our-role/'
+	);
+	if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
+		$pre_path = '';
+	} else {
+		$pre_path = '/about';
+	}
+}
+tnatheme_globals();
