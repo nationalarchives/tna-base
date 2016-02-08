@@ -48,9 +48,8 @@ add_action( 'after_setup_theme', 'tna_theme_setup' );
 function tna_theme_setup()
 {
 	//add_image_size( 'landing-page-thumb', 588, 180, true ); // (cropped)
-	add_image_size('landing-page-children-thumb', 600, 180, true); // 600 px wide and 180px height)
+	add_image_size('landing-page-children-thumb', 600, 180, array( 'center', 'center' ) ); // 600 px wide and 180px height)
 }
-
 /* Alter image sizes for landing page template */
 
 
