@@ -45,11 +45,12 @@ include 'inc/functions/url-rewriting.php';
 
 /* Alter image sizes for landing page template */
 add_action( 'after_setup_theme', 'tna_theme_setup' );
-function tna_theme_setup() {
+function tna_theme_setup()
+{
 	//add_image_size( 'landing-page-thumb', 588, 180, true ); // (cropped)
-	add_image_size( 'landing-page-children-thumb', 300 ); // 300 pixels wide (and unlimited height)
-	set_post_thumbnail_size( 588, 180, array( 'center', 'center')  );
+	add_image_size('landing-page-children-thumb', 600, 180, true); // 600 px wide and 180px height)
 }
+
 /* Alter image sizes for landing page template */
 
 
@@ -87,7 +88,7 @@ function change_layout() {
 				the_content();
 				echo '</div>';
 				echo '<div class="col-md-6">';
-				the_post_thumbnail( '', array( 'class' => 'img-responsive' ) );
+				the_post_thumbnail( 'landing-page-children-thumb', array( 'class' => 'img-responsive' ) );
 				echo '</div>';
 			endwhile;
 		endif;

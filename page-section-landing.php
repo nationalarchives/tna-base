@@ -45,13 +45,17 @@ Template Name: Section landing
                        <div class="entry-content clearfix">
                         <?php
                             $image_id = get_post_thumbnail_id($page->ID);
-                            $image_url = wp_get_attachment_image_src($image_id, '', false);
+                            $image_url = wp_get_attachment_image_src($image_id, 'landing-page-children-thumb', false);
 
                             if ($image_url) {
                         ?>
+
+
                         <a href="<?php echo make_path_relative(get_page_link($page->ID)) ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
-                             <img src="<?php echo(make_path_relative($image_url[0])); ?>" class="img-responsive child-img">
+                             <img src="<?php echo(make_path_relative($image_url[0])); ?>" class="img-responsive">
                         </a>
+
+
                         <?php
                             }
                         ?>
