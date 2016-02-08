@@ -28,7 +28,6 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // Remove wordpress generator meta from head
 remove_action( 'wp_head', 'wp_generator' );
-remove_action( 'wp_head', 'rel_canonical' );
 remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 remove_action( 'wp_head', 'feed_links', 2 );
 remove_action('wp_head', 'feed_links_extra', 3);

@@ -33,7 +33,7 @@ function tnatheme_globals() {
 	if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
 		$pre_path = '';
 	} else {
-		$pre_path = '/about';
+		$pre_path = '/about/our-role';
 	}
 }
 tnatheme_globals();
