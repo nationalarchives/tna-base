@@ -63,6 +63,7 @@ add_theme_support( 'post-thumbnails' );
 // Includes
 include 'inc/functions/dimox_breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
+include 'inc/functions/internal-url-fix.php';
 
 
 /* Alter image sizes for landing page template */

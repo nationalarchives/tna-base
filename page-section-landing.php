@@ -49,7 +49,7 @@ Template Name: Section landing
                             if ($image_url) {
                         ?>
                         <a href="<?php echo fix_internal_url(get_page_link($page->ID)) ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
-                             <img src="<?php echo(fix_internal_url($image_url[0])); ?>" class="img-responsive child-img" alt="Cinque Terre">
+                             <img src="<?php echo(fix_internal_url($image_url[0])); ?>" class="img-responsive child-img">
                         </a>
                         <?php
                             }
