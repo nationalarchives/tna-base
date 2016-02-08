@@ -21,11 +21,12 @@ Template Name: Section landing
            </div>
            <div class="row">
                <?php
-                   $page_id = get_the_ID(); //Gets the id for the current page.
+                   $page_id = (is_front_page() ? 0 :get_the_ID()); //Gets the id for the current page.
                    $childpages = new WP_Query(array(
                            'post_type' => 'page',
                            'post_parent' => $page_id,
                            'posts_per_page' => -1,
+                           'post__not_in' => array(get_option('page_on_front')),
                            'orderby' => 'menu_order date',
                            'order' => 'ASC'
                        )
@@ -41,7 +42,7 @@ Template Name: Section landing
                                </a>
                            </h2>
                        </div>
-                       <div class="entry-content">
+                       <div class="entry-content clearfix">
                         <?php
                             $image_id = get_post_thumbnail_id($page->ID);
                             $image_url = wp_get_attachment_image_src($image_id, '', false);
@@ -75,11 +76,11 @@ Template Name: Section landing
                             );
                             if ($grandchildrenpages->have_posts()):
                         ?>
-                        <ul class="list-group">
+                        <ul class="child">
                             <?php
                                 while ($grandchildrenpages->have_posts()) : $grandchildrenpages->the_post();
                             ?>
-                            <li class="list-group-item">
+                            <li>
                                 <a href="<?php echo make_path_relative(get_page_link()); ?>"><?php the_title(); ?></a>
                             </li>
                              <?php endwhile;

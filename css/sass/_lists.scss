@@ -39,12 +39,14 @@ ul.child, ul.sibling, ul.triplets, ul.quadruplets {
   float: left;
   padding-bottom: 10px;
   width: 96%;
+  margin: 0;
 }
 
 
 ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
   list-style-image: url("../img/list-link-bullet.png");
-  width: 96%;
+  width: 40%;
+  margin-right: 10%;
   float:left;
   margin-bottom: 1em;
 }
