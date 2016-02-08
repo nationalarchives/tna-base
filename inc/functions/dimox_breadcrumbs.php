@@ -30,6 +30,7 @@ function dimox_breadcrumbs() {
 	/* === END OF OPTIONS === */
 
 	global $post;
+	global $pre_path;
 	$home_link      = 'http://www.nationalarchives.gov.uk/';
 	$link_before    = '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
 	$link_after     = '</span>';
@@ -74,7 +75,7 @@ function dimox_breadcrumbs() {
 				while ($parent_id) {
 					$page = get_page($parent_id);
 					if ($parent_id != $frontpage_id) {
-						$breadcrumbs[] = sprintf($link, str_replace(home_url(), '', get_permalink($page->ID)), get_the_title($page->ID));
+						$breadcrumbs[] = sprintf($link, str_replace(home_url(), $pre_path, get_permalink($page->ID)), get_the_title($page->ID));
 					}
 					$parent_id = $page->post_parent;
 				}
@@ -106,7 +107,7 @@ function dimox_breadcrumbs() {
 				$cats = preg_replace('#<a([^>]+)>([^<]+)<\/a>#', $link_before . '<a$1' . $link_attr .'>' . $link_in_before . '$2' . $link_in_after .'</a>' . $link_after, $cats);
 				echo $cats;
 				if ( get_query_var('cpage') ) {
-					echo $sep . sprintf($link, str_replace(home_url(), '', get_permalink()), get_the_title()) . $sep . $before . sprintf($text['cpage'], get_query_var('cpage')) . $after;
+					echo $sep . sprintf($link, str_replace(home_url(), $pre_path, get_permalink()), get_the_title()) . $sep . $before . sprintf($text['cpage'], get_query_var('cpage')) . $after;
 				} else {
 					if ($show_current) echo $before . get_the_title() . $after;
 				}
