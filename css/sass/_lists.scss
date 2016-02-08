@@ -45,10 +45,14 @@ ul.child, ul.sibling, ul.triplets, ul.quadruplets {
 
 ul.child li, ul.sibling li, ul.triplets li, ul.quadruplets li, ul.full li {
   list-style-image: url("../img/list-link-bullet.png");
-  width: 40%;
-  margin-right: 10%;
+  width: 96%;
   float:left;
   margin-bottom: 1em;
+}
+
+ul.child li {
+  width: 40%;
+  margin-right: 10%;
 }
 
 ul.sibling {
