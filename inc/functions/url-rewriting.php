@@ -23,6 +23,7 @@ function tna_wp_head() {
 }
 
 // Breadcrumb and url path variables (to be added to child theme)
+/*
 function tnatheme_globals() {
 	global $pre_path;
 	global $pre_crumbs;
@@ -37,3 +38,4 @@ function tnatheme_globals() {
 	}
 }
 tnatheme_globals();
+*/
