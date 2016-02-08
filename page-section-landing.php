@@ -36,7 +36,7 @@ Template Name: Section landing
                    <article>
                        <div class="entry-header">
                            <h2>
-                               <a href="<?php echo fix_internal_url(get_page_link()); ?>"
+                               <a href="<?php echo make_path_relative(get_page_link()); ?>">
                                 <?php the_title(); ?>
                                </a>
                            </h2>
@@ -48,8 +48,8 @@ Template Name: Section landing
 
                             if ($image_url) {
                         ?>
-                        <a href="<?php echo fix_internal_url(get_page_link($page->ID)) ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
-                             <img src="<?php echo(fix_internal_url($image_url[0])); ?>" class="img-responsive child-img">
+                        <a href="<?php echo make_path_relative(get_page_link($page->ID)) ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
+                             <img src="<?php echo(make_path_relative($image_url[0])); ?>" class="img-responsive child-img">
                         </a>
                         <?php
                             }
@@ -75,16 +75,16 @@ Template Name: Section landing
                             );
                             if ($grandchildrenpages->have_posts()):
                         ?>
-                         <ul class="list-group">
+                        <ul class="list-group">
                             <?php
                                 while ($grandchildrenpages->have_posts()) : $grandchildrenpages->the_post();
                             ?>
                             <li class="list-group-item">
-                                <a href="<?php echo fix_internal_url(get_page_link()); ?>"><?php the_title(); ?></a>
+                                <a href="<?php echo make_path_relative(get_page_link()); ?>"><?php the_title(); ?></a>
                             </li>
                              <?php endwhile;
                              wp_reset_query(); ?>
-                         </ul>
+                        </ul>
                          <?php endif; ?>
                        </div>
                    </article>

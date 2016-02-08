@@ -6495,6 +6495,12 @@ article {
       line-height: 1.5;
       margin: 0 0 0 -10px;
       display: inline-block; }
+      article .entry-header h2 a {
+        color: #fff;
+        background-image: url(../img/icon-24-heading-link.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        padding-right: 32px; }
   article .entry-header:after {
     content: ' ';
     display: block;
