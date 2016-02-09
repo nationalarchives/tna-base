@@ -1,6 +1,6 @@
 <!-- NORMAL mega menu -->
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-2">
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-2">
                 <h3><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/About us ','WT.ti','Menu - About us ');" href="/about">About us</a></h3>
                 <ul>
                     <li class="mobileOnly"><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/About us ','WT.ti','Menu - About us ');" href="/about/">About us home</a></li>
@@ -14,7 +14,7 @@
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Commercial opportunities ','WT.ti','Menu - Commercial opportunities ');" href="/about/commercial-opportunities.htm">Commercial opportunities</a></li>
                 </ul>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-2">
                 <h3><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Education ','WT.ti','Menu - Education ');" href="/education/">Education</a></h3>
                 <ul>
                     <li class="mobileOnly"><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Education ','WT.ti','Menu - Education ');" href="/education">Education home</a></li>
@@ -28,7 +28,7 @@
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/For students ','WT.ti','Menu - For students ');" href="/education/students/">For students</a></li>
                 </ul>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-2">
                 <h3><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/help-with-your-research ','WT.ti','Menu  Help with your research home ');" href="/help-with-your-research">Help with your research</a></h3>
                 <ul>
                     <li class="mobileOnly"><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/help-with-your-research ','WT.ti','Menu  Help with your research home ');" href="/help-with-your-research/">Help with your research home</a></li>
@@ -41,7 +41,7 @@
                     <li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Record copying ','WT.ti','Menu - Record copying ');" href="/recordcopying/">Record copying</a></li>
                 </ul>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-2">
                 <h3 class=hyphenate><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Information Management ','WT.ti','Menu - Information Management ');" href="/information-management/">Information management</a></h3>
                 <ul>
                     <li class="mobileOnly"><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Information Management ','WT.ti','Menu - Information Management ');" href="/information-management/">Information management home</a></li>
@@ -54,7 +54,7 @@
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Training ','WT.ti','Menu - Training ');" href="/information-management/training/">Training</a></li>
                 </ul>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-2">
                 <h3><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Archives sector ','WT.ti','Menu - Archives sector ');" href="/archives-sector">Archives sector</a></h3>
                 <ul>
                     <li class="mobileOnly"><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Archives sector ','WT.ti','Menu - Archives sector ');" href="/archives-sector">Archives sector home</a></li>
@@ -67,7 +67,7 @@
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Historical Manuscripts Commission ','WT.ti','Menu - Historical Manuscripts Commission ');" href="/archives-sector/hmc.htm">Historical Manuscripts Commission</a></li>
                 </ul>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-2">
+        <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-2">
                 <h3>More...</h3>
                 <ul>
                     <li class="mobileOnly"><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/More? ','WT.ti','Menu - More? ');" href="/about/">More...</a></li>

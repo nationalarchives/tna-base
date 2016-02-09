@@ -6225,6 +6225,14 @@ nav {
         cursor: pointer; }
       nav#nav li a:active, nav#nav li a:hover {
         outline: 0; }
+  @media (max-width: 580px) {
+    nav#nav .col-xxs-12 {
+      width: 100%;
+      float: left;
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .no-js nav {
   display: block; }
