@@ -6447,6 +6447,12 @@ header {
     position: absolute;
     top: -30px; }
 
+.no-js ul {
+  display: block; }
+
+.js ul {
+  display: none; }
+
 /* TNA footer styles */
 footer {
   background-image: url("../img/footer-background.png");

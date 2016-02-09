@@ -163,7 +163,6 @@ $(document).ready(function(){
     // ----------------------------------------
     // 4 Mega menu ----------------------------
 
-    //$('#nav').hide();
     $('#mega-menu-pull-down').on('click', function () {
         $('#nav').slideToggle('fast');
     });

@@ -252,3 +252,13 @@ header {
     top: -30px;
   }
 }
+
+//Works with Modernizr when no JS
+.no-js ul {
+  display: block;
+}
+
+.js ul {
+  display: none;
+}
+//Works with Modernizr when no JS
