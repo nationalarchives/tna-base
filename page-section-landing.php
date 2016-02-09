@@ -19,7 +19,7 @@ Template Name: Section landing
                    </article>
                </div>
            </div>
-           <div class="row">
+           <div class="row" id="equal-heights">
                <?php
                    $page_id = (is_front_page() ? 0 :get_the_ID()); //Gets the id for the current page.
                    $childpages = new WP_Query(array(
