@@ -6468,12 +6468,17 @@ footer {
   color: #fff; }
   footer a:active, footer a:link, footer a:visited {
     color: #fce45c; }
+  footer .footer-col {
+    margin-bottom: 1em; }
+  footer p {
+    font-size: .9em; }
   footer a:focus {
     color: #222; }
   footer ul {
     padding: 0;
     margin: 0; }
   footer li {
+    font-size: .9em;
     list-style-type: none;
     list-style-image: none;
     padding: 0.25em 0;
