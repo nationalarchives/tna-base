@@ -1,13 +1,17 @@
 <?php
-// This gets the parent page ID
+// This gets home and parent page IDs
+$home_id = get_option('page_on_front');
 $parent_id = $post->post_parent;
+
+// This gets the link to the parent page, based on the parent page ID
+$parent_page_id = ($parent_id == $home_id ? $home_id : $parent_id);
 ?>
 
 <aside id="sidebar" class="col-xs-12 col-sm-4 col-md-4" role="complementary">
 	<div class="sidebar-header">
 		<h2>
-			<a name="inThisSection" href="<?php echo make_path_relative( get_permalink($parent_id) ); ?>">
-				Also in <?php echo get_the_title($parent_id);?>
+			<a name="inThisSection" href="<?php echo make_path_relative( get_permalink($parent_page_id) ); ?>">
+				Also in <?php echo get_the_title($parent_page_id);?>
 			</a>
 		</h2>
 	</div>
@@ -20,7 +24,7 @@ $parent_id = $post->post_parent;
 			// manually on the WP edit page.
 			// We're using depth=1 to ensure we only get the children of the parent page, not grandchildren
 			// See http://codex.wordpress.org/Function_Reference/wp_list_pages for a full list of parameters
-			echo make_path_relative( wp_list_pages("echo=0&title_li=&child_of=$parent_id&sort_column=menu_order&depth=1&exclude=$post->ID") );
+			echo make_path_relative( wp_list_pages("echo=0&title_li=&child_of=$parent_id&sort_column=menu_order&depth=1&exclude=$post->ID,$parent_page_id") );
 			?>
 		</ul>
 	</div>
