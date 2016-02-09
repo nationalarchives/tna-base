@@ -42,22 +42,31 @@ function dimox_breadcrumbs() {
 	$parent_id      = $post->post_parent;
 	$sep            = ' ' . $sep_before . $sep . $sep_after . ' ';
 
-	// TNA additional breadcrumbs
-	global $pre_crumbs;
-	if ( $pre_crumbs ) {
-		foreach ($pre_crumbs as $crumb_name => $crumb_path) {
-			global $pre_crumbs_st;
-			$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span><a href="' . $crumb_path . '">'. $crumb_name . '</a></span> ';
-		}
-	}
-
 	if (is_home() || is_front_page()) {
+
+		// TNA additional breadcrumbs for front page
+		global $pre_crumbs;
+		if ( $pre_crumbs ) {
+			foreach ($pre_crumbs as $crumb_name => $crumb_path) {
+				global $pre_crumbs_st;
+				$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span>'. $crumb_name . '</span> ';
+			}
+		}
 
 		if ($show_on_home) echo $wrap_before . '<a href="' . $home_link . '">' . $text['home'] . '</a>';
 		if ($pre_crumbs_st) echo $pre_crumbs_st;
 		if ($show_on_home) echo $wrap_after;
 
 	} else {
+
+		// TNA additional breadcrumbs
+		global $pre_crumbs;
+		if ( $pre_crumbs ) {
+			foreach ($pre_crumbs as $crumb_name => $crumb_path) {
+				global $pre_crumbs_st;
+				$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span><a href="' . $crumb_path . '">'. $crumb_name . '</a></span> ';
+			}
+		}
 
 		echo $wrap_before;
 
