@@ -163,12 +163,12 @@ $(document).ready(function(){
     // ----------------------------------------
     // 4 Mega menu ----------------------------
 
-    $('#nav').hide();
+    //$('#nav').hide();
     $('#mega-menu-pull-down').on('click', function () {
-        $('#nav').slideToggle();
+        $('#nav').slideToggle('fast');
     });
     $('#mega-menu-mobile').on('click', function () {
-        $('#nav').slideToggle();
+        $('#nav').slideToggle('fast');
     });
 });
 

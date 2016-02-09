@@ -49,3 +49,19 @@ nav {
     }
   }
 }
+
+/*.no-navigation nav {
+  display: block;
+}
+
+.navigation nav {
+  display: none;
+}*/
+
+.no-js nav {
+  display: block;
+}
+
+.js nav {
+  display: none;
+}
