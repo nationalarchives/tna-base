@@ -254,11 +254,11 @@ header {
 }
 
 //Works with Modernizr when no JS
-.no-js ul {
+.no-js #search-field-wrapper > ul {
   display: block;
 }
 
-.js ul {
+.js #search-field-wrapper > ul {
   display: none;
 }
 //Works with Modernizr when no JS

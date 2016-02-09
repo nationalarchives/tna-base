@@ -6447,10 +6447,10 @@ header {
     position: absolute;
     top: -30px; }
 
-.no-js ul {
+.no-js #search-field-wrapper > ul {
   display: block; }
 
-.js ul {
+.js #search-field-wrapper > ul {
   display: none; }
 
 /* TNA footer styles */
