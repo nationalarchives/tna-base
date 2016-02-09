@@ -21,7 +21,11 @@ if (!empty( $feat_box )) { // This is the custom field block
 			the_content();
 			echo '</div>';
 			echo '<div class="col-md-6">';
-			the_post_thumbnail( 'landing-page-children-thumb', array( 'class' => 'img-responsive' ) );
+                            $image_id = get_post_thumbnail_id($page->ID);
+                            $image_url = wp_get_attachment_image_src($image_id, 'landing-page-children-thumb', false);
+	                            ?>
+	                            <img src="<?php echo(make_path_relative($image_url[0])); ?>" class="img-responsive">
+	                            <?php
 			echo '</div>';
 		endwhile;
 	endif;
