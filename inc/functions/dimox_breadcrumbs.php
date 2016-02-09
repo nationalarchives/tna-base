@@ -47,12 +47,18 @@ function dimox_breadcrumbs() {
 		// TNA additional breadcrumbs for front page
 		global $pre_crumbs;
 		if ( $pre_crumbs ) {
+			$numItems = count($pre_crumbs);
+			$i = 0;
+			global $pre_crumbs_st;
 			foreach ($pre_crumbs as $crumb_name => $crumb_path) {
-				global $pre_crumbs_st;
-				$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span>'. $crumb_name . '</span> ';
+				if (++$i === $numItems) {
+					$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span>'. $crumb_name . '</span> ';
+				} else {
+					$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span><a href="' . $crumb_path . '">'. $crumb_name . '</a></span> ';
+				}
 			}
 		}
-
+		global $pre_crumbs_st;
 		if ($show_on_home) echo $wrap_before . '<a href="' . $home_link . '">' . $text['home'] . '</a>';
 		if ($pre_crumbs_st) echo $pre_crumbs_st;
 		if ($show_on_home) echo $wrap_after;
@@ -62,8 +68,8 @@ function dimox_breadcrumbs() {
 		// TNA additional breadcrumbs
 		global $pre_crumbs;
 		if ( $pre_crumbs ) {
+			global $pre_crumbs_st;
 			foreach ($pre_crumbs as $crumb_name => $crumb_path) {
-				global $pre_crumbs_st;
 				$pre_crumbs_st .= ' <span class="sep">&gt;</span> <span><a href="' . $crumb_path . '">'. $crumb_name . '</a></span> ';
 			}
 		}
@@ -73,10 +79,12 @@ function dimox_breadcrumbs() {
 		if ($show_home_link) echo sprintf($link, $home_link, $text['home']);
 
 		if ( is_page() && !$parent_id ) {
+			global $pre_crumbs_st;
 			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
 
 		} elseif ( is_page() && $parent_id ) {
+			global $pre_crumbs_st;
 			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_home_link) echo $sep;
 			if ($parent_id != $frontpage_id) {
@@ -97,11 +105,13 @@ function dimox_breadcrumbs() {
 			if ($show_current) echo $sep . $before . get_the_title() . $after;
 
 		}  elseif ( is_404() ) {
+			global $pre_crumbs_st;
 			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_home_link && $show_current) echo $sep;
 			if ($show_current) echo $before . $text['404'] . $after;
 
 		} elseif ( is_single() && !is_attachment() ) {
+			global $pre_crumbs_st;
 			if ($pre_crumbs_st) echo $pre_crumbs_st;
 			if ($show_home_link) echo $sep;
 			if ( get_post_type() != 'post' ) {
