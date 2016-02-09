@@ -6228,13 +6228,6 @@ nav {
       nav#nav li a img {
         width: 100%; }
 
-/*.no-navigation nav {
-  display: block;
-}
-
-.navigation nav {
-  display: none;
-}*/
 .no-js nav {
   display: block; }
 

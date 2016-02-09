@@ -50,14 +50,7 @@ nav {
   }
 }
 
-/*.no-navigation nav {
-  display: block;
-}
-
-.navigation nav {
-  display: none;
-}*/
-
+//Works with Modernizr when no JS
 .no-js nav {
   display: block;
 }
@@ -65,3 +58,4 @@ nav {
 .js nav {
   display: none;
 }
+//Works with Modernizr when no JS
