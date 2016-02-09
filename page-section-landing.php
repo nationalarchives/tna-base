@@ -14,7 +14,7 @@ Template Name: Section landing
                           <h1><?php the_title(); ?></h1>
                       </div>
                       <div class="row entry-content">
-                          <?php change_layout(); ?>
+                          <?php get_template_part( 'inc/content/feature-box', 'footer' ); ?>
                       </div>
                    </article>
                </div>
