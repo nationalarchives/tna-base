@@ -6460,8 +6460,8 @@ footer {
     color: #fce45c; }
   footer .footer-col {
     margin-bottom: 1em; }
-  footer p {
-    font-size: .9em; }
+    footer .footer-col p {
+      font-size: .9em; }
   footer a:focus {
     color: #222; }
   footer ul {
