@@ -258,3 +258,20 @@ $(document).ready(function(){
 // ----------------------------------------
 
 
+
+// ----------------------------------------
+// Equal Heights -----------------
+// ----------------------------------------
+
+$('#equal-heights').fadeIn('slow');
+
+$(window).load(function() {
+    equalheight('#equal-heights > div > article');
+});
+
+$(window).resize(function(){
+    equalheight('#equal-heights > div > article');
+});
+
+
+// ----------------------------------------
