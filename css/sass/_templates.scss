@@ -6,7 +6,7 @@ article {
   background-color: $tna_white;
   margin-bottom: 1.5em;
   .entry-header {
-    padding: 10px 0 0 0;
+    padding: 10px 32px 0 0;
     background: url(../img/dot-grey.png);
     h1 {
       font-size: 2em;
@@ -14,7 +14,7 @@ article {
       background-color: $tna_blue;
       color: #fff;
       line-height: 1.25;
-      margin: 0 0 0 -10px;
+      margin: 0 10px 0 -10px;
       display: inline-block;
     }
     h2 {
@@ -22,7 +22,7 @@ article {
       background-color: $tna_blue;
       color: #fff;
       line-height: 1.5;
-      margin: 0 0 0 -10px;
+      margin: 0 10px 0 -10px;
       display: inline-block;
       a {
         color: #fff;

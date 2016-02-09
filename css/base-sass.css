@@ -6495,7 +6495,7 @@ article {
   background-color: #fff;
   margin-bottom: 1.5em; }
   article .entry-header {
-    padding: 10px 0 0 0;
+    padding: 10px 32px 0 0;
     background: url(../img/dot-grey.png); }
     article .entry-header h1 {
       font-size: 2em;
@@ -6503,14 +6503,14 @@ article {
       background-color: #405480;
       color: #fff;
       line-height: 1.25;
-      margin: 0 0 0 -10px;
+      margin: 0 10px 0 -10px;
       display: inline-block; }
     article .entry-header h2 {
       padding: 4px 10px;
       background-color: #405480;
       color: #fff;
       line-height: 1.5;
-      margin: 0 0 0 -10px;
+      margin: 0 10px 0 -10px;
       display: inline-block; }
       article .entry-header h2 a {
         color: #fff;
@@ -6543,7 +6543,7 @@ aside {
       background-color: #405480;
       color: #fff;
       line-height: 125%;
-      margin: 0 32px 0 -10px;
+      margin: 0 10px 0 -10px;
       display: inline-block; }
       aside .sidebar-header h2 a {
         color: #fff;
