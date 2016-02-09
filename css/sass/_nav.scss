@@ -49,3 +49,13 @@ nav {
     }
   }
 }
+
+//Works with Modernizr when no JS
+.no-js nav {
+  display: block;
+}
+
+.js nav {
+  display: none;
+}
+//Works with Modernizr when no JS
