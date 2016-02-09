@@ -78,7 +78,7 @@
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Community ','WT.ti','Menu - Community ');" href="https://community.nationalarchives.gov.uk/">Community</a></li>
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Podcasts and videos ','WT.ti','Menu - Podcasts and videos ');" href="/media/">Podcasts and videos</a></li>
                     <li><a onClick="dcsMultiTrack('DCS.dcsuri','/menu/Contact us ','WT.ti','Menu - Contact us ');" href="/contact/">Contact us</a></li>
-                    <li class="imgContent"><a href="/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100"></a></li>
+                    <li class="imgContent"><a href="/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>
                 </ul>
         </div>
     </div>

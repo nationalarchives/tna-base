@@ -6225,8 +6225,6 @@ nav {
         cursor: pointer; }
       nav#nav li a:active, nav#nav li a:hover {
         outline: 0; }
-      nav#nav li a img {
-        width: 100%; }
 
 .no-js nav {
   display: block; }
