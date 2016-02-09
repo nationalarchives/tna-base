@@ -6359,8 +6359,8 @@ header {
       background: url("../img/close-search.png") center no-repeat;
       background-size: 90%;
       position: absolute;
-      top: -44px;
-      right: 5px;
+      top: -48px;
+      right: 20px;
       cursor: pointer; }
     header .container .row .col-md-12 #mobileGlobalSearch input[type='text'] {
       width: 100%;
