@@ -49,3 +49,16 @@ article {
     }
   }
 }
+.equal-heights {
+  .col-md-6 {
+    background: white;
+    background-clip: content-box;
+    margin-bottom: 1.5em;
+  }
+  article {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0.5em;
+  }
+}

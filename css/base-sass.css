@@ -6532,6 +6532,15 @@ article {
       border: none;
       padding: 0; }
 
+.equal-heights .col-md-6 {
+  background: white;
+  background-clip: content-box;
+  margin-bottom: 1.5em; }
+.equal-heights article {
+  margin-bottom: 0; }
+.equal-heights p {
+  margin-bottom: 0.5em; }
+
 /* TNA sidebar styles */
 aside {
   margin-bottom: 1.5em; }
