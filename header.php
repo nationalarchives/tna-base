@@ -22,6 +22,18 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "WebSite",
+	  "url": "http://www.nationalarchives.gov.uk/",
+	  "potentialAction": {
+	    "@type": "SearchAction",
+	    "target": "http://www.nationalarchives.gov.uk/search/search_results.aspx?Page=1&QueryText={search_term}&SelectedDatabases=WEBSITE",
+	    "query-input": "required name=search_term"
+	  }
+	}
+	</script>
 </head>
 <body <?php body_class(); ?>>
 <header id="header" role="banner"><a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
