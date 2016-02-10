@@ -33,7 +33,7 @@ Template Name: Section landing
                    );
                    while ($childpages->have_posts()) : $childpages->the_post();
                ?>
-               <div class="col-md-6">
+               <div class="col-xs-12 col-sm-6 col-md-6">
                    <article>
                        <div class="entry-header">
                            <h2>
