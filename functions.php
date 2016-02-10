@@ -5,7 +5,7 @@ define( 'EDD_VERSION', '0.1.0' );
 
 // Enqueue styles and scripts
 function tna_styles() {
-	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css', array(), EDD_VERSION, 'all' );
+	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css.min', array(), EDD_VERSION, 'all' );
 	wp_register_style( 'tna-google-fonts',
 		'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Bitter', '', '', 'all' );
 	wp_enqueue_style( 'tna-styles' );
