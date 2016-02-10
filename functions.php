@@ -1,8 +1,11 @@
 <?php
 
+// Theme version
+define( 'EDD_VERSION', '0.1.0' );
+
 // Enqueue styles and scripts
 function tna_styles() {
-	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css', array(), '0.1', 'all' );
+	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css', array(), EDD_VERSION, 'all' );
 	wp_register_style( 'tna-google-fonts',
 		'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Bitter', '', '', 'all' );
 	wp_enqueue_style( 'tna-styles' );
@@ -16,10 +19,10 @@ function tna_scripts() {
 	wp_register_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(),
 		'2.8.3', false );
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
-	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), '0.1', true );
+	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), EDD_VERSION, true );
 	if ( is_page_template( 'page-section-landing.php' ) ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/jQuery.equalHeights.js', array(),
-			'0.1', true );
+			EDD_VERSION, true );
 		wp_enqueue_script( 'equal-heights' );
 	}
 	wp_enqueue_script( 'global-jquery' );
