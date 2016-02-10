@@ -10,10 +10,10 @@
     <div class="footer-col col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <h4>Find out more</h4>
         <ul>
-            <li><a href="<?php echo network_site_url(); ?>/contact/">Contact us</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/pressroom/">Press room</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/jobs/default.htm">Jobs and careers</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/get-involved/friends.htm">Friends of The National Archives</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/contact/">Contact us</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/pressroom/">Press room</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/jobs/default.htm">Jobs and careers</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/get-involved/friends.htm">Friends of The National Archives</a></li>
         </ul>
     </div>
     <div class="footer-col col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -23,7 +23,7 @@
             <li><a href="http://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
             <li><a href="http://labs.nationalarchives.gov.uk/wordpress/">Labs</a></li>
             <li><a href="https://community.nationalarchives.gov.uk/">Community</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/webarchive/">UK Government Web Archive</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/webarchive/">UK Government Web Archive</a></li>
             <li><a href="http://www.legislation.gov.uk/" target="_blank">Legislation.gov.uk</a></li>
             <li><a href="https://www.thegazette.co.uk/" target="_blank">The Gazette</a></li>
         </ul>
@@ -36,7 +36,7 @@
             <li><a href="https://www.flickr.com/photos/nationalarchives" target="_blank">Flickr</a></li>
             <li><a href="https://www.facebook.com/TheNationalArchives?_rdr=p" target="_blank" >Facebook</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/Commons:The_National_Archives_(United_Kingdom)" target="_blank">Wikimedia Commons</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/rss/">RSS</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/rss/">RSS</a></li>
         </ul>
     </div>
 </div>
@@ -44,22 +44,22 @@
     <div class="footer-col col-xs-12 col-sm-6 col-md-3 col-lg-3 col-md-offset-3">
         <h4>Site help</h4>
         <ul>
-            <li><a href="<?php echo network_site_url(); ?>/help/">Help</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/help/faqs.htm">FAQs</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/help/atoz.htm">Website A-Z index</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/help/accessibility.htm">Accessibility</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/help/sitemap.htm">Site map</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/help/">Help</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/help/faqs.htm">FAQs</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/help/atoz.htm">Website A-Z index</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/help/accessibility.htm">Accessibility</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/help/sitemap.htm">Site map</a></li>
         </ul>
     </div>
     <div class="footer-col col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <h4>Legal</h4>
         <ul>
-            <li><a href="<?php echo network_site_url(); ?>/legal/">Terms of use</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/legal/privacy.htm">Privacy policy</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/legal/cookies.htm">Cookies</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/foi/default.htm">Freedom of Information</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/about/our-role/transparency/">Transparency</a></li>
-            <li><a href="<?php echo network_site_url(); ?>/legal/our-fees.htm">Our fees</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/legal/">Terms of use</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/legal/privacy.htm">Privacy policy</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/legal/cookies.htm">Cookies</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/foi/default.htm">Freedom of Information</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/about/our-role/transparency/">Transparency</a></li>
+            <li><a href="http://www.nationalarchives.gov.uk/legal/our-fees.htm">Our fees</a></li>
         </ul>
     </div>
     <div class="footer-col col-xs-12 col-sm-6 col-md-3 col-lg-3">
