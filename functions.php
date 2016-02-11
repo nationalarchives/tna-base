@@ -58,6 +58,7 @@ include 'inc/functions/dimox_breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
 include 'inc/functions/url-rewriting.php';
 include 'inc/functions/images.php';
+include 'inc/functions/404-redirect.php';
 
 // Gets the first sentence from the content area of a page
 if ( ! function_exists( 'first_sentence' ) ) :
