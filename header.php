@@ -4,10 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta content="initial-scale = 1.0" name="viewport">
-	<title><?php wp_title(''); ?></title>
+	<title><?php wp_title('&#8211;','true','right'); ?>The National Archives</title>
 	<?php tna_wp_head(); ?>
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />
+	<?php get_template_part( 'inc/content/tna-head', 'tna-head' ); ?>
 	<!-- Fav Icon -->
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
