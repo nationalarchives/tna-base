@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-gb" class="no-js">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta content="initial-scale = 1.0" name="viewport">
-	<title><?php wp_title('&#8211;','true','right'); ?>The National Archives</title>
-	<?php tna_wp_head(); ?>
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
-	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />
-	<?php get_template_part( 'inc/content/tna-head', 'tna-head' ); ?>
-	<!-- Fav Icon -->
-	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
-	<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-2827241-1']);
-		_gaq.push(['_setDomainName', 'nationalarchives.gov.uk']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-	<script type="application/ld+json">
-	{
-	  "@context": "http://schema.org",
-	  "@type": "WebSite",
-	  "url": "http://www.nationalarchives.gov.uk/",
-	  "potentialAction": {
-	    "@type": "SearchAction",
-	    "target": "http://www.nationalarchives.gov.uk/search/search_results.aspx?Page=1&QueryText={search_term}&SelectedDatabases=WEBSITE",
-	    "query-input": "required name=search_term"
-	  }
-	}
-	</script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="initial-scale = 1.0" name="viewport">
+<title><?php wp_title('&#8211;','true','right'); ?><?php bloginfo('name'); ?></title>
+<?php tna_wp_head(); ?>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />
+<?php get_template_part( 'inc/content/tna', 'head' ); ?>
+<!-- Fav Icon -->
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
+<link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/favicon.ico">
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2827241-1']);
+	_gaq.push(['_setDomainName', 'nationalarchives.gov.uk']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "http://www.nationalarchives.gov.uk/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://www.nationalarchives.gov.uk/search/search_results.aspx?Page=1&QueryText={search_term}&SelectedDatabases=WEBSITE",
+    "query-input": "required name=search_term"
+  }
+}
+</script>
 </head>
 <body <?php body_class(); ?>>
 <header id="header" role="banner"><a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
