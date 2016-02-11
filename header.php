@@ -9,7 +9,12 @@
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd"/>
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml"/>
 <?php get_template_part( 'inc/content/tna', 'head' ); ?>
-<!-- Fav Icon -->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Fav icon -->
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/favicon.ico">
 <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/favicon.ico">
 </head>
