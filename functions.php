@@ -47,6 +47,9 @@ remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'rsd_link' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
 
+// Disables the Google Sitelink Search Box functionality in Yoast's WordPress SEO
+add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
+
 // Theme Support
 add_theme_support( 'post-thumbnails' );
 
