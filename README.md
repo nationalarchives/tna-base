@@ -46,17 +46,22 @@ Assuming that the Grunt CLI has been installed follow the instructions on the [G
 ### 1.7 Ignoring NodeJS
 
 * Copy and paste the line of code below into the .gitignore using your preferred text editor:
-  ``` 
-  
-  # NodeJS
-  /node_modules/
-  ```
+
+```
+# NodeJS
+/node_modules/
+```
+
 ## 2.0 tna-base theme features
 
 ### 2.1 Bootstrap 3.3.6
 
 Mobile first front-end framework [http://getbootstrap.com/] (http://getbootstrap.com/)
 
-### 2.2 Dimox breadcrumbs
+### 2.2 Sass
+
+Using Bootstrap Sass [https://github.com/twbs/bootstrap-sass] (https://github.com/twbs/bootstrap-sass)
+
+### 2.3 Dimox breadcrumbs
 
 WordPress breadcrumbs without a plugin [https://gist.github.com/Dimox/5654092] (https://gist.github.com/Dimox/5654092)
