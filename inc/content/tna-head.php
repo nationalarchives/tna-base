@@ -18,3 +18,26 @@
 <link title="The National Archives - latest news" href="/rss/news.xml" type="application/rss+xml" rel="alternate">
 <link title="The National Archives - new Freedom of Information releases" href="/rss/foireleasesnews.xml" type="application/rss+xml" rel="alternate">
 <link title="The National Archives - podcast series" href="/rss/podcasts.xml" type="application/rss+xml" rel="alternate">
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2827241-1']);
+	_gaq.push(['_setDomainName', 'nationalarchives.gov.uk']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "http://www.nationalarchives.gov.uk/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://www.nationalarchives.gov.uk/search/search_results.aspx?Page=1&QueryText={search_term}&SelectedDatabases=WEBSITE",
+    "query-input": "required name=search_term"
+  }
+}
+</script>
