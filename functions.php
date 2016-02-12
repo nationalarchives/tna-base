@@ -41,11 +41,16 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // Remove Wordpress generator meta from head
 remove_action( 'wp_head', 'wp_generator' );
-remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10 );
+remove_action( 'template_redirect', 'wp_shortlink_header', 11 );
 remove_action( 'wp_head', 'feed_links', 2 );
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'rsd_link' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
+
+// Remove REST API
+remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 
 // Disables the Google Sitelink Search Box functionality in Yoast's WordPress SEO
 add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
