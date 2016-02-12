@@ -6620,3 +6620,19 @@ header #mobileGlobalSearch #changeDestination {
 @media (max-width: 768px) {
   .footer-col {
     margin: 0 0 40px 0 !important; } }
+
+/* TNA print styles */
+@media print {
+  header, nav, aside, footer {
+    display: none; }
+
+  img {
+    max-width: 100%; }
+
+  .equal-heights .col-md-6 {
+    height: auto !important; }
+
+  article:after, article:before {
+    content: " ";
+    display: table;
+    clear: both; } }
