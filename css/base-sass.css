@@ -6047,6 +6047,13 @@ hr {
   border: none;
   border-radius: 0; }
 
+a#cookieCutter {
+  background: url(../img/close-img.png) 0 2px no-repeat;
+  margin-left: 10px;
+  padding-top: 1px;
+  padding-left: 22px;
+  text-decoration: none; }
+
 /* TNA list styles */
 ul, ol {
   padding-left: 1.5em;
