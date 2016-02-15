@@ -6503,7 +6503,7 @@ article {
   background-color: #fff;
   margin-bottom: 1.5em; }
   article .entry-header {
-    padding: 10px 32px 0 0;
+    padding: 10px 10px 0 0;
     background: url(../img/dot-grey.png); }
     article .entry-header h1 {
       font-size: 2em;
@@ -6514,7 +6514,7 @@ article {
       margin: 0 10px 0 -10px;
       display: inline-block; }
     article .entry-header h2 {
-      padding: 4px 10px;
+      padding: 4px 32px 4px 10px;
       background-color: #405480;
       color: #fff;
       line-height: 1.5;
@@ -6552,11 +6552,10 @@ article {
 aside {
   margin-bottom: 1.5em; }
   aside .sidebar-header {
-    padding: 10px 0 0 0;
-    background: url(../img/dot-grey.png);
-    background-color: #fff; }
+    padding: 10px 10px 0 0;
+    background: url(../img/dot-grey.png) #fff; }
     aside .sidebar-header h2 {
-      padding: 4px 10px;
+      padding: 4px 32px 4px 10px;
       background-color: #405480;
       color: #fff;
       line-height: 125%;
