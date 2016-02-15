@@ -6503,7 +6503,7 @@ article {
   background-color: #fff;
   margin-bottom: 1.5em; }
   article .entry-header {
-    padding: 10px 32px 0 0;
+    padding: 10px 10px 0 0;
     background: url(../img/dot-grey.png); }
     article .entry-header h1 {
       font-size: 2em;
@@ -6514,7 +6514,7 @@ article {
       margin: 0 10px 0 -10px;
       display: inline-block; }
     article .entry-header h2 {
-      padding: 4px 10px;
+      padding: 4px 32px 4px 10px;
       background-color: #405480;
       color: #fff;
       line-height: 1.5;
@@ -6552,11 +6552,10 @@ article {
 aside {
   margin-bottom: 1.5em; }
   aside .sidebar-header {
-    padding: 10px 0 0 0;
-    background: url(../img/dot-grey.png);
-    background-color: #fff; }
+    padding: 10px 10px 0 0;
+    background: url(../img/dot-grey.png) #fff; }
     aside .sidebar-header h2 {
-      padding: 4px 10px;
+      padding: 4px 32px 4px 10px;
       background-color: #405480;
       color: #fff;
       line-height: 125%;
@@ -6578,6 +6577,21 @@ aside {
     background-color: #fff;
     padding: 20px 0 0 20px; }
 
+/* TNA print styles */
+@media print {
+  header, nav, aside, footer {
+    display: none; }
+
+  img {
+    max-width: 100%; }
+
+  .equal-heights .col-md-6 {
+    height: auto !important; }
+
+  article:after, article:before {
+    content: " ";
+    display: table;
+    clear: both; } }
 /* -------------------------- */
 /* Old TNA styling ---------- */
 /* -------------------------- */
@@ -6620,19 +6634,3 @@ header #mobileGlobalSearch #changeDestination {
 @media (max-width: 768px) {
   .footer-col {
     margin: 0 0 40px 0 !important; } }
-
-/* TNA print styles */
-@media print {
-  header, nav, aside, footer {
-    display: none; }
-
-  img {
-    max-width: 100%; }
-
-  .equal-heights .col-md-6 {
-    height: auto !important; }
-
-  article:after, article:before {
-    content: " ";
-    display: table;
-    clear: both; } }
