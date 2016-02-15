@@ -36,7 +36,7 @@
 				</a>
 			</div>
 			<div class="col-xs-2 col-sm-5" id="search-field-wrapper">
-				<form action="http://www.nationalarchives.gov.uk/search/quick_search.aspx" method="get" id="globalSearch" class="hidden-xs">
+				<form action="http://www.nationalarchives.gov.uk/search/quick_search.aspx" method="get" id="globalSearch" role="search" class="hidden-xs">
 					<span id="scope-selector">&nbsp;</span>
 					<input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch" name="search_text" required aria-required="true">
 					<input type="submit" class="search-button" id="search-button" value="">
@@ -57,7 +57,7 @@
 			<div class="col-md-12">
 				<button class="search-expander">&nbsp;</button>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch"
-				      action="http://www.nationalarchives.gov.uk/search/search_results.aspx">
+				      action="http://www.nationalarchives.gov.uk/search/search_results.aspx" role="search">
 					<div class="input-group">
 						<input type="text" placeholder="Search our website..." required aria-required="true" name="QueryText" value="">
 						<span class="input-group-addon"><input type="submit" value=""></span>
