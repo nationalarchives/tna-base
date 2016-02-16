@@ -12,7 +12,6 @@
 <meta content="2000-2100" name="DCTERMS.temporal">
 <meta content="England,Wales,UnitedKingdom" name="DCTERMS.spatial">
 <meta content="The National Archives is the UK government's official archive. Our main duties are to preserve Government records and to set standards in information management and re-use." name="DC.description">
-<meta content="initial-scale = 1.0" name="viewport">
 <meta content="MSHTML 6.00.6000.21352" name="GENERATOR">
 <?php /* Feeds */ ?>
 <link title="The National Archives - latest news" href="/rss/news.xml" type="application/rss+xml" rel="alternate">
