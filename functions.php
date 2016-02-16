@@ -20,6 +20,7 @@ function tna_scripts() {
 		'2.8.3', false );
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), EDD_VERSION, true );
+	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/webtrends.js', array(), EDD_VERSION, true );
 	if ( is_page_template( 'page-section-landing.php' ) ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/jQuery.equalHeights.js', array(),
 			EDD_VERSION, true );
@@ -27,8 +28,9 @@ function tna_scripts() {
 	}
 	wp_enqueue_script( 'global-jquery' );
 	wp_enqueue_script( 'modernizr' );
-	wp_enqueue_script( 'tna-global' );
 	wp_enqueue_script( 'bootstrap-js' );
+	wp_enqueue_script( 'tna-global' );
+	wp_enqueue_script( 'webtrends' );
 }
 
 add_action( 'wp_enqueue_scripts', 'tna_scripts' );
