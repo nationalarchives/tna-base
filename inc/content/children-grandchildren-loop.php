@@ -18,11 +18,11 @@
 					<h2>
 						<?php $redirect = get_post_meta( $post->ID, 'redirectUrl', true );
 						if ( $redirect ) { ?>
-						<a href="<?php echo $redirect; ?>" title="<?php echo $page->post_title ?>">
+						<a href="<?php echo $redirect; ?>" title="<?php echo $post->post_title ?>">
 							<?php the_title(); ?>
 						</a>
 						<?php } else { ?>
-						<a href="<?php echo make_path_relative( get_page_link() ); ?>">
+						<a href="<?php echo make_path_relative( get_page_link() ); ?>" title="<?php echo $post->post_title ?>">
 							<?php the_title(); ?>
 						</a>
 						<?php } ?>
@@ -34,11 +34,11 @@
 					$image_url = wp_get_attachment_image_src( $image_id, 'landing-page-children-thumb', false );
 					if ( $image_url ) {
 						if ( $redirect ) { ?>
-							<a href="<?php echo $redirect; ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
+							<a href="<?php echo $redirect; ?>" class="thumbnail" title="<?php echo $post->post_title ?>">
 						<?php } else { ?>
-							<a href="<?php echo make_path_relative( get_page_link( $page->ID ) ) ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
+							<a href="<?php echo make_path_relative( get_page_link( $page->ID ) ) ?>" class="thumbnail" title="<?php echo $post->post_title ?>">
 						<?php } ?>
-							<img src="<?php echo( make_path_relative( $image_url[0] ) ); ?>" class="img-responsive">
+							<img src="<?php echo( make_path_relative( $image_url[0] ) ); ?>" class="img-responsive" alt="<?php echo $post->post_title ?>">
 						</a>
 						<?php
 					}
@@ -69,7 +69,7 @@
 							while ( $grandchildrenpages->have_posts() ) : $grandchildrenpages->the_post();
 								?>
 								<li>
-									<a href="<?php echo make_path_relative( get_page_link() ); ?>"><?php the_title(); ?></a>
+									<a href="<?php echo make_path_relative( get_page_link() ); ?>" title="<?php echo $post->post_title ?>"><?php the_title(); ?></a>
 								</li>
 							<?php endwhile;
 							wp_reset_query(); ?>

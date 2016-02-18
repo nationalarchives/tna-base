@@ -24,7 +24,7 @@ if (!empty( $feat_box )) { // This is the custom field block
                             $image_id = get_post_thumbnail_id($page->ID);
                             $image_url = wp_get_attachment_image_src($image_id, 'landing-page-children-thumb', false);
 	                            ?>
-	                            <img src="<?php echo(make_path_relative($image_url[0])); ?>" class="img-responsive">
+	                            <img src="<?php echo(make_path_relative($image_url[0])); ?>" class="img-responsive" alt="<?php echo $post->post_title ?>">
 	                            <?php
 			echo '</div>';
 		endwhile;
