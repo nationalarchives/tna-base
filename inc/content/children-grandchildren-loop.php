@@ -16,9 +16,16 @@
 			<article>
 				<div class="entry-header">
 					<h2>
+						<?php $redirect = get_post_meta( $post->ID, 'redirectUrl', true );
+						if ( $redirect ) { ?>
+						<a href="<?php echo $redirect; ?>">
+							<?php the_title(); ?>
+						</a>
+						<?php } else { ?>
 						<a href="<?php echo make_path_relative( get_page_link() ); ?>">
 							<?php the_title(); ?>
 						</a>
+						<?php } ?>
 					</h2>
 				</div>
 				<div class="entry-content clearfix">
