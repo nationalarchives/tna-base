@@ -10,6 +10,7 @@ function myfield_add_custom_box() {
     $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
     if ($pageTemplate == 'page-section-landing.php') {
         add_meta_box('wp_editor_test_1_box', 'Feature Box', 'myfield_meta_box');
+        add_meta_box( 'redirect_url-redirect-url', __( 'Redirect Url', 'redirect_url' ), 'redirect_url_html', 'page', 'normal', 'high' );
     }
 }
 // Prints the box content
@@ -49,3 +50,34 @@ function myfield_save_postdata( $post_id ) {
         update_post_meta( $post_id, 'feat_box', $_POST['feat_box'] );
     }
 }
+
+
+/* Redirect Url */
+function redirect_url_get_meta( $value ) {
+    global $post;
+    $redirect = get_post_meta( $post->ID, 'redirectUrl', true );
+    if ( ! empty( $redirect ) ) {
+        return is_array( $redirect ) ? stripslashes_deep( $redirect ) : stripslashes( wp_kses_decode_entities( $redirect ) );
+    } else {
+        return false;
+    }
+}
+
+function redirect_url_html( $post) {
+    wp_nonce_field( '_redirect_url_nonce', 'redirect_url_nonce' ); ?>
+    <p>This is to redirect the title of the post to anything.</p>
+    <p>
+    <label for="redirectUrl"><?php _e( 'Paste Url', 'redirect_url' ); ?></label><br>
+    <input class="widefat" type="text" name="redirectUrl" id="redirectUrl" value="<?php echo redirect_url_get_meta( 'redirectUrl' ); ?>">
+    </p><?php
+}
+
+function redirect_url_save( $post_id ) {
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( ! isset( $_POST['redirect_url_nonce'] ) || ! wp_verify_nonce( $_POST['redirect_url_nonce'], '_redirect_url_nonce' ) ) return;
+    if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+    if ( isset( $_POST['redirectUrl'] ) )
+        update_post_meta( $post_id, 'redirectUrl', esc_attr( $_POST['redirectUrl'] ) );
+}
+/* Redirect Url */
