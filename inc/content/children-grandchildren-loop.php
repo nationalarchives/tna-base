@@ -18,7 +18,7 @@
 					<h2>
 						<?php $redirect = get_post_meta( $post->ID, 'redirectUrl', true );
 						if ( $redirect ) { ?>
-						<a href="<?php echo $redirect; ?>">
+						<a href="<?php echo $redirect; ?>" title="<?php echo $page->post_title ?>">
 							<?php the_title(); ?>
 						</a>
 						<?php } else { ?>
@@ -33,9 +33,11 @@
 					$image_id  = get_post_thumbnail_id( $page->ID );
 					$image_url = wp_get_attachment_image_src( $image_id, 'landing-page-children-thumb', false );
 					if ( $image_url ) {
-						?>
-						<a href="<?php echo make_path_relative( get_page_link( $page->ID ) ) ?>" class="thumbnail"
-						   title="<?php echo $page->post_title ?>">
+						if ( $redirect ) { ?>
+							<a href="<?php echo $redirect; ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
+						<?php } else { ?>
+							<a href="<?php echo make_path_relative( get_page_link( $page->ID ) ) ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
+						<?php } ?>
 							<img src="<?php echo( make_path_relative( $image_url[0] ) ); ?>" class="img-responsive">
 						</a>
 						<?php
