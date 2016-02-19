@@ -66,9 +66,16 @@
 						<ul class="child">
 							<?php
 							while ( $grandchildrenpages->have_posts() ) : $grandchildrenpages->the_post();
+								$redirect = get_post_meta( $post->ID, 'redirectUrl', true );
 								?>
 								<li>
-									<a href="<?php echo make_path_relative( get_page_link() ); ?>" title="<?php echo $post->post_title ?>"><?php the_title(); ?></a>
+									<?php if ( $redirect ) { ?>
+									<a href="<?php echo $redirect; ?>" title="<?php echo $post->post_title ?>">
+									<?php } else { ?>
+									<a href="<?php echo make_path_relative( get_page_link() ); ?>" title="<?php echo $post->post_title ?>">
+									<?php } ?>
+										<?php the_title(); ?>
+									</a>
 								</li>
 							<?php endwhile;
 							wp_reset_query(); ?>
