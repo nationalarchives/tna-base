@@ -10,7 +10,16 @@ function myfield_add_custom_box() {
     $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
     if ($pageTemplate == 'page-section-landing.php') {
         add_meta_box('wp_editor_test_1_box', 'Feature Box', 'myfield_meta_box');
-        add_meta_box( 'redirect_url-redirect-url', __( 'Redirect Url', 'redirect_url' ), 'redirect_url_html', 'page', 'normal', 'high' );
+    }
+    if ($pageTemplate == 'page.php') {
+        add_meta_box(
+            'pdf_file_size-pdf-file-size',
+            __( 'PDF File Size', 'pdf_file_size' ),
+            'pdf_file_size_html',
+            'page',
+            'normal',
+            'default'
+        );
     }
 }
 // Prints the box content
@@ -52,12 +61,23 @@ function myfield_save_postdata( $post_id ) {
 }
 
 
-/* Redirect Url */
+/* Redirect Metabox */
+function redirect_url_add_meta_box() {
+    global $post;
+    $page_template = get_post_meta( $post->ID, '_wp_page_template', true );
+    if ($page_template === 'default') {
+        add_meta_box('redirect_url-redirect-url', __( 'Redirect Url', 'redirect_url' ), 'redirect_url_html', 'page', 'normal', 'high'
+        );
+    }
+}
+add_action( 'add_meta_boxes', 'redirect_url_add_meta_box' );
+
 function redirect_url_get_meta( $value ) {
     global $post;
-    $redirect = get_post_meta( $post->ID, 'redirectUrl', true );
-    if ( ! empty( $redirect ) ) {
-        return is_array( $redirect ) ? stripslashes_deep( $redirect ) : stripslashes( wp_kses_decode_entities( $redirect ) );
+
+    $field = get_post_meta( $post->ID, $value, true );
+    if ( ! empty( $field ) ) {
+        return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
     } else {
         return false;
     }
@@ -65,11 +85,12 @@ function redirect_url_get_meta( $value ) {
 
 function redirect_url_html( $post) {
     wp_nonce_field( '_redirect_url_nonce', 'redirect_url_nonce' ); ?>
-    <p>This is to redirect the title of the post to anything.</p>
+
     <p>
-    <label for="redirectUrl"><?php _e( 'Paste Url', 'redirect_url' ); ?></label><br>
     <input class="widefat" type="text" name="redirectUrl" id="redirectUrl" value="<?php echo redirect_url_get_meta( 'redirectUrl' ); ?>">
-    </p><?php
+    </p>
+    <p>This is field will redirect your url.</p>
+    <?php
 }
 
 function redirect_url_save( $post_id ) {
@@ -80,4 +101,5 @@ function redirect_url_save( $post_id ) {
     if ( isset( $_POST['redirectUrl'] ) )
         update_post_meta( $post_id, 'redirectUrl', esc_attr( $_POST['redirectUrl'] ) );
 }
-/* Redirect Url */
+add_action( 'save_post', 'redirect_url_save' );
+/* Redirect Metabox */
