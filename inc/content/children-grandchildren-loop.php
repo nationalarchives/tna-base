@@ -30,8 +30,7 @@
 				</div>
 				<div class="entry-content clearfix">
 					<?php
-					$image_id  = get_post_thumbnail_id( $page->ID );
-					$image_url = wp_get_attachment_image_src( $image_id, 'landing-page-children-thumb', false );
+					$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'landing-page-children-thumb' );
 					if ( $image_url ) {
 						if ( $redirect ) { ?>
 							<a href="<?php echo $redirect; ?>" class="thumbnail" title="<?php echo $post->post_title ?>">
