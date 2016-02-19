@@ -11,6 +11,16 @@ function myfield_add_custom_box() {
     if ($pageTemplate == 'page-section-landing.php') {
         add_meta_box('wp_editor_test_1_box', 'Feature Box', 'myfield_meta_box');
     }
+    if ($pageTemplate == 'page.php') {
+        add_meta_box(
+            'pdf_file_size-pdf-file-size',
+            __( 'PDF File Size', 'pdf_file_size' ),
+            'pdf_file_size_html',
+            'page',
+            'normal',
+            'default'
+        );
+    }
 }
 // Prints the box content
 function myfield_meta_box( $post ) {
@@ -49,3 +59,47 @@ function myfield_save_postdata( $post_id ) {
         update_post_meta( $post_id, 'feat_box', $_POST['feat_box'] );
     }
 }
+
+
+/* Redirect Metabox */
+function redirect_url_add_meta_box() {
+    global $post;
+    $page_template = get_post_meta( $post->ID, '_wp_page_template', true );
+    if ($page_template === 'default') {
+        add_meta_box('redirect_url-redirect-url', __( 'Redirect Url', 'redirect_url' ), 'redirect_url_html', 'page', 'normal', 'high'
+        );
+    }
+}
+add_action( 'add_meta_boxes', 'redirect_url_add_meta_box' );
+
+function redirect_url_get_meta( $value ) {
+    global $post;
+
+    $field = get_post_meta( $post->ID, $value, true );
+    if ( ! empty( $field ) ) {
+        return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+    } else {
+        return false;
+    }
+}
+
+function redirect_url_html( $post) {
+    wp_nonce_field( '_redirect_url_nonce', 'redirect_url_nonce' ); ?>
+
+    <p>
+    <input class="widefat" type="text" name="redirectUrl" id="redirectUrl" value="<?php echo redirect_url_get_meta( 'redirectUrl' ); ?>">
+    </p>
+    <p>This is field will redirect your url.</p>
+    <?php
+}
+
+function redirect_url_save( $post_id ) {
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( ! isset( $_POST['redirect_url_nonce'] ) || ! wp_verify_nonce( $_POST['redirect_url_nonce'], '_redirect_url_nonce' ) ) return;
+    if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+    if ( isset( $_POST['redirectUrl'] ) )
+        update_post_meta( $post_id, 'redirectUrl', esc_attr( $_POST['redirectUrl'] ) );
+}
+add_action( 'save_post', 'redirect_url_save' );
+/* Redirect Metabox */
