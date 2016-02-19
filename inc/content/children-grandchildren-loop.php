@@ -56,7 +56,7 @@
 							'post_type'      => 'page',
 							'post_parent'    => $child_page_id,
 							'posts_per_page' => - 1,
-							'cat'            => - 1,
+							'cat'            => 0,
 							'orderby'        => 'menu_order date',
 							'order'          => 'ASC'
 						)
