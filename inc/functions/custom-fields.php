@@ -89,7 +89,7 @@ function redirect_url_html( $post) {
     <p>
     <input class="widefat" type="text" name="redirectUrl" id="redirectUrl" value="<?php echo redirect_url_get_meta( 'redirectUrl' ); ?>">
     </p>
-    <p>This is field will redirect your url.</p>
+    <p>This field will redirect your url.</p>
     <?php
 }
 
