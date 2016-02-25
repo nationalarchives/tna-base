@@ -58,7 +58,7 @@ $(document).ready(function(){
     $(function(){ // All content must be placed within this IIFE.
         $('#mega-menu-pull-down').show();
         if (!tnaCheckForThisCookie("dontShowCookieNotice")) {
-            $('<div class="cookieNotice">We use cookies to improve services and ensure they work for you. Read our <a title="Our cookie policy" href="http://www.nationalarchives.gov.uk/legal/cookies.htm">cookie policy</a>. <a href="#" id="cookieCutter">Close</a></div>').css({
+            $('<div class="cookieNotice">We use cookies to improve services and ensure they work for you. Read our <a title="Our cookie policy" href="http://www.nationalarchives.gov.uk/legal/cookies.htm">cookie policy</a>. <a title="Close cookie policy notice" href="#" id="cookieCutter">Close</a></div>').css({
                 padding: '5px',
                 "text-align" : "center",
                 backgroundColor : '#FCE45C',
