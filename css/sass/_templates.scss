@@ -7,7 +7,7 @@ article {
   margin-bottom: 1.5em;
   .entry-header {
     padding: 10px 10px 0 0;
-    background: url(../img/dot-grey.png);
+    background: $tna_dot_grey;
     h1 {
       font-size: 2em;
       padding: 4px 10px;
@@ -26,7 +26,7 @@ article {
       display: inline-block;
       a {
         color: #fff;
-        background-image: url(../img/icon-24-heading-link.png);
+        background-image:$tna_icon_24_link;
         background-repeat: no-repeat;
         background-position: 100% 50%;
         padding-right: 32px;
@@ -38,7 +38,7 @@ article {
     display: block;
     height: 10px;
     margin: 0 0 0 -10px;
-    background: url(../img/heading-flourish.png) no-repeat bottom left;
+    background: $tna_heading_flourish;
   }
   .entry-content {
     padding: 20px;
