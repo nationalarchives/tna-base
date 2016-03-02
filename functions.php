@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '0.1.0' );
+define( 'EDD_VERSION', '1.0' );
 
 // Enqueue styles and scripts
 function tna_styles() {
