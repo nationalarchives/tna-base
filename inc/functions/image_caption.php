@@ -9,6 +9,7 @@
  */
 
 function image_caption_fields( $form_fields, $post ) {
+    
     $form_fields['image-caption-description'] = array(
         'label' => 'Image description',
         'input' => 'text',

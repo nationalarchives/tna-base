@@ -1,8 +1,8 @@
 <div class="row">
     <div class="footer-col col-xs-12 col-sm-6 col-md-3">
         <address>
-            <h4>The National Archives</h4>
-            Kew, Richmond, Surrey,<br>
+            The National Archives<br />
+            Kew, Richmond, Surrey,<br />
             TW9 4DU
         </address>
         Tel: <a class="tel" href="tel:+4402088763444">+44 (0) 20 8876 3444</a>
@@ -71,7 +71,7 @@
 </div>
 <div class="row footer-base">
             <div class="col-xs-12 col-sm-9 col-md-9 ogl">
-                <a itle="External website - opens in a new window" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img alt="Open Government License logo" src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png"> </a>
+                <a title="External website - opens in a new window" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img alt="Open Government License logo" src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png"> </a>
                 <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/">Open Government Licence v3.0</a>, <br>except where otherwise stated </p>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 text-right">

@@ -5995,13 +5995,6 @@ a:focus {
   outline: 3px solid #ebab00;
   color: #222; }
 
-address {
-  font-family: "Bitter", "Open Sans", arial, serif;
-  font-style: normal;
-  line-height: 1.5;
-  font-size: 1.166em;
-  margin-bottom: 10px; }
-
 hr {
   height: 1px;
   border: 0;
@@ -6496,6 +6489,12 @@ footer {
     footer .footer-base .ogl img {
       float: left;
       margin: 5px 25px 10px 0; }
+  footer address {
+    font-family: "Bitter", "Open Sans", arial, serif;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.166em;
+    margin-bottom: 10px; }
 
 /* TNA template styles */
 /* Default template */
