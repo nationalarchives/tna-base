@@ -9,26 +9,35 @@
  */
 
 function image_caption_fields( $form_fields, $post ) {
-    
+
+    $form_fields["custom8"]["tr"] = "
+    <div>
+        <span style='background:#dddae0;color:#8b898d;padding:20px; display:inline-block; width:100%'>
+            Write a featured image caption to appear when the ‘eye’ logo is clicked. Link to our image library, or another source, if applicable.
+
+        </span>
+    </div>";
+
+
     $form_fields['image-caption-description'] = array(
-        'label' => 'Image description',
+        'label' => 'Featured image description',
         'input' => 'text',
         'value' => get_post_meta( $post->ID, 'image-caption-description', true ),
-        'helps' => 'Add image caption description',
+        'helps' => 'Add image library title & reference',
     );
 
     $form_fields['image-caption-url'] = array(
-        'label' => 'Image caption URL',
+        'label' => 'Image URL',
         'input' => 'text',
         'value' => get_post_meta( $post->ID, 'image-caption-url', true ),
-        'helps' => 'Add image caption URL',
+        'helps' => 'Add a link to the image source',
     );
 
     $form_fields['image-caption-url-desc'] = array(
-        'label' => 'Image link text',
+        'label' => 'Hyperlink text',
         'input' => 'text',
         'value' => get_post_meta( $post->ID, 'image-caption-url-desc', true ),
-        'helps' => 'Optional, add link text. If left blank default text is "View in the image library"',
+        'helps' => 'If left blank, default text is "View in the image library"',
     );
 
     return $form_fields;
