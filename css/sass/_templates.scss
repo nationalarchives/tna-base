@@ -3,19 +3,34 @@
 /* Default template */
 
 article {
-  background-color: #fff;
+  background-color: $tna_white;
   margin-bottom: 1.5em;
   .entry-header {
-    padding: 10px 0 0 0;
+    padding: 10px 10px 0 0;
     background: url(../img/dot-grey.png);
     h1 {
       font-size: 2em;
       padding: 4px 10px;
       background-color: $tna_blue;
       color: #fff;
-      line-height: 125%;
-      margin: 0 0 0 -10px;
+      line-height: 1.25;
+      margin: 0 10px 0 -10px;
       display: inline-block;
+    }
+    h2 {
+      padding: 4px 32px 4px 10px;
+      background-color: $tna_blue;
+      color: #fff;
+      line-height: 1.5;
+      margin: 0 10px 0 -10px;
+      display: inline-block;
+      a {
+        color: #fff;
+        background-image: url(../img/icon-24-heading-link.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        padding-right: 32px;
+      }
     }
   }
   .entry-header:after {
@@ -27,5 +42,23 @@ article {
   }
   .entry-content {
     padding: 20px;
+    .thumbnail {
+      margin-bottom: 10px;
+      border:none;
+      padding:0;
+    }
+  }
+}
+.equal-heights {
+  .col-md-6 {
+    background: white;
+    background-clip: content-box;
+    margin-bottom: 1.5em;
+  }
+  article {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0.5em;
   }
 }

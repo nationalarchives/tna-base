@@ -30,10 +30,13 @@ header {
     }
   }
 }
-/* Container ---------------- */
+/* Container ----------------  */
 .container {
-  @media (min-width: 1200px) {
-    width: 1240px;
+  max-width: 1240px !important;
+  width: 100% !important;
+  padding: 0 !important;
+  @media (max-width: 1280px) {
+    width: 94% !important;
   }
   main{
     &#main{

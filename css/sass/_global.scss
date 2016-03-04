@@ -4,6 +4,7 @@ body {
   font-family: $tna_body_font;
   font-size: 16px;
   background-color: $tna_light;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4 {
@@ -11,6 +12,7 @@ h1, h2, h3, h4 {
   font-weight: 400;
   z-index: 2;
   line-height: 1.6;
+  letter-spacing: -.025em;
 }
 h1 {
   font-size: 1.75em;
@@ -23,6 +25,10 @@ h3 {
 }
 h4 {
   font-size: 1.2em;
+}
+
+p {
+  margin: 0 0 1.5em;
 }
 
 a:active, a:link, a:visited {
@@ -85,4 +91,20 @@ hr {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+}
+
+.well {
+  background-color: $tna_well;
+  padding: 20px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+a#cookieCutter {
+  background: url(../img/close-img.png) 0 2px no-repeat;
+  margin-left: 10px;
+  padding-top: 1px;
+  padding-left: 22px;
+  text-decoration: none;
 }

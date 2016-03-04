@@ -9,6 +9,12 @@ footer {
   a:active, a:link, a:visited {
     color: $tna_yellow;
   }
+  .footer-col {
+    margin-bottom: 1em;
+    p {
+      font-size: .9em;
+    }
+  }
   a:focus {
     color: $tna_dark;
   }
@@ -17,6 +23,7 @@ footer {
     margin: 0;
   }
   li {
+    font-size: .9em;
     list-style-type: none;
     list-style-image: none;
     padding: 0.25em 0;
@@ -27,11 +34,10 @@ footer {
     border-top: none;
   }
   .tel {
-    color:$tna_white !important;
+    color: $tna_white !important;
     &:hover {
-      text-decoration:none;
+      text-decoration: none;
       cursor: text;
-
     }
   }
   .footer-base {
@@ -41,7 +47,7 @@ footer {
     font-size: .85em;
     .ogl {
       img {
-        float:left;
+        float: left;
         margin: 5px 25px 10px 0;
       }
     }
