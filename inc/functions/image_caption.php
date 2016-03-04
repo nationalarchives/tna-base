@@ -12,7 +12,7 @@ function image_caption_fields( $form_fields, $post ) {
 
     $form_fields["custom8"]["tr"] = "
     <div>
-        <span style='background:#dddae0;color:#8b898d;padding:20px; display:inline-block; width:100%'>
+        <span style='background:#dddae0;color:#8b898d;padding:20px; display:inline-block; width:100%; box-sizing: border-box;'>
             Write a featured image caption to appear when the ‘eye’ logo is clicked. Link to our image library, or another source, if applicable.
 
         </span>
