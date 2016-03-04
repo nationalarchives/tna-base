@@ -3,6 +3,7 @@ global $post;
 $content_with_feat_box = '<div class="col-xs-12 col-sm-8 col-md-8">';
 $content_with_feat_img = '<div class="col-xs-12 col-sm-6 col-md-6">';
 $feat_box = get_post_meta(get_the_ID(), 'feat_box', true);
+
 if (!empty( $feat_box )) { // This is the custom field block
 	echo $content_with_feat_box;
 	if (have_posts()) :
@@ -10,7 +11,7 @@ if (!empty( $feat_box )) { // This is the custom field block
 			the_post();
 			the_content();
 			echo '</div>';
-			echo '<div class="col-xs-12 col-sm-4 col-md-4"><div class="well">'.$feat_box.'</div></div>';
+			echo '<div class="col-xs-12 col-sm-4 col-md-4"><div class="well">'.wpautop($feat_box).'</div></div>';
 		endwhile;
 	endif;
 } elseif (has_post_thumbnail()) { // This is the feature image block.
