@@ -31,7 +31,7 @@ function myfield_meta_box( $post ) {
             'textarea_rows' => 4,
             'tinymce' => array(
                 // Items for the Visual Tab
-                'toolbar1'=> 'bold,italic,link,unlink',
+                'toolbar1'=> 'bold,link,unlink'
             ),
             'quicktags' => false
         )
