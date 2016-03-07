@@ -39,4 +39,9 @@
   &:hover{
     background:$tna_eye_img_caption_hover;
   }
+  &:focus {
+    background-color: $tna_yellow;
+    outline: 3px solid $tna_yellow_dark;
+    color: $tna_dark;
+  }
 }

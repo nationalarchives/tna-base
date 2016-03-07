@@ -6494,7 +6494,7 @@ footer {
     font-style: normal;
     line-height: 1.5;
     font-size: 1.166em;
-    margin-bottom: 10px; }
+    margin: 10px 0 10px 0; }
 
 /* TNA template styles */
 /* Default template */
@@ -6673,3 +6673,7 @@ header #mobileGlobalSearch #changeDestination {
   font-weight: bold; }
   .eye_caption:hover {
     background: url("../img/eye-caption-hover.png"); }
+  .eye_caption:focus {
+    background-color: #fce45c;
+    outline: 3px solid #ebab00;
+    color: #222; }
