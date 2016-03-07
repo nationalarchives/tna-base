@@ -4,7 +4,7 @@ Template Name: Section landing
 */
 get_header(); ?>
 <?php get_template_part( 'breadcrumb' ); ?>
-	<main id="primary" role="main" class="content-area" xmlns="http://www.w3.org/1999/html">
+	<main id="primary" role="main" class="content-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
