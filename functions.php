@@ -35,6 +35,13 @@ function tna_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'tna_scripts' );
 
+// Add CSS stylesheet to the dashboard
+function load_custom_wp_admin_style() {
+	wp_register_style( 'tna-dashboard', get_template_directory_uri() . '/css/dashboard.css', false, '1.0.0' );
+	wp_enqueue_style( 'tna-dashboard' );
+}
+add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
@@ -67,6 +74,7 @@ include 'inc/functions/url-rewriting.php';
 include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
+include 'inc/functions/tiny_mce.php';
 
 // Gets the first sentence from the content area of a page
 if ( ! function_exists( 'first_sentence' ) ) :
