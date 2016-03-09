@@ -1,30 +1,31 @@
 <?php
 // Notification banner
-function notification_banner() {
-	$enable = get_option('enable_banner');
-	if ( $enable ) {
-		$notice_title = get_option('banner_title');
-		$notice_text = get_option('banner_text');
-		?>
-		<div class="notification-banner">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="notice">
-							<strong><?php echo $notice_title; ?></strong>
-							<?php echo $notice_text; ?>
+if ( ! function_exists( 'notification_banner' ) ) :
+	function notification_banner() {
+		$enable = get_option('enable_banner');
+		if ( $enable ) {
+			$notice_title = get_option('banner_title');
+			$notice_text = get_option('banner_text');
+			?>
+			<div class="notification-banner">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="notice">
+								<strong><?php echo $notice_title; ?></strong>
+								<?php echo $notice_text; ?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<?php
+			<?php
+		}
+		else {
+			// do nothing
+		}
 	}
-	else {
-		// do nothing
-	}
-
-}
+endif;
 
 function banner_settings_page() {
 	?>
