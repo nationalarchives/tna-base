@@ -14,7 +14,13 @@
 <![endif]-->
 </head>
 <body <?php body_class(); ?>>
-<header id="header" role="banner"><a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
+<?php
+	if (function_exists('notification_banner')){
+		notification_banner();
+	}
+?>
+<header id="header" role="banner">
+	<a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-2 col-sm-5" id="logo-holder">
