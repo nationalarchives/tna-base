@@ -75,6 +75,7 @@ include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
+include 'inc/functions/notification-banner.php';
 
 // Gets the first sentence from the content area of a page
 if ( ! function_exists( 'first_sentence' ) ) :
@@ -92,20 +93,3 @@ function wpcodex_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
-function notification_banner() {
-	?>
-		<div class="notification-banner">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="notice">
-							<strong>BETA</strong>
-							This is a new service -
-							<a href="#">send us feedback</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<?php
-}
