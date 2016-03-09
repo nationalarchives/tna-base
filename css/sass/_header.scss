@@ -251,11 +251,17 @@ header {
 
 .notification-banner {
   background-color: $tna_yellow;
+  p {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
   .notice {
     margin: 0.3em 0;
     strong {
       background-color: #fff;
       padding: 0 0.4em;
+      margin-right: 1em;
     }
   }
 }
