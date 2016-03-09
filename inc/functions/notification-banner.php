@@ -33,8 +33,8 @@ function banner_settings_page() {
 		<h1>Notification banner</h1>
 		<form method="post" action="options.php">
 			<?php
-			settings_fields("section");
-			do_settings_sections("theme-options");
+			settings_fields('section');
+			do_settings_sections('banner-settings');
 			submit_button();
 			?>
 		</form>
@@ -43,10 +43,10 @@ function banner_settings_page() {
 }
 
 function add_banner_menu_item() {
-	add_options_page("Notification banner settings", "Notification banner", "manage_options", "my-setting-admin", "banner_settings_page", null, 99);
+	add_options_page('Notification banner settings', 'Notification banner', 'manage_options', 'my-setting-admin', 'banner_settings_page', null, 99);
 }
 
-add_action("admin_menu", "add_banner_menu_item");
+add_action('admin_menu', 'add_banner_menu_item');
 
 function enable_banner_element()
 {
@@ -77,16 +77,16 @@ function banner_text_element()
 
 function display_banner_panel_fields()
 {
-	add_settings_section("section", "Banner settings", null, "theme-options");
+	add_settings_section('section', 'Banner settings', null, 'banner-settings');
 
-	add_settings_field("enable_banner", "Enable banner site wide", "enable_banner_element", "theme-options", "section");
-	add_settings_field("banner_title", "Banner title", "banner_title_element", "theme-options", "section");
-	add_settings_field("banner_text", "Banner text", "banner_text_element", "theme-options", "section");
+	add_settings_field('enable_banner', 'Enable banner site wide', 'enable_banner_element', 'banner-settings', 'section');
+	add_settings_field('banner_title', 'Banner title', 'banner_title_element', 'banner-settings', 'section');
+	add_settings_field('banner_text', 'Banner text', 'banner_text_element', 'banner-settings', 'section');
 
-	register_setting("section", "enable_banner");
-	register_setting("section", "banner_title");
-	register_setting("section", "banner_text");
+	register_setting('section', 'enable_banner');
+	register_setting('section', 'banner_title');
+	register_setting('section', 'banner_text');
 }
 
-add_action("admin_init", "display_banner_panel_fields");
+add_action('admin_init', 'display_banner_panel_fields');
 
