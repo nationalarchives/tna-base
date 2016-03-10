@@ -5995,13 +5995,6 @@ a:focus {
   outline: 3px solid #ebab00;
   color: #222; }
 
-address {
-  font-family: "Bitter", "Open Sans", arial, serif;
-  font-style: normal;
-  line-height: 1.5;
-  font-size: 1.166em;
-  margin-bottom: 10px; }
-
 hr {
   height: 1px;
   border: 0;
@@ -6053,6 +6046,35 @@ a#cookieCutter {
   padding-top: 1px;
   padding-left: 22px;
   text-decoration: none; }
+
+/* TinyMce - list left thumbnail */
+.list_left_thumbnail, .list_right_thumbnail {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .list_left_thumbnail li, .list_right_thumbnail li {
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid #ECECEC;
+    display: inline-block;
+    padding: 0 0 10px 0; }
+    .list_left_thumbnail li h2, .list_right_thumbnail li h2 {
+      padding: 0;
+      margin: 0; }
+    .list_left_thumbnail li img, .list_right_thumbnail li img {
+      float: left;
+      width: 210px;
+      max-height: 260px;
+      padding: 0 10px 0 0;
+      margin: 0; }
+      @media (max-width: 375px) {
+        .list_left_thumbnail li img, .list_right_thumbnail li img {
+          width: 100%; } }
+
+/* TinyMce - list right thumbnail */
+.list_right_thumbnail li img {
+  float: right;
+  padding: 0 0 0 10px; }
 
 /* TNA list styles */
 ul, ol {
@@ -6450,6 +6472,20 @@ header {
     position: absolute;
     top: -30px; }
 
+.notification-banner {
+  background-color: #fce45c; }
+  .notification-banner p {
+    display: inline;
+    padding: 0;
+    margin: 0; }
+  .notification-banner .notice {
+    margin: 0.3em 0; }
+    .notification-banner .notice strong.title {
+      background-color: #fff;
+      text-transform: uppercase;
+      padding: 0 0.4em;
+      margin-right: 1em; }
+
 .no-js #search-field-wrapper > ul {
   display: block; }
 
@@ -6496,6 +6532,12 @@ footer {
     footer .footer-base .ogl img {
       float: left;
       margin: 5px 25px 10px 0; }
+  footer address {
+    font-family: "Bitter", "Open Sans", arial, serif;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.166em;
+    margin: 10px 0 10px 0; }
 
 /* TNA template styles */
 /* Default template */
@@ -6504,7 +6546,7 @@ article {
   margin-bottom: 1.5em; }
   article .entry-header {
     padding: 10px 10px 0 0;
-    background: url(../img/dot-grey.png); }
+    background: url("../img/dot-grey.png"); }
     article .entry-header h1 {
       font-size: 2em;
       padding: 4px 10px;
@@ -6522,7 +6564,7 @@ article {
       display: inline-block; }
       article .entry-header h2 a {
         color: #fff;
-        background-image: url(../img/icon-24-heading-link.png);
+        background-image: url("../img/icon-24-heading-link.png");
         background-repeat: no-repeat;
         background-position: 100% 50%;
         padding-right: 32px; }
@@ -6531,7 +6573,7 @@ article {
     display: block;
     height: 10px;
     margin: 0 0 0 -10px;
-    background: url(../img/heading-flourish.png) no-repeat bottom left; }
+    background: url("../img/heading-flourish.png") no-repeat bottom left; }
   article .entry-content {
     padding: 20px; }
     article .entry-content .thumbnail {
@@ -6634,3 +6676,47 @@ header #mobileGlobalSearch #changeDestination {
 @media (max-width: 768px) {
   .footer-col {
     margin: 0 0 40px 0 !important; } }
+
+/* TNA image styles */
+.image_caption_back {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  opacity: .85;
+  padding: 5px 10px;
+  z-index: 5000;
+  font-size: .9em;
+  line-height: 1.6;
+  color: #eee;
+  text-align: right;
+  min-width: 300px;
+  float: right;
+  right: 15px;
+  margin-left: 15px; }
+  .image_caption_back a:link,
+  .image_caption_back a:visited,
+  .image_caption_back a {
+    color: #fce45c; }
+    .image_caption_back a:link:hover,
+    .image_caption_back a:visited:hover,
+    .image_caption_back a:hover {
+      text-decoration: underline; }
+
+.eye_caption {
+  position: absolute;
+  margin-top: -50px;
+  margin-right: 25px;
+  z-index: 1000;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background: url("../img/eye-caption.png");
+  padding: 5px;
+  color: #FFFFFF;
+  font-weight: bold; }
+  .eye_caption:hover {
+    background: url("../img/eye-caption-hover.png"); }
+  .eye_caption:focus {
+    background-color: #fce45c;
+    outline: 3px solid #ebab00;
+    color: #222; }

@@ -44,13 +44,7 @@ a:focus {
   color: $tna_dark;
 }
 
-address {
-  font-family: $tna_heading_font;
-  font-style: normal;
-  line-height: 1.5;
-  font-size: 1.166em;
-  margin-bottom: 10px;
-}
+
 
 hr {
   height: 1px;
@@ -107,4 +101,42 @@ a#cookieCutter {
   padding-top: 1px;
   padding-left: 22px;
   text-decoration: none;
+}
+
+/* TinyMce - list left thumbnail */
+.list_left_thumbnail {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  li {
+    h2 {
+      padding:0;
+      margin:0;
+    }
+    img {
+      float:left;
+      width:210px;
+      max-height:260px;
+      padding:0 10px 0 0;
+      margin:0;
+      @media (max-width: 375px){
+        width: 100%;
+      }
+    }
+    clear:both;
+    width:100%;
+    border-bottom:1px solid #ECECEC;
+    display:inline-block;
+    padding:0 0 10px 0;
+  }
+}
+/* TinyMce - list right thumbnail */
+.list_right_thumbnail {
+  @extend .list_left_thumbnail;
+  li {
+    img {
+      float:right;
+      padding:0 0 0 10px;
+    }
+  }
 }

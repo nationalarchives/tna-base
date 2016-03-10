@@ -249,6 +249,24 @@ header {
   }
 }
 
+.notification-banner {
+  background-color: $tna_yellow;
+  p {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  .notice {
+    margin: 0.3em 0;
+    strong.title {
+      background-color: #fff;
+      text-transform: uppercase;
+      padding: 0 0.4em;
+      margin-right: 1em;
+    }
+  }
+}
+
 //Works with Modernizr when no JS
 .no-js #search-field-wrapper > ul {
   display: block;

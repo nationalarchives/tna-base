@@ -1,8 +1,8 @@
 <div class="row">
     <div class="footer-col col-xs-12 col-sm-6 col-md-3">
         <address>
-            <h4>The National Archives</h4>
-            Kew, Richmond, Surrey,<br>
+            The National Archives<br />
+            Kew, Richmond, Surrey,<br />
             TW9 4DU
         </address>
         Tel: <a class="tel" href="tel:+4402088763444">+44 (0) 20 8876 3444</a>
@@ -11,8 +11,8 @@
         <h4>Find out more</h4>
         <ul>
             <li><a href="/contact/">Contact us</a></li>
-            <li><a href="/pressroom/">Press room</a></li>
-            <li><a href="/jobs/default.htm">Jobs and careers</a></li>
+							<li><a href="/aboput/press-room/">Press room</a></li>
+							<li><a href="about/jobs/">Jobs and careers</a></li>
             <li><a href="/get-involved/friends.htm">Friends of The National Archives</a></li>
         </ul>
     </div>
@@ -22,7 +22,6 @@
             <li><a href="http://blog.nationalarchives.gov.uk/">Blog</a></li>
             <li><a href="http://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
             <li><a href="http://labs.nationalarchives.gov.uk/wordpress/">Labs</a></li>
-            <li><a href="https://community.nationalarchives.gov.uk/">Community</a></li>
             <li><a href="/webarchive/">UK Government Web Archive</a></li>
             <li><a href="http://www.legislation.gov.uk/" target="_blank">Legislation.gov.uk</a></li>
             <li><a href="https://www.thegazette.co.uk/" target="_blank">The Gazette</a></li>

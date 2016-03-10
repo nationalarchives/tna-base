@@ -14,20 +14,26 @@
 <![endif]-->
 </head>
 <body <?php body_class(); ?>>
-<header id="header" role="banner"><a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
+<?php
+	if (function_exists('notification_banner')){
+		notification_banner();
+	}
+?>
+<header id="header" role="banner">
+	<a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-2 col-sm-5" id="logo-holder">
 				<button aria-label="Toggle menu" id="mega-menu-mobile"></button>
 				<a href="http://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
 				   class="visible-lg visible-md visible-sm">
-					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" alt="The National Archives" id="logo" class="img-responsive">
+					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" alt="The National Archives"  class="img-responsive">
 				</a>
 			</div>
 			<div class="col-xs-8 col-sm-2" id="mobile-logo-holder">
 				<button title="Main menu" aria-label="Toggle menu" id="mega-menu-pull-down" class="hidden-xs"><span>Menu</span></button>
 				<a href="http://www.nationalarchives.gov.uk" title="Go to The National Archives homepage" class="hidden-lg hidden-md hidden-sm">
-					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" alt="The National Archives" id="logo" class="img-responsive">
+					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" alt="The National Archives"  class="img-responsive">
 				</a>
 			</div>
 			<div class="col-xs-2 col-sm-5" id="search-field-wrapper">
