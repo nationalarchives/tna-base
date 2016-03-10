@@ -6477,8 +6477,9 @@ header {
     margin: 0; }
   .notification-banner .notice {
     margin: 0.3em 0; }
-    .notification-banner .notice strong {
+    .notification-banner .notice strong.title {
       background-color: #fff;
+      text-transform: uppercase;
       padding: 0 0.4em;
       margin-right: 1em; }
 

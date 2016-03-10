@@ -3,7 +3,7 @@
 if ( ! function_exists( 'notification_banner' ) ) :
 	function notification_banner() {
 		$enable = get_option('enable_banner');
-		if ( $enable ) {
+		if ( $enable && get_option('banner_title') ) {
 			$notice_title = get_option('banner_title');
 			$notice_text = get_option('banner_text');
 			?>
@@ -12,7 +12,7 @@ if ( ! function_exists( 'notification_banner' ) ) :
 					<div class="row">
 						<div class="col-md-12">
 							<div class="notice">
-								<strong><?php echo $notice_title; ?></strong>
+								<strong class="title"><?php echo $notice_title; ?></strong>
 								<?php echo $notice_text; ?>
 							</div>
 						</div>
