@@ -1,5 +1,7 @@
 <?php
 // Notification banner
+// When enabled, via dashboard banner settings page, displays a notification banner at the top of the page before <header>
+// Utilising WP Settings API (https://codex.wordpress.org/Settings_API)
 if ( ! function_exists( 'notification_banner' ) ) :
 	function notification_banner() {
 		$enable = get_option('enable_banner');
@@ -27,6 +29,7 @@ if ( ! function_exists( 'notification_banner' ) ) :
 	}
 endif;
 
+// Populates the option page
 function banner_settings_page() {
 	?>
 	<div class="wrap">
@@ -42,28 +45,26 @@ function banner_settings_page() {
 	<?php
 }
 
+// Creates menu item in the Dashboard
 function add_banner_menu_item() {
 	add_options_page('Notification banner settings', 'Notification banner', 'manage_options', 'my-setting-admin', 'banner_settings_page', null, 99);
 }
-
 add_action('admin_menu', 'add_banner_menu_item');
 
-function enable_banner_element()
-{
+// Callback functions for form
+function enable_banner_element() {
 	?>
 	<input type="checkbox" name="enable_banner" value="1" <?php checked(1, get_option('enable_banner'), true); ?> />
 	<?php
 }
 
-function banner_title_element()
-{
+function banner_title_element() {
 	?>
 	<input type="text" name="banner_title" id="banner_title" value="<?php echo get_option('banner_title'); ?>" />
 	<?php
 }
 
-function banner_text_element()
-{
+function banner_text_element() {
 	wp_editor( get_option('banner_text'), 'banner_text',
 		array(
 			'media_buttons' => false,
@@ -75,8 +76,8 @@ function banner_text_element()
 	);
 }
 
-function display_banner_panel_fields()
-{
+// Adds section, fields and settings to options page in Dashboard > Settings > Notification banner
+function display_banner_panel_fields() {
 	add_settings_section('section', 'Banner settings', null, 'banner-settings');
 
 	add_settings_field('enable_banner', 'Enable banner site wide', 'enable_banner_element', 'banner-settings', 'section');
@@ -87,6 +88,5 @@ function display_banner_panel_fields()
 	register_setting('section', 'banner_title');
 	register_setting('section', 'banner_text');
 }
-
 add_action('admin_init', 'display_banner_panel_fields');
 
