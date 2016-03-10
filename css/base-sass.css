@@ -6469,6 +6469,20 @@ header {
     position: absolute;
     top: -30px; }
 
+.notification-banner {
+  background-color: #fce45c; }
+  .notification-banner p {
+    display: inline;
+    padding: 0;
+    margin: 0; }
+  .notification-banner .notice {
+    margin: 0.3em 0; }
+    .notification-banner .notice strong.title {
+      background-color: #fff;
+      text-transform: uppercase;
+      padding: 0 0.4em;
+      margin-right: 1em; }
+
 .no-js #search-field-wrapper > ul {
   display: block; }
 

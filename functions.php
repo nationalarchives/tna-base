@@ -75,6 +75,7 @@ include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
+include 'inc/functions/notification-banner.php';
 
 // Gets the first sentence from the content area of a page
 if ( ! function_exists( 'first_sentence' ) ) :
@@ -91,3 +92,4 @@ function wpcodex_add_excerpt_support_for_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+
