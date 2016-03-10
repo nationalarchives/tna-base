@@ -6058,6 +6058,9 @@ a#cookieCutter {
     border-bottom: 1px solid #ECECEC;
     display: inline-block;
     padding: 0 0 10px 0; }
+    .list_left_thumbnail li h2, .list_right_thumbnail li h2 {
+      padding: 0;
+      margin: 0; }
     .list_left_thumbnail li img, .list_right_thumbnail li img {
       float: left;
       width: 210px;
