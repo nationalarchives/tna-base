@@ -6581,7 +6581,7 @@ article {
       border: none;
       padding: 0; }
 
-.equal-heights .col-md-6 {
+.equal-heights .col-md-6, .equal-heights .col-md-4 {
   background: white;
   background-clip: content-box;
   margin-bottom: 1.5em; }
