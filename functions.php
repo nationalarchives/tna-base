@@ -24,7 +24,10 @@ function tna_scripts() {
 	if ( is_page_template( 'page-section-landing.php' ) ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/jQuery.equalHeights.js', array(),
 			EDD_VERSION, true );
+		wp_register_script( 'equal-heights-var', get_template_directory_uri() . '/js/equalHeights.js', array(),
+			EDD_VERSION, true );
 		wp_enqueue_script( 'equal-heights' );
+		wp_enqueue_script( 'equal-heights-var' );
 	}
 	wp_enqueue_script( 'global-jquery' );
 	wp_enqueue_script( 'modernizr' );
