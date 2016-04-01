@@ -111,8 +111,9 @@ function dimox_breadcrumbs() {
 			if ($show_current) echo $before . $text['404'] . $after;
 
 		} elseif ( is_single() && !is_attachment() ) {
-			global $pre_crumbs_st;
+			global $pre_crumbs_st, $pre_crumbs_post;
 			if ($pre_crumbs_st) echo $pre_crumbs_st;
+			if ($pre_crumbs_post) echo $pre_crumbs_post;
 			if ($show_home_link) echo $sep;
 			if ( get_post_type() != 'post' ) {
 				$post_type = get_post_type_object(get_post_type());
@@ -124,7 +125,7 @@ function dimox_breadcrumbs() {
 				$cats = get_category_parents($cat, TRUE, $sep);
 				if (!$show_current || get_query_var('cpage')) $cats = preg_replace("#^(.+)$sep$#", "$1", $cats);
 				$cats = preg_replace('#<a([^>]+)>([^<]+)<\/a>#', $link_before . '<a$1' . $link_attr .'>' . $link_in_before . '$2' . $link_in_after .'</a>' . $link_after, $cats);
-				echo $cats;
+				/*echo $cats;*/
 				if ( get_query_var('cpage') ) {
 					echo $sep . sprintf($link, str_replace(home_url(), $pre_path, get_permalink()), get_the_title()) . $sep . $before . sprintf($text['cpage'], get_query_var('cpage')) . $after;
 				} else {
