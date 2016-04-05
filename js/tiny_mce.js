@@ -26,4 +26,3 @@
     });
     tinymce.PluginManager.add('tna', tinymce.plugins.tna);
 })();
-
