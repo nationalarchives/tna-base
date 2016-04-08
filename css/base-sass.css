@@ -6009,11 +6009,11 @@ article .entry-content {
 */
 img.alignright {
   float: right;
-  margin: 6px 0 0.5em 1em; }
+  margin: 6px 0 0.5em 0.5em; }
 
 img.alignleft {
   float: left;
-  margin: 6px 1em 0.5em 0; }
+  margin: 6px 0.5em 0.5em 0; }
 
 img.aligncenter {
   display: block;
