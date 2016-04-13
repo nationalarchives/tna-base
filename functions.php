@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.0.4' );
+define( 'EDD_VERSION', '1.0.5' );
 
 // Enqueue styles and scripts
 function tna_styles() {
@@ -96,3 +96,15 @@ function wpcodex_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
+// Add profile thumbnail size
+if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'new-size', 210, 260, true ); //(cropped)
+}
+function profile_img($profile_size) {
+	$add_profile_size = array(
+		"new-size" => __( "Profile")
+	);
+	$new_profile_sizes = array_merge($profile_size, $add_profile_size);
+	return $new_profile_sizes;
+}
+add_filter('image_size_names_choose', 'profile_img');

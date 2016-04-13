@@ -24,21 +24,27 @@ function tna_wp_head() {
 
 // Breadcrumb and url path variables (to be added to child theme)
 /*
+// Edit as required
 function tnatheme_globals() {
-	global $pre_path;
-	global $pre_crumbs;
-	if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
-		$pre_path = '';
-		$pre_crumbs = array(
-				'Commercial opportunities' => '/'
-			);
-	} else {
-		$pre_crumbs = array(
-				'About us' => '/about/',
-				'Commercial opportunities' => '/about/commercial-opportunities/'
-			);
-		$pre_path = '/about/commercial-opportunities';
-	}
+    global $pre_path;
+    global $pre_crumbs;
+    if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
+        $pre_path = '';
+        $pre_crumbs = array(
+            'First World War' => '/'
+        );
+    } else {
+        $pre_crumbs = array(
+            'First World War' => '/first-world-war/'
+        );
+        $pre_path = '/first-world-war';
+    }
 }
-tnatheme_globals();
+if ( $_SERVER['SERVER_ADDR'] !== $_SERVER['REMOTE_ADDR'] ) {
+    tnatheme_globals(); } else {
+    $pre_path = '';
+    $pre_crumbs = array(
+        'First World War' => '/'
+    );
+}
 */
