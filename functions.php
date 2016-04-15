@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.0.4' );
+define( 'EDD_VERSION', '1.0.5' );
 
 // Enqueue styles and scripts
 function tna_styles() {
@@ -48,11 +48,12 @@ add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 /* Enable css style inside editor */
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
 
+
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emojiß_styles' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // Remove Wordpress generator meta from head
 remove_action( 'wp_head', 'wp_generator' );
