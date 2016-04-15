@@ -45,11 +45,14 @@ function load_custom_wp_admin_style() {
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
+/* Enable css style inside editor */
+add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
+
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_styles', 'print_emojiß_styles' );
 
 // Remove Wordpress generator meta from head
 remove_action( 'wp_head', 'wp_generator' );
@@ -108,19 +111,3 @@ function profile_img($profile_size) {
 	return $new_profile_sizes;
 }
 add_filter('image_size_names_choose', 'profile_img');
-
-/**
- * Styling the hr inside dashboard
- * -----------------------------------------------------
- */
-
-add_action('admin_head', 'my_custom_hr');
-
-function my_custom_hr()
-{
-	echo '<style>
-		body.wp-autoresize{
-			background:red !important;
-		}
-	  </style>';
-}
