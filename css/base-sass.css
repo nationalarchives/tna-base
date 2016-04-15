@@ -4633,12 +4633,10 @@ a:focus {
   color: #222; }
 
 hr {
-  height: 0;
+  height: 1px;
   border: 0;
   margin: 1em 0;
-  clear: both;
-  width: 100%;
-  border-bottom: 1px solid #ECECEC; }
+  clear: both; }
 
 article .entry-content {
   overflow: hidden; }
@@ -4648,11 +4646,11 @@ article .entry-content {
 */
 img.alignright {
   float: right;
-  margin: 0 0 1em 1em; }
+  margin: 6px 0 0.5em 0.5em; }
 
 img.alignleft {
   float: left;
-  margin: 0 1em 1em 0; }
+  margin: 6px 0.5em 0.5em 0; }
 
 img.aligncenter {
   display: block;
