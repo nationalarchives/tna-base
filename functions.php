@@ -48,6 +48,7 @@ add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 /* Enable css style inside editor */
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
 
+
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );

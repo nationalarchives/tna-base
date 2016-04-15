@@ -18,7 +18,9 @@ hr {
 p {
     margin:0;
 }
-
+img.alignleft,
+img.alignright,
+.alignright,
 .alignleft {
     margin-bottom:0;
 }
