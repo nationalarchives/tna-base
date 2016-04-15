@@ -46,10 +46,12 @@ a:focus {
 
 
 hr {
-  height: 1px;
+  height: 0;
   border:0;
   margin: 1em 0;
   clear: both;
+  width:100%;
+  border-bottom: 1px solid #ECECEC;
 }
 
 article .entry-content{
@@ -61,11 +63,11 @@ article .entry-content{
 */
 img.alignright {
   float: right;
-  margin: 6px 0 0.5em 0.5em;
+  margin: 0 0 1em 1em;
 }
 img.alignleft {
   float: left;
-  margin: 6px 0.5em 0.5em 0;
+  margin: 0 1em 1em 0;
 
 }
 img.aligncenter {

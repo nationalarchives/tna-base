@@ -4,4 +4,21 @@
 *
 */
 
+hr {
+    cursor: default;
+    clear: both;
+    display: inline-block;
+    float:none;
+    width: 100%;
+    margin:0;
+    height:0;
+    border-bottom: 1px solid #ECECEC;
+}
 
+p {
+    margin:0;
+}
+
+.alignleft {
+    margin-bottom:0;
+}
