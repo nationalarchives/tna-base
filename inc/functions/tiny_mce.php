@@ -17,4 +17,19 @@ function add_plugin($plugin_array) {
     $plugin_array['tna'] = get_bloginfo('template_url').'/js/tiny_mce.js';
     return $plugin_array;
 }
-?>
+
+add_filter('tiny_mce_before_init', 'classes_tinymce');
+function classes_tinymce($settings) {
+    $new_styles = array(
+        array(
+            'title' => 'None',
+            'value'	=> ''
+        ),
+        array(
+            'title'	=> 'table',
+            'value'	=> 'table',
+        ),
+    );
+    $settings['table_class_list'] = json_encode( $new_styles );
+    return $settings;
+}
