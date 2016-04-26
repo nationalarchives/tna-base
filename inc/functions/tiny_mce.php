@@ -29,6 +29,14 @@ function classes_tinymce($settings) {
             'title'	=> 'table',
             'value'	=> 'table',
         ),
+        array(
+            'title'	=> 'table-striped',
+            'value'	=> 'table table-striped',
+        ),
+        array(
+            'title'	=> 'table-bordered',
+            'value'	=> 'table table-bordered',
+        ),
     );
     $settings['table_class_list'] = json_encode( $new_styles );
     return $settings;
