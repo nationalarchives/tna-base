@@ -56,7 +56,7 @@
             <li><a href="/legal/">Terms of use</a></li>
             <li><a href="/legal/privacy.htm">Privacy policy</a></li>
             <li><a href="/legal/cookies.htm">Cookies</a></li>
-            <li><a href="/foi/default.htm">Freedom of Information</a></li>
+            <li><a href="/about/freedom-of-information/">Freedom of Information</a></li>
             <li><a href="/about/our-role/transparency/">Transparency</a></li>
             <li><a href="/legal/our-fees.htm">Our fees</a></li>
         </ul>

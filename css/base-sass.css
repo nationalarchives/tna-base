@@ -4633,10 +4633,12 @@ a:focus {
   color: #222; }
 
 hr {
-  height: 1px;
+  height: 0;
   border: 0;
   margin: 1em 0;
-  clear: both; }
+  clear: both;
+  width: 100%;
+  border-bottom: 1px solid #ECECEC; }
 
 article .entry-content {
   overflow: hidden; }
@@ -4646,11 +4648,11 @@ article .entry-content {
 */
 img.alignright {
   float: right;
-  margin: 6px 0 0.5em 0.5em; }
+  margin: 0 0 1em 1em; }
 
 img.alignleft {
   float: left;
-  margin: 6px 0.5em 0.5em 0; }
+  margin: 0 1em 1em 0; }
 
 img.aligncenter {
   display: block;
@@ -5344,6 +5346,189 @@ header #mobileGlobalSearch #changeDestination {
   .footer-col {
     margin: 0 0 40px 0 !important; } }
 
+/* Ghost button class can now be applied directly to any html tag */
+.ghost-button {
+  line-height: 1em;
+  display: inline-block;
+  color: #FFF !important;
+  border: solid 1px #FFFFFF;
+  padding: 15px;
+  margin: 2% 0 2% 0;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: auto;
+  text-align: center; }
+
+.ghost-button:hover {
+  text-decoration: none;
+  background-color: #009999; }
+
+.ghost-button h3 {
+  margin: 7% 0 7% 0; }
+
+/* End - Ghost button class can now be applied directly to any html tag */
+/* Buttons */
+a.button {
+  background: #008484;
+  color: #fff;
+  padding: 0.5em;
+  display: inline-block;
+  /* used to contain button text when it drops to a second line */
+  min-width: 24px;
+  text-align: center; }
+
+a.button:hover {
+  background: #FCE45C;
+  color: #000;
+  text-decoration: underline;
+  border: none; }
+
+/* WEB COLOURS */
+.hue-red {
+  background-color: #cb0d07;
+  color: #fff; }
+
+.hue-yellow {
+  background-color: #fce45c;
+  color: #111; }
+
+.hue-teal {
+  background-color: #008484;
+  color: #fff; }
+
+.hue-indigo {
+  background-color: #405480;
+  color: #fff; }
+
+.hue-grey-darkest {
+  background-color: #111;
+  color: #fff; }
+
+.hue-grey-darker {
+  background-color: #222;
+  color: #fff; }
+
+.hue-grey-dark {
+  background-color: #333;
+  color: #fff; }
+
+.hue-grey-mid-dark {
+  background-color: #555;
+  color: #fff; }
+
+.hue-grey-mid-light {
+  background-color: #999;
+  color: #111; }
+
+.hue-grey-light {
+  background-color: #ddd;
+  color: #111; }
+
+.hue-grey-lighter {
+  background-color: #eee;
+  color: #111; }
+
+.hue-grey-lightest {
+  background-color: #f3f3f3;
+  color: #111; }
+
+.hue-yellow-dark {
+  background-color: #ebab00;
+  color: #111; }
+
+.text-yellow, a.text-yellow,
+.hue-grey-darkest a, .hue-grey-darker a, .hue-grey-dark a, .hue-grey-mid-dark a,
+a.hue-grey-darkest, a.hue-grey-darker, a.hue-grey-dark, a.hue-grey-mid-dark {
+  color: #fce45c; }
+
+.text-grey-light {
+  color: #ddd; }
+
+.text-blue, .hue-yellow a {
+  color: #2A5DB0; }
+
+.hue-teal, .hue-red, .hue-teal a, .overlay a.button {
+  color: #fff; }
+
+.hue-50-yellow, .hue-75-yellow {
+  background-color: #fce45c;
+  background-color: rgba(252, 228, 92, 0.75);
+  color: #111; }
+
+.hue-50-teal {
+  background-color: #008484;
+  background-color: rgba(0, 153, 153, 0.5);
+  color: #eee; }
+
+.hue-25-teal {
+  background-color: #008484;
+  background-color: rgba(0, 153, 153, 0.25);
+  color: #eee; }
+
+.hue-50-black {
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #eee; }
+
+.hue-25-black {
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #eee; }
+
+.hue-25-white {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #111; }
+
+.hue-grey-darkest a, .hue-grey-darker a, .hue-grey-dark a, .hue-grey-mid-dark a,
+a.hue-grey-darkest, a.hue-grey-darker, a.hue-grey-dark, a.hue-grey-mid-dark {
+  color: #fce45c;
+  /* no need to specify text link color for lighter grey hue classes as this can be our default blue */ }
+
+.hue-yellow a {
+  color: #2A5DB0; }
+
+a.hue-teal, a.hue-red {
+  color: #fce45c;
+  background-color: transparent; }
+
+/* Default quotes */
+blockquote, blockquote.misc {
+  margin: 50px 40px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.166em;
+  line-height: 1.3;
+  color: #111;
+  border-left: none !important; }
+
+blockquote.misc {
+  margin-bottom: 2em; }
+
+blockquote p {
+  color: #333;
+  margin-bottom: 1.5em;
+  font-weight: 700; }
+
+blockquote:before {
+  font-size: 16em;
+  color: rgba(0, 0, 0, 0.1);
+  margin-left: -10px;
+  margin-top: -130px;
+  position: absolute;
+  font-family: "MS Serif", "New York", serif;
+  content: "\201C"; }
+
+blockquote.misc p:before {
+  content: " "; }
+
+blockquote p + p:last-of-type {
+  /* to display source of quote - quotes MUST have a source provided in a final paragraph! */
+  text-align: right;
+  font-size: .9em; }
+
 /* TNA image styles */
 .image_caption_back {
   display: none;
@@ -5443,3 +5628,8 @@ header #mobileGlobalSearch #changeDestination {
 
 .icon-flickr:hover {
   background-position: -320px 40px; }
+
+/* TNA table styles (extends bootstrap table styles) */
+.table thead {
+  background: #eee;
+  font-weight: 700; }

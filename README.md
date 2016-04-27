@@ -44,7 +44,7 @@ Click 'Remote' in SourceTree and you will be shown a full list of repositories y
 
 * Select 'Create New Project from Existing Files' 
 * Select 'Web server is installed locally, source files are located under its document root' 
-* Set /Applications/MAMP/htdocs/sites/tna-base-dev/wp-content/themes/tna-base as Project Root
+* Set /Applications/MAMP/htdocs/sites/tna-base-dev/wp-content/themes/tna-base and click 'Project Root'
 * Specify parameters for a new server as:
   * Name: tna-base-dev
   * Web server root URL: http://tna-base-dev:8888

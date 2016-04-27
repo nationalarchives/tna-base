@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.0.5' );
+define( 'EDD_VERSION', '1.0.6' );
 
 // Enqueue styles and scripts
 function tna_styles() {
@@ -16,8 +16,7 @@ add_action( 'wp_enqueue_scripts', 'tna_styles' );
 
 function tna_scripts() {
 	wp_register_script( 'global-jquery', get_template_directory_uri() . '/js/jquery-1.11.3.min.js', array(), '1.11.3' );
-	wp_register_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(),
-		'2.8.3', false );
+	wp_register_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', false );
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), EDD_VERSION, true );
 	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/webtrends.js', array(), EDD_VERSION, true );
@@ -44,6 +43,10 @@ function load_custom_wp_admin_style() {
 	wp_enqueue_style( 'tna-dashboard' );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
+/* Enable css style inside editor */
+add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
+
 
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

@@ -29,7 +29,7 @@ if (!empty( $feat_box )) { // This is the custom field block
 			the_content();
 			echo '</div>';
 			echo '<div class="col-xs-12 col-sm-6 col-md-6">';
-			$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'landing-page-children-thumb' );
+			$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'feature-box-thumb' );
 			?>
 			<figure>
 				<img src="<?php echo make_path_relative($image_url[0]); ?>" class="img-responsive" alt="<?php echo $post->post_title ?>">
