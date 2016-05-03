@@ -101,7 +101,7 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 // Add profile thumbnail size
 if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'new-size', 210, 260, true ); //(cropped)
+	add_image_size( 'new-size', 210, 260); 
 }
 function profile_img($profile_size) {
 	$add_profile_size = array(
