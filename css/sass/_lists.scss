@@ -109,3 +109,103 @@ ul.form-selectable li span input[type=checkbox] {
   top:2px;
   margin-right: .5em;
 }
+
+/* Disc menu, A-Z Menu & Numbered menu - remove these once tested as we should be able to use MENU-DISC for all single-character list items (create menu-disc-large if larger width and height variant needed) */
+
+#disc-menu, #numbered-menu {
+  width: 100%;
+  float: left;
+  margin: 0 0 20px 0;
+}
+#disc-menu li, #numbered-menu li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  margin: 0 5px 5px 0;
+  display: inline-block;
+  width: 18%;
+}
+#disc-menu li a, #numbered-menu li a {
+  font-family: 'Bitter', Georgia, Verdana, Arial, Helvetica, serif;
+  font-size: 1.5em;
+  display: inline-block;
+  background-color: #008484;
+  color: #FEFEFE;
+  border-radius: 50%;
+  text-decoration: none;
+  line-height: 200%;
+  width: 44px;
+  height: 44px;
+}
+
+#menu-disc, #a-z-menu {
+  min-height: 48px;
+  float: left;
+  margin:0;
+  padding:0;
+}
+
+#menu-disc li, #a-z-menu li  {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 4px 4px 0;
+  display: inline-block;
+  width: auto;
+  float:left;
+}
+
+#menu-disc li a, #menu-disc li span.disabled,
+#a-z-menu li a, #a-z-menu li span.disabled  {
+  font-family: 'Bitter',Georgia, Verdana, Arial, Helvetica, serif;
+  font-size: 1.25em;
+  display: inline-block;
+  width: 40px;
+  height: auto;
+  color: #FEFEFE;
+  border-radius: 50%;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+#menu-disc li a, #a-z-menu li a {
+  background-color: #008484;
+}
+
+#menu-disc li span.disabled, #a-z-menu li span.disabled {
+  background-color: #ddd;
+  background-color: rgba(0,0,0,.25);
+  color: #999;
+}
+
+#menu-disc li a:hover, #disc-menu li a:hover, #menu-disc .selected, #a-z-menu .selected a,
+#a-z-menu .selected, #a-z-menu a:hover  {
+  color: #000;
+  background-color: #FCE45C;
+  border-radius: 50%;
+}
+
+#menu-disc li a, #menu-disc li span.disabled
+  /* The newer style for disc menus uses has a reduced width and height - when all disc menus are renamed to 'menu-disc' these sizes will be standardised */ {
+  width: 32px;
+  line-height: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  ul.triplets li, ul.quadruplets li {
+    width: 45%;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  ul.quadruplets li {
+    width: auto;
+    margin-right: 11.7%;
+  }
+  ul.triplets li {
+    width: 33%;
+  }
+
+}
