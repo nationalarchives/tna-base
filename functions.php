@@ -3,6 +3,24 @@
 // Theme version
 define( 'EDD_VERSION', '1.0.6' );
 
+// Title tag function
+$tnaNetworkSiteName = 'The National Archives';
+
+function theme_slug_setup() {
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
+
+add_filter( 'document_title_parts', function ( $title ) {
+		global $tnaNetworkSiteName;
+		if ( is_home() || is_front_page() ) {
+			unset( $title['tagline'] );
+		}
+		$title['title'] = get_the_title();
+		$title['site'] = $tnaNetworkSiteName;
+	return $title;
+}, 10, 1 );
+
 // Enqueue styles and scripts
 function tna_styles() {
 	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css.min', array(), EDD_VERSION, 'all' );
