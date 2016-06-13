@@ -12,7 +12,7 @@ get_header(); ?>
 				<div class="col-md-12">
 					<article class="banner" <?php
 					if ( has_post_thumbnail() ) {
-						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-page-width' ); ?>
 						style="background: url(<?php echo make_path_relative( $thumbnail_src[0] ); ?>) center center;background-size: cover;"
 					<?php } ?>>
 						<div class="entry-header">
