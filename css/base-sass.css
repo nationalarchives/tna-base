@@ -5337,6 +5337,25 @@ article {
 .equal-heights p {
   margin-bottom: 0.5em; }
 
+.level-one .banner {
+  height: 288px;
+  position: relative; }
+  .level-one .banner .entry-header {
+    background: none; }
+  .level-one .banner .entry-content {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.66);
+    color: #ddd;
+    width: 100%; }
+    .level-one .banner .entry-content h2, .level-one .banner .entry-content h3 {
+      margin-top: 0; }
+    .level-one .banner .entry-content p {
+      margin: 0; }
+
 /* TNA sidebar styles */
 aside {
   margin-bottom: 1.5em; }
