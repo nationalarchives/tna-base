@@ -159,8 +159,7 @@ $meta_boxes = array(
 				'std' => ''
 			)
 		)
-	),
-	array()
+	)
 );
 
 for ($id = 1; $id <= 12; $id++)  {
