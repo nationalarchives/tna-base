@@ -136,51 +136,176 @@ add_action( 'save_post', 'sidebar_save' );
 
 /* Level 1 landing page template metaboxes */
 
-add_action( 'add_meta_boxes', 'level_one_meta_boxes' );
-function level_one_meta_boxes() {
-    global $post;
-    if(!empty($post)) {
-        $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
-        if($pageTemplate == 'page-level-1-landing.php' ) {
-            add_meta_box( 'action-button-id', 'Call to action button', 'action_button_meta_box', 'page', 'normal', 'high' );
-        }
-    }
+$meta_boxes = array(
+	array(
+		'id' => 'level_one_action_button',
+		'title' => 'Call to action button',
+		'pages' => 'page',
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'name' => 'Button text',
+				'desc' => '',
+				'id' => 'action_button_title',
+				'type' => 'text',
+				'std' => ''
+			),
+			array(
+				'name' => 'Button URL',
+				'desc' => '',
+				'id' => 'action_button_url',
+				'type' => 'text',
+				'std' => ''
+			)
+		)
+	),
+	array()
+);
+
+for ($id = 1; $id <= 12; $id++)  {
+	$meta_boxes[] = array (
+		'id' => 'content-box-'.$id,
+		'title' => 'Content box '.$id,
+		'pages' => 'page',
+		'context' => 'normal',
+		'priority' => 'high',
+		'fields' => array(
+			array(
+				'name' => 'Display box',
+				'id' => 'box_width_'.$id,
+				'type' => 'select',
+				'options' => array('Disabled', 'At a third', 'At a half')
+			),
+			array(
+				'name' => 'Title',
+				'desc' => '',
+				'id' => 'box_title_'.$id,
+				'type' => 'text',
+				'std' => ''
+			),
+			array(
+				'name' => 'Title URL',
+				'desc' => '',
+				'id' => 'box_title_url_'.$id,
+				'type' => 'text',
+				'std' => ''
+			),
+			array(
+				'name' => 'Image',
+				'desc' => '',
+				'id' => 'box_image_url_'.$id,
+				'type' => 'text',
+				'std' => ''
+			),
+			array(
+				'name' => 'Content',
+				'desc' => '',
+				'id' => 'box_content_'.$id,
+				'type' => 'textarea',
+				'std' => ''
+			)
+		)
+	);
 }
-function action_button_meta_box( $post ) {
-    $values = get_post_custom( $post->ID );
-    $title = isset( $values['action_button_title'] ) ? esc_attr( $values['action_button_title'][0] ) : '';
-    $url = isset( $values['action_button_url'] ) ? esc_attr( $values['action_button_url'][0] ) : '';
-    echo '<p>Call to action button appears in top banner</p>';
-    wp_nonce_field( 'action_button_meta_box_nonce', 'meta_box_nonce' );
-    ?>
-    <label for="action_button_title">Call to action text</label><br>
-    <input type="text" name="action_button_title" id="action_button_title" value="<?php echo $title; ?>" /><br>
-    <label for="action_button_url">Call to action URL</label><br>
-    <input type="text" name="action_button_url" id="action_button_url" value="<?php echo $url; ?>" />
-    <?php
+
+foreach ( $meta_boxes as $meta_box ) {
+	$level_one_box = new level_one_meta_box( $meta_box );
 }
-add_action( 'save_post', 'action_button_meta_box_save' );
-function action_button_meta_box_save( $post_id ) {
-    // Bail if we're doing an auto save
-    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 
-    // if our nonce isn't there, or we can't verify it, bail
-    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'action_button_meta_box_nonce' ) ) return;
+class level_one_meta_box {
 
-    // if our current user can't edit this post, bail
-    if( !current_user_can( 'edit_post' ) ) return;
+	protected $_meta_box;
 
-    // now we can actually save the data
-    $allowed = array(
-        'a' => array( // on allow a tags
-            'href' => array() // and those anchors can only have href attribute
-        )
-    );
+	// create meta box based on given data
+	function __construct($meta_box) {
+		$this->_meta_box = $meta_box;
+		add_action('admin_menu', array(&$this, 'add'));
 
-    // Make sure your data is set before trying to save it
-    if( isset( $_POST['action_button_title'] ) )
-        update_post_meta( $post_id, 'action_button_title', wp_kses( $_POST['action_button_title'], $allowed ) );
+		add_action('save_post', array(&$this, 'save'));
+	}
 
-    if( isset( $_POST['action_button_url'] ) )
-        update_post_meta( $post_id, 'action_button_url', esc_attr( $_POST['action_button_url'] ) );
+	/// Add meta box for multiple post types
+	function add() {
+			add_meta_box($this->_meta_box['id'], $this->_meta_box['title'], array(&$this, 'show'), 'page', $this->_meta_box['context'], $this->_meta_box['priority']);
+	}
+
+	// Callback function to show fields in meta box
+	function show() {
+		global $post;
+
+		// Use nonce for verification
+		echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+
+		echo '<table class="form-table">';
+
+		foreach ($this->_meta_box['fields'] as $field) {
+			// get current post meta data
+			$meta = get_post_meta($post->ID, $field['id'], true);
+			echo '<tr>',
+			'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
+			'<td>';
+			switch ($field['type']) {
+				case 'text':
+					echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />',
+					'<br />', $field['desc'];
+					break;
+				case 'textarea':
+					echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
+					'<br />', $field['desc'];
+					break;
+				case 'select':
+					echo '<select name="', $field['id'], '" id="', $field['id'], '">';
+					foreach ($field['options'] as $option) {
+						echo '<option', $meta == $option ? ' selected="selected"' : '', '>', $option, '</option>';
+					}
+					echo '</select>';
+					break;
+				case 'radio':
+					foreach ($field['options'] as $option) {
+						echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? ' checked="checked"' : '', ' />', $option['name'];
+					}
+					break;
+				case 'checkbox':
+					echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
+					break;
+			}
+			echo     '<td>',
+			'</tr>';
+		}
+		echo '</table>';
+	}
+
+	// Save data from meta box
+	function save($post_id) {
+		// verify nonce
+		if (!wp_verify_nonce($_POST['mytheme_meta_box_nonce'], basename(__FILE__))) {
+			return $post_id;
+		}
+
+		// check autosave
+		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+			return $post_id;
+		}
+
+		// check permissions
+		if ('page' == $_POST['post_type']) {
+			if (!current_user_can('edit_page', $post_id)) {
+				return $post_id;
+			}
+		} elseif (!current_user_can('edit_post', $post_id)) {
+			return $post_id;
+		}
+
+		foreach ($this->_meta_box['fields'] as $field) {
+			$old = get_post_meta($post_id, $field['id'], true);
+			$new = $_POST[$field['id']];
+
+			if ($new && $new != $old) {
+				update_post_meta($post_id, $field['id'], $new);
+			} elseif ('' == $new && $old) {
+				delete_post_meta($post_id, $field['id'], $old);
+			}
+		}
+	}
 }
