@@ -22,7 +22,19 @@ get_header(); ?>
 								// Do nothing
 							} else { ?>
 								<div class="entry-content">
-								<?php the_content(); ?>
+									<div class="col-md-9">
+										<?php the_content(); ?>
+									</div>
+								<?php
+								$buttonTitle = get_post_meta( $post->ID, 'action_button_title', true );
+								$buttonUrl = get_post_meta( $post->ID, 'action_button_url', true );
+								if ( $buttonTitle ) { ?>
+									<div class="col-md-3 text-right call-to-action-button">
+										<a href="<?php echo $buttonUrl; ?>" title="<?php echo $buttonTitle; ?>" class="ghost-button">
+											<?php echo $buttonTitle; ?>
+										</a>
+									</div>
+								<?php } ?>
 								</div>
 							<?php } ?>
 					</article>
