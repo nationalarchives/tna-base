@@ -5347,14 +5347,12 @@ article {
     overflow: hidden;
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
     background: #000;
     background: rgba(0, 0, 0, 0.66);
     color: #ddd;
     width: 100%; }
-    .level-one .banner .entry-content h2, .level-one .banner .entry-content h3 {
-      margin-top: 0; }
-    .level-one .banner .entry-content p {
+    .level-one .banner .entry-content h2, .level-one .banner .entry-content h3, .level-one .banner .entry-content h4, .level-one .banner .entry-content p {
       margin: 0; }
 
 /* TNA sidebar styles */

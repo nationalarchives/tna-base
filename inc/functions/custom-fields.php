@@ -102,10 +102,8 @@ function redirect_url_save( $post_id ) {
         update_post_meta( $post_id, 'redirectUrl', esc_attr( $_POST['redirectUrl'] ) );
 }
 add_action( 'save_post', 'redirect_url_save' );
-/* Redirect Metabox */
 
-
-/*Sidebar Metabox*/
+/* Sidebar Metabox */
 function sidebar_get_meta( $value ) {
     global $post;
 
@@ -135,3 +133,54 @@ function sidebar_save( $post_id ) {
         update_post_meta( $post_id, 'sidebar', esc_attr( $_POST['sidebar'] ) );
 }
 add_action( 'save_post', 'sidebar_save' );
+
+/* Level 1 landing page template metaboxes */
+
+add_action( 'add_meta_boxes', 'level_one_meta_boxes' );
+function level_one_meta_boxes() {
+    global $post;
+    if(!empty($post)) {
+        $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
+        if($pageTemplate == 'page-level-1-landing.php' ) {
+            add_meta_box( 'action-button-id', 'Call to action button', 'action_button_meta_box', 'page', 'normal', 'high' );
+        }
+    }
+}
+function action_button_meta_box( $post ) {
+    $values = get_post_custom( $post->ID );
+    $title = isset( $values['action_button_title'] ) ? esc_attr( $values['action_button_title'][0] ) : '';
+    $url = isset( $values['action_button_url'] ) ? esc_attr( $values['action_button_url'][0] ) : '';
+    echo '<p>Call to action button appears in top banner</p>';
+    wp_nonce_field( 'action_button_meta_box_nonce', 'meta_box_nonce' );
+    ?>
+    <label for="action_button_title">Call to action text</label><br>
+    <input type="text" name="action_button_title" id="action_button_title" value="<?php echo $title; ?>" /><br>
+    <label for="action_button_url">Call to action URL</label><br>
+    <input type="text" name="action_button_url" id="action_button_url" value="<?php echo $url; ?>" />
+    <?php
+}
+add_action( 'save_post', 'action_button_meta_box_save' );
+function action_button_meta_box_save( $post_id ) {
+    // Bail if we're doing an auto save
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+
+    // if our nonce isn't there, or we can't verify it, bail
+    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'action_button_meta_box_nonce' ) ) return;
+
+    // if our current user can't edit this post, bail
+    if( !current_user_can( 'edit_post' ) ) return;
+
+    // now we can actually save the data
+    $allowed = array(
+        'a' => array( // on allow a tags
+            'href' => array() // and those anchors can only have href attribute
+        )
+    );
+
+    // Make sure your data is set before trying to save it
+    if( isset( $_POST['action_button_title'] ) )
+        update_post_meta( $post_id, 'action_button_title', wp_kses( $_POST['action_button_title'], $allowed ) );
+
+    if( isset( $_POST['action_button_url'] ) )
+        update_post_meta( $post_id, 'action_button_url', esc_attr( $_POST['action_button_url'] ) );
+}

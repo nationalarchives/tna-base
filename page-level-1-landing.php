@@ -80,6 +80,36 @@ get_header(); ?>
 							</div>
 						</article>
 					</div>
+					<div class="col-md-4">
+						<article>
+							<div class="entry-header">
+								<h2><a>title</a></h2>
+							</div>
+							<div class="row entry-content">
+								content
+							</div>
+						</article>
+					</div>
+					<div class="col-md-4">
+						<article>
+							<div class="entry-header">
+								<h2><a>title</a></h2>
+							</div>
+							<div class="row entry-content">
+								content
+							</div>
+						</article>
+					</div>
+					<div class="col-md-4">
+						<article>
+							<div class="entry-header">
+								<h2><a>title</a></h2>
+							</div>
+							<div class="row entry-content">
+								content
+							</div>
+						</article>
+					</div>
 				</main>
 			</div>
 		</div>
