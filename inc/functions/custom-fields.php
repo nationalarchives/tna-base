@@ -163,7 +163,7 @@ function level_one_meta_boxes() {
 					'name' => 'Number of boxes displayed',
 					'id' => 'number_of_boxes',
 					'type' => 'select',
-					'options' => array('2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12')
+					'options' => array('0', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12')
 				)
 			)
 		)
@@ -182,7 +182,7 @@ function level_one_meta_boxes() {
 					'name' => 'Display box',
 					'id' => 'box_width_'.$id,
 					'type' => 'select',
-					'options' => array('Disabled', 'At a third', 'At a half')
+					'options' => array('Disabled', 'At a third', 'At a half', 'At full width')
 				),
 				array(
 					'name' => 'Title',
