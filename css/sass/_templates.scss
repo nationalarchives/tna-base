@@ -86,4 +86,34 @@ article {
       }
     }
   }
+  .box-third, .box-half, .box-full {
+    ul {
+      margin-top: 1em;
+    }
+    ul li {
+      float: left;
+      list-style-image: url(../img/list-link-bullet.png);
+      margin-bottom: 1em;
+    }
+  }
+  .box-third, .box-half {
+    ul li {
+      width: 40%;
+      margin-right: 10%;
+    }
+  }
+  .box-full {
+    ul li {
+      width: 26%;
+      margin-right: 7%;
+    }
+  }
+  @media only screen and (max-width: 567px) {
+    .box-third, .box-half, .box-full {
+      ul li {
+        width: 96%;
+        margin-right: 0;
+      }
+    }
+  }
 }

@@ -51,18 +51,18 @@ get_header(); ?>
 							$content = get_post_meta( $post->ID, 'box_content_'.$i, true );
 							$display = get_post_meta( $post->ID, 'box_width_'.$i, true );
 							if ( $display == 'At full width' ) {
-								$col = '12';
+								$mdCol = '12';
 								$colClass = 'box-full';
 							} elseif ( $display == 'At a half' ) {
-								$col = '6';
+								$mdCol = '6';
 								$colClass = 'box-half';
 							} else {
-								$col = '4';
+								$mdCol = '4';
 								$colClass = 'box-third';
 							}
 							if ( !empty( $title ) && $display != 'Disabled' ) {
 								?>
-								<div class="col-md-<?php echo $col . ' ' . $colClass; ?>">
+								<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
 									<article>
 										<div class="entry-header" <?php
 										if ( !empty( $image ) ) { ?>
@@ -76,7 +76,7 @@ get_header(); ?>
 												<?php } else { echo $title; } ?>
 											</h2>
 										</div>
-										<div class="entry-content">
+										<div class="entry-content clearfix">
 											<?php echo $content ?>
 										</div>
 									</article>

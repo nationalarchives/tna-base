@@ -5354,6 +5354,22 @@ article {
     width: 100%; }
     .level-one .banner .entry-content h2, .level-one .banner .entry-content h3, .level-one .banner .entry-content h4, .level-one .banner .entry-content p {
       margin: 0; }
+.level-one .box-third ul, .level-one .box-half ul, .level-one .box-full ul {
+  margin-top: 1em; }
+.level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
+  float: left;
+  list-style-image: url(../img/list-link-bullet.png);
+  margin-bottom: 1em; }
+.level-one .box-third ul li, .level-one .box-half ul li {
+  width: 40%;
+  margin-right: 10%; }
+.level-one .box-full ul li {
+  width: 26%;
+  margin-right: 7%; }
+@media only screen and (max-width: 567px) {
+  .level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
+    width: 96%;
+    margin-right: 0; } }
 
 /* TNA sidebar styles */
 aside {
