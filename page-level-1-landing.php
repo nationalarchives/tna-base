@@ -40,90 +40,44 @@ get_header(); ?>
 					</article>
 				</div>
 			</div>
-			<div class="row">
-				<main id="main" role="main">
-					<div class="col-md-4">
-						<article>
-							<div class="entry-header">
-								<h2>title</h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-					<div class="col-md-4">
-						<article>
-							<div class="entry-header">
-								<h2>title</h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-					<div class="col-md-4">
-						<article>
-							<div class="entry-header">
-								<h2>title</h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-					<div class="col-md-6">
-						<article>
-							<div class="entry-header">
-								<h2>title</h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-					<div class="col-md-6">
-						<article>
-							<div class="entry-header">
-								<h2>title</h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-					<div class="col-md-4">
-						<article>
-							<div class="entry-header">
-								<h2><a>title</a></h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-					<div class="col-md-4">
-						<article>
-							<div class="entry-header">
-								<h2><a>title</a></h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-					<div class="col-md-4">
-						<article>
-							<div class="entry-header">
-								<h2><a>title</a></h2>
-							</div>
-							<div class="row entry-content">
-								content
-							</div>
-						</article>
-					</div>
-				</main>
-			</div>
+			<main id="main" role="main">
+				<div class="row equal-heights">
+						<?php
+						$n = get_post_meta( $post->ID, 'number_of_boxes', true );
+						for ($i = 1; $i <= $n; $i++) {
+							$title = get_post_meta( $post->ID, 'box_title_'.$i, true );
+							$url = get_post_meta( $post->ID, 'box_title_url_'.$i, true );
+							$content = get_post_meta( $post->ID, 'box_content_'.$i, true );
+							$display = get_post_meta( $post->ID, 'box_width_'.$i, true );
+							if ( $display == 'At a half' ) {
+								$col = '6';
+							} else {
+								$col = '4';
+							}
+							if ( !empty( $title ) && $display != 'Disabled' ) {
+								?>
+								<div class="col-md-<?php echo $col ?>">
+									<article>
+										<div class="entry-header">
+											<h2>
+												<?php if ( !empty( $url ) ) { ?>
+												<a href="<?php echo $url ?>">
+													<?php echo $title . $display . $col ?>
+												</a>
+												<?php } else { echo $title; } ?>
+											</h2>
+										</div>
+										<div class="entry-content">
+											<?php echo $content ?>
+										</div>
+									</article>
+								</div>
+							<?php } else {
+								// do nothing
+							}
+						} ?>
+				</div>
+			</main>
 		</div>
 		<?php endwhile; ?>
 	</div>

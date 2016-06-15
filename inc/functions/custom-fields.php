@@ -224,7 +224,7 @@ function level_one_meta_boxes() {
 }
 add_action( 'init', 'level_one_meta_boxes' );
 
-// Creates meta boxes from an array
+// Creates meta boxes from $meta_boxes = array()
 // See http://www.deluxeblogtips.com/2010/05/howto-meta-box-wordpress.html for more info
 class create_meta_box {
 
