@@ -47,6 +47,7 @@ get_header(); ?>
 						for ($i = 1; $i <= $n; $i++) {
 							$title = get_post_meta( $post->ID, 'box_title_'.$i, true );
 							$url = get_post_meta( $post->ID, 'box_title_url_'.$i, true );
+							$image = get_post_meta( $post->ID, 'box_image_url_'.$i, true );
 							$content = get_post_meta( $post->ID, 'box_content_'.$i, true );
 							$display = get_post_meta( $post->ID, 'box_width_'.$i, true );
 							if ( $display == 'At a half' ) {
@@ -58,7 +59,10 @@ get_header(); ?>
 								?>
 								<div class="col-md-<?php echo $col ?>">
 									<article>
-										<div class="entry-header">
+										<div class="entry-header" <?php
+										if ( !empty( $image ) ) { ?>
+											style="background: url(<?php echo $image; ?>) center center;background-size: cover;height: 180px;"
+										<?php } ?>>
 											<h2>
 												<?php if ( !empty( $url ) ) { ?>
 												<a href="<?php echo $url ?>">
