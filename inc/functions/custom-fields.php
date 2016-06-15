@@ -136,83 +136,97 @@ add_action( 'save_post', 'sidebar_save' );
 
 /* Level 1 landing page template metaboxes */
 
-$meta_boxes = array(
-	array(
-		'id' => 'level_one_action_button',
-		'title' => 'Call to action button',
-		'pages' => 'page',
-		'context' => 'normal',
-		'priority' => 'high',
-		'fields' => array(
-			array(
-				'name' => 'Button text',
-				'desc' => '',
-				'id' => 'action_button_title',
-				'type' => 'text',
-				'std' => ''
-			),
-			array(
-				'name' => 'Button URL',
-				'desc' => '',
-				'id' => 'action_button_url',
-				'type' => 'text',
-				'std' => ''
-			)
-		)
-	)
-);
-
-for ($id = 1; $id <= 12; $id++)  {
-	$meta_boxes[] = array (
-		'id' => 'content-box-'.$id,
-		'title' => 'Content box '.$id,
-		'pages' => 'page',
-		'context' => 'normal',
-		'priority' => 'high',
-		'fields' => array(
-			array(
-				'name' => 'Display box',
-				'id' => 'box_width_'.$id,
-				'type' => 'select',
-				'options' => array('Disabled', 'At a third', 'At a half')
-			),
-			array(
-				'name' => 'Title',
-				'desc' => '',
-				'id' => 'box_title_'.$id,
-				'type' => 'text',
-				'std' => ''
-			),
-			array(
-				'name' => 'Title URL',
-				'desc' => '',
-				'id' => 'box_title_url_'.$id,
-				'type' => 'text',
-				'std' => ''
-			),
-			array(
-				'name' => 'Image',
-				'desc' => '',
-				'id' => 'box_image_url_'.$id,
-				'type' => 'text',
-				'std' => ''
-			),
-			array(
-				'name' => 'Content',
-				'desc' => '',
-				'id' => 'box_content_'.$id,
-				'type' => 'textarea',
-				'std' => ''
+function level_one_meta_boxes() {
+	$meta_boxes = array(
+		array(
+			'id' => 'level_one_options',
+			'title' => 'Page options',
+			'pages' => 'page',
+			'context' => 'normal',
+			'priority' => 'high',
+			'fields' => array(
+				array(
+					'name' => 'Banner button text',
+					'desc' => '',
+					'id' => 'action_button_title',
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Banner button URL',
+					'desc' => '',
+					'id' => 'action_button_url',
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Number of boxes displayed',
+					'id' => 'number_of_boxes',
+					'type' => 'select',
+					'options' => array('2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12')
+				)
 			)
 		)
 	);
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	$nBox = get_post_meta( $post_id, 'number_of_boxes', true );
+	for ($id = 1; $id <= $nBox; $id++)  {
+		$meta_boxes[] = array (
+			'id' => 'content-box-'.$id,
+			'title' => 'Content box '.$id,
+			'pages' => 'page',
+			'context' => 'normal',
+			'priority' => 'high',
+			'fields' => array(
+				array(
+					'name' => 'Display box',
+					'id' => 'box_width_'.$id,
+					'type' => 'select',
+					'options' => array('Disabled', 'At a third', 'At a half')
+				),
+				array(
+					'name' => 'Title',
+					'desc' => '',
+					'id' => 'box_title_'.$id,
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Title URL',
+					'desc' => '',
+					'id' => 'box_title_url_'.$id,
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Image',
+					'desc' => '',
+					'id' => 'box_image_url_'.$id,
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Content',
+					'desc' => '',
+					'id' => 'box_content_'.$id,
+					'type' => 'textarea',
+					'std' => ''
+				)
+			)
+		);
+	}
+	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+	if ($template_file == 'page-level-1-landing.php') {
+		foreach ( $meta_boxes as $meta_box ) {
+			$level_one_box = new create_meta_box( $meta_box );
+		}
+	}
 }
+add_action( 'init', 'level_one_meta_boxes' );
 
-foreach ( $meta_boxes as $meta_box ) {
-	$level_one_box = new level_one_meta_box( $meta_box );
-}
-
-class level_one_meta_box {
+// Creates meta boxes from an array
+// See http://www.deluxeblogtips.com/2010/05/howto-meta-box-wordpress.html for more info
+class create_meta_box {
 
 	protected $_meta_box;
 
@@ -241,6 +255,7 @@ class level_one_meta_box {
 		foreach ($this->_meta_box['fields'] as $field) {
 			// get current post meta data
 			$meta = get_post_meta($post->ID, $field['id'], true);
+
 			echo '<tr>',
 			'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
 			'<td>';
