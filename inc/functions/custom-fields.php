@@ -270,7 +270,7 @@ class create_meta_box {
 						'media_buttons' => false,
 						'textarea_rows' => 4,
 						'tinymce' => false,
-						'quicktags' => array( 'buttons' => 'strong,em,ul,ol,li' ),
+						'quicktags' => array( 'buttons' => 'strong,em,ul,ol,li,link' ),
 						'wpautop' => false
 					);
 					wp_editor( $field_value[0], $field['id'], $args );
