@@ -66,7 +66,7 @@ get_header(); ?>
 											<h2>
 												<?php if ( !empty( $url ) ) { ?>
 												<a href="<?php echo $url ?>">
-													<?php echo $title . $display . $col ?>
+													<?php echo $title ?>
 												</a>
 												<?php } else { echo $title; } ?>
 											</h2>
