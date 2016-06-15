@@ -265,8 +265,17 @@ class create_meta_box {
 					'<br />', $field['desc'];
 					break;
 				case 'textarea':
-					echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
-					'<br />', $field['desc'];
+					$field_value = get_post_meta( $post->ID, $field['id'], false );
+					$args = array (
+						'media_buttons' => false,
+						'textarea_rows' => 4,
+						'tinymce' => false,
+						'quicktags' => array( 'buttons' => 'strong,em,ul,ol,li' ),
+						'wpautop' => false
+					);
+					wp_editor( $field_value[0], $field['id'], $args );
+					// echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
+					echo '<br />', $field['desc'];
 					break;
 				case 'select':
 					echo '<select name="', $field['id'], '" id="', $field['id'], '">';
