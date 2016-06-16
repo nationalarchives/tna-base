@@ -64,7 +64,7 @@ get_header(); ?>
 							}
 							if ( !empty( $title ) && $display != 'disabled' ) {
 								?>
-								<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
+								<div class="col-md-<?php echo $mdCol . ' box-' . $i . ' ' . $colClass; ?>">
 									<article>
 										<div class="entry-header" <?php
 										if ( !empty( $image ) ) { ?>
