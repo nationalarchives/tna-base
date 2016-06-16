@@ -10,7 +10,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<article class="banner" <?php
+					<article class="banner" role="banner" <?php
 					if ( has_post_thumbnail() ) {
 						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-page-width' ); ?>
 						style="background: url(<?php echo make_path_relative( $thumbnail_src[0] ); ?>) center center;background-size: cover;"
@@ -45,11 +45,13 @@ get_header(); ?>
 						<?php
 						$n = get_post_meta( $post->ID, 'number_of_boxes', true );
 						for ($i = 1; $i <= $n; $i++) {
+							// Fetch page meta values
 							$title = get_post_meta( $post->ID, 'box_title_'.$i, true );
 							$url = get_post_meta( $post->ID, 'box_title_url_'.$i, true );
 							$image = get_post_meta( $post->ID, 'box_image_url_'.$i, true );
 							$content = get_post_meta( $post->ID, 'box_content_'.$i, true );
 							$display = get_post_meta( $post->ID, 'box_width_'.$i, true );
+							// Condition to set box width and add appropriate classes
 							if ( $display == 'At full width' ) {
 								$mdCol = '12';
 								$colClass = 'box-full';
@@ -82,7 +84,7 @@ get_header(); ?>
 									</article>
 								</div>
 							<?php } else {
-								// do nothing
+								// Box has either no title or is disabled so do nothing
 							}
 						} ?>
 				</div>
