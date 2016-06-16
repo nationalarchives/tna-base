@@ -227,7 +227,7 @@ function level_one_meta_boxes() {
 }
 add_action( 'init', 'level_one_meta_boxes' );
 
-// Creates meta boxes from $meta_boxes = array()
+// Creates meta boxes from $meta_boxes[] = array()
 // See http://www.deluxeblogtips.com/2010/05/howto-meta-box-wordpress.html for more info
 // Edited from original for TNA purposes
 class create_meta_box {
@@ -238,7 +238,7 @@ class create_meta_box {
 		add_action('admin_menu', array(&$this, 'add'));
 		add_action('save_post', array(&$this, 'save'));
 	}
-	/// Add meta box for multiple post types
+	/// Add meta box
 	function add() {
 			add_meta_box($this->_meta_box['id'], $this->_meta_box['title'], array(&$this, 'show'), 'page', $this->_meta_box['context'], $this->_meta_box['priority']);
 	}
