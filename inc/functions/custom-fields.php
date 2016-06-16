@@ -184,7 +184,7 @@ function level_one_meta_boxes() {
 					'name' => 'Display box',
 					'id' => 'box_width_'.$id,
 					'type' => 'select',
-					'options' => array('Disabled', 'At a third', 'At a half', 'At full width')
+					'options' => array('disabled', 'at a third', 'at a half', 'at full width')
 				),
 				array(
 					'name' => 'Title',

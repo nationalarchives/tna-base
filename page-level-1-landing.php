@@ -22,14 +22,14 @@ get_header(); ?>
 								// Do nothing
 							} else { ?>
 								<div class="entry-content">
-									<div class="col-md-9">
+									<div class="col-xs-9">
 										<?php the_content(); ?>
 									</div>
 								<?php
 								$buttonTitle = get_post_meta( $post->ID, 'action_button_title', true );
 								$buttonUrl = get_post_meta( $post->ID, 'action_button_url', true );
 								if ( $buttonTitle ) { ?>
-									<div class="col-md-3 text-right call-to-action-button">
+									<div class="col-xs-3 text-right call-to-action-button">
 										<a href="<?php echo $buttonUrl; ?>" title="<?php echo $buttonTitle; ?>" class="ghost-button">
 											<?php echo $buttonTitle; ?>
 										</a>
@@ -52,17 +52,17 @@ get_header(); ?>
 							$content = get_post_meta( $post->ID, 'box_content_'.$i, true );
 							$display = get_post_meta( $post->ID, 'box_width_'.$i, true );
 							// Condition to set box width and add appropriate classes
-							if ( $display == 'At full width' ) {
+							if ( $display == 'at full width' ) {
 								$mdCol = '12';
 								$colClass = 'box-full';
-							} elseif ( $display == 'At a half' ) {
+							} elseif ( $display == 'at a half' ) {
 								$mdCol = '6';
 								$colClass = 'box-half';
 							} else {
 								$mdCol = '4';
 								$colClass = 'box-third';
 							}
-							if ( !empty( $title ) && $display != 'Disabled' ) {
+							if ( !empty( $title ) && $display != 'disabled' ) {
 								?>
 								<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
 									<article>
