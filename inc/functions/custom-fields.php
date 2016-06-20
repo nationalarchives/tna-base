@@ -181,7 +181,8 @@ function level_one_meta_boxes() {
 			'priority' => 'high',
 			'fields' => array(
 				array(
-					'name' => 'Display box',
+					'name' => 'Box size',
+					'desc' => 'Select &#39;disabled&#39; to hide this box',
 					'id' => 'box_width_'.$id,
 					'type' => 'select',
 					'options' => array('disabled', 'at a third', 'at a half', 'at full width')
@@ -201,15 +202,15 @@ function level_one_meta_boxes() {
 					'std' => ''
 				),
 				array(
-					'name' => 'Image',
+					'name' => 'Image URL',
 					'desc' => '',
 					'id' => 'box_image_url_'.$id,
 					'type' => 'text',
 					'std' => ''
 				),
 				array(
-					'name' => 'Content',
-					'desc' => '',
+					'name' => 'Subpage links',
+					'desc' => 'Please use the &#39;link&#39;, &#39;ul&#39; and &#39;li&#39; buttons to create your list of subpage links',
 					'id' => 'box_content_'.$id,
 					'type' => 'textarea',
 					'std' => ''
@@ -278,6 +279,7 @@ class create_meta_box {
 						echo '<option', $meta == $option ? ' selected="selected"' : '', '>', $option, '</option>';
 					}
 					echo '</select>';
+					echo ' ', $field['desc'];
 					break;
 				case 'radio':
 					foreach ($field['options'] as $option) {
