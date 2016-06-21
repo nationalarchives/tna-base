@@ -68,11 +68,10 @@ get_header(); ?>
 								?>
 								<div class="col-md-<?php echo $mdCol . ' box-' . $i . ' ' . $colClass; ?>">
 									<article>
-										<div <?php
-											if ( !empty( $image ) ) { ?>
-												class="entry-header feature-img-bg" style="background-image: url(<?php echo $image; ?>);">
+										<?php if ( !empty( $image ) ) { ?>
+												<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $image; ?>);">
 											<?php }  else { ?>
-												class="entry-header">
+												<div class="entry-header">
 											<?php } ?>
 											<h2>
 												<?php if ( !empty( $url ) ) { ?>
