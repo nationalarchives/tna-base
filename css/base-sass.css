@@ -5375,6 +5375,9 @@ article {
   .level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
     width: 96%;
     margin-right: 0; } }
+@media only screen and (max-width: 480px) {
+  .level-one .banner .entry-content {
+    display: none; } }
 
 /* TNA sidebar styles */
 aside {
