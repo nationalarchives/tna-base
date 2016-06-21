@@ -21,6 +21,11 @@ function tna_wp_head() {
     $wp_head = str_replace( site_url(), 'http://www.nationalarchives.gov.uk' . $pre_path, $wp_head );
     echo $wp_head;
 }
+// Make content URLs relative
+function make_content_urls_relative( $content ) {
+	return str_replace( site_url(), '', $content );
+}
+add_filter( 'the_content', 'make_content_urls_relative' );
 
 // Breadcrumb and url path variables (to be added to child theme)
 /*
