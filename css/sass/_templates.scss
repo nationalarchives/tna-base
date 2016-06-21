@@ -86,6 +86,10 @@ article {
       }
     }
   }
+  .feature-img-bg {
+    background-position: center center;
+    background-size: cover;
+  }
   .box-third, .box-half, .box-full {
     ul {
       margin-top: 1em;
@@ -94,6 +98,9 @@ article {
       float: left;
       list-style-image: url(../img/list-link-bullet.png);
       margin-bottom: 1em;
+    }
+    .feature-img-bg {
+      height: 180px;
     }
   }
   .box-third, .box-half {

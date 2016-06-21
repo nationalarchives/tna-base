@@ -5354,12 +5354,17 @@ article {
     width: 100%; }
     .level-one .banner .entry-content h2, .level-one .banner .entry-content h3, .level-one .banner .entry-content h4, .level-one .banner .entry-content p {
       margin: 0; }
+.level-one .feature-img-bg {
+  background-position: center center;
+  background-size: cover; }
 .level-one .box-third ul, .level-one .box-half ul, .level-one .box-full ul {
   margin-top: 1em; }
 .level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
   float: left;
   list-style-image: url(../img/list-link-bullet.png);
   margin-bottom: 1em; }
+.level-one .box-third .feature-img-bg, .level-one .box-half .feature-img-bg, .level-one .box-full .feature-img-bg {
+  height: 180px; }
 .level-one .box-third ul li, .level-one .box-half ul li {
   width: 40%;
   margin-right: 10%; }

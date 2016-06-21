@@ -8,19 +8,21 @@ get_header(); ?>
 	<div id="primary" class="level-one">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class="container">
-			<div class="row">
+			<div class="row" role="banner">
 				<div class="col-md-12">
-					<article class="banner" role="banner" <?php
+					<article class="banner feature-img-bg" <?php
 					if ( has_post_thumbnail() ) {
 						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-page-width' ); ?>
-						style="background: url(<?php echo make_path_relative( $thumbnail_src[0] ); ?>) center center;background-size: cover;"
+						style="background-image: url(<?php echo make_path_relative( $thumbnail_src[0] ); ?>);"
 					<?php } ?>>
 						<div class="entry-header">
 							<h1><?php the_title(); ?></h1>
 						</div>
 							<?php if( empty( $post->post_content) ) {
-								// Do nothing
-							} else { ?>
+								// Do nothing - banner content overlay is not displayed
+							} else {
+								// Banner content overlay
+								?>
 								<div class="entry-content">
 									<div class="col-xs-9">
 										<?php the_content(); ?>
@@ -66,10 +68,12 @@ get_header(); ?>
 								?>
 								<div class="col-md-<?php echo $mdCol . ' box-' . $i . ' ' . $colClass; ?>">
 									<article>
-										<div class="entry-header" <?php
-										if ( !empty( $image ) ) { ?>
-											style="background: url(<?php echo $image; ?>) center center;background-size: cover;height: 180px;"
-										<?php } ?>>
+										<div <?php
+											if ( !empty( $image ) ) { ?>
+												class="entry-header feature-img-bg" style="background-image: url(<?php echo $image; ?>);">
+											<?php }  else { ?>
+												class="entry-header">
+											<?php } ?>
 											<h2>
 												<?php if ( !empty( $url ) ) { ?>
 												<a href="<?php echo $url ?>">
