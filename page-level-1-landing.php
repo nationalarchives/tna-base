@@ -45,6 +45,7 @@ get_header(); ?>
 			<main id="main" role="main">
 				<div class="row equal-heights">
 						<?php
+						// Loop generating boxes
 						$n = get_post_meta( $post->ID, 'number_of_boxes', true );
 						for ($i = 1; $i <= $n; $i++) {
 							// Fetch page meta values
