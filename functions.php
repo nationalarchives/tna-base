@@ -38,7 +38,7 @@ function tna_scripts() {
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), EDD_VERSION, true );
 	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/webtrends.js', array(), EDD_VERSION, true );
-	if ( is_page_template( 'page-section-landing.php' ) ) {
+	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php' ) ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/jQuery.equalHeights.js', array(),
 			EDD_VERSION, true );
 		wp_register_script( 'equal-heights-var', get_template_directory_uri() . '/js/equalHeights.js', array(),

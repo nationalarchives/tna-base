@@ -5337,6 +5337,48 @@ article {
 .equal-heights p {
   margin-bottom: 0.5em; }
 
+/* Level 1 landing template */
+.level-one .banner {
+  height: 288px;
+  position: relative; }
+  .level-one .banner .entry-header {
+    background: none; }
+  .level-one .banner .entry-content {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.66);
+    color: #ddd;
+    width: 100%; }
+    .level-one .banner .entry-content h2, .level-one .banner .entry-content h3, .level-one .banner .entry-content h4, .level-one .banner .entry-content p {
+      margin: 0; }
+.level-one .feature-img-bg {
+  background-position: center center;
+  background-size: cover; }
+.level-one .box-third ul, .level-one .box-half ul, .level-one .box-full ul {
+  margin-top: 1em; }
+.level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
+  float: left;
+  list-style-image: url(../img/list-link-bullet.png);
+  margin-bottom: 1em; }
+.level-one .box-third .feature-img-bg, .level-one .box-half .feature-img-bg, .level-one .box-full .feature-img-bg {
+  height: 180px; }
+.level-one .box-third ul li, .level-one .box-half ul li {
+  width: 40%;
+  margin-right: 10%; }
+.level-one .box-full ul li {
+  width: 26%;
+  margin-right: 7%; }
+@media only screen and (max-width: 567px) {
+  .level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
+    width: 96%;
+    margin-right: 0; } }
+@media only screen and (max-width: 480px) {
+  .level-one .banner .entry-content {
+    display: none; } }
+
 /* TNA sidebar styles */
 aside {
   margin-bottom: 1.5em; }
