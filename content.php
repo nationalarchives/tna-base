@@ -4,7 +4,7 @@
 		<div class="entry-header">
 			<h1><?php the_title(); ?></h1>
 		</div>
-		<div class="entry-content">
+		<div class="entry-content clearfix">
 			<?php the_content(); ?>
 		</div>
 	</article>
@@ -14,7 +14,7 @@
 		<div class="entry-header">
 			<h1><?php the_title(); ?></h1>
 		</div>
-		<div class="entry-content">
+		<div class="entry-content clearfix">
 			<?php the_content(); ?>
 		</div>
 	</article>
