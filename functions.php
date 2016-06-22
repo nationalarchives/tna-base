@@ -116,16 +116,3 @@ function wpcodex_add_excerpt_support_for_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
-
-// Add profile thumbnail size
-if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'new-size', 210, 260); 
-}
-function profile_img($profile_size) {
-	$add_profile_size = array(
-		"new-size" => __( "Profile")
-	);
-	$new_profile_sizes = array_merge($profile_size, $add_profile_size);
-	return $new_profile_sizes;
-}
-add_filter('image_size_names_choose', 'profile_img');
