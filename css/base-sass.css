@@ -5351,7 +5351,8 @@ article {
     background: #000;
     background: rgba(0, 0, 0, 0.66);
     color: #ddd;
-    width: 100%; }
+    width: 100%;
+    padding: 1em 0.2em; }
     .level-one .banner .entry-content h2, .level-one .banner .entry-content h3, .level-one .banner .entry-content h4, .level-one .banner .entry-content p {
       margin: 0; }
 .level-one .feature-img-bg {
