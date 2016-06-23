@@ -34,6 +34,7 @@ function add_image_responsive_class($content) {
 }
 add_filter('the_content', 'add_image_responsive_class');
 
+// Optimized srcset sizes attribute
 function content_image_sizes_attr($sizes, $size) {
 	$width = $size[0];
 	if ( is_page() && !is_page_template() ) {
