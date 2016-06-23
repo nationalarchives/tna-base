@@ -1,12 +1,14 @@
 <?php
 
-// Alter image sizes for landing page template
+// Alter image sizes for landing page template and srcset
 add_action( 'after_setup_theme', 'tna_theme_setup' );
 function tna_theme_setup() {
-	add_image_size( 'landing-page-children-thumb', 768, 244, array( 'center', 'center' ) );
+	add_image_size( 'landing-page-children-thumb', 768, 244, array( 'center', 'center' ) ); // for section landing page template
 	add_image_size( 'feature-box-thumb', 768, 1152 ); // for section landing page template
-	add_image_size( 'default-page-header', 820, 546 ); // for default page on FWW portal
 	add_image_size( 'full-page-width', 1196, 288, array( 'center', 'center' ) ); // for level 1 landing page template
+	add_image_size( 'srcset-img-lg', 777 );
+	add_image_size( 'srcset-img-md', 592 );
+	add_image_size( 'srcset-img-sm', 419 );
 }
 
 // Add profile thumbnail size
@@ -31,3 +33,15 @@ function add_image_responsive_class($content) {
 	return $content;
 }
 add_filter('the_content', 'add_image_responsive_class');
+
+function content_image_sizes_attr($sizes, $size) {
+	$width = $size[0];
+	if ( is_page() && !is_page_template() ) {
+		if ($width > 768) {
+			return '(max-width: 489px) 419px, (max-width: 672px) 592px, (max-width: 767px) 777px, (max-width: 768px) 419px, (max-width: 992px) 592px, (max-width: 1200px) 777px, 777px';
+		}
+		return '(max-width: ' . $width . 'px) 100vw, ' . $width . 'px';
+	}
+	return '(max-width: ' . $width . 'px) 100vw, ' . $width . 'px';
+}
+add_filter('wp_calculate_image_sizes', 'content_image_sizes_attr', 10 , 2);
