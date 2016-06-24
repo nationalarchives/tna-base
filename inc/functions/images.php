@@ -23,20 +23,44 @@ function profile_img($profile_size) {
 add_filter('image_size_names_choose', 'profile_img');
 
 // Adds img-responsive class to img tag within content
-function add_image_responsive_class($content) {
+function add_image_responsive_class( $content ) {
 	global $post;
-	$pattern ="/<img(.*?)class=\"(.*?)\"(.*?)>/i";
+	$pattern ='/<img(.*?)class=\"(.*?)\"(.*?)>/i';
 	$replacement = '<img$1class="$2 img-responsive"$3>';
 	$content = preg_replace($pattern, $replacement, $content);
 	return $content;
 }
 add_filter('the_content', 'add_image_responsive_class');
 
+// Amends attr for wp-caption
+// See https://codex.wordpress.org/Plugin_API/Filter_Reference/img_caption_shortcode
+add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+function my_img_caption_shortcode( $empty, $attr, $content ){
+	$attr = shortcode_atts( array(
+		'id'      => '',
+		'align'   => 'alignnone',
+		'width'   => '',
+		'caption' => ''
+	), $attr );
+	if ( 1 > (int) $attr['width'] || empty( $attr['caption'] ) ) {
+		return '';
+	}
+	if ( $attr['id'] ) {
+		$attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
+	}
+	return '<div ' . $attr['id']
+	       . 'class="wp-caption ' . esc_attr( $attr['align'] ) . '" '
+	       . 'style="max-width: ' . ( (int) $attr['width'] ) . 'px;">'
+	       . do_shortcode( $content )
+	       . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
+	       . '</div>';
+}
+
 // Optimized srcset sizes attribute
 function content_image_sizes_attr($sizes, $size) {
 	$width = $size[0];
 	if ( is_page() && !is_page_template() ) {
-		if ($width > 300) {
+		if ($width >= 768) {
 			return '(max-width: 375px) 300px, (max-width: 768px) 768px, (max-width: 992px) 777px, (max-width: 1200px) 1024px, 777px';
 		}
 		return '(max-width: ' . $width . 'px) 100vw, ' . $width . 'px';
