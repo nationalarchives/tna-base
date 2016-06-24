@@ -40,8 +40,6 @@ h4 {
   font-size: 1.16em;
 }
 
-
-
 p {
   margin: 0 0 1.5em;
 }
@@ -59,7 +57,6 @@ a:focus {
   color: $tna_dark;
 }
 
-
 hr {
   height: 0;
   border:0;
@@ -67,35 +64,6 @@ hr {
   clear: both;
   width:100%;
   border-bottom: 1px solid #ECECEC;
-}
-
-/**
-* Style the image alignment
-*/
-img.alignright {
-  float: right;
-  margin: 0 0 1em 1em;
-}
-img.alignleft {
-  float: left;
-  margin: 0 1em 1em 0;
-
-}
-img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.alignright {
-  float: right;
-}
-.alignleft {
-  float: left;
-}
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .breather-top {

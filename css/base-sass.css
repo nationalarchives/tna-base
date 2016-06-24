@@ -4640,33 +4640,6 @@ hr {
   width: 100%;
   border-bottom: 1px solid #ECECEC; }
 
-/**
-* Style the image alignment
-*/
-img.alignright {
-  float: right;
-  margin: 0 0 1em 1em; }
-
-img.alignleft {
-  float: left;
-  margin: 0 1em 1em 0; }
-
-img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.alignright {
-  float: right; }
-
-.alignleft {
-  float: left; }
-
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
 .breather-top {
   padding-top: 1em; }
 
@@ -5693,6 +5666,30 @@ blockquote p + p:last-of-type {
     background-color: #fce45c;
     outline: 3px solid #ebab00;
     color: #222; }
+
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 /* TNA icon styles */
 .sprite {
