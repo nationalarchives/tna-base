@@ -102,10 +102,8 @@ function redirect_url_save( $post_id ) {
         update_post_meta( $post_id, 'redirectUrl', esc_attr( $_POST['redirectUrl'] ) );
 }
 add_action( 'save_post', 'redirect_url_save' );
-/* Redirect Metabox */
 
-
-/*Sidebar Metabox*/
+/* Sidebar Metabox */
 function sidebar_get_meta( $value ) {
     global $post;
 
@@ -135,3 +133,195 @@ function sidebar_save( $post_id ) {
         update_post_meta( $post_id, 'sidebar', esc_attr( $_POST['sidebar'] ) );
 }
 add_action( 'save_post', 'sidebar_save' );
+
+/* Level 1 landing page template meta boxes */
+
+function level_one_meta_boxes() {
+	$meta_boxes = array(
+		// Level 1 page options
+		array(
+			'id' => 'level_one_options',
+			'title' => 'Page options',
+			'pages' => 'page',
+			'context' => 'normal',
+			'priority' => 'high',
+			'fields' => array(
+				array(
+					'name' => 'Banner button text',
+					'desc' => '',
+					'id' => 'action_button_title',
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Banner button URL',
+					'desc' => '',
+					'id' => 'action_button_url',
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Number of boxes displayed',
+					'id' => 'number_of_boxes',
+					'type' => 'select',
+					'options' => array('0', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12')
+				)
+			)
+		)
+	);
+	// Level 1 content box loop array
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+	$nBox = get_post_meta( $post_id, 'number_of_boxes', true );
+	for ($id = 1; $id <= $nBox; $id++)  {
+		$meta_boxes[] = array (
+			'id' => 'content-box-'.$id,
+			'title' => 'Content box '.$id,
+			'pages' => 'page',
+			'context' => 'normal',
+			'priority' => 'high',
+			'fields' => array(
+				array(
+					'name' => 'Box size',
+					'desc' => 'Select &#39;disabled&#39; to hide this box',
+					'id' => 'box_width_'.$id,
+					'type' => 'select',
+					'options' => array('disabled', 'at a third', 'at a half', 'at full width')
+				),
+				array(
+					'name' => 'Title',
+					'desc' => '',
+					'id' => 'box_title_'.$id,
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Title URL',
+					'desc' => '',
+					'id' => 'box_title_url_'.$id,
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Image URL',
+					'desc' => '',
+					'id' => 'box_image_url_'.$id,
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Subpage links',
+					'desc' => 'Please use the &#39;link&#39;, &#39;ul&#39; and &#39;li&#39; buttons to create your list of subpage links',
+					'id' => 'box_content_'.$id,
+					'type' => 'textarea',
+					'std' => ''
+				)
+			)
+		);
+	}
+	// Adds meta boxes to Level 1 Landing page template
+	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+	if ($template_file == 'page-level-1-landing.php') {
+		foreach ( $meta_boxes as $meta_box ) {
+			$level_one_box = new create_meta_box( $meta_box );
+		}
+	}
+}
+add_action( 'init', 'level_one_meta_boxes' );
+
+// Creates meta boxes from $meta_boxes[] = array()
+// See http://www.deluxeblogtips.com/2010/05/howto-meta-box-wordpress.html for more info
+// Edited from original for TNA purposes
+class create_meta_box {
+	protected $_meta_box;
+	// create meta box based on given data
+	function __construct($meta_box) {
+		$this->_meta_box = $meta_box;
+		add_action('admin_menu', array(&$this, 'add'));
+		add_action('save_post', array(&$this, 'save'));
+	}
+	/// Add meta box
+	function add() {
+			add_meta_box($this->_meta_box['id'], $this->_meta_box['title'], array(&$this, 'show'), 'page', $this->_meta_box['context'], $this->_meta_box['priority']);
+	}
+	// Callback function to show fields in meta box
+	function show() {
+		global $post;
+		// Use nonce for verification
+		echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+		echo '<table class="form-table">';
+		foreach ($this->_meta_box['fields'] as $field) {
+			// get current post meta data
+			$meta = get_post_meta($post->ID, $field['id'], true);
+			echo '<tr>',
+			'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
+			'<td>';
+			switch ($field['type']) {
+				case 'text':
+					echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />',
+					'<br />', $field['desc'];
+					break;
+				case 'textarea':
+					$field_value = get_post_meta( $post->ID, $field['id'], false );
+					$args = array (
+						'media_buttons' => false,
+						'textarea_rows' => 4,
+						'tinymce' => false,
+						'quicktags' => array( 'buttons' => 'strong,em,ul,ol,li,link' ),
+						'wpautop' => false
+					);
+					wp_editor( $field_value[0], $field['id'], $args );
+					// echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
+					echo '<br />', $field['desc'];
+					break;
+				case 'select':
+					echo '<select name="', $field['id'], '" id="', $field['id'], '">';
+					foreach ($field['options'] as $option) {
+						echo '<option', $meta == $option ? ' selected="selected"' : '', '>', $option, '</option>';
+					}
+					echo '</select>';
+					echo ' ', $field['desc'];
+					break;
+				case 'radio':
+					foreach ($field['options'] as $option) {
+						echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? ' checked="checked"' : '', ' />', $option['name'];
+					}
+					break;
+				case 'checkbox':
+					echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
+					break;
+			}
+			echo     '<td>',
+			'</tr>';
+		}
+		echo '</table>';
+	}
+	// Save data from meta box
+	function save($post_id) {
+		// verify nonce
+		if (!wp_verify_nonce($_POST['mytheme_meta_box_nonce'], basename(__FILE__))) {
+			return $post_id;
+		}
+		// check autosave
+		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+			return $post_id;
+		}
+		// check permissions
+		if ('page' == $_POST['post_type']) {
+			if (!current_user_can('edit_page', $post_id)) {
+				return $post_id;
+			}
+		} elseif (!current_user_can('edit_post', $post_id)) {
+			return $post_id;
+		}
+		foreach ($this->_meta_box['fields'] as $field) {
+			$old = get_post_meta($post_id, $field['id'], true);
+			$new = $_POST[$field['id']];
+
+			if ($new && $new != $old) {
+				update_post_meta($post_id, $field['id'], $new);
+			} elseif ('' == $new && $old) {
+				delete_post_meta($post_id, $field['id'], $old);
+			}
+		}
+	}
+}

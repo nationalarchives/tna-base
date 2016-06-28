@@ -1,7 +1,25 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.0.6' );
+define( 'EDD_VERSION', '1.1' );
+
+// Title tag function
+$tnaNetworkSiteName = 'The National Archives';
+
+function theme_slug_setup() {
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
+
+add_filter( 'document_title_parts', function ( $title ) {
+		global $tnaNetworkSiteName;
+		if ( is_home() || is_front_page() ) {
+			unset( $title['tagline'] );
+		}
+		$title['title'] = get_the_title();
+		$title['site'] = $tnaNetworkSiteName;
+	return $title;
+}, 10, 1 );
 
 // Enqueue styles and scripts
 function tna_styles() {
@@ -20,7 +38,7 @@ function tna_scripts() {
 	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), EDD_VERSION, true );
 	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/webtrends.js', array(), EDD_VERSION, true );
-	if ( is_page_template( 'page-section-landing.php' ) ) {
+	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php' ) ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/jQuery.equalHeights.js', array(),
 			EDD_VERSION, true );
 		wp_register_script( 'equal-heights-var', get_template_directory_uri() . '/js/equalHeights.js', array(),
@@ -98,16 +116,3 @@ function wpcodex_add_excerpt_support_for_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
-
-// Add profile thumbnail size
-if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'new-size', 210, 260, true ); //(cropped)
-}
-function profile_img($profile_size) {
-	$add_profile_size = array(
-		"new-size" => __( "Profile")
-	);
-	$new_profile_sizes = array_merge($profile_size, $add_profile_size);
-	return $new_profile_sizes;
-}
-add_filter('image_size_names_choose', 'profile_img');

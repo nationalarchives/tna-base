@@ -8,7 +8,7 @@
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Visit us ','WT.ti','Menu - Visit us ');" href="/about/visit-us/">Visit us</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Opening times ','WT.ti','Menu - Opening times ');" href="/about/visit-us/opening-times">Opening times</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Jobs ','WT.ti','Menu - Jobs ');" href="/about/jobs/">Jobs</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Get involved ','WT.ti','Menu - Get involved ');" href="/get-involved/default.htm">Get involved</a></li>
+						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Get involved ','WT.ti','Menu - Get involved ');" href="/about/get-involved/">Get involved</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/News ','WT.ti','Menu - News ');" href="/about/news/">News</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Press room ','WT.ti','Menu - Press room ');" href="/about/press-room/">Press room</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Commercial opportunities ','WT.ti','Menu - Commercial opportunities ');" href="/about/commercial-opportunities/">Commercial opportunities</a></li>

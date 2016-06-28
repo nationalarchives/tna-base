@@ -62,3 +62,73 @@ article {
     margin-bottom: 0.5em;
   }
 }
+
+/* Level 1 landing template */
+
+.level-one {
+  .banner {
+    height: 288px;
+    position: relative;
+    .entry-header {
+      background: none;
+    }
+    .entry-content {
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #000;
+      background: rgba(0,0,0,.66);
+      color: #ddd;
+      width: 100%;
+      padding: 1em 0.2em;
+      h2, h3, h4, p {
+        margin: 0;
+      }
+    }
+  }
+  .feature-img-bg {
+    background-position: center center;
+    background-size: cover;
+  }
+  .box-third, .box-half, .box-full {
+    ul {
+      margin-top: 1em;
+    }
+    ul li {
+      float: left;
+      list-style-image: url(../img/list-link-bullet.png);
+      margin-bottom: 1em;
+    }
+    .feature-img-bg {
+      height: 180px;
+    }
+  }
+  .box-third, .box-half {
+    ul li {
+      width: 40%;
+      margin-right: 10%;
+    }
+  }
+  .box-full {
+    ul li {
+      width: 26%;
+      margin-right: 7%;
+    }
+  }
+  @media only screen and (max-width: 567px) {
+    .box-third, .box-half, .box-full {
+      ul li {
+        width: 96%;
+        margin-right: 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .banner {
+      .entry-content {
+        display: none;
+      }
+    }
+  }
+}

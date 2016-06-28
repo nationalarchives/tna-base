@@ -4606,16 +4606,16 @@ h1, h2, h3, h4 {
   letter-spacing: -.025em; }
 
 h1 {
-  font-size: 1.75em; }
+  font-size: 2em; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 1.6em; }
 
 h3 {
   font-size: 1.3em; }
 
 h4 {
-  font-size: 1.2em; }
+  font-size: 1.16em; }
 
 p {
   margin: 0 0 1.5em; }
@@ -4639,36 +4639,6 @@ hr {
   clear: both;
   width: 100%;
   border-bottom: 1px solid #ECECEC; }
-
-article .entry-content {
-  overflow: hidden; }
-
-/**
-* Style the image alignment
-*/
-img.alignright {
-  float: right;
-  margin: 0 0 1em 1em; }
-
-img.alignleft {
-  float: left;
-  margin: 0 1em 1em 0; }
-
-img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.alignright {
-  float: right; }
-
-.alignleft {
-  float: left; }
-
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
 
 .breather-top {
   padding-top: 1em; }
@@ -4842,6 +4812,87 @@ ul.form-selectable li span input[type=checkbox] {
   top: 2px;
   margin-right: .5em; }
 
+/* Disc menu, A-Z Menu & Numbered menu - remove these once tested as we should be able to use MENU-DISC for all single-character list items (create menu-disc-large if larger width and height variant needed) */
+#disc-menu, #numbered-menu {
+  width: 100%;
+  float: left;
+  margin: 0 0 20px 0; }
+
+#disc-menu li, #numbered-menu li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  margin: 0 5px 5px 0;
+  display: inline-block;
+  width: 18%; }
+
+#disc-menu li a, #numbered-menu li a {
+  font-family: 'Bitter', Georgia, Verdana, Arial, Helvetica, serif;
+  font-size: 1.5em;
+  display: inline-block;
+  background-color: #008484;
+  color: #FEFEFE;
+  border-radius: 50%;
+  text-decoration: none;
+  line-height: 200%;
+  width: 44px;
+  height: 44px; }
+
+#menu-disc, #a-z-menu {
+  min-height: 48px;
+  float: left;
+  margin: 0;
+  padding: 0; }
+
+#menu-disc li, #a-z-menu li {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 4px 4px 0;
+  display: inline-block;
+  width: auto;
+  float: left; }
+
+#menu-disc li a, #menu-disc li span.disabled,
+#a-z-menu li a, #a-z-menu li span.disabled {
+  font-family: 'Bitter',Georgia, Verdana, Arial, Helvetica, serif;
+  font-size: 1.25em;
+  display: inline-block;
+  width: 40px;
+  height: auto;
+  color: #FEFEFE;
+  border-radius: 50%;
+  text-decoration: none;
+  line-height: 40px; }
+
+#menu-disc li a, #a-z-menu li a {
+  background-color: #008484; }
+
+#menu-disc li span.disabled, #a-z-menu li span.disabled {
+  background-color: #ddd;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #999; }
+
+#menu-disc li a:hover, #disc-menu li a:hover, #menu-disc .selected, #a-z-menu .selected a,
+#a-z-menu .selected, #a-z-menu a:hover {
+  color: #000;
+  background-color: #FCE45C;
+  border-radius: 50%; }
+
+#menu-disc li a, #menu-disc li span.disabled
+ {
+  width: 32px;
+  line-height: 32px; }
+
+@media only screen and (min-width: 768px) {
+  ul.triplets li, ul.quadruplets li {
+    width: 45%; } }
+@media only screen and (min-width: 1024px) {
+  ul.quadruplets li {
+    width: auto;
+    margin-right: 11%; }
+
+  ul.triplets li {
+    width: 33%; } }
 /* TNA form styles */
 input[type="submit"] {
   background-color: #008484;
@@ -5259,6 +5310,49 @@ article {
 .equal-heights p {
   margin-bottom: 0.5em; }
 
+/* Level 1 landing template */
+.level-one .banner {
+  height: 288px;
+  position: relative; }
+  .level-one .banner .entry-header {
+    background: none; }
+  .level-one .banner .entry-content {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.66);
+    color: #ddd;
+    width: 100%;
+    padding: 1em 0.2em; }
+    .level-one .banner .entry-content h2, .level-one .banner .entry-content h3, .level-one .banner .entry-content h4, .level-one .banner .entry-content p {
+      margin: 0; }
+.level-one .feature-img-bg {
+  background-position: center center;
+  background-size: cover; }
+.level-one .box-third ul, .level-one .box-half ul, .level-one .box-full ul {
+  margin-top: 1em; }
+.level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
+  float: left;
+  list-style-image: url(../img/list-link-bullet.png);
+  margin-bottom: 1em; }
+.level-one .box-third .feature-img-bg, .level-one .box-half .feature-img-bg, .level-one .box-full .feature-img-bg {
+  height: 180px; }
+.level-one .box-third ul li, .level-one .box-half ul li {
+  width: 40%;
+  margin-right: 10%; }
+.level-one .box-full ul li {
+  width: 26%;
+  margin-right: 7%; }
+@media only screen and (max-width: 567px) {
+  .level-one .box-third ul li, .level-one .box-half ul li, .level-one .box-full ul li {
+    width: 96%;
+    margin-right: 0; } }
+@media only screen and (max-width: 480px) {
+  .level-one .banner .entry-content {
+    display: none; } }
+
 /* TNA sidebar styles */
 aside {
   margin-bottom: 1.5em; }
@@ -5572,6 +5666,30 @@ blockquote p + p:last-of-type {
     background-color: #fce45c;
     outline: 3px solid #ebab00;
     color: #222; }
+
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 /* TNA icon styles */
 .sprite {
