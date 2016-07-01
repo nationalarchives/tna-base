@@ -68,4 +68,22 @@ function save_image_caption_fields( $post, $attachment ) {
 
 add_filter( 'attachment_fields_to_save', 'save_image_caption_fields', 10, 2 );
 
-?>
+function get_image_caption() {
+    /* Image caption functionality */
+    $img_caption_desc = get_post_meta(get_post_thumbnail_id(), 'image-caption-description', true);
+    $img_caption_url = get_post_meta(get_post_thumbnail_id(), 'image-caption-url', true);
+    $img_caption_url_desc = get_post_meta(get_post_thumbnail_id(), 'image-caption-url-desc', true);
+    if(!empty($img_caption_desc) && !empty($img_caption_url)) : ?>
+        <button class="eye_caption">&nbsp;</button>
+        <div class="image_caption_back">
+            <span class="clearfix"><?php echo $img_caption_desc; ?></span>
+            <a href="<?php echo $img_caption_url ?>" target="_blank">
+                <?php if  (empty($img_caption_url_desc) ) :?>
+                    View in the image library
+                <?php else: ?>
+                    <?php echo $img_caption_url_desc ; ?>
+                <?php endif; ?>
+            </a>
+        </div>
+    <?php endif;
+}
