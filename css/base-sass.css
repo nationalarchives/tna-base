@@ -5644,6 +5644,12 @@ a.hue-teal, a.hue-red {
     .image_caption_back a:visited:hover,
     .image_caption_back a:hover {
       text-decoration: underline; }
+  @media only screen and (max-width: 480px) {
+    .image_caption_back {
+      bottom: -56px;
+      min-width: 100%;
+      right: 0;
+      margin-left: 0; } }
 
 .eye_caption {
   position: absolute;
@@ -5663,6 +5669,10 @@ a.hue-teal, a.hue-red {
     background-color: #fce45c;
     outline: 3px solid #ebab00;
     color: #222; }
+  @media only screen and (max-width: 480px) {
+    .eye_caption {
+      margin-top: 0;
+      bottom: 20px; } }
 
 img.alignright {
   float: right;
