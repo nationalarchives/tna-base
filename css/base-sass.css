@@ -4972,41 +4972,40 @@ blockquote:before {
     font-size: .9em; }
 
 /* TNA nav styles (Mega-menu) */
-nav {
+#nav {
   background-color: #405480;
-  color: #fff;
-  /* Mega-menu container */ }
-  nav#nav h3 a {
+  color: #fff; }
+  #nav h3 a {
     color: #fff; }
-  nav#nav h3.expanded {
+  #nav h3.expanded {
     background-image: url(../img/minus.png); }
   @media (max-width: 480px) {
-    nav#nav h3 {
+    #nav h3 {
       background: url(../img/plus.png) 5px 12px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none; } }
-  nav#nav ul {
+  #nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none; }
-  nav#nav li {
+  #nav li {
     font-size: .9em;
     list-style-image: none;
     border-top: 1px dotted #192132;
     margin: 0; }
-    nav#nav li a {
+    #nav li a {
       color: #fff;
       padding: 4px;
       display: block;
       width: 100%; }
-      nav#nav li a:hover {
+      #nav li a:hover {
         text-decoration: underline;
         cursor: pointer; }
-      nav#nav li a:active, nav#nav li a:hover {
+      #nav li a:active, #nav li a:hover {
         outline: 0; }
   @media (max-width: 580px) {
-    nav#nav .col-xxs-12 {
+    #nav .col-xxs-12 {
       width: 100%;
       float: left;
       position: relative;
@@ -5014,10 +5013,10 @@ nav {
       padding-left: 15px;
       padding-right: 15px; } }
 
-.no-js nav {
+.no-js #nav {
   display: block; }
 
-.js nav {
+.js #nav {
   display: none; }
 
 /* TNA header styles */
