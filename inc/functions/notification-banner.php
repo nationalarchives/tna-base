@@ -5,9 +5,9 @@
 if ( ! function_exists( 'notification_banner' ) ) :
 	function notification_banner() {
 		$enable = get_option('enable_banner');
-		if ( $enable && get_option('banner_title') ) {
-			$notice_title = get_option('banner_title');
-			$notice_text = get_option('banner_text');
+		$notice_title = get_option('banner_title');
+		$notice_text = get_option('banner_text');
+		if ( $enable && $notice_title ) {
 			?>
 			<div class="notification-banner">
 				<div class="container">
@@ -61,6 +61,7 @@ function enable_banner_element() {
 function banner_title_element() {
 	?>
 	<input type="text" name="banner_title" id="banner_title" value="<?php echo get_option('banner_title'); ?>" />
+	<p>Field required to enable banner</p>
 	<?php
 }
 
