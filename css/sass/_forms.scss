@@ -1,5 +1,9 @@
 /* TNA form styles */
 
+label {
+  font-weight: 400;
+}
+
 input[type="submit"] {
   background-color: #008484;
   color: #fff;
@@ -11,10 +15,14 @@ input[type="submit"] {
 input[type="text"], input.width-half, #Email /* the Email ID has been applied to single-field email sign-up forms */ {
   border: 1px solid #ccc;
   padding: 2px;
-  height:34px;
+  height: 34px;
   text-indent: 5px;
   min-width: 220px;
-  width:auto;
+  width: auto;
+}
+textarea {
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 
 input:focus {
@@ -41,4 +49,19 @@ input[type="submit"]:focus, a.button:focus {
 
 .input-extended label {
   display: none;
+}
+
+.form-row {
+  margin-bottom: 0.5em;
+  label {
+    display: inline-block;
+    width: 47%;
+    margin-right: 2%;
+  }
+  input[type="text"] {
+    width: 49%;
+  }
+  textarea {
+    width: 49%;
+  }
 }

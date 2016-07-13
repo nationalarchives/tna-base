@@ -4894,6 +4894,9 @@ ul.form-selectable li span input[type=checkbox] {
   ul.triplets li {
     width: 33%; } }
 /* TNA form styles */
+label {
+  font-weight: 400; }
+
 input[type="submit"] {
   background-color: #008484;
   color: #fff;
@@ -4910,6 +4913,10 @@ input[type="text"], input.width-half, #Email {
   text-indent: 5px;
   min-width: 220px;
   width: auto; }
+
+textarea {
+  border: 1px solid #ccc;
+  padding: 5px; }
 
 input:focus {
   outline: 3px solid #ebab00; }
@@ -4932,6 +4939,17 @@ input[type="submit"]:focus, a.button:focus {
 
 .input-extended label {
   display: none; }
+
+.form-row {
+  margin-bottom: 0.5em; }
+  .form-row label {
+    display: inline-block;
+    width: 47%;
+    margin-right: 2%; }
+  .form-row input[type="text"] {
+    width: 49%; }
+  .form-row textarea {
+    width: 49%; }
 
 /* TNA blockquote styles */
 blockquote {
