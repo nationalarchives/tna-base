@@ -57,16 +57,6 @@ a:focus {
   color: $tna_dark !important;
 }
 
-.entry-content {
-  a:active, a:link, a:visited {
-    border-bottom: solid 1px $tna_link_col;
-  }
-  a:hover {
-    text-decoration: none;
-    border-bottom: transparent;
-  }
-}
-
 hr {
   height: 0;
   border:0;
