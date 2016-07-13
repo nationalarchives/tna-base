@@ -54,7 +54,7 @@ a:hover {
 a:focus {
   background-color: $tna_yellow;
   outline: 3px solid $tna_yellow_dark;
-  color: $tna_dark;
+  color: $tna_dark !important;
 }
 
 .entry-content {

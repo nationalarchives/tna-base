@@ -4630,7 +4630,7 @@ a:hover {
 a:focus {
   background-color: #fce45c;
   outline: 3px solid #ebab00;
-  color: #222; }
+  color: #222 !important; }
 
 .entry-content a:active, .entry-content a:link, .entry-content a:visited {
   border-bottom: solid 1px #2A5DB0; }
@@ -4983,6 +4983,8 @@ blockquote:before {
   color: #fff; }
   #nav h3 a {
     color: #fff; }
+  #nav h3 a:focus {
+    color: #222; }
   #nav h3.expanded {
     background-image: url(../img/minus.png); }
   @media (max-width: 480px) {
@@ -5277,6 +5279,8 @@ footer {
     border-top: none; }
   footer .tel {
     color: #fff !important; }
+    footer .tel:focus {
+      color: #222 !important; }
     footer .tel:hover {
       text-decoration: none;
       cursor: text; }
