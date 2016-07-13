@@ -4630,7 +4630,13 @@ a:hover {
 a:focus {
   background-color: #fce45c;
   outline: 3px solid #ebab00;
-  color: #222; }
+  color: #222 !important; }
+
+.entry-content a:active, .entry-content a:link, .entry-content a:visited {
+  border-bottom: solid 1px #2A5DB0; }
+.entry-content a:hover {
+  text-decoration: none;
+  border-bottom: transparent; }
 
 hr {
   height: 0;
@@ -4933,6 +4939,37 @@ input[type="submit"]:focus, a.button:focus {
 .input-extended label {
   display: none; }
 
+/* TNA blockquote styles */
+blockquote {
+  margin: 3em 2.5em 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.166em;
+  line-height: 1.3;
+  color: #111;
+  border-left: none !important; }
+  blockquote .misc {
+    margin-bottom: 2em; }
+  blockquote p {
+    color: #333;
+    margin-bottom: 1.5em; }
+  blockquote cite {
+    font-style: normal; }
+  blockquote .misc p:before {
+    content: " "; }
+  blockquote p + p:last-of-type {
+    /* to display source of quote - quotes MUST have a source provided in a final paragraph! */
+    text-align: right;
+    font-size: .9em; }
+
+blockquote:before {
+  font-size: 16em;
+  color: rgba(0, 0, 0, 0.1);
+  margin-left: -10px;
+  margin-top: -130px;
+  position: absolute;
+  font-family: "MS Serif", "New York", serif;
+  content: "\201C"; }
+
 /* TNA breadcrumb styles */
 .tna-breadcrumb {
   margin-top: 0.5em; }
@@ -4941,41 +4978,42 @@ input[type="submit"]:focus, a.button:focus {
     font-size: .9em; }
 
 /* TNA nav styles (Mega-menu) */
-nav {
+#nav {
   background-color: #405480;
-  color: #fff;
-  /* Mega-menu container */ }
-  nav#nav h3 a {
+  color: #fff; }
+  #nav h3 a {
     color: #fff; }
-  nav#nav h3.expanded {
+  #nav h3 a:focus {
+    color: #222; }
+  #nav h3.expanded {
     background-image: url(../img/minus.png); }
   @media (max-width: 480px) {
-    nav#nav h3 {
+    #nav h3 {
       background: url(../img/plus.png) 5px 12px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none; } }
-  nav#nav ul {
+  #nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none; }
-  nav#nav li {
+  #nav li {
     font-size: .9em;
     list-style-image: none;
     border-top: 1px dotted #192132;
     margin: 0; }
-    nav#nav li a {
+    #nav li a {
       color: #fff;
       padding: 4px;
       display: block;
       width: 100%; }
-      nav#nav li a:hover {
+      #nav li a:hover {
         text-decoration: underline;
         cursor: pointer; }
-      nav#nav li a:active, nav#nav li a:hover {
+      #nav li a:active, #nav li a:hover {
         outline: 0; }
   @media (max-width: 580px) {
-    nav#nav .col-xxs-12 {
+    #nav .col-xxs-12 {
       width: 100%;
       float: left;
       position: relative;
@@ -4983,10 +5021,10 @@ nav {
       padding-left: 15px;
       padding-right: 15px; } }
 
-.no-js nav {
+.no-js #nav {
   display: block; }
 
-.js nav {
+.js #nav {
   display: none; }
 
 /* TNA header styles */
@@ -5241,6 +5279,8 @@ footer {
     border-top: none; }
   footer .tel {
     color: #fff !important; }
+    footer .tel:focus {
+      color: #222 !important; }
     footer .tel:hover {
       text-decoration: none;
       cursor: text; }
@@ -5589,40 +5629,6 @@ a.hue-teal, a.hue-red {
   color: #fce45c;
   background-color: transparent; }
 
-/* Default quotes */
-blockquote, blockquote.misc {
-  margin: 50px 40px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.166em;
-  line-height: 1.3;
-  color: #111;
-  border-left: none !important; }
-
-blockquote.misc {
-  margin-bottom: 2em; }
-
-blockquote p {
-  color: #333;
-  margin-bottom: 1.5em;
-  font-weight: 700; }
-
-blockquote:before {
-  font-size: 16em;
-  color: rgba(0, 0, 0, 0.1);
-  margin-left: -10px;
-  margin-top: -130px;
-  position: absolute;
-  font-family: "MS Serif", "New York", serif;
-  content: "\201C"; }
-
-blockquote.misc p:before {
-  content: " "; }
-
-blockquote p + p:last-of-type {
-  /* to display source of quote - quotes MUST have a source provided in a final paragraph! */
-  text-align: right;
-  font-size: .9em; }
-
 /* TNA image styles */
 .image_caption_back {
   display: none;
@@ -5647,6 +5653,12 @@ blockquote p + p:last-of-type {
     .image_caption_back a:visited:hover,
     .image_caption_back a:hover {
       text-decoration: underline; }
+  @media only screen and (max-width: 480px) {
+    .image_caption_back {
+      bottom: -56px;
+      min-width: 100%;
+      right: 0;
+      margin-left: 0; } }
 
 .eye_caption {
   position: absolute;
@@ -5666,30 +5678,42 @@ blockquote p + p:last-of-type {
     background-color: #fce45c;
     outline: 3px solid #ebab00;
     color: #222; }
+  @media only screen and (max-width: 480px) {
+    .eye_caption {
+      margin-top: 0;
+      bottom: 20px; } }
 
-img.alignright {
+.entry-content img.alignright {
   float: right;
   margin: 0 0 1em 1em; }
-
-img.alignleft {
+.entry-content img.alignleft {
   float: left;
   margin: 0 1em 1em 0; }
-
-img.aligncenter {
+.entry-content img.aligncenter {
   display: block;
   margin-left: auto;
-  margin-right: auto; }
-
-.alignright {
-  float: right; }
-
-.alignleft {
-  float: left; }
-
-.aligncenter {
+  margin-right: auto;
+  margin-bottom: 1em; }
+.entry-content .alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+.entry-content .alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+.entry-content .aligncenter {
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-bottom: 1em; }
+.entry-content .alignnone {
+  margin-bottom: 1em; }
+.entry-content .wp-caption-text {
+  position: relative;
+  font-size: .9em;
+  color: #666;
+  clear: both;
+  margin: .5em;
+  text-align: center; }
 
 /* TNA icon styles */
 .sprite {

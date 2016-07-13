@@ -39,6 +39,7 @@ get_header(); ?>
 								<?php } ?>
 								</div>
 							<?php } ?>
+						<?php get_image_caption() ?>
 					</article>
 				</div>
 			</div>

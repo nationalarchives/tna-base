@@ -54,7 +54,17 @@ a:hover {
 a:focus {
   background-color: $tna_yellow;
   outline: 3px solid $tna_yellow_dark;
-  color: $tna_dark;
+  color: $tna_dark !important;
+}
+
+.entry-content {
+  a:active, a:link, a:visited {
+    border-bottom: solid 1px $tna_link_col;
+  }
+  a:hover {
+    text-decoration: none;
+    border-bottom: transparent;
+  }
 }
 
 hr {

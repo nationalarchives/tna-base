@@ -35,6 +35,9 @@ footer {
   }
   .tel {
     color: $tna_white !important;
+    &:focus {
+      color: $tna_dark !important;
+    }
     &:hover {
       text-decoration: none;
       cursor: text;

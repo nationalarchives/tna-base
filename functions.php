@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.1' );
+define( 'EDD_VERSION', '1.1.1' );
 
 // Title tag function
 $tnaNetworkSiteName = 'The National Archives';
@@ -116,3 +116,4 @@ function wpcodex_add_excerpt_support_for_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+
