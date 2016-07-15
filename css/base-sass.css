@@ -4906,7 +4906,14 @@ input[type="submit"] {
   /*this height must match the standalone button class for single field forms */
   margin: 0; }
 
-input[type="text"], input.width-half, #Email {
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input.width-half,
+#Email {
   border: 1px solid #ccc;
   padding: 2px;
   height: 34px;
@@ -4918,8 +4925,12 @@ textarea {
   border: 1px solid #ccc;
   padding: 5px; }
 
-input:focus {
+input:focus, textarea:focus, select:focus {
   outline: 3px solid #ebab00; }
+
+input[type="submit"]:hover, a.button:hover {
+  color: #222;
+  background-color: #fce45c; }
 
 input[type="submit"]:focus, a.button:focus {
   color: #fff;
@@ -4942,14 +4953,30 @@ input[type="submit"]:focus, a.button:focus {
 
 .form-row {
   margin-bottom: 0.5em; }
+  .form-row:before, .form-row:after {
+    display: table;
+    content: " ";
+    clear: both; }
   .form-row label {
     display: inline-block;
     width: 47%;
-    margin-right: 2%; }
-  .form-row input[type="text"] {
-    width: 49%; }
-  .form-row textarea {
-    width: 49%; }
+    margin-right: 3%; }
+  .form-row input[type=text],
+  .form-row input[type=url],
+  .form-row input[type=tel],
+  .form-row input[type=number],
+  .form-row input[type=color],
+  .form-row input[type=email],
+  .form-row textarea,
+  .form-row select {
+    width: 50%; }
+  .form-row input[type="submit"] {
+    float: right; }
+
+.form-col {
+  display: inline-block;
+  width: 47%;
+  margin: 0 2% 0.5em 0; }
 
 /* TNA blockquote styles */
 blockquote {
