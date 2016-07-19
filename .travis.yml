@@ -6,3 +6,8 @@ script: phpunit tests/FunctionTest.php
 
 install:
    - composer require --dev phpunit/phpunit
+
+notifications:
+  slack:
+    rooms:
+      - tnawebteam:C2GnodnLsxhwwGvr0xAcajzc#dev-stuff
