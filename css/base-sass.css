@@ -4632,12 +4632,6 @@ a:focus {
   outline: 3px solid #ebab00;
   color: #222 !important; }
 
-.entry-content a:active, .entry-content a:link, .entry-content a:visited {
-  border-bottom: solid 1px #2A5DB0; }
-.entry-content a:hover {
-  text-decoration: none;
-  border-bottom: transparent; }
-
 hr {
   height: 0;
   border: 0;
