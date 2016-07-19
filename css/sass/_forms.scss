@@ -63,7 +63,7 @@ input[type="submit"]:focus, a.button:focus {
   input[type=email],
   textarea,
   select {
-    width: 50%;
+    width: 49%;
   }
   input[type="submit"] {
     float: right;
@@ -73,4 +73,8 @@ input[type="submit"]:focus, a.button:focus {
   display: inline-block;
   width: 47%;
   margin: 0 2% 0.5em 0;
+}
+.entry-content form {
+  width: 90%;
+  margin: 1.5em auto;
 }
