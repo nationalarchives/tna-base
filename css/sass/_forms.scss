@@ -44,7 +44,7 @@ input[type="submit"]:focus, a.button:focus {
 }
 
 .form-row {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   &:before, &:after {
     display: table;
     content: " ";
@@ -72,9 +72,6 @@ input[type="submit"]:focus, a.button:focus {
 .form-col {
   display: inline-block;
   width: 47%;
-  margin: 0 2% 0.5em 0;
+  margin: 0 2% 0.8em 0;
 }
-.entry-content form {
-  width: 90%;
-  margin: 1.5em auto;
-}
+
