@@ -84,6 +84,12 @@ At this stage you should be able to execute the ```composer``` command in the Te
 
 Having followed the steps above you will be able to install dependencies by typing ```composer install``` at the Terminal.
 
+### 2.8 PHPUnit
+
+Having followed the steps under 'Installing Composer' type ```vendor/bin/phpunit -c phpunit.xml``` from within the ```tna-base``` directory to run Unit Tests for the project.
+
+Note: PhpStorm allows for PHPUnit integration - allowing your tests to be run automatically. Search the JetBrains website to find out how to configure this.
+
 ## 3.0 Credits
 
 * [Bootstrap 3.3.6] (http://getbootstrap.com/)
