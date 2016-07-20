@@ -1,5 +1,8 @@
 /* TNA form styles */
 
+label {
+  font-weight: 400;
+}
 input[type="submit"] {
   background-color: #008484;
   color: #fff;
@@ -8,37 +11,67 @@ input[type="submit"] {
   height: 40px; /*this height must match the standalone button class for single field forms */
   margin: 0;
 }
-input[type="text"], input.width-half, #Email /* the Email ID has been applied to single-field email sign-up forms */ {
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input.width-half,
+#Email /* the Email ID has been applied to single-field email sign-up forms */ {
   border: 1px solid #ccc;
   padding: 2px;
-  height:34px;
+  height: 34px;
   text-indent: 5px;
   min-width: 220px;
-  width:auto;
+  width: auto;
 }
-
-input:focus {
+textarea {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+input:focus, input[type=radio]:focus, input[type=checkbox]:focus, textarea:focus, select:focus {
   outline: 3px solid #ebab00;
+}
+input[type="submit"]:hover, a.button:hover {
+  color: #222;
+  background-color: $tna_yellow;
 }
 input[type="submit"]:focus, a.button:focus {
   color: #fff;
   background-color: #111;
-  background-color: rgba (0,0,0,.75);
+  background-color: rgba(0,0,0, 0.75);
 }
 
-/* to allow longer single field search form with alternative border style */
-.input-extended input[type="text"] {
-  position:relative;
-  width:95%;
-  border:1px solid #fff;
+.form-row {
+  margin-bottom: 0.8em;
+  &:before, &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  label {
+    display: inline-block;
+    width: 47%;
+    margin-right: 3%;
+  }
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  textarea,
+  select {
+    width: 49%;
+  }
+  input[type="submit"] {
+    float: right;
+  }
+}
+.form-col {
+  display: inline-block;
+  width: 47%;
+  margin: 0 2% 0.8em 0;
 }
 
-.input-extended input[type="submit"] {
-  position: absolute;
-  right:5px;
-  bottom:5px;
-}
-
-.input-extended label {
-  display: none;
-}
