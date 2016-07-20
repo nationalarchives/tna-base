@@ -76,7 +76,7 @@ This downloads the Composer installer script with ```curl``` and executes it wit
 Having done this follow these steps:
 
 * Type ```sudo mv composer.phar /usr/local/bin/composer``` into the Terminal
-* Append this line to your ```~./bash_profile``` file ```PATH=/usr/local/bin:$PATH```
+* Append this line to your ```~/.bash_profile``` file ```PATH=/usr/local/bin:$PATH```
 
 At this stage you should be able to execute the ```composer``` command in the Terminal to see all the available options.
 
