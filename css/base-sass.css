@@ -4925,6 +4925,9 @@ textarea {
   border: 1px solid #ccc;
   padding: 5px; }
 
+select {
+  border: 1px solid #ccc; }
+
 input:focus, input[type=radio]:focus, input[type=checkbox]:focus, textarea:focus, select:focus {
   outline: 3px solid #ebab00; }
 
