@@ -4967,6 +4967,21 @@ input[type="submit"]:focus, a.button:focus {
   width: 47%;
   margin: 0 2% 0.8em 0; }
 
+@media (max-width: 768px) {
+  .form-row label {
+    width: 100%;
+    margin-right: 0; }
+  .form-row input[type=text],
+  .form-row input[type=url],
+  .form-row input[type=tel],
+  .form-row input[type=number],
+  .form-row input[type=color],
+  .form-row input[type=email],
+  .form-row textarea,
+  .form-row select {
+    width: 100%; }
+  .form-row input[type="submit"] {
+    float: none; } }
 /* TNA blockquote styles */
 blockquote {
   margin: 3em 2.5em 1em;
