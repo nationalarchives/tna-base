@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.1.1' );
+define( 'EDD_VERSION', '1.2' );
 
 // Title tag function
 $tnaNetworkSiteName = 'The National Archives';
@@ -35,7 +35,6 @@ add_action( 'wp_enqueue_scripts', 'tna_styles' );
 function tna_scripts() {
 	wp_register_script( 'global-jquery', get_template_directory_uri() . '/js/jquery-1.11.3.min.js', array(), '1.11.3' );
 	wp_register_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', false );
-	wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), EDD_VERSION, true );
 	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/webtrends.js', array(), EDD_VERSION, true );
 	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php' ) ) {
