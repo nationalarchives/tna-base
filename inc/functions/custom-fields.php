@@ -179,52 +179,54 @@ function level_one_meta_boxes() {
 			$post_id = '';
 		}
 	}
-	$nBox = get_post_meta( $post_id, 'number_of_boxes', true );
-	for ($id = 1; $id <= $nBox; $id++)  {
-		$meta_boxes[] = array (
-			'id' => 'content-box-'.$id,
-			'title' => 'Content box '.$id,
-			'pages' => 'page',
-			'context' => 'normal',
-			'priority' => 'high',
-			'fields' => array(
-				array(
-					'name' => 'Box size',
-					'desc' => 'Select &#39;disabled&#39; to hide this box',
-					'id' => 'box_width_'.$id,
-					'type' => 'select',
-					'options' => array('disabled', 'at a third', 'at a half', 'at full width')
-				),
-				array(
-					'name' => 'Title',
-					'desc' => '',
-					'id' => 'box_title_'.$id,
-					'type' => 'text',
-					'std' => ''
-				),
-				array(
-					'name' => 'Title URL',
-					'desc' => '',
-					'id' => 'box_title_url_'.$id,
-					'type' => 'text',
-					'std' => ''
-				),
-				array(
-					'name' => 'Image URL',
-					'desc' => '',
-					'id' => 'box_image_url_'.$id,
-					'type' => 'text',
-					'std' => ''
-				),
-				array(
-					'name' => 'Subpage links',
-					'desc' => 'Please use the &#39;link&#39;, &#39;ul&#39; and &#39;li&#39; buttons to create your list of subpage links',
-					'id' => 'box_content_'.$id,
-					'type' => 'textarea',
-					'std' => ''
+	if ($post_id) {
+		$nBox = get_post_meta( $post_id, 'number_of_boxes', true );
+		for ($id = 1; $id <= $nBox; $id++)  {
+			$meta_boxes[] = array (
+				'id' => 'content-box-'.$id,
+				'title' => 'Content box '.$id,
+				'pages' => 'page',
+				'context' => 'normal',
+				'priority' => 'high',
+				'fields' => array(
+					array(
+						'name' => 'Box size',
+						'desc' => 'Select &#39;disabled&#39; to hide this box',
+						'id' => 'box_width_'.$id,
+						'type' => 'select',
+						'options' => array('disabled', 'at a third', 'at a half', 'at full width')
+					),
+					array(
+						'name' => 'Title',
+						'desc' => '',
+						'id' => 'box_title_'.$id,
+						'type' => 'text',
+						'std' => ''
+					),
+					array(
+						'name' => 'Title URL',
+						'desc' => '',
+						'id' => 'box_title_url_'.$id,
+						'type' => 'text',
+						'std' => ''
+					),
+					array(
+						'name' => 'Image URL',
+						'desc' => '',
+						'id' => 'box_image_url_'.$id,
+						'type' => 'text',
+						'std' => ''
+					),
+					array(
+						'name' => 'Subpage links',
+						'desc' => 'Please use the &#39;link&#39;, &#39;ul&#39; and &#39;li&#39; buttons to create your list of subpage links',
+						'id' => 'box_content_'.$id,
+						'type' => 'textarea',
+						'std' => ''
+					)
 				)
-			)
-		);
+			);
+		}
 	}
 	// Adds meta boxes to Level 1 Landing page template
 	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
