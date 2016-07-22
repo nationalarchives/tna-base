@@ -170,7 +170,15 @@ function level_one_meta_boxes() {
 		)
 	);
 	// Level 1 content box loop array
-	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+	if (isset($_GET['post'])) {
+		$post_id = $_GET['post'];
+	} else {
+		if (isset($_POST['post_ID'])) {
+			$post_id = $_POST['post_ID'];
+		} else {
+			$post_id = '';
+		}
+	}
 	$nBox = get_post_meta( $post_id, 'number_of_boxes', true );
 	for ($id = 1; $id <= $nBox; $id++)  {
 		$meta_boxes[] = array (
