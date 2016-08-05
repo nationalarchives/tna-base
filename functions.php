@@ -90,6 +90,9 @@ add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
 // Theme Support
 add_theme_support( 'post-thumbnails' );
 
+// Included classes
+include 'src/CreateMetaBox.php';
+
 // Includes
 include 'inc/functions/dimox_breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
