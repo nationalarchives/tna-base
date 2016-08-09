@@ -1,9 +1,12 @@
 /* Comment Output */
 
 .commentlist {
-  padding:0 2em 2em 2em;
+  padding:0;
   margin:0;
   list-style-type:none;
+  .comment-edit-link {
+    margin-right:10px;
+  }
   li {
     list-style-type:none;
     div {
@@ -70,6 +73,9 @@
         }
       }
     }
+  }
+  ol {
+    border-left: 2px solid #eee;
   }
   ul{
     margin-top:2em;

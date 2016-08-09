@@ -5821,9 +5821,11 @@ a.hue-teal, a.hue-red {
 
 /* Comment Output */
 .commentlist {
-  padding: 0 2em 2em 2em;
+  padding: 0;
   margin: 0;
   list-style-type: none; }
+  .commentlist .comment-edit-link {
+    margin-right: 10px; }
   .commentlist li {
     list-style-type: none; }
     .commentlist li div.comment-body {
@@ -5868,6 +5870,8 @@ a.hue-teal, a.hue-red {
             background-color: #fce463;
             color: #000;
             text-decoration: none; }
+  .commentlist ol {
+    border-left: 2px solid #eee; }
   .commentlist ul {
     margin-top: 2em; }
     .commentlist ul li {
