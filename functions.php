@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.2' );
+define( 'EDD_VERSION', '1.2.1' );
 
 // Title tag function
 $tnaNetworkSiteName = 'The National Archives';
@@ -89,6 +89,9 @@ add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
 
 // Theme Support
 add_theme_support( 'post-thumbnails' );
+
+// Included classes
+include 'src/CreateMetaBox.php';
 
 // Includes
 include 'inc/functions/dimox_breadcrumbs.php';
