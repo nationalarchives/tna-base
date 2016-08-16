@@ -5032,7 +5032,10 @@ blockquote:before {
     letter-spacing: -0.025em;
     margin-top: 20px;
     margin-bottom: 10px;
-    line-height: 1.6; }
+    line-height: 1.6;
+    padding: 0;
+    color: #fff;
+    display: block; }
   .mega-menu > ul > li {
     width: 16.66667%;
     float: left;
@@ -5040,7 +5043,10 @@ blockquote:before {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    border-top: none !important; }
+    border-top: none !important;
+    list-style-image: none; }
+  .mega-menu > ul > li:last-of-type {
+    margin: 0; }
   @media (max-width: 992px) {
     .mega-menu > ul > li {
       width: 50%; } }
@@ -5067,21 +5073,21 @@ blockquote:before {
     margin: 0;
     padding: 0;
     list-style-type: none; }
-  #nav li {
-    font-size: .9em;
-    list-style-image: none;
-    border-top: 1px dotted #192132;
-    margin: 0; }
-    #nav li a {
-      color: #fff;
-      padding: 4px;
-      display: block;
-      width: 100%; }
-      #nav li a:hover {
-        text-decoration: underline;
-        cursor: pointer; }
-      #nav li a:active, #nav li a:hover {
-        outline: 0; }
+    #nav ul li ul li {
+      font-size: .9em;
+      list-style-image: none;
+      border-top: 1px dotted #192132;
+      margin: 0; }
+      #nav ul li ul li a {
+        color: #fff;
+        padding: 4px;
+        display: block;
+        width: 100%; }
+        #nav ul li ul li a:hover {
+          text-decoration: underline;
+          cursor: pointer; }
+        #nav ul li ul li a:active, #nav ul li ul li a:hover {
+          outline: 0; }
   @media (max-width: 580px) {
     #nav .col-xxs-12 {
       width: 100%;
