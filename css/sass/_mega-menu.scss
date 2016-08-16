@@ -12,8 +12,11 @@
     margin-top: 20px;
     margin-bottom: 10px;
     line-height: 1.6;
+    padding: 0;
+    color: #fff;
+    display: block;
   }
-  > ul > li {
+  > ul > li  {
     width: 16.66667%;
     float: left;
     position: relative;
@@ -21,6 +24,10 @@
     padding-left: 15px;
     padding-right: 15px;
     border-top: none !important;
+    list-style-image: none;
+  }
+  > ul > li:last-of-type {
+    margin: 0;
   }
   @media (max-width: 992px ) {
     > ul > li {
@@ -57,23 +64,23 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-  }
-  li {
-    font-size: .9em;
-    list-style-image: none;
-    border-top: 1px dotted #192132;
-    margin: 0;
-    a {
-      color: $tna-white;
-      padding: 4px;
-      display: block;
-      width: 100%;
-      &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-      &:active, &:hover {
-        outline: 0;
+    li ul li {
+      font-size: .9em;
+      list-style-image: none;
+      border-top: 1px dotted #192132;
+      margin: 0;
+      a {
+        color: $tna-white;
+        padding: 4px;
+        display: block;
+        width: 100%;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        &:active, &:hover {
+          outline: 0;
+        }
       }
     }
   }

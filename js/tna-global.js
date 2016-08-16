@@ -233,7 +233,7 @@ $(document).ready(function(){
         }
     });
     // Show/Hide ul on mobile and desktop
-    if($(window).width() < 480) {
+    /*if($(window).width() < 480) {
         $('#nav ul').hide();
         $('#nav ul li.mobileOnly').show();
 
@@ -252,7 +252,7 @@ $(document).ready(function(){
                 $('#nav ul li.mobileOnly').show();
             }
         }
-    });
+    });*/
 });
 // ----------------------------------------
 
