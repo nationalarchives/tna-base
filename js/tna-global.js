@@ -223,36 +223,37 @@ $(document).ready(function() {
 // ----------------------------------------
 $(document).ready(function(){
     // When click show the childrens of the main categories
-    $(document).on('click', '#nav h3', function(e){
+    $(document).on('click', '#nav ul li', function(e){
+        //console.log('item has been clicked');
         if($(window).width() < 480) {
-            $(this).next("ul").slideToggle("slow");
-            $(this).toggleClass('expanded');
-            e.preventDefault();
+            $(this).find("ul.sub-menu").slideToggle("slow");
+            $("#nav ul li").on('click');
         } else {
             return;
         }
     });
     // Show/Hide ul on mobile and desktop
     /*if($(window).width() < 480) {
-        $('#nav ul').hide();
-        $('#nav ul li.mobileOnly').show();
+        $('#nav ul.sub-menu li').show();
+        //$('#nav ul li.mobileOnly').show();
 
     }else {
-        $('#nav ul li.mobileOnly').hide();
-    }
+        $('#nav ul.sub-menu li').hide();
+    }*/
+
 
     // Bindings to window
     $(window).on({
         resize: function() {
             if($(window).width() > 480){
-                $('#nav ul').show();
-                $('#nav ul li.mobileOnly').hide();
+                $('#nav ul.sub-menu').show();
+                //$('#nav ul li.mobileOnly').hide();
             } else {
-                $('#nav ul').hide();
+                $('#nav ul.sub-menu').hide();
                 $('#nav ul li.mobileOnly').show();
             }
         }
-    });*/
+    });
 });
 // ----------------------------------------
 
