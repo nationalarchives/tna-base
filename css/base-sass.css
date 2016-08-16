@@ -5053,6 +5053,14 @@ blockquote:before {
   @media (max-width: 580px) {
     .mega-menu > ul > li {
       width: 100%; } }
+  @media only screen and (max-width: 480px) {
+    .mega-menu > ul > li > ul.sub-menu {
+      display: none; }
+    .mega-menu > ul > li > a, .mega-menu > ul > li > div {
+      background: url(../img/plus.png) 5px 12px no-repeat;
+      padding: 5px 5px 5px 22px;
+      cursor: pointer;
+      text-shadow: none; } }
 
 #nav {
   background-color: #405480;
@@ -5063,12 +5071,6 @@ blockquote:before {
     color: #222; }
   #nav h3.expanded {
     background-image: url(../img/minus.png); }
-  @media (max-width: 480px) {
-    #nav h3 {
-      background: url(../img/plus.png) 5px 12px no-repeat;
-      padding: 5px 5px 5px 22px;
-      cursor: pointer;
-      text-shadow: none; } }
   #nav ul {
     margin: 0;
     padding: 0;
