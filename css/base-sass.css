@@ -5840,6 +5840,14 @@ a.hue-teal, a.hue-red {
         margin: 10px 0; }
       .commentlist li div.comment-body .comment-meta.commentmetadata {
         font-size: .9em; }
+      @media (max-width: 600px) {
+        .commentlist li div.comment-body .comment-meta {
+          float: left;
+          display: block;
+          clear: both; } }
+      .commentlist li div.comment-body em.comment-awaiting-moderation {
+        clear: both;
+        display: block; }
       .commentlist li div.comment-body .comment-author {
         float: left;
         padding: 5px 10px 5px 10px;

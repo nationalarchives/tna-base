@@ -25,6 +25,15 @@
           &.commentmetadata {
             font-size:.9em;
           }
+          @media (max-width:600px) {
+            float:left;
+            display:block;
+            clear:both;
+          }
+        }
+        em.comment-awaiting-moderation{
+          clear:both;
+          display:block;
         }
         .comment-author {
           float: left;
