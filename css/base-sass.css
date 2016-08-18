@@ -5818,6 +5818,12 @@ a.hue-teal, a.hue-red {
 .table thead {
   background: #eee;
   font-weight: 700; }
+.table td a {
+  display: inline-block;
+  -ms-word-break: break-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all; }
 
 /* Comment Output */
 .commentlist {
