@@ -10,7 +10,6 @@
 // 1. Back to top
 // 2. Website cookie
 // 3. Search our website
-// 4. Mega menu
 // ----------------------------------------
 
 // A page can't be manipulated safely until the document is "ready."
