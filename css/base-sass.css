@@ -5951,3 +5951,8 @@ a.hue-teal, a.hue-red {
   #respond textarea,
   #respond input[type="text"] {
     width: 100%; }
+
+.category_template .image_back {
+  width: 100%;
+  height: 180px;
+  margin: 5px 0 10px 0; }
