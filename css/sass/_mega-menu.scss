@@ -16,9 +16,6 @@
     color: #fff;
     display: block;
   }
-  > ul > li > a:focus {
-    color: #fff !important;
-  }
   > ul > li  {
     width: 16.66667%;
     float: left;
@@ -51,6 +48,9 @@
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none;
+    }
+    > ul > li > a:focus {
+      background: #FCE45C !important;
     }
   }
 }
