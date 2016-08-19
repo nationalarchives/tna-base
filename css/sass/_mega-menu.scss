@@ -16,6 +16,9 @@
     color: #fff;
     display: block;
   }
+  > ul > li > a:focus {
+    color: #fff !important;
+  }
   > ul > li  {
     width: 16.66667%;
     float: left;

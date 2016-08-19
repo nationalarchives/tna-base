@@ -5036,6 +5036,8 @@ blockquote:before {
     padding: 0;
     color: #fff;
     display: block; }
+  .mega-menu > ul > li > a:focus {
+    color: #fff !important; }
   .mega-menu > ul > li {
     width: 16.66667%;
     float: left;
