@@ -160,15 +160,6 @@ $(document).ready(function(){
     // ----------------------------------------
     // ----------------------------------------
 
-    // ----------------------------------------
-    // 4 Mega menu ----------------------------
-
-    $('#mega-menu-pull-down').on('click', function () {
-        $('#nav').slideToggle('fast');
-    });
-    $('#mega-menu-mobile').on('click', function () {
-        $('#nav').slideToggle('fast');
-    });
 });
 
 
@@ -216,53 +207,12 @@ $(document).ready(function() {
 });
 
 
-// -----------------------------------------------------------
-
-// ----------------------------------------
-// 3 Mega menu for mobile -----------------
-// ----------------------------------------
-$(document).ready(function(){
-    // When click show the childrens of the main categories
-    $(document).on('click', '#nav ul li', function(e){
-        //console.log('item has been clicked');
-        if($(window).width() < 480) {
-            $(this).find("ul.sub-menu").slideToggle("slow");
-            $("#nav ul li").on('click');
-        } else {
-            return;
-        }
-    });
-    // Show/Hide ul on mobile and desktop
-    /*if($(window).width() < 480) {
-        $('#nav ul.sub-menu li').show();
-        //$('#nav ul li.mobileOnly').show();
-
-    }else {
-        $('#nav ul.sub-menu li').hide();
-    }*/
-
-
-    // Bindings to window
-    $(window).on({
-        resize: function() {
-            if($(window).width() > 480){
-                $('#nav ul.sub-menu').show();
-                //$('#nav ul li.mobileOnly').hide();
-            } else {
-                $('#nav ul.sub-menu').hide();
-                $('#nav ul li.mobileOnly').show();
-            }
-        }
-    });
-});
-// ----------------------------------------
-
-
-// ----------------------------------------
 
 // ----------------------------------------
 // Image caption toggle - -----------------
 // ----------------------------------------
-$('.eye_caption').on('click', function () {
-    $('.image_caption_back').toggle();
+$(document).ready(function() {
+    $('.eye_caption').on('click', function () {
+        $('.image_caption_back').toggle();
+    });
 });

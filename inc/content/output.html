@@ -1,4 +1,4 @@
-<ul>
+<ul class="main-ul">
     <li><a href="http://www.nationalarchives.gov.uk/about">About us</a>
             <ul class="sub-menu"><li><a href="http://www.nationalarchives.gov.uk/about/our-role/">Our Role</a></li>
                 <li><a href="http://www.nationalarchives.gov.uk/about/visit-us/">Visit us</a></li>
@@ -105,14 +105,45 @@
             }
         })
     }
-});</script><script id="moreLinkRemoval">window.addEventListener("load", function () {
+});</script>
+<script>
+    $('#mega-menu-pull-down').on('click', function () {
+        $('#nav').slideToggle('fast');
+    });
+    $('#mega-menu-mobile').on('click', function () {
+        $('#nav').slideToggle('fast');
+    });
+</script>
+<script id="moreLinkRemoval">window.addEventListener("load", function () {
     if (typeof $ === 'function') {
         $("a[href='#']", ".mega-menu").each(function () {
             var $this = $(this),
                 text = $this.text();
             $this.replaceWith($('<div>', {
                 'text': text
-            }))
+            }));
+
+            //Add this block of code to the main php app (mega menu feed processor)
+            $(".mega-menu > ul > li > div").addClass("mg-more");
+
+            if($(window).width() < 480) {
+
+                (function (){
+                    for (var i = 0; i < $(".main-ul > li > a").length; i++) {
+                        $(".main-ul > li > a:eq("+ i +")").each(function(){
+                            $(this).clone().prependTo(".sub-menu:eq("+ i +")").append(' home').wrap("<li/>");
+                        });
+                    }
+                })() ;
+
+
+                $(".mega-menu > ul > li > a, .mega-menu > ul > li > div.mg-more").on('click', function(event) {
+                    event.preventDefault();
+                    $(this).next(".mega-menu > ul > li > ul.sub-menu").slideToggle("fast");
+                    $(this).toggleClass('minus');
+                });
+            }
+            //END Add this block of code to the main php app (mega menu feed processor)
         });
     }
 });

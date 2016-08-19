@@ -5062,15 +5062,23 @@ blockquote:before {
       cursor: pointer;
       text-shadow: none; } }
 
+.minus {
+  background: url(../img/minus.png) 5px 12px no-repeat !important;
+  padding: 5px 5px 5px 22px;
+  cursor: pointer;
+  text-shadow: none; }
+
 #nav {
   background-color: #405480;
   color: #fff; }
-  #nav h3 a {
-    color: #fff; }
-  #nav h3 a:focus {
-    color: #222; }
-  #nav h3.expanded {
-    background-image: url(../img/minus.png); }
+  #nav h3 {
+    /*&.expanded {
+      background-image: url(../img/minus.png);
+    }*/ }
+    #nav h3 a {
+      color: #fff; }
+    #nav h3 a:focus {
+      color: #222; }
   #nav ul {
     margin: 0;
     padding: 0;
