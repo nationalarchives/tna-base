@@ -5,4 +5,11 @@
     background: #eee;
     font-weight: 700;
   }
+  td a {
+    display: inline-block;
+    -ms-word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
 }

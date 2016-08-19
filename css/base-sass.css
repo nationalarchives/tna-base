@@ -5818,3 +5818,136 @@ a.hue-teal, a.hue-red {
 .table thead {
   background: #eee;
   font-weight: 700; }
+.table td a {
+  display: inline-block;
+  -ms-word-break: break-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all; }
+
+/* Comment Output */
+.commentlist {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+  .commentlist .comment-edit-link {
+    margin-right: 10px; }
+  .commentlist li {
+    list-style-type: none; }
+    .commentlist li div.comment-body {
+      margin: 0 0 20px 0;
+      padding: 20px;
+      background: #eee;
+      font-size: 1em;
+      overflow: hidden; }
+      .commentlist li div.comment-body p {
+        float: left;
+        width: 100%;
+        margin: 10px 0; }
+      .commentlist li div.comment-body .comment-meta.commentmetadata {
+        font-size: .9em; }
+      @media (max-width: 600px) {
+        .commentlist li div.comment-body .comment-meta {
+          float: left;
+          display: block;
+          clear: both; } }
+      .commentlist li div.comment-body em.comment-awaiting-moderation {
+        clear: both;
+        display: block; }
+      .commentlist li div.comment-body .comment-author {
+        float: left;
+        padding: 5px 10px 5px 10px;
+        background: #405480;
+        color: #fff;
+        margin: 0 0 5px -20px;
+        display: inline; }
+        .commentlist li div.comment-body .comment-author.vcard {
+          margin-top: -20px; }
+          .commentlist li div.comment-body .comment-author.vcard img {
+            display: none; }
+          .commentlist li div.comment-body .comment-author.vcard .fn a {
+            color: #fff; }
+          .commentlist li div.comment-body .comment-author.vcard .says {
+            display: none; }
+      .commentlist li div.comment-body .comment-meta.commentmetadata a {
+        float: right; }
+      .commentlist li div.comment-body .reply {
+        float: right; }
+        .commentlist li div.comment-body .reply .comment-reply-link {
+          background-color: #008484;
+          color: #fff;
+          padding: .3em .5em;
+          border: 0;
+          height: 40px;
+          margin: 0; }
+          .commentlist li div.comment-body .reply .comment-reply-link:hover {
+            background-color: #fce463;
+            color: #000;
+            text-decoration: none; }
+  .commentlist ol {
+    border-left: 2px solid #eee; }
+  .commentlist ul {
+    margin-top: 2em; }
+    .commentlist ul li {
+      list-style-type: none;
+      list-style-image: none; }
+      .commentlist ul li ul li {
+        list-style-type: none;
+        list-style-image: none; }
+      .commentlist ul li:nth-child(2n+2) {
+        background: red; }
+  .commentlist ul {
+    list-style-type: none;
+    margin-top: 2em;
+    border-left: 2px solid #eee; }
+    .commentlist ul li {
+      list-style-type: none; }
+      .commentlist ul li div.comment-body {
+        margin: 0 0 20px 0;
+        padding: 20px;
+        background: #eee;
+        font-size: 1em;
+        overflow: hidden; }
+        .commentlist ul li div.comment-body p {
+          float: left;
+          width: 100%;
+          margin: 10px 0; }
+        .commentlist ul li div.comment-body .comment-meta.commentmetadata {
+          font-size: .9em; }
+        .commentlist ul li div.comment-body .comment-author {
+          float: left;
+          padding: 5px 10px 5px 10px;
+          background: #405480;
+          color: #fff;
+          margin: 0 0 5px -20px;
+          display: inline; }
+          .commentlist ul li div.comment-body .comment-author.vcard {
+            margin-top: -20px; }
+            .commentlist ul li div.comment-body .comment-author.vcard img {
+              display: none; }
+            .commentlist ul li div.comment-body .comment-author.vcard .says {
+              display: none; }
+        .commentlist ul li div.comment-body .comment-meta.commentmetadata a {
+          float: right; }
+        .commentlist ul li div.comment-body .reply {
+          float: right; }
+          .commentlist ul li div.comment-body .reply .comment-reply-link {
+            background-color: #008484;
+            color: #fff;
+            padding: .3em .5em;
+            border: 0;
+            height: 40px;
+            margin: 0; }
+            .commentlist ul li div.comment-body .reply .comment-reply-link:hover {
+              background-color: #fce463;
+              color: #000;
+              text-decoration: none; }
+
+#comments {
+  padding: 0 2em 0 1.5em; }
+
+#respond {
+  padding: 2em; }
+  #respond textarea,
+  #respond input[type="text"] {
+    width: 100%; }
