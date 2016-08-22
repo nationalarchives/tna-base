@@ -87,6 +87,13 @@
 <nav id="nav" role="navigation">
 	<?php //get_template_part( 'inc/content/mega-menu' ); ?>
 	<div class="mega-menu clearfix">
-		<?php include 'inc/content/output.html'; ?>
+		<?php
+            $localhost = $_SERVER['SERVER_NAME'];
+            if ($localhost) {
+                include 'inc/content/output.html';
+            } else {
+                include("D:/webapps/phpapps/mega-menu-feed-processor/output.html");
+            }
+        ?>
 	</div>
 </nav>
