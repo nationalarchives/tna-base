@@ -88,10 +88,9 @@
 	<?php //get_template_part( 'inc/content/mega-menu' ); ?>
 	<div class="mega-menu clearfix">
 		<?php
-            //$localhost = $_SERVER['SERVER_NAME'];
-			if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
+		if ( $_SERVER['SERVER_ADDR'] !== $_SERVER['REMOTE_ADDR'] ) {
                 include("D:/webapps/phpapps/mega-menu-feed-processor/output.html");
-            } //if local machine
+            } //ELSE if local machine
             else {
 				include 'output.html';
             }
