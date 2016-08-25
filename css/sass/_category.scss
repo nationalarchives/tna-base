@@ -4,7 +4,13 @@
     height:180px;
     margin: 5px 0 10px 0;
   }
-  article .entry-content {
-    padding: 0;
+  article {
+    .entry-content {
+      padding: 0;
+    }
+    .entry-header {
+      padding: 10px 10px 0 0;
+      background: url('../img/dot-grey.png');
+    }
   }
 }

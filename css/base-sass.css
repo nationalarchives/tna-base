@@ -5958,3 +5958,6 @@ a.hue-teal, a.hue-red {
   margin: 5px 0 10px 0; }
 .category_template article .entry-content {
   padding: 0; }
+.category_template article .entry-header {
+  padding: 10px 10px 0 0;
+  background: url("../img/dot-grey.png"); }
