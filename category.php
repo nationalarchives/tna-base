@@ -29,7 +29,7 @@
                         if (has_post_thumbnail($page_id)) {
                             echo make_path_relative($image[0]);
                         } else {
-                            echo bloginfo('template_directory') . '/img/no-image.pg';
+                            echo bloginfo('template_directory') . '/img/no-image.jpg';
                         }
                         ?>')">
 
