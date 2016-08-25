@@ -5955,7 +5955,9 @@ a.hue-teal, a.hue-red {
 .category_template .image_back {
   width: 100%;
   height: 180px;
-  margin: 5px 0 10px 0; }
+  margin: 5px 0 10px 0;
+  background-position: center;
+  background-clip: content-box; }
 .category_template article .entry-content {
   padding: 0; }
 .category_template article .entry-header {

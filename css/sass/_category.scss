@@ -3,6 +3,9 @@
     width:100%;
     height:180px;
     margin: 5px 0 10px 0;
+    background-position: center;
+    background-clip: content-box;
+
   }
   article {
     .entry-content {
