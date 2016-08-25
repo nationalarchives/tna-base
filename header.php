@@ -85,5 +85,15 @@
 	</div>
 </header>
 <nav id="nav" role="navigation">
-	<?php get_template_part( 'inc/content/mega-menu' ); ?>
+	<?php //get_template_part( 'inc/content/mega-menu' ); ?>
+	<div class="mega-menu clearfix">
+		<?php
+		if ( $_SERVER['SERVER_ADDR'] !== $_SERVER['REMOTE_ADDR'] ) {
+                include("D:/webapps/phpapps/mega-menu-feed-processor/output.html");
+            } //ELSE if local machine
+            else {
+				include 'output.html';
+            }
+        ?>
+	</div>
 </nav>

@@ -10,7 +10,6 @@
 // 1. Back to top
 // 2. Website cookie
 // 3. Search our website
-// 4. Mega menu
 // ----------------------------------------
 
 // A page can't be manipulated safely until the document is "ready."
@@ -160,15 +159,6 @@ $(document).ready(function(){
     // ----------------------------------------
     // ----------------------------------------
 
-    // ----------------------------------------
-    // 4 Mega menu ----------------------------
-
-    $('#mega-menu-pull-down').on('click', function () {
-        $('#nav').slideToggle('fast');
-    });
-    $('#mega-menu-mobile').on('click', function () {
-        $('#nav').slideToggle('fast');
-    });
 });
 
 
@@ -216,52 +206,12 @@ $(document).ready(function() {
 });
 
 
-// -----------------------------------------------------------
-
-// ----------------------------------------
-// 3 Mega menu for mobile -----------------
-// ----------------------------------------
-$(document).ready(function(){
-    // When click show the childrens of the main categories
-    $(document).on('click', '#nav h3', function(e){
-        if($(window).width() < 480) {
-            $(this).next("ul").slideToggle("slow");
-            $(this).toggleClass('expanded');
-            e.preventDefault();
-        } else {
-            return;
-        }
-    });
-    // Show/Hide ul on mobile and desktop
-    if($(window).width() < 480) {
-        $('#nav ul').hide();
-        $('#nav ul li.mobileOnly').show();
-
-    }else {
-        $('#nav ul li.mobileOnly').hide();
-    }
-
-    // Bindings to window
-    $(window).on({
-        resize: function() {
-            if($(window).width() > 480){
-                $('#nav ul').show();
-                $('#nav ul li.mobileOnly').hide();
-            } else {
-                $('#nav ul').hide();
-                $('#nav ul li.mobileOnly').show();
-            }
-        }
-    });
-});
-// ----------------------------------------
-
-
-// ----------------------------------------
 
 // ----------------------------------------
 // Image caption toggle - -----------------
 // ----------------------------------------
-$('.eye_caption').on('click', function () {
-    $('.image_caption_back').toggle();
+$(document).ready(function() {
+    $('.eye_caption').on('click', function () {
+        $('.image_caption_back').toggle();
+    });
 });
