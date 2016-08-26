@@ -1,0 +1,1 @@
+$('a[target="_blank"]').add_attributes_to_target_blank();
