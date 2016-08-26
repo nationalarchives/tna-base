@@ -16,7 +16,7 @@ install:
 script:
   - phpunit tests/FunctionTest.php
   - phpunit tests/CommentsTest.php
-  - grunt jasmine
+  - grunt qunit
 
 notifications:
   slack:
