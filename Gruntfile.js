@@ -29,6 +29,9 @@ module.exports = function (grunt) {
                 tasks: ['sass', 'cssmin']
             }
         },
+        qunit: {
+            all: ['js/tests/**/*.html']
+        },
         browserSync: {
             dev: {
                 bsFiles: {
@@ -41,15 +44,6 @@ module.exports = function (grunt) {
                     proxy: 'tna-website-dev:8888'
                 }
             }
-        },
-        jasmine: {
-            pivotal: {
-                src: 'js/compiled/*.js',
-                options: {
-                    specs: 'js/spec/*Spec.js',
-                    helpers: 'js/spec/*Helper.js'
-                }
-            }
         }
     });
 
@@ -57,10 +51,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'qunit', 'watch']);
     grunt.registerTask('bSync', ['browserSync', 'watch']);
 
 };
