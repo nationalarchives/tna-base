@@ -36,6 +36,7 @@ function tna_scripts() {
 	wp_register_script( 'global-jquery', get_template_directory_uri() . '/js/jquery-1.11.3.min.js', array(), '1.11.3' );
 	wp_register_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', false );
 	wp_register_script( 'tna-global', get_template_directory_uri() . '/js/tna-global.js', array(), EDD_VERSION, true );
+	wp_register_script( 'tna-base-min', get_template_directory_uri() . '/js/compiled/tna-base.min.js', array(), EDD_VERSION, true );
 	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/webtrends.js', array(), EDD_VERSION, true );
 	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php' ) ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/jQuery.equalHeights.js', array(),
@@ -50,6 +51,7 @@ function tna_scripts() {
 	wp_enqueue_script( 'bootstrap-js' );
 	wp_enqueue_script( 'tna-global' );
 	wp_enqueue_script( 'webtrends' );
+	wp_enqueue_script( 'tna-base-min' );
 }
 
 add_action( 'wp_enqueue_scripts', 'tna_scripts' );
