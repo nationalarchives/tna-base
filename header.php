@@ -85,5 +85,8 @@
 	</div>
 </header>
 <nav id="nav" role="navigation">
-	<?php get_template_part( 'inc/content/mega-menu' ); ?>
+	<?php //get_template_part( 'inc/content/mega-menu' ); ?>
+	<div class="mega-menu clearfix">
+		<?php display_Megamenu(); ?>
+	</div>
 </nav>

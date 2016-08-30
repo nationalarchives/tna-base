@@ -121,3 +121,15 @@ function wpcodex_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
+
+function display_Megamenu ($server_address, $remote_address) {
+    $server_address = $_SERVER['SERVER_ADDR'];
+    $remote_address = $_SERVER['REMOTE_ADDR'];
+    if ( $server_address !== $remote_address ) {
+        include("D:/webapps/phpapps/mega-menu-feed-processor/output.html");
+    } //ELSE if local machine
+    else {
+        include 'output.html';
+    }
+}
+
