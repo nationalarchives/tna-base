@@ -72,12 +72,3 @@ QUnit.test("No links should have click handlers before the plugin is applied", f
     });
 
 });
-
-QUnit.test("Links should have click handlers after the plugin is applied", function (assert) {
-
-    $('a').webtrends_click_handler();
-    $('a').each(function () {
-        assert.ok(typeof this.onclick == 'function', 'Test');
-    })
-
-});
