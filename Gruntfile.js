@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['js/mitigate-target-blank.js', 'js/run-on-page-load.js'],
+                src: ['js/mega-menu.js', 'js/mitigate-target-blank.js', 'js/run-on-page-load.js'],
                 dest: 'js/compiled/tna-base.js'
             }
         },
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'cssmin', 'qunit', 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify', 'qunit', 'watch']);
     grunt.registerTask('bSync', ['browserSync', 'watch']);
 
 };
