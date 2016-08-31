@@ -101,16 +101,6 @@
       }
     }
   }
-  @media (max-width: 580px) {
-    .col-xxs-12 {
-      width: 100%;
-      float: left;
-      position: relative;
-      min-height: 1px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
 }
 
 //Works with Modernizr when no JS

@@ -5100,14 +5100,6 @@ blockquote:before {
           cursor: pointer; }
         #nav ul li ul li a:active, #nav ul li ul li a:hover {
           outline: 0; }
-  @media (max-width: 580px) {
-    #nav .col-xxs-12 {
-      width: 100%;
-      float: left;
-      position: relative;
-      min-height: 1px;
-      padding-left: 15px;
-      padding-right: 15px; } }
 
 .no-js #nav {
   display: block; }

@@ -63,3 +63,21 @@ QUnit.test("The mg-more links should exist after the plugin is applied", functio
 
 });
 
+QUnit.module("Dynamic webtrends click handlers");
+
+QUnit.test("No links should have click handlers before the plugin is applied", function (assert) {
+
+    $('a').each(function () {
+        assert.ok(typeof this.onclick !== 'function', "No links in the mega menu have click handlers");
+    });
+
+});
+
+QUnit.test("Links should have click handlers after the plugin is applied", function (assert) {
+
+    $('a').webtrends_click_handler();
+    $('a').each(function () {
+        assert.ok(typeof this.onclick == 'function', 'Test');
+    })
+
+});

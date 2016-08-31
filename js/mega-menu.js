@@ -60,19 +60,22 @@ $.fn.append_home_links_to_mega_menu = function () {
 
 // Sets up the WebTrends handlers
 
-$('a', '.mega-menu').on('click', function (e) {
-    if (typeof dcsMultiTrack == 'function') {
-        var text = $(e.target).text();
-        dcsMultiTrack(
-            'DCS.dcsuri',
-            '/menu/' + text,
-            'WT.ti',
-            'Menu - ' + text
-        )
-    }
-});
-
-
+$.fn.webtrends_click_handler = function () {
+    return this.each(function () {
+        var $this = $(this);
+        $this.on('click', function (e) {
+            if (typeof dcsMultiTrack == 'function') {
+                var text = $(e.target).text();
+                dcsMultiTrack(
+                    'DCS.dcsuri',
+                    '/menu/' + text,
+                    'WT.ti',
+                    'Menu - ' + text
+                )
+            }
+        })
+    })
+};
 
 
 
