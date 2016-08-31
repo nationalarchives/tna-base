@@ -9,26 +9,14 @@ $.fn.mega_menu_interactions = function () {
     });
 };
 
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
-
 // Displays the promotional image
 
-$("ul.sub-menu:last").append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
-
-
-// Sets up the WebTrends handlers
-
-$('a', '.mega-menu').on('click', function (e) {
-    if (typeof dcsMultiTrack == 'function') {
-        var text = $(e.target).text();
-        dcsMultiTrack(
-            'DCS.dcsuri',
-            '/menu/' + text,
-            'WT.ti',
-            'Menu - ' + text
-        )
-    }
-});
+$.fn.append_promotional_image = function () {
+    return this.each(function () {
+        var $this = $(this);
+        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
+    })
+};
 
 // Replacing anchor-only links
 
@@ -43,31 +31,46 @@ $('.mega-menu a[href="#"]').each(function () {
 
 // Creating the home links
 
-$(".main-ul > li > a").each(function () {
-    var $this = $(this),
-        $items = $this.next(),
-        $link,
-        $li;
+$.fn.append_home_links_to_mega_menu = function () {
+    return this.each(function () {
+        var $this = $(this),
+            $items = $this.next(),
+            $link,
+            $li;
 
-    $this.addClass('mg-more');
+        $this.addClass('mg-more');
 
-    $link = $('<a>', {
-        'href': $this.attr('href'),
-        'text': $this.text() + ' home'
-    });
+        $this.on('click', function (e) {
+            if ($(window).width() < 480) {
+                e.preventDefault();
+                $(this).next().slideToggle('fast');
+            }
+        });
 
-    $li = $('<li>').append($link);
+        $link = $('<a>', {
+            'href': $this.attr('href'),
+            'text': $this.text() + ' home'
+        });
 
-    $li.prependTo($items);
-});
+        $li = $('<li>').append($link);
 
-$('.mg-more').on('click', function (e) {
-    if ($(window).width() < 480) {
-        e.preventDefault();
-        $(this).next().slideToggle('fast');
+        $li.prependTo($items);
+    })
+};
+
+// Sets up the WebTrends handlers
+
+$('a', '.mega-menu').on('click', function (e) {
+    if (typeof dcsMultiTrack == 'function') {
+        var text = $(e.target).text();
+        dcsMultiTrack(
+            'DCS.dcsuri',
+            '/menu/' + text,
+            'WT.ti',
+            'Menu - ' + text
+        )
     }
 });
-
 
 
 

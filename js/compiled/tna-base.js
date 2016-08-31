@@ -1,12 +1,22 @@
 // Toggles the mega menu
 
-$('#mega-menu-pull-down, #mega-menu-mobile').on('click', function () {
-    $('#nav').slideToggle('fast');
-});
+$.fn.mega_menu_interactions = function () {
+    return this.each(function () {
+        var $this = $(this);
+        $this.on('click', function () {
+            $('#nav').slideToggle('fast');
+        })
+    });
+};
 
 // Displays the promotional image
 
-$("ul.sub-menu:last").append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
+$.fn.append_promotional_image = function () {
+    return this.each(function () {
+        var $this = $(this);
+        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
+    })
+};
 
 // Sets up the WebTrends handlers
 
@@ -84,3 +94,7 @@ $('.mg-more').on('click', function (e) {
     };
 
 })(jQuery);;$('a[target="_blank"]').add_attributes_to_target_blank();
+
+$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+
+$("ul.sub-menu:last").append_promotional_image();

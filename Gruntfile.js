@@ -79,7 +79,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'cssmin', 'qunit', 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify', 'qunit', 'watch']);
     grunt.registerTask('bSync', ['browserSync', 'watch']);
 
 };
