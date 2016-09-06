@@ -5951,3 +5951,15 @@ a.hue-teal, a.hue-red {
   #respond textarea,
   #respond input[type="text"] {
     width: 100%; }
+
+.category_template .image_back {
+  width: 100%;
+  height: 180px;
+  margin: 5px 0 10px 0;
+  background-position: center;
+  background-clip: content-box; }
+.category_template article .entry-content {
+  padding: 0; }
+.category_template article .entry-header {
+  padding: 10px 10px 0 0;
+  background: url("../img/dot-grey.png"); }
