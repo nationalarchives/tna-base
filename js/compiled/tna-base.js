@@ -27,7 +27,10 @@ $('.mega-menu a[href="#"]').each(function () {
         text = $this.text();
     $this.replaceWith($('<div>', {
         'text': text,
-        'class': 'mg-more'
+        'class': 'mg-more',
+        'click': function() {
+            $(this).next().slideToggle('fast');
+        }
     }))
 });
 
