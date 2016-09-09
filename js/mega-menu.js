@@ -54,7 +54,7 @@ $.fn.append_home_links_to_mega_menu = function () {
             'text': $this.text() + ' home'
         });
 
-        $li = $('<li>').append($link);
+        $li = $('<li class="mobile-home-link">').append($link);
 
         $li.prependTo($items);
     })

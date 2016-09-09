@@ -26,6 +26,9 @@
     border-top: none !important;
     list-style-image: none;
   }
+  .mobile-home-link {
+    display: none;
+  }
   > ul > li:last-of-type {
     margin: 0;
   }
@@ -53,6 +56,9 @@
     > ul > li > a:focus {
       background: #FCE45C !important;
     }
+    .mobile-home-link {
+      display: block;
+    }
   }
 }
 
@@ -73,9 +79,6 @@
     a:focus {
       color: $tna_dark;
     }
-    /*&.expanded {
-      background-image: url(../img/minus.png);
-    }*/
   }
   ul {
     margin: 0;

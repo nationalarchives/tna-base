@@ -5045,6 +5045,8 @@ blockquote:before {
     padding-right: 15px;
     border-top: none !important;
     list-style-image: none; }
+  .mega-menu .mobile-home-link {
+    display: none; }
   .mega-menu > ul > li:last-of-type {
     margin: 0; }
   @media (max-width: 992px) {
@@ -5062,7 +5064,9 @@ blockquote:before {
       cursor: pointer;
       text-shadow: none; }
     .mega-menu > ul > li > a:focus {
-      background: #FCE45C !important; } }
+      background: #FCE45C !important; }
+    .mega-menu .mobile-home-link {
+      display: block; } }
 
 .minus {
   background: url(../img/minus.png) 5px 12px no-repeat !important;
@@ -5073,14 +5077,10 @@ blockquote:before {
 #nav {
   background-color: #405480;
   color: #fff; }
-  #nav h3 {
-    /*&.expanded {
-      background-image: url(../img/minus.png);
-    }*/ }
-    #nav h3 a {
-      color: #fff; }
-    #nav h3 a:focus {
-      color: #222; }
+  #nav h3 a {
+    color: #fff; }
+  #nav h3 a:focus {
+    color: #222; }
   #nav ul {
     margin: 0;
     padding: 0;
