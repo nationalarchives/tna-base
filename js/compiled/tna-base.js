@@ -4,6 +4,7 @@
 //          loaded before the script is run
 
 (function ($) {
+
     $.fn.add_attributes_to_target_blank = function () {
         return this.each(function () {
             var $this = $(this);
