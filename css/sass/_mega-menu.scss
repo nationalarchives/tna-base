@@ -46,7 +46,9 @@
     > ul > li > ul.sub-menu {
       display: none;
     }
-
+    .mg-more:hover {
+      text-decoration: underline;
+    }
     > ul > li > a, > ul > li > div {
       background: url(../img/plus.png) 5px 12px no-repeat;
       padding: 5px 5px 5px 22px;
