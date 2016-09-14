@@ -1,18 +1,12 @@
-QUnit.module("Checking the DOM", {
+QUnit.module("Checking the DOM before plugin is applied", {
     beforeEach: function () {
         $('input[type=email]', '.fixture').val('');
     }
 });
 
-QUnit.test("Check if form with signup id is present", function (assert) {
-    assert.ok($('form', '.fixture').length == 1, "The form with a specific ID is present");
-});
-
-QUnit.test("Check if input type email is present", function (assert) {
-    assert.ok($('input[type=email]', '.fixture').length == 1, "The form with a specific input type is present");
-});
-
-QUnit.test("Check if the email field is empty", function (assert) {
+QUnit.test("Check required elements are available in fixture", function (assert) {
+    assert.ok($('form', '.fixture').length == 1, "The form is present");
+    assert.ok($('input[type=email]', '.fixture').length == 1, "The email input is present");
     assert.equal($('input[type=email]', '.fixture').val(), "", "The email address is empty");
 });
 
