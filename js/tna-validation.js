@@ -5,21 +5,19 @@
 (function ($) {
 
     $.fn.newsletterValidation = function () {
+
         if ($.html5ValidationAvailable() === false) {
             return;
         }
-        return this.each(function () {
 
-            console.log($(this));
+        return this.each(function () {
 
             var $this = $(this),
                 $email = $this.find('input[type=email]'),
                 $errorMsg = $('<div>', {
                     'class': 'error',
                     'text': 'Error in input'
-                });
-
-            $errorMsg.css('display', 'none');
+                }).css('display', 'none');
 
             $errorMsg.insertBefore($email);
 
@@ -27,7 +25,6 @@
                 var $this = $(this);
 
                 showError($.isEmail($this.val()) === false, $errorMsg);
-
 
             });
 
