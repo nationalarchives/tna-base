@@ -37,8 +37,10 @@
     var showError = function (boolean, $el) {
         if (boolean) {
             $el.show();
+            $('input[type="submit"]', '.fixture').prop('disabled', true);
         } else {
             $el.hide();
+            $('input[type="submit"]', '.fixture').prop('disabled', false);
         }
     };
 

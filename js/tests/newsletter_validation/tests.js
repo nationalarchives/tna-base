@@ -19,6 +19,7 @@ QUnit.test("Check if the email field is empty", function (assert) {
 QUnit.module("Checking the utilities", {
     beforeEach: function () {
         $('input[type=email]', '.fixture').val('');
+        $('input[type="submit"]', '.fixture').prop('disable', false);
     }
 });
 QUnit.test("Check if the browser supports HTML5 validation", function (assert) {
@@ -61,4 +62,10 @@ QUnit.test("The error message is shown when incorrect content is entered", funct
     $('input[type=email]', '.fixture').val('wrong input').trigger('change');
     var display = $('.error', '.fixture').css('display');
     assert.equal(display, 'block', "The .error div has 'display: none'");
+});
+
+QUnit.test("Check if submit button is not disabled", function(assert) {
+    $('form', '.fixture').newsletterValidation();
+    var disable = $('input[type="submit"]', '.fixture').prop('disable');
+    assert.ok(disable != true, 'The submit button is not disabled');
 });
