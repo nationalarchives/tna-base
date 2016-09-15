@@ -14,31 +14,14 @@
 
             var $this = $(this),
                 $email = $this.find('input[type=email]'),
-                $errorMsg = $('<div>', {
-                    'class': 'error',
-                    'text': 'Error in input'
-                }).css('display', 'none');
+                $submit = $this.find('input[type=submit]');
 
-            $errorMsg.insertBefore($email);
+            $.manageState($email, $submit);
 
             $email.on('keyup change', function () {
-                var $this = $(this);
-
-                showError($.isEmail($this.val()) === false, $errorMsg);
-
+                $.manageState($(this), $submit);
             });
-
         });
-    };
-
-    var showError = function (boolean, $el) {
-        if (boolean) {
-            $el.show();
-            $('input[type="submit"]', '.fixture').prop('disabled', true);
-        } else {
-            $el.hide();
-            $('input[type="submit"]', '.fixture').prop('disabled', false);
-        }
     };
 
     $.html5ValidationAvailable = function () {
@@ -46,7 +29,11 @@
     };
 
     $.isEmail = function (str) {
-        return (/^[\w.%+\-]+@[\w.\-]+\.[A-Za-z]{2,6}$/.test(str) || str.length === 0);
+        return (/^[\w.%+\-]+@[\w.\-]+\.[A-Za-z]{2,6}$/.test(str));
+    };
+
+    $.manageState = function ($email, $submit) {
+        $submit.prop('disabled', !$.isEmail($email.val()));
     };
 
 }(jQuery));
