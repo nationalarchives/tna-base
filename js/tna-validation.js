@@ -1,5 +1,8 @@
 /**
- * Validation for newsletter HTML
+ * THE NATIONAL ARCHIVES
+ * ------------------------------------------------------------------------------
+ * Newsletter JQuery validation for HTML
+ * ------------------------------------------------------------------------------
  */
 
 (function ($) {
