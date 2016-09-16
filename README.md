@@ -61,6 +61,15 @@ Click 'Remote' in SourceTree and you will be shown a full list of repositories y
 
 Assuming that the Grunt CLI has been installed follow the instructions on the [Grunt website] (http://gruntjs.com/getting-started#working-with-an-existing-grunt-project).
 
+#### 2.6.1 Available Grunt Tasks 
+
+There are several Grunt tasks available to developers. View the Gruntfile.js for a listing of included tasks
+
+* ```grunt``` will run a predefined set of tasks and result in an ongoing 'watch' tasks which responds to any changes to JavaScript and SASS files by compiling, concatenating and minifying the output.
+* ```grunt qunit``` will run all QUnit tests
+
+Note: it is important to run Grunt before checking in code to ensure all JavaScript tests are passing. 
+
 ### 2.7 Composer dependency management
 
 Composer is used for dependency management, initially for PHPUnit but extending to other dependencies as needed. 
@@ -89,6 +98,10 @@ Having followed the steps above you will be able to install dependencies by typi
 Having followed the steps under 'Installing Composer' type ```vendor/bin/phpunit -c phpunit.xml``` from within the ```tna-base``` directory to run Unit Tests for the project.
 
 Note: PhpStorm allows for PHPUnit integration - allowing your tests to be run automatically. Search the JetBrains website to find out how to configure this.
+
+### 2.9 QUnit
+
+Any JavaScript written for this theme should be unit tested with QUnit. See the ```js/tests/example``` directory for an example QUnit test and fixture. 
 
 ## 3.0 Credits
 

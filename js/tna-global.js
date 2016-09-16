@@ -40,13 +40,13 @@ $(document).ready(function(){
     // ----------------------------------------
     // 2.1 setThisCookie()
 
-    tnaSetThisCookie = function (name, days) {
+    var tnaSetThisCookie = function (name, days) {
         var d = new Date();
         d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * days);
         document.cookie = name + "=true;path=/;expires=" + d.toGMTString() + ';';
     };
     // 2.2 checkForThisCookie()
-    tnaCheckForThisCookie = function (name) {
+    var tnaCheckForThisCookie = function (name) {
         if (document.cookie.indexOf(name) === -1) {
             return false;
         } else {

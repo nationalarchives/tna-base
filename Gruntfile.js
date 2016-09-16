@@ -24,9 +24,35 @@ module.exports = function (grunt) {
             }
         },
         watch: {
+            scripts: {
+                files: 'js/*.js',
+                tasks: ['qunit', 'concat', 'uglify']
+            },
             css: {
                 files: 'css/sass/*.scss',
                 tasks: ['sass', 'cssmin']
+            }
+        },
+        qunit: {
+            all: ['js/tests/**/*.html']
+        },
+        concat: {
+            options: {
+                separator: ';'
+            },
+            dist: {
+                src: ['js/mitigate-target-blank.js', 'js/run-on-page-load.js'],
+                dest: 'js/compiled/tna-base.js'
+            }
+        },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            my_target: {
+                files: {
+                    'js/compiled/tna-base.min.js': ['js/compiled/tna-base.js']
+                }
             }
         },
         browserSync: {
@@ -41,15 +67,6 @@ module.exports = function (grunt) {
                     proxy: 'tna-website-dev:8888'
                 }
             }
-        },
-        jasmine: {
-            pivotal: {
-                src: 'js/compiled/*.js',
-                options: {
-                    specs: 'js/spec/*Spec.js',
-                    helpers: 'js/spec/*Helper.js'
-                }
-            }
         }
     });
 
@@ -57,10 +74,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'qunit', 'concat', 'uglify', 'watch']);
     grunt.registerTask('bSync', ['browserSync', 'watch']);
 
 };
