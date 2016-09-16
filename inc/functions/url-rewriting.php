@@ -31,29 +31,13 @@ function make_content_urls_relative( $content ) {
 }
 add_filter( 'the_content', 'make_content_urls_relative' );
 
-// Breadcrumb and url path variables (to be added to child theme)
-/*
-// Edit as required
-function tnatheme_globals() {
-    global $pre_path;
-    global $pre_crumbs;
-    if (substr($_SERVER['REMOTE_ADDR'], 0, 3) === '10.') {
-        $pre_path = '';
-        $pre_crumbs = array(
-            'First World War' => '/'
-        );
-    } else {
-        $pre_crumbs = array(
-            'First World War' => '/first-world-war/'
-        );
-        $pre_path = '/first-world-war';
+// WP Super Cache DONOTCACHEPAGE
+function do_not_cache_page_if_internal() {
+    if ( !is_admin() ) {
+        if ( substr( $_SERVER['REMOTE_ADDR'], 0, 3 ) === '10.' ) {
+            // Internal TNA
+            define( 'DONOTCACHEPAGE', true );
+        }
     }
 }
-if ( $_SERVER['SERVER_ADDR'] !== $_SERVER['REMOTE_ADDR'] ) {
-    tnatheme_globals(); } else {
-    $pre_path = '';
-    $pre_crumbs = array(
-        'First World War' => '/'
-    );
-}
-*/
+add_action( 'wp_loaded', 'do_not_cache_page_if_internal' );
