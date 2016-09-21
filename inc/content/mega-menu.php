@@ -58,13 +58,12 @@
 					<h3><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Archives sector ','WT.ti','Menu - Archives sector ');" href="/archives-sector">Archives sector</a></h3>
 					<ul>
 						<li class="mobileOnly"><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Archives sector ','WT.ti','Menu - Archives sector ');" href="/archives-sector">Archives sector home</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Current initiatives ','WT.ti','Menu - Current initiatives ');" href="/archives-sector/current-initiatives.htm">Current initiatives</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Developing your archives ','WT.ti','Menu - Developing your archives ');" href="/archives-sector/developing-your-archives.htm">Developing your archives</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Finding funding ','WT.ti','Menu - Finding funding ');" href="/archives-sector/finding-funding.htm">Finding funding</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Share your expertise ','WT.ti','Menu - Share your expertise ');" href="/archives-sector/share-your-expertise.htm">Share your expertise</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Policies and strategies ','WT.ti','Menu - Policies and strategies ');" href="/archives-sector/policy-strategy.htm">Policies and strategies</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Statistics, studies and reports ','WT.ti','Menu - Statistics, studies and reports ');" href="/archives-sector/statistics-studies-reports.htm">Statistics, studies and reports</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Historical Manuscripts Commission ','WT.ti','Menu - Historical Manuscripts Commission ');" href="/archives-sector/hmc.htm">Historical Manuscripts Commission</a></li>
+						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Historical Manuscripts Commission ','WT.ti','Menu - Historical Manuscripts Commission ');" href="/archives-sector/our-archives-sector-role/historical-manuscripts-commission/">Historical Manuscripts Commission</a></li>
+						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Finding funding ','WT.ti','Menu - Finding funding ');" href="/archives-sector/finding-funding/">Finding funding</a></li>
+						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Projects and programmes ','WT.ti','Menu - Projects and programmes ');" href="/archives-sector/projects-and-programmes/">Projects and programmes</a></li>
+						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Case studies and research ','WT.ti','Menu - Case studies and research ');" href="/archives-sector/case-studies-and-research-reports/">Case studies and research reports</a></li>
+						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Operating your archive ','WT.ti','Menu - Operating your archive ');" href="/archives-sector/advice-and-guidance/">Operating your archive</a></li>
+						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Our role in the archives sector ','WT.ti','Menu - Our role in the archives sector ');" href="/archives-sector/our-archives-sector-role/">Our role in the archives sector</a></li>
 					</ul>
 				</div>
         <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-2">
@@ -74,10 +73,9 @@
 						<li class="image"><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Bookshop ','WT.ti','Menu - Bookshop ');" href="/bookshop/">Bookshop</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Image library ','WT.ti','Menu - Image library ');" href="/imagelibrary/">Image library</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Blog ','WT.ti','Menu - Blog ');" href="/blog/">Blog</a></li>
-						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Labs ','WT.ti','Menu - Labs ');" href="/labs/">Labs</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Podcasts and videos ','WT.ti','Menu - Podcasts and videos ');" href="/media/">Podcasts and videos</a></li>
 						<li><a onclick="dcsMultiTrack('DCS.dcsuri','/menu/Contact us ','WT.ti','Menu - Contact us ');" href="/contact/">Contact us</a></li>
-                    <li class="imgContent"><a href="/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>
+						<li class="imgContent"><a href="/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100"></a></li>
                 </ul>
         </div>
     </div>
