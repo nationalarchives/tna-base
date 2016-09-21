@@ -16,6 +16,7 @@ install:
 script:
   - phpunit tests/FunctionTest.php
   - phpunit tests/CommentsTest.php
+  - phpunit tests/TNAGlobalsTest.php
   - grunt qunit
 
 notifications:

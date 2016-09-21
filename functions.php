@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.2.4' );
+define( 'EDD_VERSION', '1.3' );
 
 // Title tag function
 $tnaNetworkSiteName = 'The National Archives';
@@ -96,6 +96,7 @@ add_theme_support( 'post-thumbnails' );
 include 'src/CreateMetaBox.php';
 
 // Includes
+include 'inc/functions/tna-globals.php';
 include 'inc/functions/dimox_breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
 include 'inc/functions/url-rewriting.php';
@@ -104,6 +105,9 @@ include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
 include 'inc/functions/notification-banner.php';
+
+// Set path to mega menu HTML
+set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));
 
 // Gets the first sentence from the content area of a page
 if ( ! function_exists( 'first_sentence' ) ) :
