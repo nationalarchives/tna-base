@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.2.4' );
+define( 'EDD_VERSION', '1.3' );
 
 // Title tag function
 $tnaNetworkSiteName = 'The National Archives';
