@@ -21,7 +21,6 @@
         <ul>
             <li><a href="http://blog.nationalarchives.gov.uk/">Blog</a></li>
             <li><a href="http://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
-            <li><a href="http://labs.nationalarchives.gov.uk/wordpress/">Labs</a></li>
             <li><a href="/webarchive/">UK Government Web Archive</a></li>
             <li><a href="http://www.legislation.gov.uk/" target="_blank">Legislation.gov.uk</a></li>
             <li><a href="https://www.thegazette.co.uk/" target="_blank">The Gazette</a></li>
@@ -31,7 +30,7 @@
         <h4>Follow us</h4>
         <ul>
             <li><a href="https://twitter.com/@UKNatArchives" target="_blank">Twitter</a></li>
-            <li><a href="https://www.youtube.com/user/NationalArchives08" target="_blank">YouTube</a></li>
+            <li><a href="https://www.youtube.com/c/TheNationalArchivesUK" target="_blank">YouTube</a></li>
             <li><a href="https://www.flickr.com/photos/nationalarchives" target="_blank">Flickr</a></li>
             <li><a href="https://www.facebook.com/TheNationalArchives?_rdr=p" target="_blank" >Facebook</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/Commons:The_National_Archives_(United_Kingdom)" target="_blank">Wikimedia Commons</a></li>
