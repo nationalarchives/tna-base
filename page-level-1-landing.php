@@ -10,7 +10,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row" role="banner">
 				<div class="col-md-12">
-					<article class="banner feature-img-bg" <?php
+					<article class="banner feature-img feature-img-bg" <?php
 					if ( has_post_thumbnail() ) {
 						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-page-width' ); ?>
 						style="background-image: url(<?php echo make_path_relative_no_pre_path( $thumbnail_src[0] ); ?>);"
@@ -39,7 +39,7 @@ get_header(); ?>
 								<?php } ?>
 								</div>
 							<?php } ?>
-						<?php get_image_caption() ?>
+						<?php get_image_caption( 'top' ) ?>
 					</article>
 				</div>
 			</div>

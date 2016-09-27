@@ -26,9 +26,9 @@ if (!empty( $feat_box )) { // This is the custom field block
 			echo '<div class="col-xs-12 col-sm-6 col-md-6">';
 			$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'feature-box-thumb' );
 			?>
-			<figure>
+			<figure class="feature-img">
 				<img src="<?php echo make_path_relative($image_url[0]); ?>" class="img-responsive" alt="<?php echo $post->post_title ?>">
-				<?php get_image_caption() ?>
+				<?php get_image_caption( 'top' ) ?>
 			</figure>
 			<?php
 			echo '</div>';
