@@ -28,7 +28,7 @@ if (!empty( $feat_box )) { // This is the custom field block
 			?>
 			<figure class="feature-img">
 				<img src="<?php echo make_path_relative($image_url[0]); ?>" class="img-responsive" alt="<?php echo $post->post_title ?>">
-				<?php get_image_caption( 'top' ) ?>
+				<?php get_image_caption( 'bottom' ) ?>
 			</figure>
 			<?php
 			echo '</div>';
