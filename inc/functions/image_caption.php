@@ -72,14 +72,14 @@ add_filter( 'attachment_fields_to_save', 'save_image_caption_fields', 10, 2 );
     Image caption function
 
     Usage:
-    * feature-img class is needed to wrap image and get_image_caption function
-    * get_image_caption follows image
+    * feature-img class is needed to wrap image and get_image_caption() function
+    * get_image_caption() follows image
     * By default the image caption is positioned at the bottom of the feature-img element
     * To position the caption at the top change the argument
 
     Example:
     <div class="feature-img">
-        <img src="image.jpg" alt="image">
+        <img src="feature-image.jpg" alt="image">
         <?php get_image_caption( 'top' ) ?>
     </div>
 */
