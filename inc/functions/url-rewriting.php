@@ -41,3 +41,16 @@ function do_not_cache_page_if_internal() {
     }
 }
 add_action( 'wp_loaded', 'do_not_cache_page_if_internal' );
+
+function bypass_cache_button( $wp_admin_bar ) {
+    $args = array(
+        'id' => 'bypass-cache',
+        'title' => 'Bypass cache',
+        'href' => get_permalink() . '?bypass=19283748576',
+        'meta' => array(
+            'class' => 'bypass-cache'
+        )
+    );
+    $wp_admin_bar->add_node( $args );
+}
+add_action('admin_bar_menu', 'bypass_cache_button', 50);
