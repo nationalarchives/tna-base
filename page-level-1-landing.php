@@ -10,7 +10,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row" role="banner">
 				<div class="col-md-12">
-					<article class="banner feature-img-bg" <?php
+					<article class="banner feature-img feature-img-bg" <?php
 					if ( has_post_thumbnail() ) {
 						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-page-width' ); ?>
 						style="background-image: url(<?php echo make_path_relative_no_pre_path( $thumbnail_src[0] ); ?>);"
@@ -18,20 +18,21 @@ get_header(); ?>
 						<div class="entry-header">
 							<h1><?php the_title(); ?></h1>
 						</div>
-							<?php if( empty( $post->post_content) ) {
+							<?php
+							$buttonTitle = get_post_meta( $post->ID, 'action_button_title', true );
+							$buttonUrl = get_post_meta( $post->ID, 'action_button_url', true );
+							if( empty( $post->post_content ) ) {
 								// Do nothing - banner content overlay is not displayed
 							} else {
 								// Banner content overlay
 								?>
 								<div class="entry-content">
-									<div class="col-xs-9">
+									<div class="col-xs-9 page-content">
 										<?php the_content(); ?>
 									</div>
 								<?php
-								$buttonTitle = get_post_meta( $post->ID, 'action_button_title', true );
-								$buttonUrl = get_post_meta( $post->ID, 'action_button_url', true );
 								if ( $buttonTitle ) { ?>
-									<div class="col-xs-3 text-right call-to-action-button">
+									<div class="col-xs-3 call-to-action-button">
 										<a href="<?php echo $buttonUrl; ?>" title="<?php echo $buttonTitle; ?>" class="ghost-button">
 											<?php echo $buttonTitle; ?>
 										</a>
@@ -39,7 +40,7 @@ get_header(); ?>
 								<?php } ?>
 								</div>
 							<?php } ?>
-						<?php get_image_caption() ?>
+						<?php get_image_caption( 'top' ) ?>
 					</article>
 				</div>
 			</div>
