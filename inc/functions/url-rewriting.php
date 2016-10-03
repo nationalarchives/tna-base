@@ -45,8 +45,8 @@ add_action( 'wp_loaded', 'do_not_cache_page_if_internal' );
 function bypass_cache_button( $wp_admin_bar ) {
     $args = array(
         'id' => 'bypass-cache',
-        'title' => 'Bypass cache',
-        'href' => get_permalink() . '?bypass=19283748576',
+        'title' => 'Bypass Cache',
+        'href' => get_permalink() . '?donotcachepage=ca591738f861477a7f5fcb49757676b5',
         'meta' => array(
             'class' => 'bypass-cache'
         )
