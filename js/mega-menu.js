@@ -81,8 +81,3 @@ $.fn.webtrends_click_handler = function () {
         })
     })
 };
-
-
-
-
-

@@ -5737,11 +5737,6 @@ a.hue-teal, a.hue-red {
     margin-right: 1em;
     top: 0;
     right: 0; }
-  @media screen and (max-width: 480px) {
-    .feature-img .img-caption-top {
-      margin-bottom: 5em;
-      top: auto;
-      bottom: 0; } }
   .feature-img .eye_caption {
     width: 38px;
     height: 38px;
