@@ -30,27 +30,3 @@ function make_content_urls_relative( $content ) {
 	return str_replace( site_url(), '', $content );
 }
 add_filter( 'the_content', 'make_content_urls_relative' );
-
-// WP Super Cache DONOTCACHEPAGE
-function do_not_cache_page_if_internal() {
-    if ( !is_admin() ) {
-        if ( substr( $_SERVER['REMOTE_ADDR'], 0, 3 ) === '10.' ) {
-            // Internal TNA
-            define( 'DONOTCACHEPAGE', true );
-        }
-    }
-}
-add_action( 'wp_loaded', 'do_not_cache_page_if_internal' );
-
-function bypass_cache_button( $wp_admin_bar ) {
-    $args = array(
-        'id' => 'bypass-cache',
-        'title' => 'Bypass Cache',
-        'href' => get_permalink() . '?donotcachepage=ca591738f861477a7f5fcb49757676b5',
-        'meta' => array(
-            'class' => 'bypass-cache'
-        )
-    );
-    $wp_admin_bar->add_node( $args );
-}
-add_action('admin_bar_menu', 'bypass_cache_button', 50);
