@@ -58,7 +58,7 @@
 					       data-placeholder="Search our website..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the website">Search our website</a></li>
 					<li><a title="Search our catalogue for records" href="#" class="formDestinationChanger"
-					       data-target="http://discovery.nationalarchives.gov.uk/SearchUI/s/res"
+					       data-target="http://discovery.nationalarchives.gov.uk/results/r"
 					       data-placeholder="Search our records..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the catalogue">Search our records</a></li>
 				</ul>
