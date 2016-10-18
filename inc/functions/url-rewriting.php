@@ -30,14 +30,3 @@ function make_content_urls_relative( $content ) {
 	return str_replace( site_url(), '', $content );
 }
 add_filter( 'the_content', 'make_content_urls_relative' );
-
-// WP Super Cache DONOTCACHEPAGE
-function do_not_cache_page_if_internal() {
-    if ( !is_admin() ) {
-        if ( substr( $_SERVER['REMOTE_ADDR'], 0, 3 ) === '10.' ) {
-            // Internal TNA
-            define( 'DONOTCACHEPAGE', true );
-        }
-    }
-}
-add_action( 'wp_loaded', 'do_not_cache_page_if_internal' );

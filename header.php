@@ -47,18 +47,18 @@
 				</a>
 			</div>
 			<div class="col-xs-2 col-sm-5" id="search-field-wrapper">
-				<form action="http://www.nationalarchives.gov.uk/search/quick_search.aspx" method="get" id="globalSearch" role="search" class="hidden-xs">
+				<form action="/search/results" method="get" id="globalSearch" role="search" class="hidden-xs">
 					<span id="scope-selector">&nbsp;</span>
-					<input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch" name="search_text" required aria-required="true">
+					<input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch" name="_q" required aria-required="true">
 					<input type="submit" class="search-button" id="search-button" value="">
 				</form>
 				<ul>
 					<li><a title="Search our website" href="#" class="formDestinationChanger"
-					       data-target="http://www.nationalarchives.gov.uk/search/quick_search.aspx"
-					       data-placeholder="Search our website..." data-fieldName="search_text" role="button"
+					       data-target="/search/results"
+					       data-placeholder="Search our website..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the website">Search our website</a></li>
 					<li><a title="Search our catalogue for records" href="#" class="formDestinationChanger"
-					       data-target="http://discovery.nationalarchives.gov.uk/SearchUI/s/res"
+					       data-target="http://discovery.nationalarchives.gov.uk/results/r"
 					       data-placeholder="Search our records..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the catalogue">Search our records</a></li>
 				</ul>

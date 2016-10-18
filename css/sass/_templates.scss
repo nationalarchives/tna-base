@@ -85,6 +85,9 @@ article {
       h2, h3, h4, p {
         margin: 0;
       }
+      .call-to-action-button {
+        text-align: right;
+      }
     }
   }
   .feature-img-bg {
@@ -127,7 +130,14 @@ article {
   @media only screen and (max-width: 480px) {
     .banner {
       .entry-content {
-        display: none;
+        padding: 0;
+        .page-content {
+          display: none;
+        }
+      }
+      .entry-content .call-to-action-button {
+        width: 100%;
+        text-align: center;
       }
     }
   }
