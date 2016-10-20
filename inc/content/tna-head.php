@@ -27,7 +27,7 @@
   "url": "http://www.nationalarchives.gov.uk/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "http://www.nationalarchives.gov.uk/search/search_results.aspx?Page=1&QueryText={search_term}&SelectedDatabases=WEBSITE",
+    "target": "http://www.nationalarchives.gov.uk/search/results?_q={search_term}",
     "query-input": "required name=search_term"
   }
 }
