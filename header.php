@@ -68,7 +68,7 @@
 			<div class="col-md-12">
 				<button class="search-expander">&nbsp;</button>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch"
-				      action="http://www.nationalarchives.gov.uk/search/search_results.aspx" role="search">
+				      action="/search/results" role="search">
 					<div class="input-group">
 						<input type="text" placeholder="Search our website..." required aria-required="true" name="QueryText" value="">
 						<span class="input-group-addon"><input type="submit" value=""></span>
