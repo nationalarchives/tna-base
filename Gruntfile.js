@@ -54,25 +54,11 @@ module.exports = function (grunt) {
                     'js/compiled/tna-base.min.js': ['js/compiled/tna-base.js']
                 }
             }
-        },
-        browserSync: {
-            dev: {
-                bsFiles: {
-                    src: [
-                        'css/*.css'
-                    ]
-                },
-                options: {
-                    watchTask: true,
-                    proxy: 'tna-website-dev:8888'
-                }
-            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -80,6 +66,5 @@ module.exports = function (grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify', 'qunit', 'watch']);
-    grunt.registerTask('bSync', ['browserSync', 'watch']);
 
 };
