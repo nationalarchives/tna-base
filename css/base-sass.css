@@ -5519,6 +5519,15 @@ aside {
   aside .sidebar-nav {
     background-color: #fff;
     padding: 20px 0 0 20px; }
+  aside .sidebar-contact {
+    background-color: #fff;
+    padding: 20px 0 20px 20px; }
+  aside .live-chat img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; }
+  aside .sidebar-item h3 {
+    margin-top: 0; }
 
 /* TNA print styles */
 @media print {
