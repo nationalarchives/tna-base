@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['js/generic-utilities.js', 'js/mega-menu.js', 'js/mitigate-target-blank.js', 'js/run-on-page-load.js', 'js/back-to-top.js', 'js/cookie-notice.js', 'js/global-search.js', 'js/image-caption.js'],
+                src: ['js/generic-utilities.js', 'js/mega-menu.js', 'js/mitigate-target-blank.js', 'js/back-to-top.js', 'js/cookie-notice.js', 'js/global-search.js', 'js/image-caption.js', 'js/tna-global.js','js/run-on-page-load.js'],
                 dest: 'js/compiled/tna-base.js'
             }
         },
