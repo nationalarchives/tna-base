@@ -5526,6 +5526,10 @@ aside {
     max-width: 100%;
     height: auto;
     width: 100%; }
+  aside .live-chat div:first-of-type p {
+    margin-bottom: 0.6em; }
+  aside .live-chat div:last-of-type {
+    margin-bottom: 1.5em; }
   aside .sidebar-item h3 {
     margin-top: 0; }
 

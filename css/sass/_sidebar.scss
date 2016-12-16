@@ -41,6 +41,12 @@ aside {
     height: auto;
     width: 100%;
   }
+  .live-chat div:first-of-type p {
+    margin-bottom: 0.6em;
+  }
+  .live-chat div:last-of-type {
+    margin-bottom: 1.5em;
+  }
   .sidebar-item h3 {
     margin-top: 0;
   }
