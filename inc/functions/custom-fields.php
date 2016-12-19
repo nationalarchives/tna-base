@@ -250,10 +250,10 @@ function notification_meta_boxes() {
 			'fields' => array(
 				array(
 					'name' => 'Banner',
-					'desc' => '',
+					'desc' => '<p>Enabling this banner adds a notification along the top of this page only.</p>',
 					'id' => 'notification_banner_show',
 					'type' => 'select',
-					'options' => array('disable', 'enable')
+					'options' => array('Disable', 'Enable')
 				),
 				array(
 					'name' => 'Banner title',
