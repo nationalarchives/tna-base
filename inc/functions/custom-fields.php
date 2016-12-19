@@ -246,7 +246,7 @@ function notification_meta_boxes() {
 			'title' => 'Notification page banner options',
 			'pages' => 'page',
 			'context' => 'normal',
-			'priority' => 'high',
+			'priority' => 'low',
 			'fields' => array(
 				array(
 					'name' => 'Banner',
