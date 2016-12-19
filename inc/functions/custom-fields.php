@@ -239,4 +239,43 @@ function level_one_meta_boxes() {
 }
 add_action( 'init', 'level_one_meta_boxes' );
 
+function notification_meta_boxes() {
+	$notification_meta_boxes = array(
+		array(
+			'id' => 'notification_options',
+			'title' => 'Notification page banner options',
+			'pages' => 'page',
+			'context' => 'normal',
+			'priority' => 'low',
+			'fields' => array(
+				array(
+					'name' => 'Banner',
+					'desc' => '<p>Enabling this banner adds a notification along the top of this page only.</p>',
+					'id' => 'notification_banner_show',
+					'type' => 'select',
+					'options' => array('Disable', 'Enable')
+				),
+				array(
+					'name' => 'Banner title',
+					'desc' => '',
+					'id' => 'notification_banner_title',
+					'type' => 'text',
+					'std' => ''
+				),
+				array(
+					'name' => 'Banner content',
+					'desc' => '',
+					'id' => 'notification_banner_content',
+					'type' => 'textarea',
+					'std' => ''
+				)
+			)
+		)
+	);
+	foreach ( $notification_meta_boxes as $meta_box ) {
+		$notification_box = new CreateMetaBox( $meta_box );
+	}
+}
+add_action( 'init', 'notification_meta_boxes' );
+
 
