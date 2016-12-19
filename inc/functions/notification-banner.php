@@ -24,7 +24,7 @@ if ( ! function_exists( 'notification_banner' ) ) :
 			</div>
 			<?php
 		}
-		elseif ( get_post_meta( $post->ID, 'notification_banner_show', true ) == 'enable' ) {
+		elseif ( get_post_meta( $post->ID, 'notification_banner_show', true ) == 'Enable' ) {
 			$notice_page_title = get_post_meta( $post->ID, 'notification_banner_title', true );
 			$notice_page_text = get_post_meta( $post->ID, 'notification_banner_content', true );
 			?>
