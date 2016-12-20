@@ -277,9 +277,20 @@ $.fn.webtrends_click_handler = function () {
     $.fn.newsletterBackToOrigin = function (options) {
         var settings = $.extend({}, $.fn.newsletterBackToOrigin.defaults, options);
         return this.each(function () {
-            var thankYouURL = "http://nationalarchives.gov.uk/news/subscribe-confirmation.htm",
+            var thankYouURL = "http://nationalarchives.gov.uk/about/get-involved/newsletters/thank-you/",
+                thankYouURLTestlb = "http://getinvolved.testlb.nationalarchives.gov.uk/newsletters/thank-you/",
+                thankYouURLDev = "http://tna-base:8888/thank-you/",
                 newValue = "?oldurl=" + window.location.href;
-            return settings.$element.val(thankYouURL + newValue);
+
+            if(window.location.href === "http://nationalarchives.gov.uk") {
+                return settings.$element.val(thankYouURL + newValue);
+            }
+            else if(window.location.href === "http://getinvolved.testlb.nationalarchives.gov.uk") {
+                return settings.$element.val(thankYouURLTestlb + newValue);
+            }
+            else {
+                return settings.$element.val(thankYouURLDev + newValue);
+            }
         });
     }
 
