@@ -5,7 +5,7 @@
 
     <div class="news-content">
         <h2>Send me The National Archives’ newsletter</h2>
-        <p>Monthly round-ups of news, blogs, offers and events.</p>
+        <p>A monthly round-up of news, blogs, offers and events</p>
     </div>
 
     <div class="news-form">
