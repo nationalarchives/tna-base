@@ -26,7 +26,9 @@
 		<div class="phone sidebar-item">
 			<div class="col-xs-8 col-sm-12 col-md-8">
 				<h3>Phone</h3>
-				<p>+44 (0) 20 8876 3444</p>
+				<p>+44 (0) 20 8876 3444<br/>
+				Uses speech recognition<br/>
+				<a href="/contact-us/#phone">Opening times</a></p>
 			</div>
 			<div class="col-xs-4 col-sm-6 col-md-4">
 				<p>
