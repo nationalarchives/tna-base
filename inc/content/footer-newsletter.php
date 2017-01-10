@@ -2,7 +2,6 @@
     <div class="news-icon">
         <img src="<?php  echo make_path_relative(get_template_directory_uri()); ?>/img/tna-newsletter-icon.png" alt="TNA Newsletter Icon"/>
     </div>
-    </div>
 
     <div class="news-content">
         <h2>Send me The National Archives’ newsletter</h2>
