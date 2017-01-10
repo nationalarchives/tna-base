@@ -1,6 +1,7 @@
 <div class="newsletter-template">
     <div class="news-icon">
-        <img src="<?php  echo get_template_directory_uri(); ?>/img/tna-newsletter-icon.png" alt="TNA Newsletter Icon"/>
+        <img src="<?php  echo make_path_relative(get_template_directory_uri()); ?>/img/tna-newsletter-icon.png" alt="TNA Newsletter Icon"/>
+    </div>
     </div>
 
     <div class="news-content">
