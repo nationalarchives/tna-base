@@ -23,7 +23,7 @@ class CreateMetaBox {
 	function show() {
 		global $post;
 		// Use nonce for verification
-		echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce( basename( __FILE__ ) ), '" />';
+		echo '<input type="hidden" name="tna_meta_box_nonce" value="', wp_create_nonce( basename( __FILE__ ) ), '" />';
 		echo '<table class="form-table">';
 		foreach ( $this->_meta_box['fields'] as $field ) {
 			// get current post meta data
@@ -78,7 +78,7 @@ class CreateMetaBox {
 	// Save data from meta box
 	function save( $post_id ) {
 		// verify nonce
-		if ( ! wp_verify_nonce( $_POST['mytheme_meta_box_nonce'], basename( __FILE__ ) ) ) {
+		if ( ! isset( $_POST['tna_meta_box_nonce'] ) || ! wp_verify_nonce( $_POST['tna_meta_box_nonce'], basename( __FILE__ ) ) ) {
 			return $post_id;
 		}
 		// check autosave
