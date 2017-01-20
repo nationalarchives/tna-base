@@ -55,4 +55,33 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(function_exists('get_image_caption'));
     }
+
+    public function test_exists_notification_banner()
+    {
+        $this->assertTrue(function_exists('notification_banner'));
+    }
+    public function test_exists_banner_settings_page()
+    {
+        $this->assertTrue(function_exists('banner_settings_page'));
+    }
+    public function test_exists_add_banner_menu_item()
+    {
+        $this->assertTrue(function_exists('add_banner_menu_item'));
+    }
+    public function test_exists_enable_banner_element()
+    {
+        $this->assertTrue(function_exists('enable_banner_element'));
+    }
+    public function test_exists_banner_title_element()
+    {
+        $this->assertTrue(function_exists('banner_title_element'));
+    }
+    public function test_exists_banner_text_element()
+    {
+        $this->assertTrue(function_exists('banner_text_element'));
+    }
+    public function test_exists_display_banner_panel_fields()
+    {
+        $this->assertTrue(function_exists('display_banner_panel_fields'));
+    }
 }
