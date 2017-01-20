@@ -30,6 +30,8 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
 add_filter( 'disable_wpseo_json_ld_search', '__return_true' ); // Disables Google Sitelink Search Box in Yoast's SEO
 add_filter( 'template_redirect', 'redirect_if_404' );
+add_filter( 'attachment_fields_to_edit', 'image_caption_fields', 10, 2 );
+add_filter( 'attachment_fields_to_save', 'save_image_caption_fields', 10, 2 );
 
 // Enable css style inside editor
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
