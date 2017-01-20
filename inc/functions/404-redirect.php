@@ -6,7 +6,8 @@ if ( ! function_exists( 'redirect_if_404' ) ) :
 			// Pre path for child sites
 			global $pre_path;
 			// Format string with placeholders for components
-			$requested_page = $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+			$scheme = ( isset($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : '' );
+			$requested_page = $scheme . "://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 			// Sanitizing the URL before use
 			$requested_page_safe = filter_var( $requested_page, FILTER_SANITIZE_URL );
 			$requested_page_safe = str_replace( site_url(), 'http://www.nationalarchives.gov.uk' . $pre_path, $requested_page_safe );
