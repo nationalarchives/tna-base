@@ -24,6 +24,7 @@ add_action( 'wp_enqueue_scripts', 'tna_styles' );
 add_action( 'wp_enqueue_scripts', 'tna_scripts' );
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 add_action( 'after_setup_theme', 'theme_slug_setup' );
+add_action( 'after_setup_theme', 'tna_theme_setup' ); // images
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 // add_filter
@@ -32,6 +33,10 @@ add_filter( 'disable_wpseo_json_ld_search', '__return_true' ); // Disables Googl
 add_filter( 'template_redirect', 'redirect_if_404' );
 add_filter( 'attachment_fields_to_edit', 'image_caption_fields', 10, 2 );
 add_filter( 'attachment_fields_to_save', 'save_image_caption_fields', 10, 2 );
+add_filter( 'image_size_names_choose', 'profile_img' );
+add_filter( 'the_content', 'add_image_responsive_class' );
+add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10 , 2 );
 
 // Enable css style inside editor
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
