@@ -26,6 +26,8 @@ add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 add_action( 'after_setup_theme', 'theme_slug_setup' );
 add_action( 'after_setup_theme', 'tna_theme_setup' ); // images
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+add_action( 'admin_menu', 'add_banner_menu_item' );
+add_action( 'admin_init', 'display_banner_panel_fields' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
