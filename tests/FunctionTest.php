@@ -42,4 +42,17 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(function_exists('dimox_breadcrumbs'));
     }
+
+    public function test_exists_image_caption_fields()
+    {
+        $this->assertTrue(function_exists('image_caption_fields'));
+    }
+    public function test_exists_save_image_caption_fields()
+    {
+        $this->assertTrue(function_exists('save_image_caption_fields'));
+    }
+    public function test_exists_get_image_caption()
+    {
+        $this->assertTrue(function_exists('get_image_caption'));
+    }
 }
