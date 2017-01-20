@@ -37,4 +37,9 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(function_exists('redirect_if_404'));
     }
+
+    public function test_exists_dimox_breadcrumbs()
+    {
+        $this->assertTrue(function_exists('dimox_breadcrumbs'));
+    }
 }
