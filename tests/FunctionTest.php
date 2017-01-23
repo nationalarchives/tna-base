@@ -101,4 +101,13 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(function_exists('display_banner_panel_fields'));
     }
+
+    public function test_exists_theme_slug_setup()
+    {
+        $this->assertTrue(function_exists('display_banner_panel_fields'));
+    }
+    public function test_exists_title_tag()
+    {
+        $this->assertTrue(function_exists('display_banner_panel_fields'));
+    }
 }

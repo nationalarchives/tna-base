@@ -23,7 +23,7 @@ include 'inc/functions/notification-banner.php';
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
 add_action( 'wp_enqueue_scripts', 'tna_scripts' );
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
-add_action( 'after_setup_theme', 'theme_slug_setup' );
+add_action( 'after_setup_theme', 'theme_slug_setup' ); // title tag
 add_action( 'after_setup_theme', 'tna_theme_setup' ); // images
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_action( 'admin_menu', 'add_banner_menu_item' );
