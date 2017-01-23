@@ -41,6 +41,9 @@ add_filter( 'the_content', 'add_image_responsive_class' );
 add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
 add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10 , 2 );
 add_filter( 'tiny_mce_before_init', 'classes_tinymce' );
+add_filter( 'script_loader_src', 'tna_styles_scripts_relative' );
+add_filter( 'style_loader_src', 'tna_styles_scripts_relative' );
+add_filter( 'the_content', 'make_content_urls_relative' );
 
 // Enable css style inside editor
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
