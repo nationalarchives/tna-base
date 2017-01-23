@@ -28,6 +28,7 @@ add_action( 'after_setup_theme', 'tna_theme_setup' ); // images
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_action( 'admin_menu', 'add_banner_menu_item' );
 add_action( 'admin_init', 'display_banner_panel_fields' );
+add_action( 'init', 'add_button' ); // tinymce
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
@@ -39,6 +40,7 @@ add_filter( 'image_size_names_choose', 'profile_img' );
 add_filter( 'the_content', 'add_image_responsive_class' );
 add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
 add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10 , 2 );
+add_filter( 'tiny_mce_before_init', 'classes_tinymce' );
 
 // Enable css style inside editor
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );

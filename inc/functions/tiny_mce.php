@@ -1,6 +1,5 @@
 <?php
 
-add_action('init', 'add_button');
 function add_button() {
     if ( current_user_can('edit_posts') &&  current_user_can('edit_pages') )
     {
@@ -18,7 +17,6 @@ function add_plugin($plugin_array) {
     return $plugin_array;
 }
 
-add_filter('tiny_mce_before_init', 'classes_tinymce');
 function classes_tinymce($settings) {
     $new_styles = array(
         array(

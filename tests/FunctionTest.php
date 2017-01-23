@@ -84,4 +84,21 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(function_exists('display_banner_panel_fields'));
     }
+
+    public function test_exists_add_button()
+    {
+        $this->assertTrue(function_exists('display_banner_panel_fields'));
+    }
+    public function test_exists_register_button()
+    {
+        $this->assertTrue(function_exists('display_banner_panel_fields'));
+    }
+    public function test_exists_add_plugin()
+    {
+        $this->assertTrue(function_exists('display_banner_panel_fields'));
+    }
+    public function test_exists_classes_tinymce()
+    {
+        $this->assertTrue(function_exists('display_banner_panel_fields'));
+    }
 }
