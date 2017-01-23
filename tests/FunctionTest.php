@@ -87,27 +87,53 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
 
     public function test_exists_add_button()
     {
-        $this->assertTrue(function_exists('display_banner_panel_fields'));
+        $this->assertTrue(function_exists('add_button'));
     }
     public function test_exists_register_button()
     {
-        $this->assertTrue(function_exists('display_banner_panel_fields'));
+        $this->assertTrue(function_exists('register_button'));
     }
     public function test_exists_add_plugin()
     {
-        $this->assertTrue(function_exists('display_banner_panel_fields'));
+        $this->assertTrue(function_exists('add_plugin'));
     }
     public function test_exists_classes_tinymce()
     {
-        $this->assertTrue(function_exists('display_banner_panel_fields'));
+        $this->assertTrue(function_exists('classes_tinymce'));
     }
 
     public function test_exists_theme_slug_setup()
     {
-        $this->assertTrue(function_exists('display_banner_panel_fields'));
+        $this->assertTrue(function_exists('theme_slug_setup'));
     }
     public function test_exists_title_tag()
     {
-        $this->assertTrue(function_exists('display_banner_panel_fields'));
+        $this->assertTrue(function_exists('title_tag'));
+    }
+
+    public function test_exists_tna_styles_scripts_relative()
+    {
+        $this->assertTrue(function_exists('tna_styles_scripts_relative'));
+    }
+    public function test_exists_make_path_relative()
+    {
+        $this->assertTrue(function_exists('make_path_relative'));
+    }
+    public function test_exists_make_path_relative_no_pre_path()
+    {
+        $this->assertTrue(function_exists('make_path_relative_no_pre_path'));
+    }
+    public function test_exists_tna_wp_head()
+    {
+        $this->assertTrue(function_exists('tna_wp_head'));
+    }
+    public function test_exists_make_content_urls_relative()
+    {
+        $this->assertTrue(function_exists('make_content_urls_relative'));
+    }
+
+    public function testCreateMetaBox()
+    {
+        $this->assertTrue( class_exists('CreateMetaBox') );
     }
 }
