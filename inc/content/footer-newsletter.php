@@ -1,6 +1,6 @@
 <div class="newsletter-template">
     <div class="news-icon">
-        <img src="<?php  echo make_path_relative(get_template_directory_uri()); ?>/img/tna-newsletter-icon.png" alt="TNA Newsletter Icon"/>
+        <img src="http://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/tna-newsletter-icon.png" alt="TNA Newsletter Icon"/>
     </div>
 
     <div class="news-content">
@@ -14,7 +14,7 @@
             <!-- input type="hidden" name="addressbookid" value="732466" --> <!-- first world war portal sign up -->
             <input type="hidden" name="userid" value="173459">
             <input type="hidden" name="ReturnURL"
-                   value="http://nationalarchives.gov.uk/news/subscribe-confirmation.htm">
+                   value="http://www.nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/">
             <label for="Email">Send me The National Archives’ newsletter</label>
             <input type="email" name="Email" id="Email" required="required"
                    placeholder="Enter your email address">
