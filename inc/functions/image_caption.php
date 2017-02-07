@@ -43,8 +43,6 @@ function image_caption_fields( $form_fields, $post ) {
     return $form_fields;
 }
 
-add_filter( 'attachment_fields_to_edit', 'image_caption_fields', 10, 2 );
-
 /**
  * Save values of Image caption description and URL in media uploader
  *
@@ -65,8 +63,6 @@ function save_image_caption_fields( $post, $attachment ) {
 
     return $post;
 }
-
-add_filter( 'attachment_fields_to_save', 'save_image_caption_fields', 10, 2 );
 
 /*
     Image caption function

@@ -65,7 +65,6 @@ function banner_settings_page() {
 function add_banner_menu_item() {
 	add_options_page('Notification banner settings', 'Notification banner', 'manage_options', 'my-setting-admin', 'banner_settings_page', null, 99);
 }
-add_action('admin_menu', 'add_banner_menu_item');
 
 // Callback functions for form
 function enable_banner_element() {
@@ -105,5 +104,4 @@ function display_banner_panel_fields() {
 	register_setting('section', 'banner_title');
 	register_setting('section', 'banner_text');
 }
-add_action('admin_init', 'display_banner_panel_fields');
 

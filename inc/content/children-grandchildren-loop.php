@@ -35,7 +35,7 @@
 						if ( $redirect ) { ?>
 							<a href="<?php echo $redirect; ?>" class="thumbnail" title="<?php echo $post->post_title ?>">
 						<?php } else { ?>
-							<a href="<?php echo make_path_relative( get_page_link( $page->ID ) ) ?>" class="thumbnail" title="<?php echo $post->post_title ?>">
+							<a href="<?php echo make_path_relative( get_page_link() ) ?>" class="thumbnail" title="<?php echo $post->post_title ?>">
 						<?php } ?>
 							<img src="<?php echo( make_path_relative( $image_url[0] ) ); ?>" class="img-responsive" alt="<?php echo $post->post_title ?>">
 						</a>
