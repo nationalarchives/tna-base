@@ -29,7 +29,7 @@ $.fn.mega_menu_interactions = function () {
 $.fn.append_promotional_image = function () {
     return this.each(function () {
         var $this = $(this);
-        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="http://www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
+        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="//www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
     })
 };
 
@@ -109,15 +109,7 @@ $.fn.webtrends_click_handler = function () {
         });
     };
 
-})(jQuery);;$('a[target="_blank"]').add_attributes_to_target_blank();
-
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
-
-$("ul.sub-menu:last").append_promotional_image();
-
-$(".main-ul > li > a").append_home_links_to_mega_menu();
-
-$('a', '.mega-menu').webtrends_click_handler();;$(document).ready(function () {
+})(jQuery);;$(document).ready(function () {
 
     // Check the position of the page
     $(window).scroll(function(){
@@ -269,3 +261,42 @@ $('a', '.mega-menu').webtrends_click_handler();;$(document).ready(function () {
         $('.image_caption_back').toggle();
     });
 });
+;// The process for adding JavaScript to this repository is as follows:
+
+// (1) If it involves the use of a third-party plugin or library, place the required file within the /lib directory
+// (2) Task specific scripts should be added to this directory
+// (3) Any generic, reusable utilities should be placed within generic-utilities.js
+// (4) The newly created file should be added to the 'uglify' task within Gruntfile.js
+/*
+ * The National Archives
+ * Author:  Mihai Diaconita - WEB TEAM
+ * Newsletter Back To Origin Jquery plugin
+ * */
+
+(function ($) {
+    $.fn.newsletterBackToOrigin = function (options) {
+        var settings = $.extend({}, $.fn.newsletterBackToOrigin.defaults, options);
+        return this.each(function () {
+            var thankYouURL = "http://www.nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/",
+                newValue = "?oldurl=" + window.location.href;
+                return settings.$element.val(thankYouURL + newValue);
+        });
+    }
+
+    // Default settings
+    $.fn.newsletterBackToOrigin.defaults = {
+        $element: $('input[name="ReturnURL"]'),
+    }
+}(jQuery));;$('a[target="_blank"]').add_attributes_to_target_blank();
+
+$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+
+$("ul.sub-menu:last").append_promotional_image();
+
+$(".main-ul > li > a").append_home_links_to_mega_menu();
+
+$('a', '.mega-menu').webtrends_click_handler();
+
+// Make sure the signup newsletter form matches the ID below
+// By default target element is $('input[name="ReturnURL"]')
+$('#signup').newsletterBackToOrigin();

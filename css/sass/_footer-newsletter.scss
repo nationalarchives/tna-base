@@ -1,0 +1,113 @@
+// Newsletter form CSS namespace
+.newsletter-template {
+
+  background: #dddddd;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  @media (max-width: 1155px) {
+    border-left: 15px solid #008484;
+  }
+  .news-icon {
+    background: #008484;
+    vertical-align: middle;
+    text-align: center;
+    width: 157px;
+    height: 127px;
+    display: inline-block;
+    padding: 38px 0 0 0;
+    float: left;
+    overflow: hidden;
+    img {
+      width: 60px;
+      height: 48px;
+
+    }
+    @media (max-width: 1155px) {
+      display: none;
+    }
+  }
+  .news-content {
+    width:45.879032258064516%;
+    display: inline-block;
+    float: left;
+    overflow:hidden;
+    h2 {
+      margin: 0;
+      padding: 0;
+      padding: 36px 0 0 20px;
+      font-weight: 300;
+      font-size: 24px;
+      font-family: 'Bitter', serif;
+      text-align:left;
+      @media (max-width: 1155px) {
+        padding: 10px 15px 10px 20px;
+      }
+      @media (max-width: 974px) {
+        width:100%;
+        display:block;
+      }
+    }
+    p {
+      padding: 2px 0 0 20px;
+      @media (max-width: 1155px) {
+        padding: 0 0 0 20px;
+      }
+      @media (max-width: 974px) {
+        width:100%;
+        display:block;
+      }
+    }
+    @media(max-width:1155px){
+      width:47%;
+    }
+    @media (max-width: 974px) {
+      width:100%;
+      display:block;
+    }
+  }
+  .news-form {
+    width: 35.879032258064516%;
+    display: inline-block;
+    padding: 45px 0 0 0;
+    float: right;
+    form {
+      label {
+        display: none;
+      }
+      input {
+        &[type="email"] {
+          width: 73% !important;
+          height: 37px !important;
+          @media (max-width: 1155px) {
+            margin-bottom:10px;
+          }
+          @media (max-width: 370px) {
+            width: 100%;
+          }
+        }
+        &[type="submit"] {
+          height: 36px;
+          border: none;
+          background: #008484;
+          color: #fff;
+          font-size: 16px;
+          padding: 0 10px 0 10px;
+        }
+      }
+    }
+    @media (max-width: 1155px) {
+      width: 48%;
+    }
+    @media (max-width: 974px) {
+      padding: 0px 0 16px 20px;
+      width:70%;
+      display:block;
+      float:left;
+    }
+    @media (max-width: 370px) {
+      width: 100%;
+      padding-right:10px;
+    }
+  }
+}

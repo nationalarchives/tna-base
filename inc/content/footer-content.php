@@ -10,7 +10,7 @@
     <div class="footer-col col-xs-12 col-sm-6 col-md-3">
         <h4>Find out more</h4>
         <ul>
-            <li><a href="/contact/">Contact us</a></li>
+            <li><a href="/contact-us/">Contact us</a></li>
 							<li><a href="/about/press-room/">Press room</a></li>
 							<li><a href="about/jobs/">Jobs and careers</a></li>
             <li><a href="/about/get-involved/friends-of-the-national-archives/">Friends of The National Archives</a></li>

@@ -1,68 +1,52 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.6' );
+define( 'EDD_VERSION', '1.7' );
 
-// Title tag function
-$tnaNetworkSiteName = 'The National Archives';
+// Included classes
+include 'src/CreateMetaBox.php';
 
-function theme_slug_setup() {
-	add_theme_support( 'title-tag' );
-}
-add_action( 'after_setup_theme', 'theme_slug_setup' );
+// Include functions
+include 'inc/functions/tna-functions.php';
+include 'inc/functions/title-tag.php';
+include 'inc/functions/tna-globals.php';
+include 'inc/functions/dimox_breadcrumbs.php';
+include 'inc/functions/custom-fields.php';
+include 'inc/functions/url-rewriting.php';
+include 'inc/functions/images.php';
+include 'inc/functions/404-redirect.php';
+include 'inc/functions/image_caption.php';
+include 'inc/functions/tiny_mce.php';
+include 'inc/functions/notification-banner.php';
 
-add_filter( 'document_title_parts', function ( $title ) {
-		global $tnaNetworkSiteName;
-		if ( is_home() || is_front_page() ) {
-			unset( $title['tagline'] );
-		}
-		$title['title'] = get_the_title();
-		$title['site'] = $tnaNetworkSiteName;
-	return $title;
-}, 10, 1 );
-
-// Enqueue styles and scripts
-function tna_styles() {
-	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.css.min', array(), EDD_VERSION, 'all' );
-	wp_register_style( 'tna-google-fonts',
-		'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Bitter', '', '', 'all' );
-	wp_enqueue_style( 'tna-styles' );
-	wp_enqueue_style( 'tna-google-fonts' );
-}
-
+// add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
-
-function tna_scripts() {
-	wp_register_script( 'global-jquery', get_template_directory_uri() . '/js/lib/jquery-1.11.3.min.js', array(), '1.11.3' );
-	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr.js', array(), '2.8.3', false );
-	wp_register_script( 'tna-base-min', get_template_directory_uri() . '/js/compiled/tna-base.min.js', array(), EDD_VERSION, true );
-	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/lib/webtrends.js', array(), EDD_VERSION, true );
-	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php') || is_category() ) {
-		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/lib/jQuery.equalHeights.js', array(),
-			EDD_VERSION, true );
-		wp_register_script( 'equal-heights-var', get_template_directory_uri() . '/js/equalHeights.js', array(),
-			EDD_VERSION, true );
-		wp_enqueue_script( 'equal-heights' );
-		wp_enqueue_script( 'equal-heights-var' );
-	}
-	wp_enqueue_script( 'global-jquery' );
-	wp_enqueue_script( 'modernizr' );
-	wp_enqueue_script( 'webtrends' );
-	wp_enqueue_script( 'tna-base-min' );
-}
-
 add_action( 'wp_enqueue_scripts', 'tna_scripts' );
-
-// Add CSS stylesheet to the dashboard
-function load_custom_wp_admin_style() {
-	wp_register_style( 'tna-dashboard', get_template_directory_uri() . '/css/dashboard.css', false, '1.0.0' );
-	wp_enqueue_style( 'tna-dashboard' );
-}
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+add_action( 'after_setup_theme', 'theme_slug_setup' ); // title tag
+add_action( 'after_setup_theme', 'tna_theme_setup' ); // images
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+add_action( 'admin_menu', 'add_banner_menu_item' );
+add_action( 'admin_init', 'display_banner_panel_fields' );
+add_action( 'init', 'add_button' ); // tinymce
 
-/* Enable css style inside editor */
+// add_filter
+add_filter( 'document_title_parts', 'title_tag', 10, 1 );
+add_filter( 'disable_wpseo_json_ld_search', '__return_true' ); // Disables Google Sitelink Search Box in Yoast's SEO
+add_filter( 'template_redirect', 'redirect_if_404' );
+add_filter( 'attachment_fields_to_edit', 'image_caption_fields', 10, 2 );
+add_filter( 'attachment_fields_to_save', 'save_image_caption_fields', 10, 2 );
+add_filter( 'image_size_names_choose', 'profile_img' );
+add_filter( 'the_content', 'add_image_responsive_class' );
+add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10 , 2 );
+add_filter( 'tiny_mce_before_init', 'classes_tinymce' );
+add_filter( 'script_loader_src', 'tna_styles_scripts_relative' );
+add_filter( 'style_loader_src', 'tna_styles_scripts_relative' );
+add_filter( 'the_content', 'make_content_urls_relative' );
+
+// Enable css style inside editor
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
-
 
 // Remove the emoji from the head section
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -83,42 +67,13 @@ remove_action( 'wp_head', 'wlwmanifest_link' );
 remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 
-// Disables the Google Sitelink Search Box functionality in Yoast's WordPress SEO
-add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
-
 // Theme Support
 add_theme_support( 'post-thumbnails' );
-
-// Included classes
-include 'src/CreateMetaBox.php';
-
-// Includes
-include 'inc/functions/tna-globals.php';
-include 'inc/functions/dimox_breadcrumbs.php';
-include 'inc/functions/custom-fields.php';
-include 'inc/functions/url-rewriting.php';
-include 'inc/functions/images.php';
-include 'inc/functions/404-redirect.php';
-include 'inc/functions/image_caption.php';
-include 'inc/functions/tiny_mce.php';
-include 'inc/functions/notification-banner.php';
 
 // Set path to mega menu HTML
 set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));
 
-// Gets the first sentence from the content area of a page
-if ( ! function_exists( 'first_sentence' ) ) :
-	function first_sentence( $content ) {
-		$content = strip_tags( $content );
-		$pos     = strpos( $content, "." );
+// Call shortcode inside wordpress by using [newsletter-back-button]
+add_shortcode('newsletter-back-button', 'get_query_string_newsletter_previous_url');
 
-		return substr( $content, 0, $pos + 1 );
-	}
-endif;
-
-// Enables the Excerpt meta box in Page edit screen
-function wpcodex_add_excerpt_support_for_pages() {
-	add_post_type_support( 'page', 'excerpt' );
-}
-add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 

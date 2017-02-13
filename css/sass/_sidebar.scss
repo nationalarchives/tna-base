@@ -32,4 +32,22 @@ aside {
     background-color: #fff;
     padding: 20px 0 0 20px;
   }
+  .sidebar-contact {
+    background-color: #fff;
+    padding: 20px 0 20px 20px;
+  }
+  .live-chat img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
+  .live-chat div:first-of-type p {
+    margin-bottom: 0.6em;
+  }
+  .live-chat div:last-of-type {
+    margin-bottom: 1.5em;
+  }
+  .sidebar-item h3 {
+    margin-top: 0;
+  }
 }
