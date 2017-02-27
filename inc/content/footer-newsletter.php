@@ -9,7 +9,7 @@
     </div>
 
     <div class="news-form">
-        <form name="signup" id="signup" action="http://r1.wiredemail.net/signup.ashx" method="post" role="form">
+        <form name="signup" id="signup" action="https://r1-t.trackedlink.net/signup.ashx" method="post" role="form">
             <input type="hidden" name="addressbookid" value="636353"> <!-- homepage and general sign up -->
             <!-- input type="hidden" name="addressbookid" value="732466" --> <!-- first world war portal sign up -->
             <input type="hidden" name="userid" value="173459">
