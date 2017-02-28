@@ -75,7 +75,6 @@ QUnit.test("No links should have click handlers before the plugin is applied", f
 
 QUnit.test("CSS displays property of block on click.", function( assert ) {
     var done1 = assert.async();
-    //$( '.sub-menu' ).click().slideToggle( 'fast' );
     $('.sub-menu').click();
     setTimeout( function(){
         assert.equal( $( '.sub-menu' ).css( 'display' ), 'block', ".sub-menu has a css property of display:block on click.");
