@@ -6,7 +6,7 @@ QUnit.test("Checking #mega-menu-pull-down shows #nav", function (assert) {
 
     $('#nav').hide();
 
-    $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+    $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_button_toggle();
 
     $('#mega-menu-pull-down').click();
 
@@ -71,4 +71,17 @@ QUnit.test("No links should have click handlers before the plugin is applied", f
         assert.ok(typeof this.onclick !== 'function', "No links in the mega menu have click handlers");
     });
 
+});
+
+QUnit.test("The CSS property of 'display:block' is applied after click.", function( assert ) {
+    var done = assert.async();
+    $('.sub-menu').click();
+    setTimeout( function(){
+        assert.equal( $( '.sub-menu' ).css( 'display' ), 'block', ".sub-menu has a css property of display:block on click.");
+        done();
+    }, 4000);
+});
+
+QUnit.test("Checking if the ul.sub-menu exists", function( assert ) {
+    assert.ok($( 'ul.sub-menu' ).length > 0, "The child ul with a class of .sub-menu exists.");
 });

@@ -2,7 +2,7 @@
 
 // Toggles the mega menu
 
-$.fn.mega_menu_interactions = function () {
+$.fn.mega_menu_button_toggle = function () {
     return this.each(function () {
         var $this = $(this);
         $this.on('click', function () {
@@ -27,10 +27,7 @@ $('.mega-menu a[href="#"]').each(function () {
         text = $this.text();
     $this.replaceWith($('<div>', {
         'text': text,
-        'class': 'mg-more',
-        'click': function() {
-            $(this).next().slideToggle('fast');
-        }
+        'class': 'mg-more'
     }))
 });
 
@@ -45,12 +42,6 @@ $.fn.append_home_links_to_mega_menu = function () {
 
         $this.addClass('mg-more');
 
-        $this.on('click', function (e) {
-            if ($(window).width() < 480) {
-                e.preventDefault();
-                $(this).next().slideToggle('fast');
-            }
-        });
 
         $link = $('<a>', {
             'href': $this.attr('href'),

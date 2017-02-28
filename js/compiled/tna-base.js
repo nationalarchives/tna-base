@@ -15,7 +15,7 @@ $.toggleDisplayOfElement = function (toggler, togglee) {
 
 // Toggles the mega menu
 
-$.fn.mega_menu_interactions = function () {
+$.fn.mega_menu_button_toggle = function () {
     return this.each(function () {
         var $this = $(this);
         $this.on('click', function () {
@@ -40,10 +40,7 @@ $('.mega-menu a[href="#"]').each(function () {
         text = $this.text();
     $this.replaceWith($('<div>', {
         'text': text,
-        'class': 'mg-more',
-        'click': function() {
-            $(this).next().slideToggle('fast');
-        }
+        'class': 'mg-more'
     }))
 });
 
@@ -58,12 +55,6 @@ $.fn.append_home_links_to_mega_menu = function () {
 
         $this.addClass('mg-more');
 
-        $this.on('click', function (e) {
-            if ($(window).width() < 480) {
-                e.preventDefault();
-                $(this).next().slideToggle('fast');
-            }
-        });
 
         $link = $('<a>', {
             'href': $this.attr('href'),
@@ -289,11 +280,19 @@ $.fn.webtrends_click_handler = function () {
     }
 }(jQuery));;$('a[target="_blank"]').add_attributes_to_target_blank();
 
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_button_toggle();
+
 
 $("ul.sub-menu:last").append_promotional_image();
 
-$(".main-ul > li > a").append_home_links_to_mega_menu();
+$(".mega-menu > ul > li > a").append_home_links_to_mega_menu();
+
+$(document).on('click', '.mg-more', function (e) {
+    if ($(window).width() < 480) {
+        e.preventDefault();
+        $(this).next().slideToggle('fast');
+    }
+});
 
 $('a', '.mega-menu').webtrends_click_handler();
 
