@@ -73,12 +73,15 @@ QUnit.test("No links should have click handlers before the plugin is applied", f
 
 });
 
-QUnit.test("CSS displays property of block on click.", function( assert ) {
-    var done1 = assert.async();
+QUnit.test("The CSS property of 'display:block' is applied after click.", function( assert ) {
+    var done = assert.async();
     $('.sub-menu').click();
     setTimeout( function(){
         assert.equal( $( '.sub-menu' ).css( 'display' ), 'block', ".sub-menu has a css property of display:block on click.");
-        done1();
+        done();
     }, 4000);
 });
 
+QUnit.test("Checking if the ul.sub-menu exists", function( assert ) {
+    assert.ok($( 'ul.sub-menu' ).length > 0, "The child ul with a class of .sub-menu exists.");
+});
