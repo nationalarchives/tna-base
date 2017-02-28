@@ -6,7 +6,7 @@ QUnit.test("Checking #mega-menu-pull-down shows #nav", function (assert) {
 
     $('#nav').hide();
 
-    $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+    $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_button_toggle();
 
     $('#mega-menu-pull-down').click();
 
@@ -72,3 +72,14 @@ QUnit.test("No links should have click handlers before the plugin is applied", f
     });
 
 });
+
+QUnit.test("CSS displays property of block on click.", function( assert ) {
+    var done1 = assert.async();
+    //$( '.sub-menu' ).click().slideToggle( 'fast' );
+    $('.sub-menu').click();
+    setTimeout( function(){
+        assert.equal( $( '.sub-menu' ).css( 'display' ), 'block', ".sub-menu has a css property of display:block on click.");
+        done1();
+    }, 4000);
+});
+
