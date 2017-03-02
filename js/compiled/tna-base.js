@@ -37,6 +37,15 @@ $.fn.append_promotional_image = function () {
 
 $.fn.append_home_links_to_mega_menu = function () {
 
+    // Establishing toggle behaviour for links with .toggle-sub-menu
+
+    $(document).on('click', '.toggle-sub-menu', function (e) {
+        if ($(window).width() < 480) {
+            e.preventDefault();
+            $(this).next().slideToggle('fast');
+        }
+    });
+
     // Replacing anchor-only links
 
     $('.mega-menu a[href="#"]').each(function () {
@@ -45,13 +54,7 @@ $.fn.append_home_links_to_mega_menu = function () {
         $this.replaceWith($('<div>', {
             'text': text,
             'class': 'toggle-sub-menu',
-            'id': 'more-link',
-            'click': function (e) {
-                if ($(window).width() < 480) {
-                    e.preventDefault();
-                    $(this).next().slideToggle('fast');
-                }
-            }
+            'id': 'more-link'
         }))
     });
 
@@ -62,13 +65,6 @@ $.fn.append_home_links_to_mega_menu = function () {
             $li;
 
         $this.addClass('toggle-sub-menu');
-
-        $this.on('click', function (e) {
-            if ($(window).width() < 480) {
-                e.preventDefault();
-                $(this).next().slideToggle('fast');
-            }
-        });
 
         $link = $('<a>', {
             'href': $this.attr('href'),
