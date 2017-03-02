@@ -20,13 +20,13 @@ QUnit.test("#mega-menu-pull-down toggles #nav", function (assert) {
 QUnit.module("Appending home links to mega menu");
 
 
-QUnit.test("The mg-more links should NOT exist before the plugin is applied", function (assert) {
+QUnit.test("The .toggle-sub-menu links should NOT exist before the plugin is applied", function (assert) {
 
-    assert.ok($('.mg-more').length == 0, 'There are no "mg-more" links in the DOM');
+    assert.ok($('.toggle-sub-menu').length == 0, 'There are no ".toggle-sub-menu" links in the DOM');
 
 });
 
-QUnit.test("Every target element should have a mg-more link after the plugin is applied", function (assert) {
+QUnit.test("Every target element should have a .toggle-sub-menu link after the plugin is applied", function (assert) {
 
     $items = $(".mega-menu > ul > li > a");
 
@@ -34,7 +34,7 @@ QUnit.test("Every target element should have a mg-more link after the plugin is 
 
     $items.each(function () {
 
-        assert.ok($(this).hasClass('mg-more'), 'All "mg-more" links are in the DOM');
+        assert.ok($(this).hasClass('toggle-sub-menu'), 'All .toggle-sub-menu links are in the DOM');
     })
 
 });
@@ -80,11 +80,11 @@ if ($(window).width() > 500) {
 }
 
 if ($(window).width() < 500) {
-    QUnit.test("Clicking '.mg-more' links on a smaller screen should result in the adjacent sibling being toggled", function (assert) {
+    QUnit.test("Clicking '.toggle-sub-menu' links on a smaller screen should result in the adjacent sibling being toggled", function (assert) {
 
         $items.append_home_links_to_mega_menu();
 
-        var $moreLinks = $('.mg-more');
+        var $moreLinks = $('.toggle-sub-menu');
 
         $moreLinks.each(function () {
 

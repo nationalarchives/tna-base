@@ -44,7 +44,7 @@ $.fn.append_home_links_to_mega_menu = function () {
             text = $this.text();
         $this.replaceWith($('<div>', {
             'text': text,
-            'class': 'mg-more',
+            'class': 'toggle-sub-menu',
             'id': 'more-link',
             'click': function (e) {
                 if ($(window).width() < 480) {
@@ -61,7 +61,7 @@ $.fn.append_home_links_to_mega_menu = function () {
             $link,
             $li;
 
-        $this.addClass('mg-more');
+        $this.addClass('toggle-sub-menu');
 
         $this.on('click', function (e) {
             if ($(window).width() < 480) {

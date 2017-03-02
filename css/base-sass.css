@@ -5067,7 +5067,7 @@ blockquote:before {
   @media only screen and (max-width: 480px) {
     .mega-menu > ul > li > ul.sub-menu {
       display: none; }
-    .mega-menu .mg-more:hover {
+    .mega-menu .toggle-sub-menu:hover {
       text-decoration: underline; }
     .mega-menu > ul > li > a, .mega-menu > ul > li > div {
       background: url(../img/plus.png) 5px 12px no-repeat;
