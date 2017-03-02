@@ -1,4 +1,4 @@
-QUnit.module("Mega menu interactions");
+QUnit.module("Mega menu toggle");
 
 QUnit.test("Checking #mega-menu-pull-down shows #nav", function (assert) {
 
@@ -6,7 +6,7 @@ QUnit.test("Checking #mega-menu-pull-down shows #nav", function (assert) {
 
     $('#nav').hide();
 
-    $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+    $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_toggle();
 
     $('#mega-menu-pull-down').click();
 

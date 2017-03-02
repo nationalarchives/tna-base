@@ -15,7 +15,7 @@ $.toggleDisplayOfElement = function (toggler, togglee) {
 
 // Toggles the mega menu
 
-$.fn.mega_menu_interactions = function () {
+$.fn.mega_menu_toggle = function () {
     return this.each(function () {
         var $this = $(this);
         $this.on('click', function () {
@@ -294,7 +294,7 @@ $.fn.webtrends_click_handler = function () {
     }
 }(jQuery));;$('a[target="_blank"]').add_attributes_to_target_blank();
 
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_toggle();
 
 $("ul.sub-menu:last").append_promotional_image();
 
