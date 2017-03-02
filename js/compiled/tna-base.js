@@ -33,23 +33,28 @@ $.fn.append_promotional_image = function () {
     })
 };
 
-// Replacing anchor-only links
-
-$('.mega-menu a[href="#"]').each(function () {
-    var $this = $(this),
-        text = $this.text();
-    $this.replaceWith($('<div>', {
-        'text': text,
-        'class': 'mg-more',
-        'click': function() {
-            $(this).next().slideToggle('fast');
-        }
-    }))
-});
-
 // Creating the home links
 
 $.fn.append_home_links_to_mega_menu = function () {
+
+    // Replacing anchor-only links
+
+    $('.mega-menu a[href="#"]').each(function () {
+        var $this = $(this),
+            text = $this.text();
+        $this.replaceWith($('<div>', {
+            'text': text,
+            'class': 'mg-more',
+            'id': 'more-link',
+            'click': function (e) {
+                if ($(window).width() < 480) {
+                    e.preventDefault();
+                    $(this).next().slideToggle('fast');
+                }
+            }
+        }))
+    });
+
     return this.each(function () {
         var $this = $(this),
             $items = $this.next(),
