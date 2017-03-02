@@ -1,31 +1,17 @@
 QUnit.module("Mega menu toggle");
 
-QUnit.test("Checking #mega-menu-pull-down shows #nav", function (assert) {
+QUnit.test("#mega-menu-pull-down toggles #nav", function (assert) {
 
     var done = assert.async();
 
-    $('#nav').hide();
-
     $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_toggle();
+
+    assert.equal($('#nav').css('display'), 'none', "Clicking on #mega-menu-pull-down reveals a hidden #nav item");
 
     $('#mega-menu-pull-down').click();
 
     setTimeout(function () {
         assert.equal($('#nav').css('display'), 'block', "Clicking on #mega-menu-pull-down reveals a hidden #nav item");
-        done();
-    }, 1000);
-
-});
-
-QUnit.test("Checking #mega-menu-pull-down hides #nav", function (assert) {
-
-    var done = assert.async();
-
-    $('#nav').show();
-    $('#mega-menu-pull-down').click();
-
-    setTimeout(function () {
-        assert.equal($('#nav').css('display'), 'none', "Clicking on #mega-menu-pull-down reveals a hidden #nav item");
         done();
     }, 1000);
 
@@ -48,6 +34,7 @@ QUnit.test("The promotional image should exist in the DOM after the plugin is ap
 });
 
 QUnit.module("Appending home links to mega menu");
+
 
 QUnit.test("The mg-more links should NOT exist before the plugin is applied", function (assert) {
 
@@ -72,6 +59,8 @@ QUnit.test("Every target element should have a mg-more link after the plugin is 
 if ($(window).width() > 500) {
     QUnit.test("The 'More...' link should not toggle its siblings at larger screen sizes", function (assert) {
 
+        $items.append_home_links_to_mega_menu();
+
         var $moreLink = $('#more-link'),
             $siblingUL = $moreLink.next();
 
@@ -92,6 +81,8 @@ if ($(window).width() > 500) {
 
 if ($(window).width() < 500) {
     QUnit.test("Clicking '.mg-more' links on a smaller screen should result in the adjacent sibling being toggled", function (assert) {
+
+        $items.append_home_links_to_mega_menu();
 
         var $moreLinks = $('.mg-more');
 
