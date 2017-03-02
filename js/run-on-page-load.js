@@ -1,10 +1,8 @@
 $('a[target="_blank"]').add_attributes_to_target_blank();
 
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_toggle();
-
 $("ul.sub-menu:last").append_promotional_image();
 
-$(".mega-menu > ul > li > a").append_home_links_to_mega_menu();
+$(".mega-menu > ul > li > a").mega_menu_enhancements();
 
 $('a', '.mega-menu').webtrends_click_handler();
 
