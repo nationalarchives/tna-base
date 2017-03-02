@@ -2,6 +2,8 @@ QUnit.module("Mega menu toggle");
 
 QUnit.test("#mega-menu-pull-down toggles #nav", function (assert) {
 
+    assert.equal($('nav').attr('id'), 'nav', "The nav has an attribute of id which is #nav.");
+
     var done = assert.async();
 
     $('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_toggle();
@@ -103,6 +105,30 @@ if ($(window).width() < 500) {
 
     });
 }
+
+QUnit.module("The HTML structure is as expected.");
+QUnit.test("Tests for necessary number of children", function (assert) {
+    $('.mega-menu > ul').children().each(function() {
+        var fixtureLength = $(this).children().length;
+        assert.ok(fixtureLength == 2,"The '.mega-menu > ul' has 2 fixtures inside");
+    })
+});
+
+QUnit.test("Tests for necessary children name", function (assert) {
+    $('.mega-menu > ul').children().each(function(){
+        var firstNodeName = $(this).children().first()[0].nodeName;
+        var lastNodeName = $(this).children().last()[0].nodeName;
+        assert.equal(firstNodeName,'A','This gets the first child which should be A');
+        assert.equal(lastNodeName,'UL','This gets the last child which should be UL');
+    })
+});
+
+QUnit.test("Test for the class .sub-menu as expected.", function (assert) {
+    $('.mega-menu > ul > li > ul').each(function(){
+        var hasClass = $(this).hasClass('sub-menu');
+        assert.ok(hasClass > 0,'The UL has a class of .sub-menu');
+    })
+});
 
 
 QUnit.module("Dynamic webtrends click handlers");
