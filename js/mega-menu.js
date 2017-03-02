@@ -1,16 +1,5 @@
 "use strict";
 
-// Toggles the mega menu
-
-$.fn.mega_menu_toggle = function () {
-    return this.each(function () {
-        var $this = $(this);
-        $this.on('click', function () {
-            $('#nav').slideToggle('fast');
-        })
-    });
-};
-
 // Displays the promotional image
 
 $.fn.append_promotional_image = function () {
@@ -22,7 +11,16 @@ $.fn.append_promotional_image = function () {
 
 // Creating the home links
 
-$.fn.append_home_links_to_mega_menu = function () {
+$.fn.mega_menu_enhancements = function () {
+
+    // Mega menu button
+
+    $('#mega-menu-pull-down, #mega-menu-mobile').each(function () {
+        var $this = $(this);
+        $this.on('click', function () {
+            $('#nav').slideToggle('fast');
+        })
+    });;
 
     // Establishing toggle behaviour for links with .toggle-sub-menu
 

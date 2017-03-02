@@ -13,17 +13,6 @@ $.toggleDisplayOfElement = function (toggler, togglee) {
     $(toggler).toggleClass('expanded');
 };;"use strict";
 
-// Toggles the mega menu
-
-$.fn.mega_menu_toggle = function () {
-    return this.each(function () {
-        var $this = $(this);
-        $this.on('click', function () {
-            $('#nav').slideToggle('fast');
-        })
-    });
-};
-
 // Displays the promotional image
 
 $.fn.append_promotional_image = function () {
@@ -35,7 +24,16 @@ $.fn.append_promotional_image = function () {
 
 // Creating the home links
 
-$.fn.append_home_links_to_mega_menu = function () {
+$.fn.mega_menu_enhancements = function () {
+
+    // Mega menu button
+
+    $('#mega-menu-pull-down, #mega-menu-mobile').each(function () {
+        var $this = $(this);
+        $this.on('click', function () {
+            $('#nav').slideToggle('fast');
+        })
+    });;
 
     // Establishing toggle behaviour for links with .toggle-sub-menu
 
@@ -290,11 +288,9 @@ $.fn.webtrends_click_handler = function () {
     }
 }(jQuery));;$('a[target="_blank"]').add_attributes_to_target_blank();
 
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_toggle();
-
 $("ul.sub-menu:last").append_promotional_image();
 
-$(".mega-menu > ul > li > a").append_home_links_to_mega_menu();
+$(".mega-menu > ul > li > a").mega_menu_enhancements();
 
 $('a', '.mega-menu').webtrends_click_handler();
 
