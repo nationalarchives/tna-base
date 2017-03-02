@@ -63,6 +63,26 @@ QUnit.test("The mg-more links should exist after the plugin is applied", functio
 
 });
 
+if ($(window).width() > 500) {
+    QUnit.test("The 'More...' link should not toggle its siblings at larger screen sizes", function (assert) {
+
+        var $moreLink = $('#more-link'),
+            $siblingUL = $moreLink.next();
+
+        assert.equal($siblingUL.css('display'), 'block', "The sibling UL is initially shown");
+
+        var done = assert.async();
+
+        $moreLink.click();
+
+        setTimeout(function () {
+            assert.equal($siblingUL.css('display'), 'block', "The sibling UL is still shown after $moreLink has been clicked");
+            done();
+        }, 1000);
+
+    });
+}
+
 QUnit.module("Dynamic webtrends click handlers");
 
 QUnit.test("No links should have click handlers before the plugin is applied", function (assert) {
