@@ -19,7 +19,6 @@ QUnit.test("#mega-menu-pull-down toggles #nav", function (assert) {
 
 QUnit.module("Appending home links to mega menu");
 
-
 QUnit.test("The .toggle-sub-menu links should NOT exist before the plugin is applied", function (assert) {
 
     assert.ok($('.toggle-sub-menu').length == 0, 'There are no ".toggle-sub-menu" links in the DOM');
