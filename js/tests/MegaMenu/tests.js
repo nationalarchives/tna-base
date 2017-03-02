@@ -55,11 +55,17 @@ QUnit.test("The mg-more links should NOT exist before the plugin is applied", fu
 
 });
 
-QUnit.test("The mg-more links should exist after the plugin is applied", function (assert) {
+QUnit.test("Every target element should have a mg-more link after the plugin is applied", function (assert) {
 
-    $(".main-ul > li > a").append_home_links_to_mega_menu();
+    $items = $(".mega-menu > ul > li > a");
 
-    assert.ok($('.mg-more').length > 0, 'There are "mg-more" links in the DOM');
+    $items.append_home_links_to_mega_menu();
+
+    $items.each(function () {
+
+        assert.ok($(this).hasClass('mg-more'), 'All "mg-more" links are in the DOM');
+    })
+
 
 });
 
