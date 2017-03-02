@@ -87,7 +87,34 @@ if ($(window).width() > 500) {
         }, 1000);
 
     });
+
 }
+
+if ($(window).width() < 500) {
+    QUnit.test("Clicking '.mg-more' links on a smaller screen should result in the adjacent sibling being toggled", function (assert) {
+
+        var $moreLinks = $('.mg-more');
+
+        $moreLinks.each(function () {
+
+            var $this = $(this);
+
+            assert.equal($this.next().css('display'), 'block', "The sibling UL is initially shown");
+
+            var done = assert.async();
+
+            $this.click();
+
+            setTimeout(function () {
+                assert.equal($this.next().css('display'), 'none', "The sibling UL is not shown after $moreLink has been clicked");
+                done();
+            }, 1000);
+        });
+
+
+    });
+}
+
 
 QUnit.module("Dynamic webtrends click handlers");
 
