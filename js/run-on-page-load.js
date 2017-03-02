@@ -1,6 +1,6 @@
 $('a[target="_blank"]').add_attributes_to_target_blank();
 
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_toggle();
 
 $("ul.sub-menu:last").append_promotional_image();
 

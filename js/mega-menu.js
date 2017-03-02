@@ -2,7 +2,7 @@
 
 // Toggles the mega menu
 
-$.fn.mega_menu_interactions = function () {
+$.fn.mega_menu_toggle = function () {
     return this.each(function () {
         var $this = $(this);
         $this.on('click', function () {
