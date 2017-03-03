@@ -41,6 +41,16 @@ QUnit.test("Test for the class .sub-menu as expected.", function (assert) {
     })
 });
 
+QUnit.test("The UL should not have a attribute of style as expected.", function (assert) {
+
+    $('.mega-menu > ul > li > ul').each(function () {
+
+        var hasAttr = $(this).attr('style');
+
+        assert.equal(hasAttr, undefined, 'There is no attribute of style');
+    })
+});
+
 
 QUnit.test("Tests for necessary number of children", function (assert) {
 
