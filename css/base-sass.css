@@ -5070,20 +5070,16 @@ blockquote:before {
     .mega-menu .toggle-sub-menu:hover {
       text-decoration: underline; }
     .mega-menu > ul > li > a, .mega-menu > ul > li > div {
-      background: url(../img/plus.png) 5px 12px no-repeat;
+      background: url(../img/plus.png) 0 14px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none; }
+    .mega-menu > ul > li > a.expanded, .mega-menu > ul > li > div.expanded {
+      background: url(../img/minus.png) 0 14px no-repeat; }
     .mega-menu > ul > li > a:focus {
       background: #FCE45C !important; }
     .mega-menu .mobile-home-link {
       display: block; } }
-
-.minus {
-  background: url(../img/minus.png) 5px 12px no-repeat !important;
-  padding: 5px 5px 5px 22px;
-  cursor: pointer;
-  text-shadow: none; }
 
 #nav {
   background-color: #405480;
@@ -5232,20 +5228,18 @@ header {
   @media (min-width: 480px) {
     header #mobile-logo-holder img {
       margin: 0 auto; } }
-  header .search-expander {
-    height: 2.1em;
+  @media (max-width: 480px) {
+    header #mobile-logo-holder img {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 83%; } }
+  header .search-expander, header .search-close {
+    height: 2.7em;
     width: 40px;
     background: url("../img/search-white.png") center no-repeat;
     background-size: 90%;
-    position: absolute;
-    top: -48px;
-    right: 20px;
-    cursor: pointer; }
-  header .search-close {
-    height: 2.1em;
-    width: 40px;
-    background: url("../img/close-search.png") center no-repeat;
-    background-size: 90%;
+    -ms-background-position-y: 7px;
+    background-position-y: 7px;
     position: absolute;
     top: -48px;
     right: 20px;

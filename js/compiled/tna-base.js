@@ -30,8 +30,9 @@ $.fn.mega_menu_enhancements = function () {
 
     $(document).on('click', '.toggle-sub-menu', function (e) {
         if ($(window).width() < 480) {
+            var $this = $(this);
             e.preventDefault();
-            $(this).next().slideToggle('fast');
+            $this.toggleClass('expanded').next().slideToggle('fast');
         }
     });
 
@@ -44,7 +45,7 @@ $.fn.mega_menu_enhancements = function () {
             'text': text,
             'class': 'toggle-sub-menu',
             'id': 'more-link'
-        }))
+        }));
     });
 
     return this.each(function () {
@@ -55,6 +56,7 @@ $.fn.mega_menu_enhancements = function () {
 
         $this.addClass('toggle-sub-menu');
 
+
         $link = $('<a>', {
             'href': $this.attr('href'),
             'text': $this.text() + ' home'
@@ -63,6 +65,7 @@ $.fn.mega_menu_enhancements = function () {
         $li = $('<li class="mobile-home-link">').append($link);
 
         $li.prependTo($items);
+
     })
 };
 
