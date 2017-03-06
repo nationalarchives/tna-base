@@ -6,6 +6,8 @@ $(".mega-menu > ul > li > a").mega_menu_enhancements();
 
 $('a', '.mega-menu').webtrends_click_handler();
 
+$('.mega-menu > ul > li > a').toggleMinusClass();
+
 // Make sure the signup newsletter form matches the ID below
 // By default target element is $('input[name="ReturnURL"]')
 $('#signup').newsletterBackToOrigin();

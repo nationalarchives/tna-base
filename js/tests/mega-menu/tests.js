@@ -129,17 +129,21 @@ QUnit.test("Every target element should have a .toggle-sub-menu link after the p
 
 });
 
-QUnit.test("After the plugin as been applied, the a tag should have a class of minus", function (assert) {
+QUnit.test("The <a> tag should not have a class of minus", function (assert) {
 
-    //$(".mega-menu > ul > li > a").mega_menu_enhancements();
-
-    $('.mega-menu > ul > li > a').click(function() {
-        //$(this).addClass("minus");
-        assert.equal($(this).hasClass('minus'), '', "The a tag has a class of minus after the click.");
-
-    });
-
+        assert.equal($('.mega-menu > ul > li > a').hasClass('minus'), false , "The <a> tag does not have a class of minus on page load.");
 });
+
+
+QUnit.test("Adds a class of minus after the <a> has been clicked", function(assert) {
+
+        var aTag = $('.mega-menu > ul > li > a')
+
+        aTag.click().toggleClass("minus");
+
+        assert.equal(aTag.hasClass("minus"), true, "Returns true when class of minus is added");
+});
+
 
 QUnit.test("The first link in every .sub-menu should have the class .mobile-home-link (unless it is the 'More...' link)", function (assert) {
 

@@ -50,7 +50,7 @@
       text-decoration: underline;
     }
     > ul > li > a, > ul > li > div {
-      background: url(../img/plus.png) 5px 12px no-repeat;
+      background: url(../img/plus.png) 0 14px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none;
@@ -65,7 +65,7 @@
 }
 
 .minus {
-  background: url(../img/minus.png) 5px 12px no-repeat !important;
+  background: url(../img/minus.png) 0 14px no-repeat !important;
   padding: 5px 5px 5px 22px;
   cursor: pointer;
   text-shadow: none;

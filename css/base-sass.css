@@ -5070,7 +5070,7 @@ blockquote:before {
     .mega-menu .toggle-sub-menu:hover {
       text-decoration: underline; }
     .mega-menu > ul > li > a, .mega-menu > ul > li > div {
-      background: url(../img/plus.png) 5px 12px no-repeat;
+      background: url(../img/plus.png) 0 14px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none; }
@@ -5080,7 +5080,7 @@ blockquote:before {
       display: block; } }
 
 .minus {
-  background: url(../img/minus.png) 5px 12px no-repeat !important;
+  background: url(../img/minus.png) 0 14px no-repeat !important;
   padding: 5px 5px 5px 22px;
   cursor: pointer;
   text-shadow: none; }

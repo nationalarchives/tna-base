@@ -85,6 +85,14 @@ $.fn.webtrends_click_handler = function () {
     })
 };
 
+//Toggles class of minus when clicked.
+$.fn.toggleMinusClass = function (){
+    $('.mega-menu > ul > li > a').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass("minus");
+    });
+};
+
 // Displays the promotional image
 
 $.fn.append_promotional_image = function () {
@@ -293,6 +301,8 @@ $("ul.sub-menu:last").append_promotional_image();
 $(".mega-menu > ul > li > a").mega_menu_enhancements();
 
 $('a', '.mega-menu').webtrends_click_handler();
+
+$('.mega-menu > ul > li > a').toggleMinusClass();
 
 // Make sure the signup newsletter form matches the ID below
 // By default target element is $('input[name="ReturnURL"]')
