@@ -24,7 +24,6 @@ function set_path_to_mega_menu($development_machine)
 }
 
 function check_for_specific_url_path($url_path = ''){
-    var_export($_SERVER);
-    $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $url = 'http://nationalarchives.gov.uk';
     return strpos($url,$url_path);
 }
