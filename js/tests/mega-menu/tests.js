@@ -129,22 +129,6 @@ QUnit.test("Every target element should have a .toggle-sub-menu link after the p
 
 });
 
-QUnit.test("The <a> tag should not have a class of minus", function (assert) {
-
-        assert.equal($('.mega-menu > ul > li > a').hasClass('minus'), false , "The <a> tag does not have a class of minus on page load.");
-});
-
-
-QUnit.test("Adds a class of minus after the <a> has been clicked", function(assert) {
-
-        var aTag = $('.mega-menu > ul > li > a')
-
-        aTag.click().toggleClass("minus");
-
-        assert.equal(aTag.hasClass("minus"), true, "Returns true when class of minus is added");
-});
-
-
 QUnit.test("The first link in every .sub-menu should have the class .mobile-home-link (unless it is the 'More...' link)", function (assert) {
 
     $(".mega-menu > ul > li > a").mega_menu_enhancements();
@@ -187,11 +171,13 @@ if ($(window).width() > 500) {
 }
 
 if ($(window).width() < 500) {
-    QUnit.test("Clicking '.toggle-sub-menu' links ONCE on a smaller screen should result in the adjacent sibling being toggled", function (assert) {
+    QUnit.test("Clicking '.toggle-sub-menu' has the desired effect", function (assert) {
 
         $(".mega-menu > ul > li > a").mega_menu_enhancements();
 
         var $moreLinks = $('.toggle-sub-menu');
+
+            assert.equal($moreLinks.hasClass('expanded'), false, "The element with '.toggle-sub-menu DOES NOT have a class of 'expanded' on page load.");
 
         $moreLinks.each(function () {
 
@@ -216,25 +202,25 @@ if ($(window).width() < 500) {
 
 QUnit.module("The HTML structure is as expected.");
 QUnit.test("Tests for necessary number of children", function (assert) {
-    $('.mega-menu > ul').children().each(function() {
+    $('.mega-menu > ul').children().each(function () {
         var fixtureLength = $(this).children().length;
-        assert.ok(fixtureLength == 2,"The '.mega-menu > ul' has 2 fixtures inside");
+        assert.ok(fixtureLength == 2, "The '.mega-menu > ul' has 2 fixtures inside");
     })
 });
 
 QUnit.test("Tests for necessary children name", function (assert) {
-    $('.mega-menu > ul').children().each(function(){
+    $('.mega-menu > ul').children().each(function () {
         var firstNodeName = $(this).children().first()[0].nodeName;
         var lastNodeName = $(this).children().last()[0].nodeName;
-        assert.equal(firstNodeName,'A','This gets the first child which should be A');
-        assert.equal(lastNodeName,'UL','This gets the last child which should be UL');
+        assert.equal(firstNodeName, 'A', 'This gets the first child which should be A');
+        assert.equal(lastNodeName, 'UL', 'This gets the last child which should be UL');
     })
 });
 
 QUnit.test("Test for the class .sub-menu as expected.", function (assert) {
-    $('.mega-menu > ul > li > ul').each(function(){
+    $('.mega-menu > ul > li > ul').each(function () {
         var hasClass = $(this).hasClass('sub-menu');
-        assert.ok(hasClass > 0,'The UL has a class of .sub-menu');
+        assert.ok(hasClass > 0, 'The UL has a class of .sub-menu');
     })
 });
 

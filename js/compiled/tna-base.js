@@ -30,8 +30,9 @@ $.fn.mega_menu_enhancements = function () {
 
     $(document).on('click', '.toggle-sub-menu', function (e) {
         if ($(window).width() < 480) {
+            var $this = $(this);
             e.preventDefault();
-            $(this).next().slideToggle('fast');
+            $this.toggleClass('expanded').next().slideToggle('fast');
         }
     });
 
@@ -44,7 +45,7 @@ $.fn.mega_menu_enhancements = function () {
             'text': text,
             'class': 'toggle-sub-menu',
             'id': 'more-link'
-        }))
+        }));
     });
 
     return this.each(function () {
@@ -55,6 +56,7 @@ $.fn.mega_menu_enhancements = function () {
 
         $this.addClass('toggle-sub-menu');
 
+
         $link = $('<a>', {
             'href': $this.attr('href'),
             'text': $this.text() + ' home'
@@ -63,6 +65,7 @@ $.fn.mega_menu_enhancements = function () {
         $li = $('<li class="mobile-home-link">').append($link);
 
         $li.prependTo($items);
+
     })
 };
 
@@ -83,14 +86,6 @@ $.fn.webtrends_click_handler = function () {
             }
         })
     })
-};
-
-//Toggles class of minus when clicked.
-$.fn.toggleMinusClass = function (){
-    $('.mega-menu > ul > li > a').on('click', function(e) {
-        e.preventDefault();
-        $(this).toggleClass("minus");
-    });
 };
 
 // Displays the promotional image
@@ -301,8 +296,6 @@ $("ul.sub-menu:last").append_promotional_image();
 $(".mega-menu > ul > li > a").mega_menu_enhancements();
 
 $('a', '.mega-menu').webtrends_click_handler();
-
-$('.mega-menu > ul > li > a').toggleMinusClass();
 
 // Make sure the signup newsletter form matches the ID below
 // By default target element is $('input[name="ReturnURL"]')

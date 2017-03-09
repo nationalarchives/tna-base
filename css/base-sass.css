@@ -5070,20 +5070,16 @@ blockquote:before {
     .mega-menu .toggle-sub-menu:hover {
       text-decoration: underline; }
     .mega-menu > ul > li > a, .mega-menu > ul > li > div {
-      background: url(../img/plus.png) 0 14px no-repeat;
+      background: url(/img/plus.png) 0 14px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none; }
+    .mega-menu > ul > li > a.expanded, .mega-menu > ul > li > div.expanded {
+      background: url(/img/minus.png) 0 14px no-repeat; }
     .mega-menu > ul > li > a:focus {
       background: #FCE45C !important; }
     .mega-menu .mobile-home-link {
       display: block; } }
-
-.minus {
-  background: url(../img/minus.png) 0 14px no-repeat !important;
-  padding: 5px 5px 5px 22px;
-  cursor: pointer;
-  text-shadow: none; }
 
 #nav {
   background-color: #405480;
