@@ -129,6 +129,11 @@ header {
       @media (min-width: 480px) {
         margin: 0 auto;
       }
+      @media (max-width: 480px) {
+          margin-right: auto;
+          margin-left: auto;
+          max-width: 83%;
+      }
     }
   }
   .search-expander, .search-close {

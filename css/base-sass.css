@@ -5228,6 +5228,11 @@ header {
   @media (min-width: 480px) {
     header #mobile-logo-holder img {
       margin: 0 auto; } }
+  @media (max-width: 480px) {
+    header #mobile-logo-holder img {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 83%; } }
   header .search-expander, header .search-close {
     height: 2.7em;
     width: 40px;
