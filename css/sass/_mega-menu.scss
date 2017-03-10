@@ -49,13 +49,13 @@
       text-decoration: underline;
     }
     > ul > li > a, > ul > li > div {
-      background: url(/img/plus.png) 0 14px no-repeat;
+      background: url(../img/plus.png) 0 14px no-repeat;
       padding: 5px 5px 5px 22px;
       cursor: pointer;
       text-shadow: none;
     }
     > ul > li > a.expanded, > ul > li > div.expanded {
-      background: url(/img/minus.png) 0 14px no-repeat;
+      background: url(../img/minus.png) 0 14px no-repeat;
     }
     > ul > li > a:focus {
       background: #FCE45C !important;
