@@ -34,7 +34,22 @@ module.exports = function (grunt) {
             }
         },
         qunit: {
-            all: ['js/tests/**/*.html']
+            small: {
+                src: ['js/tests/**/*.html'],
+                options: {
+                    page: {
+                        viewportSize: {width: 300, height: 400}
+                    }
+                }
+            },
+            large: {
+                src: ['js/tests/**/*.html'],
+                options: {
+                    page: {
+                        viewportSize: {width: 1024, height: 400}
+                    }
+                }
+            }
         },
         concat: {
             options: {

@@ -22,3 +22,8 @@ function set_path_to_mega_menu($development_machine)
         define("PATH_TO_MEGA_MENU_HTML", 'D:/webapps/phpapps/mega-menu-feed-processor/output.html');
     }
 }
+
+function check_for_specific_url_path($url_path = ''){
+    $url = 'http://nationalarchives.gov.uk';
+    return strpos($url,$url_path);
+}
