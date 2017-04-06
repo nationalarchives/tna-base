@@ -1,9 +1,4 @@
 <?php
-
-//Metabox for Feature Box
-add_action( 'add_meta_boxes', 'myfield_add_custom_box' );
-// Saving the data entered
-add_action( 'save_post', 'myfield_save_postdata' );
 // Adds a box to the main column on the Page edit screens
 function myfield_add_custom_box() {
     global $post;
@@ -70,7 +65,7 @@ function redirect_url_add_meta_box() {
         add_meta_box('sidebar-sidebar', __( 'Sidebar', 'sidebar' ), 'sidebar_html','page','side','core');
     }
 }
-add_action( 'add_meta_boxes', 'redirect_url_add_meta_box' );
+
 
 function redirect_url_get_meta( $value ) {
     global $post;
@@ -101,7 +96,7 @@ function redirect_url_save( $post_id ) {
     if ( isset( $_POST['redirectUrl'] ) )
         update_post_meta( $post_id, 'redirectUrl', esc_attr( $_POST['redirectUrl'] ) );
 }
-add_action( 'save_post', 'redirect_url_save' );
+
 
 /* Sidebar Metabox */
 function sidebar_get_meta( $value ) {
@@ -132,7 +127,7 @@ function sidebar_save( $post_id ) {
     if ( isset( $_POST['sidebar'] ) )
         update_post_meta( $post_id, 'sidebar', esc_attr( $_POST['sidebar'] ) );
 }
-add_action( 'save_post', 'sidebar_save' );
+
 
 /* Level 1 landing page template meta boxes */
 
@@ -237,7 +232,7 @@ function level_one_meta_boxes() {
 		}
 	}
 }
-add_action( 'init', 'level_one_meta_boxes' );
+
 
 function notification_meta_boxes() {
 	$notification_meta_boxes = array(
@@ -276,6 +271,6 @@ function notification_meta_boxes() {
 		$notification_box = new CreateMetaBox( $meta_box );
 	}
 }
-add_action( 'init', 'notification_meta_boxes' );
+
 
 

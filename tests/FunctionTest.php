@@ -136,4 +136,58 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue( class_exists('CreateMetaBox') );
     }
+
+    public function test_exists_myfield_add_custom_box()
+    {
+        $this->assertTrue( function_exists('myfield_add_custom_box') );
+    }
+    public function test_exists_myfield_meta_box()
+    {
+        $this->assertTrue( function_exists('myfield_meta_box') );
+    }
+
+    public function test_exists_myfield_save_postdata()
+    {
+        $this->assertTrue( function_exists('myfield_save_postdata') );
+    }
+
+    public function test_exists_redirect_url_get_meta()
+    {
+        $this->assertTrue( function_exists('redirect_url_get_meta') );
+    }
+
+    public function test_exists_redirect_url_html()
+    {
+        $this->assertTrue( function_exists('redirect_url_html') );
+    }
+
+    public function test_exists_redirect_url_save()
+    {
+        $this->assertTrue( function_exists('redirect_url_save') );
+    }
+
+    public function test_exists_sidebar_get_meta()
+    {
+        $this->assertTrue( function_exists('sidebar_get_meta') );
+    }
+
+    public function test_exists_sidebar_html()
+    {
+        $this->assertTrue( function_exists('sidebar_html') );
+    }
+
+    public function test_exists_sidebar_save()
+    {
+        $this->assertTrue( function_exists('sidebar_save') );
+    }
+
+    public function test_exists_level_one_meta_boxes()
+    {
+        $this->assertTrue( function_exists('level_one_meta_boxes') );
+    }
+
+    public function test_exists_notification_meta_boxes()
+    {
+        $this->assertTrue( function_exists('notification_meta_boxes') );
+    }
 }
