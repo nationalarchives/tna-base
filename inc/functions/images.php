@@ -11,6 +11,10 @@ function tna_theme_setup() {
 	add_image_size( 'new-size', 210, 260 );
 }
 
+/**
+ * @param $profile_size
+ * @return array
+ */
 function profile_img($profile_size) {
 	$add_profile_size = array(
 		"new-size" => __( "Profile")
@@ -20,7 +24,11 @@ function profile_img($profile_size) {
 }
 
 // Adds img-responsive class to img tag within content
-function add_image_responsive_class( $content ) {
+/**
+ * @param $content
+ * @return mixed
+ */
+function add_image_responsive_class($content ) {
 	global $post;
 	$pattern ='/<img(.*?)class=\"(.*?)\"(.*?)>/i';
 	$replacement = '<img$1class="$2 img-responsive"$3>';
@@ -30,7 +38,13 @@ function add_image_responsive_class( $content ) {
 
 // Amends attr for wp-caption
 // See https://codex.wordpress.org/Plugin_API/Filter_Reference/img_caption_shortcode
-function my_img_caption_shortcode( $empty, $attr, $content ){
+/**
+ * @param $empty
+ * @param $attr
+ * @param $content
+ * @return string
+ */
+function my_img_caption_shortcode($empty, $attr, $content ){
 	$attr = shortcode_atts( array(
 		'id'      => '',
 		'align'   => 'alignnone',
@@ -52,6 +66,11 @@ function my_img_caption_shortcode( $empty, $attr, $content ){
 }
 
 // Optimized srcset sizes attribute
+/**
+ * @param $sizes
+ * @param $size
+ * @return string
+ */
 function content_image_sizes_attr($sizes, $size) {
 	$width = $size[0];
 	if ( is_page() && !is_page_template() ) {
