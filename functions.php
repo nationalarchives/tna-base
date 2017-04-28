@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.7.2' );
+define( 'EDD_VERSION', '1.7.3' );
 
 // Included classes
 include 'src/CreateMetaBox.php';
@@ -29,6 +29,13 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_action( 'admin_menu', 'add_banner_menu_item' );
 add_action( 'admin_init', 'display_banner_panel_fields' );
 add_action( 'init', 'add_button' ); // tinymce
+add_action( 'add_meta_boxes', 'myfield_add_custom_box' ); // Metabox for Feature Box
+add_action( 'save_post', 'myfield_save_postdata' ); // Saving the data entered
+add_action( 'add_meta_boxes', 'redirect_url_add_meta_box' ); // Redirect metabox
+add_action( 'save_post', 'redirect_url_save' );
+add_action( 'save_post', 'sidebar_save' );
+add_action( 'init', 'level_one_meta_boxes' );
+add_action( 'init', 'notification_meta_boxes' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
