@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.7.2' );
+define( 'EDD_VERSION', '1.7.3' );
 
 // Included classes
 include 'src/CreateMetaBox.php';
