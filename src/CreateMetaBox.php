@@ -28,13 +28,13 @@ class CreateMetaBox {
 		foreach ( $this->_meta_box['fields'] as $field ) {
 			// get current post meta data
 			$meta = get_post_meta( $post->ID, $field['id'], true );
-			echo '<tr>',
+			echo '<tr class="',$field['id'],'">',
 			'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
 			'<td>';
 			switch ( $field['type'] ) {
 				case 'text':
 					echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />',
-					'<br />', $field['desc'];
+					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'textarea':
 					$field_value = get_post_meta( $post->ID, $field['id'], false );
@@ -49,8 +49,9 @@ class CreateMetaBox {
 						'wpautop'       => false
 					);
 					wp_editor( $field_value[0], $field['id'], $args );
+					// Please leave this line of code commented out as reference - original code replaced with above.
 					// echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
-					echo '<br />', $field['desc'];
+					echo '<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'select':
 					echo '<select name="', $field['id'], '" id="', $field['id'], '">';
@@ -58,7 +59,7 @@ class CreateMetaBox {
 						echo '<option', $meta == $option ? ' selected="selected"' : '', '>', $option, '</option>';
 					}
 					echo '</select>';
-					echo ' ', $field['desc'];
+					echo ' <p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'radio':
 					foreach ( $field['options'] as $option ) {
@@ -70,7 +71,7 @@ class CreateMetaBox {
 					break;
 				case 'date':
 					echo '<input type="date" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />',
-					'<br />', $field['desc'];
+					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 			}
 			echo '<td>',
