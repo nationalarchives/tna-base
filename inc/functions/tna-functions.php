@@ -34,9 +34,6 @@ function tna_scripts() {
 function load_custom_wp_admin_style() {
 	wp_register_style( 'tna-dashboard', get_template_directory_uri() . '/css/dashboard.css', false, '1.0.0' );
 	wp_enqueue_style( 'tna-dashboard' );
-
-	wp_register_script('admin-scripts', get_template_directory_uri() . '/js/admin.js', false, '1.0.0' );
-	wp_enqueue_script('admin-scripts');
 }
 
 // Gets the first sentence from the content area of a page
