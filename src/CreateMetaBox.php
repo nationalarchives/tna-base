@@ -74,9 +74,9 @@ class CreateMetaBox {
 					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'media':
-					echo '<div class="add-media-metabox"><input type="text" name="', $field['id'], '" id="',$field['id'],'" class="upload_media" value="', $meta ? $meta : $field['std'], '" size="30" style="width:57%" />',
+					echo '<input type="text" name="', $field['id'], '" id="',$field['id'],'" class="upload_media" value="', $meta ? $meta : $field['std'], '" size="30" style="width:57%" />',
 					'<input id="',$field['id'],'_button" type="button" value="Add media" name="',$field['id'],'" class="button media-button media-metabox-button-js" />',
-					'<br /><p class="howto">', $field['desc'],'</p></div>';
+					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 			}
 			echo '<td>',
