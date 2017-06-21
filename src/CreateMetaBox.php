@@ -23,18 +23,18 @@ class CreateMetaBox {
 	function show() {
 		global $post;
 		// Use nonce for verification
-		echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce( basename( __FILE__ ) ), '" />';
+		echo '<input type="hidden" name="tna_meta_box_nonce" value="', wp_create_nonce( basename( __FILE__ ) ), '" />';
 		echo '<table class="form-table">';
 		foreach ( $this->_meta_box['fields'] as $field ) {
 			// get current post meta data
 			$meta = get_post_meta( $post->ID, $field['id'], true );
-			echo '<tr>',
+			echo '<tr class="',$field['id'],'">',
 			'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
 			'<td>';
 			switch ( $field['type'] ) {
 				case 'text':
 					echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />',
-					'<br />', $field['desc'];
+					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'textarea':
 					$field_value = get_post_meta( $post->ID, $field['id'], false );
@@ -49,8 +49,9 @@ class CreateMetaBox {
 						'wpautop'       => false
 					);
 					wp_editor( $field_value[0], $field['id'], $args );
+					// Please leave this line of code commented out as reference - original code replaced with above.
 					// echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
-					echo '<br />', $field['desc'];
+					echo '<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'select':
 					echo '<select name="', $field['id'], '" id="', $field['id'], '">';
@@ -58,7 +59,7 @@ class CreateMetaBox {
 						echo '<option', $meta == $option ? ' selected="selected"' : '', '>', $option, '</option>';
 					}
 					echo '</select>';
-					echo ' ', $field['desc'];
+					echo ' <p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'radio':
 					foreach ( $field['options'] as $option ) {
@@ -67,6 +68,15 @@ class CreateMetaBox {
 					break;
 				case 'checkbox':
 					echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
+					break;
+				case 'date':
+					echo '<input type="date" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:270px" />',
+					'<br /><p class="howto">', $field['desc'],'</p>';
+					break;
+				case 'media':
+					echo '<input type="text" name="', $field['id'], '" id="',$field['id'],'" class="upload_media" value="', $meta ? $meta : $field['std'], '" size="30" style="width:57%" />',
+					'<input id="',$field['id'],'_button" type="button" value="Add media" name="',$field['id'],'" class="button media-button media-metabox-button-js" />',
+					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 			}
 			echo '<td>',
@@ -78,7 +88,7 @@ class CreateMetaBox {
 	// Save data from meta box
 	function save( $post_id ) {
 		// verify nonce
-		if ( ! wp_verify_nonce( $_POST['mytheme_meta_box_nonce'], basename( __FILE__ ) ) ) {
+		if ( ! isset( $_POST['tna_meta_box_nonce'] ) || ! wp_verify_nonce( $_POST['tna_meta_box_nonce'], basename( __FILE__ ) ) ) {
 			return $post_id;
 		}
 		// check autosave

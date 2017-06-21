@@ -1,8 +1,6 @@
 <?php
 
 // Make styles and scripts paths relative
-add_filter( 'script_loader_src', 'tna_styles_scripts_relative' );
-add_filter( 'style_loader_src', 'tna_styles_scripts_relative' );
 function tna_styles_scripts_relative( $url ) {
     return str_replace( site_url(), '', $url );
 }
@@ -29,4 +27,4 @@ function tna_wp_head() {
 function make_content_urls_relative( $content ) {
 	return str_replace( site_url(), '', $content );
 }
-add_filter( 'the_content', 'make_content_urls_relative' );
+

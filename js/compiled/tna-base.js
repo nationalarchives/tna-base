@@ -13,57 +13,49 @@ $.toggleDisplayOfElement = function (toggler, togglee) {
     $(toggler).toggleClass('expanded');
 };;"use strict";
 
-// Toggles the mega menu
+// Creating the home links
 
-$.fn.mega_menu_interactions = function () {
-    return this.each(function () {
+$.fn.mega_menu_enhancements = function () {
+
+    // Mega menu button
+
+    $('#mega-menu-pull-down, #mega-menu-mobile').each(function () {
         var $this = $(this);
         $this.on('click', function () {
             $('#nav').slideToggle('fast');
         })
-    });
-};
+    });;
 
-// Displays the promotional image
+    // Establishing toggle behaviour for links with .toggle-sub-menu
 
-$.fn.append_promotional_image = function () {
-    return this.each(function () {
-        var $this = $(this);
-        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="//www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
-    })
-};
-
-// Replacing anchor-only links
-
-$('.mega-menu a[href="#"]').each(function () {
-    var $this = $(this),
-        text = $this.text();
-    $this.replaceWith($('<div>', {
-        'text': text,
-        'class': 'mg-more',
-        'click': function() {
-            $(this).next().slideToggle('fast');
+    $(document).on('click', '.toggle-sub-menu', function (e) {
+        if ($(window).width() < 480) {
+            var $this = $(this);
+            e.preventDefault();
+            $this.toggleClass('expanded').next().slideToggle('fast');
         }
-    }))
-});
+    });
 
-// Creating the home links
+    // Replacing anchor-only links
 
-$.fn.append_home_links_to_mega_menu = function () {
+    $('.mega-menu a[href="#"]').each(function () {
+        var $this = $(this),
+            text = $this.text();
+        $this.replaceWith($('<div>', {
+            'text': text,
+            'class': 'toggle-sub-menu',
+            'id': 'more-link'
+        }));
+    });
+
     return this.each(function () {
         var $this = $(this),
             $items = $this.next(),
             $link,
             $li;
 
-        $this.addClass('mg-more');
+        $this.addClass('toggle-sub-menu');
 
-        $this.on('click', function (e) {
-            if ($(window).width() < 480) {
-                e.preventDefault();
-                $(this).next().slideToggle('fast');
-            }
-        });
 
         $link = $('<a>', {
             'href': $this.attr('href'),
@@ -73,6 +65,7 @@ $.fn.append_home_links_to_mega_menu = function () {
         $li = $('<li class="mobile-home-link">').append($link);
 
         $li.prependTo($items);
+
     })
 };
 
@@ -92,6 +85,15 @@ $.fn.webtrends_click_handler = function () {
                 )
             }
         })
+    })
+};
+
+// Displays the promotional image
+
+$.fn.append_promotional_image = function () {
+    return this.each(function () {
+        var $this = $(this);
+        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="//www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
     })
 };;'use strict';
 
@@ -277,7 +279,7 @@ $.fn.webtrends_click_handler = function () {
     $.fn.newsletterBackToOrigin = function (options) {
         var settings = $.extend({}, $.fn.newsletterBackToOrigin.defaults, options);
         return this.each(function () {
-            var thankYouURL = "http://nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/",
+            var thankYouURL = "http://www.nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/",
                 newValue = "?oldurl=" + window.location.href;
                 return settings.$element.val(thankYouURL + newValue);
         });
@@ -287,13 +289,46 @@ $.fn.webtrends_click_handler = function () {
     $.fn.newsletterBackToOrigin.defaults = {
         $element: $('input[name="ReturnURL"]'),
     }
-}(jQuery));;$('a[target="_blank"]').add_attributes_to_target_blank();
+}(jQuery));
 
-$('#mega-menu-pull-down, #mega-menu-mobile').mega_menu_interactions();
+// 	This JavaScript/jQuery snippet changes the image and caption that appear in the global footer.
+//	It has been extracted to a stand-alone file so that it can be shared across applications,
+//	keeping the footer consistent across applications.
+$(document).ready(function(){
+    ({
+        server : "https://www.nationalarchives.gov.uk/",
+        imageSource : "images/global/inf-14-345-expo-67.jpg",
+        imageDescription : "Cutting-edge racing car design in the 1960s at Montreal Expo 67",
+        linkText : "INF 14/345",
+        linkHref : "https://www.flickr.com/photos/nationalarchives/5960779782/",
+        linkTitle : "External website - opens in new window",
+        linkTarget : "_blank",
+        init : function() {
+            var caption = $('#flickr-caption'),
+                imageContainer = $('#flickr-image'),
+                image = imageContainer.find('img'),
+                imageLink = imageContainer.find('a');
+
+            caption.text(this.imageDescription);
+
+            imageLink.attr('href', this.linkHref);
+
+            image.attr({'src' : this.server + this.imageSource, 'alt' : this.imageDescription});
+
+            $('<a>', {
+                href : this.linkHref,
+                title : this.linkTitle,
+                text : this.linkText,
+                target : this.linkTarget
+            }).appendTo(caption).before(' (').after(')');
+        }
+    }).init();
+})
+;$('a[target="_blank"]').add_attributes_to_target_blank();
 
 $("ul.sub-menu:last").append_promotional_image();
 
-$(".main-ul > li > a").append_home_links_to_mega_menu();
+$(".mega-menu > ul > li > a").mega_menu_enhancements();
 
 $('a', '.mega-menu').webtrends_click_handler();
 
