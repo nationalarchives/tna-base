@@ -119,10 +119,6 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(function_exists('make_path_relative'));
     }
-    public function test_exists_make_path_relative_no_pre_path()
-    {
-        $this->assertTrue(function_exists('make_path_relative_no_pre_path'));
-    }
     public function test_exists_tna_wp_head()
     {
         $this->assertTrue(function_exists('tna_wp_head'));
