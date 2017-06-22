@@ -30,10 +30,13 @@ function tna_scripts() {
 	wp_enqueue_script( 'tna-base-min' );
 }
 
-// Add CSS stylesheet to the dashboard
+// Add CSS stylesheet and JS to the dashboard
 function load_custom_wp_admin_style() {
 	wp_register_style( 'tna-dashboard', get_template_directory_uri() . '/css/dashboard.css', false, '1.0.0' );
 	wp_enqueue_style( 'tna-dashboard' );
+
+	wp_register_script('tna-dashboard-scripts', get_template_directory_uri() . '/js/admin.js', array(), EDD_VERSION );
+	wp_enqueue_script('tna-dashboard-scripts');
 }
 
 // Gets the first sentence from the content area of a page
