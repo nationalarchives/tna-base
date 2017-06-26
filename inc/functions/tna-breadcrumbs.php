@@ -15,7 +15,7 @@ function tna_breadcrumbs() {
 
     $link = rtrim($link, '/');
     $link = ltrim($link, '/');
-    $link_parts = explode('/', rtrim($link, '/'));
+    $link_parts = explode('/', $link);
 
     $last = end($link_parts);
     $url = '';
