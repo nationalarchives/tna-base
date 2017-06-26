@@ -15,17 +15,29 @@ function tna_breadcrumbs() {
 
     $link = rtrim($link, '/');
     $link = ltrim($link, '/');
-
     $link_parts = explode('/', rtrim($link, '/'));
 
     $last = end($link_parts);
+    $url = '';
 
     echo '<div class="breadcrumbs">';
 
-    foreach ( $link_parts as $part ) {
-        echo '<span>' . $part . '</span>';
-        if ($part !== $last) {
-            echo ' <span class="sep">&gt;</span> ';
+    if (is_home() || is_front_page()) {
+        echo '<span><a href="' . network_site_url() . '/' . '">Home</a></span>';
+    } else {
+        echo '<span><a href="' . network_site_url() . '/' . '">Home</a></span>';
+        echo ' <span class="sep">&gt;</span> ';
+
+        foreach ( $link_parts as $part ) {
+
+            $url .= $part . '/';
+
+            if ($part !== $last) {
+                echo '<span><a href="' . network_site_url() . '/' . $url . '">' . $part . '</a></span>';
+                echo ' <span class="sep">&gt;</span> ';
+            } else {
+                echo '<span>' . $part . '</span>';
+            }
         }
     }
 
