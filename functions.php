@@ -11,6 +11,7 @@ include 'inc/functions/tna-functions.php';
 include 'inc/functions/title-tag.php';
 include 'inc/functions/tna-globals.php';
 include 'inc/functions/dimox_breadcrumbs.php';
+include 'inc/functions/tna-breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
 include 'inc/functions/url-rewriting.php';
 include 'inc/functions/images.php';
