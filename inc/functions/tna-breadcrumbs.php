@@ -31,12 +31,15 @@ function tna_breadcrumbs() {
         foreach ( $link_parts as $part ) {
 
             $url .= $part . '/';
+            $full_url = network_site_url() . '/' . $url;
+            $id = url_to_postid( $full_url );
+            $title = get_the_title( $id );
 
             if ($part !== $last) {
-                echo '<span><a href="' . network_site_url() . '/' . $url . '">' . $part . '</a></span>';
+                echo '<span><a href="' . $full_url . '">' . $title . '</a></span>';
                 echo ' <span class="sep">&gt;</span> ';
             } else {
-                echo '<span>' . $part . '</span>';
+                echo '<span>' . $title . '</span>';
             }
         }
     }
