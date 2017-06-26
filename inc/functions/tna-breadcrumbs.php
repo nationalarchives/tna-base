@@ -18,8 +18,17 @@ function tna_breadcrumbs() {
 
     $link_parts = explode('/', rtrim($link, '/'));
 
+    $last = end($link_parts);
+
+    echo '<div class="breadcrumbs">';
+
     foreach ( $link_parts as $part ) {
-        echo $part . '<br>';
+        echo '<span>' . $part . '</span>';
+        if ($part !== $last) {
+            echo ' <span class="sep">&gt;</span> ';
+        }
     }
-    
+
+    echo '</div>';
+
 }
