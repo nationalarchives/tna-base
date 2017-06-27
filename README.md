@@ -1,4 +1,4 @@
-# tna-base
+# tna-base for cloud
 
 The National Archives WordPress Parent Theme
 
@@ -24,11 +24,11 @@ WordPress breadcrumbs without a plugin [https://gist.github.com/Dimox/5654092] (
 
 ### 2.1 Create host for WordPress in MAMP Pro
 
-Under the 'Hosts' tab create a new server with Server Name 'tna-base-dev' within the MAMP/htdocs/sites/tna-base-dev/ directory. Having done this click 'Save'.
+Under the 'Hosts' tab create a new server with Server Name 'tna-base-cloud' within the MAMP/htdocs/sites/tna-base-cloud/ directory. Having done this click 'Save'.
 
 ### 2.2 1-click WordPress install in MAMP Pro
 
-Under the 'Hosts' tab, with 'tna-base-dev' selected, click Extras and install WordPress, providing:
+Under the 'Hosts' tab, with 'tna-base-cloud' selected, click Extras and install WordPress, providing:
 
 * 'The National Archives' as Name of the blog
 * Your email address as the email address
@@ -46,16 +46,16 @@ Click 'Remote' in SourceTree and you will be shown a full list of repositories y
 * Select 'Web server is installed locally, source files are located under its document root' 
 * Set /Applications/MAMP/htdocs/sites/tna-base-dev/wp-content/themes/tna-base and click 'Project Root'
 * Specify parameters for a new server as:
-  * Name: tna-base-dev
-  * Web server root URL: http://tna-base-dev:8888
-  * Set Project URL as: http://tna-base-dev:8888
+  * Name: tna-base-cloud
+  * Web server root URL: http://tna-base-cloud:8888
+  * Set Project URL as: http://tna-base-cloud:8888
 
 ### 2.5 Enable WordPress integration in PhpStorm
 
 * Open the tna-base-dev project in PhpStorm
 * Go to PhpStorm > Preferences > Languages & Frameworks > Php > WordPress
 * Check the 'Enable WordPress Integration' box
-* Set the WordPress installation path as the root directory for the tna-base-dev WordPress installation (typically /Applications/MAMP/htdocs/sites/tna-base-dev/)
+* Set the WordPress installation path as the root directory for the tna-base-cloud WordPress installation (typically /Applications/MAMP/htdocs/sites/tna-base-cloud/)
 
 ### 2.6 Running Grunt
 
