@@ -127,20 +127,22 @@ $.fn.append_promotional_image = function () {
         $('html, body').animate({scrollTop : 0},800);
         return false;
     });
-});;$(document).ready(function () {
-    var tnaSetThisCookie = function (name, days) {
-        var d = new Date();
-        d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * days);
-        document.cookie = name + "=true;path=/;expires=" + d.toGMTString() + ';';
-    };
+});;
+tnaSetThisCookie = function (name, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * days);
+    document.cookie = name + "=true;path=/;expires=" + d.toGMTString() + ';';
+};
 
-    var tnaCheckForThisCookie = function (name) {
-        if (document.cookie.indexOf(name) === -1) {
-            return false;
-        } else {
-            return true;
-        }
-    };
+tnaCheckForThisCookie = function (name) {
+    if (document.cookie.indexOf(name) === -1) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+$(document).ready(function () {
 
     $(function () { // All content must be placed within this IIFE.
         $('#mega-menu-pull-down').show();
@@ -291,39 +293,6 @@ $.fn.append_promotional_image = function () {
     }
 }(jQuery));
 
-// 	This JavaScript/jQuery snippet changes the image and caption that appear in the global footer.
-//	It has been extracted to a stand-alone file so that it can be shared across applications,
-//	keeping the footer consistent across applications.
-$(document).ready(function(){
-    ({
-        server : "https://www.nationalarchives.gov.uk/",
-        imageSource : "images/global/inf-14-345-expo-67.jpg",
-        imageDescription : "Cutting-edge racing car design in the 1960s at Montreal Expo 67",
-        linkText : "INF 14/345",
-        linkHref : "https://www.flickr.com/photos/nationalarchives/5960779782/",
-        linkTitle : "External website - opens in new window",
-        linkTarget : "_blank",
-        init : function() {
-            var caption = $('#flickr-caption'),
-                imageContainer = $('#flickr-image'),
-                image = imageContainer.find('img'),
-                imageLink = imageContainer.find('a');
-
-            caption.text(this.imageDescription);
-
-            imageLink.attr('href', this.linkHref);
-
-            image.attr({'src' : this.server + this.imageSource, 'alt' : this.imageDescription});
-
-            $('<a>', {
-                href : this.linkHref,
-                title : this.linkTitle,
-                text : this.linkText,
-                target : this.linkTarget
-            }).appendTo(caption).before(' (').after(')');
-        }
-    }).init();
-})
 ;$('a[target="_blank"]').add_attributes_to_target_blank();
 
 $("ul.sub-menu:last").append_promotional_image();

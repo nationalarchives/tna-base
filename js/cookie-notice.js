@@ -1,17 +1,19 @@
-$(document).ready(function () {
-    var tnaSetThisCookie = function (name, days) {
-        var d = new Date();
-        d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * days);
-        document.cookie = name + "=true;path=/;expires=" + d.toGMTString() + ';';
-    };
 
-    var tnaCheckForThisCookie = function (name) {
-        if (document.cookie.indexOf(name) === -1) {
-            return false;
-        } else {
-            return true;
-        }
-    };
+tnaSetThisCookie = function (name, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * days);
+    document.cookie = name + "=true;path=/;expires=" + d.toGMTString() + ';';
+};
+
+tnaCheckForThisCookie = function (name) {
+    if (document.cookie.indexOf(name) === -1) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+$(document).ready(function () {
 
     $(function () { // All content must be placed within this IIFE.
         $('#mega-menu-pull-down').show();
