@@ -16,6 +16,7 @@ function tna_scripts() {
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr.js', array(), '2.8.3', false );
 	wp_register_script( 'tna-base-min', get_template_directory_uri() . '/js/compiled/tna-base.min.js', array(), EDD_VERSION, true );
 	wp_register_script( 'webtrends', get_template_directory_uri() . '/js/lib/webtrends.js', array(), EDD_VERSION, true );
+	wp_register_script( 'tna-base-flickr', 'http://www.nationalarchives.gov.uk/scripts/footer-img.js', array(), EDD_VERSION, true );
 	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php') || is_category() ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/lib/jQuery.equalHeights.js', array(),
 			EDD_VERSION, true );
@@ -28,12 +29,16 @@ function tna_scripts() {
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'webtrends' );
 	wp_enqueue_script( 'tna-base-min' );
+	wp_enqueue_script( 'tna-base-flickr' );
 }
 
-// Add CSS stylesheet to the dashboard
+// Add CSS stylesheet and JS to the dashboard
 function load_custom_wp_admin_style() {
 	wp_register_style( 'tna-dashboard', get_template_directory_uri() . '/css/dashboard.css', false, '1.0.0' );
 	wp_enqueue_style( 'tna-dashboard' );
+
+	wp_register_script('tna-dashboard-scripts', get_template_directory_uri() . '/js/admin.js', array(), EDD_VERSION );
+	wp_enqueue_script('tna-dashboard-scripts');
 }
 
 // Gets the first sentence from the content area of a page
