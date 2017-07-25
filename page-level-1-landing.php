@@ -13,7 +13,7 @@ get_header(); ?>
 					<article class="banner feature-img feature-img-bg" <?php
 					if ( has_post_thumbnail() ) {
 						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-page-width' ); ?>
-						style="background-image: url(<?php echo make_path_relative_no_pre_path( $thumbnail_src[0] ); ?>);"
+						style="background-image: url(<?php echo make_path_relative( $thumbnail_src[0] ); ?>);"
 					<?php } ?>>
 						<div class="entry-header">
 							<h1><?php the_title(); ?></h1>
