@@ -1,6 +1,6 @@
 <div class="newsletter-template">
     <div class="news-icon">
-        <img src="http://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/tna-newsletter-icon.png" alt="The National Archives Newsletter Icon"/>
+        <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/tna-newsletter-icon.png" alt="The National Archives Newsletter Icon"/>
     </div>
 
     <div class="news-content" id="newsletterAccessibility">
