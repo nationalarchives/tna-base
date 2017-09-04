@@ -11,11 +11,13 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-md-12">
                     <?php while ( have_posts() ) : the_post();
-                        get_template_part( 'inc/content/feature-box' );
+                        get_template_part( 'partials/feature-box' );
                     endwhile; ?>
 				</div>
 			</div>
-			<?php get_template_part( 'inc/content/children-grandchildren-loop' ); ?>
+            <div class="row equal-heights" id="equal-heights">
+			    <?php get_template_part( 'inc/content/children-grandchildren-loop' ); ?>
+            </div>
 		</div>
 	</main>
 
