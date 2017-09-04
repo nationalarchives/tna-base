@@ -16,7 +16,7 @@ get_header(); ?>
 				</div>
 			</div>
             <div class="row equal-heights" id="equal-heights">
-			    <?php get_template_part( 'inc/content/children-grandchildren-loop' ); ?>
+			    <?php get_template_part( 'partials/children-grandchildren-loop' ); ?>
             </div>
 		</div>
 	</main>
