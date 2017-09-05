@@ -28,7 +28,7 @@ function get_page_banner( $type, $title, $image='', $content='', $button='', $ur
 			<?php get_image_caption( 'top' ) ?>
 		</article>
 	<?php } elseif ( $type == 'section' ) {
-		$content_class  = ($image) ? 'col-xs-12 col-sm-6 col-md-6' : 'col-xs-12 col-sm-8 col-md-8';
+		$content_class  = ($image && !$section_content) ? 'col-xs-12 col-sm-6 col-md-6' : 'col-xs-12 col-sm-8 col-md-8';
 		?>
 		<article>
 			<div class="entry-header">
