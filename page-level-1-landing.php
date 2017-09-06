@@ -13,7 +13,8 @@ get_header(); ?>
 			<div class="row" role="banner">
 				<div class="col-md-12">
 					<?php
-					$image      = make_path_relative_no_pre_path( get_feature_image_url( 'full-page-width', true ) );
+					global $post;
+					$image      = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full-page-width', true ) );
 					$title      = get_the_title();
 					$content    = get_the_content();
 					$button     = get_post_meta( $post->ID, 'action_button_title', true );
@@ -34,7 +35,7 @@ get_header(); ?>
 						$boxes[$i]['content'] = get_post_meta( $post->ID, 'box_content_' . $i, true );
 						$boxes[$i]['display'] = get_post_meta( $post->ID, 'box_width_' . $i, true );
 					}
-					get_content_boxes( $boxes );
+					get_content_meta_boxes( $boxes );
 					?>
 				</div>
 			</main>
