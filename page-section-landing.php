@@ -23,7 +23,38 @@ get_header(); ?>
 			</div>
             <div class="row equal-heights" id="equal-heights">
 			    <?php
-			    get_content_boxes_from_children( $post->ID );
+			    $i = 1;
+			    $n = 1;
+				$boxes = array();
+			    $pages = get_pages( array(
+				    'sort_order' => 'asc',
+				    'sort_column' => 'menu_order',
+				    'child_of' => $post->ID,
+				    'parent' => $post->ID
+			    ) );
+			    foreach ( $pages as $page ) {
+				    $redirect             = get_post_meta( $page->ID, 'redirectUrl', true );
+				    $boxes[$i]['title']   = $page->post_title;
+				    $boxes[$i]['url']     = ($redirect) ?  $redirect : make_path_relative( get_page_link( $page->ID ) );
+				    $boxes[$i]['image']   = make_path_relative_no_pre_path( get_feature_image_url( $page->ID, 'landing-page-children-thumb' ) );
+				    $boxes[$i]['excerpt'] = ( $page->post_excerpt ) ? $page->post_excerpt : '<p>' . first_sentence( $page->post_content ) . '</p>';
+					    $child_pages = get_pages( array(
+						    'sort_order' => 'asc',
+						    'sort_column' => 'menu_order',
+						    'child_of' => $page->ID,
+						    'parent' => $page->ID
+					    ) );
+					    if ( $child_pages ) {
+						    foreach ( $child_pages as $child_page ) {
+							    $redirect = get_post_meta( $child_page->ID, 'redirectUrl', true );
+							    $boxes[$i]['child_pages'][$n]['title'] = $child_page->post_title;
+							    $boxes[$i]['child_pages'][$n]['url'] = ($redirect) ?  $redirect : make_path_relative( get_page_link( $child_page->ID ) );
+							    $n++;
+						    }
+					    }
+				    $i++;
+			    }
+			    get_content_boxes_from_children( $boxes );
 			    ?>
             </div>
 		<?php endwhile; ?>

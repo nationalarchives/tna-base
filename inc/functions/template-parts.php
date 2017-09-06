@@ -88,49 +88,31 @@ function get_content_meta_boxes( $boxes ) {
 	}
 }
 
-function get_content_boxes_from_children( $id ) {
-	$pages = get_pages( array(
-		'sort_order' => 'asc',
-		'sort_column' => 'menu_order',
-		'child_of' => $id,
-		'parent' => $id
-	) );
-	foreach ( $pages as $page ) {
-		$redirect = get_post_meta( $page->ID, 'redirectUrl', true );
-		$page_link  = ($redirect) ?  $redirect : make_path_relative( get_page_link( $page->ID ) );
-		$feature_image  = make_path_relative_no_pre_path( get_feature_image_url( $page->ID, 'landing-page-children-thumb' ) );
-		$excerpt = ( $page->post_excerpt ) ? $page->post_excerpt : '<p>' . first_sentence( $page->post_content ) . '</p>'; ?>
+function get_content_boxes_from_children( $boxes ) {
+	foreach ( $boxes as $box ) {
+		?>
 		<div class="col-xs-12 col-sm-6">
 			<article>
 				<div class="entry-header">
 					<h2>
-						<a href="<?php echo $page_link; ?>" title="<?php echo $page->post_title ?>">
-							<?php echo $page->post_title; ?>
+						<a href="<?php echo $box['url']; ?>" title="<?php echo $box['title'] ?>">
+							<?php echo $box['title']; ?>
 						</a>
 					</h2>
 				</div>
 				<div class="entry-content">
-					<?php if ( $feature_image ) { ?>
-						<a href="<?php echo $page_link; ?>" class="thumbnail" title="<?php echo $page->post_title ?>">
-							<img src="<?php echo $feature_image; ?>" class="img-responsive" alt="<?php echo $page->post_title ?>">
+					<?php if ( $box['image'] ) { ?>
+						<a href="<?php echo $box['url']; ?>" class="thumbnail" title="<?php echo $box['title'] ?>">
+							<img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
 						</a>
 					<?php }
-					echo $excerpt;
-					$child_pages = get_pages( array(
-						'sort_order' => 'asc',
-						'sort_column' => 'menu_order',
-						'child_of' => $page->ID,
-						'parent' => $page->ID
-					) );
-					if ( $child_pages ) { ?>
+					echo $box['excerpt'];
+					if ( isset($box['child_pages']) ) { ?>
 						<ul class="child">
-							<?php foreach ( $child_pages as $child_page ) {
-								$redirect = get_post_meta( $child_page->ID, 'redirectUrl', true );
-								$page_link  = ($redirect) ?  $redirect : make_path_relative( get_page_link( $child_page->ID ) );
-								?>
+							<?php foreach ( $box['child_pages'] as $child_page ) { ?>
 								<li>
-									<a href="<?php echo $page_link; ?>" title="<?php echo $child_page->post_title ?>">
-										<?php echo $child_page->post_title; ?>
+									<a href="<?php echo $child_page['url']; ?>" title="<?php echo $child_page['title'] ?>">
+										<?php echo $child_page['title']; ?>
 									</a>
 								</li>
 								<?php
