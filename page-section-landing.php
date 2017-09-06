@@ -54,7 +54,7 @@ get_header(); ?>
 					    }
 				    $i++;
 			    }
-			    get_content_boxes_from_children( $boxes );
+			    get_content_children_boxes( $boxes );
 			    ?>
             </div>
 		<?php endwhile; ?>

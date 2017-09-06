@@ -85,7 +85,7 @@ function get_content_meta_boxes( $boxes ) {
 	}
 }
 
-function get_content_boxes_from_children( $boxes ) {
+function get_content_children_boxes( $boxes ) {
 	foreach ( $boxes as $box ) { ?>
 		<div class="col-xs-12 col-sm-6">
 			<article>
