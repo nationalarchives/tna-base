@@ -89,8 +89,7 @@ function get_content_meta_boxes( $boxes ) {
 }
 
 function get_content_boxes_from_children( $boxes ) {
-	foreach ( $boxes as $box ) {
-		?>
+	foreach ( $boxes as $box ) { ?>
 		<div class="col-xs-12 col-sm-6">
 			<article>
 				<div class="entry-header">
@@ -122,6 +121,5 @@ function get_content_boxes_from_children( $boxes ) {
 				</div>
 			</article>
 		</div>
-		<?php
-	}
+	<?php }
 }

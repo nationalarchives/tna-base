@@ -23,14 +23,14 @@ get_header(); ?>
 			</div>
             <div class="row equal-heights" id="equal-heights">
 			    <?php
-			    $i = 1;
-			    $n = 1;
-				$boxes = array();
+			    $i = 1; $n = 1; $boxes = array();
+			    $id    = is_front_page() ? 0 : $post->ID ;
 			    $pages = get_pages( array(
 				    'sort_order' => 'asc',
 				    'sort_column' => 'menu_order',
-				    'child_of' => $post->ID,
-				    'parent' => $post->ID
+				    'exclude' => array( $post->ID ),
+				    'child_of' => $id,
+				    'parent' => $id,
 			    ) );
 			    foreach ( $pages as $page ) {
 				    $redirect             = get_post_meta( $page->ID, 'redirectUrl', true );
