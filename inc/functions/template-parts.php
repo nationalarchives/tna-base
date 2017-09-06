@@ -58,44 +58,29 @@ function get_page_banner( $type, $title, $image='', $content='', $button='', $ur
 }
 
 function get_content_boxes( $boxes ) {
-
 	foreach ( $boxes as $box ) {
 
-		$title      = $box['title'];
-		$url        = $box['url'];
-		$image      = $box['image'];
-		$content    = $box['content'];
-		$display    = $box['display'];
+		$mdCol      = ( $box['display'] == 'at full width' ) ? '12' : ( ( $box['display'] == 'at a half' ) ? '6' : '4');
+		$colClass   = ( $box['display'] == 'at full width' ) ? 'box-full' : ( ( $box['display'] == 'at a half' ) ? 'box-half' : 'box-third');
 
-		if ( $display == 'at full width' ) {
-			$mdCol = '12';
-			$colClass = 'box-full';
-		} elseif ( $display == 'at a half' ) {
-			$mdCol = '6';
-			$colClass = 'box-half';
-		} else {
-			$mdCol = '4';
-			$colClass = 'box-third';
-		}
-
-		if ( !empty( $title ) && $display != 'disabled' ) { ?>
+		if ( !empty( $box['title'] ) && $box['display'] != 'disabled' ) { ?>
 			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
 				<article>
-					<?php if ( !empty( $image ) ) { ?>
-					<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $image; ?>);">
+					<?php if ( !empty( $box['image'] ) ) { ?>
+					<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $box['image']; ?>);">
 						<?php }  else { ?>
 						<div class="entry-header">
 							<?php } ?>
 							<h2>
-								<?php if ( !empty( $url ) ) { ?>
-									<a href="<?php echo $url ?>">
-										<?php echo $title ?>
+								<?php if ( !empty( $box['url'] ) ) { ?>
+									<a href="<?php echo $box['url'] ?>">
+										<?php echo $box['title'] ?>
 									</a>
-								<?php } else { echo $title; } ?>
+								<?php } else { echo $box['title']; } ?>
 							</h2>
 						</div>
 						<div class="entry-content clearfix">
-							<?php echo $content ?>
+							<?php echo $box['content'] ?>
 						</div>
 				</article>
 			</div>
