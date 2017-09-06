@@ -23,7 +23,20 @@ get_header(); ?>
 				</div>
 			</div>
 			<main id="main" role="main">
-				<?php get_template_part( 'partials/content-boxes' ); ?>
+				<div class="row equal-heights">
+					<?php
+					$boxes  = array();
+					$n      = get_post_meta( $post->ID, 'number_of_boxes', true );
+					for ($i = 1; $i <= $n; $i++) {
+						$boxes[$i]['title']   = get_post_meta( $post->ID, 'box_title_' . $i, true );
+						$boxes[$i]['url']     = get_post_meta( $post->ID, 'box_title_url_' . $i, true );
+						$boxes[$i]['image']   = get_post_meta( $post->ID, 'box_image_url_' . $i, true );
+						$boxes[$i]['content'] = get_post_meta( $post->ID, 'box_content_' . $i, true );
+						$boxes[$i]['display'] = get_post_meta( $post->ID, 'box_width_' . $i, true );
+					}
+					get_content_boxes( $boxes );
+					?>
+				</div>
 			</main>
 		</div>
 		<?php endwhile; ?>

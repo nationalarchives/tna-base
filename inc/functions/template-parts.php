@@ -56,3 +56,49 @@ function get_page_banner( $type, $title, $image='', $content='', $button='', $ur
 		</article>
 	<?php }
 }
+
+function get_content_boxes( $boxes ) {
+
+	foreach ( $boxes as $box ) {
+
+		$title      = $box['title'];
+		$url        = $box['url'];
+		$image      = $box['image'];
+		$content    = $box['content'];
+		$display    = $box['display'];
+
+		if ( $display == 'at full width' ) {
+			$mdCol = '12';
+			$colClass = 'box-full';
+		} elseif ( $display == 'at a half' ) {
+			$mdCol = '6';
+			$colClass = 'box-half';
+		} else {
+			$mdCol = '4';
+			$colClass = 'box-third';
+		}
+
+		if ( !empty( $title ) && $display != 'disabled' ) { ?>
+			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
+				<article>
+					<?php if ( !empty( $image ) ) { ?>
+					<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $image; ?>);">
+						<?php }  else { ?>
+						<div class="entry-header">
+							<?php } ?>
+							<h2>
+								<?php if ( !empty( $url ) ) { ?>
+									<a href="<?php echo $url ?>">
+										<?php echo $title ?>
+									</a>
+								<?php } else { echo $title; } ?>
+							</h2>
+						</div>
+						<div class="entry-content clearfix">
+							<?php echo $content ?>
+						</div>
+				</article>
+			</div>
+		<?php }
+	}
+}
