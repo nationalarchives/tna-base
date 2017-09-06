@@ -28,8 +28,7 @@ function get_page_banner( $type, $title, $image='', $content='', $button='', $ur
 			<?php get_image_caption( 'top' ) ?>
 		</article>
 	<?php } elseif ( $type == 'section' ) {
-		$content_class  = ($image && !$section_content) ? 'col-xs-12 col-sm-6 col-md-6' : 'col-xs-12 col-sm-8 col-md-8';
-		?>
+		$content_class  = ($image && !$section_content) ? 'col-xs-12 col-sm-6 col-md-6' : 'col-xs-12 col-sm-8 col-md-8'; ?>
 		<article>
 			<div class="entry-header">
 				<h1><?php echo $title; ?></h1>
@@ -59,10 +58,8 @@ function get_page_banner( $type, $title, $image='', $content='', $button='', $ur
 
 function get_content_meta_boxes( $boxes ) {
 	foreach ( $boxes as $box ) {
-
 		$mdCol      = ( $box['display'] == 'at full width' ) ? '12' : ( ( $box['display'] == 'at a half' ) ? '6' : '4');
 		$colClass   = ( $box['display'] == 'at full width' ) ? 'box-full' : ( ( $box['display'] == 'at a half' ) ? 'box-half' : 'box-third');
-
 		if ( !empty( $box['title'] ) && $box['display'] != 'disabled' ) { ?>
 			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
 				<article>
