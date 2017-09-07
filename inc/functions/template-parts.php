@@ -40,7 +40,7 @@ function get_page_banner( $type, $title, $image='', $content='', $button='', $ur
 				<?php if ($section_content) { ?>
 					<div class="col-xs-12 col-sm-4 col-md-4">
 						<div class="well">
-							<?php echo wpautop($section_content); ?>
+							<?php echo $section_content; ?>
 						</div>
 					</div>
 				<?php } elseif ($image) { ?>
