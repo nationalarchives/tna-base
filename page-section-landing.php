@@ -39,7 +39,7 @@ get_header(); ?>
 						$boxes[ $i ]['title']   = $page->post_title;
 						$boxes[ $i ]['url']     = ( $redirect ) ? $redirect : make_path_relative( get_page_link( $page->ID ) );
 						$boxes[ $i ]['image']   = make_path_relative_no_pre_path( get_feature_image_url( $page->ID, 'landing-page-children-thumb' ) );
-						$boxes[ $i ]['excerpt'] = ( $page->post_excerpt ) ? $page->post_excerpt : '<p>' . first_sentence( $page->post_content ) . '</p>';
+						$boxes[ $i ]['excerpt'] = ( $page->post_excerpt ) ? $page->post_excerpt : first_sentence( $page->post_content );
 						$child_pages            = get_pages( array(
 							'sort_order'  => 'asc',
 							'sort_column' => 'menu_order',

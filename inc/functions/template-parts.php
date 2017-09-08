@@ -101,9 +101,9 @@ function get_content_children_boxes( $boxes ) {
 						<a href="<?php echo $box['url']; ?>" class="thumbnail" title="<?php echo $box['title'] ?>">
 							<img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
 						</a>
-					<?php }
-					echo $box['excerpt'];
-					if ( isset($box['child_pages']) ) { ?>
+					<?php } ?>
+					<p><?php echo $box['excerpt']; ?></p>
+					<?php if ( isset($box['child_pages']) ) { ?>
 						<ul class="child">
 							<?php foreach ( $box['child_pages'] as $child_page ) { ?>
 								<li>
