@@ -18,6 +18,7 @@ include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
 include 'inc/functions/notification-banner.php';
+include 'inc/functions/template-parts.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
