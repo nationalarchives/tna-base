@@ -1,5 +1,8 @@
 <?php
 
+// For cloud add this constant to wp-config
+define( 'TNA_CLOUD', true );
+
 // Theme version
 define( 'EDD_VERSION', '1.9' );
 
