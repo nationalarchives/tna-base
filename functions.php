@@ -10,12 +10,11 @@ define( 'EDD_VERSION', '1.9' );
 include 'src/CreateMetaBox.php';
 
 // Include functions
+include 'inc/functions/functions-non-cloud.php';
 include 'inc/functions/tna-functions.php';
 include 'inc/functions/title-tag.php';
-include 'inc/functions/tna-globals.php';
 include 'inc/functions/dimox_breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
-include 'inc/functions/url-rewriting.php';
 include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
@@ -80,9 +79,6 @@ remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 
 // Theme Support
 add_theme_support( 'post-thumbnails' );
-
-// Set path to mega menu HTML
-set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));
 
 // Call shortcode inside wordpress by using [newsletter-back-button]
 add_shortcode('newsletter-back-button', 'get_query_string_newsletter_previous_url');
