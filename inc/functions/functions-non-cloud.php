@@ -2,7 +2,6 @@
 /**
  * Functions for TNA infrastructure (non cloud)
  *
- *
  */
 
 // Make styles and scripts paths relative
@@ -71,10 +70,8 @@ function set_path_to_mega_menu($development_machine)
 	}
 }
 
-function check_for_specific_url_path($url_path = ''){
-	$url = 'http://nationalarchives.gov.uk';
+function check_for_specific_url_path($url_path = '') {
+	$protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
+	$url = $protocol.'://nationalarchives.gov.uk';
 	return strpos($url,$url_path);
 }
-
-// Set path to mega menu HTML
-set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));

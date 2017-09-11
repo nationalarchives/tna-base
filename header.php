@@ -90,10 +90,12 @@
 <nav id="nav" role="navigation">
 	<div class="mega-menu clearfix">
 		<?php
-		if (file_exists(PATH_TO_MEGA_MENU_HTML)) {
-			include PATH_TO_MEGA_MENU_HTML;
-		} else {
-			include 'inc/content/mega-menu.php';
+		if (!TNA_CLOUD) {
+			if (file_exists(PATH_TO_MEGA_MENU_HTML)) {
+				include PATH_TO_MEGA_MENU_HTML;
+			} else {
+				include 'inc/content/mega-menu.php';
+			}
 		}
 		?>
 	</div>

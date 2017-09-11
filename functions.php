@@ -83,4 +83,5 @@ add_theme_support( 'post-thumbnails' );
 // Call shortcode inside wordpress by using [newsletter-back-button]
 add_shortcode('newsletter-back-button', 'get_query_string_newsletter_previous_url');
 
-
+// Set path to mega menu HTML
+set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));
