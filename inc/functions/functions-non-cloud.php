@@ -6,7 +6,8 @@
 
 // Make styles and scripts paths relative
 function tna_styles_scripts_relative( $content ) {
-	if (!TNA_CLOUD) {
+	global $cloud;
+	if (!$cloud) {
 		return str_replace( site_url(), '', $content );
 	} else {
 		return $content;
@@ -14,7 +15,8 @@ function tna_styles_scripts_relative( $content ) {
 }
 // Make template URLs relative
 function make_path_relative( $url ) {
-	if (!TNA_CLOUD) {
+	global $cloud;
+	if (!$cloud) {
 		global $pre_path;
 		return str_replace( site_url(), $pre_path, $url );
 	} else {
@@ -23,7 +25,8 @@ function make_path_relative( $url ) {
 }
 // Make template URLs relative without the $pre_path
 function make_path_relative_no_pre_path( $url ) {
-	if (!TNA_CLOUD) {
+	global $cloud;
+	if (!$cloud) {
 		return str_replace( site_url(), '', $url );
 	} else {
 		return $url;
@@ -36,15 +39,22 @@ function tna_wp_head() {
 	$wp_head = ob_get_contents();
 	ob_end_clean();
 	global $pre_path;
-	if (!TNA_CLOUD) {
+	global $cloud;
+	if (!$cloud) {
 		$protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
 		$wp_head = str_replace( site_url(), $protocol.'://www.nationalarchives.gov.uk' . $pre_path, $wp_head );
 	}
 	echo $wp_head;
 }
+
 // Make content URLs relative
 function make_content_urls_relative( $content ) {
-	return str_replace( site_url(), '', $content );
+	global $cloud;
+	if (!$cloud) {
+		return str_replace( site_url(), '', $content );
+	} else {
+		return $content;
+	}
 }
 
 /**

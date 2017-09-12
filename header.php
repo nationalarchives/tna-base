@@ -90,7 +90,8 @@
 <nav id="nav" role="navigation">
 	<div class="mega-menu clearfix">
 		<?php
-		if (!TNA_CLOUD) {
+		global $cloud;
+		if (!$cloud) {
 			if (file_exists(PATH_TO_MEGA_MENU_HTML)) {
 				include PATH_TO_MEGA_MENU_HTML;
 			} else {

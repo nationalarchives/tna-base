@@ -1,10 +1,13 @@
 <?php
 
+// Theme version
+define( 'EDD_VERSION', '1.9' );
+
 // Add this constant to wp-config.php
 define( 'TNA_CLOUD', false );
 
-// Theme version
-define( 'EDD_VERSION', '1.9' );
+global $cloud;
+$cloud = (defined('TNA_CLOUD')) ? TNA_CLOUD : false;
 
 // Included classes
 include 'src/CreateMetaBox.php';
