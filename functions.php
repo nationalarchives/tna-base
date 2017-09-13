@@ -4,7 +4,7 @@
 define( 'EDD_VERSION', '1.9' );
 
 // Add this constant to wp-config.php
-define( 'TNA_CLOUD', false );
+// define( 'TNA_CLOUD', false );
 
 global $cloud;
 $cloud = (defined('TNA_CLOUD')) ? TNA_CLOUD : false;
