@@ -4,12 +4,13 @@
 // Utilising WP Settings API (https://codex.wordpress.org/Settings_API)
 if ( ! function_exists( 'notification_banner' ) ) :
 	function notification_banner() {
-		global $post;
-		if ($post) {
+
+		if ( have_posts() ) {
+			global $post;
 			$enable       = get_option( 'enable_banner' );
 			$notice_title = get_option( 'banner_title' );
 			$notice_text  = get_option( 'banner_text' );
-			if ( $enable && $notice_title ) {
+			if ( $enable ) {
 				?>
 				<div class="notification-banner">
 					<div class="container">
@@ -70,7 +71,10 @@ function add_banner_menu_item() {
 // Callback functions for form
 function enable_banner_element() {
 	?>
-	<input type="checkbox" name="enable_banner" value="1" <?php checked(1, get_option('enable_banner'), true); ?> />
+	<select name="enable_banner" id="enable_banner">
+		<option value="" <?php if ( get_option('enable_banner') == '' ) echo 'selected="selected"'; ?>>Disabled</option>
+		<option value="true" <?php if ( get_option('enable_banner') == 'true' ) echo 'selected="selected"'; ?>>Enabled</option>
+	</select>
 	<?php
 }
 
