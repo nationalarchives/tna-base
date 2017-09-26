@@ -10,7 +10,7 @@ if ( ! function_exists( 'notification_banner' ) ) :
 			$enable       = get_option( 'enable_banner' );
 			$notice_title = get_option( 'banner_title' );
 			$notice_text  = get_option( 'banner_text' );
-			if ( $enable ) {
+			if ( $enable == 'true' ) {
 				?>
 				<div class="notification-banner">
 					<div class="container">
