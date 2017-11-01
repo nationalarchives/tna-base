@@ -40,7 +40,7 @@ function tna_base_admin_page() {
 				<tr valign="top">
 					<th scope="row"><label for="twitter_shortcode">Twitter widget code</label></th>
 					<td>
-						<textarea name="twitter_shortcode"><?php echo esc_attr( get_option('twitter_shortcode') ); ?></textarea>
+						<textarea name="twitter_shortcode"><?php echo get_option('twitter_shortcode') ; ?></textarea>
 					</td>
 				</tr>
 			</table>
@@ -50,3 +50,9 @@ function tna_base_admin_page() {
 	</div>
 	<?php
 }
+
+// [twitter-widget]
+function twitter_shortcode( $atts ){
+	return get_option('twitter_shortcode');
+}
+add_shortcode( 'twitter-widget', 'twitter_shortcode' );
