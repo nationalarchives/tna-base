@@ -36,6 +36,7 @@ function tna_base_admin_page() {
 			<?php do_settings_sections( 'tna-base-settings-group' ); ?>
 
 			<h2>Twitter shortcode</h2>
+			<p>Usage: [twitter-widget]</p>
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row"><label for="twitter_shortcode">Twitter widget code</label></th>
