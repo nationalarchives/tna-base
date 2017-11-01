@@ -24,6 +24,7 @@ include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
 include 'inc/functions/notification-banner.php';
 include 'inc/functions/template-parts.php';
+include 'inc/functions/functions-admin.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
@@ -42,6 +43,7 @@ add_action( 'save_post', 'redirect_url_save' );
 add_action( 'save_post', 'sidebar_save' );
 add_action( 'init', 'level_one_meta_boxes' );
 add_action( 'init', 'notification_meta_boxes' );
+add_action( 'admin_menu', 'tna_base_menu' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
