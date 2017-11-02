@@ -80,10 +80,8 @@
                 <h4>Site help</h4>
                 <ul>
                     <li><a href="/help/">Help</a></li>
-                    <li><a href="/help/faqs.htm">FAQs</a></li>
-                    <li><a href="/help/atoz.htm">Website A-Z index</a></li>
-                    <li><a href="/help/accessibility.htm">Accessibility</a></li>
-                    <li><a href="/help/sitemap.htm">Site map</a></li>
+                    <li><a href="/help/a-to-z/">Website A-Z index</a></li>
+                    <li><a href="/help/web-accessibility/">Accessibility</a></li>
                 </ul>
             </div>
             <div class="footer-col col-xs-12 col-sm-6 col-md-6">
@@ -105,21 +103,21 @@
                 <h4>Follow us</h4>
                 <div class="follow-us">
                     <a href="https://twitter.com/@UKNatArchives" title="Follow us on Twitter" target="_blank">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/social/twitter.png"
+                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/twitter.png"
                              alt="Twitter logo"></a>
                     <a href="https://www.youtube.com/c/TheNationalArchivesUK" title="Follow us on YouTube"
                        target="_blank">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/social/youtube-play.png"
+                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/youtube-play.png"
                              alt="YouTube logo"></a>
                     <a href="https://www.flickr.com/photos/nationalarchives" title="Follow us on Flickr"
                        target="_blank">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/social/flickr.png" alt="Flickr logo"></a>
+                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/flickr.png" alt="Flickr logo"></a>
                     <a href="https://www.facebook.com/TheNationalArchives" title="Follow us on Facebook"
                        target="_blank">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/social/facebook.png"
+                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/facebook.png"
                              alt="Facebook logo"></a>
                     <a href="http://www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/social/rss.png" alt="RSS logo"></a>
+                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/rss.png" alt="RSS logo"></a>
                 </div>
             </div>
 

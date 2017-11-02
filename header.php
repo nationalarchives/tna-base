@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta content="initial-scale = 1.0" name="viewport">
+<!-- tna_wp_head -->
 <?php tna_wp_head(); ?>
+<!-- end tna_wp_head -->
 <?php get_template_part( 'partials/tna', 'head' ); ?>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -87,6 +89,15 @@
 
 <nav id="nav" role="navigation">
 	<div class="mega-menu clearfix">
-		<?php include PATH_TO_MEGA_MENU_HTML; ?>
+		<?php
+		global $cloud;
+		if (!$cloud) {
+			if (file_exists(PATH_TO_MEGA_MENU_HTML)) {
+				include PATH_TO_MEGA_MENU_HTML;
+			} else {
+				include 'inc/content/mega-menu.php';
+			}
+		}
+		?>
 	</div>
 </nav>

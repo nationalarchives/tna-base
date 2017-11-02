@@ -4,43 +4,45 @@
 // Utilising WP Settings API (https://codex.wordpress.org/Settings_API)
 if ( ! function_exists( 'notification_banner' ) ) :
 	function notification_banner() {
-		$enable = get_option('enable_banner');
-		$notice_title = get_option('banner_title');
-		$notice_text = get_option('banner_text');
-		global $post;
-		if ( $enable && $notice_title ) {
-			?>
-			<div class="notification-banner">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="notice">
-								<strong class="title"><?php echo $notice_title; ?></strong>
-								<?php echo $notice_text; ?>
+
+		if ( have_posts() ) {
+			global $post;
+			$enable       = get_option( 'enable_banner' );
+			$notice_title = get_option( 'banner_title' );
+			$notice_text  = get_option( 'banner_text' );
+			if ( $enable == 'true' ) {
+				?>
+				<div class="notification-banner">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="notice">
+									<strong class="title"><?php echo $notice_title; ?></strong>
+									<?php echo $notice_text; ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<?php
-		}
-		elseif ( get_post_meta( $post->ID, 'notification_banner_show', true ) == 'Enable' ) {
-			$notice_page_title = get_post_meta( $post->ID, 'notification_banner_title', true );
-			$notice_page_text = get_post_meta( $post->ID, 'notification_banner_content', true );
-			?>
-			<div class="notification-banner">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="notice">
-								<strong class="title"><?php echo $notice_page_title; ?></strong>
-								<?php echo $notice_page_text; ?>
+				<?php
+			} elseif ( get_post_meta( $post->ID, 'notification_banner_show', true ) == 'Enable' ) {
+				$notice_page_title = get_post_meta( $post->ID, 'notification_banner_title', true );
+				$notice_page_text  = get_post_meta( $post->ID, 'notification_banner_content', true );
+				?>
+				<div class="notification-banner">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="notice">
+									<strong class="title"><?php echo $notice_page_title; ?></strong>
+									<?php echo $notice_page_text; ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<?php
+				<?php
+			}
 		}
 	}
 endif;
@@ -69,7 +71,10 @@ function add_banner_menu_item() {
 // Callback functions for form
 function enable_banner_element() {
 	?>
-	<input type="checkbox" name="enable_banner" value="1" <?php checked(1, get_option('enable_banner'), true); ?> />
+	<select name="enable_banner" id="enable_banner">
+		<option value="" <?php if ( get_option('enable_banner') == '' ) echo 'selected="selected"'; ?>>Disabled</option>
+		<option value="true" <?php if ( get_option('enable_banner') == 'true' ) echo 'selected="selected"'; ?>>Enabled</option>
+	</select>
 	<?php
 }
 

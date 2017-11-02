@@ -1,23 +1,30 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.9' );
+define( 'EDD_VERSION', '1.10' );
+
+// Add this constant to wp-config.php
+// define( 'TNA_CLOUD', false );
+
+global $cloud;
+$cloud = (defined('TNA_CLOUD')) ? TNA_CLOUD : false;
 
 // Included classes
 include 'src/CreateMetaBox.php';
 
 // Include functions
+include 'inc/functions/functions-non-cloud.php';
 include 'inc/functions/tna-functions.php';
 include 'inc/functions/title-tag.php';
-include 'inc/functions/tna-globals.php';
 include 'inc/functions/dimox_breadcrumbs.php';
 include 'inc/functions/custom-fields.php';
-include 'inc/functions/url-rewriting.php';
 include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
 include 'inc/functions/notification-banner.php';
+include 'inc/functions/template-parts.php';
+include 'inc/functions/functions-admin.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
@@ -36,6 +43,7 @@ add_action( 'save_post', 'redirect_url_save' );
 add_action( 'save_post', 'sidebar_save' );
 add_action( 'init', 'level_one_meta_boxes' );
 add_action( 'init', 'notification_meta_boxes' );
+add_action( 'admin_menu', 'tna_base_menu' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
@@ -77,10 +85,8 @@ remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 // Theme Support
 add_theme_support( 'post-thumbnails' );
 
-// Set path to mega menu HTML
-set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));
-
 // Call shortcode inside wordpress by using [newsletter-back-button]
 add_shortcode('newsletter-back-button', 'get_query_string_newsletter_previous_url');
 
-
+// Set path to mega menu HTML
+set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));

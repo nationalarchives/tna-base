@@ -22,4 +22,4 @@ script:
 notifications:
   slack:
     rooms:
-      - tnawebteam:C2GnodnLsxhwwGvr0xAcajzc#code-builds
+      - tna-digital:C2GnodnLsxhwwGvr0xAcajzc#code-builds

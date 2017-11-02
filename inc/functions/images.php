@@ -82,3 +82,18 @@ function content_image_sizes_attr($sizes, $size) {
 	return '(max-width: ' . $width . 'px) 100vw, ' . $width . 'px';
 }
 
+function get_feature_image_url( $id, $size, $background = false ) {
+
+	if ( has_post_thumbnail() ) {
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), $size );
+	} else {
+		$image[0] = '';
+	}
+
+	if ( $background && $image[0] ) {
+		return 'style="background-image: url('. $image[0] . ');"';
+	} else {
+		return $image[0];
+	}
+}
+

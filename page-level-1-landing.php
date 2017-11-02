@@ -1,8 +1,10 @@
 <?php
 /*
-Template Name: Level 1 landing
-*/
+ * Template Name: Level 1 landing
+ *
+ */
 get_header(); ?>
+
 <?php get_template_part( 'breadcrumb' ); ?>
 
 	<div id="primary" class="level-one">
@@ -10,89 +12,31 @@ get_header(); ?>
 		<div class="container">
 			<div class="row" role="banner">
 				<div class="col-md-12">
-					<article class="banner feature-img feature-img-bg" <?php
-					if ( has_post_thumbnail() ) {
-						$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-page-width' ); ?>
-						style="background-image: url(<?php echo make_path_relative_no_pre_path( $thumbnail_src[0] ); ?>);"
-					<?php } ?>>
-						<div class="entry-header">
-							<h1><?php the_title(); ?></h1>
-						</div>
-							<?php
-							$buttonTitle = get_post_meta( $post->ID, 'action_button_title', true );
-							$buttonUrl = get_post_meta( $post->ID, 'action_button_url', true );
-							if( empty( $post->post_content ) ) {
-								// Do nothing - banner content overlay is not displayed
-							} else {
-								// Banner content overlay
-								?>
-								<div class="entry-content">
-									<div class="col-xs-9 page-content">
-										<?php the_content(); ?>
-									</div>
-								<?php
-								if ( $buttonTitle ) { ?>
-									<div class="col-xs-3 call-to-action-button">
-										<a href="<?php echo $buttonUrl; ?>" title="<?php echo $buttonTitle; ?>" class="ghost-button">
-											<?php echo $buttonTitle; ?>
-										</a>
-									</div>
-								<?php } ?>
-								</div>
-							<?php } ?>
-						<?php get_image_caption( 'top' ) ?>
-					</article>
+					<?php
+					global $post;
+					$image      = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full-page-width', true ) );
+					$title      = get_the_title();
+					$content    = wpautop(get_the_content());
+					$button     = get_post_meta( $post->ID, 'action_button_title', true );
+					$url        = get_post_meta( $post->ID, 'action_button_url', true );
+					get_page_banner( 'level one', $title, $image, $content, $button, $url );
+					?>
 				</div>
 			</div>
 			<main id="main" role="main">
 				<div class="row equal-heights">
-						<?php
-						// Loop generating boxes
-						$n = get_post_meta( $post->ID, 'number_of_boxes', true );
-						for ($i = 1; $i <= $n; $i++) {
-							// Fetch page meta values
-							$title = get_post_meta( $post->ID, 'box_title_'.$i, true );
-							$url = get_post_meta( $post->ID, 'box_title_url_'.$i, true );
-							$image = get_post_meta( $post->ID, 'box_image_url_'.$i, true );
-							$content = get_post_meta( $post->ID, 'box_content_'.$i, true );
-							$display = get_post_meta( $post->ID, 'box_width_'.$i, true );
-							// Condition to set box width and add appropriate classes
-							if ( $display == 'at full width' ) {
-								$mdCol = '12';
-								$colClass = 'box-full';
-							} elseif ( $display == 'at a half' ) {
-								$mdCol = '6';
-								$colClass = 'box-half';
-							} else {
-								$mdCol = '4';
-								$colClass = 'box-third';
-							}
-							if ( !empty( $title ) && $display != 'disabled' ) {
-								?>
-								<div class="col-md-<?php echo $mdCol . ' box-' . $i . ' ' . $colClass; ?>">
-									<article>
-										<?php if ( !empty( $image ) ) { ?>
-												<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $image; ?>);">
-											<?php }  else { ?>
-												<div class="entry-header">
-											<?php } ?>
-											<h2>
-												<?php if ( !empty( $url ) ) { ?>
-												<a href="<?php echo $url ?>">
-													<?php echo $title ?>
-												</a>
-												<?php } else { echo $title; } ?>
-											</h2>
-										</div>
-										<div class="entry-content clearfix">
-											<?php echo $content ?>
-										</div>
-									</article>
-								</div>
-							<?php } else {
-								// Box has either no title or is disabled so do nothing
-							}
-						} ?>
+					<?php
+					$boxes  = array();
+					$n      = get_post_meta( $post->ID, 'number_of_boxes', true );
+					for ($i = 1; $i <= $n; $i++) {
+						$boxes[$i]['title']   = get_post_meta( $post->ID, 'box_title_' . $i, true );
+						$boxes[$i]['url']     = get_post_meta( $post->ID, 'box_title_url_' . $i, true );
+						$boxes[$i]['image']   = get_post_meta( $post->ID, 'box_image_url_' . $i, true );
+						$boxes[$i]['content'] = wpautop(get_post_meta( $post->ID, 'box_content_' . $i, true ));
+						$boxes[$i]['display'] = get_post_meta( $post->ID, 'box_width_' . $i, true );
+					}
+					get_content_meta_boxes( $boxes );
+					?>
 				</div>
 			</main>
 		</div>
