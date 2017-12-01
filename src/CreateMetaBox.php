@@ -73,6 +73,10 @@ class CreateMetaBox {
 					echo '<input type="date" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:270px" />',
 					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
+				case 'datetime':
+					echo '<input type="datetime-local" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:270px" />',
+					'<br /><p class="howto">', $field['desc'],'</p>';
+					break;
 				case 'media':
 					echo '<input type="text" name="', $field['id'], '" id="',$field['id'],'" class="upload_media" value="', $meta ? $meta : $field['std'], '" size="30" style="width:57%" />',
 					'<input id="',$field['id'],'_button" type="button" value="Add media" name="',$field['id'],'" class="button media-button media-metabox-button-js" />',
