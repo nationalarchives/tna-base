@@ -68,6 +68,7 @@ class CreateMetaBox {
 					break;
 				case 'checkbox':
 					echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
+                    echo ' <p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'date':
 					echo '<input type="date" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:270px" />',
