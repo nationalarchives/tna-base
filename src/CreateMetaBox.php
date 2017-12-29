@@ -65,6 +65,7 @@ class CreateMetaBox {
 					foreach ( $field['options'] as $option ) {
 						echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? ' checked="checked"' : '', ' />', $option['name'];
 					}
+                    echo ' <p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'checkbox':
 					echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
