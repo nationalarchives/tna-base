@@ -4906,6 +4906,9 @@ legend {
   width: auto !important;
   padding: 0 0.5em !important; }
 
+label {
+  font-weight: 400; }
+
 input[type="submit"] {
   background-color: #008484;
   color: #fff;
@@ -4979,7 +4982,6 @@ a.button:hover {
     content: " ";
     clear: both; }
   .form-row label {
-    font-weight: 400;
     width: 100% !important;
     margin-right: 0 !important; }
   .form-row input[type=color],
