@@ -6399,6 +6399,31 @@ a.hue-teal, a.hue-red {
       .flex-row .card .event {
         padding: 1em 1em 4em 1em; } }
 
+.flex-row .hero-banner p {
+  margin-bottom: .5em; }
+@media (min-width: 768px) {
+  .flex-row .hero-banner {
+    display: table; }
+    .flex-row .hero-banner a {
+      display: table-row; }
+    .flex-row .hero-banner .entry-image {
+      display: table-cell;
+      width: 50%; }
+    .flex-row .hero-banner .hero-banner-entry {
+      display: table-cell; }
+    .flex-row .hero-banner .entry-date {
+      position: relative; }
+    .flex-row .hero-banner .feature, .flex-row .hero-banner .news, .flex-row .hero-banner .bog, .flex-row .hero-banner .multimedia {
+      min-height: 240px; }
+    .flex-row .hero-banner .event {
+      padding: 1em 1em 1.6em 1em; } }
+@media (min-width: 922px) {
+  .flex-row .hero-banner .entry-image {
+    width: 60%; } }
+@media (min-width: 1240px) {
+  .flex-row .hero-banner .entry-image {
+    width: 68%; } }
+
 .portal-landing .banner {
   margin-bottom: 1.6em; }
 .portal-landing .banner h1 {

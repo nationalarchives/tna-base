@@ -30,6 +30,22 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div class="flex-row">
+			<div class="col-card-12">
+				<div class="card hero-banner clearfix">
+					<div class="entry-image" style="background-image: url(http://www.nationalarchives.gov.uk//wp-content/uploads/sites/24/2017/12/New-season-banner.jpg)"></div>
+					<div class="hero-banner-entry">
+						<div class="entry-content feature">
+							<div class="content-type">Feature</div>
+							<h3>What's On 2018</h3>
+							<p>Book now for our January to March season of talks, webinars, family events and more.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php endwhile; ?>
 

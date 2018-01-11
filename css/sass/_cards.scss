@@ -161,3 +161,40 @@
     }
   }
 }
+.flex-row .hero-banner {
+  p {
+    margin-bottom: .5em;
+  }
+  @media (min-width: 768px) {
+    display: table;
+    a {
+      display: table-row;
+    }
+    .entry-image {
+      display: table-cell;
+      width: 50%;
+    }
+    .hero-banner-entry {
+      display: table-cell;
+    }
+    .entry-date {
+      position: relative;
+    }
+    .feature, .news, .bog, .multimedia {
+      min-height: 240px;
+    }
+    .event {
+      padding: 1em 1em 1.6em 1em;
+    }
+  }
+  @media (min-width: 922px) {
+    .entry-image {
+      width: 60%;
+    }
+  }
+  @media (min-width: 1240px) {
+    .entry-image {
+      width: 68%;
+    }
+  }
+}
