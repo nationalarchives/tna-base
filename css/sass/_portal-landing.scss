@@ -1,0 +1,29 @@
+.portal-landing {
+  .banner {
+    margin-bottom: 1.6em;
+  }
+  .banner h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 3px 3px 8px #000;
+    line-height: 1.23;
+    margin: 2em auto;
+    display: inline-block;
+    padding: 3px 7px;
+    background-color: #000;
+    background-color: rgba(0,0,0,.5);
+  }
+  .tna-breadcrumb {
+    margin: 0;
+  }
+  .breadcrumbs {
+    display: inline-block;
+    color: #fff;
+    padding: 3px 7px;
+    background-color: #000;
+    background-color: rgba(0,0,0,.5);
+  }
+  .breadcrumbs a {
+    color: #fce45c;
+  }
+}
