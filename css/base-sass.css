@@ -6266,3 +6266,135 @@ a.hue-teal, a.hue-red {
       .newsletter-template .news-form {
         width: 100%;
         padding-right: 10px; } }
+
+/* Cards */
+.flex-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .flex-row .col-card-12, .flex-row .col-card-4, .flex-row .col-card-3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 1.5em; }
+  .flex-row .col-card-12 {
+    max-width: 100%;
+    min-width: 100%; }
+  .flex-row .col-card-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    min-width: 33.33333%; }
+  .flex-row .col-card-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    min-width: 25%; }
+  .flex-row .card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex: 1;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ddd; }
+    .flex-row .card a {
+      position: relative;
+      display: block;
+      width: 100%; }
+    .flex-row .card h3 {
+      margin: .5em 0; }
+    .flex-row .card p {
+      color: #444; }
+    .flex-row .card a:hover {
+      text-decoration: none;
+      box-shadow: 0 4px 7px #ccc; }
+    .flex-row .card a:hover .entry-content h3 {
+      text-decoration: underline; }
+    .flex-row .card .entry-image {
+      display: block;
+      width: 100%;
+      min-height: 185px;
+      background: #ddd center center;
+      background-size: cover; }
+    .flex-row .card .entry-content {
+      display: block;
+      width: 100%;
+      padding: 1em 1em 1.6em 1em; }
+    .flex-row .card .event {
+      padding: 1em 1em 2.6em 1em; }
+    .flex-row .card .entry-header {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      padding: 1em;
+      width: 100%;
+      min-height: 98px;
+      background-color: #597a87; }
+    .flex-row .card .entry-header h3 {
+      color: #fff;
+      margin: 0; }
+    .flex-row .card .content-type {
+      color: #444;
+      font-size: .9em;
+      border-left: #ebab01 4px solid;
+      padding: 0 0.5em; }
+    .flex-row .card .entry-date {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1em; }
+      .flex-row .card .entry-date .date {
+        color: #444;
+        background: url(../img/icon-calendar.svg) no-repeat 0px 4px;
+        background-size: 1em 1em;
+        padding-left: 2em; }
+  @media (max-width: 1200px) {
+    .flex-row .card .event {
+      padding: 1em 1em 4em 1em; } }
+  @media (max-width: 768px) {
+    .flex-row .col-card-4 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%; }
+    .flex-row .col-card-3 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%; }
+    .flex-row .card .event {
+      padding: 1em 1em 2.6em 1em; }
+    .flex-row .entry-date {
+      position: relative; } }
+  @media (max-width: 480px) {
+    .flex-row {
+      display: block; }
+      .flex-row .col-card-3, .flex-row .col-card-4 {
+        display: block;
+        float: left;
+        max-width: 100%;
+        width: 100%; }
+      .flex-row .card .event {
+        padding: 1em 1em 4em 1em; } }
