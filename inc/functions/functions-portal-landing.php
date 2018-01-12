@@ -15,59 +15,17 @@ function portal_landing_meta_boxes() {
 
 	$home_meta_boxes = array(
 		array(
-			'id' => 'home_banner',
-			'title' => 'Homepage hero banner',
+			'id' => 'intro_card',
+			'title' => 'Introduction options',
 			'pages' => 'page',
 			'context' => 'normal',
 			'priority' => 'high',
 			'fields' => array(
 				array(
-					'name' => 'Banner',
+					'name' => 'Introduction image',
 					'desc' => '',
-					'id' => 'home_banner_status',
-					'type' => 'select',
-					'options' => array('Disable', 'Enable')
-				),
-				array(
-					'name' => 'URL',
-					'desc' => '',
-					'id' => 'home_banner_url',
-					'type' => 'text',
-					'std' => ''
-				),
-				array(
-					'name' => 'Title',
-					'desc' => '',
-					'id' => 'home_banner_title',
-					'type' => 'text',
-					'std' => ''
-				),
-				array(
-					'name' => 'Excerpt',
-					'desc' => '',
-					'id' => 'home_banner_excerpt',
-					'type' => 'textarea',
-					'std' => ''
-				),
-				array(
-					'name' => 'Image',
-					'desc' => $descBannerImage,
-					'id' => 'home_banner_img',
+					'id' => 'intro_img',
 					'type' => 'media',
-					'std' => ''
-				),
-				array(
-					'name' => 'Event date/time',
-					'desc' => '',
-					'id' => 'home_banner_date',
-					'type' => 'datetime',
-					'std' => ''
-				),
-				array(
-					'name' => 'Expire date/time',
-					'desc' => $descExpireBanner,
-					'id' => 'home_banner_expire',
-					'type' => 'datetime',
 					'std' => ''
 				)
 			)

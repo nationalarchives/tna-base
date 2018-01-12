@@ -33,15 +33,13 @@ get_header(); ?>
 	<div class="container">
 		<div class="flex-row">
 			<div class="col-card-12">
-				<div class="card hero-banner clearfix">
-					<div class="entry-image" style="background-image: url(http://www.nationalarchives.gov.uk//wp-content/uploads/sites/24/2017/12/New-season-banner.jpg)"></div>
-					<div class="hero-banner-entry">
-						<div class="entry-content feature">
-							<div class="content-type">Feature</div>
-							<h3>What's On 2018</h3>
-							<p>Book now for our January to March season of talks, webinars, family events and more.</p>
+				<div class="card intro-card">
+					<div class="intro-entry">
+						<div class="entry-content">
+							<?php the_content(); ?>
 						</div>
 					</div>
+					<div class="entry-image" style="background-image: url(<?php echo get_post_meta( $post->ID, 'intro_img', true ); ?>)"></div>
 				</div>
 			</div>
 		</div>
