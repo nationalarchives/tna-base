@@ -30,6 +30,13 @@ function portal_landing_meta_boxes() {
 			'priority' => 'high',
 			'fields' => array(
 				array(
+					'name' => 'Logo',
+					'desc' => '',
+					'id' => 'portal_logo',
+					'type' => 'media',
+					'std' => ''
+				),
+				array(
 					'name' => 'Introduction image',
 					'desc' => '',
 					'id' => 'intro_img',
@@ -319,12 +326,14 @@ function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 		}
 
 		if ( $i == 0 ) {
-			$class = 'col-card-12 banner';
+			$col_class = 'col-card-12';
+			$card_class = 'card hero-banner';
 		} else {
-			$class = 'col-card-4';
+			$col_class = 'col-card-4';
+			$card_class = 'card';
 		}
 
-		$html = '<div class="%s"><div class="card">
+		$html = '<div class="%s"><div class="%s">
 					<a id="card-%s" href="%s" class="portal-card">
 						<div class="entry-image" style="background-image: url(%s)"></div>
 						<div class="entry-content %s">
@@ -337,7 +346,8 @@ function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 				</div></div>';
 
 		return sprintf( $html,
-			$class,
+			$col_class,
+			$card_class,
 			$i,
 			$url,
 			$image,
