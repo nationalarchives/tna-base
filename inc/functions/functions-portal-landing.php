@@ -54,11 +54,18 @@ function portal_landing_meta_boxes() {
 		)
 	);
 
-	for ( $i = 1; $i <= 6; $i ++ ) {
+	for ( $i = 0; $i <= 6; $i ++ ) {
+		if ($i==0) {
+			$banner = 'Banner ';
+			$n = '';
+		} else {
+			$banner = '';
+			$n = $i;
+		}
 		$portal_meta_boxes[] =
 			array(
 				'id'       => 'portal_card_'.$i,
-				'title'    => 'Card '.$i,
+				'title'    => $banner.'Card '.$n,
 				'pages'    => 'page',
 				'context'  => 'normal',
 				'priority' => 'high',
@@ -97,14 +104,7 @@ function portal_landing_meta_boxes() {
 						'id'   => 'portal_card_date_'.$i,
 						'type' => 'datetime',
 						'std'  => ''
-					)/*,
-					array(
-						'name' => 'Expire date/time',
-						'desc' => $descExpire,
-						'id'   => 'portal_card_expire_'.$i,
-						'type' => 'datetime',
-						'std'  => ''
-					)*/
+					)
 				)
 		);
 	}
@@ -237,7 +237,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 
 		$data = $_POST;
 
-		for ( $i = 1; $i <= 6; $i ++ ) {
+		for ( $i = 0; $i <= 6; $i ++ ) {
 
 			if ( $data[ 'portal_card_url_' . $i ] ) {
 
