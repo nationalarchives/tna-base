@@ -16,7 +16,7 @@ function portal_landing_meta_boxes() {
 	}
 	if( !isset( $post_id ) ) return;
 
-	$descUrl = 'Enter the URL from the page you want to link to. This will automatically pull in the title and image (press preview to view).';
+	$descUrl = 'Enter the URL from the page you want to link to. This will automatically populate the fields on page update.';
 	$descExpire = 'If expire date and time set the card will expire at this specified time and fallback content will be displayed. Date format yyyy-mm-ddThh:mm.';
 	$descCardTitle = 'Only enter substitute text here when you need to override the automated title.';
 	$descCardImage = 'If you need to override the automated image, paste the image URL here after uploading it to the image library. Image size 768px x 576px.';
@@ -57,7 +57,7 @@ function portal_landing_meta_boxes() {
 	for ( $i = 1; $i <= 6; $i ++ ) {
 		$portal_meta_boxes[] =
 			array(
-				'id'       => 'home_card_'.$i,
+				'id'       => 'portal_card_'.$i,
 				'title'    => 'Card '.$i,
 				'pages'    => 'page',
 				'context'  => 'normal',
@@ -66,45 +66,45 @@ function portal_landing_meta_boxes() {
 					array(
 						'name' => 'Content URL*',
 						'desc' => $descUrl,
-						'id'   => 'home_card_url_'.$i,
+						'id'   => 'portal_card_url_'.$i,
 						'type' => 'text',
 						'std'  => ''
 					),
 					array(
 						'name' => 'Title',
 						'desc' => $descCardTitle,
-						'id'   => 'home_card_title_'.$i,
+						'id'   => 'portal_card_title_'.$i,
 						'type' => 'text',
 						'std'  => ''
 					),
 					array(
 						'name' => 'Excerpt',
 						'desc' => '',
-						'id'   => 'home_card_excerpt_'.$i,
+						'id'   => 'portal_card_excerpt_'.$i,
 						'type' => 'textarea',
 						'std'  => ''
 					),
 					array(
 						'name' => 'Image',
 						'desc' => $descCardImage,
-						'id'   => 'home_card_img_'.$i,
+						'id'   => 'portal_card_img_'.$i,
 						'type' => 'media',
 						'std'  => ''
 					),
 					array(
 						'name' => 'Event date/time',
 						'desc' => '',
-						'id'   => 'home_card_date_'.$i,
+						'id'   => 'portal_card_date_'.$i,
 						'type' => 'datetime',
 						'std'  => ''
-					),
+					)/*,
 					array(
 						'name' => 'Expire date/time',
 						'desc' => $descExpire,
-						'id'   => 'home_card_expire_'.$i,
+						'id'   => 'portal_card_expire_'.$i,
 						'type' => 'datetime',
 						'std'  => ''
-					)
+					)*/
 				)
 		);
 	}
@@ -229,110 +229,59 @@ function get_og_meta( $url ) {
 	return false;
 }
 
-function get_og_meta_on_save( $post_id ) {
+function portal_landing_get_og_meta_on_save( $post_id ) {
 
 	$template_file = get_post_meta( $post_id, '_wp_page_template', true );
 
-	if ( $template_file == 'page-home.php' ) {
+	if ( $template_file == 'page-portal-landing.php' ) {
 
 		$data = $_POST;
 
-		if ( $data['home_banner_url'] ) {
-
-			$current = get_post_meta( $post_id, 'home_banner_url_old', true );
-
-			if ( $current ) {
-				if ( $data['home_banner_url'] !== $current ) {
-					$data['home_banner_title']   = '';
-					$data['home_banner_excerpt'] = '';
-					$data['home_banner_img']     = '';
-					$data['home_banner_date']    = '';
-					$data['home_banner_expire']  = '';
-					update_post_meta( $post_id, 'home_banner_url_old', $data['home_banner_url'] );
-				}
-			} else {
-				add_post_meta( $post_id, 'home_banner_url_old', $data['home_banner_url'], true );
-			}
-
-			$og = get_og_meta( $data['home_banner_url'] );
-
-			if ( trim( $data['home_banner_title'] ) == '' ) {
-				$_POST['home_banner_title'] = esc_attr( $og['title'] );
-			}
-			if ( trim( $data['home_banner_excerpt'] ) == '' ) {
-				$_POST['home_banner_excerpt'] = esc_attr( $og['description'] );
-			}
-			if ( trim( $data['home_banner_img'] ) == '' ) {
-				$_POST['home_banner_img'] = esc_attr( $og['img'][0] );
-			}
-			if ( strpos( $data['home_banner_url'], 'eventbrite' ) !== false ) {
-				if ( trim( $data['home_banner_date'] ) == '' ) {
-					$date = esc_attr( $og['start_datetime'] );
-					$date = date( 'Y-m-d\TH:i', strtotime( $date ) );
-					$_POST['home_banner_date'] = $date;
-				}
-				if ( trim( $data['home_banner_expire'] ) == '' ) {
-					$date = esc_attr( $og['end_datetime'] );
-					$date = date( 'Y-m-d\TH:i', strtotime( $date ) );
-					$_POST['home_banner_expire'] = $date;
-				}
-			} else {
-				$_POST['home_banner_date'] = $data['home_banner_date'];
-				$_POST['home_banner_expire'] = $data['home_banner_expire'];
-			}
-		}
-
 		for ( $i = 1; $i <= 6; $i ++ ) {
 
-			if ( $data[ 'home_card_url_' . $i ] ) {
+			if ( $data[ 'portal_card_url_' . $i ] ) {
 
-				$current = get_post_meta( $post_id, 'home_card_url_old_' . $i, true );
+				$current = get_post_meta( $post_id, 'portal_card_url_old_' . $i, true );
 
+				// If new URL doesn't match the previous URL clear all fields
 				if ( $current ) {
-					if ( $data[ 'home_card_url_' . $i ] !== $current ) {
-						$data[ 'home_card_title_' . $i ]   = '';
-						$data[ 'home_card_excerpt_' . $i ] = '';
-						$data[ 'home_card_img_' . $i ]     = '';
-						$data[ 'home_card_date_' . $i ]    = '';
-						$data[ 'home_card_expire_' . $i ]  = '';
-						update_post_meta( $post_id, 'home_card_url_old_' . $i, $data[ 'home_card_url_' . $i ] );
+					if ( $data[ 'portal_card_url_' . $i ] !== $current ) {
+						$data[ 'portal_card_title_' . $i ]   = '';
+						$data[ 'portal_card_excerpt_' . $i ] = '';
+						$data[ 'portal_card_img_' . $i ]     = '';
+						$data[ 'portal_card_date_' . $i ]    = '';
+						update_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ] );
 					}
 				} else {
-					add_post_meta( $post_id, 'home_card_url_old_' . $i, $data[ 'home_card_url_' . $i ], true );
+					add_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ], true );
 				}
 
-				if ( trim( $data[ 'home_card_title_' . $i ] ) == '' ||
-				     trim( $data[ 'home_card_excerpt_' . $i ] ) == '' ||
-				     trim( $data[ 'home_card_img_' . $i ] ) == '' ||
-				     trim( $data[ 'home_card_date_' . $i ] ) == '' ||
-				     trim( $data[ 'home_card_expire_' . $i ] ) == ''
+				// If any of the fields are empty get OG meta data to populate
+				if ( trim( $data[ 'portal_card_title_' . $i ] ) == '' ||
+				     trim( $data[ 'portal_card_excerpt_' . $i ] ) == '' ||
+				     trim( $data[ 'portal_card_img_' . $i ] ) == '' ||
+				     trim( $data[ 'portal_card_date_' . $i ] ) == ''
 				) {
 
-					$og = get_og_meta( $data[ 'home_card_url_' . $i ] );
+					$og = get_og_meta( $data[ 'portal_card_url_' . $i ] );
 
-					if ( trim( $data[ 'home_card_title_' . $i ] ) == '' ) {
-						$_POST[ 'home_card_title_' . $i ] = esc_attr( $og['title'] );
+					if ( trim( $data[ 'portal_card_title_' . $i ] ) == '' ) {
+						$_POST[ 'portal_card_title_' . $i ] = esc_attr( $og['title'] );
 					}
-					if ( trim( $data[ 'home_card_excerpt_' . $i ] ) == '' ) {
-						$_POST[ 'home_card_excerpt_' . $i ] = esc_attr( $og['description'] );
+					if ( trim( $data[ 'portal_card_excerpt_' . $i ] ) == '' ) {
+						$_POST[ 'portal_card_excerpt_' . $i ] = esc_attr( $og['description'] );
 					}
-					if ( trim( $data[ 'home_card_img_' . $i ] ) == '' ) {
-						$_POST[ 'home_card_img_' . $i ] = esc_attr( $og['img'][0] );
+					if ( trim( $data[ 'portal_card_img_' . $i ] ) == '' ) {
+						$_POST[ 'portal_card_img_' . $i ] = esc_attr( $og['img'][0] );
 					}
-					if ( strpos( $data[ 'home_card_url_' . $i ], 'eventbrite' ) !== false ) {
-						if ( trim( $data[ 'home_card_date_' . $i ] ) == '' ) {
+					if ( strpos( $data[ 'portal_card_url_' . $i ], 'eventbrite' ) !== false ) {
+						if ( trim( $data[ 'portal_card_date_' . $i ] ) == '' ) {
 							$date = esc_attr( $og['start_datetime'] );
 							$date = date( 'Y-m-d\TH:i', strtotime( $date ) );
-							$_POST[ 'home_card_date_' . $i ] = $date;
-						}
-						if ( trim( $data[ 'home_card_expire_' . $i ] ) == '' ) {
-							$date = esc_attr( $og['end_datetime'] );
-							$date = date( 'Y-m-d\TH:i', strtotime( $date ) );
-							$_POST[ 'home_card_expire_' . $i ] = $date;
+							$_POST[ 'portal_card_date_' . $i ] = $date;
 						}
 					} else {
-						$_POST[ 'home_card_date_' . $i ] = $data[ 'home_card_date_' . $i ];
-						$_POST[ 'home_card_expire_' . $i ] = $data[ 'home_card_expire_' . $i ];
+						$_POST[ 'portal_card_date_' . $i ] = $data[ 'portal_card_date_' . $i ];
 					}
 				}
 			}

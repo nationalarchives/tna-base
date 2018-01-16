@@ -46,6 +46,7 @@ add_action( 'init', 'level_one_meta_boxes' );
 add_action( 'init', 'notification_meta_boxes' );
 add_action( 'admin_menu', 'tna_base_menu' );
 add_action( 'init', 'portal_landing_meta_boxes' );
+add_action( 'save_post', 'portal_landing_get_og_meta_on_save' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
