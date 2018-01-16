@@ -9,6 +9,7 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<?php
+	global $post;
 	$feature_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 	if ( $feature_img ) {
 		$banner_img = 'style="background: url(' . make_path_relative( $feature_img[0] ) . ') no-repeat center center;background-size: cover;"';
@@ -42,6 +43,21 @@ get_header(); ?>
 					<div class="entry-image" style="background-image: url(<?php echo get_post_meta( $post->ID, 'intro_img', true ); ?>)"></div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="flex-row">
+			<?php
+			for ( $i=0 ; $i<=6 ; $i++ ) {
+				$url        = get_post_meta( $post->ID, 'portal_card_url_'.$i, true );
+				$title      = get_post_meta( $post->ID, 'portal_card_title_'.$i, true );
+				$excerpt    = get_post_meta( $post->ID, 'portal_card_excerpt_'.$i, true );
+				$image      = get_post_meta( $post->ID, 'portal_card_img_'.$i, true );
+				$date       = get_post_meta( $post->ID, 'portal_card_date_'.$i, true );
+
+				echo display_portal_card( $i, $url, $title, $excerpt, $image, $date );
+			}
+			?>
 		</div>
 	</div>
 

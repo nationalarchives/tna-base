@@ -17,7 +17,7 @@ function portal_landing_meta_boxes() {
 	if( !isset( $post_id ) ) return;
 
 	$descUrl = 'Enter the URL from the page you want to link to. This will automatically populate the fields on page update.';
-	$descExpire = 'If expire date and time set the card will expire at this specified time and fallback content will be displayed. Date format yyyy-mm-ddThh:mm.';
+	$descDate = 'Please use this date format if dropdown selector isn\'t available, yyyy-mm-ddThh:mm.';
 	$descCardTitle = 'Only enter substitute text here when you need to override the automated title.';
 	$descCardImage = 'If you need to override the automated image, paste the image URL here after uploading it to the image library. Image size 768px x 576px.';
 
@@ -100,7 +100,7 @@ function portal_landing_meta_boxes() {
 					),
 					array(
 						'name' => 'Event date/time',
-						'desc' => '',
+						'desc' => $descDate,
 						'id'   => 'portal_card_date_'.$i,
 						'type' => 'datetime',
 						'std'  => ''
@@ -289,4 +289,63 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 	}
 }
 
+function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 
+	if ( $url ) {
+
+		if ( str_word_count( $excerpt, 0 ) > 14 ) {
+			$explode_words = explode( ' ', $excerpt );
+			$excerpt       = implode( ' ', array_splice( $explode_words, 0, 14 ) ) . '...';
+		}
+
+		if ( strpos( $url, 'nationalarchives.gov.uk/about/news/' ) !== false ) {
+			$type = 'News';
+		} elseif ( strpos( $url, 'blog.nationalarchives.gov.uk' ) !== false ) {
+			$type = 'Blog';
+		} elseif ( strpos( $url, 'media.nationalarchives.gov.uk' ) !== false ) {
+			$type = 'Multimedia';
+		} elseif ( strpos( $url, 'eventbrite' ) !== false ) {
+			$type = 'Event';
+		} else {
+			$type = 'Featured';
+		}
+
+		if ( $date && $type == 'Event' ) {
+			date_default_timezone_set( 'Europe/London' );
+			$date      = date( 'l j F Y, H:i', strtotime( $date ) );
+			$date_html = '<div class="entry-date"><div class="date">' . $date . '</div></div>';
+		} else {
+			$date_html = '';
+		}
+
+		if ( $i == 0 ) {
+			$class = 'col-card-12 banner';
+		} else {
+			$class = 'col-card-4';
+		}
+
+		$html = '<div class="%s"><div class="card">
+					<a id="card-%s" href="%s" class="portal-card">
+						<div class="entry-image" style="background-image: url(%s)"></div>
+						<div class="entry-content %s">
+							<div class="content-type">%s</div>
+							<h3>%s</h3>
+							<p>%s</p>
+						</div>
+						%s
+					</a>
+				</div></div>';
+
+		return sprintf( $html,
+			$class,
+			$i,
+			$url,
+			$image,
+			$type,
+			$type,
+			$title,
+			$excerpt,
+			$date_html
+		);
+	}
+}
