@@ -44,6 +44,13 @@ function portal_landing_meta_boxes() {
 					'std' => ''
 				),
 				array(
+					'name' => 'Stay up-to-date bar',
+					'desc' => '',
+					'id' => 'stay_up_to_date',
+					'type' => 'select',
+					'options' => array('Disable', 'Enable')
+				),
+				array(
 					'name' => 'Facebook link',
 					'desc' => '',
 					'id' => 'facebook_link',
@@ -56,6 +63,13 @@ function portal_landing_meta_boxes() {
 					'id' => 'twitter_link',
 					'type' => 'text',
 					'std' => ''
+				),
+				array(
+					'name' => 'Newsletter drop down link',
+					'desc' => '',
+					'id' => 'newsletter_link',
+					'type' => 'select',
+					'options' => array('Disable', 'Enable')
 				)
 			)
 		)
@@ -247,4 +261,29 @@ function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 			$date_html
 		);
 	}
+}
+
+function display_stay_up_to_date_bar( $facebook='', $twitter='', $newsletter ) {
+
+	if ( $facebook ) {
+		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/facebook.png" alt="Follow us on Facebook" class="social-icon"></a>';
+	}
+	if ( $twitter ) {
+		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/twitter.png" alt="Follow us on Twitter" class="social-icon"></a>';
+	}
+
+	$html =     '<div class="stay-up-to-date-bar">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="text-center">
+									<span>Stay up-to-date with all our activity:</span> '
+									.$facebook.$twitter.
+								'</div>
+							</div>
+						</div>
+					</div>
+				</div>';
+
+	return $html;
 }

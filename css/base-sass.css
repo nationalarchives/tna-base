@@ -6446,3 +6446,13 @@ a.hue-teal, a.hue-red {
   background-color: rgba(0, 0, 0, 0.5); }
 .portal-landing .breadcrumbs a {
   color: #fce45c; }
+.portal-landing .stay-up-to-date-bar {
+  padding: 0.4em 0;
+  background: #2d3b59;
+  color: #fff; }
+  .portal-landing .stay-up-to-date-bar img.social-icon {
+    background-color: #008484;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0 .2em;
+    width: 26px; }
