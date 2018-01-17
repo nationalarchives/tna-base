@@ -25,6 +25,7 @@ include 'inc/functions/tiny_mce.php';
 include 'inc/functions/notification-banner.php';
 include 'inc/functions/template-parts.php';
 include 'inc/functions/functions-admin.php';
+include 'inc/functions/functions-og-meta.php';
 include 'inc/functions/functions-portal-landing.php';
 
 // add_action
