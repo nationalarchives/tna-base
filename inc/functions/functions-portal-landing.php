@@ -65,7 +65,7 @@ function portal_landing_meta_boxes() {
 					'std' => ''
 				),
 				array(
-					'name' => 'Newsletter drop down link',
+					'name' => 'Newsletter anchor link',
 					'desc' => '',
 					'id' => 'newsletter_link',
 					'type' => 'select',
@@ -263,13 +263,16 @@ function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 	}
 }
 
-function display_stay_up_to_date_bar( $facebook='', $twitter='', $newsletter ) {
+function display_stay_up_to_date_bar( $facebook='', $twitter='', $newsletter='Disable' ) {
 
 	if ( $facebook ) {
 		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/facebook.png" alt="Follow us on Facebook" class="social-icon"></a>';
 	}
 	if ( $twitter ) {
 		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/twitter.png" alt="Follow us on Twitter" class="social-icon"></a>';
+	}
+	if ( $newsletter=='Enable' ) {
+		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/envelope.png" alt="Send me The National Archives’ newsletter" class="social-icon"></a>';
 	}
 
 	$html =     '<div class="stay-up-to-date-bar">
@@ -278,7 +281,7 @@ function display_stay_up_to_date_bar( $facebook='', $twitter='', $newsletter ) {
 							<div class="col-md-12">
 								<div class="text-center">
 									<span>Stay up-to-date with all our activity:</span> '
-									.$facebook.$twitter.
+									.$facebook.$twitter.$newsletter.
 								'</div>
 							</div>
 						</div>
