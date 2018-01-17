@@ -46,12 +46,14 @@ get_header(); ?>
 			<div class="flex-row">
 				<div class="col-card-12">
 					<div class="card intro-card">
-						<div class="intro-entry">
-							<div class="entry-content">
-								<?php the_content(); ?>
+						<div class="intro-content">
+							<div class="intro-entry">
+								<div class="entry-content">
+									<?php the_content(); ?>
+								</div>
 							</div>
+							<div class="entry-image" style="background-image: url(<?php echo get_post_meta( $post->ID, 'intro_img', true ); ?>)"></div>
 						</div>
-						<div class="entry-image" style="background-image: url(<?php echo get_post_meta( $post->ID, 'intro_img', true ); ?>)"></div>
 					</div>
 				</div>
 			</div>

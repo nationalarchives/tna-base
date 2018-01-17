@@ -6403,7 +6403,8 @@ a.hue-teal, a.hue-red {
   margin-bottom: .5em; }
 @media (min-width: 768px) {
   .flex-row .hero-banner {
-    display: table; }
+    display: table;
+    min-height: 240px; }
     .flex-row .hero-banner a {
       display: table-row; }
     .flex-row .hero-banner .entry-image {
@@ -6413,8 +6414,6 @@ a.hue-teal, a.hue-red {
       display: table-cell; }
     .flex-row .hero-banner .entry-date {
       position: relative; }
-    .flex-row .hero-banner .feature, .flex-row .hero-banner .news, .flex-row .hero-banner .bog, .flex-row .hero-banner .multimedia {
-      min-height: 240px; }
     .flex-row .hero-banner .event {
       padding: 1em 1em 1.6em 1em; } }
 @media (min-width: 922px) {
@@ -6423,6 +6422,27 @@ a.hue-teal, a.hue-red {
 @media (min-width: 1240px) {
   .flex-row .hero-banner .entry-image {
     width: 68%; } }
+
+.flex-row .intro-card {
+  display: table;
+  min-height: 240px; }
+  .flex-row .intro-card .intro-content {
+    display: table-row; }
+    .flex-row .intro-card .intro-content .intro-entry {
+      display: table-cell; }
+    .flex-row .intro-card .intro-content .entry-image {
+      display: table-cell;
+      background: #ddd center center;
+      background-size: cover; }
+  @media (min-width: 768px) {
+    .flex-row .intro-card .intro-content .intro-entry {
+      width: 50%; } }
+  @media (min-width: 922px) {
+    .flex-row .intro-card .intro-content .intro-entry {
+      width: 60%; } }
+  @media (min-width: 1240px) {
+    .flex-row .intro-card .intro-content .intro-entry {
+      width: 68%; } }
 
 .portal-landing .banner {
   margin-bottom: 1.6em; }
