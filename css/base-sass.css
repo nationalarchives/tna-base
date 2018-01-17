@@ -6410,7 +6410,7 @@ a.hue-teal, a.hue-red {
     .flex-row .hero-banner .entry-image {
       display: table-cell;
       width: 50%; }
-    .flex-row .hero-banner .hero-banner-entry {
+    .flex-row .hero-banner .entry-content {
       display: table-cell; }
     .flex-row .hero-banner .entry-date {
       position: relative; }
@@ -6429,7 +6429,8 @@ a.hue-teal, a.hue-red {
   .flex-row .intro-card .intro-content {
     display: table-row; }
     .flex-row .intro-card .intro-content .intro-entry {
-      display: table-cell; }
+      display: table-cell;
+      width: 76%; }
     .flex-row .intro-card .intro-content .entry-image {
       display: table-cell;
       background: #ddd center center;
