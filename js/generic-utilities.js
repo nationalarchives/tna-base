@@ -16,9 +16,9 @@ $.toggleDisplayOfElement = function (toggler, togglee) {
 
 
 var customizeTweetMedia = function() {
-    jQuery('.entry-content').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '1.2em', 'line-height', '1.6em');
-    jQuery('.entry-content').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('line-height', '1.6em');
-    jQuery('.entry-content').find('.twitter-timeline').contents().find('h1').css('font-size', '1.4em');
+    jQuery('.entry-content').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '1.148em', 'line-height', '1.6em');
+    jQuery('.entry-content').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('line-height', '1.58em');
+    jQuery('.entry-content').find('.twitter-timeline').contents().find('h1').css('font-size', '1.45em');
 
 }
 
