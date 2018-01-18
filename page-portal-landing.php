@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<?php
 	global $post;
-    $banner_img = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full' ) )
+    $banner_img = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full', true ) )
 	?>
 
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
