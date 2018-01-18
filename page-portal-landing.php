@@ -10,12 +10,7 @@ get_header(); ?>
 
 	<?php
 	global $post;
-	$feature_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-	if ( $feature_img ) {
-		$banner_img = 'style="background: url(' . make_path_relative( $feature_img[0] ) . ') no-repeat center center;background-size: cover;"';
-	} else {
-		$banner_img = '';
-	}
+    $banner_img = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full' ) )
 	?>
 
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
