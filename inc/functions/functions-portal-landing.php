@@ -254,7 +254,7 @@ function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 			$i,
 			$url,
 			$image,
-			$type,
+			strtolower($type),
 			$type,
 			$title,
 			$excerpt,
