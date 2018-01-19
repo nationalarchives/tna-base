@@ -6461,11 +6461,14 @@ a.hue-teal, a.hue-red {
   color: #fff;
   text-shadow: 3px 3px 8px #000;
   line-height: 1.23;
-  margin: 2em auto;
   display: inline-block;
   padding: 3px 7px;
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.5); }
+.portal-landing .banner .portal-title h1 {
+  margin: 2em auto; }
+.portal-landing .banner .portal-branding h1 {
+  margin: 0.3em auto; }
 .portal-landing .tna-breadcrumb {
   margin: 0; }
 .portal-landing .breadcrumbs {

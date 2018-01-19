@@ -10,7 +10,13 @@ get_header(); ?>
 
 	<?php
 	global $post;
-    $banner_img = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full', true ) )
+    $banner_img   = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full', true ) );
+	$logo         = get_post_meta( $post->ID, 'portal_logo', true );
+	$bar          = get_post_meta( $post->ID, 'stay_up_to_date', true );
+	$facebook     = get_post_meta( $post->ID, 'facebook_link', true );
+	$twitter      = get_post_meta( $post->ID, 'twitter_link', true );
+	$newsletter   = get_post_meta( $post->ID, 'newsletter_link', true );
+	$class        = $logo ? 'portal-branding' : 'portal-title';
 	?>
 
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
@@ -18,23 +24,17 @@ get_header(); ?>
 		<div class="heading-banner text-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-12 <?php echo $class ?>">
+						<?php echo portal_brand( $logo, get_the_title() ); ?>
 						<h1><?php the_title(); ?></h1>
 					</div>
 				</div>
 				<?php get_image_caption( 'top' ); ?>
 			</div>
 		</div>
-		<?php
-		$bar          = get_post_meta( $post->ID, 'stay_up_to_date', true );
-		$facebook     = get_post_meta( $post->ID, 'facebook_link', true );
-		$twitter      = get_post_meta( $post->ID, 'twitter_link', true );
-		$newsletter   = get_post_meta( $post->ID, 'newsletter_link', true );
-
-		if ($bar == 'Enable') {
+		<?php if ($bar == 'Enable') {
 			echo display_stay_up_to_date_bar( $facebook, $twitter, $newsletter );
-		}
-		?>
+		} ?>
 	</div>
 	<main id="main" role="main">
 		<div class="container">
