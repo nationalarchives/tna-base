@@ -6410,8 +6410,6 @@ a.hue-teal, a.hue-red {
     .flex-row .hero-banner .entry-image {
       display: table-cell;
       width: 50%; }
-    .flex-row .hero-banner .entry-content {
-      display: table-cell; }
     .flex-row .hero-banner .entry-date {
       position: relative; }
     .flex-row .hero-banner .event {
