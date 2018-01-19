@@ -11,11 +11,12 @@ get_header(); ?>
 	<?php
 	global $post;
     $banner_img   = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full', true ) );
-	$logo         = get_post_meta( $post->ID, 'portal_logo', true );
+	$logo         = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'portal_logo', true ) );
 	$bar          = get_post_meta( $post->ID, 'stay_up_to_date', true );
 	$facebook     = get_post_meta( $post->ID, 'facebook_link', true );
 	$twitter      = get_post_meta( $post->ID, 'twitter_link', true );
 	$newsletter   = get_post_meta( $post->ID, 'newsletter_link', true );
+	$intro_img    = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'intro_img', true ) );
 	$class        = $logo ? 'portal-branding' : 'portal-title';
 	?>
 
@@ -47,7 +48,7 @@ get_header(); ?>
 									<?php the_content(); ?>
 								</div>
 							</div>
-							<div class="entry-image" style="background-image: url(<?php echo get_post_meta( $post->ID, 'intro_img', true ); ?>)"></div>
+							<div class="entry-image" style="background-image: url(<?php echo $intro_img ?>)"></div>
 						</div>
 					</div>
 				</div>
