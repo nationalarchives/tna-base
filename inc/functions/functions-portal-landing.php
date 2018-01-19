@@ -298,9 +298,11 @@ function display_stay_up_to_date_bar( $facebook='', $twitter='', $newsletter='Di
 
 function portal_brand( $logo, $title ) {
 
-	$html = '<div class="portal-logo">
-				<img src="'.$logo.'" alt="'.$title.'">
-			</div>';
+	if ( $logo ) {
+		$html = '<div class="portal-logo">
+					<img src="' . $logo . '" alt="' . $title . '">
+				</div>';
 
-	return $html;
+		return $html;
+	}
 }
