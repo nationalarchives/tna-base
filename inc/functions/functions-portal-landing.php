@@ -75,7 +75,7 @@ function portal_landing_meta_boxes() {
 		)
 	);
 
-	for ( $i = 0; $i <= 6; $i ++ ) {
+	for ( $i = 0; $i <= 9; $i ++ ) {
 		if ($i==0) {
 			$banner = 'Banner ';
 			$n = '';
@@ -147,23 +147,23 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 
 		$data = $_POST;
 
-		for ( $i = 0; $i <= 6; $i ++ ) {
+		for ( $i = 0; $i <= 9; $i ++ ) {
 
 			if ( $data[ 'portal_card_url_' . $i ] ) {
 
-				$current = get_post_meta( $post_id, 'portal_card_url_old_' . $i, true );
+				$current    = get_post_meta( $post_id, 'portal_card_url_old_' . $i, true );
+
+				if ( $current == '' ) {
+					add_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ], true );
+				}
 
 				// If new URL doesn't match the previous URL clear all fields
-				if ( $current ) {
-					if ( $data[ 'portal_card_url_' . $i ] !== $current ) {
-						$data[ 'portal_card_title_' . $i ]   = '';
-						$data[ 'portal_card_excerpt_' . $i ] = '';
-						$data[ 'portal_card_img_' . $i ]     = '';
-						$data[ 'portal_card_date_' . $i ]    = '';
-						update_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ] );
-					}
-				} else {
-					add_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ], true );
+				if ( $current !== $data[ 'portal_card_url_' . $i ] ) {
+					$data[ 'portal_card_title_' . $i ]   = '';
+					$data[ 'portal_card_excerpt_' . $i ] = '';
+					$data[ 'portal_card_img_' . $i ]     = '';
+					$data[ 'portal_card_date_' . $i ]    = '';
+					update_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ] );
 				}
 
 				// If any of the fields are empty get OG meta data to populate
@@ -194,6 +194,11 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 						$_POST[ 'portal_card_date_' . $i ] = $data[ 'portal_card_date_' . $i ];
 					}
 				}
+			} else {
+				$_POST[ 'portal_card_title_' . $i ]   = '';
+				$_POST[ 'portal_card_excerpt_' . $i ] = '';
+				$_POST[ 'portal_card_img_' . $i ]     = '';
+				$_POST[ 'portal_card_date_' . $i ]    = '';
 			}
 		}
 	}
@@ -272,7 +277,7 @@ function display_stay_up_to_date_bar( $facebook='', $twitter='', $newsletter='Di
 		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/twitter.png" alt="Follow us on Twitter" class="social-icon"></a>';
 	}
 	if ( $newsletter=='Enable' ) {
-		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/envelope.png" alt="Send me The National Archives’ newsletter" class="social-icon"></a>';
+		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><img src="/wp-content/themes/tna-base/img/social/envelope.png" alt="Send me The National Archives’ newsletter" class="social-icon"></a>';
 	}
 
 	$html =     '<div class="stay-up-to-date-bar">
