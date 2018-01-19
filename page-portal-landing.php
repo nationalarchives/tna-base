@@ -40,7 +40,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="flex-row">
 				<div class="col-card-12">
-					<div class="card intro-card">
+					<div class="intro-card">
 						<div class="intro-content">
 							<div class="intro-entry">
 								<div class="entry-content">

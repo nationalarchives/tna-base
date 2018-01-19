@@ -194,23 +194,34 @@
   }
 }
 .flex-row .intro-card {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px #ddd;
   display: table;
   min-height: 240px;
   .intro-content {
     display: table-row;
+    .entry-content {
+      display: block;
+      width: 100%;
+      padding: 1em 1em 1.6em 1em;
+    }
     .intro-entry {
       display: table-cell;
       width: 76%;
     }
     .entry-image {
-      display: table-cell;
-      background: #ddd center center;
-      background-size: cover;
+      display: none;
     }
   }
   @media (min-width: 768px) {
     .intro-content .intro-entry {
       width: 50%;
+    }
+    .intro-content .entry-image {
+      display: table-cell;
+      background: #ddd center center;
+      background-size: cover;
     }
   }
   @media (min-width: 922px) {
