@@ -293,6 +293,20 @@ $(document).ready(function () {
     }
 }(jQuery));
 
+$(function() {
+    $('a[class="anchor-link"]').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 500);
+                return false;
+            }
+        }
+    });
+});
 ;$('a[target="_blank"]').add_attributes_to_target_blank();
 
 $("ul.sub-menu:last").append_promotional_image();

@@ -6486,3 +6486,5 @@ a.hue-teal, a.hue-red {
     padding: 3px;
     margin: 0 .2em;
     width: 26px; }
+  .portal-landing .stay-up-to-date-bar a {
+    display: inline-block; }
