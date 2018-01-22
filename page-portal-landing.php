@@ -34,7 +34,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<?php if ($bar == 'Enable') {
-			echo display_stay_up_to_date_bar( $facebook, $twitter, $newsletter );
+			echo portal_connect_bar( $facebook, $twitter, $newsletter );
 		} ?>
 	</div>
 	<main id="main" role="main">
@@ -64,7 +64,7 @@ get_header(); ?>
 					$image      = get_post_meta( $post->ID, 'portal_card_img_'.$i, true );
 					$date       = get_post_meta( $post->ID, 'portal_card_date_'.$i, true );
 
-					echo display_portal_card( $i, $url, $title, $excerpt, $image, $date );
+					echo portal_display_card( $i, $url, $title, $excerpt, $image, $date );
 				}
 				?>
 			</div>

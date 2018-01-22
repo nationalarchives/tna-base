@@ -204,7 +204,35 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 	}
 }
 
-function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
+function portal_card_label( $url ) {
+	if ( strpos( $url, 'nationalarchives.gov.uk/about/news/' ) !== false ) {
+		$type = 'News';
+	} elseif ( strpos( $url, 'blog.nationalarchives.gov.uk' ) !== false ) {
+		$type = 'Blog';
+	} elseif ( strpos( $url, 'media.nationalarchives.gov.uk' ) !== false ) {
+		$type = 'Multimedia';
+	} elseif ( strpos( $url, 'eventbrite' ) !== false ) {
+		$type = 'Event';
+	} else {
+		$type = 'Featured';
+	}
+
+	return $type;
+}
+
+function portal_card_date( $date, $type ) {
+	if ( $date && $type == 'Event' ) {
+		date_default_timezone_set( 'Europe/London' );
+		$date      = date( 'l j F Y, H:i', strtotime( $date ) );
+		$date_html = '<div class="entry-date"><div class="date">' . $date . '</div></div>';
+	} else {
+		$date_html = '';
+	}
+
+	return $date_html;
+}
+
+function portal_display_card( $i, $url, $title, $excerpt, $image, $date ) {
 
 	if ( $url ) {
 
@@ -213,25 +241,8 @@ function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 			$excerpt       = implode( ' ', array_splice( $explode_words, 0, 14 ) ) . '...';
 		}
 
-		if ( strpos( $url, 'nationalarchives.gov.uk/about/news/' ) !== false ) {
-			$type = 'News';
-		} elseif ( strpos( $url, 'blog.nationalarchives.gov.uk' ) !== false ) {
-			$type = 'Blog';
-		} elseif ( strpos( $url, 'media.nationalarchives.gov.uk' ) !== false ) {
-			$type = 'Multimedia';
-		} elseif ( strpos( $url, 'eventbrite' ) !== false ) {
-			$type = 'Event';
-		} else {
-			$type = 'Featured';
-		}
-
-		if ( $date && $type == 'Event' ) {
-			date_default_timezone_set( 'Europe/London' );
-			$date      = date( 'l j F Y, H:i', strtotime( $date ) );
-			$date_html = '<div class="entry-date"><div class="date">' . $date . '</div></div>';
-		} else {
-			$date_html = '';
-		}
+		$type = portal_card_label( $url );
+		$date_html = portal_card_date( $date, $type );
 
 		if ( $i == 0 ) {
 			$col_class = 'col-card-12';
@@ -268,7 +279,7 @@ function display_portal_card( $i, $url, $title, $excerpt, $image, $date ) {
 	}
 }
 
-function display_stay_up_to_date_bar( $facebook='', $twitter='', $newsletter='Disable' ) {
+function portal_connect_bar( $facebook='', $twitter='', $newsletter='Disable' ) {
 
 	if ( $facebook ) {
 		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/facebook.png" alt="Follow us on Facebook" class="social-icon"></a>';
