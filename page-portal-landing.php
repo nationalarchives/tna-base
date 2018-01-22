@@ -57,14 +57,15 @@ get_header(); ?>
 		<div class="container">
 			<div class="flex-row">
 				<?php
-				for ( $i=0 ; $i<=6 ; $i++ ) {
+				for ( $i=0 ; $i<=9 ; $i++ ) {
 					$url        = get_post_meta( $post->ID, 'portal_card_url_'.$i, true );
 					$title      = get_post_meta( $post->ID, 'portal_card_title_'.$i, true );
 					$excerpt    = get_post_meta( $post->ID, 'portal_card_excerpt_'.$i, true );
 					$image      = get_post_meta( $post->ID, 'portal_card_img_'.$i, true );
 					$date       = get_post_meta( $post->ID, 'portal_card_date_'.$i, true );
+					$label      = get_post_meta( $post->ID, 'portal_card_label_'.$i, true );
 
-					echo portal_display_card( $i, $url, $title, $excerpt, $image, $date );
+					echo portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label );
 				}
 				?>
 			</div>

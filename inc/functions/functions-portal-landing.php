@@ -120,6 +120,13 @@ function portal_landing_meta_boxes() {
 						'std'  => ''
 					),
 					array(
+						'name' => 'Card label',
+						'desc' => 'Auto will select an appropriate card label.',
+						'id' => 'portal_card_label_'.$i,
+						'type' => 'select',
+						'options' => array('Auto', 'Resource')
+					),
+					array(
 						'name' => 'Event date/time',
 						'desc' => $descDate,
 						'id'   => 'portal_card_date_'.$i,
@@ -204,17 +211,21 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 	}
 }
 
-function portal_card_label( $url ) {
-	if ( strpos( $url, 'nationalarchives.gov.uk/about/news/' ) !== false ) {
-		$type = 'News';
-	} elseif ( strpos( $url, 'blog.nationalarchives.gov.uk' ) !== false ) {
-		$type = 'Blog';
-	} elseif ( strpos( $url, 'media.nationalarchives.gov.uk' ) !== false ) {
-		$type = 'Multimedia';
-	} elseif ( strpos( $url, 'eventbrite' ) !== false ) {
-		$type = 'Event';
+function portal_card_label( $url, $label ) {
+	if ( $label == 'Auto' ) {
+		if ( strpos( $url, 'nationalarchives.gov.uk/about/news/' ) !== false ) {
+			$type = 'News';
+		} elseif ( strpos( $url, 'blog.nationalarchives.gov.uk' ) !== false ) {
+			$type = 'Blog';
+		} elseif ( strpos( $url, 'media.nationalarchives.gov.uk' ) !== false ) {
+			$type = 'Multimedia';
+		} elseif ( strpos( $url, 'eventbrite' ) !== false ) {
+			$type = 'Event';
+		} else {
+			$type = 'Featured';
+		}
 	} else {
-		$type = 'Featured';
+		$type = $label;
 	}
 
 	return $type;
@@ -240,20 +251,21 @@ function portal_limit_words( $words, $number = 14 ) {
 	return $words;
 }
 
-function portal_display_card( $i, $url, $title, $excerpt, $image, $date ) {
+function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label ) {
 
 	if ( $url ) {
 
-		$excerpt = portal_limit_words( $excerpt );
-		$type = portal_card_label( $url );
+		$type = portal_card_label( $url, $label );
 		$date_html = portal_card_date( $date, $type );
 
 		if ( $i == 0 ) {
 			$col_class = 'col-card-12';
 			$card_class = 'card hero-banner';
+			$excerpt = portal_limit_words( $excerpt, 40 );
 		} else {
 			$col_class = 'col-card-4';
 			$card_class = 'card';
+			$excerpt = portal_limit_words( $excerpt );
 		}
 
 		$html = '<div class="%s"><div class="%s">
