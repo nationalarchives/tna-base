@@ -232,15 +232,19 @@ function portal_card_date( $date, $type ) {
 	return $date_html;
 }
 
+function portal_limit_words( $words, $number = 14 ) {
+	if (str_word_count($words, 0) > $number) {
+		$explode_words = explode( ' ', $words );
+		$words = implode(' ', array_splice( $explode_words , 0, $number)) . '...';
+	}
+	return $words;
+}
+
 function portal_display_card( $i, $url, $title, $excerpt, $image, $date ) {
 
 	if ( $url ) {
 
-		if ( str_word_count( $excerpt, 0 ) > 14 ) {
-			$explode_words = explode( ' ', $excerpt );
-			$excerpt       = implode( ' ', array_splice( $explode_words, 0, 14 ) ) . '...';
-		}
-
+		$excerpt = portal_limit_words( $excerpt );
 		$type = portal_card_label( $url );
 		$date_html = portal_card_date( $date, $type );
 
