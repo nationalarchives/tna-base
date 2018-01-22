@@ -257,6 +257,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 
 		$type = portal_card_label( $url, $label );
 		$date_html = portal_card_date( $date, $type );
+		$target = ( $type == 'Event' ) ? ' target="_blank"' : '';
 
 		if ( $i == 0 ) {
 			$col_class = 'col-card-12';
@@ -269,7 +270,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 		}
 
 		$html = '<div class="%s"><div class="%s">
-					<a id="card-%s" href="%s" class="portal-card">
+					<a id="card-%s" href="%s" class="portal-card"%s>
 						<div class="entry-image" style="background-image: url(%s)"></div>
 						<div class="entry-content %s">
 							<div class="content-type">%s</div>
@@ -285,6 +286,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 			$card_class,
 			$i,
 			$url,
+			$target,
 			$image,
 			strtolower($type),
 			$type,
