@@ -6467,6 +6467,8 @@ a.hue-teal, a.hue-red {
     margin: 2em auto; }
   .portal-landing .banner .portal-branding h1 {
     margin: 0.3em auto; }
+  .portal-landing .banner .portal-logo img {
+    margin: 0 auto; }
 .portal-landing .tna-breadcrumb {
   margin: 0; }
 .portal-landing .breadcrumbs {

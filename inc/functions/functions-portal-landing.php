@@ -408,7 +408,7 @@ function portal_brand( $logo, $title ) {
 
 	if ( $logo ) {
 		$html = '<div class="portal-logo">
-					<img src="' . $logo . '" alt="' . $title . '">
+					<img src="' . $logo . '" alt="' . $title . '" class="img-responsive">
 				</div>';
 
 		return $html;
