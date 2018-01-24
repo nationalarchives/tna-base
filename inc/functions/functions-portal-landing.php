@@ -338,8 +338,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 							<div class="content-type">%s</div>
 							<h3>%s</h3>
 							<p>%s</p>
-						</div>
-						%s
+						</div>%s
 					</a>
 				</div></div>';
 
