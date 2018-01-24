@@ -27,7 +27,7 @@
 }(jQuery));
 
 $(function() {
-    $('a[class="anchor-link"]').click(function() {
+    $('a[class="anchor-link"]').on('click',function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
