@@ -137,7 +137,7 @@ function portal_landing_meta_boxes() {
 					array(
 						'name' => 'Expire date/time',
 						'desc' => $descExpire,
-						'id' => 'home_card_expire_1',
+						'id' => 'portal_card_expire_'.$i,
 						'type' => 'datetime',
 						'std' => ''
 					)
@@ -178,6 +178,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 					$data[ 'portal_card_excerpt_' . $i ] = '';
 					$data[ 'portal_card_img_' . $i ]     = '';
 					$data[ 'portal_card_date_' . $i ]    = '';
+					$data[ 'portal_card_expire_' . $i ]  = '';
 					update_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ] );
 				}
 
@@ -185,7 +186,8 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 				if ( trim( $data[ 'portal_card_title_' . $i ] ) == '' ||
 				     trim( $data[ 'portal_card_excerpt_' . $i ] ) == '' ||
 				     trim( $data[ 'portal_card_img_' . $i ] ) == '' ||
-				     trim( $data[ 'portal_card_date_' . $i ] ) == ''
+				     trim( $data[ 'portal_card_date_' . $i ] ) == '' ||
+				     trim( $data[ 'portal_card_expire_' . $i ] ) == ''
 				) {
 
 					$og = get_og_meta( $data[ 'portal_card_url_' . $i ] );
@@ -205,6 +207,11 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 							$date = date( 'Y-m-d\TH:i', strtotime( $date ) );
 							$_POST[ 'portal_card_date_' . $i ] = $date;
 						}
+						if ( trim( $data[ 'portal_card_expire_' . $i ] ) == '' ) {
+							$date = esc_attr( $og['end_datetime'] );
+							$date = date( 'Y-m-d\TH:i', strtotime( $date ) );
+							$_POST[ 'home_card_expire_' . $i ] = $date;
+						}
 					} else {
 						$_POST[ 'portal_card_date_' . $i ] = $data[ 'portal_card_date_' . $i ];
 					}
@@ -214,6 +221,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 				$_POST[ 'portal_card_excerpt_' . $i ] = '';
 				$_POST[ 'portal_card_img_' . $i ]     = '';
 				$_POST[ 'portal_card_date_' . $i ]    = '';
+				$_POST[ 'home_card_expire_' . $i ]    = '';
 			}
 		}
 	}
