@@ -66,9 +66,9 @@
     a:hover {
       text-decoration: none;
       box-shadow: 0 4px 7px #ccc;
-    }
-    a:hover .entry-content h3 {
-      text-decoration: underline;
+      .entry-content h3 {
+        text-decoration: underline;
+      }
     }
     .entry-image {
       display: block;
@@ -160,78 +160,78 @@
       padding: 1em 1em 4em 1em;
     }
   }
-}
-.flex-row .hero-banner {
-  p {
-    margin-bottom: .5em;
+  .hero-banner {
+    p {
+      margin-bottom: .5em;
+    }
+    @media (min-width: 768px) {
+      display: table;
+      min-height: 240px;
+      a {
+        display: table-row;
+      }
+      .entry-image {
+        display: table-cell;
+        width: 50%;
+      }
+      .entry-date {
+        position: relative;
+      }
+      .event {
+        padding: 1em 1em 1.6em 1em;
+      }
+    }
+    @media (min-width: 922px) {
+      .entry-image {
+        width: 60%;
+      }
+    }
+    @media (min-width: 1240px) {
+      .entry-image {
+        width: 68%;
+      }
+    }
   }
-  @media (min-width: 768px) {
+  .intro-card {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ddd;
     display: table;
     min-height: 240px;
-    a {
+    .intro-content {
       display: table-row;
+      .entry-content {
+        display: block;
+        width: 100%;
+        padding: 1em 1em 1.6em 1em;
+      }
+      .intro-entry {
+        display: table-cell;
+        width: 76%;
+      }
+      .entry-image {
+        display: none;
+      }
     }
-    .entry-image {
-      display: table-cell;
-      width: 50%;
+    @media (min-width: 768px) {
+      .intro-content .intro-entry {
+        width: 50%;
+      }
+      .intro-content .entry-image {
+        display: table-cell;
+        background: #ddd center center;
+        background-size: cover;
+      }
     }
-    .entry-date {
-      position: relative;
+    @media (min-width: 922px) {
+      .intro-content .intro-entry {
+        width: 60%;
+      }
     }
-    .event {
-      padding: 1em 1em 1.6em 1em;
-    }
-  }
-  @media (min-width: 922px) {
-    .entry-image {
-      width: 60%;
-    }
-  }
-  @media (min-width: 1240px) {
-    .entry-image {
-      width: 68%;
-    }
-  }
-}
-.flex-row .intro-card {
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 5px #ddd;
-  display: table;
-  min-height: 240px;
-  .intro-content {
-    display: table-row;
-    .entry-content {
-      display: block;
-      width: 100%;
-      padding: 1em 1em 1.6em 1em;
-    }
-    .intro-entry {
-      display: table-cell;
-      width: 76%;
-    }
-    .entry-image {
-      display: none;
-    }
-  }
-  @media (min-width: 768px) {
-    .intro-content .intro-entry {
-      width: 50%;
-    }
-    .intro-content .entry-image {
-      display: table-cell;
-      background: #ddd center center;
-      background-size: cover;
-    }
-  }
-  @media (min-width: 922px) {
-    .intro-content .intro-entry {
-      width: 60%;
-    }
-  }
-  @media (min-width: 1240px) {
-    .intro-content .intro-entry {
-      width: 68%;
+    @media (min-width: 1240px) {
+      .intro-content .intro-entry {
+        width: 68%;
+      }
     }
   }
 }

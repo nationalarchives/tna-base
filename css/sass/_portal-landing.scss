@@ -3,22 +3,22 @@
     margin-bottom: 1.6em;
     background: #ddd center center;
     background-size: cover;
-  }
-  .banner h1 {
-    font-size: 3em;
-    color: #fff;
-    text-shadow: 3px 3px 8px #000;
-    line-height: 1.23;
-    display: inline-block;
-    padding: 3px 7px;
-    background-color: #000;
-    background-color: rgba(0,0,0,.5);
-  }
-  .banner .portal-title h1 {
-    margin: 2em auto;
-  }
-  .banner .portal-branding h1 {
-    margin: 0.3em auto;
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 3px 3px 8px #000;
+      line-height: 1.23;
+      display: inline-block;
+      padding: 3px 7px;
+      background-color: #000;
+      background-color: rgba(0,0,0,.5);
+    }
+    .portal-title h1 {
+      margin: 2em auto;
+    }
+    .portal-branding h1 {
+      margin: 0.3em auto;
+    }
   }
   .tna-breadcrumb {
     margin: 0;
@@ -29,9 +29,9 @@
     padding: 3px 7px;
     background-color: #000;
     background-color: rgba(0,0,0,.5);
-  }
-  .breadcrumbs a {
-    color: #fce45c;
+    a {
+      color: #fce45c;
+    }
   }
   .stay-up-to-date-bar {
     padding: 0.4em 0;
