@@ -186,6 +186,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 					$data[ 'portal_card_title_' . $i ]   = '';
 					$data[ 'portal_card_excerpt_' . $i ] = '';
 					$data[ 'portal_card_img_' . $i ]     = '';
+					$data[ 'portal_card_label_' . $i ]   = 'Auto';
 					$data[ 'portal_card_date_' . $i ]    = '';
 					$data[ 'portal_card_expire_' . $i ]  = '';
 					update_post_meta( $post_id, 'portal_card_url_old_' . $i, $data[ 'portal_card_url_' . $i ] );
@@ -229,6 +230,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 				$_POST[ 'portal_card_title_' . $i ]   = '';
 				$_POST[ 'portal_card_excerpt_' . $i ] = '';
 				$_POST[ 'portal_card_img_' . $i ]     = '';
+				$_POST[ 'portal_card_label_' . $i ]    = 'Auto';
 				$_POST[ 'portal_card_date_' . $i ]    = '';
 				$_POST[ 'portal_card_expire_' . $i ]    = '';
 			}
