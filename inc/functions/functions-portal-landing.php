@@ -20,6 +20,7 @@ function portal_landing_meta_boxes() {
 	$descDate = 'Please use this date format if dropdown selector isn\'t available, yyyy-mm-ddThh:mm.';
 	$descCardTitle = 'Only enter substitute text here when you need to override the automated title.';
 	$descCardImage = 'If you need to override the automated image, paste the image URL here after uploading it to the image library. Image size 768px x 576px.';
+	$descExpire = 'If a date and time set the card will expire at this specified time. Please use this date format if dropdown selector isn\'t available, yyyy-mm-ddThh:mm.';
 
 	$portal_meta_boxes = array(
 		array(
@@ -132,6 +133,13 @@ function portal_landing_meta_boxes() {
 						'id'   => 'portal_card_date_'.$i,
 						'type' => 'datetime',
 						'std'  => ''
+					),
+					array(
+						'name' => 'Expire date/time',
+						'desc' => $descExpire,
+						'id' => 'home_card_expire_1',
+						'type' => 'datetime',
+						'std' => ''
 					)
 				)
 		);
