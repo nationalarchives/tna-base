@@ -51,24 +51,23 @@
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 5px #ddd;
-
     a {
       position: relative;
       display: block;
       width: 100%;
+      &:hover {
+        text-decoration: none;
+        box-shadow: 0 4px 7px #ccc;
+        .entry-content h3 {
+          text-decoration: underline;
+        }
+      }
     }
     h3 {
       margin: .5em 0;
     }
     p {
       color: #444;
-    }
-    a:hover {
-      text-decoration: none;
-      box-shadow: 0 4px 7px #ccc;
-      .entry-content h3 {
-        text-decoration: underline;
-      }
     }
     .entry-image {
       display: block;

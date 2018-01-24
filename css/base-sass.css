@@ -6318,15 +6318,15 @@ a.hue-teal, a.hue-red {
       position: relative;
       display: block;
       width: 100%; }
+      .flex-row .card a:hover {
+        text-decoration: none;
+        box-shadow: 0 4px 7px #ccc; }
+        .flex-row .card a:hover .entry-content h3 {
+          text-decoration: underline; }
     .flex-row .card h3 {
       margin: .5em 0; }
     .flex-row .card p {
       color: #444; }
-    .flex-row .card a:hover {
-      text-decoration: none;
-      box-shadow: 0 4px 7px #ccc; }
-      .flex-row .card a:hover .entry-content h3 {
-        text-decoration: underline; }
     .flex-row .card .entry-image {
       display: block;
       width: 100%;
