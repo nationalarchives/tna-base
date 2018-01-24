@@ -64,8 +64,17 @@ get_header(); ?>
 					$image      = get_post_meta( $post->ID, 'portal_card_img_'.$i, true );
 					$date       = get_post_meta( $post->ID, 'portal_card_date_'.$i, true );
 					$label      = get_post_meta( $post->ID, 'portal_card_label_'.$i, true );
+					$expire     = get_post_meta( $post->ID, 'portal_card_expire_'.$i, true );
 
-					echo portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label );
+					if ( portal_is_card_active( $expire ) ) {
+
+						echo portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label );
+
+					} else {
+
+						echo portal_fallback_card( $i );
+
+					}
 				}
 				?>
 			</div>

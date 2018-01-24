@@ -354,10 +354,12 @@ function portal_brand( $logo, $title ) {
 
 function portal_fallback_card( $i ) {
 
-	$url = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
-	$image = make_path_relative( get_stylesheet_directory_uri().'/img/events.jpg' );
+	if ( $i != 0 ) {
 
-	$html = '<div class="col-card-4"><div class="card fallback">
+		$url = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
+		$image = make_path_relative( get_stylesheet_directory_uri().'/img/events.jpg' );
+
+		$html = '<div class="col-card-4"><div class="card fallback">
 					<a id="card-%s" href="%s" class="portal-card">
 						<div class="entry-image" style="background-image: url(%s)"></div>
 						<div class="entry-content event">
@@ -368,9 +370,33 @@ function portal_fallback_card( $i ) {
 					</a>
 				</div></div>';
 
-	return sprintf( $html,
-		$i,
-		$url,
-		$image
-	);
+		return sprintf( $html,
+			$i,
+			$url,
+			$image
+		);
+	}
+}
+
+function portal_validate_date( $date ) {
+	// expected format Y-m-d\TH:i
+	if (preg_match('/^\d{4}-\d{2}\-\d{2}T\d{2}:\d{2}/', $date)) { // Is in correct format
+		return ((bool)strtotime($date)); // Is a valid date
+	}
+	return false;
+}
+
+function portal_is_card_active( $expire ) {
+	date_default_timezone_set('Europe/London');
+	if ( portal_validate_date($expire) ) {
+		$expire_date = strtotime($expire);
+		$current_date = strtotime( date('Y-m-d H:i:s') );
+		if ( $current_date <= $expire_date ) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return true;
+	}
 }
