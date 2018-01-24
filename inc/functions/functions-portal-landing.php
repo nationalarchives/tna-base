@@ -210,7 +210,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 						if ( trim( $data[ 'portal_card_expire_' . $i ] ) == '' ) {
 							$date = esc_attr( $og['end_datetime'] );
 							$date = date( 'Y-m-d\TH:i', strtotime( $date ) );
-							$_POST[ 'home_card_expire_' . $i ] = $date;
+							$_POST[ 'portal_card_expire_' . $i ] = $date;
 						}
 					} else {
 						$_POST[ 'portal_card_date_' . $i ] = $data[ 'portal_card_date_' . $i ];
@@ -221,7 +221,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 				$_POST[ 'portal_card_excerpt_' . $i ] = '';
 				$_POST[ 'portal_card_img_' . $i ]     = '';
 				$_POST[ 'portal_card_date_' . $i ]    = '';
-				$_POST[ 'home_card_expire_' . $i ]    = '';
+				$_POST[ 'portal_card_expire_' . $i ]    = '';
 			}
 		}
 	}
