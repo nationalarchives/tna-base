@@ -3,6 +3,10 @@
  * Portal landing
  */
 
+
+/**
+ * Adds custom fields (metaboxes) to page-portal-landing.php
+ */
 function portal_landing_meta_boxes() {
 
 	if (isset($_GET['post'])) {
@@ -154,6 +158,11 @@ function portal_landing_meta_boxes() {
 	}
 }
 
+/**
+ * On page update gets og meta data via URL and saves to custom fields
+ *
+ * @param $post_id
+ */
 function portal_landing_get_og_meta_on_save( $post_id ) {
 
 	$template_file = get_post_meta( $post_id, '_wp_page_template', true );
@@ -227,6 +236,14 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 	}
 }
 
+/**
+ * Card labels
+ *
+ * @param $url
+ * @param $label
+ *
+ * @return string
+ */
 function portal_card_label( $url, $label ) {
 	if ( $label == 'Auto' ) {
 		if ( strpos( $url, 'nationalarchives.gov.uk/about/news/' ) !== false ) {
@@ -247,6 +264,14 @@ function portal_card_label( $url, $label ) {
 	return $type;
 }
 
+/**
+ * Formats and returns date
+ *
+ * @param $date
+ * @param $type
+ *
+ * @return string
+ */
 function portal_card_date( $date, $type ) {
 	if ( $date && $type == 'Event' ) {
 		date_default_timezone_set( 'Europe/London' );
@@ -259,6 +284,14 @@ function portal_card_date( $date, $type ) {
 	return $date_html;
 }
 
+/**
+ * Limits string to desired length. Default 14 words.
+ *
+ * @param $words
+ * @param int $number
+ *
+ * @return string
+ */
 function portal_limit_words( $words, $number = 14 ) {
 	if (str_word_count($words, 0) > $number) {
 		$explode_words = explode( ' ', $words );
@@ -267,6 +300,19 @@ function portal_limit_words( $words, $number = 14 ) {
 	return $words;
 }
 
+/**
+ * Card html
+ *
+ * @param $i
+ * @param $url
+ * @param $title
+ * @param $excerpt
+ * @param $image
+ * @param $date
+ * @param $label
+ *
+ * @return string
+ */
 function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label ) {
 
 	if ( $url ) {
@@ -313,6 +359,15 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 	}
 }
 
+/**
+ * Stay up-to-date bar html
+ *
+ * @param string $facebook
+ * @param string $twitter
+ * @param string $newsletter
+ *
+ * @return string
+ */
 function portal_connect_bar( $facebook='', $twitter='', $newsletter='Disable' ) {
 
 	if ( $facebook ) {
@@ -341,6 +396,14 @@ function portal_connect_bar( $facebook='', $twitter='', $newsletter='Disable' ) 
 	return $html;
 }
 
+/**
+ * Portal branding
+ *
+ * @param $logo
+ * @param $title
+ *
+ * @return string
+ */
 function portal_brand( $logo, $title ) {
 
 	if ( $logo ) {
@@ -352,6 +415,13 @@ function portal_brand( $logo, $title ) {
 	}
 }
 
+/**
+ * Fallback card html
+ *
+ * @param $i
+ *
+ * @return string
+ */
 function portal_fallback_card( $i ) {
 
 	if ( $i != 0 ) {
@@ -378,6 +448,13 @@ function portal_fallback_card( $i ) {
 	}
 }
 
+/**
+ * Validates date
+ *
+ * @param $date
+ *
+ * @return bool
+ */
 function portal_validate_date( $date ) {
 	// expected format Y-m-d\TH:i
 	if (preg_match('/^\d{4}-\d{2}\-\d{2}T\d{2}:\d{2}/', $date)) { // Is in correct format
@@ -386,6 +463,13 @@ function portal_validate_date( $date ) {
 	return false;
 }
 
+/**
+ * Checks if the card has expired
+ *
+ * @param $expire
+ *
+ * @return bool
+ */
 function portal_is_card_active( $expire ) {
 	date_default_timezone_set('Europe/London');
 	if ( portal_validate_date($expire) ) {
