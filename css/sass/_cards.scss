@@ -1,0 +1,236 @@
+/* Cards */
+
+.flex-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  .col-card-12, .col-card-4, .col-card-3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 1.5em;
+  }
+  .col-card-12 {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .col-card-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    min-width: 33.33333%;
+  }
+  .col-card-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    min-width: 25%;
+  }
+  .card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex: 1;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ddd;
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      &:hover {
+        text-decoration: none;
+        box-shadow: 0 4px 7px #ccc;
+        .entry-content h3 {
+          text-decoration: underline;
+        }
+      }
+    }
+    h3 {
+      margin: .5em 0;
+    }
+    p {
+      color: #444;
+    }
+    .entry-image {
+      display: block;
+      width: 100%;
+      min-height: 185px;
+      background: #ddd center center;
+      background-size: cover;
+    }
+    .entry-content {
+      display: block;
+      width: 100%;
+      padding: 1em 1em 1.6em 1em;
+    }
+    .event {
+      padding: 1em 1em 2.6em 1em;
+    }
+    .entry-header {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      padding: 1em;
+      width: 100%;
+      min-height: 98px;
+      background-color: #597a87;
+    }
+    .entry-header h3 {
+      color: #fff;
+      margin: 0;
+    }
+    .content-type {
+      color: #444;
+      font-size: .9em;
+      border-left: #ebab01 4px solid;
+      padding: 0 0.5em;
+    }
+    .entry-date {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1em;
+      .date {
+        color: #444;
+        background: url(../img/icon-calendar.svg) no-repeat 0px 4px;
+        background-size: 1em 1em;
+        padding-left: 2em;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .card .event {
+      padding: 1em 1em 4em 1em;
+    }
+  }
+  @media (max-width: 768px) {
+    .col-card-4 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .col-card-3 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .card .event {
+      padding: 1em 1em 2.6em 1em;
+    }
+    .entry-date {
+      position: relative;
+    }
+  }
+  @media (max-width: 480px) {
+    display: block;
+
+    .col-card-3, .col-card-4 {
+      display: block;
+      float: left;
+      max-width: 100%;
+      width: 100%;
+    }
+    .card .event {
+      padding: 1em 1em 4em 1em;
+    }
+  }
+  .hero-banner {
+    p {
+      margin-bottom: .5em;
+    }
+    @media (min-width: 768px) {
+      display: table;
+      min-height: 240px;
+      a {
+        display: table-row;
+      }
+      .entry-image {
+        display: table-cell;
+        width: 50%;
+      }
+      .entry-date {
+        position: relative;
+      }
+      .event {
+        padding: 1em 1em 1.6em 1em;
+      }
+    }
+    @media (min-width: 922px) {
+      .entry-image {
+        width: 60%;
+      }
+    }
+    @media (min-width: 1240px) {
+      .entry-image {
+        width: 68%;
+      }
+    }
+  }
+  .intro-card {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ddd;
+    display: table;
+    min-height: 240px;
+    .intro-content {
+      display: table-row;
+      .entry-content {
+        display: block;
+        width: 100%;
+        padding: 1em 1em 1.6em 1em;
+      }
+      .intro-entry {
+        display: table-cell;
+        width: 76%;
+      }
+      .entry-image {
+        display: none;
+      }
+    }
+    @media (min-width: 768px) {
+      .intro-content .intro-entry {
+        width: 50%;
+      }
+      .intro-content .entry-image {
+        display: table-cell;
+        background: #ddd center center;
+        background-size: cover;
+      }
+    }
+    @media (min-width: 922px) {
+      .intro-content .intro-entry {
+        width: 60%;
+      }
+    }
+    @media (min-width: 1240px) {
+      .intro-content .intro-entry {
+        width: 68%;
+      }
+    }
+  }
+}
