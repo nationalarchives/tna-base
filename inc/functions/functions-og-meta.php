@@ -21,7 +21,7 @@ function url_content_exists( $result ) {
 /**
  * Gets the content of a URL via a HTTP request and returns the content.
  *
- * @since 1.0
+ * @since 1.9
  *
  * @param string $url
  *
@@ -48,7 +48,7 @@ function get_content_from_url( $url ) {
 /**
  * Extracts the OG meta data.
  *
- * @since 1.0
+ * @since 1.9
  *
  *
  * @param string $url
