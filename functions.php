@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.10' );
+define( 'EDD_VERSION', '1.11' );
 
 // Add this constant to wp-config.php
 // define( 'TNA_CLOUD', false );
@@ -25,6 +25,8 @@ include 'inc/functions/tiny_mce.php';
 include 'inc/functions/notification-banner.php';
 include 'inc/functions/template-parts.php';
 include 'inc/functions/functions-admin.php';
+include 'inc/functions/functions-og-meta.php';
+include 'inc/functions/functions-portal-landing.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
@@ -44,6 +46,8 @@ add_action( 'save_post', 'sidebar_save' );
 add_action( 'init', 'level_one_meta_boxes' );
 add_action( 'init', 'notification_meta_boxes' );
 add_action( 'admin_menu', 'tna_base_menu' );
+add_action( 'init', 'portal_landing_meta_boxes' );
+add_action( 'save_post', 'portal_landing_get_og_meta_on_save' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );

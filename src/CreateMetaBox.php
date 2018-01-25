@@ -65,12 +65,18 @@ class CreateMetaBox {
 					foreach ( $field['options'] as $option ) {
 						echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? ' checked="checked"' : '', ' />', $option['name'];
 					}
+                    echo ' <p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'checkbox':
 					echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
+                    echo ' <p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'date':
 					echo '<input type="date" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:270px" />',
+					'<br /><p class="howto">', $field['desc'],'</p>';
+					break;
+				case 'datetime':
+					echo '<input type="datetime-local" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:270px" />',
 					'<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'media':

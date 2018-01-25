@@ -1,0 +1,54 @@
+.portal-landing {
+  .banner {
+    margin-bottom: 1.6em;
+    background: #ddd center center;
+    background-size: cover;
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 3px 3px 8px #000;
+      line-height: 1.23;
+      display: inline-block;
+      padding: 3px 7px;
+      background-color: #000;
+      background-color: rgba(0,0,0,.5);
+    }
+    .portal-title h1 {
+      margin: 2em auto;
+    }
+    .portal-branding h1 {
+      margin: 0.3em auto;
+    }
+    .portal-logo img {
+      margin: 0 auto;
+    }
+  }
+  .tna-breadcrumb {
+    margin: 0;
+  }
+  .breadcrumbs {
+    display: inline-block;
+    color: #fff;
+    padding: 3px 7px;
+    background-color: #000;
+    background-color: rgba(0,0,0,.5);
+    a {
+      color: #fce45c;
+    }
+  }
+  .stay-up-to-date-bar {
+    padding: 0.4em 0;
+    background: #2d3b59;
+    color: #fff;
+    img.social-icon {
+      background-color: #008484;
+      border-radius: 50%;
+      padding: 3px;
+      margin: 0 .2em;
+      width: 26px;
+    }
+    a {
+      display: inline-block;
+    }
+  }
+}

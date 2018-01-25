@@ -6,19 +6,19 @@ The National Archives WordPress Parent Theme
 
 ### 1.1 Bootstrap 3.3.6
 
-Mobile first front-end framework [http://getbootstrap.com/] (http://getbootstrap.com/)
+Mobile first front-end framework [http://getbootstrap.com/](http://getbootstrap.com/)
 
 ### 1.2 Sass
 
-Using Bootstrap Sass [https://github.com/twbs/bootstrap-sass] (https://github.com/twbs/bootstrap-sass)
+Using Bootstrap Sass [https://github.com/twbs/bootstrap-sass](https://github.com/twbs/bootstrap-sass)
 
 ### 1.3 Grunt
 
-Grunt as a task manager to aid development [http://gruntjs.com/] (http://gruntjs.com/)
+Grunt as a task manager to aid development [http://gruntjs.com/](http://gruntjs.com/)
 
 ### 1.4 Dimox breadcrumbs
 
-WordPress breadcrumbs without a plugin [https://gist.github.com/Dimox/5654092] (https://gist.github.com/Dimox/5654092)
+WordPress breadcrumbs without a plugin [https://gist.github.com/Dimox/5654092](https://gist.github.com/Dimox/5654092)
 
 ## 2.0 Development setup
 
