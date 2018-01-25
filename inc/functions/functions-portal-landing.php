@@ -322,6 +322,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 		$type = portal_card_label( $url, $label );
 		$date_html = portal_card_date( $date, $type );
 		$target = ( $type == 'Event' ) ? ' target="_blank"' : '';
+		$image = make_path_relative( $image );
 
 		if ( $i == 0 ) {
 			$col_class = 'col-card-12';
