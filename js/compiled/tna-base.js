@@ -11,7 +11,19 @@ $.customEventer = function (passedObject) {
 $.toggleDisplayOfElement = function (toggler, togglee) {
     $(togglee).toggle();
     $(toggler).toggleClass('expanded');
-};;"use strict";
+};
+
+var customizeTweetMedia = function() {
+    jQuery('.entry-content').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('font-size', '1.148em', 'line-height', '1.6em');
+    jQuery('.entry-content').find('.twitter-timeline').contents().find('.timeline-Tweet-text').css('line-height', '1.58em');
+    jQuery('.entry-content').find('.twitter-timeline').contents().find('h1').css('font-size', '1.45em');
+
+}
+
+jQuery('.entry-content').delegate('#twitter-widget-0','DOMSubtreeModified propertychange', function() {
+    customizeTweetMedia();
+});
+;"use strict";
 
 // Creating the home links
 
