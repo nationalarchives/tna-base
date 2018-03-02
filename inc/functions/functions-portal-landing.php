@@ -331,7 +331,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 		} else {
 			$col_class = 'col-card-4';
 			$card_class = 'card';
-			$excerpt = portal_limit_words( $excerpt );
+			$excerpt = portal_limit_words( $excerpt, 32 );
 		}
 
 		$html = '<div class="%s"><div class="%s">
