@@ -51,7 +51,8 @@ function tna_wp_head() {
 function make_content_urls_relative( $content ) {
 	global $cloud;
 	if (!$cloud) {
-		return str_replace( site_url(), '', $content );
+		global $pre_path;
+		return str_replace( site_url(), $pre_path, $content );
 	} else {
 		return $content;
 	}
