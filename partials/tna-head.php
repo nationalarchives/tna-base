@@ -20,18 +20,6 @@
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd"/>
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml"/>
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "url": "http://www.nationalarchives.gov.uk/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "http://www.nationalarchives.gov.uk/search/results?_q={search_term}",
-    "query-input": "required name=search_term"
-  }
-}
-</script>
 <!-- Fav icon -->
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/favicon.ico">
 <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/favicon.ico">
