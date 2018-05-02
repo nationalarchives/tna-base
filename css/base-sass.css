@@ -5652,10 +5652,12 @@ aside {
     background: url(../img/heading-flourish.png) no-repeat bottom left; }
   aside .sidebar-nav {
     background-color: #fff;
-    padding: 20px 0 0 20px; }
+    padding: 20px 0 0 20px;
+    margin-bottom: 1.0em; }
   aside .sidebar-contact {
     background-color: #fff;
-    padding: 20px 0 20px 20px; }
+    padding: 20px 0 20px 20px;
+    margin-bottom: 1.0em; }
   aside .live-chat img {
     max-width: 100%;
     height: auto;
