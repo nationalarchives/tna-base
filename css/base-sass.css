@@ -5626,48 +5626,51 @@ article {
     text-align: center; } }
 
 /* TNA sidebar styles */
-aside {
-  margin-bottom: 1.5em; }
-  aside .sidebar-header {
-    padding: 10px 10px 0 0;
-    background: url(../img/dot-grey.png) #fff; }
-    aside .sidebar-header h2 {
-      padding: 4px 32px 4px 10px;
-      background-color: #405480;
+aside .sidebar-header {
+  padding: 10px 10px 0 0;
+  background: url(../img/dot-grey.png) #fff; }
+  aside .sidebar-header h2 {
+    padding: 4px 32px 4px 10px;
+    background-color: #405480;
+    color: #fff;
+    line-height: 125%;
+    margin: 0 10px 0 -10px;
+    display: inline-block; }
+    aside .sidebar-header h2 a {
       color: #fff;
-      line-height: 125%;
-      margin: 0 10px 0 -10px;
-      display: inline-block; }
-      aside .sidebar-header h2 a {
-        color: #fff;
-        background-image: url(../img/icon-24-heading-link.png);
-        background-repeat: no-repeat;
-        background-position: 100% 50%;
-        padding-right: 32px; }
-  aside .sidebar-header:after {
-    content: ' ';
-    display: block;
-    height: 10px;
-    margin: 0 0 0 -10px;
-    background: url(../img/heading-flourish.png) no-repeat bottom left; }
-  aside .sidebar-nav {
-    background-color: #fff;
-    padding: 20px 0 0 20px;
-    margin-bottom: 1.0em; }
-  aside .sidebar-contact {
-    background-color: #fff;
-    padding: 20px 0 20px 20px;
-    margin-bottom: 1.0em; }
-  aside .live-chat img {
-    max-width: 100%;
-    height: auto;
-    width: 100%; }
-  aside .live-chat div:first-of-type p {
-    margin-bottom: 0.6em; }
-  aside .live-chat div:last-of-type {
-    margin-bottom: 1.5em; }
-  aside .sidebar-item h3 {
-    margin-top: 0; }
+      background-image: url(../img/icon-24-heading-link.png);
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      padding-right: 32px; }
+aside .sidebar-header:after {
+  content: ' ';
+  display: block;
+  height: 10px;
+  margin: 0 0 0 -10px;
+  background: url(../img/heading-flourish.png) no-repeat bottom left; }
+aside .sidebar-nav {
+  background-color: #fff;
+  padding: 20px 0 0 20px;
+  margin-bottom: 1.0em; }
+aside .sidebar-contact {
+  background-color: #fff;
+  padding: 20px 0 20px 20px;
+  margin-bottom: 1.0em; }
+aside .live-chat img {
+  max-width: 100%;
+  height: auto;
+  width: 100%; }
+aside .live-chat div:first-of-type p {
+  margin-bottom: 0.6em; }
+aside .live-chat div:last-of-type {
+  margin-bottom: 1.5em; }
+aside .sidebar-item h3 {
+  margin-top: 0; }
+
+#sidebar > div {
+  margin-bottom: 1.5em; }
+  #sidebar > div:last-of-type {
+    margin-bottom: 0; }
 
 /* TNA print styles */
 @media print {
