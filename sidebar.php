@@ -1,4 +1,9 @@
 <aside id="sidebar" class="col-xs-12 col-sm-4" role="complementary">
+    <!-- resource ratings start -->
+	<?php if (function_exists("display_resource_ratings_tna_base")) {
+		display_resource_ratings_tna_base();
+	} ?>
+    <!-- resource ratings end -->
     <div>
         <div class="sidebar-header">
             <h2>
