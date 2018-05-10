@@ -58,17 +58,18 @@ function wpcodex_add_excerpt_support_for_pages() {
 
 // Get Query String Old URL for THANK YOU newsletter page
 function get_query_string_newsletter_previous_url() {
-	// Declare variables
-	$request_uri = $_SERVER['REQUEST_URI'];
-	$return_url = preg_replace('/.*oldurl=(.*)&result.*/', '$1', $request_uri);
-	$safe_url = filter_var($return_url, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-	$tna_url = "nationalarchives.gov.uk";
-	$valid_tna_url = strpos($request_uri, $tna_url);
+    // Declare variables
+    $request_uri = $_SERVER['REQUEST_URI'];
+    $return_url = preg_replace('/.*oldurl=(.*)&result.*/', '$1', $request_uri);
+    $url_decoded = urldecode($return_url);
+    $safe_url = htmlentities($url_decoded, ENT_QUOTES, 'UTF-8');
+    $tna_url = "nationalarchives.gov.uk";
+    $valid_tna_url = strpos($request_uri, $tna_url);
 
-	// If TNA domain exist in the URL do stuff
-	if ($valid_tna_url !== false) {
-		return sprintf('<a class="button" href="%s">Back to previous page</a>', $safe_url);
-	} else {
-		return sprintf('<a class="button" href="http://www.%s">Back to home page</a>', $tna_url);
-	}
+    // If TNA domain exist in the URL do stuff
+    if ($valid_tna_url !== false) {
+        return sprintf('<a class="button" href="%s">Back to previous page</a>', $safe_url);
+    } else {
+        return sprintf('<a class="button" href="http://www.%s">Back to home page</a>', $tna_url);
+    }
 }
