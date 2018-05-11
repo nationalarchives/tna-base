@@ -5626,6 +5626,8 @@ article {
     text-align: center; } }
 
 /* TNA sidebar styles */
+aside > .sidebar-item-wrapper {
+  margin-bottom: 1.5em; }
 aside .sidebar-header {
   padding: 10px 10px 0 0;
   background: url(../img/dot-grey.png) #fff; }
@@ -5666,11 +5668,6 @@ aside .live-chat div:last-of-type {
   margin-bottom: 1.5em; }
 aside .sidebar-item h3 {
   margin-top: 0; }
-
-#sidebar > div {
-  margin-bottom: 1.5em; }
-  #sidebar > div:last-of-type {
-    margin-bottom: 0; }
 
 /* TNA print styles */
 @media print {

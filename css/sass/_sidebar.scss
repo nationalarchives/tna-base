@@ -1,6 +1,9 @@
 /* TNA sidebar styles */
 
 aside {
+  > .sidebar-item-wrapper {
+    margin-bottom: 1.5em;
+  }
   .sidebar-header {
     padding: 10px 10px 0 0;
     background: url(../img/dot-grey.png) #fff;
@@ -52,13 +55,3 @@ aside {
     margin-top: 0;
   }
 }
-
-#sidebar {
-   > div {
-     margin-bottom: 1.5em;
-
-     &:last-of-type {
-       margin-bottom: 0;
-     }
-   }
- }
