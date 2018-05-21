@@ -21,5 +21,8 @@
                    placeholder="Enter your email address" aria-labelledby="newsletterAccessibility">
             <input id="newsletterSignUp" type="submit" name="Submit" value="Subscribe" class="margin-left-medium">
         </form>
+        <div class="small small-margin"><a href="http://www.nationalarchives.gov.uk/legal/privacy-policy/"
+                                           title="Please read our privacy policy">Please read our
+                privacy policy</a></div>
     </div>
 </div>
