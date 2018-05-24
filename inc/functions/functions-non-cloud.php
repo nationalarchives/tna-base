@@ -16,7 +16,7 @@ function tna_styles_scripts_relative( $content ) {
 // Make template URLs relative
 function make_path_relative( $url ) {
 	global $cloud;
-	if (!$cloud) {
+	if (!$cloud && function_exists('site_url')) {
 		global $pre_path;
 		return str_replace( site_url(), $pre_path, $url );
 	} else {
