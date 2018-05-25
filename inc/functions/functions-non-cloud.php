@@ -33,18 +33,20 @@ function make_path_relative_no_pre_path( $url ) {
 	}
 }
 // Fix URLs in wp_head
-function tna_wp_head() {
-	ob_start();
-	wp_head();
-	$wp_head = ob_get_contents();
-	ob_end_clean();
-	global $pre_path;
-	global $cloud;
-	if (!$cloud) {
-		$protocol = isset($_SERVER["HTTPS"]) ? 'https' : 'http';
-		$wp_head = str_replace( site_url(), $protocol.'://www.nationalarchives.gov.uk' . $pre_path, $wp_head );
+if (!function_exists('tna_wp_head')) {
+	function tna_wp_head() {
+		ob_start();
+		wp_head();
+		$wp_head = ob_get_contents();
+		ob_end_clean();
+		global $pre_path;
+		global $cloud;
+		if ( ! $cloud ) {
+			$protocol = isset( $_SERVER["HTTPS"] ) ? 'https' : 'http';
+			$wp_head  = str_replace( site_url(), $protocol . '://www.nationalarchives.gov.uk' . $pre_path, $wp_head );
+		}
+		echo $wp_head;
 	}
-	echo $wp_head;
 }
 
 // Make content URLs relative
