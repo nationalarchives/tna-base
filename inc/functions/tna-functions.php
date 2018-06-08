@@ -61,11 +61,12 @@ function get_query_string_newsletter_previous_url() {
     // Declare variables
     $request_uri = $_SERVER['REQUEST_URI'];
     $return_url = preg_replace('/.*oldurl=(.*)&result.*/', '$1', $request_uri);
-    $url_decoded = urldecode($return_url);
+    $return_url_second_preg = preg_replace('~.*(?=(http|https)://)~', '', $return_url);
+    $url_decoded = esc_url($return_url_second_preg);
     $safe_url = htmlentities($url_decoded, ENT_QUOTES, 'UTF-8');
+    var_dump($safe_url);
     $tna_url = "nationalarchives.gov.uk";
     $valid_tna_url = strpos($request_uri, $tna_url);
-
     // If TNA domain exist in the URL do stuff
     if ($valid_tna_url !== false) {
         return sprintf('<a class="button" href="%s">Back to previous page</a>', $safe_url);
