@@ -2,9 +2,9 @@
 // Notification banner
 // When enabled, via dashboard banner settings page, displays a notification banner at the top of the page before <header>
 // Utilising WP Settings API (https://codex.wordpress.org/Settings_API)
-
 if ( ! function_exists( 'notification_banner' ) ) :
 	function notification_banner() {
+
 		if ( have_posts() ) {
 			global $post;
 			$enable       = get_option( 'enable_banner' );
@@ -47,20 +47,19 @@ if ( ! function_exists( 'notification_banner' ) ) :
 	}
 endif;
 
-
 // Populates the option page
 function banner_settings_page() {
 	?>
-	<div class="wrap">
-		<h1>Notification banner</h1>
-		<form method="post" action="options.php">
+    <div class="wrap">
+        <h1>Notification banner</h1>
+        <form method="post" action="options.php">
 			<?php
 			settings_fields('section');
 			do_settings_sections('banner-settings');
 			submit_button();
 			?>
-		</form>
-	</div>
+        </form>
+    </div>
 	<?php
 }
 
@@ -72,17 +71,17 @@ function add_banner_menu_item() {
 // Callback functions for form
 function enable_banner_element() {
 	?>
-	<select name="enable_banner" id="enable_banner">
-		<option value="" <?php if ( get_option('enable_banner') == '' ) echo 'selected="selected"'; ?>>Disabled</option>
-		<option value="true" <?php if ( get_option('enable_banner') == 'true' ) echo 'selected="selected"'; ?>>Enabled</option>
-	</select>
+    <select name="enable_banner" id="enable_banner">
+        <option value="" <?php if ( get_option('enable_banner') == '' ) echo 'selected="selected"'; ?>>Disabled</option>
+        <option value="true" <?php if ( get_option('enable_banner') == 'true' ) echo 'selected="selected"'; ?>>Enabled</option>
+    </select>
 	<?php
 }
 
 function banner_title_element() {
 	?>
-	<input type="text" name="banner_title" id="banner_title" value="<?php echo get_option('banner_title'); ?>" />
-	<p>Field required to enable banner</p>
+    <input type="text" name="banner_title" id="banner_title" value="<?php echo get_option('banner_title'); ?>" />
+    <p>Field required to enable banner</p>
 	<?php
 }
 
@@ -110,4 +109,3 @@ function display_banner_panel_fields() {
 	register_setting('section', 'banner_title');
 	register_setting('section', 'banner_text');
 }
-
