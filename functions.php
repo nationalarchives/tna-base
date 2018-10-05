@@ -22,7 +22,8 @@ include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
-include 'inc/functions/notification-banner.php';
+// include 'inc/functions/notification-banner.php'; //only temporary, Do not delete.
+include 'inc/functions/notification-banner-aa.php'; // Temporary - to be deleted.
 include 'inc/functions/template-parts.php';
 include 'inc/functions/functions-admin.php';
 include 'inc/functions/functions-og-meta.php';
