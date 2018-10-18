@@ -1,3 +1,4 @@
+<!-- Start tna head partial -->
 <meta scheme="DCTERMS.URI" content="http://www.nationalarchives.gov.uk/" name="DC.identifier">
 <meta content="The National Archives - <?php wp_title(); ?>" name="DC.title">
 <meta content="http://www.nationalarchives.gov.uk/legal/copyright.htm" name="DC.rights">
@@ -17,9 +18,8 @@
 <link title="The National Archives - latest news" href="/rss/news.xml" type="application/rss+xml" rel="alternate">
 <link title="The National Archives - new Freedom of Information releases" href="/rss/foireleasesnews.xml" type="application/rss+xml" rel="alternate">
 <link title="The National Archives - podcast series" href="/rss/podcasts.xml" type="application/rss+xml" rel="alternate">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd"/>
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml"/>
 
 <!-- Fav icon -->
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/favicon.ico">
 <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/favicon.ico">
+<!-- End tna head partial -->

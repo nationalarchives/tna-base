@@ -64,6 +64,7 @@ add_filter( 'tiny_mce_before_init', 'classes_tinymce' );
 add_filter( 'script_loader_src', 'tna_styles_scripts_relative' );
 add_filter( 'style_loader_src', 'tna_styles_scripts_relative' );
 add_filter( 'the_content', 'make_content_urls_relative' );
+add_filter( 'xmlrpc_enabled', '__return_false' );
 
 // Enable css style inside editor
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
@@ -82,6 +83,7 @@ remove_action( 'wp_head', 'feed_links', 2 );
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'rsd_link' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'rsd_link' );
 
 // Remove REST API
 remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
