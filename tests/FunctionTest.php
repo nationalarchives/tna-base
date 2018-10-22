@@ -58,7 +58,7 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
 
     /*
      *
-     * Temp comment out tests for banner notification 
+     * Temp comment out tests for banner notification
      *
      * public function test_exists_notification_banner()
     {
