@@ -36,8 +36,8 @@ add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 add_action( 'after_setup_theme', 'theme_slug_setup' ); // title tag
 add_action( 'after_setup_theme', 'tna_theme_setup' ); // images
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
-add_action( 'admin_menu', 'add_banner_menu_item' );
-add_action( 'admin_init', 'display_banner_panel_fields' );
+// add_action( 'admin_menu', 'add_banner_menu_item' ); //only temporary, Do not delete.
+// add_action( 'admin_init', 'display_banner_panel_fields' ); //only temporary, Do not delete.
 add_action( 'init', 'add_button' ); // tinymce
 add_action( 'add_meta_boxes', 'myfield_add_custom_box' ); // Metabox for Feature Box
 add_action( 'save_post', 'myfield_save_postdata' ); // Saving the data entered
