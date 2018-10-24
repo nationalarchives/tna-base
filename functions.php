@@ -22,8 +22,7 @@ include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
-// include 'inc/functions/notification-banner.php'; //only temporary, Do not delete.
-include 'inc/functions/notification-banner-aa.php'; // Temporary - to be deleted.
+include 'inc/functions/notification-banner.php';
 include 'inc/functions/template-parts.php';
 include 'inc/functions/functions-admin.php';
 include 'inc/functions/functions-og-meta.php';
@@ -36,8 +35,8 @@ add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 add_action( 'after_setup_theme', 'theme_slug_setup' ); // title tag
 add_action( 'after_setup_theme', 'tna_theme_setup' ); // images
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
-// add_action( 'admin_menu', 'add_banner_menu_item' ); //only temporary, Do not delete.
-// add_action( 'admin_init', 'display_banner_panel_fields' ); //only temporary, Do not delete.
+add_action( 'admin_menu', 'add_banner_menu_item' );
+add_action( 'admin_init', 'display_banner_panel_fields' );
 add_action( 'init', 'add_button' ); // tinymce
 add_action( 'add_meta_boxes', 'myfield_add_custom_box' ); // Metabox for Feature Box
 add_action( 'save_post', 'myfield_save_postdata' ); // Saving the data entered
