@@ -56,11 +56,7 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(function_exists('get_image_caption'));
     }
 
-    /*
-     *
-     * Temp comment out tests for banner notification
-     *
-     * public function test_exists_notification_banner()
+    public function test_exists_notification_banner()
     {
         $this->assertTrue(function_exists('notification_banner'));
     }
@@ -87,7 +83,7 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
     public function test_exists_display_banner_panel_fields()
     {
         $this->assertTrue(function_exists('display_banner_panel_fields'));
-    }*/
+    }
 
     public function test_exists_add_button()
     {
