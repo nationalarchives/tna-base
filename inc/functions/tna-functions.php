@@ -25,7 +25,7 @@ function tna_scripts() {
 		wp_enqueue_script( 'equal-heights' );
 		wp_enqueue_script( 'equal-heights-var' );
 	}
-	wp_register_script( 'aa-survey', get_template_directory_uri() . '/js/aa-survey.js', array(), EDD_VERSION, true );
+	wp_register_script( 'aa-survey', 'https://www.nationalarchives.gov.uk/scripts/aa-popup.js', array(), EDD_VERSION, true );
 	wp_enqueue_script( 'global-jquery' );
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'webtrends' );
