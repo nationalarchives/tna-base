@@ -71,9 +71,9 @@ footer {
   a {
     display:inline-block;
     img {
-      background-color: #fff;
+      background-color: #008484;
       border-radius: 50%;
-      padding: 9px;
+      padding: 6px;
       margin: 0 0.2em 0.3em 0;
       width:46px;
       transition:0.4s ease-in-out;
@@ -87,6 +87,9 @@ footer {
   }
 }
 
+@media(min-width:768px) {
+  .follow-us a img {width:39px;}
+}
 .footer-col{
   padding:0 20px 0 20px;
 
