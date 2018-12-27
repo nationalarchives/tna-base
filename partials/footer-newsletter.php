@@ -5,7 +5,7 @@
 
     <div class="news-content" id="newsletterAccessibility">
         <h2>Sign me up to the mailing list</h2>
-        <p>Subscribe now for regular news, updates and priority booking for events.</p>
+        <p>Subscribe now for regular news, updates and priority booking for events</p>
     </div>
 
     <div class="news-form">
