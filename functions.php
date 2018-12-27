@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.14' );
+define( 'EDD_VERSION', '1.16' );
 
 // Add this constant to wp-config.php
 // define( 'TNA_CLOUD', false );
