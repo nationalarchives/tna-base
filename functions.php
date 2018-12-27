@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '1.14' );
+define( 'EDD_VERSION', '1.16' );
 
 // Add this constant to wp-config.php
 // define( 'TNA_CLOUD', false );
@@ -22,8 +22,7 @@ include 'inc/functions/images.php';
 include 'inc/functions/404-redirect.php';
 include 'inc/functions/image_caption.php';
 include 'inc/functions/tiny_mce.php';
-// include 'inc/functions/notification-banner.php'; //only temporary, Do not delete.
-include 'inc/functions/notification-banner-aa.php'; // Temporary - to be deleted.
+include 'inc/functions/notification-banner.php';
 include 'inc/functions/template-parts.php';
 include 'inc/functions/functions-admin.php';
 include 'inc/functions/functions-og-meta.php';
@@ -64,6 +63,7 @@ add_filter( 'tiny_mce_before_init', 'classes_tinymce' );
 add_filter( 'script_loader_src', 'tna_styles_scripts_relative' );
 add_filter( 'style_loader_src', 'tna_styles_scripts_relative' );
 add_filter( 'the_content', 'make_content_urls_relative' );
+add_filter( 'xmlrpc_enabled', '__return_false' );
 
 // Enable css style inside editor
 add_editor_style( get_template_directory_uri() . '/css/dashboard.css' );
@@ -95,3 +95,8 @@ add_shortcode('newsletter-back-button', 'get_query_string_newsletter_previous_ur
 
 // Set path to mega menu HTML
 set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));
+
+if ( $_SERVER['REQUEST_URI'] == '/xmlrpc.php' || $_SERVER['REQUEST_URI'] == '/xmlrpc.php?rsd' ) {
+	wp_redirect( site_url() );
+	exit;
+}

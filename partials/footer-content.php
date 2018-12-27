@@ -116,6 +116,10 @@
                        target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/facebook.png"
                              alt="Facebook logo"></a>
+                    <a href="https://www.instagram.com/nationalarchivesuk/" title="Follow us on Instagram"
+                       target="_blank">
+                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/instagram.png"
+                             alt="Instagram logo"></a>
                     <a href="http://www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/rss.png" alt="RSS logo"></a>
                 </div>
