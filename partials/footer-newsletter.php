@@ -4,8 +4,8 @@
     </div>
 
     <div class="news-content" id="newsletterAccessibility">
-        <h2>Send me The National Archives’ newsletter</h2>
-        <p>A monthly round-up of news, blogs, offers and events</p>
+        <h2>Sign me up to the mailing list</h2>
+        <p>Subscribe now for regular news, updates and priority booking for events</p>
     </div>
 
     <div class="news-form">
