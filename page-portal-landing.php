@@ -15,6 +15,7 @@ get_header(); ?>
 	$bar          = get_post_meta( $post->ID, 'stay_up_to_date', true );
 	$facebook     = get_post_meta( $post->ID, 'facebook_link', true );
 	$twitter      = get_post_meta( $post->ID, 'twitter_link', true );
+    $instagram    = get_post_meta( $post->ID, 'instagram_link', true );
 	$newsletter   = get_post_meta( $post->ID, 'newsletter_link', true );
 	$intro_img    = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'intro_img', true ) );
 	$class        = $logo ? 'portal-branding' : 'portal-title';
@@ -34,7 +35,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<?php if ($bar == 'Enable') {
-			echo portal_connect_bar( $facebook, $twitter, $newsletter );
+			echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter );
 		} ?>
 	</div>
 	<main id="main" role="main">
