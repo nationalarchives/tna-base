@@ -105,9 +105,10 @@ $.fn.webtrends_click_handler = function () {
 $.fn.append_promotional_image = function () {
     return this.each(function () {
         var $this = $(this);
-        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/first-world-war/" title="First World War 100 - read about our centenary programme"><img src="//www.nationalarchives.gov.uk/images/home/menu-first-world-war-b.jpg" alt="Explore First World War 100" class="img-responsive"></a></li>');
+        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/coldwar/" title="Discover our 2019 Cold War season"><img src="//www.nationalarchives.gov.uk/images/home/menu-cold-war.jpg" alt="Discover our 2019 Cold War season" class="img-responsive tna-img-responsive"></a></li>');
     })
-};;'use strict';
+};
+;'use strict';
 
 // Note:    This is a jQuery plugin and therefore has a dependency on jQuery being
 //          loaded before the script is run
