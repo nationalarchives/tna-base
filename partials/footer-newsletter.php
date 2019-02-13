@@ -9,20 +9,22 @@
     </div>
 
     <div class="news-form">
-        <form name="signup" id="signup" action="https://r1-t.trackedlink.net/signup.ashx" method="post" role="form">
-            <input type="hidden" name="addressbookid" value="636353"> <!-- homepage and general sign up -->
-            <!-- input type="hidden" name="addressbookid" value="732466" --> <!-- first world war portal sign up -->
-            <input type="hidden" name="userid" value="173459">
-            <input type="hidden" name="cd_SOURCE" value="web">
-            <input type="hidden" name="ReturnURL"
-                   value="http://www.nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/">
+        <form name="signup" id="signup" action="https://app.wiredplus.com/form-signup" method="post" role="form">
+
+			<input type="hidden" name="signup" value="NDQ1">
+			<input type="hidden" name="return_url" value="https://www.nationalarchives.gov.uk/notifications/newsletter-thank-you/">
+			<input type="hidden" name="confirmation_subject" value="">
+			<input type="hidden" name="confirmation" value="">
+			<input type="hidden" name="list" value="3">
+			<input type="hidden" name="source" value="web">
+			<input type="hidden" name="opt_in" value="1">
+
             <label for="Email">Send me The National Archives’ newsletter</label>
-            <input type="email" name="Email" id="Email" required="required"
+            <input type="email" name="email" id="email" required="required"
                    placeholder="Enter your email address" aria-labelledby="newsletterAccessibility">
-            <input id="newsletterSignUp" type="submit" name="Submit" value="Subscribe" class="margin-left-medium">
+            <input id="newsletterSignUp" type="submit" name="Submit" value="Submit" class="margin-left-medium">
         </form>
         <div class="small small-margin"><a href="http://www.nationalarchives.gov.uk/legal/privacy-policy/"
-                                           title="About our privacy policy">About our
-                privacy policy</a></div>
+                                           title="About our privacy policy">About our privacy policy</a></div>
     </div>
 </div>
