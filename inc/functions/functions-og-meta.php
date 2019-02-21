@@ -85,7 +85,7 @@ function get_og_meta( $url ) {
 				}
 
 				if ( $meta->getAttribute( 'property' ) == 'og:image' ) {
-					$data['img'][ $i ] = $meta->getAttribute( 'content' );
+					$data['img'] = $meta->getAttribute( 'content' );
 				}
 
 				if ( strpos( $url, 'eventbrite' ) !== false ) {
