@@ -216,7 +216,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 						$_POST[ 'portal_card_excerpt_' . $i ] = esc_attr( $og['description'] );
 					}
 					if ( trim( $data[ 'portal_card_img_' . $i ] ) == '' ) {
-						$_POST[ 'portal_card_img_' . $i ] = esc_attr( $og['img'][0] );
+						$_POST[ 'portal_card_img_' . $i ] = esc_attr( $og['img']);
 					}
 					if ( strpos( $data[ 'portal_card_url_' . $i ], 'eventbrite' ) !== false ) {
 						if ( trim( $data[ 'portal_card_date_' . $i ] ) == '' ) {
