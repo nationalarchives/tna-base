@@ -18,9 +18,22 @@
 				</p>
 			</div>
 			<div class="col-xs-4 col-sm-6 col-md-4">
-				<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
-				<div id="ciEvtM"></div><div id="scEvtM"></div><div id="sdEvtM"></div><script type="text/javascript">var seEvtM=document.createElement("script");seEvtM.type="text/javascript";var seEvtMs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/0or0ihkh4hylp1qnz87w7c01gr/safe-standard.js?ps_h=EvtM&ps_t="+new Date().getTime();setTimeout("seEvtM.src=seEvtMs;document.getElementById('sdEvtM').appendChild(seEvtM)",1)</script><noscript><a href="http://www.providesupport.com?messenger=0or0ihkh4hylp1qnz87w7c01gr">Live Help Desk</a></noscript>
-				<!-- END ProvideSupport.com Graphics Chat Button Code -->
+<div data-id="ePKP7MjW_D4" class="livechat_button"><a href="/contact-us/">live chat software</a></div>
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+window.__lc = window.__lc || {};
+window.__lc.license = 10565762;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<noscript>
+<a href="https://www.livechatinc.com/chat-with/10565762/" rel="nofollow">Chat with us</a>,
+powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
 			</div>
 		</div>
 		<div class="phone sidebar-item">
