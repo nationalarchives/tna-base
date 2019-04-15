@@ -100,7 +100,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			} else {
 				include 'inc/content/mega-menu.php';
 			}
-		}
+		} else {
+            get_template_part( 'inc/content/mega-menu' );
+        }
 		?>
 	</div>
 </nav>

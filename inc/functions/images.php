@@ -84,7 +84,7 @@ function content_image_sizes_attr($sizes, $size) {
 
 function get_feature_image_url( $id, $size, $background = false ) {
 
-	if ( has_post_thumbnail() ) {
+	if ( has_post_thumbnail( $id ) ) {
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), $size );
 	} else {
 		$image[0] = '';

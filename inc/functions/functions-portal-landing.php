@@ -69,6 +69,13 @@ function portal_landing_meta_boxes() {
 					'type' => 'text',
 					'std' => ''
 				),
+                array(
+                    'name' => 'Instagram link',
+                    'desc' => '',
+                    'id' => 'instagram_link',
+                    'type' => 'text',
+                    'std' => ''
+                ),
 				array(
 					'name' => 'Newsletter anchor link',
 					'desc' => '',
@@ -209,7 +216,7 @@ function portal_landing_get_og_meta_on_save( $post_id ) {
 						$_POST[ 'portal_card_excerpt_' . $i ] = esc_attr( $og['description'] );
 					}
 					if ( trim( $data[ 'portal_card_img_' . $i ] ) == '' ) {
-						$_POST[ 'portal_card_img_' . $i ] = esc_attr( $og['img'][0] );
+						$_POST[ 'portal_card_img_' . $i ] = esc_attr( $og['img']);
 					}
 					if ( strpos( $data[ 'portal_card_url_' . $i ], 'eventbrite' ) !== false ) {
 						if ( trim( $data[ 'portal_card_date_' . $i ] ) == '' ) {
@@ -322,7 +329,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 		$type = portal_card_label( $url, $label );
 		$date_html = portal_card_date( $date, $type );
 		$target = ( $type == 'Event' ) ? ' target="_blank"' : '';
-		$image = make_path_relative( $image );
+		$image = make_path_relative_no_pre_path( $image );
 
 		if ( $i == 0 ) {
 			$col_class = 'col-card-12';
@@ -370,7 +377,7 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
  *
  * @return string
  */
-function portal_connect_bar( $facebook='', $twitter='', $newsletter='Disable' ) {
+function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='' ) {
 
 	if ( $facebook ) {
 		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/facebook.png" alt="Follow us on Facebook" class="social-icon"></a>';
@@ -378,9 +385,14 @@ function portal_connect_bar( $facebook='', $twitter='', $newsletter='Disable' ) 
 	if ( $twitter ) {
 		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/twitter.png" alt="Follow us on Twitter" class="social-icon"></a>';
 	}
+    if ( $insatgram ) {
+        $insatgram = '<a href="'.$insatgram.'" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/instagram.png" alt="Follow us on Instagram" class="social-icon"></a>';
+    }
 	if ( $newsletter=='Enable' ) {
 		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><img src="/wp-content/themes/tna-base/img/social/envelope.png" alt="Send me The National Archives’ newsletter" class="social-icon"></a>';
-	}
+	} else {
+        $newsletter = '';
+    }
 
 	$html =     '<div class="stay-up-to-date-bar">
 					<div class="container">
@@ -388,7 +400,7 @@ function portal_connect_bar( $facebook='', $twitter='', $newsletter='Disable' ) 
 							<div class="col-md-12">
 								<div class="text-center">
 									<span>Stay up-to-date with all our activity:</span> '
-									.$facebook.$twitter.$newsletter.
+									.$facebook.$twitter.$insatgram.$newsletter.
 								'</div>
 							</div>
 						</div>

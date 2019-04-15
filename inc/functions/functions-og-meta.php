@@ -73,7 +73,6 @@ function get_og_meta( $url ) {
 			$data['img']            = '';
 			$data['start_datetime'] = '';
 			$data['end_datetime']   = '';
-			$i                      = 0;
 
 			foreach ( $html->getElementsByTagName( 'meta' ) as $meta ) {
 
@@ -86,8 +85,7 @@ function get_og_meta( $url ) {
 				}
 
 				if ( $meta->getAttribute( 'property' ) == 'og:image' ) {
-					$data['img'][ $i ] = $meta->getAttribute( 'content' );
-					$i ++;
+					$data['img'] = $meta->getAttribute( 'content' );
 				}
 
 				if ( strpos( $url, 'eventbrite' ) !== false ) {
