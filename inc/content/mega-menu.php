@@ -24,7 +24,7 @@
         </ul></li>
     <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research" class="toggle-sub-menu">Help with your research</a>
         <ul class="sub-menu"><li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/help-with-your-research">Help with your research home</a></li>
-            <li><a data-gtm="mega-menu" href="http://discovery.nationalarchives.gov.uk/">Search Discovery, our catalogue</a></li>
+            <li><a data-gtm="mega-menu" href="https://discovery.nationalarchives.gov.uk/">Search Discovery, our catalogue</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research/start-here/">Start your research here</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides-keywords/">Research guides A-Z</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/?research-category=online">Online collections</a></li>
