@@ -120,7 +120,7 @@
                        target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/instagram.png"
                              alt="Instagram logo"></a>
-                    <a href="http://www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
+                    <a href="https://www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/rss.png" alt="RSS logo"></a>
                 </div>
             </div>
@@ -147,11 +147,11 @@
 <div class="row footer-base">
     <div class="col-xs-12 col-sm-9 col-md-9 ogl">
         <a title="External website - opens in a new window"
-           href="http://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img
+           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img
                     alt="Open Government License logo"
                     src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png">
         </a>
-        <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/">Open
+        <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/">Open
                 Government Licence v3.0</a>, <br>except where otherwise stated </p>
     </div>
     <div class="col-xs-12 col-sm-3 col-md-3 text-right">

@@ -22,7 +22,7 @@ class PortalLandingTest extends PHPUnit_Framework_TestCase
     }
     public function test_portal_card_label_returns()
     {
-        $url = 'http://www.nationalarchives.gov.uk/about/news/booking-now-open-for-the-gerald-aylmer-seminar-2018/';
+        $url = 'https://www.nationalarchives.gov.uk/about/news/booking-now-open-for-the-gerald-aylmer-seminar-2018/';
         $label = 'Auto';
         $returns = portal_card_label( $url, $label );
         $this->assertEquals($returns, 'News');
@@ -56,7 +56,7 @@ class PortalLandingTest extends PHPUnit_Framework_TestCase
     public function test_portal_display_card_returns()
     {
         $html = '<div class="col-card-4"><div class="card">
-					<a id="card-7" href="http://www.nationalarchives.gov.uk/about/news/" class="portal-card">
+					<a id="card-7" href="https://www.nationalarchives.gov.uk/about/news/" class="portal-card">
 						<div class="entry-image" style="background-image: url(image.jpg)"></div>
 						<div class="entry-content news">
 							<div class="content-type">News</div>
@@ -66,7 +66,7 @@ class PortalLandingTest extends PHPUnit_Framework_TestCase
 					</a>
 				</div></div>';
         $i = 7;
-        $url = 'http://www.nationalarchives.gov.uk/about/news/';
+        $url = 'https://www.nationalarchives.gov.uk/about/news/';
         $title = 'Booking now open for the Gerald Aylmer Seminar 2018';
         $excerpt = 'Diversity and inclusive histories are the focus of this year\'s seminar';
         $image = 'image.jpg';
