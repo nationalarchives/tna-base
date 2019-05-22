@@ -31,7 +31,7 @@ class TNAGlobalsTest extends PHPUnit_Framework_TestCase
 
     public function test_check_for_specific_url_path()
     {
-        $urls = ["http://nationalarchives.gov.uk/contact-us"];
+        $urls = ["https://nationalarchives.gov.uk/contact-us"];
         foreach ($urls as $url) {
             $this->assertNotEquals(check_for_specific_url_path($url), -1);
         }
