@@ -264,7 +264,7 @@ $(document).ready(function () {
         }
         else if (this.value == 'search_records') {
             //Changes the form action url
-            $('form').attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
+            $('form').attr('action', 'https://discovery.nationalarchives.gov.uk/SearchUI/s/res');
             //changes name attribute
             $('#mobileGlobalSearch input[name="QueryText"]').attr('name', '_q');
             //changes the placeholder
