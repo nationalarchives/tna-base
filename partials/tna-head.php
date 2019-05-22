@@ -1,7 +1,7 @@
 <!-- Start tna head partial -->
-<meta scheme="DCTERMS.URI" content="http://www.nationalarchives.gov.uk/" name="DC.identifier">
+<meta scheme="DCTERMS.URI" content="https://www.nationalarchives.gov.uk/" name="DC.identifier">
 <meta content="The National Archives - <?php wp_title(); ?>" name="DC.title">
-<meta content="http://www.nationalarchives.gov.uk/legal/copyright.htm" name="DC.rights">
+<meta content="https://www.nationalarchives.gov.uk/legal/copyright.htm" name="DC.rights">
 <meta content="The National Archives" name="DC.publisher">
 <meta content="The National Archives" name="DC.creator">
 <meta content="en-GB" name="DC.language">
