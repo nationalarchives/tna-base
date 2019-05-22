@@ -65,7 +65,7 @@
             <div class="footer-col col-xs-12 col-sm-6 col-md-6">
                 <h4>Websites</h4>
                 <ul>
-                    <li><a href="http://blog.nationalarchives.gov.uk/">Blog</a></li>
+                    <li><a href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
                     <li><a href="http://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
                     <li><a href="https://bookshop.nationalarchives.gov.uk/">Bookshop</a></li>
                     <li><a href="https://images.nationalarchives.gov.uk/">Image library</a></li>
