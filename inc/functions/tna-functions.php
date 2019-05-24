@@ -70,6 +70,6 @@ function get_query_string_newsletter_previous_url() {
     if ($valid_tna_url !== false) {
         return sprintf('<a class="button" href="%s">Back to previous page</a>', $safe_url);
     } else {
-        return sprintf('<a class="button" href="http://www.%s">Back to home page</a>', $tna_url);
+        return sprintf('<a class="button" href="https://www.%s">Back to home page</a>', $tna_url);
     }
 }
