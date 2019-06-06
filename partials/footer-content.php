@@ -8,7 +8,6 @@
                     Kew, Richmond, Surrey,<br/>
                     TW9 4DU
                 </address>
-                Tel: <a class="tel" href="tel:+4402088763444">+44 (0) 20 8876 3444</a>
             </div>
             <div class="footer-col col-xs-12 col-sm-6 col-md-12 col-lg-12">
                 <h4>Standard opening times</h4>
