@@ -36,18 +36,6 @@ powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow
 <!-- End of LiveChat code -->
 			</div>
 		</div>
-		<div class="phone sidebar-item">
-			<div class="col-xs-8 col-sm-12 col-md-8">
-				<h3>Phone</h3>
-				<p>+44 (0) 20 8876 3444<br/>
-				<a href="/contact-us/#phone">Opening times</a></p>
-			</div>
-			<div class="col-xs-4 col-sm-6 col-md-4">
-				<p>
-					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/icon-128-phone.png" alt="Phone us" class="img-responsive">
-				</p>
-			</div>
-		</div>
 		<div class="postal sidebar-item">
 			<div class="col-xs-8 col-sm-12 col-md-8">
 				<h3>Post</h3>
