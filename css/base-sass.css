@@ -5294,14 +5294,16 @@ header {
       display: none; } }
   header #mobile-logo-holder a {
     display: block; }
+  @media (max-width: 320px) {
+    header #mobile-logo-holder img {
+      margin-top: 7px; } }
+  @media (min-width: 321px) and (max-width: 479px) {
+    header #mobile-logo-holder img {
+      margin-top: 5px; } }
   @media (min-width: 480px) {
     header #mobile-logo-holder img {
-      margin: 0 auto; } }
-  @media (max-width: 480px) {
-    header #mobile-logo-holder img {
       margin-right: auto;
-      margin-left: auto;
-      max-width: 83%; } }
+      margin-left: auto; } }
   header .search-expander,
   header .search-close {
     height: 2.7em;

@@ -126,13 +126,17 @@ header {
       display: block;
     }
     img {
-      @media (min-width: 480px) {
-        margin: 0 auto;
+      @media (max-width: 320px) {
+        margin-top: 7px;
       }
-      @media (max-width: 480px) {
+
+      @media (min-width: 321px) and (max-width: 479px) {
+        margin-top: 5px;
+      }
+
+      @media (min-width: 480px) {
         margin-right: auto;
         margin-left: auto;
-        max-width: 83%;
       }
     }
   }
