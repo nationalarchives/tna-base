@@ -86,3 +86,9 @@ composer.phar
 # composer.lock
 
 package-lock.json
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride

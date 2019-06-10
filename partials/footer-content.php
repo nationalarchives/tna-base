@@ -2,12 +2,12 @@
     <div class="footer-col col-xs-12 col-sm-12 col-md-3 col-lg-3">
         <div class="row">
             <div class="footer-col col-xs-12 col-sm-6 col-md-12 col-lg-12">
+            <img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-square-white-logo.png" srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-square-white-logo.svg" alt="The National Archives"  class="img-responsive square-logo">
                 <address>
                     The National Archives<br/>
                     Kew, Richmond, Surrey,<br/>
                     TW9 4DU
                 </address>
-                Tel: <a class="tel" href="tel:+4402088763444">+44 (0) 20 8876 3444</a>
             </div>
             <div class="footer-col col-xs-12 col-sm-6 col-md-12 col-lg-12">
                 <h4>Standard opening times</h4>

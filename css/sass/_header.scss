@@ -2,9 +2,9 @@
 header {
   background-color: $tna_dark;
   color: $tna_white;
-  padding: 0.7em 0 7px 0;
+  padding: 0.7em 0 11px 0;
   #search-field-wrapper {
-    input[type="text"] {
+    input[type='text'] {
       position: absolute;
       top: 0;
       right: 55px;
@@ -12,13 +12,13 @@ header {
       height: 40px;
       color: $tna_dark;
     }
-    input[type="submit"] {
+    input[type='submit'] {
       position: absolute;
       right: 15px;
       right: 15px;
       width: 40px;
       height: 40px;
-      background-image: url("../img/search-white.png");
+      background-image: url('../img/search-white.png');
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -39,7 +39,7 @@ header {
           padding: 0.5em;
           display: block;
           &:hover {
-            background-color: #FCE45C;
+            background-color: #fce45c;
             color: $tna_dark;
           }
         }
@@ -126,17 +126,23 @@ header {
       display: block;
     }
     img {
-      @media (min-width: 480px) {
-        margin: 0 auto;
+      @media (max-width: 320px) {
+        margin-top: 7px;
       }
-      @media (max-width: 480px) {
-          margin-right: auto;
-          margin-left: auto;
-          max-width: 83%;
+
+      @media (min-width: 321px) and (max-width: 479px) {
+        margin-top: 5px;
+      }
+
+      @media (min-width: 480px) {
+        margin-right: auto;
+        margin-left: auto;
+        width: 300px;
       }
     }
   }
-  .search-expander, .search-close {
+  .search-expander,
+  .search-close {
     height: 2.7em;
     width: 40px;
     background: $tna_search_white;
@@ -168,38 +174,42 @@ header {
     }
   }
   @-webkit-keyframes subtle-bounce {
-    0%, 100% {
-      background-position: 50% 100%
+    0%,
+    100% {
+      background-position: 50% 100%;
     }
     50% {
-      background-position: 50% 110%
+      background-position: 50% 110%;
     }
   }
   @-moz-keyframes subtle-bounce {
-    0%, 100% {
-      background-position: 50% 100%
+    0%,
+    100% {
+      background-position: 50% 100%;
     }
     50% {
-      background-position: 50% 110%
+      background-position: 50% 110%;
     }
   }
   @-o-keyframes subtle-bounce {
-    0%, 100% {
-      background-position: 50% 100%
+    0%,
+    100% {
+      background-position: 50% 100%;
     }
     50% {
-      background-position: 50% 110%
+      background-position: 50% 110%;
     }
   }
   @keyframes subtle-bounce {
-    0%, 100% {
-      background-position: 50% 100%
+    0%,
+    100% {
+      background-position: 50% 100%;
     }
     50% {
-      background-position: 50% 110%
+      background-position: 50% 110%;
     }
   }
-  #mobile-search-wrapper input[type="submit"] {
+  #mobile-search-wrapper input[type='submit'] {
     position: absolute;
     right: 0;
     width: 40px;
@@ -228,7 +238,7 @@ header {
     float: right;
     max-width: 331px;
     margin-right: 1em;
-    input[type="text"] {
+    input[type='text'] {
       min-width: 70%;
     }
   }
@@ -243,6 +253,14 @@ header {
   #skip-to-main-content {
     position: absolute;
     top: -30px;
+  }
+  .visible-lg {
+    img {
+      max-width: 347px;
+    }
+  }
+  #search-field-wrapper {
+    margin-top: 4px;
   }
 }
 
@@ -260,7 +278,6 @@ header {
       text-transform: uppercase;
       padding: 0 0.4em;
       margin-right: 1em;
-
     }
   }
 }
