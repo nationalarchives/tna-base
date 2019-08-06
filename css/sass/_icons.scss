@@ -1,4 +1,4 @@
-/* TNA icon styles */
+/* TNA old icon styles */
 
 .sprite {
   background-image: url("../img/icons-compressed.png");
@@ -54,4 +54,70 @@
 }
 .icon-flickr:hover {
   background-position: -320px 40px;
+}
+
+/* NEW */
+
+.icon {
+  display: inline-block;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 .2em .3em 0;
+}
+.icon-circle {
+  display: inline-block;
+  background-color: #000;
+  background-size: 68% 68%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: 0 .2em .3em 0;
+  transition: .4s ease-in-out;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+}
+.icon-size-26 {
+  background-size: 78% 78%;
+  width: 26px;
+  height: 26px;
+}
+.icon-size-32 {
+  background-size: 78% 78%;
+  width: 32px;
+  height: 32px;
+}
+.icon-size-64 {
+  background-size: 68% 68%;
+  width: 64px;
+  height: 64px;
+}
+.icon-facebook {
+  background-image: $tna_icon_facebook;
+}
+.icon-twitter {
+  background-image: $tna_icon_twitter;
+}
+.icon-youtube {
+  background-image: $tna_icon_youtube;
+}
+.icon-flickr {
+  background-image: $tna_icon_flickr;
+}
+.icon-rss {
+  background-image: $tna_icon_rss;
+}
+.icon-envelope {
+  background-image: $tna_icon_envelope;
+}
+.icon-audio {
+  background-image: $tna_icon_audio;
+}
+.icon-video {
+  background-image: $tna_icon_video;
+}
+.icon-info {
+  background-image: $tna_icon_info;
 }
