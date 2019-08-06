@@ -44,7 +44,7 @@ p {
   margin: 0 0 1.5em;
 }
 
-a:active, a:link, a:visited {
+a, a:active, a:visited {
   color: $tna_link_col;
   text-decoration: none;
 }
