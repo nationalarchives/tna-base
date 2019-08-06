@@ -4582,75 +4582,13 @@ table td {
   font-size: .9em;
   line-height: 1.6; }
 
-/* TNA fonts */
-/* TNA colours */
-/* TNA Icons/Images */
+/* TNA old colours */
+/* TNA old Icons/Images */
 /* NEW */
 /* TNA fonts */
 /* TNA colours */
 /* TNA Icons/Images */
 /* TNA global styles */
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  background-color: #eee;
-  line-height: 1.6; }
-
-h1, h2, h3, h4 {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 400;
-  z-index: 2;
-  line-height: 1.6;
-  letter-spacing: -.025em; }
-
-h1 {
-  font-size: 2em; }
-
-h2 {
-  font-size: 1.6em; }
-
-h3 {
-  font-size: 1.3em; }
-
-h4 {
-  font-size: 1.16em; }
-
-p {
-  margin: 0 0 1.5em; }
-
-a, a:active, a:visited {
-  color: #2A5DB0;
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
-
-a:focus {
-  background-color: #fce45c;
-  outline: 3px solid #ebab00;
-  color: #222 !important; }
-
-hr {
-  height: 0;
-  border: 0;
-  margin: 1em 0;
-  clear: both;
-  width: 100%;
-  border-bottom: 1px solid #ECECEC; }
-
-.breather-top {
-  padding-top: 1em; }
-
-.breather-bottom {
-  padding-bottom: 1em; }
-
-.breather-top-bottom {
-  padding-top: 1em;
-  padding-bottom: 1em; }
-
-.breather {
-  padding: 1em; }
-
 #goTop {
   height: 40px;
   width: 40px;
@@ -4891,6 +4829,93 @@ ul.form-selectable li span input[type=checkbox] {
 
   ul.triplets li {
     width: 33%; } }
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6; }
+  body h1, body h2, body h3, body h4 {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    z-index: 2;
+    line-height: 1.6;
+    letter-spacing: -.025em; }
+  body h1 {
+    font-size: 2.4em; }
+  body h2 {
+    font-size: 1.6em; }
+  body h3 {
+    font-size: 1.3em; }
+  body h4 {
+    font-size: 1.16em; }
+  body p {
+    margin: 0 0 1.6em; }
+  body ul {
+    margin-bottom: 1.6em; }
+  body ul.no-bullet {
+    list-style-type: none;
+    padding: 0; }
+  body ul.sibling {
+    list-style-type: none;
+    padding: 0; }
+  body ul.child {
+    list-style-type: none;
+    padding: 0; }
+  body ul.documents li, body ul.urls li {
+    margin-bottom: 0.5em; }
+  body ul.documents a, body ul.urls a {
+    display: block; }
+  body ul#menu-disc {
+    padding: 0; }
+    body ul#menu-disc li {
+      list-style-type: none;
+      margin: 0 4px 4px 0;
+      display: inline-block; }
+      body ul#menu-disc li a {
+        display: block;
+        color: #fff;
+        background-color: #000;
+        text-align: center;
+        border: 2px solid #000;
+        font-size: 1.25em;
+        line-height: 44px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%; }
+      body ul#menu-disc li a:hover {
+        background-color: #fff;
+        color: #000; }
+  body hr {
+    height: 0;
+    border: 0;
+    margin: 1em 0;
+    clear: both;
+    width: 100%;
+    border-bottom: 2px solid #000; }
+  body pre {
+    display: block;
+    padding: 1.6em;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.428571429;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 0; }
+
+a, a:active, a:visited {
+  color: #2A5DB0;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:focus {
+  background-color: #fce45c;
+  outline: 3px solid #ebab00;
+  color: #222 !important; }
+
 /* TNA form styles */
 fieldset {
   border: 1px solid #ccc !important;

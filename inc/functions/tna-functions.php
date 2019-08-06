@@ -7,7 +7,7 @@
 function tna_styles() {
 	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.min.css', array(), EDD_VERSION, 'all' );
 	wp_register_style( 'tna-google-fonts',
-		'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Bitter', '', '', 'all' );
+		'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Roboto+Mono:400,700&display=swap', '', '', 'all' );
 	wp_enqueue_style( 'tna-styles' );
 	wp_enqueue_style( 'tna-google-fonts' );
 }
