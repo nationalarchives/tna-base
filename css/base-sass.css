@@ -4917,169 +4917,173 @@ a:focus {
   color: #222 !important; }
 
 /* TNA form styles */
-fieldset {
-  border: 1px solid #ccc !important;
-  padding: 1em !important;
-  margin-bottom: 2em !important; }
-
-legend {
-  font-family: "Bitter", "Open Sans", arial, serif;
-  font-size: 1.6em !important;
-  margin-bottom: 10px !important;
-  width: auto !important;
-  padding: 0 0.5em !important; }
-
-label {
-  font-weight: 400; }
-
-input[type="submit"] {
-  background-color: #008484;
+form fieldset {
+  padding: 0;
+  margin-bottom: 2.4em; }
+form legend {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.6em;
+  margin-bottom: 0.6em;
+  width: auto;
+  padding: 0; }
+form label {
+  font-family: "Roboto Mono", monospace; }
+form input[type="submit"] {
+  font-family: "Roboto Mono", monospace;
+  background-color: #000;
   color: #fff;
-  padding: 0.3em .5em;
-  border: 0;
-  height: 40px;
-  /*this height must match the standalone button class for single field forms */
+  border: 2px solid #000;
+  padding: 0.5em 0.9em;
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
   margin: 0; }
-
-input[type=text],
-input[type=url],
-input[type=tel],
-input[type=number],
-input[type=color],
-input[type=email],
-input.width-half,
-#Email {
-  border: 1px solid #ccc;
-  padding: 2px;
-  height: 34px;
+form input[type=text],
+form input[type=url],
+form input[type=tel],
+form input[type=number],
+form input[type=color],
+form input[type=email],
+form input[type=date],
+form input.width-half {
+  border: 2px solid #000;
+  padding: 0.6em;
   text-indent: 5px;
   min-width: 220px;
   width: auto; }
-
-textarea {
-  border: 1px solid #ccc;
-  padding: 5px; }
-
-select {
-  border: 1px solid #ccc; }
-
-input:focus,
-input[type=radio]:focus,
-input[type=checkbox]:focus,
-textarea:focus,
-select:focus {
-  outline: 3px solid #ebab00; }
-
-input[type="submit"]:focus,
-a.button:focus {
-  color: #fff;
-  background-color: #111;
-  background-color: rgba(0, 0, 0, 0.75); }
-
-input[type="submit"]:hover,
-a.button:hover {
-  color: #222;
-  background-color: #fce45c; }
-
-.checkbox input[type=checkbox],
-.checkbox-inline input[type=checkbox],
-.radio input[type=radio],
-.radio-inline input[type=radio] {
-  margin-left: 0 !important; }
-
-.checkbox label,
-.radio label {
-  padding-left: 38px !important; }
-
-.checkbox .form-error,
-.radio .form-error {
-  margin-left: 38px !important;
-  padding-left: 0.5em; }
-
-.form-row {
-  max-width: 92%;
-  margin: 0 auto;
-  margin-bottom: 1.5em !important; }
-  .form-row:before, .form-row:after {
+form textarea {
+  border: 2px solid #000;
+  padding: 0.6em; }
+form select {
+  border: 2px solid #000;
+  height: 2.4em; }
+form input:focus,
+form input[type=radio]:focus,
+form input[type=checkbox]:focus,
+form input[type="submit"]:focus,
+form textarea:focus,
+form select:focus {
+  outline: 3px solid #fbe2bc; }
+form .form-row {
+  max-width: 100%;
+  margin-bottom: 1.6em; }
+  form .form-row:before, form .form-row:after {
     display: table;
     content: " ";
     clear: both; }
-  .form-row label {
-    width: 100% !important;
-    margin-right: 0 !important; }
-  .form-row input[type=color],
-  .form-row input[type=email],
-  .form-row input[type=number],
-  .form-row input[type=tel],
-  .form-row input[type=text],
-  .form-row input[type=date],
-  .form-row input[type=url],
-  .form-row select,
-  .form-row textarea {
-    width: 100% !important;
-    max-width: 420px; }
-    .form-row input[type=color]:disabled,
-    .form-row input[type=email]:disabled,
-    .form-row input[type=number]:disabled,
-    .form-row input[type=tel]:disabled,
-    .form-row input[type=text]:disabled,
-    .form-row input[type=date]:disabled,
-    .form-row input[type=url]:disabled,
-    .form-row select:disabled,
-    .form-row textarea:disabled {
+  form .form-row label {
+    width: 100%;
+    margin-right: 0; }
+  form .form-row.checkbox label {
+    width: auto; }
+  form .form-row input[type=color],
+  form .form-row input[type=email],
+  form .form-row input[type=number],
+  form .form-row input[type=tel],
+  form .form-row input[type=text],
+  form .form-row input[type=date],
+  form .form-row input[type=url],
+  form .form-row select,
+  form .form-row textarea {
+    width: 100%;
+    max-width: 480px; }
+    form .form-row input[type=color]:disabled,
+    form .form-row input[type=email]:disabled,
+    form .form-row input[type=number]:disabled,
+    form .form-row input[type=tel]:disabled,
+    form .form-row input[type=text]:disabled,
+    form .form-row input[type=date]:disabled,
+    form .form-row input[type=url]:disabled,
+    form .form-row select:disabled,
+    form .form-row textarea:disabled {
       background: #eee; }
-    .form-row input[type=color]:read-only,
-    .form-row input[type=email]:read-only,
-    .form-row input[type=number]:read-only,
-    .form-row input[type=tel]:read-only,
-    .form-row input[type=text]:read-only,
-    .form-row input[type=date]:read-only,
-    .form-row input[type=url]:read-only,
-    .form-row select:read-only,
-    .form-row textarea:read-only {
+    form .form-row input[type=color]:read-only,
+    form .form-row input[type=email]:read-only,
+    form .form-row input[type=number]:read-only,
+    form .form-row input[type=tel]:read-only,
+    form .form-row input[type=text]:read-only,
+    form .form-row input[type=date]:read-only,
+    form .form-row input[type=url]:read-only,
+    form .form-row select:read-only,
+    form .form-row textarea:read-only {
       background: #eee; }
-  .form-row textarea {
-    height: 120px; }
-  .form-row input[type="submit"] {
+  form .form-row textarea {
+    min-height: 120px; }
+  form .form-row select {
+    -webkit-border-radius: 0;
+    border: 0;
+    outline: 2px solid #000;
+    outline-offset: -1px; }
+  form .form-row .button-right {
     float: right; }
-  .form-row p {
+  form .form-row p {
     margin-bottom: 5px; }
-  .form-row .button {
-    float: right; }
-  .form-row .form-hint {
+  form .form-row .form-hint {
     color: #6f777b; }
-  .form-row .optional {
+  form .form-row .optional {
     color: #6f777b; }
-  .form-row .form-error {
+  form .form-row .form-error {
     color: #000;
     width: 100%;
     max-width: 420px;
     display: block;
     padding: 3px;
     background: #FFF8D0; }
-    .form-row .form-error span {
+    form .form-row .form-error span {
       font-size: 1.6em; }
-  .form-row .form-warning {
-    border: 2px solid #EBAB2C !important; }
-
-@media (max-width: 768px) {
-  .form-row {
-    max-width: 100%;
-    width: 100%; }
-    .form-row label {
-      width: 100%;
-      margin-right: 0; }
-    .form-row input[type=text],
-    .form-row input[type=url],
-    .form-row input[type=tel],
-    .form-row input[type=number],
-    .form-row input[type=color],
-    .form-row input[type=email],
-    .form-row textarea,
-    .form-row select {
+  form .form-row .form-warning {
+    border: 2px solid #EBAB2C; }
+  @media (max-width: 768px) {
+    form .form-row {
+      max-width: 100%;
       width: 100%; }
-    .form-row input[type="submit"] {
-      float: none; } }
+      form .form-row label {
+        width: 100%;
+        margin-right: 0; }
+      form .form-row input[type=text],
+      form .form-row input[type=url],
+      form .form-row input[type=tel],
+      form .form-row input[type=number],
+      form .form-row input[type=color],
+      form .form-row input[type=email],
+      form .form-row textarea,
+      form .form-row select {
+        width: 100%; }
+      form .form-row input[type="submit"] {
+        float: none; } }
+form .checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0; }
+form .checkbox label {
+  position: relative;
+  display: inline-block;
+  padding-left: 32px; }
+form .checkbox label::before,
+form .checkbox label::after {
+  position: absolute;
+  content: "";
+  display: inline-block; }
+form .checkbox label::before {
+  height: 24px;
+  width: 24px;
+  border: 2px solid #000;
+  left: 0px;
+  top: 2px; }
+form .checkbox label::after {
+  height: 7px;
+  width: 13px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(-45deg);
+  left: 6px;
+  top: 9px; }
+form .checkbox input[type="checkbox"] + label::after {
+  content: none; }
+form .checkbox input[type="checkbox"]:checked + label::after {
+  content: ""; }
+form .checkbox input[type="checkbox"]:focus + label::before {
+  outline: #3b99fc auto 5px; }
+
 /* TNA blockquote styles */
 blockquote {
   margin: 3em 2.5em 1em;
@@ -5447,15 +5451,15 @@ header {
 
 /* TNA footer styles */
 footer {
-  background-color: #000;
-  color: #fff; }
-  footer a, footer a:active, footer a:visited, footer a:hover {
-    color: #fbe2bc; }
-  footer ul {
-    list-style-type: none;
-    padding-left: 0; }
+  background-color: #000; }
   footer .footer-col {
+    color: #fff;
     margin-bottom: 1.6em; }
+    footer .footer-col a, footer .footer-col a:active, footer .footer-col a:visited, footer .footer-col a:hover {
+      color: #fbe2bc; }
+    footer .footer-col ul {
+      list-style-type: none;
+      padding-left: 0; }
     footer .footer-col:first-child {
       min-height: 280px; }
       @media (max-width: 767px) {
@@ -5464,9 +5468,14 @@ footer {
     footer .footer-col .square-logo {
       max-width: 157px;
       margin-bottom: 23px; }
-  footer .footer-base .ogl img {
-    float: left;
-    margin: 5px 25px 10px 0; }
+  footer .footer-base {
+    color: #fff;
+    margin-bottom: 1.6em; }
+    footer .footer-base a, footer .footer-base a:active, footer .footer-base a:visited, footer .footer-base a:hover {
+      color: #fbe2bc; }
+    footer .footer-base .ogl img {
+      float: left;
+      margin: 5px 25px 10px 0; }
   footer .opening-times .open_table {
     display: table;
     width: 100%; }
@@ -5509,7 +5518,6 @@ footer {
       footer .follow-us a img:hover {
         background: #555; }
   footer .newsletter {
-    color: #000;
     background: #dde5d5;
     width: 100%;
     box-sizing: border-box;
@@ -5556,7 +5564,7 @@ footer {
             display: block;
             margin-bottom: 10px; } }
       footer .newsletter .news-form form input[type="submit"] {
-        height: 48px; }
+        height: 45px; }
       @media (max-width: 1155px) {
         footer .newsletter .news-form {
           width: 48%; } }
