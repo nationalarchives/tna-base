@@ -5025,7 +5025,8 @@ header {
   /* Mega menu button (mobile view only) */
   /* 'Search our website/search our records' (mobile view only) */ }
   header .logo {
-    max-height: 44px; }
+    max-height: 44px;
+    max-width: 320px; }
   header #search-field-wrapper input[type='text'] {
     position: absolute;
     top: 0;
@@ -5055,7 +5056,7 @@ header {
       list-style-type: none;
       list-style-image: none; }
       header #search-field-wrapper ul li a {
-        color: #fbe2bc;
+        color: #fff;
         font-size: 0.9em;
         padding: 0.5em;
         display: block; }
@@ -5229,8 +5230,6 @@ header {
   header #skip-to-main-content {
     position: absolute;
     top: -30px; }
-  header .visible-lg img {
-    max-width: 347px; }
   header #search-field-wrapper {
     margin-top: 4px; }
 
@@ -5392,46 +5391,81 @@ footer {
           margin-left: 1.6em; } }
 
 /* TNA template styles */
-/* Default template */
-article {
+.container {
+  max-width: 1240px;
+  width: 100%; }
+
+.content-area .entry-header {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 0.6em 1.6em;
+  background: #fff; }
+  .content-area .entry-header h1 {
+    margin-top: 0; }
+.content-area .entry-content {
+  border-left: solid 2px #000;
+  border-right: 2px solid #000;
+  padding: 1.6em;
+  background: #fff;
+  margin-bottom: 1.6em; }
+.content-area .entry-content:after {
+  display: block;
+  content: '';
   background-color: #fff;
+  height: 75%;
+  width: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 15px; }
+.content-area aside .sidebar-header {
+  margin-bottom: 1.6em; }
+  .content-area aside .sidebar-header h2 {
+    margin-top: 0; }
+.content-area aside ul {
+  list-style-type: none;
+  padding: 0; }
+.content-area aside .sidebar-contact {
+  padding: 20px 0 20px 20px; }
+.content-area aside .live-chat img {
+  max-width: 100%;
+  height: auto;
+  width: 100%; }
+.content-area aside .live-chat div:first-of-type p {
+  margin-bottom: 0.6em; }
+.content-area aside .live-chat div:last-of-type {
   margin-bottom: 1.5em; }
-  article .entry-header {
-    padding: 10px 10px 0 0;
-    background: url("../img/dot-grey.png"); }
-    article .entry-header h1 {
-      font-size: 2em;
-      padding: 4px 10px;
-      background-color: #405480;
-      color: #fff;
-      line-height: 1.25;
-      margin: 0 10px 0 -10px;
-      display: inline-block; }
-    article .entry-header h2 {
-      padding: 4px 32px 4px 10px;
-      background-color: #405480;
-      color: #fff;
-      line-height: 1.5;
-      margin: 0 10px 0 -10px;
-      display: inline-block; }
-      article .entry-header h2 a {
-        color: #fff;
-        background-image: url("../img/icon-24-heading-link.png");
-        background-repeat: no-repeat;
-        background-position: 100% 50%;
-        padding-right: 32px; }
-  article .entry-header:after {
-    content: ' ';
+.content-area aside .sidebar-item h3 {
+  margin-top: 0; }
+.content-area blockquote {
+  font-family: 'Roboto Mono', monospace;
+  border: solid 2px #000;
+  padding: 1.6em 3.2em;
+  margin-bottom: 1.6em;
+  margin-left: -3.2em;
+  background: #fff;
+  max-width: 640px; }
+  .content-area blockquote p {
+    margin: 0; }
+  .content-area blockquote cite {
     display: block;
-    height: 10px;
-    margin: 0 0 0 -10px;
-    background: url("../img/heading-flourish.png") no-repeat bottom left; }
-  article .entry-content {
-    padding: 20px; }
-    article .entry-content .thumbnail {
-      margin-bottom: 10px;
-      border: none;
-      padding: 0; }
+    font-size: 0.9em;
+    text-align: right;
+    margin: 0.6em 0; }
+.content-area .emphasis-block {
+  background: #000;
+  color: #fff; }
+.content-area .emphasis-alert {
+  background: #fbe2bc; }
+.content-area .emphasis-success {
+  background: #dde5d5; }
+.content-area .emphasis-error {
+  background: #fad3d4; }
+@media (max-width: 992px) {
+  .content-area blockquote {
+    padding: 1.6em;
+    margin-left: 0;
+    max-width: 100%; } }
 
 .equal-heights > div {
   background: white;
@@ -5491,48 +5525,6 @@ article {
   .level-one .banner .entry-content .call-to-action-button {
     width: 100%;
     text-align: center; } }
-
-/* TNA sidebar styles */
-aside {
-  margin-bottom: 1.5em; }
-  aside .sidebar-header {
-    padding: 10px 10px 0 0;
-    background: url(../img/dot-grey.png) #fff; }
-    aside .sidebar-header h2 {
-      padding: 4px 32px 4px 10px;
-      background-color: #405480;
-      color: #fff;
-      line-height: 125%;
-      margin: 0 10px 0 -10px;
-      display: inline-block; }
-      aside .sidebar-header h2 a {
-        color: #fff;
-        background-image: url(../img/icon-24-heading-link.png);
-        background-repeat: no-repeat;
-        background-position: 100% 50%;
-        padding-right: 32px; }
-  aside .sidebar-header:after {
-    content: ' ';
-    display: block;
-    height: 10px;
-    margin: 0 0 0 -10px;
-    background: url(../img/heading-flourish.png) no-repeat bottom left; }
-  aside .sidebar-nav {
-    background-color: #fff;
-    padding: 20px 0 0 20px; }
-  aside .sidebar-contact {
-    background-color: #fff;
-    padding: 20px 0 20px 20px; }
-  aside .live-chat img {
-    max-width: 100%;
-    height: auto;
-    width: 100%; }
-  aside .live-chat div:first-of-type p {
-    margin-bottom: 0.6em; }
-  aside .live-chat div:last-of-type {
-    margin-bottom: 1.5em; }
-  aside .sidebar-item h3 {
-    margin-top: 0; }
 
 /* TNA print styles */
 @media print {
@@ -5936,15 +5928,10 @@ a.hue-teal, a.hue-red {
   .commentlist li {
     list-style-type: none; }
     .commentlist li div.comment-body {
-      margin: 0 0 20px 0;
-      padding: 20px;
-      background: #eee;
-      font-size: 1em;
-      overflow: hidden; }
-      .commentlist li div.comment-body p {
-        float: left;
-        width: 100%;
-        margin: 10px 0; }
+      margin-bottom: 1.6em;
+      overflow: hidden;
+      border-top: 2px solid #000;
+      padding: 1em 0; }
       .commentlist li div.comment-body .comment-meta.commentmetadata {
         font-size: .9em; }
       @media (max-width: 600px) {
@@ -5956,37 +5943,31 @@ a.hue-teal, a.hue-red {
         clear: both;
         display: block; }
       .commentlist li div.comment-body .comment-author {
-        float: left;
-        padding: 5px 10px 5px 10px;
-        background: #405480;
+        color: #000; }
+        .commentlist li div.comment-body .comment-author cite {
+          font-family: "Roboto Mono", monospace;
+          font-style: normal;
+          font-size: 1.2em;
+          margin-bottom: 0.3em; }
+        .commentlist li div.comment-body .comment-author.vcard img {
+          display: none; }
+        .commentlist li div.comment-body .comment-author.vcard .says {
+          display: none; }
+      .commentlist li div.comment-body .reply .comment-reply-link {
+        font-family: "Roboto Mono", monospace;
+        background-color: #000;
         color: #fff;
-        margin: 0 0 5px -20px;
-        display: inline; }
-        .commentlist li div.comment-body .comment-author.vcard {
-          margin-top: -20px; }
-          .commentlist li div.comment-body .comment-author.vcard img {
-            display: none; }
-          .commentlist li div.comment-body .comment-author.vcard .fn a {
-            color: #fff; }
-          .commentlist li div.comment-body .comment-author.vcard .says {
-            display: none; }
-      .commentlist li div.comment-body .comment-meta.commentmetadata a {
-        float: right; }
-      .commentlist li div.comment-body .reply {
-        float: right; }
-        .commentlist li div.comment-body .reply .comment-reply-link {
-          background-color: #008484;
-          color: #fff;
-          padding: .3em .5em;
-          border: 0;
-          height: 40px;
-          margin: 0; }
-          .commentlist li div.comment-body .reply .comment-reply-link:hover {
-            background-color: #fce463;
-            color: #000;
-            text-decoration: none; }
+        border: 2px solid #000;
+        padding: 0.5em 0.9em;
+        display: inline-block;
+        min-width: 24px;
+        text-align: center; }
+        .commentlist li div.comment-body .reply .comment-reply-link:hover {
+          background-color: #fff;
+          color: #000;
+          text-decoration: none; }
   .commentlist ol {
-    border-left: 2px solid #eee; }
+    border-left: 5px solid #eee; }
   .commentlist ul {
     margin-top: 2em; }
     .commentlist ul li {
@@ -6044,14 +6025,12 @@ a.hue-teal, a.hue-red {
               color: #000;
               text-decoration: none; }
 
-#comments {
-  padding: 0 2em 0 1.5em; }
-
-#respond {
-  padding: 2em; }
-  #respond textarea,
-  #respond input[type="text"] {
-    width: 100%; }
+#respond label {
+  width: 100%; }
+#respond textarea,
+#respond input[type="text"] {
+  max-width: 480px;
+  width: 100%; }
 
 .category_template .image_back {
   width: 100%;

@@ -5,6 +5,7 @@ header {
   padding: 1em 0;
   .logo {
     max-height: 44px;
+    max-width: 320px;
   }
   #search-field-wrapper {
     input[type='text'] {
@@ -38,7 +39,7 @@ header {
         list-style-type: none;
         list-style-image: none;
         a {
-          color: $col_yellow;
+          color: #fff;
           font-size: 0.9em;
           padding: 0.5em;
           display: block;
@@ -258,11 +259,6 @@ header {
   #skip-to-main-content {
     position: absolute;
     top: -30px;
-  }
-  .visible-lg {
-    img {
-      max-width: 347px;
-    }
   }
   #search-field-wrapper {
     margin-top: 4px;

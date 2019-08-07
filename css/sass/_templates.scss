@@ -1,54 +1,105 @@
 /* TNA template styles */
-
-/* Default template */
-
-article {
-  background-color: $tna_white;
-  margin-bottom: 1.5em;
+.container {
+  max-width: 1240px;
+  width: 100%;
+}
+.content-area {
   .entry-header {
-    padding: 10px 10px 0 0;
-    background: $tna_dot_grey;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 0.6em 1.6em;
+    background: #fff;
     h1 {
-      font-size: 2em;
-      padding: 4px 10px;
-      background-color: $tna_blue;
-      color: #fff;
-      line-height: 1.25;
-      margin: 0 10px 0 -10px;
-      display: inline-block;
+      margin-top: 0;
     }
-    h2 {
-      padding: 4px 32px 4px 10px;
-      background-color: $tna_blue;
-      color: #fff;
-      line-height: 1.5;
-      margin: 0 10px 0 -10px;
-      display: inline-block;
-      a {
-        color: #fff;
-        background-image:$tna_icon_24_link;
-        background-repeat: no-repeat;
-        background-position: 100% 50%;
-        padding-right: 32px;
-      }
-    }
-  }
-  .entry-header:after {
-    content: ' ';
-    display: block;
-    height: 10px;
-    margin: 0 0 0 -10px;
-    background: $tna_heading_flourish;
   }
   .entry-content {
-    padding: 20px;
-    .thumbnail {
-      margin-bottom: 10px;
-      border:none;
-      padding:0;
+    border-left: solid 2px #000;
+    border-right: 2px solid #000;
+    padding: 1.6em;
+    background: #fff;
+    margin-bottom: 1.6em;
+  }
+  .entry-content:after {
+    display: block;
+    content: '';
+    background-color: #fff;
+    height: 75%;
+    width: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+  }
+  aside {
+    .sidebar-header {
+      margin-bottom: 1.6em;
+      h2 {
+        margin-top: 0;
+      }
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .sidebar-contact {
+      padding: 20px 0 20px 20px;
+    }
+    .live-chat img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+    .live-chat div:first-of-type p {
+      margin-bottom: 0.6em;
+    }
+    .live-chat div:last-of-type {
+      margin-bottom: 1.5em;
+    }
+    .sidebar-item h3 {
+      margin-top: 0;
+    }
+  }
+  blockquote {
+    font-family: 'Roboto Mono', monospace;
+    border: solid 2px #000;
+    padding: 1.6em 3.2em;
+    margin-bottom: 1.6em;
+    margin-left: -3.2em;
+    background: #fff;
+    max-width: 640px;
+    p {
+      margin: 0;
+    }
+    cite {
+      display: block;
+      font-size: 0.9em;
+      text-align: right;
+      margin: 0.6em 0;
+    }
+  }
+  .emphasis-block {
+    background: #000;
+    color: #fff;
+  }
+  .emphasis-alert {
+    background: $col_alert;
+  }
+  .emphasis-success {
+    background: $col_success;
+  }
+  .emphasis-error {
+    background: $col_error;
+  }
+  @media (max-width: 992px) {
+    blockquote {
+      padding: 1.6em;
+      margin-left: 0;
+      max-width: 100%;
     }
   }
 }
+
 .equal-heights {
   > div {
     background: white;
