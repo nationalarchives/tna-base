@@ -5,18 +5,16 @@ footer {
   .footer-col {
     color: #fff;
     margin-bottom: 1.6em;
+    min-height: 280px;
+    @media (max-width: 767px) {
+      min-height: auto;
+    }
     a, a:active, a:visited, a:hover {
       color: $col_yellow;
     }
     ul {
       list-style-type: none;
       padding-left: 0;
-    }
-    &:first-child {
-      min-height: 280px;
-      @media (max-width: 767px) {
-        height: auto;
-      }
     }
     .square-logo {
       max-width: 157px;
@@ -31,7 +29,18 @@ footer {
     }
     .ogl img {
       float: left;
-      margin: 5px 25px 10px 0;
+      margin: 3px 25px 10px 0;
+      width: auto;
+      height: 16px;
+      @media (max-width: 767px) {
+        float: none;
+      }
+    }
+    .gov-uk {
+      text-align: right;
+      @media (max-width: 767px) {
+        text-align: left;
+      }
     }
   }
   .opening-times {
@@ -97,6 +106,9 @@ footer {
     overflow: hidden;
     padding: 1.6em 40px 0 40px;
     margin-bottom: 1.6em;
+    @media (max-width: 976px) {
+      padding: 1.6em 15px 0 15px;
+    }
     .news-icon {
       display: inline-block;
       float: left;

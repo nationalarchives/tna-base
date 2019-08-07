@@ -152,9 +152,9 @@
                     src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png">
         </a>
         <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/">Open
-                Government Licence v3.0</a>, <br>except where otherwise stated </p>
+                Government Licence v3.0</a>, except where otherwise stated </p>
     </div>
-    <div class="col-xs-12 col-sm-3 col-md-3 text-right">
+    <div class="col-xs-12 col-sm-3 col-md-3 gov-uk">
         <a title="External website - opens in a new window" href="http://gov.uk/" target="_blank"> <img
                     alt="GOV.UK logo"
                     src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/gov-uk.png"> </a>

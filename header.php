@@ -90,7 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div>
 </header>
 
-<nav id="nav" role="navigation">
+<nav id="nav" role="navigation" class="navigation">
 	<div class="mega-menu clearfix">
 		<?php
 		global $cloud;

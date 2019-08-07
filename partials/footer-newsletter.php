@@ -1,6 +1,6 @@
 <div class="newsletter">
     <div class="container">
-        <div class="newsletter-content">
+        <div class="row newsletter-content">
             <div class="news-icon">
                 <div class="icon-circle icon-envelope icon-size-64"></div>
             </div>
