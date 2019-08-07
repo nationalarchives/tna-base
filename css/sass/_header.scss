@@ -1,31 +1,35 @@
 /* TNA header styles */
 header {
-  background-color: $tna_dark;
-  color: $tna_white;
-  padding: 0.7em 0 11px 0;
+  background-color: #000;
+  color: #fff;
+  padding: 1em 0;
+  .logo {
+    max-height: 44px;
+  }
   #search-field-wrapper {
     input[type='text'] {
       position: absolute;
       top: 0;
       right: 55px;
       width: 226px;
-      height: 40px;
-      color: $tna_dark;
+      height: 42px;
+      color: #000;
+      border: #fff solid 2px;
     }
     input[type='submit'] {
       position: absolute;
       right: 15px;
-      right: 15px;
-      width: 40px;
-      height: 40px;
-      background-image: url('../img/search-white.png');
+      width: 42px;
+      height: 42px;
+      background-image: $tna_icon_search;
       background-repeat: no-repeat;
       background-position: center;
+      border: #fff solid 2px;
     }
     ul {
       background-color: #333;
       position: absolute;
-      top: 41px;
+      top: 42px;
       right: 118px;
       padding: 5px 5px 5px 5px;
       width: 202px;
@@ -34,13 +38,13 @@ header {
         list-style-type: none;
         list-style-image: none;
         a {
-          color: $tna_white;
+          color: $col_yellow;
           font-size: 0.9em;
           padding: 0.5em;
           display: block;
           &:hover {
             background-color: #fce45c;
-            color: $tna_dark;
+            color: #000;
           }
         }
       }
@@ -223,16 +227,17 @@ header {
     position: absolute;
     top: 0;
     right: 281px;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     line-height: 40px;
-    background-image: $tna_scope_selector;
+    background-image: $tna_icon_chevron_down_lg;
     background-color: #555;
     background-size: cover;
     cursor: pointer;
+    border: #fff solid 2px;
   }
   #globalSearch .expanded {
-    background-image: $tna_scope_selector_expanded;
+    background-image: $tna_icon_chevron_up_lg;
   }
   .search-field-wrapper-medium {
     float: right;

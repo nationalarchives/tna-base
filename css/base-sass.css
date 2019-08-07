@@ -4955,7 +4955,7 @@ blockquote:before {
     font-size: .9em; }
 
 .mega-menu {
-  background-color: #222;
+  background-color: #555;
   color: #fff;
   padding: 1.6em 0;
   border-top: solid 2px #fff; }
@@ -4983,6 +4983,8 @@ blockquote:before {
         margin-bottom: 0.6em;
         line-height: 1.6;
         display: block; }
+  .mega-menu img {
+    margin: 0.3em 0; }
   .mega-menu .mobile-home-link {
     display: none; }
   @media (max-width: 992px) {
@@ -5017,31 +5019,34 @@ blockquote:before {
 
 /* TNA header styles */
 header {
-  background-color: #222;
+  background-color: #000;
   color: #fff;
-  padding: 0.7em 0 11px 0;
+  padding: 1em 0;
   /* Mega menu button (mobile view only) */
   /* 'Search our website/search our records' (mobile view only) */ }
+  header .logo {
+    max-height: 44px; }
   header #search-field-wrapper input[type='text'] {
     position: absolute;
     top: 0;
     right: 55px;
     width: 226px;
-    height: 40px;
-    color: #222; }
+    height: 42px;
+    color: #000;
+    border: #fff solid 2px; }
   header #search-field-wrapper input[type='submit'] {
     position: absolute;
     right: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    background-image: url("../img/search-white.png");
+    width: 42px;
+    height: 42px;
+    background-image: url("../img/icon-search.png");
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    border: #fff solid 2px; }
   header #search-field-wrapper ul {
     background-color: #333;
     position: absolute;
-    top: 41px;
+    top: 42px;
     right: 118px;
     padding: 5px 5px 5px 5px;
     width: 202px;
@@ -5050,13 +5055,13 @@ header {
       list-style-type: none;
       list-style-image: none; }
       header #search-field-wrapper ul li a {
-        color: #fff;
+        color: #fbe2bc;
         font-size: 0.9em;
         padding: 0.5em;
         display: block; }
         header #search-field-wrapper ul li a:hover {
           background-color: #fce45c;
-          color: #222; }
+          color: #000; }
   header #mega-menu-pull-down {
     background-image: url("../img/menu-collapsed.png");
     background-position: 50% 90%;
@@ -5200,15 +5205,16 @@ header {
     position: absolute;
     top: 0;
     right: 281px;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     line-height: 40px;
-    background-image: url("../img/scope-selector.png");
+    background-image: url("../img/icon-chevron-down-lg.png");
     background-color: #555;
     background-size: cover;
-    cursor: pointer; }
+    cursor: pointer;
+    border: #fff solid 2px; }
   header #globalSearch .expanded {
-    background-image: url("../img/scope-selector-expanded.png"); }
+    background-image: url("../img/icon-chevron-up-lg.png"); }
   header .search-field-wrapper-medium {
     float: right;
     max-width: 331px;

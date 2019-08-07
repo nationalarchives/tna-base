@@ -1,5 +1,5 @@
 .mega-menu {
-  background-color: $col_dark;
+  background-color: $col_mid_dark;
   color: #fff;
   padding: 1.6em 0;
   border-top: solid 2px #fff;
@@ -31,6 +31,9 @@
         display: block;
       }
     }
+  }
+  img {
+    margin: 0.3em 0;
   }
   .mobile-home-link {
     display: none;
