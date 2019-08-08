@@ -20,48 +20,6 @@ header {
   }
 }
 
-
-/* Ghost button class can now be applied directly to any html tag */
-.ghost-button {
-  line-height: 1em;
-  display: inline-block;
-  color: #FFF !important;
-  border: solid 1px #FFFFFF;
-  padding: 15px;
-  margin: 2% 0 2% 0;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: .5s;
-  width: auto;
-  text-align: center; }
-
-.ghost-button:hover {
-  text-decoration: none;
-  background-color: #009999; }
-
-.ghost-button h3 {
-  margin: 7% 0 7% 0; }
-
-/* End - Ghost button class can now be applied directly to any html tag */
-
-/* Buttons */
-a.button {
-  background: #008484;
-  color: #fff;
-  padding: 0.5em;
-  display: inline-block;
-  /* used to contain button text when it drops to a second line */
-  min-width: 24px;
-  text-align: center; }
-
-a.button:hover {
-  background: #FCE45C;
-  color: #000;
-  text-decoration: underline;
-  border: none; }
-
 /* WEB COLOURS */
 .hue-red {
   background-color: #cb0d07;

@@ -1,0 +1,52 @@
+
+.button {
+  font-family: $tna_heading_font;
+  background-color: #000;
+  color: #fff;
+  border: $grid_line;
+  padding: 0.5em 0.9em;
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+  }
+}
+.primary {
+  background-color: #fff;
+  color: #000;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.secondary {
+  border-color: #ccc;
+  background-color: #fff;
+  color: #555;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.tertiary {
+  border-color: #eee;
+  background-color: #eee;
+  color: #555;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.invert {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+

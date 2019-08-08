@@ -5389,6 +5389,51 @@ footer {
     width: 100%;
     text-align: center; } }
 
+.button {
+  font-family: "Roboto Mono", monospace;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+  padding: 0.5em 0.9em;
+  display: inline-block;
+  min-width: 24px;
+  text-align: center; }
+  .button:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none; }
+
+.primary {
+  background-color: #fff;
+  color: #000; }
+  .primary:hover {
+    background-color: #000;
+    color: #fff; }
+
+.secondary {
+  border-color: #ccc;
+  background-color: #fff;
+  color: #555; }
+  .secondary:hover {
+    background-color: #000;
+    color: #fff; }
+
+.tertiary {
+  border-color: #eee;
+  background-color: #eee;
+  color: #555; }
+  .tertiary:hover {
+    background-color: #000;
+    color: #fff; }
+
+.invert {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff; }
+  .invert:hover {
+    background-color: #000;
+    color: #fff; }
+
 /* TNA print styles */
 @media print {
   header, nav, aside, footer {
@@ -5416,46 +5461,6 @@ header #mobileGlobalSearch label {
     margin: 0 5px 0 5px; }
 header #mobileGlobalSearch #changeDestination {
   padding-top: .5em; }
-
-/* Ghost button class can now be applied directly to any html tag */
-.ghost-button {
-  line-height: 1em;
-  display: inline-block;
-  color: #FFF !important;
-  border: solid 1px #FFFFFF;
-  padding: 15px;
-  margin: 2% 0 2% 0;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: .5s;
-  width: auto;
-  text-align: center; }
-
-.ghost-button:hover {
-  text-decoration: none;
-  background-color: #009999; }
-
-.ghost-button h3 {
-  margin: 7% 0 7% 0; }
-
-/* End - Ghost button class can now be applied directly to any html tag */
-/* Buttons */
-a.button {
-  background: #008484;
-  color: #fff;
-  padding: 0.5em;
-  display: inline-block;
-  /* used to contain button text when it drops to a second line */
-  min-width: 24px;
-  text-align: center; }
-
-a.button:hover {
-  background: #FCE45C;
-  color: #000;
-  text-decoration: underline;
-  border: none; }
 
 /* WEB COLOURS */
 .hue-red {
