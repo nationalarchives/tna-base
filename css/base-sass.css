@@ -5913,187 +5913,44 @@ a.hue-teal, a.hue-red {
   background: url("../img/dot-grey.png"); }
 
 /* Cards */
-.flex-row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px; }
-  .flex-row .col-card-12, .flex-row .col-card-4, .flex-row .col-card-3 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 1.5em; }
-  .flex-row .col-card-12 {
-    max-width: 100%;
-    min-width: 100%; }
-  .flex-row .col-card-4 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 33.33333%;
-    -ms-flex: 0 0 33.33333%;
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-    min-width: 33.33333%; }
-  .flex-row .col-card-3 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25%;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-    min-width: 25%; }
-  .flex-row .card {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex: 1;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px #ddd; }
-    .flex-row .card a {
-      position: relative;
-      display: block;
-      width: 100%; }
-      .flex-row .card a:hover {
-        text-decoration: none;
-        box-shadow: 0 4px 7px #ccc; }
-        .flex-row .card a:hover .entry-content h3 {
-          text-decoration: underline; }
-    .flex-row .card h3 {
-      margin: .5em 0; }
-    .flex-row .card p {
-      color: #444; }
-    .flex-row .card .entry-image {
-      display: block;
-      width: 100%;
-      min-height: 185px;
-      background: #ddd center center;
-      background-size: cover; }
-    .flex-row .card .entry-content {
-      display: block;
-      width: 100%;
-      padding: 1em 1em 1.6em 1em; }
-    .flex-row .card .event {
-      padding: 1em 1em 2.6em 1em; }
-    .flex-row .card .entry-header {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-align-items: center;
-      align-items: center;
-      padding: 1em;
-      width: 100%;
-      min-height: 98px;
-      background-color: #597a87; }
-    .flex-row .card .entry-header h3 {
-      color: #fff;
-      margin: 0; }
-    .flex-row .card .content-type {
-      color: #444;
-      font-size: .9em;
-      border-left: #ebab01 4px solid;
-      padding: 0 0.5em; }
-    .flex-row .card .entry-date {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 1em; }
-      .flex-row .card .entry-date .date {
-        color: #444;
-        background: url(../img/icon-calendar.svg) no-repeat 0px 4px;
-        background-size: 1em 1em;
-        padding-left: 2em; }
-  @media (max-width: 1200px) {
-    .flex-row .card .event {
-      padding: 1em 1em 4em 1em; } }
-  @media (max-width: 768px) {
-    .flex-row .col-card-4 {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-      max-width: 100%; }
-    .flex-row .col-card-3 {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%; }
-    .flex-row .card .event {
-      padding: 1em 1em 2.6em 1em; }
-    .flex-row .entry-date {
-      position: relative; } }
-  @media (max-width: 480px) {
-    .flex-row {
-      display: block; }
-      .flex-row .col-card-3, .flex-row .col-card-4 {
-        display: block;
-        float: left;
-        max-width: 100%;
-        width: 100%; }
-      .flex-row .card .event {
-        padding: 1em 1em 4em 1em; } }
-  .flex-row .hero-banner p {
-    margin-bottom: .5em; }
-  @media (min-width: 768px) {
-    .flex-row .hero-banner {
-      display: table;
-      min-height: 240px; }
-      .flex-row .hero-banner a {
-        display: table-row; }
-      .flex-row .hero-banner .entry-image {
-        display: table-cell;
-        width: 50%; }
-      .flex-row .hero-banner .entry-date {
-        position: relative; }
-      .flex-row .hero-banner .event {
-        padding: 1em 1em 1.6em 1em; } }
-  @media (min-width: 922px) {
-    .flex-row .hero-banner .entry-image {
-      width: 60%; } }
-  @media (min-width: 1240px) {
-    .flex-row .hero-banner .entry-image {
-      width: 68%; } }
-  .flex-row .intro-card {
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px #ddd;
+.cards .card {
+  margin-bottom: 3.2em; }
+.cards a:hover {
+  text-decoration: none; }
+.cards .entry-image {
+  display: block;
+  width: 100%;
+  min-height: 185px;
+  background: #ddd center center;
+  background-size: cover; }
+.cards .content-type {
+  padding: 0.3em 0;
+  color: #222; }
+.cards h3 {
+  border-top: 2px solid #000;
+  padding-top: 0.6em;
+  margin-top: 0; }
+  .cards h3:hover {
+    text-decoration: underline; }
+.cards p {
+  color: #222; }
+.cards .entry-header h3 {
+  padding: 0.6em 0; }
+@media (min-width: 768px) {
+  .cards .hero-banner {
     display: table;
-    min-height: 240px; }
-    .flex-row .intro-card .intro-content {
+    width: 100%; }
+    .cards .hero-banner .hero-banner a {
       display: table-row; }
-      .flex-row .intro-card .intro-content .entry-content {
-        display: block;
-        width: 100%;
-        padding: 1em 1em 1.6em 1em; }
-      .flex-row .intro-card .intro-content .intro-entry {
-        display: table-cell;
-        width: 76%; }
-      .flex-row .intro-card .intro-content .entry-image {
-        display: none; }
-    @media (min-width: 768px) {
-      .flex-row .intro-card .intro-content .intro-entry {
-        width: 50%; }
-      .flex-row .intro-card .intro-content .entry-image {
-        display: table-cell;
-        background: #ddd center center;
-        background-size: cover; } }
-    @media (min-width: 922px) {
-      .flex-row .intro-card .intro-content .intro-entry {
-        width: 60%; } }
-    @media (min-width: 1240px) {
-      .flex-row .intro-card .intro-content .intro-entry {
-        width: 68%; } }
+    .cards .hero-banner .entry-image, .cards .hero-banner .hero-banner-entry {
+      display: table-cell; }
+    .cards .hero-banner .hero-banner-entry {
+      border-left: 2px solid #000; }
+      .cards .hero-banner .hero-banner-entry .content-type, .cards .hero-banner .hero-banner-entry h3, .cards .hero-banner .hero-banner-entry p {
+        padding-left: 24px; }
+    .cards .hero-banner .entry-image {
+      width: 68%;
+      height: 240px; } }
 
 .portal-landing .banner {
   margin-bottom: 1.6em;
