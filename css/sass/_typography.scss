@@ -24,6 +24,19 @@ body {
   p {
     margin: 0 0 1.6em;
   }
+  a, a:active, a:visited {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  a:focus {
+    background-color: $col_warm;
+    outline: 3px solid $col_yellow;
+    color: #000;
+  }
   ul {
     margin-bottom: 1.6em;
   }
@@ -92,16 +105,4 @@ body {
     border: 1px solid #ccc;
     border-radius: 0;
   }
-}
-a, a:active, a:visited {
-  color: $tna_link_col;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:focus {
-  background-color: $tna_yellow;
-  outline: 3px solid $tna_yellow_dark;
-  color: $tna_dark !important;
 }
