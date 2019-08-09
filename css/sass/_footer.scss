@@ -1,7 +1,7 @@
 /* TNA footer styles */
 
 footer {
-  background-color: #000;
+  background-color: $col_blk;
   .footer-col {
     color: #fff;
     margin-bottom: 1.6em;
@@ -84,7 +84,7 @@ footer {
     a {
       display:inline-block;
       img {
-        background-color: #000;
+        background-color: $col_blk;
         border: 2px solid #fff;
         border-radius: 50%;
         padding: 7px;

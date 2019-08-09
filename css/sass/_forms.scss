@@ -17,7 +17,7 @@ form {
   }
   input[type="submit"] {
     font-family: "Roboto Mono", monospace;
-    background-color: #000;
+    background-color: $col_blk;
     color: #fff;
     border: $grid_line;
     padding: 0.5em 0.9em;

@@ -30,7 +30,7 @@
           display:block;
         }
         .comment-author {
-          color: #000;
+          color: $col_blk;
           cite {
             font-family: $tna_heading_font;
             font-style: normal;
@@ -49,7 +49,7 @@
         .reply {
           .comment-reply-link {
             font-family: $tna_heading_font;
-            background-color: #000;
+            background-color: $col_blk;
             color: #fff;
             border: $grid_line;
             padding: 0.5em 0.9em;

@@ -31,6 +31,7 @@ $tna_body_font: 'Open Sans', sans-serif;
 $tna_heading_font: 'Roboto Mono', monospace;
 
 /* TNA colours */
+$col_blk: #26262a;
 $col_alert: #fbe2bc;
 $col_success: #dde5d5;
 $col_error: #fad3d4;
@@ -44,7 +45,7 @@ $col_mid_light: #ddd;
 $col_mid_dark: #555;
 $col_dark: #222;
 
-$grid_line: 2px solid #000;
+$grid_line: 2px solid #26262a;
 
 /* TNA Icons/Images */
 $tna_icon_24_link:url('../img/icon-24-heading-link.png');

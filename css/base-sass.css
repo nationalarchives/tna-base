@@ -4517,7 +4517,8 @@ a#cookieCutter {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  color: #26262a; }
   body h1, body h2, body h3, body h4 {
     font-family: "Roboto Mono", monospace;
     font-weight: 400;
@@ -4570,7 +4571,7 @@ body {
         color: #fff;
         background-color: #000;
         text-align: center;
-        border: 2px solid #000;
+        border: 2px solid #26262a;
         font-size: 1.25em;
         line-height: 44px;
         width: 48px;
@@ -4585,7 +4586,7 @@ body {
     margin: 1em 0;
     clear: both;
     width: 100%;
-    border-bottom: 2px solid #000; }
+    border-bottom: 2px solid #26262a; }
   body pre {
     display: block;
     padding: 1.6em;
@@ -4613,9 +4614,9 @@ form label {
   font-family: "Roboto Mono", monospace; }
 form input[type="submit"] {
   font-family: "Roboto Mono", monospace;
-  background-color: #000;
+  background-color: #26262a;
   color: #fff;
-  border: 2px solid #000;
+  border: 2px solid #26262a;
   padding: 0.5em 0.9em;
   display: inline-block;
   min-width: 24px;
@@ -4629,16 +4630,16 @@ form input[type=color],
 form input[type=email],
 form input[type=date],
 form input.width-half {
-  border: 2px solid #000;
+  border: 2px solid #26262a;
   padding: 0.6em;
   text-indent: 5px;
   min-width: 220px;
   width: auto; }
 form textarea {
-  border: 2px solid #000;
+  border: 2px solid #26262a;
   padding: 0.6em; }
 form select {
-  border: 2px solid #000;
+  border: 2px solid #26262a;
   height: 2.4em; }
 form input:focus,
 form input[type=radio]:focus,
@@ -4695,7 +4696,7 @@ form .form-row {
   form .form-row select {
     -webkit-border-radius: 0;
     border: 0;
-    outline: 2px solid #000;
+    outline: 2px solid #26262a;
     outline-offset: -1px; }
   form .form-row .button-right {
     float: right; }
@@ -4749,14 +4750,14 @@ form .checkbox label::after {
 form .checkbox label::before {
   height: 24px;
   width: 24px;
-  border: 2px solid #000;
+  border: 2px solid #26262a;
   left: 0px;
   top: 2px; }
 form .checkbox label::after {
   height: 7px;
   width: 13px;
-  border-left: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-left: 2px solid #26262a;
+  border-bottom: 2px solid #26262a;
   transform: rotate(-45deg);
   left: 6px;
   top: 9px; }
@@ -4879,7 +4880,7 @@ blockquote:before {
 
 /* TNA header styles */
 header {
-  background-color: #000;
+  background-color: #26262a;
   color: #fff;
   padding: 1em 0;
   /* Mega menu button (mobile view only) */
@@ -4893,7 +4894,7 @@ header {
     right: 55px;
     width: 226px;
     height: 42px;
-    color: #000;
+    color: #26262a;
     border: #fff solid 2px; }
   header #search-field-wrapper input[type='submit'] {
     position: absolute;
@@ -4922,7 +4923,7 @@ header {
         display: block; }
         header #search-field-wrapper ul li a:hover {
           background-color: #fce45c;
-          color: #000; }
+          color: #26262a; }
   header #mega-menu-pull-down {
     background-image: url("../img/menu-collapsed.png");
     background-position: 50% 90%;
@@ -5116,7 +5117,7 @@ header {
 
 /* TNA footer styles */
 footer {
-  background-color: #000; }
+  background-color: #26262a; }
   footer .footer-col {
     color: #fff;
     margin-bottom: 1.6em;
@@ -5180,7 +5181,7 @@ footer {
   footer .follow-us a {
     display: inline-block; }
     footer .follow-us a img {
-      background-color: #000;
+      background-color: #26262a;
       border: 2px solid #fff;
       border-radius: 50%;
       padding: 7px;
@@ -5389,23 +5390,23 @@ footer {
 
 .button {
   font-family: "Roboto Mono", monospace;
-  background-color: #000;
+  background-color: #26262a;
   color: #fff;
-  border: 2px solid #000;
+  border: 2px solid #26262a;
   padding: 0.5em 0.9em;
   display: inline-block;
   min-width: 24px;
   text-align: center; }
   .button:hover {
     background-color: #fff;
-    color: #000;
+    color: #26262a;
     text-decoration: none; }
 
 .primary {
   background-color: #fff;
-  color: #000; }
+  color: #26262a; }
   .primary:hover {
-    background-color: #000;
+    background-color: #26262a;
     color: #fff; }
 
 .secondary {
@@ -5413,7 +5414,7 @@ footer {
   background-color: #fff;
   color: #555; }
   .secondary:hover {
-    background-color: #000;
+    background-color: #26262a;
     color: #fff; }
 
 .tertiary {
@@ -5421,7 +5422,7 @@ footer {
   background-color: #eee;
   color: #555; }
   .tertiary:hover {
-    background-color: #000;
+    background-color: #26262a;
     color: #fff; }
 
 .invert {
@@ -5429,7 +5430,7 @@ footer {
   background-color: transparent;
   color: #fff; }
   .invert:hover {
-    background-color: #000;
+    background-color: #26262a;
     color: #fff; }
 
 /* TNA print styles */
@@ -5719,7 +5720,7 @@ a.hue-teal, a.hue-red {
 
 .icon-circle {
   display: inline-block;
-  background-color: #000;
+  background-color: #26262a;
   background-size: 68% 68%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -5796,7 +5797,7 @@ a.hue-teal, a.hue-red {
     .commentlist li div.comment-body {
       margin-bottom: 1.6em;
       overflow: hidden;
-      border-top: 2px solid #000;
+      border-top: 2px solid #26262a;
       padding: 1em 0; }
       .commentlist li div.comment-body .comment-meta.commentmetadata {
         font-size: .9em; }
@@ -5809,7 +5810,7 @@ a.hue-teal, a.hue-red {
         clear: both;
         display: block; }
       .commentlist li div.comment-body .comment-author {
-        color: #000; }
+        color: #26262a; }
         .commentlist li div.comment-body .comment-author cite {
           font-family: "Roboto Mono", monospace;
           font-style: normal;
@@ -5821,9 +5822,9 @@ a.hue-teal, a.hue-red {
           display: none; }
       .commentlist li div.comment-body .reply .comment-reply-link {
         font-family: "Roboto Mono", monospace;
-        background-color: #000;
+        background-color: #26262a;
         color: #fff;
-        border: 2px solid #000;
+        border: 2px solid #26262a;
         padding: 0.5em 0.9em;
         display: inline-block;
         min-width: 24px;
@@ -5910,7 +5911,6 @@ a.hue-teal, a.hue-red {
   padding: 10px 10px 0 0;
   background: url("../img/dot-grey.png"); }
 
-/* Cards */
 .cards .card {
   margin-bottom: 3.2em; }
 .cards a:hover {
@@ -5923,32 +5923,37 @@ a.hue-teal, a.hue-red {
   background-size: cover; }
 .cards .content-type {
   padding: 0.3em 0;
-  color: #222; }
+  color: #26262a; }
 .cards h3 {
-  border-top: 2px solid #000;
+  border-top: 2px solid #26262a;
   padding-top: 0.6em;
   margin-top: 0; }
   .cards h3:hover {
     text-decoration: underline; }
 .cards p {
-  color: #222; }
+  color: #26262a; }
 .cards .entry-header h3 {
   padding: 0.6em 0; }
+
 @media (min-width: 768px) {
-  .cards .hero-banner {
-    display: table;
+  .hero-card .col-md-4 {
     width: 100%; }
-    .cards .hero-banner .hero-banner a {
+  .hero-card .card {
+    border-right: 2px solid #26262a;
+    display: table;
+    width: 100%;
+    margin-bottom: 1.6em; }
+    .hero-card .card h3 {
+      border: none; }
+    .hero-card .card a {
       display: table-row; }
-    .cards .hero-banner .entry-image, .cards .hero-banner .hero-banner-entry {
+    .hero-card .card .entry-image, .hero-card .card .entry-content {
       display: table-cell; }
-    .cards .hero-banner .hero-banner-entry {
-      border-left: 2px solid #000; }
-      .cards .hero-banner .hero-banner-entry .content-type, .cards .hero-banner .hero-banner-entry h3, .cards .hero-banner .hero-banner-entry p {
-        padding-left: 24px; }
-    .cards .hero-banner .entry-image {
+    .hero-card .card .entry-image {
       width: 68%;
-      height: 240px; } }
+      height: 240px; }
+    .hero-card .card .entry-content {
+      padding: 0 1em 1em 1em; } }
 
 .portal-landing .banner {
   margin-bottom: 1.6em;

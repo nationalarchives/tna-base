@@ -1,7 +1,7 @@
 
 .button {
   font-family: $tna_heading_font;
-  background-color: #000;
+  background-color: $col_blk;
   color: #fff;
   border: $grid_line;
   padding: 0.5em 0.9em;
@@ -10,15 +10,15 @@
   text-align: center;
   &:hover {
     background-color: #fff;
-    color: #000;
+    color: $col_blk;
     text-decoration: none;
   }
 }
 .primary {
   background-color: #fff;
-  color: #000;
+  color: $col_blk;
   &:hover {
-    background-color: #000;
+    background-color: $col_blk;
     color: #fff;
   }
 }
@@ -27,7 +27,7 @@
   background-color: #fff;
   color: #555;
   &:hover {
-    background-color: #000;
+    background-color: $col_blk;
     color: #fff;
   }
 }
@@ -36,7 +36,7 @@
   background-color: #eee;
   color: #555;
   &:hover {
-    background-color: #000;
+    background-color: $col_blk;
     color: #fff;
   }
 }
@@ -45,7 +45,7 @@
   background-color: transparent;
   color: #fff;
   &:hover {
-    background-color: #000;
+    background-color: $col_blk;
     color: #fff;
   }
 }

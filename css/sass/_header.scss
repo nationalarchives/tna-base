@@ -1,6 +1,6 @@
 /* TNA header styles */
 header {
-  background-color: #000;
+  background-color: $col_blk;
   color: #fff;
   padding: 1em 0;
   .logo {
@@ -14,7 +14,7 @@ header {
       right: 55px;
       width: 226px;
       height: 42px;
-      color: #000;
+      color: $col_blk;
       border: #fff solid 2px;
     }
     input[type='submit'] {
@@ -45,7 +45,7 @@ header {
           display: block;
           &:hover {
             background-color: #fce45c;
-            color: #000;
+            color: $col_blk;
           }
         }
       }
