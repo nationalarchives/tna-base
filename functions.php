@@ -28,6 +28,7 @@ include 'inc/functions/functions-admin.php';
 include 'inc/functions/functions-og-meta.php';
 include 'inc/functions/functions-portal-landing.php';
 include 'inc/functions/functions-cards.php';
+include 'inc/functions/functions-cards-og-meta.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
