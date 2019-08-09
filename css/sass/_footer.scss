@@ -1,5 +1,3 @@
-/* TNA footer styles */
-
 footer {
   background-color: $col_blk;
   .footer-col {
@@ -150,10 +148,10 @@ footer {
           &[type="email"] {
             width: 73%;
             @media (max-width: 976px) {
-              width:100%;
+              width: 100%;
               max-width: 480px;
-              display:block;
-              margin-bottom:10px;
+              display: block;
+              margin-bottom: 10px;
             }
           }
           &[type="submit"] {

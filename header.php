@@ -76,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				      action="/search/results" role="search">
 					<div class="input-group">
 						<input type="text" placeholder="Search our website..." required aria-required="true" name="QueryText" value="">
-						<span class="input-group-addon"><input type="submit" value=""></span>
+						<span class="input-group-addon"><input type="submit" value="Search"></span>
 					</div>
 					<label>
 						<input name="radioSearchGroup" value="search_website" checked="" type="radio"> Search our website

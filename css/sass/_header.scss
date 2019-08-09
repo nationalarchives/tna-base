@@ -149,6 +149,7 @@ header {
   }
   .search-expander,
   .search-close {
+    border: none;
     height: 2.7em;
     width: 40px;
     background: $tna_search_white;
@@ -162,20 +163,25 @@ header {
   }
   #mobileGlobalSearch {
     input[type='text'] {
+      font-weight: normal;
+      color: $col_blk;
       width: 100%;
-      border-radius: 0px;
+      border-radius: 0;
       border: none;
       height: 40px;
-      color: $tna_dark;
+      margin-bottom: 0.5em;
     }
     input[type='submit'] {
-      background: $tna_search_white;
-      cursor: pointer;
-      background-color: $tna_teal;
-      width: 40px;
+      border-color: #fff;
+    }
+    label {
+      width: 100%;
+    }
+    .input-group {
+      padding:10px 0;
     }
     .input-group-addon {
-      padding: 0px;
+      padding: 0;
       border: none;
     }
   }

@@ -3,8 +3,11 @@
   color: #fff;
   padding: 1.6em 0;
   border-top: solid 2px #fff;
-  a {
+  a, a:active, a:visited {
     color: #fff;
+  }
+  a:hover {
+    color: $col_yellow;
   }
   ul {
     margin: 0;

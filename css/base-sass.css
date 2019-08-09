@@ -4631,7 +4631,7 @@ form input[type=email],
 form input[type=date],
 form input.width-half {
   border: 2px solid #26262a;
-  padding: 0.6em;
+  padding: 8px;
   text-indent: 5px;
   min-width: 220px;
   width: auto; }
@@ -4820,8 +4820,10 @@ blockquote:before {
   color: #fff;
   padding: 1.6em 0;
   border-top: solid 2px #fff; }
-  .mega-menu a {
+  .mega-menu a, .mega-menu a:active, .mega-menu a:visited {
     color: #fff; }
+  .mega-menu a:hover {
+    color: #fbe2bc; }
   .mega-menu ul {
     margin: 0;
     padding: 0;
@@ -5007,6 +5009,7 @@ header {
       width: 300px; } }
   header .search-expander,
   header .search-close {
+    border: none;
     height: 2.7em;
     width: 40px;
     background: url("../img/search-white.png") center no-repeat;
@@ -5018,18 +5021,21 @@ header {
     right: 20px;
     cursor: pointer; }
   header #mobileGlobalSearch input[type='text'] {
+    font-weight: normal;
+    color: #26262a;
     width: 100%;
-    border-radius: 0px;
+    border-radius: 0;
     border: none;
     height: 40px;
-    color: #222; }
+    margin-bottom: 0.5em; }
   header #mobileGlobalSearch input[type='submit'] {
-    background: url("../img/search-white.png") center no-repeat;
-    cursor: pointer;
-    background-color: #008484;
-    width: 40px; }
+    border-color: #fff; }
+  header #mobileGlobalSearch label {
+    width: 100%; }
+  header #mobileGlobalSearch .input-group {
+    padding: 10px 0; }
   header #mobileGlobalSearch .input-group-addon {
-    padding: 0px;
+    padding: 0;
     border: none; }
 @-webkit-keyframes subtle-bounce {
   0%,
@@ -5115,7 +5121,6 @@ header {
 .js #search-field-wrapper > ul {
   display: none; }
 
-/* TNA footer styles */
 footer {
   background-color: #26262a; }
   footer .footer-col {
@@ -5448,128 +5453,6 @@ footer {
     content: " ";
     display: table;
     clear: both; } }
-/* -------------------------- */
-/* Old TNA styling ---------- */
-/* -------------------------- */
-/* Header --------------------*/
-header #mobileGlobalSearch .input-group {
-  padding: 10px 0; }
-header #mobileGlobalSearch label {
-  font-weight: normal; }
-  header #mobileGlobalSearch label input[type="radio"] {
-    margin: 0 5px 0 5px; }
-header #mobileGlobalSearch #changeDestination {
-  padding-top: .5em; }
-
-/* WEB COLOURS */
-.hue-red {
-  background-color: #cb0d07;
-  color: #fff; }
-
-.hue-yellow {
-  background-color: #fce45c;
-  color: #111; }
-
-.hue-teal {
-  background-color: #008484;
-  color: #fff; }
-
-.hue-indigo {
-  background-color: #405480;
-  color: #fff; }
-
-.hue-grey-darkest {
-  background-color: #111;
-  color: #fff; }
-
-.hue-grey-darker {
-  background-color: #222;
-  color: #fff; }
-
-.hue-grey-dark {
-  background-color: #333;
-  color: #fff; }
-
-.hue-grey-mid-dark {
-  background-color: #555;
-  color: #fff; }
-
-.hue-grey-mid-light {
-  background-color: #999;
-  color: #111; }
-
-.hue-grey-light {
-  background-color: #ddd;
-  color: #111; }
-
-.hue-grey-lighter {
-  background-color: #eee;
-  color: #111; }
-
-.hue-grey-lightest {
-  background-color: #f3f3f3;
-  color: #111; }
-
-.hue-yellow-dark {
-  background-color: #ebab00;
-  color: #111; }
-
-.text-yellow, a.text-yellow,
-.hue-grey-darkest a, .hue-grey-darker a, .hue-grey-dark a, .hue-grey-mid-dark a,
-a.hue-grey-darkest, a.hue-grey-darker, a.hue-grey-dark, a.hue-grey-mid-dark {
-  color: #fce45c; }
-
-.text-grey-light {
-  color: #ddd; }
-
-.text-blue, .hue-yellow a {
-  color: #2A5DB0; }
-
-.hue-teal, .hue-red, .hue-teal a, .overlay a.button {
-  color: #fff; }
-
-.hue-50-yellow, .hue-75-yellow {
-  background-color: #fce45c;
-  background-color: rgba(252, 228, 92, 0.75);
-  color: #111; }
-
-.hue-50-teal {
-  background-color: #008484;
-  background-color: rgba(0, 153, 153, 0.5);
-  color: #eee; }
-
-.hue-25-teal {
-  background-color: #008484;
-  background-color: rgba(0, 153, 153, 0.25);
-  color: #eee; }
-
-.hue-50-black {
-  background-color: #333;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #eee; }
-
-.hue-25-black {
-  background-color: #333;
-  background-color: rgba(0, 0, 0, 0.25);
-  color: #eee; }
-
-.hue-25-white {
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.25);
-  color: #111; }
-
-.hue-grey-darkest a, .hue-grey-darker a, .hue-grey-dark a, .hue-grey-mid-dark a,
-a.hue-grey-darkest, a.hue-grey-darker, a.hue-grey-dark, a.hue-grey-mid-dark {
-  color: #fce45c;
-  /* no need to specify text link color for lighter grey hue classes as this can be our default blue */ }
-
-.hue-yellow a {
-  color: #2A5DB0; }
-
-a.hue-teal, a.hue-red {
-  color: #fce45c;
-  background-color: transparent; }
-
 /* TNA image styles */
 .feature-img {
   position: relative; }
@@ -5911,8 +5794,60 @@ a.hue-teal, a.hue-red {
   padding: 10px 10px 0 0;
   background: url("../img/dot-grey.png"); }
 
+.cards .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+.cards .col-md-4, .cards .col-md-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+.cards .col-md-4 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.33333%;
+  -ms-flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  min-width: 33.33333%; }
+.cards .col-md-3 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  min-width: 25%; }
+@media (max-width: 768px) {
+  .cards .col-md-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%; }
+  .cards .col-md-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    min-width: 50%;
+    max-width: 50%; } }
+@media (max-width: 480px) {
+  .cards .row {
+    display: block; }
+  .cards .col-md-3, .cards .col-md-4 {
+    display: block;
+    max-width: 100%;
+    width: 100%; } }
 .cards .card {
+  width: 100%;
   margin-bottom: 3.2em; }
+  .cards .card a {
+    display: block; }
 .cards a:hover {
   text-decoration: none; }
 .cards .entry-image {
@@ -5937,7 +5872,8 @@ a.hue-teal, a.hue-red {
 
 @media (min-width: 768px) {
   .hero-card .col-md-4 {
-    width: 100%; }
+    max-width: 100%;
+    min-width: 100%; }
   .hero-card .card {
     border-right: 2px solid #26262a;
     display: table;

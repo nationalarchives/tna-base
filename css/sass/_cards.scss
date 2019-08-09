@@ -1,6 +1,69 @@
 .cards {
+  .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .col-md-4, .col-md-3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .col-md-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    min-width: 33.33333%;
+  }
+  .col-md-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    min-width: 25%;
+  }
+  @media (max-width: 768px) {
+    .col-md-4 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+    .col-md-3 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+  @media (max-width: 480px) {
+    .row {
+      display: block;
+    }
+    .col-md-3, .col-md-4 {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
   .card {
+    width: 100%;
     margin-bottom: 3.2em;
+    a {
+      display: block;
+    }
   }
   a:hover {
     text-decoration: none;
@@ -34,7 +97,8 @@
 .hero-card {
   @media (min-width: 768px) {
     .col-md-4 {
-      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
     }
     .card {
       border-right: $grid_line;
