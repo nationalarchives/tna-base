@@ -267,13 +267,10 @@ header {
     position: absolute;
     top: -30px;
   }
-  #search-field-wrapper {
-    margin-top: 4px;
-  }
 }
 
 .notification-banner {
-  background-color: $tna_yellow;
+  background-color: $col_yellow;
   p {
     display: inline;
     padding: 0;

@@ -71,49 +71,17 @@
       margin-top: 0;
     }
   }
-
   blockquote {
-    font-family: 'Roboto Mono', monospace;
-    border: solid 2px #000;
-    padding: 1.6em 3.2em;
-    margin-bottom: 1.6em;
-    margin-left: -3.2em;
-    background: #fff;
-    max-width: 640px;
-
-    p {
-      margin: 0;
+    margin: 0 0 1.6em -3.2em;
+    max-width: 680px;
+    @media (max-width: 1024px) {
+      padding: 1.6em 2.4em;
+      margin: 0 0 1.6em -2.4em;
+      max-width: 100%;
     }
-
-    cite {
-      display: block;
-      font-size: 0.9em;
-      text-align: right;
-      margin: 0.6em 0;
-    }
-  }
-
-  .emphasis-block {
-    background: #000;
-    color: #fff;
-  }
-
-  .emphasis-alert {
-    background: $col_alert;
-  }
-
-  .emphasis-success {
-    background: $col_success;
-  }
-
-  .emphasis-error {
-    background: $col_error;
-  }
-
-  @media (max-width: 992px) {
-    blockquote {
+    @media (max-width: 992px) {
       padding: 1.6em;
-      margin-left: 0;
+      margin: 0 0 1.6em 0;
       max-width: 100%;
     }
   }

@@ -85,6 +85,39 @@ body {
       }
     }
   }
+  blockquote {
+    font-family: 'Roboto Mono', monospace;
+    border: solid 2px #000;
+    padding: 1.6em 3.2em;
+    margin: 0 0 1.6em 0;
+    background: #fff;
+    width: 100%;
+    p {
+      margin: 0;
+    }
+    cite {
+      display: block;
+      font-size: 0.9em;
+      text-align: right;
+      margin: 0.6em 0;
+    }
+    .misc {
+      margin-bottom: 1.6em;
+    }
+  }
+  .emphasis-block {
+    background: #000;
+    color: #fff;
+  }
+  .emphasis-alert {
+    background: $col_alert;
+  }
+  .emphasis-success {
+    background: $col_success;
+  }
+  .emphasis-error {
+    background: $col_error;
+  }
   hr {
     height: 0;
     border: 0;
