@@ -183,13 +183,18 @@ function rm_livelb($url ) {
  * @param string $description
  * @param string $image
  * @param string $date
+ * @param string $label
  * @return string
  */
-function display_card( $id, $url, $title, $description, $image, $date ) {
+function display_card( $id, $url, $title, $description, $image, $date, $label='' ) {
 
     if ( $url ) {
 
-        $type = content_type( $url );
+        if ( $label == '' ) {
+            $type = content_type( $url );
+        } else {
+            $type = $label;
+        }
 
         if ( !url_exists( $url ) ) {
 
@@ -204,7 +209,7 @@ function display_card( $id, $url, $title, $description, $image, $date ) {
 
         $image = rm_livelb( $image );
 
-        return card_html( $id, $url, $image, $type, $title, $description, $date );
+        return card_html( $id, $url, $image, $type, $title, $description, $date, $label );
     }
 }
 
@@ -303,7 +308,7 @@ function is_card_active( $expire ) {
  * @param string $id
  * @return string
  */
-function card_fallback( $fallback, $id ) {
+function card_fallback( $fallback='', $id ) {
 
     $url = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
     $image = make_path_relative( get_stylesheet_directory_uri().'/img/events.jpg' );

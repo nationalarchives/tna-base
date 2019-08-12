@@ -27,6 +27,7 @@ include 'inc/functions/template-parts.php';
 include 'inc/functions/functions-admin.php';
 include 'inc/functions/functions-og-meta.php';
 include 'inc/functions/functions-portal-landing.php';
+include 'inc/functions/functions-level-one.php';
 include 'inc/functions/functions-cards.php';
 include 'inc/functions/functions-cards-og-meta.php';
 

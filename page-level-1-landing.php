@@ -23,23 +23,31 @@ get_header(); ?>
 					?>
 				</div>
 			</div>
-			<main id="main" role="main">
-				<div class="row equal-heights">
-					<?php
-					$boxes  = array();
-					$n      = get_post_meta( $post->ID, 'number_of_boxes', true );
-					for ($i = 1; $i <= $n; $i++) {
-						$boxes[$i]['title']   = get_post_meta( $post->ID, 'box_title_' . $i, true );
-						$boxes[$i]['url']     = get_post_meta( $post->ID, 'box_title_url_' . $i, true );
-						$boxes[$i]['image']   = get_post_meta( $post->ID, 'box_image_url_' . $i, true );
-						$boxes[$i]['content'] = wpautop(get_post_meta( $post->ID, 'box_content_' . $i, true ));
-						$boxes[$i]['display'] = get_post_meta( $post->ID, 'box_width_' . $i, true );
-					}
-					get_content_meta_boxes( $boxes );
-					?>
-				</div>
-			</main>
-		</div>
+        </div>
+        <main id="main" role="main">
+            <div class="cards">
+                <div class="container">
+                    <div class="row">
+                        <?php
+                        for ($i = 1; $i <= 12; $i++) {
+                            $title   = get_post_meta( $post->ID, 'card_level_one_title_' . $i, true );
+                            $url     = get_post_meta( $post->ID, 'card_level_one_url_' . $i, true );
+                            $image   = get_post_meta( $post->ID, 'card_level_one_image_' . $i, true );
+                            $excerpt = wpautop(get_post_meta( $post->ID, 'card_level_one_excerpt_' . $i, true ));
+                            $label   = get_post_meta( $post->ID, 'card_level_one_label_' . $i, true );
+                            $date    = '';
+
+                            if ( $title != '' ||  $url != '' ) {
+
+                                echo display_card( $i, $url, $title, $excerpt, $image, $date, $label );
+
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </main>
 		<?php endwhile; ?>
 	</div>
 
