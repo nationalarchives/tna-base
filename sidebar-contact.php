@@ -12,12 +12,6 @@ switch( $webchat ) {
 		break;
 }
 
-
-if ( $sidebar == 'false' ) {
-	// do nothing
-} else {
-	get_sidebar( $sidebar );
-}
 ?>
 
 
