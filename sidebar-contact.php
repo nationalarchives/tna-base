@@ -1,4 +1,5 @@
 <?php
+// the ids are from the livechat admin interface
 $webchat = get_post_meta( $post->ID, 'webchat', true );
 switch( $webchat ) {
 	case 'yourviews':
