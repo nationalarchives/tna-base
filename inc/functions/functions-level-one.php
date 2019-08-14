@@ -13,6 +13,13 @@ function level_one_meta_boxes() {
             'priority' => 'high',
             'fields' => array(
                 array(
+                    'name' => 'Tag line',
+                    'desc' => 'Max 7 words',
+                    'id' => 'level_one_tag_line',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
                     'name' => 'Banner button text',
                     'desc' => '',
                     'id' => 'action_button_title',
@@ -75,7 +82,7 @@ function level_one_meta_boxes() {
                         'desc' => '',
                         'id' => 'card_level_one_label_'.$i,
                         'type' => 'select',
-                        'options' => array('Feature', 'News', 'Blog', 'Multimedia', 'Event', 'Resource'),
+                        'options' => array('No label', 'Feature', 'News', 'Blog', 'Multimedia', 'Event', 'Resource'),
                     ),
                     array(
                         'name' => 'Excerpt',

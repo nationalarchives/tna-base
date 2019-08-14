@@ -7,6 +7,9 @@
   display: inline-block;
   min-width: 24px;
   text-align: center;
+  &:active, &:visited {
+    color: #fff;
+  }
   &:hover {
     background-color: #fff;
     color: $col_blk;
@@ -16,6 +19,9 @@
 .primary {
   background-color: #fff;
   color: $col_blk;
+  &:active, &:visited {
+    color: $col_blk;
+  }
   &:hover {
     background-color: $col_blk;
     color: #fff;
@@ -25,6 +31,9 @@
   border-color: #ccc;
   background-color: #fff;
   color: #555;
+  &:active, &:visited {
+    color: #555;
+  }
   &:hover {
     background-color: $col_blk;
     color: #fff;
@@ -34,6 +43,9 @@
   border-color: #eee;
   background-color: #eee;
   color: #555;
+  &:active, &:visited {
+    color: #555;
+  }
   &:hover {
     background-color: $col_blk;
     color: #fff;
@@ -43,6 +55,9 @@
   border-color: #fff;
   background-color: transparent;
   color: #fff;
+  &:active, &:visited {
+    color: #555;
+  }
   &:hover {
     background-color: $col_blk;
     color: #fff;

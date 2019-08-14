@@ -90,7 +90,7 @@ function get_image_caption( $position='bottom' ) {
     }
     if(!empty($img_caption_desc) && !empty($img_caption_url)) : ?>
         <div class="feature-img-caption <?php echo $position; ?>">
-            <button class="eye_caption">&nbsp;</button>
+            <button class="eye_caption"><div class="icon-circle icon-info icon-size-32"></div></button>
             <div class="image_caption_back">
                 <span class="clearfix"><?php echo $img_caption_desc; ?></span>
                 <a href="<?php echo $img_caption_url ?>" target="_blank">

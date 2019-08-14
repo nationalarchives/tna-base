@@ -16,11 +16,31 @@ get_header(); ?>
 					global $post;
 					$image      = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full-page-width', true ) );
 					$title      = get_the_title();
-					$content    = wpautop(get_the_content());
+					$content    = get_post_meta( $post->ID, 'level_one_tag_line', true );
 					$button     = get_post_meta( $post->ID, 'action_button_title', true );
 					$url        = get_post_meta( $post->ID, 'action_button_url', true );
-					get_page_banner( 'level one', $title, $image, $content, $button, $url );
 					?>
+                    <div class="banner feature-img feature-img-bg" <?php echo $image; ?>>
+                        <div class="entry-header">
+                            <h1><?php echo $title; ?></h1>
+                        </div>
+                        <?php if ( $content ) { ?>
+                            <div class="entry-content">
+                                <div class="tag-line">
+                                    <?php echo $content; ?>
+                                </div>
+                                <?php if ( $button ) { ?>
+                                    <div class="call-to-action-button">
+                                        <a href="<?php echo $url; ?>" title="<?php echo $button; ?>"
+                                           class="button">
+                                            <?php echo $button; ?>
+                                        </a>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
+                        <?php get_image_caption( 'top' ) ?>
+                    </div>
 				</div>
 			</div>
         </div>
@@ -37,7 +57,7 @@ get_header(); ?>
                             $label   = get_post_meta( $post->ID, 'card_level_one_label_' . $i, true );
                             $date    = '';
 
-                            if ( $title != '' ||  $url != '' ) {
+                            if ( $url != '' ) {
 
                                 echo display_card( $i, $url, $title, $excerpt, $image, $date, $label );
 

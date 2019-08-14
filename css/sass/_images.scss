@@ -4,8 +4,8 @@
   position: relative;
   .feature-img-caption {
     z-index: 1000;
-    width:38px;
-    height:38px;
+    width:32px;
+    height:32px;
   }
   .img-caption-bottom {
     position: absolute;
@@ -21,41 +21,35 @@
     top: 0;
     right: 0;
   }
-  .eye_caption {
-    width:38px;
-    height:38px;
-    background:$tna_eye_img_caption;
-    color: #fff;
-    &:hover{
-      background:$tna_eye_img_caption_hover;
+  button {
+    width:32px;
+    height:32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    .icon-circle {
+      margin: 0;
+    }
+    .icon-circle:hover{
+      background-color: $col_mid_dark;
     }
     &:focus {
-      background-color: $tna_yellow;
-      outline: 3px solid $tna_yellow_dark;
-      color: $tna_dark;
+      outline: 3px solid $col_light;
+      color: $col_blk;
     }
   }
   .image_caption_back {
     display:none;
     position:absolute;
     right: 0;
-    background-color: #111;
-    opacity: .85;
+    background-color: #fff;
     padding: 5px 10px;
     z-index: 5000;
     font-size: .9em;
-    color: #eee;
     text-align: right;
     min-width: 300px;
     max-width: 100%;
-    a:link,
-    a:visited,
-    a {
-      color: $tna_yellow;
-      &:hover {
-        text-decoration:underline;
-      }
-    }
   }
 }
 

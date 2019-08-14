@@ -73,7 +73,13 @@ function card_content( $type, $title, $description ) {
 	$type_class = strtolower( $type );
 	$description = limit_words( $description );
 
-	$html = '<div class="entry-content %s"><div class="content-type">%s</div><h3>%s</h3><p>%s</p></div>';
+	if ( $type == 'No label' ) {
+	    $type = '';
+    } else {
+	    $type = '<div class="content-type">'.$type.'</div>';
+    }
+
+	$html = '<div class="entry-content %s">%s<h3>%s</h3><p>%s</p></div>';
 
 	return sprintf( $html, $type_class, $type, $title, $description );
 }
@@ -209,7 +215,7 @@ function display_card( $id, $url, $title, $description, $image, $date, $label=''
 
         $image = rm_livelb( $image );
 
-        return card_html( $id, $url, $image, $type, $title, $description, $date, $label );
+        return card_html( $id, $url, $image, $type, $title, $description, $date );
     }
 }
 
@@ -308,7 +314,7 @@ function is_card_active( $expire ) {
  * @param string $id
  * @return string
  */
-function card_fallback( $fallback='', $id ) {
+function card_fallback( $fallback, $id ) {
 
     $url = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
     $image = make_path_relative( get_stylesheet_directory_uri().'/img/events.jpg' );
