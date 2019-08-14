@@ -19,9 +19,6 @@ get_header(); ?>
 					$content    = get_post_meta( $post->ID, 'level_one_tag_line', true );
 					$button     = get_post_meta( $post->ID, 'action_button_title', true );
 					$url        = get_post_meta( $post->ID, 'action_button_url', true );
-                    $section_1  = get_post_meta( $post->ID, 'level_one_template_part_1', true );
-                    $section_2  = get_post_meta( $post->ID, 'level_one_template_part_2', true );
-                    $section_3  = get_post_meta( $post->ID, 'level_one_template_part_3', true );
 					?>
                     <div class="banner feature-img feature-img-bg" <?php echo $image; ?>>
                         <div class="entry-header">
@@ -49,6 +46,10 @@ get_header(); ?>
         </div>
         <main id="main" role="main">
             <?php
+            $section_1  = get_post_meta( $post->ID, 'level_one_template_part_1', true );
+            $section_2  = get_post_meta( $post->ID, 'level_one_template_part_2', true );
+            $section_3  = get_post_meta( $post->ID, 'level_one_template_part_3', true );
+
             if ( $section_1 ) {
                 get_template_part( 'partials/'.$section_1 );
             }
