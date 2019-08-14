@@ -5317,7 +5317,7 @@ footer {
   margin-bottom: 1.6em; }
   .level-one .banner .entry-header {
     border: 2px solid #26262a;
-    padding: 8px 24px;
+    padding: 7px 22px;
     margin: 34px 0 16px 34px;
     background-color: #fff;
     display: inline-block; }
@@ -5799,9 +5799,13 @@ footer {
   width: 100%;
   margin-bottom: 3.2em; }
   .cards .card a {
-    display: block; }
-.cards a:hover {
-  text-decoration: none; }
+    position: relative;
+    display: block;
+    width: 100%; }
+    .cards .card a:hover {
+      text-decoration: none; }
+      .cards .card a:hover .entry-content h3 {
+        text-decoration: underline; }
 .cards .entry-image {
   display: block;
   width: 100%;
@@ -5811,6 +5815,11 @@ footer {
 .cards .content-type {
   padding: 0.3em 0;
   color: #26262a; }
+.cards h2 {
+  border-top: 2px solid #26262a;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-bottom: 26px; }
 .cards h3 {
   border-top: 2px solid #26262a;
   padding-top: 0.6em;

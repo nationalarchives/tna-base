@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Level 1 landing
+ * Template Name: Level one
  *
  */
 get_header(); ?>
@@ -19,6 +19,9 @@ get_header(); ?>
 					$content    = get_post_meta( $post->ID, 'level_one_tag_line', true );
 					$button     = get_post_meta( $post->ID, 'action_button_title', true );
 					$url        = get_post_meta( $post->ID, 'action_button_url', true );
+                    $section_1  = get_post_meta( $post->ID, 'level_one_template_part_1', true );
+                    $section_2  = get_post_meta( $post->ID, 'level_one_template_part_2', true );
+                    $section_3  = get_post_meta( $post->ID, 'level_one_template_part_3', true );
 					?>
                     <div class="banner feature-img feature-img-bg" <?php echo $image; ?>>
                         <div class="entry-header">
@@ -45,28 +48,20 @@ get_header(); ?>
 			</div>
         </div>
         <main id="main" role="main">
-            <div class="cards">
-                <div class="container">
-                    <div class="row">
-                        <?php
-                        for ($i = 1; $i <= 12; $i++) {
-                            $title   = get_post_meta( $post->ID, 'card_level_one_title_' . $i, true );
-                            $url     = get_post_meta( $post->ID, 'card_level_one_url_' . $i, true );
-                            $image   = get_post_meta( $post->ID, 'card_level_one_image_' . $i, true );
-                            $excerpt = wpautop(get_post_meta( $post->ID, 'card_level_one_excerpt_' . $i, true ));
-                            $label   = get_post_meta( $post->ID, 'card_level_one_label_' . $i, true );
-                            $date    = '';
+            <?php
+            if ( $section_1 ) {
+                get_template_part( 'partials/'.$section_1 );
+            }
+            if ( $section_2 ) {
+                get_template_part( 'partials/'.$section_2 );
+            }
 
-                            if ( $url != '' ) {
+            get_template_part( 'partials/level-one-cards' );
 
-                                echo display_card( $i, $url, $title, $excerpt, $image, $date, $label );
-
-                            }
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
+            if ( $section_3 ) {
+                get_template_part( 'partials/'.$section_3 );
+            }
+            ?>
         </main>
 		<?php endwhile; ?>
 	</div>

@@ -109,7 +109,7 @@
     margin-bottom: 1.6em;
     .entry-header {
       border: $grid_line;
-      padding: 8px 24px;
+      padding: 7px 22px;
       margin: 34px 0 16px 34px;
       background-color: #fff;
       display: inline-block;
@@ -124,7 +124,7 @@
         margin: 0;
       }
       .tag-line {
-        font-family: "Roboto Mono", monospace;
+        font-family: $tna_heading_font;
         display: inline-block;
         background-color: #fff;
         margin: 0;
