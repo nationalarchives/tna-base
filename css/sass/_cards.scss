@@ -67,7 +67,7 @@
       width: 100%;
       &:hover {
         text-decoration: none;
-        .entry-content h3 {
+        .entry-content h3, .entry-header h3 {
           text-decoration: underline;
         }
       }

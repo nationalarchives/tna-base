@@ -5804,7 +5804,7 @@ footer {
     width: 100%; }
     .cards .card a:hover {
       text-decoration: none; }
-      .cards .card a:hover .entry-content h3 {
+      .cards .card a:hover .entry-content h3, .cards .card a:hover .entry-header h3 {
         text-decoration: underline; }
 .cards .entry-image {
   display: block;
@@ -5853,45 +5853,49 @@ footer {
       padding: 0 1em 1em 1em; } }
 
 .portal-landing .banner {
-  margin-bottom: 1.6em;
   background: #ddd center center;
-  background-size: cover; }
+  background-size: cover;
+  margin-bottom: 1.6em; }
   .portal-landing .banner h1 {
-    font-size: 3em;
-    color: #fff;
-    text-shadow: 3px 3px 8px #000;
-    line-height: 1.23;
     display: inline-block;
-    padding: 3px 7px;
-    background-color: #000;
-    background-color: rgba(0, 0, 0, 0.5); }
-  .portal-landing .banner .portal-title h1 {
-    margin: 2em auto; }
-  .portal-landing .banner .portal-branding h1 {
-    margin: 0.3em auto; }
+    background-color: #fff;
+    border: 2px solid #26262a;
+    padding: 8px 34px;
+    margin-bottom: 5em; }
   .portal-landing .banner .portal-logo img {
     margin: 0 auto; }
+.portal-landing .intro-content {
+  margin-bottom: 3.2em; }
+  .portal-landing .intro-content .entry-image {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .portal-landing .intro-content .intro-entry {
+    border-top: 2px solid #26262a;
+    padding-top: 0.6em; }
 .portal-landing .tna-breadcrumb {
   margin: 0; }
 .portal-landing .breadcrumbs {
   display: inline-block;
   color: #fff;
   padding: 3px 7px;
-  background-color: #000;
+  background-color: #26262a;
   background-color: rgba(0, 0, 0, 0.5); }
   .portal-landing .breadcrumbs a {
-    color: #fce45c; }
+    color: #fbe2bc; }
 .portal-landing .stay-up-to-date-bar {
   padding: 0.4em 0;
-  background: #2d3b59;
-  color: #fff; }
-  .portal-landing .stay-up-to-date-bar img.social-icon {
-    background-color: #008484;
-    border-radius: 50%;
-    padding: 3px;
-    margin: 0 .2em;
-    width: 26px; }
+  text-align: right;
+  background-color: #dde5d5; }
+  .portal-landing .stay-up-to-date-bar span {
+    margin-right: 1em; }
   .portal-landing .stay-up-to-date-bar a {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px; }
+    .portal-landing .stay-up-to-date-bar a .icon-circle {
+      margin: 0; }
 
 /*# sourceMappingURL=base-sass.css.map */

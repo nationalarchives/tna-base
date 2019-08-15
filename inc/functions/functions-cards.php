@@ -192,11 +192,11 @@ function rm_livelb($url ) {
  * @param string $label
  * @return string
  */
-function display_card( $id, $url, $title, $description, $image, $date, $label='' ) {
+function display_card( $id, $url, $title, $description, $image, $date, $label ) {
 
     if ( $url ) {
 
-        if ( $label == '' ) {
+        if ( $label == '' || $label == 'Auto' ) {
             $type = content_type( $url );
         } else {
             $type = $label;

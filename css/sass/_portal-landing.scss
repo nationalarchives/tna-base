@@ -1,26 +1,31 @@
 .portal-landing {
   .banner {
-    margin-bottom: 1.6em;
     background: #ddd center center;
     background-size: cover;
+    margin-bottom: 1.6em;
     h1 {
-      font-size: 3em;
-      color: #fff;
-      text-shadow: 3px 3px 8px #000;
-      line-height: 1.23;
       display: inline-block;
-      padding: 3px 7px;
-      background-color: #000;
-      background-color: rgba(0,0,0,.5);
-    }
-    .portal-title h1 {
-      margin: 2em auto;
-    }
-    .portal-branding h1 {
-      margin: 0.3em auto;
+      background-color: #fff;
+      border: $grid_line;
+      padding: 8px 34px;
+      margin-bottom: 5em;
     }
     .portal-logo img {
       margin: 0 auto;
+    }
+  }
+  .intro-content {
+    margin-bottom: 3.2em;
+    .entry-image {
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .intro-entry {
+      border-top: $grid_line;
+      padding-top: 0.6em;
     }
   }
   .tna-breadcrumb {
@@ -30,25 +35,26 @@
     display: inline-block;
     color: #fff;
     padding: 3px 7px;
-    background-color: #000;
+    background-color: $col_blk;
     background-color: rgba(0,0,0,.5);
     a {
-      color: #fce45c;
+      color: $col_yellow;
     }
   }
   .stay-up-to-date-bar {
     padding: 0.4em 0;
-    background: #2d3b59;
-    color: #fff;
-    img.social-icon {
-      background-color: #008484;
-      border-radius: 50%;
-      padding: 3px;
-      margin: 0 .2em;
-      width: 26px;
+    text-align: right;
+    background-color: $col_green;
+    span {
+      margin-right: 1em;
     }
     a {
       display: inline-block;
+      vertical-align: middle;
+      height: 32px;
+      .icon-circle {
+        margin: 0;
+      }
     }
   }
 }
