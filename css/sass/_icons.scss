@@ -16,44 +16,23 @@
 .icon-new-window {
   background-position: -40px 0;
 }
-.icon-new-window:hover {
-  background-position: -40px 40px;
-}
 .icon-play {
   background-position: -80px 0;
-}
-.icon-play:hover {
-  background-position: -80px 40px;
 }
 .icon-rss {
   background-position: -120px 0;
 }
-.icon-rss:hover {
-  background-position: -120px 40px
-}
 .icon-facebook {
   background-position: -160px 0;
-}
-.icon-facebook:hover {
-  background-position: -160px 40px;
 }
 .icon-twitter {
   background-position: -200px 0;
 }
-.icon-twitter:hover {
-  background-position: -200px 40px;
-}
 .icon-pinterest {
   background-position: -280px 0;
 }
-.icon-pinterest:hover {
-  background-position: -280px 40px;
-}
 .icon-flickr {
   background-position: -320px 0;
-}
-.icon-flickr:hover {
-  background-position: -320px 40px;
 }
 
 /* NEW */
@@ -99,6 +78,9 @@
 }
 .icon-twitter {
   background-image: $tna_icon_twitter;
+}
+.icon-instgram {
+  background-image: $tna_icon_instagram;
 }
 .icon-youtube {
   background-image: $tna_icon_youtube;

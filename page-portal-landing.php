@@ -23,7 +23,7 @@ get_header(); ?>
 
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
 		<?php get_template_part( 'breadcrumb' ); ?>
-		<div class="heading-banner text-center">
+		<div class="heading-banner">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 <?php echo $class ?>">
