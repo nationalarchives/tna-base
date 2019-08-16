@@ -86,21 +86,6 @@
     }
   }
 }
-.equal-heights {
-  > div {
-    background: white;
-    background-clip: content-box;
-    margin-bottom: 1.5em;
-  }
-  article {
-    margin-bottom: 0;
-  }
-  p {
-    margin-bottom: 0.5em;
-  }
-}
-
-/* Level 1 landing template */
 
 .level-one {
   .banner {
@@ -124,7 +109,7 @@
         margin: 0;
       }
       .tag-line {
-        font-family: $tna_heading_font;
+        font-family: $heading_font;
         display: inline-block;
         background-color: #fff;
         margin: 0;
@@ -148,5 +133,45 @@
   .feature-img-bg {
     background-position: center center;
     background-size: cover;
+  }
+}
+
+.level-two {
+  .level-two-intro {
+    .entry-header {
+      margin-bottom: 1.6em;
+      border-top: $grid_line;
+      padding-top: 0.6em;
+      h1 {
+        margin: 0;
+      }
+    }
+    .entry-content {
+      margin-bottom: 1.6em;
+    }
+    .well {
+      background-color: transparent;
+      border: $grid_line;
+      padding: 1.6em 1em;
+      margin-top: -1.6em;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .level-two-card {
+    margin-bottom: 3.2em;
+    .entry-image {
+      height: 185px;
+      overflow: hidden;
+    }
+    .entry-header {
+      margin-bottom: 1.6em;
+      border-top: $grid_line;
+      padding-top: 0.6em;
+      h2 {
+        margin: 0;
+      }
+    }
   }
 }

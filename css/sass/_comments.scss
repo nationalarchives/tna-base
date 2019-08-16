@@ -32,7 +32,7 @@
         .comment-author {
           color: $col_blk;
           cite {
-            font-family: $tna_heading_font;
+            font-family: $heading_font;
             font-style: normal;
             font-size: 1.2em;
             margin-bottom: 0.3em;
@@ -48,7 +48,7 @@
         }
         .reply {
           .comment-reply-link {
-            font-family: $tna_heading_font;
+            font-family: $heading_font;
             background-color: $col_blk;
             color: #fff;
             border: $grid_line;

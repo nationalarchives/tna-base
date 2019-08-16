@@ -6,11 +6,12 @@ get_header(); ?>
 
 <?php get_template_part( 'breadcrumb' ); ?>
 
-	<main id="primary" role="main" class="content-area">
+	<main id="primary" role="main" class="content-area level-two">
 		<div class="container">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="row">
 					<div class="col-md-12">
+                        <div class="level-two-intro">
 						<?php
 						global $post;
 						$image           = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'feature-box-thumb' ) );
@@ -19,9 +20,10 @@ get_header(); ?>
 						$section_content = wpautop(get_post_meta( $post->ID, 'feat_box', true ));
 						get_page_banner( 'section', $title, $image, $content, '', '', $section_content );
 						?>
+                        </div>
 					</div>
 				</div>
-				<div class="row equal-heights" id="equal-heights">
+				<div class="row equal-heights">
 					<?php
 					$i     = 1;
 					$n     = 1;

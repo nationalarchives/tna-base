@@ -89,12 +89,14 @@ function get_content_children_boxes( $boxes ) {
 	foreach ( $boxes as $box ) { ?>
 		<div class="col-xs-12 col-sm-6">
             <div class="level-two-card">
+                <?php if ( $box['image'] ) { ?>
+                <div class="entry-image">
+                    <a href="<?php echo $box['url']; ?>" class="img-responsive" title="<?php echo $box['title'] ?>">
+                        <img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
+                    </a>
+                </div>
+                <?php } ?>
                 <div class="entry-header">
-                    <?php if ( $box['image'] ) { ?>
-                        <a href="<?php echo $box['url']; ?>" class="img-responsive" title="<?php echo $box['title'] ?>">
-                            <img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
-                        </a>
-                    <?php } ?>
                     <h2>
                         <a href="<?php echo $box['url']; ?>" title="<?php echo $box['title'] ?>">
                             <?php echo $box['title']; ?>
