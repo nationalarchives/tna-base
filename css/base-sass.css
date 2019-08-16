@@ -5341,6 +5341,17 @@ footer {
 .level-one .feature-img-bg {
   background-position: center center;
   background-size: cover; }
+.level-one .box {
+  margin-bottom: 1.6em; }
+  .level-one .box .entry-header {
+    border-top: 2px solid #26262a;
+    padding-top: 0.6em;
+    margin-bottom: 1.6em; }
+    .level-one .box .entry-header h2 {
+      margin: 0; }
+  .level-one .box ul {
+    padding: 0;
+    list-style: none; }
 
 .level-two .level-two-intro .entry-header {
   margin-bottom: 1.6em;

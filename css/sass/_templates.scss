@@ -126,6 +126,22 @@
     background-position: center center;
     background-size: cover;
   }
+  // To be removed with template (page-level-1-landing.php)
+  .box {
+    margin-bottom: 1.6em;
+    .entry-header {
+      border-top: $grid-line;
+      padding-top: 0.6em;
+      margin-bottom: 1.6em;
+      h2 {
+        margin: 0;
+      }
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+  }
 }
 .level-two {
   .level-two-intro {

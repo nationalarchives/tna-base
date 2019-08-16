@@ -61,7 +61,7 @@ function get_content_meta_boxes( $boxes ) {
 		$mdCol      = ( $box['display'] == 'at full width' ) ? '12' : ( ( $box['display'] == 'at a half' ) ? '6' : '4');
 		$colClass   = ( $box['display'] == 'at full width' ) ? 'box-full' : ( ( $box['display'] == 'at a half' ) ? 'box-half' : 'box-third');
 		if ( !empty( $box['title'] ) && $box['display'] != 'disabled' ) { ?>
-			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
+			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?> box">
 				<article>
 					<?php if ( !empty( $box['image'] ) ) { ?>
 					<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $box['image']; ?>);">
