@@ -88,35 +88,35 @@ function get_content_meta_boxes( $boxes ) {
 function get_content_children_boxes( $boxes ) {
 	foreach ( $boxes as $box ) { ?>
 		<div class="col-xs-12 col-sm-6">
-			<article>
-				<div class="entry-header">
-					<h2>
-						<a href="<?php echo $box['url']; ?>" title="<?php echo $box['title'] ?>">
-							<?php echo $box['title']; ?>
-						</a>
-					</h2>
-				</div>
-				<div class="entry-content">
-					<?php if ( $box['image'] ) { ?>
-						<a href="<?php echo $box['url']; ?>" class="thumbnail" title="<?php echo $box['title'] ?>">
-							<img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
-						</a>
-					<?php } ?>
-					<p><?php echo $box['excerpt']; ?></p>
-					<?php if ( isset($box['child_pages']) ) { ?>
-						<ul class="child">
-							<?php foreach ( $box['child_pages'] as $child_page ) { ?>
-								<li>
-									<a href="<?php echo $child_page['url']; ?>" title="<?php echo $child_page['title'] ?>">
-										<?php echo $child_page['title']; ?>
-									</a>
-								</li>
-								<?php
-							} ?>
-						</ul>
-					<?php } ?>
-				</div>
-			</article>
+            <div class="level-two-card">
+                <div class="entry-header">
+                    <?php if ( $box['image'] ) { ?>
+                        <a href="<?php echo $box['url']; ?>" class="img-responsive" title="<?php echo $box['title'] ?>">
+                            <img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
+                        </a>
+                    <?php } ?>
+                    <h2>
+                        <a href="<?php echo $box['url']; ?>" title="<?php echo $box['title'] ?>">
+                            <?php echo $box['title']; ?>
+                        </a>
+                    </h2>
+                </div>
+                <div class="entry-content">
+                    <p><?php echo $box['excerpt']; ?></p>
+                    <?php if ( isset($box['child_pages']) ) { ?>
+                        <ul class="child">
+                            <?php foreach ( $box['child_pages'] as $child_page ) { ?>
+                                <li>
+                                    <a href="<?php echo $child_page['url']; ?>" title="<?php echo $child_page['title'] ?>">
+                                        <?php echo $child_page['title']; ?>
+                                    </a>
+                                </li>
+                                <?php
+                            } ?>
+                        </ul>
+                    <?php } ?>
+                </div>
+            </div>
 		</div>
 	<?php }
 }
