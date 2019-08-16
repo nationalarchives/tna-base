@@ -88,17 +88,11 @@ function portal_landing_meta_boxes() {
 	);
 
 	for ( $i = 0; $i <= 9; $i ++ ) {
-		if ($i==0) {
-			$banner = 'Banner ';
-			$n = '';
-		} else {
-			$banner = '';
-			$n = $i;
-		}
+
 		$portal_meta_boxes[] =
 			array(
 				'id'       => 'portal_card_'.$i,
-				'title'    => $banner.'Card '.$n,
+				'title'    => 'Card '.$i,
 				'pages'    => 'page',
 				'context'  => 'normal',
 				'priority' => 'high',

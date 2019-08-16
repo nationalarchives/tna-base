@@ -39,21 +39,18 @@ get_header(); ?>
 		} ?>
 	</div>
 	<main id="main" role="main">
-        <div class="intro-card">
+        <div class="intro-content">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-9 col-sm-8">
-                        <div class="intro-content">
-                            <div class="intro-entry">
-                                <div class="entry-content">
-                                    <?php the_content(); ?>
-                                </div>
+                        <div class="intro-entry">
+                            <div class="entry-content">
+                                <?php the_content(); ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-3 col-sm-4">
-                        <div class="entry-image">
-                            <img src="<?php echo $intro_img ?>" alt="<?php the_title(); ?>" class="img-responsive">
+                        <div class="intro-image" style="background-image: url(<?php echo $intro_img ?>);">
                         </div>
                     </div>
                     </div>

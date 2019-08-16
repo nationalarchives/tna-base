@@ -3,29 +3,32 @@
     background: #ddd center center;
     background-size: cover;
     margin-bottom: 1.6em;
-    h1 {
-      display: inline-block;
-      background-color: #fff;
-      border: $grid_line;
-      padding: 8px 34px;
-      margin-bottom: 5em;
-    }
-    .portal-logo img {
-      margin: 0 auto;
+    .heading-banner {
+      min-height: 240px;
+      h1 {
+        display: inline-block;
+        background-color: #fff;
+        border: $grid_line;
+        padding: 7px 22px;
+        margin-bottom: 1em;
+      }
     }
   }
   .intro-content {
-    margin-bottom: 3.2em;
-    .entry-image {
-      width: 100%;
-      height: 100%;
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+    margin-bottom: 1.6em;
     .intro-entry {
       border-top: $grid_line;
       padding-top: 0.6em;
+      h2, h3 {
+        margin-top: 0;
+      }
+    }
+    .intro-image {
+      width: 100%;
+      min-height: 280px;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
   .tna-breadcrumb {
