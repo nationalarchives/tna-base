@@ -13,7 +13,7 @@
       &.comment-body {
         margin-bottom: 1.6em;
         overflow: hidden;
-        border-top: $grid_line;
+        border-top: $grid-line;
         padding: 1em 0;
         .comment-meta {
           &.commentmetadata {
@@ -30,7 +30,7 @@
           display:block;
         }
         .comment-author {
-          color: $col_blk;
+          color: $dark;
           cite {
             font-family: $heading_font;
             font-style: normal;
@@ -49,9 +49,9 @@
         .reply {
           .comment-reply-link {
             font-family: $heading_font;
-            background-color: $col_blk;
+            background-color: $dark;
             color: #fff;
-            border: $grid_line;
+            border: $grid-line;
             padding: 0.5em 0.9em;
             display: inline-block;
             min-width: 24px;

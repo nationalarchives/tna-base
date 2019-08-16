@@ -93,7 +93,7 @@
     position: relative;
     margin-bottom: 1.6em;
     .entry-header {
-      border: $grid_line;
+      border: $grid-line;
       padding: 7px 22px;
       margin: 34px 0 16px 34px;
       background-color: #fff;
@@ -113,7 +113,7 @@
         display: inline-block;
         background-color: #fff;
         margin: 0;
-        border: $grid_line;
+        border: $grid-line;
         padding: 8px 14px;
       }
       .button {
@@ -140,7 +140,7 @@
   .level-two-intro {
     .entry-header {
       margin-bottom: 1.6em;
-      border-top: $grid_line;
+      border-top: $grid-line;
       padding-top: 0.6em;
       h1 {
         margin: 0;
@@ -151,7 +151,7 @@
     }
     .well {
       background-color: transparent;
-      border: $grid_line;
+      border: $grid-line;
       padding: 1.6em 1em;
       margin-top: -1.6em;
       p {
@@ -167,7 +167,7 @@
     }
     .entry-header {
       margin-bottom: 1.6em;
-      border-top: $grid_line;
+      border-top: $grid-line;
       padding-top: 0.6em;
       h2 {
         margin: 0;

@@ -1,6 +1,6 @@
 /* TNA header styles */
 header {
-  background-color: $col_blk;
+  background-color: $dark;
   color: #fff;
   padding: 1em 0;
   .logo {
@@ -14,7 +14,7 @@ header {
       right: 55px;
       width: 226px;
       height: 42px;
-      color: $col_blk;
+      color: $dark;
       border: #fff solid 2px;
     }
     input[type='submit'] {
@@ -45,7 +45,7 @@ header {
           display: block;
           &:hover {
             background-color: #fce45c;
-            color: $col_blk;
+            color: $dark;
           }
         }
       }
@@ -164,7 +164,7 @@ header {
   #mobileGlobalSearch {
     input[type='text'] {
       font-weight: normal;
-      color: $col_blk;
+      color: $dark;
       width: 100%;
       border-radius: 0;
       border: none;
@@ -270,7 +270,7 @@ header {
 }
 
 .notification-banner {
-  background-color: $col_yellow;
+  background-color: $yellow-peach;
   p {
     display: inline;
     padding: 0;

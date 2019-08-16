@@ -17,9 +17,9 @@ form {
   }
   input[type="submit"] {
     font-family: "Roboto Mono", monospace;
-    background-color: $col_blk;
+    background-color: $dark;
     color: #fff;
-    border: $grid_line;
+    border: $grid-line;
     padding: 0.5em 0.9em;
     display: inline-block;
     min-width: 24px;
@@ -34,18 +34,18 @@ form {
   input[type=email],
   input[type=date],
   input.width-half {
-    border: $grid_line;
+    border: $grid-line;
     padding: 8px;
     text-indent: 5px;
     min-width: 220px;
     width: auto;
   }
   textarea {
-    border: $grid_line;
+    border: $grid-line;
     padding: 0.6em;
   }
   select {
-    border: $grid_line;
+    border: $grid-line;
     height: 2.4em;
   }
   input:focus,
@@ -54,7 +54,7 @@ form {
   input[type="submit"]:focus,
   textarea:focus,
   select:focus {
-    outline: 3px solid $col_yellow;
+    outline: 3px solid $yellow-peach;
   }
   .form-row {
     max-width: 100%;
@@ -97,7 +97,7 @@ form {
     select {
       -webkit-border-radius: 0;
       border: 0;
-      outline: $grid_line;
+      outline: $grid-line;
       outline-offset: -1px;
     }
     .button-right {
@@ -167,15 +167,15 @@ form {
     label::before{
       height: 24px;
       width: 24px;
-      border: $grid_line;
+      border: $grid-line;
       left: 0px;
       top: 2px;
     }
     label::after {
       height: 7px;
       width: 13px;
-      border-left: $grid_line;
-      border-bottom: $grid_line;
+      border-left: $grid-line;
+      border-bottom: $grid-line;
       transform: rotate(-45deg);
       left: 6px;
       top: 9px;

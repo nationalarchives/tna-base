@@ -32,11 +32,11 @@
       margin: 0;
     }
     .icon-circle:hover{
-      background-color: $col_mid_dark;
+      background-color: $grey-mid-dark;
     }
     &:focus {
-      outline: 3px solid $col_light;
-      color: $col_blk;
+      outline: 3px solid $grey-light;
+      color: $dark;
     }
   }
   .image_caption_back {

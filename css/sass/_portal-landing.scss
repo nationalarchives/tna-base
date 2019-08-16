@@ -8,7 +8,7 @@
       h1 {
         display: inline-block;
         background-color: #fff;
-        border: $grid_line;
+        border: $grid-line;
         padding: 7px 22px;
         margin-bottom: 1em;
       }
@@ -17,7 +17,7 @@
   .intro-content {
     margin-bottom: 1.6em;
     .intro-entry {
-      border-top: $grid_line;
+      border-top: $grid-line;
       padding-top: 0.6em;
       h2, h3 {
         margin-top: 0;
@@ -38,16 +38,16 @@
     display: inline-block;
     color: #fff;
     padding: 3px 7px;
-    background-color: $col_blk;
+    background-color: $dark;
     background-color: rgba(0,0,0,.5);
     a {
-      color: $col_yellow;
+      color: $yellow-peach;
     }
   }
   .stay-up-to-date-bar {
     padding: 0.4em 0;
     text-align: right;
-    background-color: $col_green;
+    background-color: $green;
     span {
       margin-right: 1em;
       @media (max-width: 480px) {

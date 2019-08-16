@@ -1,5 +1,5 @@
 footer {
-  background-color: $col_blk;
+  background-color: $dark;
   .footer-col {
     color: #fff;
     margin-bottom: 1.6em;
@@ -8,7 +8,7 @@ footer {
       min-height: auto;
     }
     a, a:active, a:visited, a:hover {
-      color: $col_yellow;
+      color: $yellow-peach;
     }
     ul {
       list-style-type: none;
@@ -23,7 +23,7 @@ footer {
     color: #fff;
     margin-bottom: 1.6em;
     a, a:active, a:visited, a:hover {
-      color: $col_yellow;
+      color: $yellow-peach;
     }
     .ogl img {
       float: left;
@@ -82,7 +82,7 @@ footer {
     a {
       display:inline-block;
       img {
-        background-color: $col_blk;
+        background-color: $dark;
         border: 2px solid #fff;
         border-radius: 50%;
         padding: 7px;
@@ -98,7 +98,7 @@ footer {
     }
   }
   .newsletter {
-    background: $col_green;
+    background: $green;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;

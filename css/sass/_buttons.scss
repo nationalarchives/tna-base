@@ -1,8 +1,8 @@
 .button {
   font-family: $heading_font;
-  background-color: $col_blk;
+  background-color: $dark;
   color: #fff;
-  border: $grid_line;
+  border: $grid-line;
   padding: 0.5em 0.9em;
   display: inline-block;
   min-width: 24px;
@@ -12,18 +12,18 @@
   }
   &:hover {
     background-color: #fff;
-    color: $col_blk;
+    color: $dark;
     text-decoration: none;
   }
 }
 .primary {
   background-color: #fff;
-  color: $col_blk;
+  color: $dark;
   &:active, &:visited {
-    color: $col_blk;
+    color: $dark;
   }
   &:hover {
-    background-color: $col_blk;
+    background-color: $dark;
     color: #fff;
   }
 }
@@ -35,7 +35,7 @@
     color: #555;
   }
   &:hover {
-    background-color: $col_blk;
+    background-color: $dark;
     color: #fff;
   }
 }
@@ -47,7 +47,7 @@
     color: #555;
   }
   &:hover {
-    background-color: $col_blk;
+    background-color: $dark;
     color: #fff;
   }
 }
@@ -59,7 +59,7 @@
     color: #555;
   }
   &:hover {
-    background-color: $col_blk;
+    background-color: $dark;
     color: #fff;
   }
 }

@@ -82,16 +82,16 @@
   }
   .content-type {
     padding: 0.3em 0;
-    color: $col_blk;
+    color: $dark;
   }
   h2 {
-    border-top: $grid_line;
+    border-top: $grid-line;
     padding-top: 10px;
     margin-top: 0;
     margin-bottom: 26px;
   }
   h3 {
-    border-top: $grid_line;
+    border-top: $grid-line;
     padding-top: 0.6em;
     margin-top: 0;
     &:hover {
@@ -99,7 +99,7 @@
     }
   }
   p {
-    color: $col_blk;
+    color: $dark;
   }
   .entry-header h3 {
     padding: 0.6em 0;
@@ -112,7 +112,7 @@
       min-width: 100%;
     }
     .card {
-      border-right: $grid_line;
+      border-right: $grid-line;
       display: table;
       width: 100%;
       margin-bottom: 1.6em;

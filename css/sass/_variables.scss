@@ -31,21 +31,23 @@ $body_font: 'Open Sans', sans-serif;
 $heading_font: 'Roboto Mono', monospace;
 
 /* TNA colours */
-$col_blk: #26262a;
-$col_alert: #fbe2bc;
-$col_success: #dde5d5;
-$col_error: #fad3d4;
-$col_yellow: #fbe2bc;
-$col_green: #dde5d5;
-$col_pink: #fad3d4;
-$col_warm: #f9f7e2;
-$col_cool: #DAD9D6;
-$col_light: #eee;
-$col_mid_light: #ddd;
-$col_mid_dark: #555;
-$col_dark: #222;
+$dark: #26262a;
 
-$grid_line: 2px solid #26262a;
+$grey-light: #eee;
+$grey-mid-light: #ddd;
+$grey-mid-dark: #555;
+
+$green: #dde5d5;
+$pink: #fad3d4;
+$yellow-peach: #fbe2bc;
+$yellow-light: #f9f7e2;
+
+$alert: $yellow-peach;
+$success: $green;
+$error: $pink;
+
+/* Grid */
+$grid-line: 2px solid #26262a;
 
 /* TNA Icons/Images */
 $tna_icon_24_link:url('../img/icon-24-heading-link.png');

@@ -2,7 +2,7 @@ body {
   font-family: $body_font;
   font-size: 16px;
   line-height: 1.6;
-  color: $col_blk;
+  color: $dark;
   h1, h2, h3, h4 {
     font-family: $heading_font;
     font-weight: 400;
@@ -34,8 +34,8 @@ body {
     text-decoration: underline;
   }
   a:focus {
-    background-color: $col_warm;
-    outline: 3px solid $col_yellow;
+    background-color: $yellow-light;
+    outline: 3px solid $yellow-peach;
     color: #000;
   }
   ul {
@@ -72,7 +72,7 @@ body {
         color: #fff;
         background-color: #000;
         text-align: center;
-        border: $grid_line;
+        border: $grid-line;
         font-size: 1.25em;
         line-height: 44px;
         width: 48px;
@@ -110,13 +110,13 @@ body {
     color: #fff;
   }
   .emphasis-alert {
-    background: $col_alert;
+    background: $alert;
   }
   .emphasis-success {
-    background: $col_success;
+    background: $success;
   }
   .emphasis-error {
-    background: $col_error;
+    background: $error;
   }
   hr {
     height: 0;
@@ -124,7 +124,7 @@ body {
     margin: 1em 0;
     clear: both;
     width: 100%;
-    border-bottom: $grid_line;
+    border-bottom: $grid-line;
   }
   pre {
     display: block;
