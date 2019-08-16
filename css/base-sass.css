@@ -5839,6 +5839,9 @@ footer {
   background-color: #dde5d5; }
   .portal-landing .stay-up-to-date-bar span {
     margin-right: 1em; }
+    @media (max-width: 480px) {
+      .portal-landing .stay-up-to-date-bar span {
+        display: none; } }
   .portal-landing .stay-up-to-date-bar a {
     display: inline-block;
     vertical-align: middle;

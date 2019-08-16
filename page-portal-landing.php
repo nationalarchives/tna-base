@@ -42,14 +42,14 @@ get_header(); ?>
         <div class="intro-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-9 col-sm-8">
+                    <div class="col-xs-12 col-sm-6 col-md-8">
                         <div class="intro-entry">
                             <div class="entry-content">
                                 <?php the_content(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-3 col-sm-4">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="intro-image" style="background-image: url(<?php echo $intro_img ?>);">
                         </div>
                     </div>

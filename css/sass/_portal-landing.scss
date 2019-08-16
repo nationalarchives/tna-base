@@ -50,6 +50,9 @@
     background-color: $col_green;
     span {
       margin-right: 1em;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     a {
       display: inline-block;
