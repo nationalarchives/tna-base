@@ -5241,26 +5241,30 @@ footer {
           display: block;
           margin-left: 1.6em; } }
 
-/* TNA template styles */
+/* TNA template styles:
+ - Default page
+ - Level one
+ - Level two (section landing)
+ */
 .container {
   max-width: 1240px;
   width: 100%; }
 
-.standard-page .entry-header {
+.default-page .entry-header {
   border-left: 2px solid #000;
   border-right: 2px solid #000;
   border-bottom: 2px solid #000;
   padding: 0.6em 1.6em;
   background: #fff; }
-  .standard-page .entry-header h1 {
+  .default-page .entry-header h1 {
     margin-top: 0; }
-.standard-page .entry-content {
+.default-page .entry-content {
   border-left: solid 2px #000;
   border-right: 2px solid #000;
   padding: 1.6em;
   background: #fff;
   margin-bottom: 1.6em; }
-.standard-page .entry-content:after {
+.default-page .entry-content:after {
   display: block;
   content: '';
   background-color: #fff;
@@ -5269,35 +5273,35 @@ footer {
   position: absolute;
   bottom: 0;
   right: 15px; }
-.standard-page aside .sidebar-header {
+.default-page aside .sidebar-header {
   margin-bottom: 1.6em; }
-  .standard-page aside .sidebar-header h2 {
+  .default-page aside .sidebar-header h2 {
     margin-top: 0; }
-.standard-page aside ul {
+.default-page aside ul {
   list-style-type: none;
   padding: 0; }
-.standard-page aside .sidebar-contact {
+.default-page aside .sidebar-contact {
   padding: 20px 0 20px 20px; }
-.standard-page aside .live-chat img {
+.default-page aside .live-chat img {
   max-width: 100%;
   height: auto;
   width: 100%; }
-.standard-page aside .live-chat div:first-of-type p {
+.default-page aside .live-chat div:first-of-type p {
   margin-bottom: 0.6em; }
-.standard-page aside .live-chat div:last-of-type {
+.default-page aside .live-chat div:last-of-type {
   margin-bottom: 1.5em; }
-.standard-page aside .sidebar-item h3 {
+.default-page aside .sidebar-item h3 {
   margin-top: 0; }
-.standard-page blockquote {
+.default-page blockquote {
   margin: 0 0 1.6em -3.2em;
   max-width: 680px; }
   @media (max-width: 1024px) {
-    .standard-page blockquote {
+    .default-page blockquote {
       padding: 1.6em 2.4em;
       margin: 0 0 1.6em -2.4em;
       max-width: 100%; } }
   @media (max-width: 992px) {
-    .standard-page blockquote {
+    .default-page blockquote {
       padding: 1.6em;
       margin: 0 0 1.6em 0;
       max-width: 100%; } }
