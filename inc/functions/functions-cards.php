@@ -27,9 +27,11 @@ function card_link( $id, $url, $type, $title, $content ) {
 		$target = '';
 	}
 
-	$html = '<a id="card-%s" href="%s" %s data-gtm-name="%s" data-gtm-id="card_%s" data-gtm-position="card_position_%s" data-gtm-creative="homepage_card_%s" class="homepage-card">%s</a>';
+	$type = strtolower($type);
 
-	return sprintf( $html, $id, $url, $target, $title, $id, $id, $type, $content );
+	$html = '<a id="card_%s" href="%s" %s data-gtm-name="%s" data-gtm-id="card_%s" data-gtm-position="card_position_%s" data-gtm-creative="card_type_%s" class="content-card %s">%s</a>';
+
+	return sprintf( $html, $id, $url, $target, $title, $id, $id, $type, $type, $content );
 }
 
 /**

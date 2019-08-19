@@ -5850,7 +5850,7 @@ footer {
     width: 100%; } }
 .cards .card {
   width: 100%;
-  margin-bottom: 3.2em; }
+  margin-bottom: 2.4em; }
   .cards .card a {
     position: relative;
     display: block;
@@ -5859,12 +5859,36 @@ footer {
       text-decoration: none; }
       .cards .card a:hover .entry-content h3, .cards .card a:hover .entry-header h3 {
         text-decoration: underline; }
-.cards .entry-image {
-  display: block;
-  width: 100%;
-  min-height: 185px;
-  background: #ddd center center;
-  background-size: cover; }
+  .cards .card .video .entry-image:before {
+    content: " ";
+    background: #26262a url("../img/icon-video.png") no-repeat center center;
+    background-size: 68%;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px; }
+  .cards .card .audio .entry-image:before {
+    content: " ";
+    background: #26262a url("../img/icon-audio.png") no-repeat center center;
+    background-size: 68%;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px; }
+  .cards .card .entry-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #ddd center center;
+    background-size: cover; }
+.cards .col-md-3 .entry-image {
+  min-height: 160px; }
+.cards .col-md-4 .entry-image {
+  min-height: 185px; }
 .cards .content-type {
   padding: 0.3em 0;
   color: #26262a; }

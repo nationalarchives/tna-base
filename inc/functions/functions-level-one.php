@@ -126,7 +126,7 @@ function level_one_meta_boxes() {
                     'desc' => '',
                     'id' => 'card_level_one_label_'.$i,
                     'type' => 'select',
-                    'options' => array('No label', 'Feature', 'News', 'Blog', 'Multimedia', 'Event', 'Resource'),
+                    'options' => array('No label', 'Feature', 'Event', 'News', 'Blog', 'Multimedia', 'Video', 'Audio', 'Resource'),
                 ),
                 array(
                     'name' => 'Excerpt',

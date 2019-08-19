@@ -51,16 +51,24 @@ get_header(); ?>
             $section_3  = get_post_meta( $post->ID, 'level_one_template_part_3', true );
 
             if ( $section_1 ) {
+                echo '<section id="'.$section_1.'" class="section-1">';
                 get_template_part( 'partials/'.$section_1 );
+                echo '</section>';
             }
             if ( $section_2 ) {
+                echo '<section id="'.$section_2.'" class="section-2">';
                 get_template_part( 'partials/'.$section_2 );
+                echo '</section>';
             }
             if ( $section_3 ) {
+                echo '<section id="'.$section_3.'" class="section-3">';
                 get_template_part( 'partials/'.$section_3 );
+                echo '</section>';
             }
 
+            echo '<section id="content-cards" class="section-cards">';
             get_template_part( 'partials/level-one-cards' );
+            echo '</section>';
 
             ?>
         </main>
