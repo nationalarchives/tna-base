@@ -2,18 +2,21 @@
 
 form {
   fieldset {
-    padding: 0;
-    margin-bottom: 2.4em;
+    padding: 0 !important;
+    margin-bottom: 0.6em !important;
+    border: 0 !important;
   }
   legend {
     font-family: $heading_font;
     font-size: 1.6em;
-    margin-bottom: 0.6em;
+    margin: 0 0 0.6em 0;
     width: auto;
-    padding: 0;
+    padding: 0 !important;
+    border: 0 !important;
   }
   label {
     font-family: $heading_font;
+    font-weight: normal;
   }
   input[type="submit"] {
     font-family: "Roboto Mono", monospace;
@@ -25,6 +28,10 @@ form {
     min-width: 24px;
     text-align: center;
     margin: 0;
+    &:hover {
+      background-color: #fff;
+      color: $dark;
+    }
   }
   input[type=text],
   input[type=url],
@@ -100,6 +107,10 @@ form {
       outline: $grid-line;
       outline-offset: -1px;
     }
+    input[type=checkbox],
+    input[type=radio] {
+      margin: 4px 10px 0;
+    }
     .button-right {
       float: right;
     }
@@ -114,11 +125,11 @@ form {
     }
     .form-error {
       color: #000;
-      width: 100%;
-      max-width: 420px;
       display: block;
-      padding: 3px;
-      background: #FFF8D0;
+      padding: 3px 7px;
+      background: $yellow-light;
+      width: 100%;
+      max-width: 480px;
       span {
         font-size: 1.6em;
       }
@@ -168,7 +179,7 @@ form {
       height: 24px;
       width: 24px;
       border: $grid-line;
-      left: 0px;
+      left: 0;
       top: 2px;
     }
     label::after {
@@ -187,7 +198,81 @@ form {
       content: "";
     }
     input[type="checkbox"]:focus + label::before {
-      outline: rgb(59, 153, 252) auto 5px;
+      outline: $yellow-peach auto 5px;
     }
+  }
+  .radio {
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+    }
+    label {
+      position: relative;
+      display: inline-block;
+      padding-left: 32px;
+    }
+    label::before,
+    label::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+    }
+    label::before{
+      height: 24px;
+      width: 24px;
+      border: $grid-line;
+      border-radius: 50%;
+      left: 0;
+      top: 2px;
+    }
+    label::after {
+      height: 12px;
+      width: 12px;
+      background-color: $dark;
+      border-radius: 50%;
+      left: 6px;
+      top: 8px;
+    }
+    input[type="radio"] + label::after {
+      content: none;
+    }
+    input[type="radio"]:checked + label::after {
+      content: "";
+    }
+    input[type="radio"]:focus + label::before {
+      outline: $yellow-peach auto 5px;
+    }
+  }
+}
+.error-message, .success-message {
+  color: $dark !important;
+  border: $grid-line !important;
+  padding: 0 1em;
+  margin-bottom: 1.6em;
+}
+.error-message {
+  background-color: $yellow-light !important;
+}
+.success-message {
+  padding: 1em;
+  background-color: $green !important;
+}
+.arrow-steps li.current {
+  background-color: $dark;
+  &:after {
+    border-left: 17px solid $dark;
+  }
+}
+.print_button {
+  background: $dark;
+  color: #fff;
+  border: $grid-line;
+  padding: 0.6em;
+  margin: 1em 0;
+  float: none;
+  &:hover {
+    background: #fff;
+    color: $dark;
+    text-decoration: none;
   }
 }

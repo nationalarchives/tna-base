@@ -4628,16 +4628,19 @@ body {
 
 /* TNA form styles */
 form fieldset {
-  padding: 0;
-  margin-bottom: 2.4em; }
+  padding: 0 !important;
+  margin-bottom: 0.6em !important;
+  border: 0 !important; }
 form legend {
   font-family: "Roboto Mono", monospace;
   font-size: 1.6em;
-  margin-bottom: 0.6em;
+  margin: 0 0 0.6em 0;
   width: auto;
-  padding: 0; }
+  padding: 0 !important;
+  border: 0 !important; }
 form label {
-  font-family: "Roboto Mono", monospace; }
+  font-family: "Roboto Mono", monospace;
+  font-weight: normal; }
 form input[type="submit"] {
   font-family: "Roboto Mono", monospace;
   background-color: #26262a;
@@ -4648,6 +4651,9 @@ form input[type="submit"] {
   min-width: 24px;
   text-align: center;
   margin: 0; }
+  form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #26262a; }
 form input[type=text],
 form input[type=url],
 form input[type=tel],
@@ -4724,6 +4730,9 @@ form .form-row {
     border: 0;
     outline: 2px solid #26262a;
     outline-offset: -1px; }
+  form .form-row input[type=checkbox],
+  form .form-row input[type=radio] {
+    margin: 4px 10px 0; }
   form .form-row .button-right {
     float: right; }
   form .form-row p {
@@ -4734,11 +4743,11 @@ form .form-row {
     color: #6f777b; }
   form .form-row .form-error {
     color: #000;
-    width: 100%;
-    max-width: 420px;
     display: block;
-    padding: 3px;
-    background: #FFF8D0; }
+    padding: 3px 7px;
+    background: #f9f7e2;
+    width: 100%;
+    max-width: 480px; }
     form .form-row .form-error span {
       font-size: 1.6em; }
   form .form-row .form-warning {
@@ -4777,7 +4786,7 @@ form .checkbox label::before {
   height: 24px;
   width: 24px;
   border: 2px solid #26262a;
-  left: 0px;
+  left: 0;
   top: 2px; }
 form .checkbox label::after {
   height: 7px;
@@ -4792,7 +4801,69 @@ form .checkbox input[type="checkbox"] + label::after {
 form .checkbox input[type="checkbox"]:checked + label::after {
   content: ""; }
 form .checkbox input[type="checkbox"]:focus + label::before {
-  outline: #3b99fc auto 5px; }
+  outline: #fbe2bc auto 5px; }
+form .radio input[type="radio"] {
+  position: absolute;
+  opacity: 0; }
+form .radio label {
+  position: relative;
+  display: inline-block;
+  padding-left: 32px; }
+form .radio label::before,
+form .radio label::after {
+  position: absolute;
+  content: "";
+  display: inline-block; }
+form .radio label::before {
+  height: 24px;
+  width: 24px;
+  border: 2px solid #26262a;
+  border-radius: 50%;
+  left: 0;
+  top: 2px; }
+form .radio label::after {
+  height: 12px;
+  width: 12px;
+  background-color: #26262a;
+  border-radius: 50%;
+  left: 6px;
+  top: 8px; }
+form .radio input[type="radio"] + label::after {
+  content: none; }
+form .radio input[type="radio"]:checked + label::after {
+  content: ""; }
+form .radio input[type="radio"]:focus + label::before {
+  outline: #fbe2bc auto 5px; }
+
+.error-message, .success-message {
+  color: #26262a !important;
+  border: 2px solid #26262a !important;
+  padding: 0 1em;
+  margin-bottom: 1.6em; }
+
+.error-message {
+  background-color: #f9f7e2 !important; }
+
+.success-message {
+  padding: 1em;
+  background-color: #dde5d5 !important; }
+
+.arrow-steps li.current {
+  background-color: #26262a; }
+  .arrow-steps li.current:after {
+    border-left: 17px solid #26262a; }
+
+.print_button {
+  background: #26262a;
+  color: #fff;
+  border: 2px solid #26262a;
+  padding: 0.6em;
+  margin: 1em 0;
+  float: none; }
+  .print_button:hover {
+    background: #fff;
+    color: #26262a;
+    text-decoration: none; }
 
 /* TNA breadcrumb styles */
 .tna-breadcrumb {
@@ -5393,6 +5464,9 @@ footer {
     color: #fff; }
   .button:hover {
     background-color: #fff;
+    color: #26262a;
+    text-decoration: none; }
+  .button:focus {
     color: #26262a;
     text-decoration: none; }
 

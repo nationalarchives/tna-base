@@ -15,6 +15,10 @@
     color: $dark;
     text-decoration: none;
   }
+  &:focus {
+    color: $dark;
+    text-decoration: none;
+  }
 }
 .primary {
   background-color: #fff;
