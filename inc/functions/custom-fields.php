@@ -63,6 +63,7 @@ function redirect_url_add_meta_box() {
     if ($page_template === 'default') {
         add_meta_box('redirect_url-redirect-url', __( 'Redirect Url', 'redirect_url' ), 'redirect_url_html', 'page', 'normal', 'high');
         add_meta_box('sidebar-sidebar', __( 'Sidebar', 'sidebar' ), 'sidebar_html','page','side','core');
+        add_meta_box('webchat-webchat', __( 'Webchat', 'webchat' ), 'webchat_html','page','side','core');
     }
 }
 
@@ -126,6 +127,36 @@ function sidebar_save( $post_id ) {
 
     if ( isset( $_POST['sidebar'] ) )
         update_post_meta( $post_id, 'sidebar', esc_attr( $_POST['sidebar'] ) );
+}
+
+/* Web chat id metabox */
+function webchat_get_meta( $value ) {
+    global $post;
+
+    $field = get_post_meta( $post->ID, $value, true );
+    if ( ! empty( $field ) ) {
+        return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+    } else {
+        return false;
+    }
+}
+
+function webchat_html( $post) {
+    wp_nonce_field( '_webchat_nonce', 'webchat_nonce' ); ?>
+    <p>
+    <input class="widefat" type="text" name="webchat" id="webchat" value="<?php echo webchat_get_meta( 'webchat' ); ?>">
+    </p>
+    <p>Leave blank for the default web chat form</p>
+    <?php
+}
+
+function webchat_save( $post_id ) {
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( ! isset( $_POST['webchat_nonce'] ) || ! wp_verify_nonce( $_POST['webchat_nonce'], '_webchat_nonce' ) ) return;
+    if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+    if ( isset( $_POST['webchat'] ) )
+        update_post_meta( $post_id, 'webchat', esc_attr( $_POST['webchat'] ) );
 }
 
 /* Level 1 landing page template meta boxes */

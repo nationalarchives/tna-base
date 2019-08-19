@@ -47,6 +47,7 @@ add_action( 'add_meta_boxes', 'redirect_url_add_meta_box' ); // Redirect metabox
 add_action( 'save_post', 'redirect_url_save' );
 add_action( 'save_post', 'sidebar_save' );
 add_action( 'init', 'level_1_meta_boxes' ); // To be removed with template
+add_action( 'save_post', 'webchat_save' );
 add_action( 'init', 'level_one_meta_boxes' );
 add_action( 'init', 'notification_meta_boxes' );
 add_action( 'admin_menu', 'tna_base_menu' );
