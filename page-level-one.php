@@ -56,12 +56,12 @@ get_header(); ?>
             if ( $section_2 ) {
                 get_template_part( 'partials/'.$section_2 );
             }
-
-            get_template_part( 'partials/level-one-cards' );
-
             if ( $section_3 ) {
                 get_template_part( 'partials/'.$section_3 );
             }
+
+            get_template_part( 'partials/level-one-cards' );
+
             ?>
         </main>
 		<?php endwhile; ?>

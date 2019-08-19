@@ -68,7 +68,7 @@ function level_one_meta_boxes() {
             ),
             array (
                 'name' => 'Section 3',
-                'desc' => 'Section directly after content cards',
+                'desc' => 'Third section above content cards',
                 'id' => 'level_one_template_part_3',
                 'type' => 'text',
                 'std' => ''
