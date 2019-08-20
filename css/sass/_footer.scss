@@ -1,5 +1,8 @@
 footer {
   background-color: $dark;
+  .footer-content {
+    padding-top: 1.6em;
+  }
   .footer-col {
     color: #fff;
     margin-bottom: 1.6em;
@@ -99,73 +102,16 @@ footer {
   }
   .newsletter {
     background: $green;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: 1.6em 40px 0 40px;
-    margin-bottom: 1.6em;
-    @media (max-width: 976px) {
-      padding: 1.6em 15px 0 15px;
-    }
-    .news-icon {
-      display: inline-block;
-      float: left;
-      overflow: hidden;
-      img {
-        max-width: 64px;
-        height: auto;
-      }
-      @media (max-width: 976px) {
-        display: none;
-      }
-    }
+    padding-top: 1.6em;
     .news-content {
-      width: 40%;
-      display: inline-block;
-      float: left;
-      overflow:hidden;
-      padding-left: 1.6em;
       h2 {
         margin-top: 0;
         line-height: 1;
       }
-      @media (max-width: 976px) {
-        width:100%;
-        padding-left: 0;
-        display:block;
-      }
-    }
-    .news-form {
-      width: 35%;
-      display: inline-block;
-      float: right;
-      margin-bottom: 1.6em;
-      form {
-        label {
-          display: none;
-        }
-        input {
-          &[type="email"] {
-            width: 73%;
-            @media (max-width: 976px) {
-              width: 100%;
-              max-width: 480px;
-              display: block;
-              margin-bottom: 10px;
-            }
-          }
-          &[type="submit"] {
-            height: 45px;
-          }
-        }
-      }
-      @media (max-width: 1155px) {
-        width: 48%;
-      }
-      @media (max-width: 976px) {
-        width:100%;
-        display:block;
-        margin-left: 1.6em;
+      .button {
+        padding: .3em .9em;
+        line-height: 1;
+        margin-top: 0.6em;
       }
     }
   }

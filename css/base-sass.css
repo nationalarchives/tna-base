@@ -5178,6 +5178,8 @@ header {
 
 footer {
   background-color: #26262a; }
+  footer .footer-content {
+    padding-top: 1.6em; }
   footer .footer-col {
     color: #fff;
     margin-bottom: 1.6em;
@@ -5254,63 +5256,14 @@ footer {
         background: #555; }
   footer .newsletter {
     background: #dde5d5;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: 1.6em 40px 0 40px;
-    margin-bottom: 1.6em; }
-    @media (max-width: 976px) {
-      footer .newsletter {
-        padding: 1.6em 15px 0 15px; } }
-    footer .newsletter .news-icon {
-      display: inline-block;
-      float: left;
-      overflow: hidden; }
-      footer .newsletter .news-icon img {
-        max-width: 64px;
-        height: auto; }
-      @media (max-width: 976px) {
-        footer .newsletter .news-icon {
-          display: none; } }
-    footer .newsletter .news-content {
-      width: 40%;
-      display: inline-block;
-      float: left;
-      overflow: hidden;
-      padding-left: 1.6em; }
-      footer .newsletter .news-content h2 {
-        margin-top: 0;
-        line-height: 1; }
-      @media (max-width: 976px) {
-        footer .newsletter .news-content {
-          width: 100%;
-          padding-left: 0;
-          display: block; } }
-    footer .newsletter .news-form {
-      width: 35%;
-      display: inline-block;
-      float: right;
-      margin-bottom: 1.6em; }
-      footer .newsletter .news-form form label {
-        display: none; }
-      footer .newsletter .news-form form input[type="email"] {
-        width: 73%; }
-        @media (max-width: 976px) {
-          footer .newsletter .news-form form input[type="email"] {
-            width: 100%;
-            max-width: 480px;
-            display: block;
-            margin-bottom: 10px; } }
-      footer .newsletter .news-form form input[type="submit"] {
-        height: 45px; }
-      @media (max-width: 1155px) {
-        footer .newsletter .news-form {
-          width: 48%; } }
-      @media (max-width: 976px) {
-        footer .newsletter .news-form {
-          width: 100%;
-          display: block;
-          margin-left: 1.6em; } }
+    padding-top: 1.6em; }
+    footer .newsletter .news-content h2 {
+      margin-top: 0;
+      line-height: 1; }
+    footer .newsletter .news-content .button {
+      padding: .3em .9em;
+      line-height: 1;
+      margin-top: 0.6em; }
 
 /* TNA template styles:
  - Default page
@@ -5859,7 +5812,7 @@ footer {
       text-decoration: none; }
       .cards .card a:hover .entry-content h3, .cards .card a:hover .entry-header h3 {
         text-decoration: underline; }
-  .cards .card .video .entry-image:before {
+  .cards .card .video .entry-image:before, .cards .card .webinar .entry-image:before {
     content: " ";
     background: #26262a url("../img/icon-video.png") no-repeat center center;
     background-size: 68%;

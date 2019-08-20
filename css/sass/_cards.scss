@@ -72,7 +72,7 @@
         }
       }
     }
-    .video .entry-image:before {
+    .video .entry-image:before, .webinar .entry-image:before {
       content: " ";
       background: $dark $tna_icon_video no-repeat center center;
       background-size: 68%;
