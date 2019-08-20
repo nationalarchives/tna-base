@@ -2,7 +2,7 @@
 <footer id="footer" role="contentinfo">
     <?php
     global $post;
-    if (!has_category('hide-newsletter',$post->ID)) {
+    if (!has_category('hide-newsletter', $post->ID)) {
         get_template_part('partials/footer-newsletter');
     }
     ?>
@@ -14,7 +14,7 @@
 </footer>
 
 <?php wp_footer(); ?>
-<?php get_template_part( 'partials/tna', 'footer' ); ?>
+<?php get_template_part( 'partials/footer-webtrends' ); ?>
 
 </body>
 </html>

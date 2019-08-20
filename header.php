@@ -7,7 +7,7 @@
 <!-- tna_wp_head -->
 <?php tna_wp_head(); ?>
 <!-- end tna_wp_head -->
-<?php get_template_part( 'partials/tna', 'head' ); ?>
+<?php get_template_part( 'partials/header-meta' ); ?>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -98,10 +98,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			if (file_exists(PATH_TO_MEGA_MENU_HTML)) {
 				include PATH_TO_MEGA_MENU_HTML;
 			} else {
-				include 'inc/content/mega-menu.php';
+                get_template_part( 'partials/mega-menu' );
 			}
 		} else {
-            get_template_part( 'inc/content/mega-menu' );
+            get_template_part( 'partials/mega-menu' );
         }
 		?>
 	</div>

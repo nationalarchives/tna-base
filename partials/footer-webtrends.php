@@ -7,9 +7,7 @@
 
 // Warning: The two script blocks below must remain inline. Moving them to an external
 // JavaScript include file can cause serious problems with cross-domain tracking.
-?>
 
-<?php
 	// Remove WebTrends from contact us
 	if (!check_for_specific_url_path('contact-us')) : ?>
 		<!-- START OF WebTrends -->
