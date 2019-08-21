@@ -32,11 +32,11 @@
   }
 }
 .secondary {
-  border-color: #ccc;
+  border-color: $grey-mid-light;
   background-color: #fff;
-  color: #555;
+  color: $grey-mid-dark;
   &:active, &:visited {
-    color: #555;
+    color: $grey-mid-dark;
   }
   &:hover {
     background-color: $dark;
@@ -44,11 +44,11 @@
   }
 }
 .tertiary {
-  border-color: #eee;
-  background-color: #eee;
-  color: #555;
+  border-color: $grey-light;
+  background-color: $grey-light;
+  color: $grey-mid-dark;
   &:active, &:visited {
-    color: #555;
+    color: $grey-mid-dark;
   }
   &:hover {
     background-color: $dark;
@@ -60,7 +60,7 @@
   background-color: transparent;
   color: #fff;
   &:active, &:visited {
-    color: #555;
+    color: $grey-mid-dark;
   }
   &:hover {
     background-color: $dark;
