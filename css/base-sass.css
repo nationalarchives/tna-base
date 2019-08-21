@@ -5386,7 +5386,9 @@ footer {
       margin: 0; }
   .level-one .banner .entry-content {
     width: 100%;
-    padding: 0 0 0 56px; }
+    max-width: 720px;
+    padding: 0 0 0 56px;
+    margin: 0 1em 1em 0; }
     .level-one .banner .entry-content h2, .level-one .banner .entry-content h3, .level-one .banner .entry-content h4, .level-one .banner .entry-content p {
       margin: 0; }
     .level-one .banner .entry-content .tag-line {
@@ -5409,6 +5411,8 @@ footer {
   background-size: cover; }
 .level-one .box {
   margin-bottom: 1.6em; }
+  .level-one .box .feature-img-bg {
+    min-height: 160px; }
   .level-one .box .entry-header {
     border-top: 2px solid #26262a;
     padding-top: 0.6em;

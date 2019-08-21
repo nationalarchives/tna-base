@@ -96,7 +96,9 @@
     }
     .entry-content {
       width: 100%;
+      max-width: 720px;
       padding: 0 0 0 56px;
+      margin: 0 1em 1em 0;
       h2, h3, h4, p {
         margin: 0;
       }
@@ -129,6 +131,9 @@
   // To be removed with template (page-level-1-landing.php)
   .box {
     margin-bottom: 1.6em;
+    .feature-img-bg {
+      min-height: 160px;
+    }
     .entry-header {
       border-top: $grid-line;
       padding-top: 0.6em;

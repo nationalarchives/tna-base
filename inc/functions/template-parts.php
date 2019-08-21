@@ -63,11 +63,10 @@ function get_content_meta_boxes( $boxes ) {
 		if ( !empty( $box['title'] ) && $box['display'] != 'disabled' ) { ?>
 			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?> box">
 				<article>
-					<?php if ( !empty( $box['image'] ) ) { ?>
-					<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $box['image']; ?>);">
-						<?php }  else { ?>
-						<div class="entry-header">
-							<?php } ?>
+                        <?php if ( !empty( $box['image'] ) ) { ?>
+                        <div class="feature-img-bg" style="background-image: url(<?php echo $box['image']; ?>);"></div>
+                        <?php }  ?>
+                        <div class="entry-header">
 							<h2>
 								<?php if ( !empty( $box['url'] ) ) { ?>
 									<a href="<?php echo $box['url'] ?>">
