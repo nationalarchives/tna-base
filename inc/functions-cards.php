@@ -75,7 +75,7 @@ function card_content( $type, $title, $description ) {
 	$type_class = strtolower( $type );
 	$description = limit_words( $description );
 
-	if ( $type == 'No label' ) {
+	if ( $type == 'Please select a label' ) {
 	    $type = '';
     } else {
 	    $type = '<div class="content-type">'.$type.'</div>';

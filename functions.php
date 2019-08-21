@@ -14,23 +14,23 @@ $cloud = (defined('TNA_CLOUD')) ? TNA_CLOUD : false;
 include 'src/CreateMetaBox.php';
 
 // Include functions
-include 'inc/functions/functions-non-cloud.php';
-include 'inc/functions/tna-functions.php';
-include 'inc/functions/title-tag.php';
-include 'inc/functions/dimox_breadcrumbs.php';
-include 'inc/functions/custom-fields.php';
-include 'inc/functions/images.php';
-include 'inc/functions/404-redirect.php';
-include 'inc/functions/image_caption.php';
-include 'inc/functions/tiny_mce.php';
-include 'inc/functions/notification-banner.php';
-include 'inc/functions/template-parts.php';
-include 'inc/functions/functions-admin.php';
-include 'inc/functions/functions-og-meta.php';
-include 'inc/functions/functions-portal-landing.php';
-include 'inc/functions/functions-level-one.php';
-include 'inc/functions/functions-cards.php';
-include 'inc/functions/functions-cards-og-meta.php';
+include 'inc/functions-non-cloud.php';
+include 'inc/tna-functions.php';
+include 'inc/title-tag.php';
+include 'inc/functions-breadcrumbs.php';
+include 'inc/custom-fields.php';
+include 'inc/images.php';
+include 'inc/404-redirect.php';
+include 'inc/image-caption.php';
+include 'inc/functions-editor-tinymce.php';
+include 'inc/notification-banner.php';
+include 'inc/template-parts.php';
+include 'inc/functions-admin.php';
+include 'inc/functions-og-meta.php';
+include 'inc/functions-portal-landing.php';
+include 'inc/functions-level-one.php';
+include 'inc/functions-cards.php';
+include 'inc/functions-cards-og-meta.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );

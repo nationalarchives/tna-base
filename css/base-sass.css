@@ -5868,7 +5868,7 @@ footer {
     border-radius: 50%;
     width: 44px;
     height: 44px; }
-  .cards .card .audio .entry-image:before {
+  .cards .card .audio .entry-image:before, .cards .card .podcast .entry-image:before {
     content: " ";
     background: #26262a url("../img/icon-audio.png") no-repeat center center;
     background-size: 68%;
