@@ -2,6 +2,7 @@
 
 // Theme version
 define( 'EDD_VERSION', '1.18' );
+define( 'SIGNUP_URL', 'https://www.nationalarchives.gov.uk/contact-us/' );
 
 // Add this constant to wp-config.php
 // define( 'TNA_CLOUD', false );

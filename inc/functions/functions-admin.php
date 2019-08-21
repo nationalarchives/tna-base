@@ -18,6 +18,12 @@ function tna_base_admin_page() {
 	if (!current_user_can('administrator'))  {
 		wp_die( __('You do not have sufficient pilchards to access this page.')    );
 	}
+    if ( !get_option('newsletter_signup_url') ) {
+        add_option( 'newsletter_signup_url', SIGNUP_URL );
+    }
+    if ( get_option('newsletter_signup_url') == '' ) {
+        update_option( 'newsletter_signup_url', SIGNUP_URL );
+    }
 	?>
 	<style>
 		.tna-base-admin input[type=text] {
