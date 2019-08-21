@@ -31,7 +31,7 @@ function dimox_breadcrumbs() {
 
 	global $post;
 	global $pre_path;
-	$home_link      = 'http://www.nationalarchives.gov.uk/';
+	$home_link      = 'https://www.nationalarchives.gov.uk/';
 	$link_before    = '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
 	$link_after     = '</span>';
 	$link_attr      = ' itemprop="url"';

@@ -40,14 +40,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="row">
 			<div class="col-xs-2 col-sm-5" id="logo-holder">
 				<button aria-label="Toggle menu" id="mega-menu-mobile"></button>
-				<a href="http://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
+				<a href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
 				   class="visible-lg visible-md visible-sm">
 					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-horizontal-white-logo.svg" alt="The National Archives"  class="img-responsive logo">
 				</a>
 			</div>
 			<div class="col-xs-8 col-sm-2" id="mobile-logo-holder">
 				<button title="Main menu" aria-label="Toggle menu" id="mega-menu-pull-down" class="hidden-xs"><span>Menu</span></button>
-				<a href="http://www.nationalarchives.gov.uk" title="Go to The National Archives homepage" class="hidden-lg hidden-md hidden-sm">
+				<a href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage" class="hidden-lg hidden-md hidden-sm">
 				<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-horizontal-white-logo.svg" alt="The National Archives"  class="img-responsive">
 				</a>
 			</div>
@@ -63,7 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					       data-placeholder="Search our website..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the website">Search our website</a></li>
 					<li><a title="Search our catalogue for records" href="#" class="formDestinationChanger"
-					       data-target="http://discovery.nationalarchives.gov.uk/results/r"
+					       data-target="https://discovery.nationalarchives.gov.uk/results/r"
 					       data-placeholder="Search our records..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the catalogue">Search our records</a></li>
 				</ul>

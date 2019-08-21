@@ -434,7 +434,7 @@ function portal_fallback_card( $i ) {
 
 	if ( $i != 0 ) {
 
-		$url = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
+		$url = 'https://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
 		$image = make_path_relative( get_template_directory_uri().'/img/events.jpg' );
 
 		$html = '<div class="col-md-4"><div class="card fallback">

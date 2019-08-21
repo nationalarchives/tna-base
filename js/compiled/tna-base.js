@@ -105,7 +105,7 @@ $.fn.webtrends_click_handler = function () {
 $.fn.append_promotional_image = function () {
     return this.each(function () {
         var $this = $(this);
-        $this.append('<li class="imgContent"><a href="http://nationalarchives.gov.uk/coldwar/" title="Discover our 2019 Cold War season"><img src="//www.nationalarchives.gov.uk/images/home/menu-cold-war.jpg" alt="Discover our 2019 Cold War season" class="img-responsive tna-img-responsive"></a></li>');
+        $this.append('<li class="imgContent"><a href="https://nationalarchives.gov.uk/coldwar/" title="Discover our 2019 Cold War season"><img src="//www.nationalarchives.gov.uk/images/home/menu-cold-war.jpg" alt="Discover our 2019 Cold War season" class="img-responsive tna-img-responsive"></a></li>');
     })
 };
 ;'use strict';
@@ -160,7 +160,7 @@ $(document).ready(function () {
     $(function () { // All content must be placed within this IIFE.
         $('#mega-menu-pull-down').show();
         if (!tnaCheckForThisCookie("dontShowCookieNotice")) {
-            $('<div class="cookieNotice">We use cookies to improve services and ensure they work for you. Read our <a title="Our cookie policy" href="http://www.nationalarchives.gov.uk/legal/cookies.htm">cookie policy</a>. <a title="Close cookie policy notice" href="#" id="cookieCutter">Close</a></div>').css({
+            $('<div class="cookieNotice">We use cookies to improve services and ensure they work for you. Read our <a title="Our cookie policy" href="https://www.nationalarchives.gov.uk/legal/cookies.htm">cookie policy</a>. <a title="Close cookie policy notice" href="#" id="cookieCutter">Close</a></div>').css({
                 padding: '5px',
                 "text-align": "center",
                 backgroundColor: '#FCE45C',
@@ -256,7 +256,7 @@ $(document).ready(function () {
     $('input:radio[name=radioSearchGroup]').change(function () {
         if (this.value == 'search_website') {
             //Changes the form action url
-            $('form').attr('action', 'http://www.nationalarchives.gov.uk/search/search_results.aspx');
+            $('form').attr('action', 'https://www.nationalarchives.gov.uk/search/search_results.aspx');
             //changes name attribute
             $('#mobileGlobalSearch input[name="_q"]').attr('name', 'QueryText');
             //changes the placeholder
@@ -264,7 +264,7 @@ $(document).ready(function () {
         }
         else if (this.value == 'search_records') {
             //Changes the form action url
-            $('form').attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
+            $('form').attr('action', 'https://discovery.nationalarchives.gov.uk/SearchUI/s/res');
             //changes name attribute
             $('#mobileGlobalSearch input[name="QueryText"]').attr('name', '_q');
             //changes the placeholder
@@ -294,7 +294,7 @@ $(document).ready(function () {
     $.fn.newsletterBackToOrigin = function (options) {
         var settings = $.extend({}, $.fn.newsletterBackToOrigin.defaults, options);
         return this.each(function () {
-            var thankYouURL = "http://www.nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/",
+            var thankYouURL = "https://www.nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/",
                 newValue = "?oldurl=" + window.location.href;
                 return settings.$element.val(thankYouURL + newValue);
         });
