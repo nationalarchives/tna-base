@@ -4515,6 +4515,38 @@ a#cookieCutter {
   float: right;
   padding: 0 0 10px 10px; }
 
+.hue-yellow {
+  background-color: #fbe2bc;
+  color: #26262a; }
+
+.hue-yellow-light {
+  background-color: #f9f7e2;
+  color: #26262a; }
+
+.hue-green {
+  background-color: #dde5d5;
+  color: #26262a; }
+
+.hue-pink {
+  background-color: #fad3d4;
+  color: #26262a; }
+
+.hue-grey-dark {
+  background-color: #26262a;
+  color: #fff; }
+
+.hue-grey-mid-dark {
+  background-color: #555;
+  color: #fff; }
+
+.hue-grey-mid-light {
+  background-color: #ddd;
+  color: #26262a; }
+
+.hue-grey-light {
+  background-color: #eee;
+  color: #26262a; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
