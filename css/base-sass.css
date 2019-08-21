@@ -4534,6 +4534,10 @@ body {
     font-size: 1.3em; }
   body h4 {
     font-size: 1.16em; }
+  body .separator-heading {
+    margin-top: 0;
+    padding-top: 10px;
+    border-top: 2px solid #26262a; }
   body p {
     margin: 0 0 1.6em; }
   body a, body a:active, body a:visited {
@@ -5155,6 +5159,10 @@ header {
   header #skip-to-main-content {
     position: absolute;
     top: -30px; }
+  header #skip-to-main-content:focus {
+    position: absolute;
+    padding: 0.3em;
+    top: 0; }
 
 .notification-banner {
   background-color: #fbe2bc; }
@@ -5189,6 +5197,8 @@ footer {
         min-height: auto; } }
     footer .footer-col a, footer .footer-col a:active, footer .footer-col a:visited, footer .footer-col a:hover {
       color: #fbe2bc; }
+    footer .footer-col a:focus {
+      color: #26262a; }
     footer .footer-col ul {
       list-style-type: none;
       padding-left: 0; }

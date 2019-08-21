@@ -13,6 +13,9 @@ footer {
     a, a:active, a:visited, a:hover {
       color: $yellow-peach;
     }
+    a:focus {
+      color: $dark;
+    }
     ul {
       list-style-type: none;
       padding-left: 0;

@@ -267,6 +267,11 @@ header {
     position: absolute;
     top: -30px;
   }
+  #skip-to-main-content:focus {
+    position: absolute;
+    padding: 0.3em;
+    top: 0;
+  }
 }
 
 .notification-banner {
