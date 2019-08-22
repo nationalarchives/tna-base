@@ -19,9 +19,9 @@
                 $id      = $page.'_'.$i;
 
                 if ( $url != '' ) {
-
-                    echo display_card( $id, $url, $title, $excerpt, $image, $date, $label );
-
+                    if ( $label != 'Please select a label' ) {
+                        echo display_card( $id, $url, $title, $excerpt, $image, $date, $label );
+                    }
                 }
             }
             ?>
