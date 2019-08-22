@@ -4585,7 +4585,7 @@ body {
   body ul {
     margin-bottom: 1.6em; }
     body ul li {
-      margin-bottom: 0.6em; }
+      margin-bottom: 0.2em; }
   body ul.no-bullet {
     list-style-type: none;
     padding: 0; }
@@ -5331,6 +5331,8 @@ footer {
   padding: 1.6em;
   background: #fff;
   margin-bottom: 1.6em; }
+  .default-page .entry-content ul li {
+    margin-bottom: 0.6em; }
 .default-page .entry-content:after {
   display: block;
   content: '';

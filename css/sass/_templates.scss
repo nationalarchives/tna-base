@@ -24,6 +24,11 @@
     padding: 1.6em;
     background: #fff;
     margin-bottom: 1.6em;
+    ul {
+      li {
+        margin-bottom: 0.6em;
+      }
+    }
   }
   .entry-content:after {
     display: block;

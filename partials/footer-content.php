@@ -126,19 +126,6 @@
             </div>
 
             <div class="footer-col col-xs-12 col-sm-6 col-md-12">
-                <h4>Featured Flickr image</h4>
-                <p id="flickr-caption">West End London street scene, by Grace Golden (<a
-                            href="https://www.flickr.com/photos/nationalarchives/3047452739/"
-                            title="External website - opens in new window" target="_blank">INF 3/1738</a>)</p>
-                <p id="flickr-image">
-                    <a target="_blank" title="External website - opens in a new window"
-                       href="https://www.flickr.com/photos/nationalarchives/3047452739/">
-                        <img class="img-responsive"
-                             src="https://www.nationalarchives.gov.uk/images/global/inf-3-1738-grace-golden.jpg"
-                             alt="West End London street scene, by Grace Golden">
-                    </a>
-                </p>
-
             </div>
         </div>
     </div>
