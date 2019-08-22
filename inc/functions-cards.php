@@ -355,3 +355,39 @@ function card_fallback( $fallback, $id ) {
 
     return card_html( $id, $url, $image, $type, $title, $description, $date );
 }
+
+function check_card_labels($post_id) {
+
+    if (wp_is_post_revision($post_id)) {
+        return;
+    }
+
+    if( isset($_POST['card_level_one_title_1']) ) {
+
+        for ( $i = 1; $i <= 12; $i ++ ) {
+
+            if ( isset( $_POST['card_level_one_title_'.$i] ) ) {
+                if ( $_POST['card_level_one_title_'.$i] != '' ) {
+
+                    $label = $_POST[ 'card_level_one_label_'.$i ];
+
+                    if ( $label == 'Please select a label' ) {
+                        set_transient( get_current_user_id() . 'level_one_card_error', 'Error! Please ensure you have selected a label for all cards.' );
+                    }
+                }
+            }
+        }
+    }
+}
+
+function level_one_card_error() {
+    $error = get_transient( get_current_user_id().'level_one_card_error' );
+    if ( $error ) {
+        ?>
+        <div class="error notice">
+            <p><?php _e( $error ); ?></p>
+        </div>
+        <?php
+        delete_transient( get_current_user_id().'level_one_card_error' );
+    }
+}

@@ -2,7 +2,7 @@
 
 // Theme version
 define( 'EDD_VERSION', '1.18' );
-define( 'SIGNUP_URL', 'https://www.nationalarchives.gov.uk/contact-us/' );
+define( 'SIGNUP_URL', 'https://www.nationalarchives.gov.uk/contact-us/email-updates/' );
 
 // Add this constant to wp-config.php
 // define( 'TNA_CLOUD', false );
@@ -55,6 +55,8 @@ add_action( 'admin_menu', 'tna_base_menu' );
 add_action( 'init', 'portal_landing_meta_boxes' );
 add_action( 'save_post', 'portal_landing_get_og_meta_on_save' );
 add_action( 'save_post', 'get_meta_og_on_save' );
+add_action( 'save_post', 'check_card_labels', 10, 2);
+add_action( 'admin_notices', 'level_one_card_error' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );
