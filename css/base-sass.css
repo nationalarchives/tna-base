@@ -5406,6 +5406,7 @@ footer {
     .level-one .banner .entry-header {
       margin: 16px 8px; }
     .level-one .banner .entry-content {
+      width: auto;
       padding: 0;
       margin: 0 8px; } }
 .level-one .feature-img-bg {
