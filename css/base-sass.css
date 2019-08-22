@@ -4599,13 +4599,13 @@ body {
     margin-bottom: 0.5em; }
   body ul.documents a, body ul.urls a {
     display: block; }
-  body ul#menu-disc {
+  body ul#menu-disc, body ul#a-z-menu {
     padding: 0; }
-    body ul#menu-disc li {
+    body ul#menu-disc li, body ul#a-z-menu li {
       list-style-type: none;
       margin: 0 4px 4px 0;
       display: inline-block; }
-      body ul#menu-disc li a {
+      body ul#menu-disc li a, body ul#a-z-menu li a {
         display: block;
         color: #fff;
         background-color: #000;
@@ -4616,7 +4616,7 @@ body {
         width: 48px;
         height: 48px;
         border-radius: 50%; }
-      body ul#menu-disc li a:hover {
+      body ul#menu-disc li a:hover, body ul#a-z-menu li a:hover {
         background-color: #fff;
         color: #000; }
   body blockquote {
