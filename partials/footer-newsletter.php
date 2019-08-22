@@ -1,6 +1,6 @@
 <?php
 $url = get_option('newsletter_signup_url');
-if ($url) { ?>
+?>
 
 <div class="newsletter">
     <div class="container">
@@ -19,5 +19,3 @@ if ($url) { ?>
         </div>
     </div>
 </div>
-
-<?php }
