@@ -4584,6 +4584,8 @@ body {
     color: #000; }
   body ul {
     margin-bottom: 1.6em; }
+    body ul li {
+      margin-bottom: 0.6em; }
   body ul.no-bullet {
     list-style-type: none;
     padding: 0; }
