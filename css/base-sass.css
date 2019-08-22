@@ -5346,7 +5346,7 @@ footer {
   list-style-type: none;
   padding: 0; }
 .default-page aside .sidebar-contact {
-  padding: 20px 0 20px 20px; }
+  padding: 0; }
 .default-page aside .live-chat img {
   max-width: 100%;
   height: auto;

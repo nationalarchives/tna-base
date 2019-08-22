@@ -22,7 +22,7 @@ switch( $webchat ) {
 				Other ways to contact us
 		</h2>
 	</div>
-	<div class="sidebar-contact clearfix">
+	<div class="row sidebar-contact clearfix">
 		<div class="live-chat sidebar-item">
 			<div class="col-xs-8 col-sm-12 col-md-8">
 				<h3>
