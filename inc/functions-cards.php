@@ -207,12 +207,7 @@ function display_card( $id, $url, $title, $description, $image, $date, $label ) 
         if ( !url_exists( $url ) ) {
 
             // URL return 404
-            $url         = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
-            $image       = make_path_relative( get_stylesheet_directory_uri() . '/img/events.jpg' );
-            $type        = 'Event';
-            $title       = 'Events - The National Archives';
-            $description = 'Find more information about our events programme and how to book tickets.';
-            $date        = '';
+            return card_fallback( '', $id );
         }
 
         $image = rm_livelb( $image );
@@ -318,8 +313,8 @@ function is_card_active( $expire ) {
  */
 function card_fallback( $fallback, $id ) {
 
-    $url = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
-    $image = make_path_relative( get_stylesheet_directory_uri().'/img/events.jpg' );
+    $url = 'https://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
+    $image = make_path_relative( get_template_directory_uri().'/img/events.jpg' );
     $type = 'Event';
     $title = 'Events - The National Archives';
     $description = 'Find more information about our events programme and how to book tickets.';
@@ -327,7 +322,7 @@ function card_fallback( $fallback, $id ) {
 
     if ( $fallback == 'Latest news' ) {
 
-        $rss = get_html_content( 'http://www.nationalarchives.gov.uk/category/news/feed/' );
+        $rss = get_html_content( 'https://www.nationalarchives.gov.uk/category/news/feed/' );
 
         if ( $rss ) {
 
@@ -343,7 +338,7 @@ function card_fallback( $fallback, $id ) {
     }
     if ( $fallback == 'Latest blog post' ) {
 
-        $rss = get_html_content( 'http://blog.nationalarchives.gov.uk/feed/' );
+        $rss = get_html_content( 'https://blog.nationalarchives.gov.uk/feed/' );
 
         if ( $rss ) {
 
