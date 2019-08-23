@@ -5318,16 +5318,16 @@ footer {
   width: 100%; }
 
 .default-page .entry-header {
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-left: 2px solid #26262a;
+  border-right: 2px solid #26262a;
+  border-bottom: 2px solid #26262a;
   padding: 0.6em 1.6em;
   background: #fff; }
   .default-page .entry-header h1 {
     margin-top: 0; }
 .default-page .entry-content {
-  border-left: solid 2px #000;
-  border-right: 2px solid #000;
+  border-left: 2px solid #26262a;
+  border-right: 2px solid #26262a;
   padding: 1.6em;
   background: #fff;
   margin-bottom: 1.6em; }

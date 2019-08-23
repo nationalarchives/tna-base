@@ -9,9 +9,9 @@
 }
 .default-page {
   .entry-header {
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-left: $grid-line;
+    border-right: $grid-line;
+    border-bottom: $grid-line;
     padding: 0.6em 1.6em;
     background: #fff;
     h1 {
@@ -19,8 +19,8 @@
     }
   }
   .entry-content {
-    border-left: solid 2px #000;
-    border-right: 2px solid #000;
+    border-left: $grid-line;
+    border-right: $grid-line;
     padding: 1.6em;
     background: #fff;
     margin-bottom: 1.6em;
