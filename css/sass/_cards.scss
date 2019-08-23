@@ -1,6 +1,7 @@
 .cards {
   .row {
     display: -webkit-box;
+    display: -moz-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -8,8 +9,14 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+  // Safari flex fix
+  .row:before, .row:after {
+    display: none !important;
+  }
   .col-md-4, .col-md-3 {
+    position: relative;
     display: -webkit-box;
+    display: -moz-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;

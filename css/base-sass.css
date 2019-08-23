@@ -5803,14 +5803,19 @@ footer {
 
 .cards .row {
   display: -webkit-box;
+  display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+.cards .row:before, .cards .row:after {
+  display: none !important; }
 .cards .col-md-4, .cards .col-md-3 {
+  position: relative;
   display: -webkit-box;
+  display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
