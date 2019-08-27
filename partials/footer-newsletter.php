@@ -1,5 +1,5 @@
 <?php
-$url = get_option('newsletter_signup_url');
+$url = 'https://www.nationalarchives.gov.uk/contact-us/email-updates/';
 ?>
 
 <div class="newsletter">

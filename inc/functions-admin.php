@@ -11,23 +11,12 @@ function tna_base_menu() {
 
 function tna_base_admin_page_settings() {
 	register_setting( 'tna-base-settings-group', 'twitter_shortcode' );
-    register_setting( 'tna-base-settings-group', 'newsletter_signup_url' );
 }
 
 function tna_base_admin_page() {
 	if (!current_user_can('administrator'))  {
 		wp_die( __('You do not have sufficient pilchards to access this page.')    );
 	}
-    switch ( get_option( 'newsletter_signup_url' ) ) {
-        case false:
-            delete_option( 'newsletter_signup_url' );
-            add_option( 'newsletter_signup_url', SIGNUP_URL );
-            break;
-        case SIGNUP_URL:
-            break;
-        case true:
-            break;
-    }
 	?>
 	<style>
 		.tna-base-admin input[type=text] {
@@ -56,14 +45,6 @@ function tna_base_admin_page() {
 					</td>
 				</tr>
 			</table>
-
-            <h2>Newsletter sign up</h2>
-            <table class="form-table">
-                <tr valign="top">
-                    <th scope="row"><label for="newsletter_signup_url">Sign up page URL</label></th>
-                    <td><input type="text" name="newsletter_signup_url" value="<?php echo esc_attr( get_option('newsletter_signup_url') ); ?>" /></td>
-                </tr>
-            </table>
 
 			<?php submit_button(); ?>
 		</form>
