@@ -5386,6 +5386,9 @@ footer {
     display: inline-block; }
     .level-one .banner .entry-header h1 {
       margin: 0; }
+      @media (max-width: 480px) {
+        .level-one .banner .entry-header h1 {
+          font-size: 2em; } }
   .level-one .banner .entry-content {
     width: 100%;
     max-width: 720px;
@@ -5408,7 +5411,9 @@ footer {
     .level-one .banner .entry-content {
       width: auto;
       padding: 0;
-      margin: 0 8px; } }
+      margin: 0 8px; }
+    .level-one .banner .feature-img-caption {
+      display: none; } }
 .level-one .feature-img-bg {
   background-position: center center;
   background-size: cover; }
