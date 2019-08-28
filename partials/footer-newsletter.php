@@ -12,7 +12,7 @@ $url = 'https://www.nationalarchives.gov.uk/contact-us/email-updates/';
             </div>
             <div class="col-md-11">
                 <div class="news-content" id="newsletterAccessibility">
-                    <h2>Sign me up to The National Archives' mailing list</h2>
+                    <h3>Sign me up to The National Archives' mailing list</h3>
                     <p>Subscribe now for regular news, updates and priority booking for events.<br><a href="<?php echo $url ?>" class="button">Sign up</a></p>
                 </div>
             </div>

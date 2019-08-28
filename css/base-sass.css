@@ -5300,7 +5300,8 @@ footer {
   footer .newsletter {
     background: #dde5d5;
     padding-top: 1.6em; }
-    footer .newsletter .news-content h2 {
+    footer .newsletter .news-content h3 {
+      font-size: 1.6em;
       margin-top: 0;
       line-height: 1; }
     footer .newsletter .news-content .button {
