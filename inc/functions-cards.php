@@ -132,9 +132,10 @@ function card_html( $id, $url, $image, $type, $title, $description, $date ) {
  */
 function limit_words( $words, $number = 14 ) {
 
+    $words = strip_tags($words);
+    $words = trim($words);
+
     if (str_word_count($words, 0) > $number) {
-        $words = strip_tags($words);
-        $words = trim($words);
         $explode_words = explode( ' ', $words );
         $words = implode(' ', array_splice( $explode_words , 0, $number)).'...';
     }
