@@ -4452,6 +4452,9 @@ button.close {
 /* Grid */
 /* TNA Icons/Images */
 /* TNA global styles */
+.no-margin-top {
+  margin-top: 0; }
+
 #goTop {
   height: 40px;
   width: 40px;
