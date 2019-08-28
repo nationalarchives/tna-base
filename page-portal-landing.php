@@ -4,11 +4,7 @@ Template Name: Portal landing
 */
 get_header(); ?>
 
-<div class="portal-landing">
-
-<?php while ( have_posts() ) : the_post(); ?>
-
-	<?php
+<?php while ( have_posts() ) : the_post();
 	global $post;
     $banner_img   = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full', true ) );
 	$logo         = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'portal_logo', true ) );
@@ -20,7 +16,7 @@ get_header(); ?>
 	$intro_img    = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'intro_img', true ) );
 	$class        = $logo ? 'portal-branding' : 'portal-title';
 	?>
-
+<div class="portal-landing">
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
 		<?php get_template_part( 'breadcrumb' ); ?>
 		<div class="heading-banner">
@@ -53,7 +49,6 @@ get_header(); ?>
                         <div class="intro-image" style="background-image: url(<?php echo $intro_img ?>);">
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -85,9 +80,7 @@ get_header(); ?>
             </div>
         </div>
 	</main>
-
-<?php endwhile; ?>
-
 </div>
+<?php endwhile; ?>
 
 <?php get_footer(); ?>
