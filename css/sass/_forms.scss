@@ -61,7 +61,7 @@ form {
   input[type="submit"]:focus,
   textarea:focus,
   select:focus {
-    outline: 3px solid $yellow-peach;
+    @include element-focus;
   }
   .form-row {
     max-width: 100%;

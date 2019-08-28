@@ -34,10 +34,6 @@
     .icon-circle:hover{
       background-color: $grey-mid-dark;
     }
-    &:focus {
-      outline: 3px solid $grey-light;
-      color: $dark;
-    }
   }
   .image_caption_back {
     display:none;

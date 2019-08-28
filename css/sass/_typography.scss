@@ -39,9 +39,9 @@ body {
     text-decoration: underline;
   }
   a:focus {
-    background-color: $yellow-light;
-    outline: 3px solid $yellow-peach;
-    color: #000;
+    @include element-focus;
+    background-color: #fff;
+    color: $dark;
   }
   ul {
     margin-bottom: 1.6em;

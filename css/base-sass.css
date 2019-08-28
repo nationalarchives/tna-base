@@ -4579,9 +4579,10 @@ body {
     color: #0056b3;
     text-decoration: underline; }
   body a:focus {
-    background-color: #f9f7e2;
-    outline: 3px solid #fbe2bc;
-    color: #000; }
+    outline: 5px solid #007bff;
+    outline-offset: 0;
+    background-color: #fff;
+    color: #26262a; }
   body ul {
     margin-bottom: 1.6em; }
     body ul li {
@@ -4716,7 +4717,8 @@ form input[type=checkbox]:focus,
 form input[type="submit"]:focus,
 form textarea:focus,
 form select:focus {
-  outline: 3px solid #fbe2bc; }
+  outline: 5px solid #007bff;
+  outline-offset: 0; }
 form .form-row {
   max-width: 100%;
   margin-bottom: 1.6em; }
@@ -5523,6 +5525,10 @@ footer {
     background-color: #26262a;
     color: #fff; }
 
+button:focus {
+  outline: 5px solid #007bff;
+  outline-offset: 0; }
+
 /* TNA print styles */
 @media print {
   header, nav, aside, footer {
@@ -5568,9 +5574,6 @@ footer {
       margin: 0; }
     .feature-img button .icon-circle:hover {
       background-color: #555; }
-    .feature-img button:focus {
-      outline: 3px solid #eee;
-      color: #26262a; }
   .feature-img .image_caption_back {
     display: none;
     position: absolute;

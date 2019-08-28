@@ -67,4 +67,9 @@
     color: #fff;
   }
 }
+button {
+  &:focus {
+    @include element-focus;
+  }
+}
 
