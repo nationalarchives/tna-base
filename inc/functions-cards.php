@@ -1,17 +1,6 @@
 <?php
 
 /**
- * @param $content
- * @return string
- */
-function card_wrapper( $content ) {
-
-	$html = '<div class="col-md-4"><div class="card">%s</div></div>';
-
-	return sprintf( $html, $content );
-}
-
-/**
  * @param $id
  * @param $url
  * @param $type
@@ -38,11 +27,17 @@ function card_link( $id, $url, $type, $title, $content ) {
  * @param $image
  * @return string
  */
-function card_image( $image ) {
+function card_image( $image, $type ) {
 
-	$html = '<div class="entry-image" style="background-image: url(%s)"></div>';
+    if ( $type == 'Please select a label' ) {
+        $type = '';
+    } else {
+        $type = '<div class="content-type">'.$type.'</div>';
+    }
 
-	return sprintf( $html, $image );
+	$html = '<div class="entry-image" style="background-image: url(%s)">%s</div>';
+
+	return sprintf( $html, $image, $type );
 }
 
 /**
@@ -75,15 +70,9 @@ function card_content( $type, $title, $description ) {
 	$type_class = strtolower( $type );
 	$description = limit_words( $description );
 
-	if ( $type == 'Please select a label' ) {
-	    $type = '';
-    } else {
-	    $type = '<div class="content-type">'.$type.'</div>';
-    }
+	$html = '<div class="entry-content %s"><h3>%s</h3><p>%s</p></div>';
 
-	$html = '<div class="entry-content %s">%s<h3>%s</h3><p>%s</p></div>';
-
-	return sprintf( $html, $type_class, $type, $title, $description );
+	return sprintf( $html, $type_class, $title, $description );
 }
 
 /**
@@ -119,9 +108,13 @@ function banner_content( $type, $title, $description ) {
  */
 function card_html( $id, $url, $image, $type, $title, $description, $date ) {
 
-	$content = card_image( $image ) . card_content( $type, $title, $description ) . card_date( $date, $type );
+    $content = card_image( $image, $type ) . card_content( $type, $title, $description ) . card_date( $date, $type );
 
-	return card_wrapper( card_link( $id, $url, $type, $title, $content ) );
+    $html  = '<div class="col-md-4"><div class="card">';
+    $html .= card_link( $id, $url, $type, $title, $content );
+    $html .= '</div></div>';
+
+	return $html;
 }
 
 /**

@@ -84,22 +84,20 @@
       background: $dark $tna_icon_video no-repeat center center;
       background-size: 68%;
       position: absolute;
-      left: 16px;
-      bottom: 16px;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      left: 0;
+      bottom: 0;
+      width: 32px;
+      height: 32px;
     }
     .audio .entry-image:before, .podcast .entry-image:before {
       content: " ";
       background: $dark $tna_icon_audio no-repeat center center;
       background-size: 68%;
       position: absolute;
-      left: 16px;
-      bottom: 16px;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      left: 0;
+      bottom: 0;
+      width: 32px;
+      height: 32px;
     }
     .entry-image {
       position: relative;
@@ -107,6 +105,21 @@
       width: 100%;
       background: #ddd center center;
       background-size: cover;
+      .content-type {
+        position: absolute;
+        height: 32px;
+        bottom: 0;
+        left: 0;
+        font-size: 0.9em;
+        padding: .3em .7em;
+        background: #26262a;
+        color: #fff;
+      }
+    }
+    .video, .webinar, .audio, .podcast {
+      .entry-image .content-type {
+        left: 32px;
+      }
     }
   }
   .col-md-3 {
@@ -118,10 +131,6 @@
     .entry-image {
       min-height: 185px;
     }
-  }
-  .content-type {
-    padding: 0.3em 0;
-    color: $dark;
   }
   h2 {
     border-top: $grid-line;

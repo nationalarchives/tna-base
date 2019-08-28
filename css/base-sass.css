@@ -5886,34 +5886,40 @@ button:focus {
     background: #26262a url("../img/icon-video.png") no-repeat center center;
     background-size: 68%;
     position: absolute;
-    left: 16px;
-    bottom: 16px;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px; }
+    left: 0;
+    bottom: 0;
+    width: 32px;
+    height: 32px; }
   .cards .card .audio .entry-image:before, .cards .card .podcast .entry-image:before {
     content: " ";
     background: #26262a url("../img/icon-audio.png") no-repeat center center;
     background-size: 68%;
     position: absolute;
-    left: 16px;
-    bottom: 16px;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px; }
+    left: 0;
+    bottom: 0;
+    width: 32px;
+    height: 32px; }
   .cards .card .entry-image {
     position: relative;
     display: block;
     width: 100%;
     background: #ddd center center;
     background-size: cover; }
+    .cards .card .entry-image .content-type {
+      position: absolute;
+      height: 32px;
+      bottom: 0;
+      left: 0;
+      font-size: 0.9em;
+      padding: .3em .7em;
+      background: #26262a;
+      color: #fff; }
+  .cards .card .video .entry-image .content-type, .cards .card .webinar .entry-image .content-type, .cards .card .audio .entry-image .content-type, .cards .card .podcast .entry-image .content-type {
+    left: 32px; }
 .cards .col-md-3 .entry-image {
   min-height: 160px; }
 .cards .col-md-4 .entry-image {
   min-height: 185px; }
-.cards .content-type {
-  padding: 0.3em 0;
-  color: #26262a; }
 .cards h2 {
   border-top: 2px solid #26262a;
   padding-top: 10px;
