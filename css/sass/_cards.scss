@@ -79,25 +79,27 @@
         }
       }
     }
-    .video .entry-image:before, .webinar .entry-image:before {
-      content: " ";
-      background: $dark $tna_icon_video no-repeat center center;
-      background-size: 68%;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 32px;
-      height: 32px;
+    .video, .webinar, .audio, .podcast {
+      .entry-image:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 32px;
+        height: 32px;
+      }
     }
-    .audio .entry-image:before, .podcast .entry-image:before {
-      content: " ";
-      background: $dark $tna_icon_audio no-repeat center center;
-      background-size: 68%;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 32px;
-      height: 32px;
+    .video, .webinar {
+      .entry-image:before {
+        background: $dark $tna_icon_video no-repeat center center;
+        background-size: 68%;
+      }
+    }
+    .audio, .podcast {
+      .entry-image:before {
+        background: $dark $tna_icon_audio no-repeat center center;
+        background-size: 68%;
+      }
     }
     .entry-image {
       position: relative;

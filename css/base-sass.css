@@ -5881,24 +5881,19 @@ button:focus {
       text-decoration: none; }
       .cards .card a:hover .entry-content h3, .cards .card a:hover .entry-header h3 {
         text-decoration: underline; }
+  .cards .card .video .entry-image:before, .cards .card .webinar .entry-image:before, .cards .card .audio .entry-image:before, .cards .card .podcast .entry-image:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 32px;
+    height: 32px; }
   .cards .card .video .entry-image:before, .cards .card .webinar .entry-image:before {
-    content: " ";
     background: #26262a url("../img/icon-video.png") no-repeat center center;
-    background-size: 68%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 32px;
-    height: 32px; }
+    background-size: 68%; }
   .cards .card .audio .entry-image:before, .cards .card .podcast .entry-image:before {
-    content: " ";
     background: #26262a url("../img/icon-audio.png") no-repeat center center;
-    background-size: 68%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 32px;
-    height: 32px; }
+    background-size: 68%; }
   .cards .card .entry-image {
     position: relative;
     display: block;
