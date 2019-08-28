@@ -75,17 +75,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<button class="search-expander">&nbsp;</button>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch"
 				      action="/search/results" role="search">
-					<div class="input-group">
-                        <label class="sr-only sr-only-focusable" for="tnaMobileSearch">Search our website</label>
-						<input type="text" placeholder="Search our website..." id="tnaMobileSearch" required aria-required="true" name="QueryText" value="">
-					</div>
-                    <div class="radio-search">
-						<input name="radioSearchGroup" id="radioSearchWebsite" value="search_website" checked="" type="radio"> <label for="radioSearchWebsite">Search our website</label>
-                    </div>
-                    <div class="radio-search">
-						<input name="radioSearchGroup" id="radioSearchRecords" value="search_records" type="radio"> <label for="radioSearchRecords">Search our records</label>
-                    </div>
-                    <span class="input-group-addon"><input type="submit" value="Search"></span>
+                    <fieldset>
+                        <legend class="sr-only sr-only-focusable">Search</legend>
+                        <div class="input-group">
+                            <label class="sr-only sr-only-focusable" for="tnaMobileSearch">Search our website</label>
+                            <input type="text" placeholder="Search our website..." id="tnaMobileSearch" required aria-required="true" name="QueryText" value="">
+                        </div>
+                        <div class="radio-search">
+                            <input name="radioSearchGroup" id="radioSearchWebsite" value="search_website" checked="" type="radio"> <label for="radioSearchWebsite">Search our website</label>
+                        </div>
+                        <div class="radio-search">
+                            <input name="radioSearchGroup" id="radioSearchRecords" value="search_records" type="radio"> <label for="radioSearchRecords">Search our records</label>
+                        </div>
+                        <span class="input-group-addon"><input type="submit" value="Search"></span>
+                    </fieldset>
 				</form>
 			</div>
 		</div>
