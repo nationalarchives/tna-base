@@ -27,6 +27,9 @@ header {
       background-position: center;
       border: #fff solid 2px;
     }
+    input[type='submit']:hover {
+      background-color: $grey-mid-dark;
+    }
     ul {
       background-color: #333;
       position: absolute;

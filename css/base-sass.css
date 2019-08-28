@@ -5001,6 +5001,8 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     border: #fff solid 2px; }
+  header #search-field-wrapper input[type='submit']:hover {
+    background-color: #555; }
   header #search-field-wrapper ul {
     background-color: #333;
     position: absolute;
