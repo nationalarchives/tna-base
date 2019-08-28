@@ -165,7 +165,7 @@ function url_exists( $url ) {
  * @param $url
  * @return string
  */
-function rm_livelb($url ) {
+function rm_livelb( $url ) {
 
     if ( strpos($url, 'livelb.nationalarchives.gov.uk') !== false ) {
 
@@ -205,6 +205,8 @@ function display_card( $id, $url, $title, $description, $image, $date, $label ) 
         } else {
             $type = $label;
         }
+
+        $image = make_url_https( $image );
 
         if ( !url_exists( $url ) ) {
 
@@ -392,4 +394,12 @@ function level_one_card_error() {
         <?php
         delete_transient( get_current_user_id().'level_one_card_error' );
     }
+}
+
+function make_url_https( $url ) {
+    if ( strpos( $url, 'http:' ) !== false ) {
+        $url = str_replace('http:', 'https:', $url);
+        return $url;
+    }
+    return $url;
 }
