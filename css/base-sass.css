@@ -5126,6 +5126,10 @@ header {
     border-color: #fff; }
   header #mobileGlobalSearch label {
     width: 100%; }
+  header #mobileGlobalSearch .radio-search {
+    margin-bottom: 0.3em; }
+    header #mobileGlobalSearch .radio-search label {
+      width: auto; }
   header #mobileGlobalSearch .input-group {
     padding: 10px 0; }
   header #mobileGlobalSearch .input-group-addon {

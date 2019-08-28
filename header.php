@@ -54,6 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="col-xs-2 col-sm-5" id="search-field-wrapper">
 				<form action="/search/results" method="get" id="globalSearch" role="search" class="hidden-xs">
 					<span id="scope-selector">&nbsp;</span>
+                    <label class="sr-only sr-only-focusable" for="tnaSearch">Search our website</label>
 					<input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch" name="_q" required aria-required="true">
 					<input type="submit" class="search-button" id="search-button" value="">
 				</form>
@@ -75,15 +76,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch"
 				      action="/search/results" role="search">
 					<div class="input-group">
-						<input type="text" placeholder="Search our website..." required aria-required="true" name="QueryText" value="">
-						<span class="input-group-addon"><input type="submit" value="Search"></span>
+                        <label class="sr-only sr-only-focusable" for="tnaMobileSearch">Search our website</label>
+						<input type="text" placeholder="Search our website..." id="tnaMobileSearch" required aria-required="true" name="QueryText" value="">
 					</div>
-					<label>
-						<input name="radioSearchGroup" value="search_website" checked="" type="radio"> Search our website
-					</label>
-					<label>
-						<input name="radioSearchGroup" value="search_records" type="radio"> Search our records
-					</label>
+                    <div class="radio-search">
+						<input name="radioSearchGroup" id="radioSearchWebsite" value="search_website" checked="" type="radio"> <label for="radioSearchWebsite">Search our website</label>
+                    </div>
+                    <div class="radio-search">
+						<input name="radioSearchGroup" id="radioSearchRecords" value="search_records" type="radio"> <label for="radioSearchRecords">Search our records</label>
+                    </div>
+                    <span class="input-group-addon"><input type="submit" value="Search"></span>
 				</form>
 			</div>
 		</div>
