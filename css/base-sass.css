@@ -5231,20 +5231,20 @@ header {
   display: none; }
 
 footer {
+  color: #fff;
   background-color: #26262a; }
+  footer a, footer a:active, footer a:visited, footer a:hover {
+    color: #fbe2bc; }
+  footer a:focus {
+    color: #26262a; }
   footer .footer-content {
     padding-top: 1.6em; }
   footer .footer-col {
-    color: #fff;
     margin-bottom: 1.6em;
     min-height: 280px; }
     @media (max-width: 767px) {
       footer .footer-col {
         min-height: auto; } }
-    footer .footer-col a, footer .footer-col a:active, footer .footer-col a:visited, footer .footer-col a:hover {
-      color: #fbe2bc; }
-    footer .footer-col a:focus {
-      color: #26262a; }
     footer .footer-col ul {
       list-style-type: none;
       padding-left: 0; }
@@ -5252,10 +5252,7 @@ footer {
       max-width: 157px;
       margin-bottom: 23px; }
   footer .footer-base {
-    color: #fff;
     margin-bottom: 1.6em; }
-    footer .footer-base a, footer .footer-base a:active, footer .footer-base a:visited, footer .footer-base a:hover {
-      color: #fbe2bc; }
     footer .footer-base .ogl img {
       float: left;
       margin: 3px 25px 10px 0;
@@ -5297,13 +5294,13 @@ footer {
         float: none !important;
         max-width: 320px; } }
   footer .follow-us a {
-    display: inline-block; }
+    display: inline-block;
+    margin: 0 0.2em 0.3em 0; }
     footer .follow-us a img {
       background-color: #26262a;
       border: 2px solid #fff;
       border-radius: 50%;
       padding: 7px;
-      margin: 0 0.2em 0.3em 0;
       width: 40px;
       transition: 0.4s ease-in-out;
       -webkit-transition: 0.4s ease-in-out;
@@ -5311,6 +5308,7 @@ footer {
       footer .follow-us a img:hover {
         background: #555; }
   footer .newsletter {
+    color: #26262a;
     background: #dde5d5;
     padding-top: 1.6em; }
     footer .newsletter .news-content h3 {

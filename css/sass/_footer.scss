@@ -1,20 +1,20 @@
 footer {
+  color: #fff;
   background-color: $dark;
+  a, a:active, a:visited, a:hover {
+    color: $yellow-peach;
+  }
+  a:focus {
+    color: $dark;
+  }
   .footer-content {
     padding-top: 1.6em;
   }
   .footer-col {
-    color: #fff;
     margin-bottom: 1.6em;
     min-height: 280px;
     @media (max-width: 767px) {
       min-height: auto;
-    }
-    a, a:active, a:visited, a:hover {
-      color: $yellow-peach;
-    }
-    a:focus {
-      color: $dark;
     }
     ul {
       list-style-type: none;
@@ -26,11 +26,7 @@ footer {
     }
   }
   .footer-base {
-    color: #fff;
     margin-bottom: 1.6em;
-    a, a:active, a:visited, a:hover {
-      color: $yellow-peach;
-    }
     .ogl img {
       float: left;
       margin: 3px 25px 10px 0;
@@ -86,13 +82,13 @@ footer {
   }
   .follow-us {
     a {
-      display:inline-block;
+      display: inline-block;
+      margin: 0 0.2em 0.3em 0;
       img {
         background-color: $dark;
         border: 2px solid #fff;
         border-radius: 50%;
         padding: 7px;
-        margin: 0 0.2em 0.3em 0;
         width: 40px;
         transition:0.4s ease-in-out;
         -webkit-transition:0.4s ease-in-out;
@@ -104,6 +100,7 @@ footer {
     }
   }
   .newsletter {
+    color: $dark;
     background: $green;
     padding-top: 1.6em;
     .news-content {
