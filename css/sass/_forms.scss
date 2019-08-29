@@ -52,8 +52,11 @@ form {
     padding: 0.6em;
   }
   select {
-    border: $grid-line;
     height: 2.4em;
+    -webkit-border-radius: 0;
+    border: 0;
+    outline: $grid-line;
+    outline-offset: -1px;
   }
   input:focus,
   input[type=radio]:focus,
@@ -100,12 +103,6 @@ form {
     }
     textarea {
       min-height: 120px;
-    }
-    select {
-      -webkit-border-radius: 0;
-      border: 0;
-      outline: $grid-line;
-      outline-offset: -1px;
     }
     input[type=checkbox],
     input[type=radio] {
@@ -198,7 +195,7 @@ form {
       content: "";
     }
     input[type="checkbox"]:focus + label::before {
-      outline: $yellow-peach auto 5px;
+      @include element-focus;
     }
   }
   .radio {
@@ -240,7 +237,7 @@ form {
       content: "";
     }
     input[type="radio"]:focus + label::before {
-      outline: $yellow-peach auto 5px;
+      @include element-focus;
     }
   }
 }

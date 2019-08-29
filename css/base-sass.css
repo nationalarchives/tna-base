@@ -4712,8 +4712,11 @@ form textarea {
   border: 2px solid #26262a;
   padding: 0.6em; }
 form select {
-  border: 2px solid #26262a;
-  height: 2.4em; }
+  height: 2.4em;
+  -webkit-border-radius: 0;
+  border: 0;
+  outline: 2px solid #26262a;
+  outline-offset: -1px; }
 form input:focus,
 form input[type=radio]:focus,
 form input[type=checkbox]:focus,
@@ -4767,11 +4770,6 @@ form .form-row {
       background: #eee; }
   form .form-row textarea {
     min-height: 120px; }
-  form .form-row select {
-    -webkit-border-radius: 0;
-    border: 0;
-    outline: 2px solid #26262a;
-    outline-offset: -1px; }
   form .form-row input[type=checkbox],
   form .form-row input[type=radio] {
     margin: 4px 10px 0; }
@@ -4843,7 +4841,8 @@ form .checkbox input[type="checkbox"] + label::after {
 form .checkbox input[type="checkbox"]:checked + label::after {
   content: ""; }
 form .checkbox input[type="checkbox"]:focus + label::before {
-  outline: #fbe2bc auto 5px; }
+  outline: 5px solid #007bff;
+  outline-offset: 0; }
 form .radio input[type="radio"] {
   position: absolute;
   opacity: 0; }
@@ -4875,7 +4874,8 @@ form .radio input[type="radio"] + label::after {
 form .radio input[type="radio"]:checked + label::after {
   content: ""; }
 form .radio input[type="radio"]:focus + label::before {
-  outline: #fbe2bc auto 5px; }
+  outline: 5px solid #007bff;
+  outline-offset: 0; }
 
 .error-message, .success-message {
   color: #26262a !important;
