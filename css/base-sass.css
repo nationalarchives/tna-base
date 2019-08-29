@@ -5029,6 +5029,8 @@ header {
         header #search-field-wrapper ul li a:hover {
           background-color: #fce45c;
           color: #26262a; }
+  header #logo-holder a:focus {
+    background-color: #26262a; }
   header #mega-menu-pull-down {
     background-image: url("../img/menu-collapsed.png");
     background-position: 50% 90%;

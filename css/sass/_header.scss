@@ -54,6 +54,9 @@ header {
       }
     }
   }
+  #logo-holder a:focus {
+    background-color: $dark;
+  }
   #mega-menu-pull-down {
     background-image: $tna_menu_collapsed;
     background-position: 50% 90%;
