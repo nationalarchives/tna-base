@@ -142,14 +142,16 @@
   }
   h3 {
     border-top: $grid-line;
-    padding-top: 0.6em;
+    padding-top: 10px;
     margin-top: 0;
-    &:hover {
-      text-decoration: underline;
-    }
   }
   p {
     color: $dark;
+  }
+  .entry-content {
+    h2 {
+      margin-bottom: 10px;
+    }
   }
   .entry-header h3 {
     padding: 0.6em 0;

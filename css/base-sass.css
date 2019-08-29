@@ -5925,12 +5925,12 @@ button:focus {
   margin-bottom: 26px; }
 .cards h3 {
   border-top: 2px solid #26262a;
-  padding-top: 0.6em;
+  padding-top: 10px;
   margin-top: 0; }
-  .cards h3:hover {
-    text-decoration: underline; }
 .cards p {
   color: #26262a; }
+.cards .entry-content h2 {
+  margin-bottom: 10px; }
 .cards .entry-header h3 {
   padding: 0.6em 0; }
 
