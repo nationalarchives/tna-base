@@ -9,6 +9,9 @@
   a:hover {
     color: $yellow-peach;
   }
+  a:focus {
+    color: $dark;
+  }
   ul {
     margin: 0;
     padding: 0;
