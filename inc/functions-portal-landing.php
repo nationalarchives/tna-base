@@ -439,9 +439,10 @@ function portal_fallback_card( $i ) {
 
 		$html = '<div class="col-md-4"><div class="card fallback">
 					<a id="card-%s" href="%s" class="portal-card">
-						<div class="entry-image" style="background-image: url(%s)"></div>
+						<div class="entry-image" style="background-image: url(%s)">
+						    <div class="content-type">Event</div>
+                        </div>
 						<div class="entry-content event">
-							<div class="content-type">Event</div>
 							<h3>Events - The National Archives</h3>
 							<p>Find more information about our events programme and how to book tickets.</p>
 						</div>
