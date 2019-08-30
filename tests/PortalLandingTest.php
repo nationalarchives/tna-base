@@ -53,28 +53,6 @@ class PortalLandingTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(function_exists('portal_display_card'));
     }
-    public function test_portal_display_card_returns()
-    {
-        $html = '<div class="col-card-4"><div class="card">
-					<a id="card-7" href="https://www.nationalarchives.gov.uk/about/news/" class="portal-card">
-						<div class="entry-image" style="background-image: url(image.jpg)"></div>
-						<div class="entry-content news">
-							<div class="content-type">News</div>
-							<h3>Booking now open for the Gerald Aylmer Seminar 2018</h3>
-							<p>Diversity and inclusive histories are the focus of this year\'s seminar</p>
-						</div>
-					</a>
-				</div></div>';
-        $i = 7;
-        $url = 'https://www.nationalarchives.gov.uk/about/news/';
-        $title = 'Booking now open for the Gerald Aylmer Seminar 2018';
-        $excerpt = 'Diversity and inclusive histories are the focus of this year\'s seminar';
-        $image = 'image.jpg';
-        $date = '';
-        $label = 'News';
-        $returns = portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label );
-        $this->assertEquals($returns, $html);
-    }
     public function test_portal_connect_bar()
     {
         $this->assertTrue(function_exists('portal_connect_bar'));
