@@ -54,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="col-xs-2 col-sm-5" id="search-field-wrapper">
 				<form action="/search/results" method="get" id="globalSearch" role="search" class="hidden-xs">
 					<span id="scope-selector">&nbsp;</span>
-                    <label class="sr-only sr-only-focusable" for="tnaSearch">Search our website</label>
+                    <label class="sr-only sr-only-focusable" for="tnaSearch">Search</label>
 					<input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch" name="_q" required aria-required="true">
 					<input type="submit" class="search-button" id="search-button" value="">
 				</form>
@@ -76,9 +76,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch"
 				      action="/search/results" role="search">
                     <fieldset>
-                        <legend class="sr-only sr-only-focusable">Search</legend>
+                        <legend class="sr-only sr-only-focusable">Search our website or records</legend>
                         <div class="input-group">
-                            <label class="sr-only sr-only-focusable" for="tnaMobileSearch">Search our website</label>
+                            <label class="sr-only sr-only-focusable" for="tnaMobileSearch">Search</label>
                             <input type="text" placeholder="Search our website..." id="tnaMobileSearch" required aria-required="true" name="QueryText" value="">
                         </div>
                         <div class="radio-search">
