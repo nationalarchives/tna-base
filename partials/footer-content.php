@@ -65,9 +65,9 @@
             <div class="footer-col col-xs-12 col-sm-6 col-md-6">
                 <h4>Websites</h4>
                 <ul>
-                    <li><a href="http://blog.nationalarchives.gov.uk/">Blog</a></li>
-                    <li><a href="http://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
-                    <li><a href="http://bookshop.nationalarchives.gov.uk/">Bookshop</a></li>
+                    <li><a href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
+                    <li><a href="https://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
+                    <li><a href="https://bookshop.nationalarchives.gov.uk/">Bookshop</a></li>
                     <li><a href="https://images.nationalarchives.gov.uk/">Image library</a></li>
                     <li><a href="/webarchive/">UK Government Web Archive</a></li>
                     <li><a href="http://www.legislation.gov.uk/" target="_blank">Legislation.gov.uk</a></li>
@@ -120,25 +120,12 @@
                        target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/instagram.png"
                              alt="Instagram logo"></a>
-                    <a href="http://www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
+                    <a href="https://www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/rss.png" alt="RSS logo"></a>
                 </div>
             </div>
 
             <div class="footer-col col-xs-12 col-sm-6 col-md-12">
-                <h4>Featured Flickr image</h4>
-                <p id="flickr-caption">West End London street scene, by Grace Golden (<a
-                            href="https://www.flickr.com/photos/nationalarchives/3047452739/"
-                            title="External website - opens in new window" target="_blank">INF 3/1738</a>)</p>
-                <p id="flickr-image">
-                    <a target="_blank" title="External website - opens in a new window"
-                       href="https://www.flickr.com/photos/nationalarchives/3047452739/">
-                        <img class="img-responsive"
-                             src="https://www.nationalarchives.gov.uk/images/global/inf-3-1738-grace-golden.jpg"
-                             alt="West End London street scene, by Grace Golden">
-                    </a>
-                </p>
-
             </div>
         </div>
     </div>
@@ -147,14 +134,14 @@
 <div class="row footer-base">
     <div class="col-xs-12 col-sm-9 col-md-9 ogl">
         <a title="External website - opens in a new window"
-           href="http://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img
+           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img
                     alt="Open Government License logo"
                     src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png">
         </a>
-        <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/">Open
-                Government Licence v3.0</a>, <br>except where otherwise stated </p>
+        <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/">Open
+                Government Licence v3.0</a>, except where otherwise stated </p>
     </div>
-    <div class="col-xs-12 col-sm-3 col-md-3 text-right">
+    <div class="col-xs-12 col-sm-3 col-md-3 gov-uk">
         <a title="External website - opens in a new window" href="http://gov.uk/" target="_blank"> <img
                     alt="GOV.UK logo"
                     src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/gov-uk.png"> </a>

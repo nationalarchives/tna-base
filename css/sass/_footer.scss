@@ -1,105 +1,48 @@
-/* TNA footer styles */
-
 footer {
-  background-color: $tna_dark;
-  background-repeat: no-repeat;
-  background-position: -6em 20px;
-  color: $tna_white;
-  a:active,
-  a:link,
-  a:visited {
-    color: $tna_yellow;
-  }
-  .footer-col {
-    margin-bottom: 1em;
-    p {
-      font-size: 0.9em;
-    }
+  color: #fff;
+  background-color: $dark;
+  a, a:active, a:visited, a:hover {
+    color: $yellow-peach;
   }
   a:focus {
-    color: $tna_dark;
+    color: $dark;
   }
-  ul {
-    padding: 0;
-    margin: 0;
+  .footer-content {
+    padding-top: 1.6em;
   }
-  li {
-    font-size: 0.9em;
-    list-style-type: none;
-    list-style-image: none;
-    padding: 0.25em 0;
-    margin: 0;
-    border-top: 1px dotted $tna_mid;
-  }
-  li:first-child {
-    border-top: none;
-  }
-  .tel {
-    color: $tna_white !important;
-    &:focus {
-      color: $tna_dark !important;
+  .footer-col {
+    margin-bottom: 1.6em;
+    min-height: 280px;
+    @media (max-width: 767px) {
+      min-height: auto;
     }
-    &:hover {
-      text-decoration: none;
-      cursor: text;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .square-logo {
+      max-width: 157px;
+      margin-bottom: 23px;
     }
   }
   .footer-base {
-    margin: 1.5em 0 0 0;
-    border-top: 1px dotted $tna_mid;
-    padding: 20px 0 0;
-    font-size: 0.85em;
-    .ogl {
-      img {
-        float: left;
-        margin: 5px 25px 10px 0;
+    margin-bottom: 1.6em;
+    .ogl img {
+      float: left;
+      margin: 3px 25px 10px 0;
+      width: auto;
+      height: 16px;
+      @media (max-width: 767px) {
+        float: none;
+      }
+    }
+    .gov-uk {
+      text-align: right;
+      @media (max-width: 767px) {
+        text-align: left;
       }
     }
   }
-  address {
-    font-family: $tna_heading_font;
-    font-style: normal;
-    line-height: 1.5;
-    font-size: 1.166em;
-    margin: 10px 0 10px 0;
-  }
-  .square-logo {
-    max-width: 157px;
-    margin-top: 16px;
-    margin-bottom: 23px;
-  }
-}
-
-/*
- * Footer stylesheet
- */
-.follow-us {
-  a {
-    display: inline-block;
-    img {
-      background-color: #008484;
-      border-radius: 50%;
-      padding: 6px;
-      margin: 0 0.2em 0.3em 0;
-      width: 46px;
-      transition: 0.4s ease-in-out;
-      -webkit-transition: 0.4s ease-in-out;
-      -moz-transition: 0.4s ease-in-out;
-      &:hover {
-        background: #555;
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .follow-us a img {
-    width: 39px;
-  }
-}
-.footer-col {
-  padding: 0 20px 0 20px;
-
   .opening-times {
     .open_table {
       display: table;
@@ -110,8 +53,7 @@ footer {
       .open_tableHeading {
         display: table-header-group;
       }
-      .open_tableCell,
-      .open_tableHead {
+      .open_tableCell, .open_tableHead {
         display: table-cell;
         padding: 3px 0;
       }
@@ -129,43 +71,49 @@ footer {
     }
     .open {
       margin-top: 40px;
+      @media (max-width: 1024px) {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
+        max-width: 320px;
+      }
     }
   }
-
-  @media (max-width: 767px) {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    padding: 0 25px 0 25px;
-  }
-  .footer-col {
-    padding: 10px;
-  }
-  &:first-child {
-    height: 304.77px;
-    @media (max-width: 767px) {
-      height: auto;
+  .follow-us {
+    a {
+      display: inline-block;
+      margin: 0 0.2em 0.3em 0;
+      img {
+        background-color: $dark;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 7px;
+        width: 40px;
+        transition:0.4s ease-in-out;
+        -webkit-transition:0.4s ease-in-out;
+        -moz-transition:0.4s ease-in-out;
+        &:hover {
+          background:#555;
+        }
+      }
     }
   }
-  @media (max-width: 768px) {
-    margin: 0 !important;
-  }
-}
-@media (max-width: 1024px) {
-  .open {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important;
-    max-width: 320px;
-  }
-
-  .open-white {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important;
-    max-width: 320px;
-    margin-bottom: 10px;
+  .newsletter {
+    color: $dark;
+    background: $green;
+    padding-top: 1.6em;
+    .news-content {
+      h3 {
+        font-size: 1.6em;
+        margin-top: 0;
+        line-height: 1;
+      }
+      .button {
+        padding: .3em .9em;
+        line-height: 1;
+        margin-top: 0.6em;
+      }
+    }
   }
 }

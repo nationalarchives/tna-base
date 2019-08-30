@@ -7,7 +7,7 @@
 <!-- tna_wp_head -->
 <?php tna_wp_head(); ?>
 <!-- end tna_wp_head -->
-<?php get_template_part( 'partials/tna', 'head' ); ?>
+<?php get_template_part( 'partials/header-meta' ); ?>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -40,20 +40,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="row">
 			<div class="col-xs-2 col-sm-5" id="logo-holder">
 				<button aria-label="Toggle menu" id="mega-menu-mobile"></button>
-				<a href="http://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
+				<a href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
 				   class="visible-lg visible-md visible-sm">
-					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-horizontal-white-logo.svg" alt="The National Archives"  class="img-responsive">
+					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-horizontal-white-logo.svg" alt="The National Archives"  class="img-responsive logo">
 				</a>
 			</div>
 			<div class="col-xs-8 col-sm-2" id="mobile-logo-holder">
 				<button title="Main menu" aria-label="Toggle menu" id="mega-menu-pull-down" class="hidden-xs"><span>Menu</span></button>
-				<a href="http://www.nationalarchives.gov.uk" title="Go to The National Archives homepage" class="hidden-lg hidden-md hidden-sm">
+				<a href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage" class="hidden-lg hidden-md hidden-sm">
 				<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png" srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-horizontal-white-logo.svg" alt="The National Archives"  class="img-responsive">
 				</a>
 			</div>
 			<div class="col-xs-2 col-sm-5" id="search-field-wrapper">
 				<form action="/search/results" method="get" id="globalSearch" role="search" class="hidden-xs">
 					<span id="scope-selector">&nbsp;</span>
+                    <label class="sr-only sr-only-focusable" for="tnaSearch">Search</label>
 					<input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch" name="_q" required aria-required="true">
 					<input type="submit" class="search-button" id="search-button" value="">
 				</form>
@@ -63,7 +64,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					       data-placeholder="Search our website..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the website">Search our website</a></li>
 					<li><a title="Search our catalogue for records" href="#" class="formDestinationChanger"
-					       data-target="http://discovery.nationalarchives.gov.uk/results/r"
+					       data-target="https://discovery.nationalarchives.gov.uk/results/r"
 					       data-placeholder="Search our records..." data-fieldName="_q" role="button"
 					       aria-label="Change form destination to search the catalogue">Search our records</a></li>
 				</ul>
@@ -74,23 +75,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<button class="search-expander">&nbsp;</button>
 				<form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch"
 				      action="/search/results" role="search">
-					<div class="input-group">
-						<input type="text" placeholder="Search our website..." required aria-required="true" name="QueryText" value="">
-						<span class="input-group-addon"><input type="submit" value=""></span>
-					</div>
-					<label>
-						<input name="radioSearchGroup" value="search_website" checked="" type="radio"> Search our website
-					</label>
-					<label>
-						<input name="radioSearchGroup" value="search_records" type="radio"> Search our records
-					</label>
+                    <fieldset>
+                        <legend class="sr-only sr-only-focusable">Search our website or records</legend>
+                        <div class="input-group">
+                            <label class="sr-only sr-only-focusable" for="tnaMobileSearch">Search</label>
+                            <input type="text" placeholder="Search our website..." id="tnaMobileSearch" required aria-required="true" name="QueryText" value="">
+                        </div>
+                        <div class="radio-search">
+                            <input name="radioSearchGroup" id="radioSearchWebsite" value="search_website" checked="" type="radio"> <label for="radioSearchWebsite">Search our website</label>
+                        </div>
+                        <div class="radio-search">
+                            <input name="radioSearchGroup" id="radioSearchRecords" value="search_records" type="radio"> <label for="radioSearchRecords">Search our records</label>
+                        </div>
+                        <span class="input-group-addon"><input type="submit" value="Search"></span>
+                    </fieldset>
 				</form>
 			</div>
 		</div>
 	</div>
 </header>
 
-<nav id="nav" role="navigation">
+<nav id="nav" role="navigation" class="navigation">
 	<div class="mega-menu clearfix">
 		<?php
 		global $cloud;
@@ -98,10 +103,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			if (file_exists(PATH_TO_MEGA_MENU_HTML)) {
 				include PATH_TO_MEGA_MENU_HTML;
 			} else {
-				include 'inc/content/mega-menu.php';
+                get_template_part( 'partials/mega-menu' );
 			}
 		} else {
-            get_template_part( 'inc/content/mega-menu' );
+            get_template_part( 'partials/mega-menu' );
         }
 		?>
 	</div>

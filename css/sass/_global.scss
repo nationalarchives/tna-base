@@ -1,89 +1,14 @@
 /* TNA global styles */
 
-body {
-  font-family: $tna_body_font;
-  font-size: 16px;
-  background-color: $tna_light;
-  line-height: 1.6;
-}
-
-h1, h2, h3, h4 {
-  font-family: $tna_heading_font;
-  font-weight: 400;
-  z-index: 2;
-  line-height: 1.6;
-  letter-spacing: -.025em;
-}
-//h1 {
-//  font-size: 1.75em;
-//}
-//h2 {
-//  font-size: 1.5em;
-//}
-//h3 {
-//  font-size: 1.3em;
-//}
-//h4 {
-//  font-size: 1.2em;
-//}
-
-h1 {
-  font-size: 2em;
-}
-h2 {
-  font-size: 1.6em;
-}
-h3 {
-  font-size: 1.3em;
-}
-h4 {
-  font-size: 1.16em;
-}
-
-p {
-  margin: 0 0 1.5em;
-}
-
-a:active, a:link, a:visited {
-  color: $tna_link_col;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:focus {
-  background-color: $tna_yellow;
-  outline: 3px solid $tna_yellow_dark;
-  color: $tna_dark !important;
-}
-
-hr {
-  height: 0;
-  border:0;
-  margin: 1em 0;
-  clear: both;
-  width:100%;
-  border-bottom: 1px solid #ECECEC;
-}
-
-.breather-top {
-  padding-top:1em;
-}
-.breather-bottom {
-  padding-bottom:1em;
-}
-.breather-top-bottom{
-  padding-top:1em;
-  padding-bottom:1em;
-}
-.breather {
-  padding: 1em;
+.no-margin-top {
+  margin-top: 0;
 }
 
 #goTop {
   height: 40px;
   width: 40px;
   padding: 10px;
+  border: 2px solid #fff;
   text-align: center;
   background: whiteSmoke;
   font-weight: bold;

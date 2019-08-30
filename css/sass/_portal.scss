@@ -1,0 +1,66 @@
+.portal-landing {
+  .banner {
+    background: #ddd center center;
+    background-size: cover;
+    margin-bottom: 1.6em;
+    .heading-banner {
+      min-height: 240px;
+      h1 {
+        display: inline-block;
+        background-color: #fff;
+        border: $grid-line;
+        padding: 7px 22px;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .intro-content {
+    margin-bottom: 1.6em;
+    .intro-entry {
+      border-top: $grid-line;
+      padding-top: 0.6em;
+      h2, h3 {
+        margin-top: 0;
+      }
+    }
+    .intro-image {
+      width: 100%;
+      min-height: 280px;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .tna-breadcrumb {
+    margin: 0;
+  }
+  .breadcrumbs {
+    display: inline-block;
+    color: #fff;
+    padding: 3px 7px;
+    background-color: $dark;
+    background-color: rgba(0,0,0,.5);
+    a {
+      color: $yellow-peach;
+    }
+  }
+  .stay-up-to-date-bar {
+    padding: 0.4em 0;
+    text-align: right;
+    background-color: $green;
+    span {
+      margin-right: 1em;
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      height: 26px;
+      .icon-circle {
+        margin: 0 2px 0;
+      }
+    }
+  }
+}

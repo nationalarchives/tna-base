@@ -1,8 +1,4 @@
-/* TNA fonts */
-$tna_body_font: 'Open Sans', arial, sans-serif;
-$tna_heading_font: 'Bitter', 'Open Sans', arial, serif;
-
-/* TNA colours */
+/* TNA old colours */
 $tna_red: #cb0d07;
 $tna_teal: #008484;
 $tna_blue: #405480;
@@ -15,7 +11,7 @@ $tna_link_col: #2A5DB0;
 $tna_white: #fff;
 $tna_well: #f3f3f3;
 
-/* TNA Icons/Images */
+/* TNA old Icons/Images */
 $tna_scope_selector_expanded: url('../img/scope-selector-expanded.png');
 $tna_scope_selector : url('../img/scope-selector.png');
 $tna_search_white: url('../img/search-white.png') center no-repeat;
@@ -27,3 +23,47 @@ $tna_eye_img_caption_hover:url('../img/eye-caption-hover.png');
 $tna_icon_24_link:url('../img/icon-24-heading-link.png');
 $tna_dot_grey:url('../img/dot-grey.png');
 $tna_heading_flourish:url('../img/heading-flourish.png') no-repeat bottom left;
+
+/* NEW */
+
+/* TNA fonts */
+$body_font: 'Open Sans', sans-serif;
+$heading_font: 'Roboto Mono', monospace;
+
+/* TNA colours */
+$dark: #26262a;
+
+$grey-light: #eee;
+$grey-mid-light: #ddd;
+$grey-mid-dark: #555;
+
+$green: #dde5d5;
+$pink: #fad3d4;
+$yellow-peach: #fbe2bc;
+$yellow-light: #f9f7e2;
+
+$alert: $yellow-peach;
+$success: $green;
+$error: $pink;
+
+/* Grid */
+$grid-line: 2px solid #26262a;
+
+/* TNA Icons/Images */
+$tna_icon_24_link:url('../img/icon-24-heading-link.png');
+$tna_icon_envelope:url('../img/icon-envelope.png');
+$tna_icon_rss:url('../img/icon-rss.png');
+$tna_icon_facebook:url('../img/icon-social-facebook.png');
+$tna_icon_flickr:url('../img/icon-social-flickr.png');
+$tna_icon_twitter:url('../img/icon-social-twitter.png');
+$tna_icon_instagram:url('../img/icon-instagram.png');
+$tna_icon_youtube:url('../img/icon-social-youtube-play.png');
+$tna_icon_calendar:url(../img/icon-calendar.svg);
+$tna_icon_audio:url('../img/icon-audio.png');
+$tna_icon_video:url('../img/icon-video.png');
+$tna_icon_info:url('../img/icon-info.png');
+$tna_icon_chevron_down:url('../img/icon-chevron-down.png');
+$tna_icon_chevron_up_lg:url('../img/icon-chevron-up-lg.png');
+$tna_icon_chevron_down_lg:url('../img/icon-chevron-down-lg.png');
+$tna_icon_menu:url('../img/icon-menu.png');
+$tna_icon_search:url('../img/icon-search.png');

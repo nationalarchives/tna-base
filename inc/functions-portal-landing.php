@@ -88,17 +88,11 @@ function portal_landing_meta_boxes() {
 	);
 
 	for ( $i = 0; $i <= 9; $i ++ ) {
-		if ($i==0) {
-			$banner = 'Banner ';
-			$n = '';
-		} else {
-			$banner = '';
-			$n = $i;
-		}
+
 		$portal_meta_boxes[] =
 			array(
 				'id'       => 'portal_card_'.$i,
-				'title'    => $banner.'Card '.$n,
+				'title'    => 'Card '.$i,
 				'pages'    => 'page',
 				'context'  => 'normal',
 				'priority' => 'high',
@@ -380,16 +374,16 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='' ) {
 
 	if ( $facebook ) {
-		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/facebook.png" alt="Follow us on Facebook" class="social-icon"></a>';
+		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-facebook icon-size-26"></div></a>';
 	}
 	if ( $twitter ) {
-		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/twitter.png" alt="Follow us on Twitter" class="social-icon"></a>';
+		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-twitter icon-size-26"></div></a>';
 	}
     if ( $insatgram ) {
-        $insatgram = '<a href="'.$insatgram.'" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><img src="/wp-content/themes/tna-base/img/social/instagram.png" alt="Follow us on Instagram" class="social-icon"></a>';
+        $insatgram = '<a href="'.$insatgram.'" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-instgram icon-size-26"></div></a>';
     }
 	if ( $newsletter=='Enable' ) {
-		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><img src="/wp-content/themes/tna-base/img/social/envelope.png" alt="Send me The National Archives’ newsletter" class="social-icon"></a>';
+		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><div class="icon-circle icon-envelope icon-size-26"></div></a>';
 	} else {
         $newsletter = '';
     }
@@ -398,8 +392,8 @@ function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newslett
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="text-center">
-									<span>Stay up-to-date with all our activity:</span> '
+								<div class="text-right">
+									<span>Stay up-to-date with all our activity</span> '
 									.$facebook.$twitter.$insatgram.$newsletter.
 								'</div>
 							</div>
@@ -440,14 +434,15 @@ function portal_fallback_card( $i ) {
 
 	if ( $i != 0 ) {
 
-		$url = 'http://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
-		$image = make_path_relative( get_template_directory_uri().'/img/events.jpg' );
+		$url = 'https://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
+		$image = make_path_relative_no_pre_path( get_template_directory_uri().'/img/events.jpg' );
 
-		$html = '<div class="col-card-4"><div class="card fallback">
+		$html = '<div class="col-md-4"><div class="card fallback">
 					<a id="card-%s" href="%s" class="portal-card">
-						<div class="entry-image" style="background-image: url(%s)"></div>
+						<div class="entry-image" style="background-image: url(%s)">
+						    <div class="content-type">Event</div>
+                        </div>
 						<div class="entry-content event">
-							<div class="content-type">Event</div>
 							<h3>Events - The National Archives</h3>
 							<p>Find more information about our events programme and how to book tickets.</p>
 						</div>

@@ -13,20 +13,23 @@ $cloud = (defined('TNA_CLOUD')) ? TNA_CLOUD : false;
 include 'src/CreateMetaBox.php';
 
 // Include functions
-include 'inc/functions/functions-non-cloud.php';
-include 'inc/functions/tna-functions.php';
-include 'inc/functions/title-tag.php';
-include 'inc/functions/dimox_breadcrumbs.php';
-include 'inc/functions/custom-fields.php';
-include 'inc/functions/images.php';
-include 'inc/functions/404-redirect.php';
-include 'inc/functions/image_caption.php';
-include 'inc/functions/tiny_mce.php';
-include 'inc/functions/notification-banner.php';
-include 'inc/functions/template-parts.php';
-include 'inc/functions/functions-admin.php';
-include 'inc/functions/functions-og-meta.php';
-include 'inc/functions/functions-portal-landing.php';
+include 'inc/functions-non-cloud.php';
+include 'inc/tna-functions.php';
+include 'inc/title-tag.php';
+include 'inc/functions-breadcrumbs.php';
+include 'inc/custom-fields.php';
+include 'inc/images.php';
+include 'inc/404-redirect.php';
+include 'inc/image-caption.php';
+include 'inc/functions-editor-tinymce.php';
+include 'inc/notification-banner.php';
+include 'inc/template-parts.php';
+include 'inc/functions-admin.php';
+include 'inc/functions-og-meta.php';
+include 'inc/functions-portal-landing.php';
+include 'inc/functions-level-one.php';
+include 'inc/functions-cards.php';
+include 'inc/functions-cards-og-meta.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
@@ -43,12 +46,16 @@ add_action( 'save_post', 'myfield_save_postdata' ); // Saving the data entered
 add_action( 'add_meta_boxes', 'redirect_url_add_meta_box' ); // Redirect metabox
 add_action( 'save_post', 'redirect_url_save' );
 add_action( 'save_post', 'sidebar_save' );
+add_action( 'init', 'level_1_meta_boxes' ); // To be removed with template
 add_action( 'save_post', 'webchat_save' );
 add_action( 'init', 'level_one_meta_boxes' );
 add_action( 'init', 'notification_meta_boxes' );
 add_action( 'admin_menu', 'tna_base_menu' );
 add_action( 'init', 'portal_landing_meta_boxes' );
 add_action( 'save_post', 'portal_landing_get_og_meta_on_save' );
+add_action( 'save_post', 'get_meta_og_on_save' );
+add_action( 'save_post', 'check_card_labels', 10, 2);
+add_action( 'admin_notices', 'level_one_card_error' );
 
 // add_filter
 add_filter( 'document_title_parts', 'title_tag', 10, 1 );

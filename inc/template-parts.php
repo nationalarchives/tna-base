@@ -61,13 +61,12 @@ function get_content_meta_boxes( $boxes ) {
 		$mdCol      = ( $box['display'] == 'at full width' ) ? '12' : ( ( $box['display'] == 'at a half' ) ? '6' : '4');
 		$colClass   = ( $box['display'] == 'at full width' ) ? 'box-full' : ( ( $box['display'] == 'at a half' ) ? 'box-half' : 'box-third');
 		if ( !empty( $box['title'] ) && $box['display'] != 'disabled' ) { ?>
-			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?>">
+			<div class="col-md-<?php echo $mdCol . ' ' . $colClass; ?> box">
 				<article>
-					<?php if ( !empty( $box['image'] ) ) { ?>
-					<div class="entry-header feature-img-bg" style="background-image: url(<?php echo $box['image']; ?>);">
-						<?php }  else { ?>
-						<div class="entry-header">
-							<?php } ?>
+                        <?php if ( !empty( $box['image'] ) ) { ?>
+                        <div class="feature-img-bg" style="background-image: url(<?php echo $box['image']; ?>);"></div>
+                        <?php }  ?>
+                        <div class="entry-header">
 							<h2>
 								<?php if ( !empty( $box['url'] ) ) { ?>
 									<a href="<?php echo $box['url'] ?>">
@@ -88,35 +87,37 @@ function get_content_meta_boxes( $boxes ) {
 function get_content_children_boxes( $boxes ) {
 	foreach ( $boxes as $box ) { ?>
 		<div class="col-xs-12 col-sm-6">
-			<article>
-				<div class="entry-header">
-					<h2>
-						<a href="<?php echo $box['url']; ?>" title="<?php echo $box['title'] ?>">
-							<?php echo $box['title']; ?>
-						</a>
-					</h2>
-				</div>
-				<div class="entry-content">
-					<?php if ( $box['image'] ) { ?>
-						<a href="<?php echo $box['url']; ?>" class="thumbnail" title="<?php echo $box['title'] ?>">
-							<img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
-						</a>
-					<?php } ?>
-					<p><?php echo $box['excerpt']; ?></p>
-					<?php if ( isset($box['child_pages']) ) { ?>
-						<ul class="child">
-							<?php foreach ( $box['child_pages'] as $child_page ) { ?>
-								<li>
-									<a href="<?php echo $child_page['url']; ?>" title="<?php echo $child_page['title'] ?>">
-										<?php echo $child_page['title']; ?>
-									</a>
-								</li>
-								<?php
-							} ?>
-						</ul>
-					<?php } ?>
-				</div>
-			</article>
+            <div class="level-two-card">
+                <?php if ( $box['image'] ) { ?>
+                <div class="entry-image">
+                    <a href="<?php echo $box['url']; ?>" class="img-responsive" title="<?php echo $box['title'] ?>">
+                        <img src="<?php echo $box['image']; ?>" class="img-responsive" alt="<?php echo $box['title'] ?>">
+                    </a>
+                </div>
+                <?php } ?>
+                <div class="entry-header">
+                    <h2>
+                        <a href="<?php echo $box['url']; ?>" title="<?php echo $box['title'] ?>">
+                            <?php echo $box['title']; ?>
+                        </a>
+                    </h2>
+                </div>
+                <div class="entry-content">
+                    <p><?php echo $box['excerpt']; ?></p>
+                    <?php if ( isset($box['child_pages']) ) { ?>
+                        <ul class="child">
+                            <?php foreach ( $box['child_pages'] as $child_page ) { ?>
+                                <li>
+                                    <a href="<?php echo $child_page['url']; ?>" title="<?php echo $child_page['title'] ?>">
+                                        <?php echo $child_page['title']; ?>
+                                    </a>
+                                </li>
+                                <?php
+                            } ?>
+                        </ul>
+                    <?php } ?>
+                </div>
+            </div>
 		</div>
 	<?php }
 }

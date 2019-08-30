@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_template_part( 'breadcrumb' ); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area standard-page">
 		<div class="container">
 			<div class="row">
 				<main id="main" class="col-xs-12 col-sm-8 col-md-8" role="main">
