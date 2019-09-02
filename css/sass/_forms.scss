@@ -1,170 +1,275 @@
 /* TNA form styles */
 
-fieldset {
-  border: 1px solid #ccc !important;
-  padding: 1em !important;
-  margin-bottom: 2em !important;
-}
-legend {
-  font-family: "Bitter", "Open Sans", arial, serif;
-  font-size: 1.6em !important;
-  margin-bottom: 10px !important;
-  width: auto !important;
-  padding: 0 0.5em !important;
-}
-label {
-  font-weight: 400;
-}
-input[type="submit"] {
-  background-color: #008484;
-  color: #fff;
-  padding: 0.3em .5em;
-  border: 0;
-  height: 40px; /*this height must match the standalone button class for single field forms */
-  margin: 0;
-}
-input[type=text],
-input[type=url],
-input[type=tel],
-input[type=number],
-input[type=color],
-input[type=email],
-input.width-half,
-#Email /* the Email ID has been applied to single-field email sign-up forms */ {
-  border: 1px solid #ccc;
-  padding: 2px;
-  height: 34px;
-  text-indent: 5px;
-  min-width: 220px;
-  width: auto;
-}
-textarea {
-  border: 1px solid #ccc;
-  padding: 5px;
-}
-select {
-  border: 1px solid #ccc;
-}
-input:focus,
-input[type=radio]:focus,
-input[type=checkbox]:focus,
-textarea:focus,
-select:focus {
-  outline: 3px solid #ebab00;
-}
-input[type="submit"]:focus,
-a.button:focus {
-  color: #fff;
-  background-color: #111;
-  background-color: rgba(0,0,0, 0.75);
-}
-input[type="submit"]:hover,
-a.button:hover {
-  color: #222;
-  background-color: $tna_yellow;
-}
-.checkbox input[type=checkbox],
-.checkbox-inline input[type=checkbox],
-.radio input[type=radio],
-.radio-inline input[type=radio] {
-  margin-left: 0 !important;
-}
-.checkbox label,
-.radio label {
-  padding-left: 38px !important;
-}
-.checkbox,
-.radio {
-  .form-error {
-    margin-left: 38px !important;
-    padding-left: 0.5em;
+form {
+  fieldset {
+    padding: 0 !important;
+    margin-bottom: 0.6em !important;
+    border: 0 !important;
   }
-}
-.form-row {
-  max-width: 92%;
-  margin: 0 auto;
-  margin-bottom: 1.5em !important;
-  &:before, &:after {
-    display: table;
-    content: " ";
-    clear: both;
+  legend {
+    font-family: $heading_font;
+    font-size: 1.6em;
+    margin: 0 0 0.6em 0;
+    width: auto;
+    padding: 0 !important;
+    border: 0 !important;
   }
   label {
-    width: 100% !important;
-    margin-right: 0 !important;
-  }
-  input[type=color],
-  input[type=email],
-  input[type=number],
-  input[type=tel],
-  input[type=text],
-  input[type=date],
-  input[type=url],
-  select,
-  textarea {
-    width: 100% !important;
-    max-width: 420px;
-    &:disabled {
-      background: #eee;
-    }
-    &:read-only {
-      background: #eee;
-    }
-  }
-  textarea {
-    height: 120px;
+    font-family: $heading_font;
+    font-weight: normal;
   }
   input[type="submit"] {
-    float: right;
-  }
-  p {
-    margin-bottom: 5px;
-  }
-  .button {
-    float: right;
-  }
-  .form-hint {
-    color: #6f777b;
-  }
-  .optional {
-    color: #6f777b;
-  }
-  .form-error {
-    color: #000;
-    width: 100%;
-    max-width: 420px;
-    display: block;
-    padding: 3px;
-    background: #FFF8D0;
-    span {
-      font-size: 1.6em;
+    font-family: "Roboto Mono", monospace;
+    background-color: $dark;
+    color: #fff;
+    border: $grid-line;
+    padding: 0.5em 0.9em;
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+    margin: 0;
+    &:hover {
+      background-color: #fff;
+      color: $dark;
     }
   }
-  .form-warning {
-    border: 2px solid #EBAB2C !important;
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=date],
+  input.width-half {
+    border: $grid-line;
+    padding: 8px;
+    text-indent: 5px;
+    min-width: 220px;
+    width: auto;
   }
-}
-@media (max-width: 768px) {
+  textarea {
+    border: $grid-line;
+    padding: 0.6em;
+  }
+  select {
+    height: 2.4em;
+    -webkit-border-radius: 0;
+    border: 0;
+    outline: $grid-line;
+    outline-offset: -1px;
+  }
+  input:focus,
+  input[type=radio]:focus,
+  input[type=checkbox]:focus,
+  input[type="submit"]:focus,
+  textarea:focus,
+  select:focus {
+    @include element-focus;
+  }
   .form-row {
     max-width: 100%;
-    width: 100%;
+    margin-bottom: 1.6em;
+    &:before, &:after {
+      display: table;
+      content: " ";
+      clear: both;
+    }
     label {
       width: 100%;
       margin-right: 0;
     }
-    input[type=text],
-    input[type=url],
-    input[type=tel],
-    input[type=number],
+    &.checkbox {
+      label {
+        width: auto;
+      }
+    }
     input[type=color],
     input[type=email],
-    textarea,
-    select {
+    input[type=number],
+    input[type=tel],
+    input[type=text],
+    input[type=date],
+    input[type=url],
+    select,
+    textarea {
       width: 100%;
+      max-width: 480px;
+      &:disabled {
+        background: #eee;
+      }
+      &:read-only {
+        background: #eee;
+      }
     }
-    input[type="submit"] {
-      float: none;
+    textarea {
+      min-height: 120px;
+    }
+    input[type=checkbox],
+    input[type=radio] {
+      margin: 4px 10px 0;
+    }
+    .button-right {
+      float: right;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+    .form-hint {
+      color: #6f777b;
+    }
+    .optional {
+      color: #6f777b;
+    }
+    .form-error {
+      color: #000;
+      display: block;
+      padding: 3px 7px;
+      background: $yellow-light;
+      width: 100%;
+      max-width: 480px;
+      span {
+        font-size: 1.6em;
+      }
+    }
+    .form-warning {
+      border: 2px solid #EBAB2C;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+      width: 100%;
+      label {
+        width: 100%;
+        margin-right: 0;
+      }
+      input[type=text],
+      input[type=url],
+      input[type=tel],
+      input[type=number],
+      input[type=color],
+      input[type=email],
+      textarea,
+      select {
+        width: 100%;
+      }
+      input[type="submit"] {
+        float: none;
+      }
+    }
+  }
+  .checkbox {
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+    }
+    label {
+      position: relative;
+      display: inline-block;
+      padding-left: 32px;
+    }
+    label::before,
+    label::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+    }
+    label::before{
+      height: 24px;
+      width: 24px;
+      border: $grid-line;
+      left: 0;
+      top: 2px;
+    }
+    label::after {
+      height: 7px;
+      width: 13px;
+      border-left: $grid-line;
+      border-bottom: $grid-line;
+      transform: rotate(-45deg);
+      left: 6px;
+      top: 9px;
+    }
+    input[type="checkbox"] + label::after {
+      content: none;
+    }
+    input[type="checkbox"]:checked + label::after {
+      content: "";
+    }
+    input[type="checkbox"]:focus + label::before {
+      @include element-focus;
+    }
+  }
+  .radio {
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+    }
+    label {
+      position: relative;
+      display: inline-block;
+      padding-left: 32px;
+    }
+    label::before,
+    label::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+    }
+    label::before{
+      height: 24px;
+      width: 24px;
+      border: $grid-line;
+      border-radius: 50%;
+      left: 0;
+      top: 2px;
+    }
+    label::after {
+      height: 12px;
+      width: 12px;
+      background-color: $dark;
+      border-radius: 50%;
+      left: 6px;
+      top: 8px;
+    }
+    input[type="radio"] + label::after {
+      content: none;
+    }
+    input[type="radio"]:checked + label::after {
+      content: "";
+    }
+    input[type="radio"]:focus + label::before {
+      @include element-focus;
     }
   }
 }
-
+.error-message, .success-message {
+  color: $dark !important;
+  border: $grid-line !important;
+  padding: 0 1em;
+  margin-bottom: 1.6em;
+}
+.error-message {
+  background-color: $yellow-light !important;
+}
+.success-message {
+  padding: 1em;
+  background-color: $green !important;
+}
+.arrow-steps li.current {
+  background-color: $dark;
+  &:after {
+    border-left: 17px solid $dark;
+  }
+}
+.print_button {
+  background: $dark;
+  color: #fff;
+  border: $grid-line;
+  padding: 0.6em;
+  margin: 1em 0;
+  float: none;
+  &:hover {
+    background: #fff;
+    color: $dark;
+    text-decoration: none;
+  }
+}

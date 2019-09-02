@@ -70,7 +70,7 @@ $(document).ready(function () {
     $('input:radio[name=radioSearchGroup]').change(function () {
         if (this.value == 'search_website') {
             //Changes the form action url
-            $('form').attr('action', 'http://www.nationalarchives.gov.uk/search/search_results.aspx');
+            $('form').attr('action', 'https://www.nationalarchives.gov.uk/search/search_results.aspx');
             //changes name attribute
             $('#mobileGlobalSearch input[name="_q"]').attr('name', 'QueryText');
             //changes the placeholder
@@ -78,7 +78,7 @@ $(document).ready(function () {
         }
         else if (this.value == 'search_records') {
             //Changes the form action url
-            $('form').attr('action', 'http://discovery.nationalarchives.gov.uk/SearchUI/s/res');
+            $('form').attr('action', 'https://discovery.nationalarchives.gov.uk/SearchUI/s/res');
             //changes name attribute
             $('#mobileGlobalSearch input[name="QueryText"]').attr('name', '_q');
             //changes the placeholder

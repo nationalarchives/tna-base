@@ -63,6 +63,7 @@ function redirect_url_add_meta_box() {
     if ($page_template === 'default') {
         add_meta_box('redirect_url-redirect-url', __( 'Redirect Url', 'redirect_url' ), 'redirect_url_html', 'page', 'normal', 'high');
         add_meta_box('sidebar-sidebar', __( 'Sidebar', 'sidebar' ), 'sidebar_html','page','side','core');
+        add_meta_box('webchat-webchat', __( 'Webchat', 'webchat' ), 'webchat_html','page','side','core');
     }
 }
 
@@ -128,111 +129,138 @@ function sidebar_save( $post_id ) {
         update_post_meta( $post_id, 'sidebar', esc_attr( $_POST['sidebar'] ) );
 }
 
+/* Web chat id metabox */
+function webchat_get_meta( $value ) {
+    global $post;
 
-/* Level 1 landing page template meta boxes */
-
-function level_one_meta_boxes() {
-	$meta_boxes = array(
-		// Level 1 page options
-		array(
-			'id' => 'level_one_options',
-			'title' => 'Page options',
-			'pages' => 'page',
-			'context' => 'normal',
-			'priority' => 'high',
-			'fields' => array(
-				array(
-					'name' => 'Banner button text',
-					'desc' => '',
-					'id' => 'action_button_title',
-					'type' => 'text',
-					'std' => ''
-				),
-				array(
-					'name' => 'Banner button URL',
-					'desc' => '',
-					'id' => 'action_button_url',
-					'type' => 'text',
-					'std' => ''
-				),
-				array(
-					'name' => 'Number of boxes displayed',
-					'desc' => '',
-					'id' => 'number_of_boxes',
-					'type' => 'select',
-					'options' => array('0', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12')
-				)
-			)
-		)
-	);
-	// Level 1 content box loop array
-	if (isset($_GET['post'])) {
-		$post_id = $_GET['post'];
-	} else {
-		if (isset($_POST['post_ID'])) {
-			$post_id = $_POST['post_ID'];
-		} else {
-			$post_id = '';
-		}
-	}
-	if ($post_id) {
-		$nBox = get_post_meta( $post_id, 'number_of_boxes', true );
-		for ($id = 1; $id <= $nBox; $id++)  {
-			$meta_boxes[] = array (
-				'id' => 'content-box-'.$id,
-				'title' => 'Content box '.$id,
-				'pages' => 'page',
-				'context' => 'normal',
-				'priority' => 'high',
-				'fields' => array(
-					array(
-						'name' => 'Box size',
-						'desc' => 'Select &#39;disabled&#39; to hide this box',
-						'id' => 'box_width_'.$id,
-						'type' => 'select',
-						'options' => array('disabled', 'at a third', 'at a half', 'at full width')
-					),
-					array(
-						'name' => 'Title',
-						'desc' => '',
-						'id' => 'box_title_'.$id,
-						'type' => 'text',
-						'std' => ''
-					),
-					array(
-						'name' => 'Title URL',
-						'desc' => '',
-						'id' => 'box_title_url_'.$id,
-						'type' => 'text',
-						'std' => ''
-					),
-					array(
-						'name' => 'Image URL',
-						'desc' => '',
-						'id' => 'box_image_url_'.$id,
-						'type' => 'text',
-						'std' => ''
-					),
-					array(
-						'name' => 'Subpage links',
-						'desc' => 'Please use the &#39;link&#39;, &#39;ul&#39; and &#39;li&#39; buttons to create your list of subpage links',
-						'id' => 'box_content_'.$id,
-						'type' => 'textarea',
-						'std' => ''
-					)
-				)
-			);
-		}
-	}
-	// Adds meta boxes to Level 1 Landing page template
-	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
-	if ($template_file == 'page-level-1-landing.php') {
-		foreach ( $meta_boxes as $meta_box ) {
-			$level_one_box = new CreateMetaBox( $meta_box );
-		}
-	}
+    $field = get_post_meta( $post->ID, $value, true );
+    if ( ! empty( $field ) ) {
+        return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+    } else {
+        return false;
+    }
 }
 
+function webchat_html( $post) {
+    wp_nonce_field( '_webchat_nonce', 'webchat_nonce' ); ?>
+    <p>
+    <input class="widefat" type="text" name="webchat" id="webchat" value="<?php echo webchat_get_meta( 'webchat' ); ?>">
+    </p>
+    <p>Leave blank for the default web chat form</p>
+    <?php
+}
+
+function webchat_save( $post_id ) {
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( ! isset( $_POST['webchat_nonce'] ) || ! wp_verify_nonce( $_POST['webchat_nonce'], '_webchat_nonce' ) ) return;
+    if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+    if ( isset( $_POST['webchat'] ) )
+        update_post_meta( $post_id, 'webchat', esc_attr( $_POST['webchat'] ) );
+}
+
+/* Level 1 landing page template meta boxes */
+function level_1_meta_boxes() {
+    $meta_boxes = array(
+        // Level 1 page options
+        array(
+            'id' => 'level_one_options',
+            'title' => 'Page options',
+            'pages' => 'page',
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Banner button text',
+                    'desc' => '',
+                    'id' => 'action_button_title',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Banner button URL',
+                    'desc' => '',
+                    'id' => 'action_button_url',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Number of boxes displayed',
+                    'desc' => '',
+                    'id' => 'number_of_boxes',
+                    'type' => 'select',
+                    'options' => array('0', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12')
+                )
+            )
+        )
+    );
+    // Level 1 content box loop array
+    if (isset($_GET['post'])) {
+        $post_id = $_GET['post'];
+    } else {
+        if (isset($_POST['post_ID'])) {
+            $post_id = $_POST['post_ID'];
+        } else {
+            $post_id = '';
+        }
+    }
+    if ($post_id) {
+        $nBox = get_post_meta( $post_id, 'number_of_boxes', true );
+        for ($id = 1; $id <= $nBox; $id++)  {
+            $meta_boxes[] = array (
+                'id' => 'content-box-'.$id,
+                'title' => 'Content box '.$id,
+                'pages' => 'page',
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Box size',
+                        'desc' => 'Select &#39;disabled&#39; to hide this box',
+                        'id' => 'box_width_'.$id,
+                        'type' => 'select',
+                        'options' => array('disabled', 'at a third', 'at a half', 'at full width')
+                    ),
+                    array(
+                        'name' => 'Title',
+                        'desc' => '',
+                        'id' => 'box_title_'.$id,
+                        'type' => 'text',
+                        'std' => ''
+                    ),
+                    array(
+                        'name' => 'Title URL',
+                        'desc' => '',
+                        'id' => 'box_title_url_'.$id,
+                        'type' => 'text',
+                        'std' => ''
+                    ),
+                    array(
+                        'name' => 'Image URL',
+                        'desc' => '',
+                        'id' => 'box_image_url_'.$id,
+                        'type' => 'text',
+                        'std' => ''
+                    ),
+                    array(
+                        'name' => 'Subpage links',
+                        'desc' => 'Please use the &#39;link&#39;, &#39;ul&#39; and &#39;li&#39; buttons to create your list of subpage links',
+                        'id' => 'box_content_'.$id,
+                        'type' => 'textarea',
+                        'std' => ''
+                    )
+                )
+            );
+        }
+    }
+    // Adds meta boxes to Level 1 Landing page template
+    $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+    if ($template_file == 'page-level-1-landing.php') {
+        foreach ( $meta_boxes as $meta_box ) {
+            $level_one_box = new CreateMetaBox( $meta_box );
+        }
+    }
+}
 
 function notification_meta_boxes() {
 	$notification_meta_boxes = array(

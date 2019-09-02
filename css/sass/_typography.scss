@@ -1,0 +1,149 @@
+body {
+  font-family: $body_font;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $dark;
+  h1, h2, h3, h4 {
+    font-family: $heading_font;
+    font-weight: 400;
+    z-index: 2;
+    line-height: 1.6;
+    letter-spacing: -.025em;
+  }
+  h1 {
+    font-size: 2.4em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  h4 {
+    font-size: 1.16em;
+  }
+  .separator-heading {
+    margin-top: 0;
+    padding-top: 10px;
+    border-top: $grid-line;
+  }
+  p {
+    margin: 0 0 1.6em;
+  }
+  a, a:active, a:visited {
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  a:focus {
+    @include element-focus;
+    background-color: #fff;
+    color: $dark;
+  }
+  ul {
+    margin-bottom: 1.6em;
+    li {
+      margin-bottom: 0.2em;
+    }
+  }
+  ul.no-bullet {
+    list-style-type: none;
+    padding: 0;
+  }
+  ul.sibling {
+    list-style-type: none;
+    padding: 0;
+  }
+  ul.child {
+    list-style-type: none;
+    padding: 0;
+  }
+  ul.documents, ul.urls {
+    li {
+      margin-bottom: 0.5em;
+    }
+    a {
+      display: block;
+    }
+  }
+  ul#menu-disc, ul#a-z-menu {
+    padding: 0;
+    li {
+      list-style-type: none;
+      margin: 0 4px 4px 0;
+      display: inline-block;
+      a {
+        display: block;
+        color: #fff;
+        background-color: #000;
+        text-align: center;
+        border: $grid-line;
+        font-size: 1.25em;
+        line-height: 44px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+      }
+      a:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+  blockquote {
+    font-family: 'Roboto Mono', monospace;
+    border: solid 2px #000;
+    padding: 1.6em 3.2em;
+    margin: 0 0 1.6em 0;
+    background: #fff;
+    width: 100%;
+    p {
+      margin: 0;
+    }
+    cite {
+      display: block;
+      font-size: 0.9em;
+      text-align: right;
+      margin: 0.6em 0;
+    }
+    .misc {
+      margin-bottom: 1.6em;
+    }
+  }
+  .emphasis-block {
+    background: $yellow-light;
+  }
+  .emphasis-alert {
+    background: $alert;
+  }
+  .emphasis-success {
+    background: $success;
+  }
+  .emphasis-error {
+    background: $error;
+  }
+  hr {
+    height: 0;
+    border: 0;
+    margin: 1em 0;
+    clear: both;
+    width: 100%;
+    border-bottom: $grid-line;
+  }
+  pre {
+    display: block;
+    padding: 1.6em;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.428571429;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 0;
+  }
+}

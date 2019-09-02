@@ -1,92 +1,137 @@
-/* TNA template styles */
-
-/* Default template */
-
-article {
-  background-color: $tna_white;
-  margin-bottom: 1.5em;
+/* TNA template styles:
+ - Default page
+ - Level one
+ - Level two (section landing)
+ */
+.container {
+  max-width: 1240px;
+  width: 100%;
+}
+.default-page {
   .entry-header {
-    padding: 10px 10px 0 0;
-    background: $tna_dot_grey;
+    border-left: $grid-line;
+    border-right: $grid-line;
+    border-bottom: $grid-line;
+    padding: 0.6em 1.6em;
+    background: #fff;
     h1 {
-      font-size: 2em;
-      padding: 4px 10px;
-      background-color: $tna_blue;
-      color: #fff;
-      line-height: 1.25;
-      margin: 0 10px 0 -10px;
-      display: inline-block;
+      margin-top: 0;
     }
-    h2 {
-      padding: 4px 32px 4px 10px;
-      background-color: $tna_blue;
-      color: #fff;
-      line-height: 1.5;
-      margin: 0 10px 0 -10px;
-      display: inline-block;
-      a {
-        color: #fff;
-        background-image:$tna_icon_24_link;
-        background-repeat: no-repeat;
-        background-position: 100% 50%;
-        padding-right: 32px;
+  }
+  .entry-content {
+    border-left: $grid-line;
+    border-right: $grid-line;
+    padding: 1.6em;
+    background: #fff;
+    margin-bottom: 1.6em;
+    ul {
+      li {
+        margin-bottom: 0.6em;
       }
     }
   }
-  .entry-header:after {
-    content: ' ';
+  .entry-content:after {
     display: block;
-    height: 10px;
-    margin: 0 0 0 -10px;
-    background: $tna_heading_flourish;
+    content: '';
+    background-color: #fff;
+    height: 70%;
+    width: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
   }
-  .entry-content {
-    padding: 20px;
-    .thumbnail {
-      margin-bottom: 10px;
-      border:none;
-      padding:0;
+  aside {
+    .sidebar-header {
+      margin-bottom: 1.6em;
+      h2 {
+        margin-top: 0;
+      }
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .sidebar-contact {
+      padding: 0;
+    }
+    .live-chat img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+    .live-chat div:first-of-type p {
+      margin-bottom: 0.6em;
+    }
+    .live-chat div:last-of-type {
+      margin-bottom: 1.5em;
+    }
+    .sidebar-item h3 {
+      margin-top: 0;
+    }
+  }
+  blockquote {
+    margin: 0 0 1.6em -3.2em;
+    @media (max-width: 1024px) {
+      padding: 1.6em 2.4em;
+      margin: 0 0 1.6em -2.4em;
+      max-width: 100%;
+    }
+    @media (max-width: 992px) {
+      padding: 1.6em;
+      margin: 0 0 1.6em 0;
+      max-width: 100%;
     }
   }
 }
-.equal-heights {
-  > div {
-    background: white;
-    background-clip: content-box;
-    margin-bottom: 1.5em;
-  }
-  article {
-    margin-bottom: 0;
-  }
-  p {
-    margin-bottom: 0.5em;
-  }
-}
-
-/* Level 1 landing template */
-
 .level-one {
   .banner {
-    height: 288px;
+    min-height: 288px;
     position: relative;
+    margin-bottom: 1.6em;
     .entry-header {
-      background: none;
+      border: $grid-line;
+      padding: 7px 22px;
+      margin: 34px 0 16px 34px;
+      background-color: #fff;
+      display: inline-block;
+      h1 {
+        margin: 0;
+        @media (max-width: 480px) {
+          font-size: 2em;
+        }
+      }
     }
     .entry-content {
-      overflow: hidden;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #000;
-      background: rgba(0,0,0,.66);
-      color: #ddd;
       width: 100%;
-      padding: 1em 0.2em;
+      max-width: 720px;
+      padding: 0 0 0 56px;
+      margin: 0 1em 1em 0;
       h2, h3, h4, p {
         margin: 0;
       }
-      .call-to-action-button {
-        text-align: right;
+      .tag-line {
+        font-family: $heading_font;
+        display: inline-block;
+        background-color: #fff;
+        margin: 0;
+        border: $grid-line;
+        padding: 8px 14px;
+      }
+      .button {
+        margin-top: -2px;
+      }
+    }
+    @media (max-width: 480px) {
+      .entry-header {
+        margin: 16px 8px;
+      }
+      .entry-content {
+        width: auto;
+        padding: 0;
+        margin: 0 8px;
+      }
+      .feature-img-caption {
+        display: none;
       }
     }
   }
@@ -94,50 +139,61 @@ article {
     background-position: center center;
     background-size: cover;
   }
-  .box-third, .box-half, .box-full {
-    ul {
-      margin-top: 1em;
-    }
-    ul li {
-      float: left;
-      list-style-image: url(../img/list-link-bullet.png);
-      margin-bottom: 1em;
-    }
+  // To be removed with template (page-level-1-landing.php)
+  .box {
+    margin-bottom: 1.6em;
     .feature-img-bg {
-      height: 180px;
+      min-height: 160px;
+    }
+    .entry-header {
+      border-top: $grid-line;
+      padding-top: 0.6em;
+      margin-bottom: 1.6em;
+      h2 {
+        margin: 0;
+      }
+    }
+    ul {
+      padding: 0;
+      list-style: none;
     }
   }
-  .box-third, .box-half {
-    ul li {
-      width: 40%;
-      margin-right: 10%;
+}
+.level-two {
+  .level-two-intro {
+    .entry-header {
+      margin-bottom: 1.6em;
+      border-top: $grid-line;
+      padding-top: 0.6em;
+      h1 {
+        margin: 0;
+      }
     }
-  }
-  .box-full {
-    ul li {
-      width: 26%;
-      margin-right: 7%;
+    .entry-content {
+      margin-bottom: 1.6em;
     }
-  }
-  @media only screen and (max-width: 567px) {
-    .box-third, .box-half, .box-full {
-      ul li {
-        width: 96%;
-        margin-right: 0;
+    .well {
+      background-color: transparent;
+      border: $grid-line;
+      padding: 1.6em 1em;
+      margin-top: -1.6em;
+      p {
+        margin: 0;
       }
     }
   }
-  @media only screen and (max-width: 480px) {
-    .banner {
-      .entry-content {
-        padding: 0;
-        .page-content {
-          display: none;
-        }
-      }
-      .entry-content .call-to-action-button {
-        width: 100%;
-        text-align: center;
+  .level-two-card {
+    margin-bottom: 3.2em;
+    .entry-image {
+      height: 128px;
+      overflow: hidden;
+    }
+    .entry-header {
+      margin-bottom: 1.6em;
+      border-top: $grid-line;
+      padding-top: 0.6em;
+      h2 {
+        margin: 0;
       }
     }
   }

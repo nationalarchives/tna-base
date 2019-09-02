@@ -60,25 +60,23 @@
  *
  */
 
-@import "reset";
 @import "variables";
+@import "mixin";
 @import "global";
-@import "lists";
+@import "colours";
+@import "typography";
 @import "forms";
-@import "blockquote";
-@import "breadcrumb";
-@import "mega-menu";
+@import "breadcrumbs";
+@import "navigation";
 @import "header";
 @import "footer";
 @import "templates";
-@import "sidebar";
+@import "buttons";
 @import "print";
-@import "old_tna_styling";
 @import "images";
 @import "icons";
 @import "tables";
 @import "comments";
 @import "category";
-@import "footer-newsletter";
 @import "cards";
-@import "portal-landing";
+@import "portal";

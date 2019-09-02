@@ -86,6 +86,7 @@ composer.phar
 # composer.lock
 
 package-lock.json
+composer.lock
 
 ### macOS ###
 # General

@@ -1,10 +1,28 @@
+<?php
+// the ids are from the livechat admin interface
+$webchat = get_post_meta( $post->ID, 'webchat', true );
+switch( $webchat ) {
+	case 'yourviews':
+		$webchat_id = 'TTuqXupAAFh';
+		break;
+	case 'dsd':
+		$webchat_id = 'ePKP7MjW_D4';
+		break;
+	default:
+		$webchat_id = 'ePKP7MjW_D4';
+		break;
+}
+
+?>
+
+
 <aside id="sidebar" class="col-xs-12 col-sm-4" role="complementary">
 	<div class="sidebar-header">
 		<h2>
 				Other ways to contact us
 		</h2>
 	</div>
-	<div class="sidebar-contact clearfix">
+	<div class="row sidebar-contact clearfix">
 		<div class="live-chat sidebar-item">
 			<div class="col-xs-8 col-sm-12 col-md-8">
 				<h3>
@@ -18,7 +36,7 @@
 				</p>
 			</div>
 			<div class="col-xs-4 col-sm-6 col-md-4">
-<div data-id="ePKP7MjW_D4" class="livechat_button"><a href="/contact-us/">live chat software</a></div>
+<div data-id="<?php echo $webchat_id; ?>" class="livechat_button"><a href="/contact-us/">live chat software</a></div>
 <!-- Start of LiveChat (www.livechatinc.com) code -->
 <script type="text/javascript">
 window.__lc = window.__lc || {};

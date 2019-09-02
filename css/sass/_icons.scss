@@ -1,57 +1,66 @@
-/* TNA icon styles */
-
-.sprite {
-  background-image: url("../img/icons-compressed.png");
-  width: 40px;
-  height: 40px;
-  margin: 5px 5px 5px 0;
-  cursor: pointer;
+.icon {
+  display: inline-block;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 .2em .3em 0;
 }
-.icon-img-desc {
-  background-position: 0 0;
+.icon-circle {
+  display: inline-block;
+  background-color: $dark;
+  background-size: 68% 68%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: 0 .2em .3em 0;
+  transition: .4s ease-in-out;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
 }
-.icon-img-desc:hover, .expanded {
-  background-position: 0 40px;
+.icon-size-26 {
+  background-size: 74% 74%;
+  width: 26px;
+  height: 26px;
 }
-.icon-new-window {
-  background-position: -40px 0;
+.icon-size-32 {
+  background-size: 78% 78%;
+  width: 32px;
+  height: 32px;
 }
-.icon-new-window:hover {
-  background-position: -40px 40px;
-}
-.icon-play {
-  background-position: -80px 0;
-}
-.icon-play:hover {
-  background-position: -80px 40px;
-}
-.icon-rss {
-  background-position: -120px 0;
-}
-.icon-rss:hover {
-  background-position: -120px 40px
+.icon-size-64 {
+  background-size: 68% 68%;
+  width: 64px;
+  height: 64px;
 }
 .icon-facebook {
-  background-position: -160px 0;
-}
-.icon-facebook:hover {
-  background-position: -160px 40px;
+  background-image: $tna_icon_facebook;
 }
 .icon-twitter {
-  background-position: -200px 0;
+  background-image: $tna_icon_twitter;
 }
-.icon-twitter:hover {
-  background-position: -200px 40px;
+.icon-instgram {
+  background-image: $tna_icon_instagram;
 }
-.icon-pinterest {
-  background-position: -280px 0;
-}
-.icon-pinterest:hover {
-  background-position: -280px 40px;
+.icon-youtube {
+  background-image: $tna_icon_youtube;
 }
 .icon-flickr {
-  background-position: -320px 0;
+  background-image: $tna_icon_flickr;
 }
-.icon-flickr:hover {
-  background-position: -320px 40px;
+.icon-rss {
+  background-image: $tna_icon_rss;
+}
+.icon-envelope {
+  background-image: $tna_icon_envelope;
+}
+.icon-audio {
+  background-image: $tna_icon_audio;
+}
+.icon-video {
+  background-image: $tna_icon_video;
+}
+.icon-info {
+  background-image: $tna_icon_info;
 }

@@ -1,26 +1,20 @@
 /* Comment Output */
 
 .commentlist {
-  padding:0;
-  margin:0;
-  list-style-type:none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   .comment-edit-link {
-    margin-right:10px;
+    margin-right: 10px;
   }
   li {
     list-style-type:none;
     div {
       &.comment-body {
-        margin: 0 0 20px 0;
-        padding: 20px;
-        background: #eee;
-        font-size: 1em;
+        margin-bottom: 1.6em;
         overflow: hidden;
-        p {
-          float: left;
-          width: 100%;
-          margin: 10px 0;
-        }
+        border-top: $grid-line;
+        padding: 1em 0;
         .comment-meta {
           &.commentmetadata {
             font-size:.9em;
@@ -36,47 +30,36 @@
           display:block;
         }
         .comment-author {
-          float: left;
-          padding: 5px 10px 5px 10px;
-          background: #405480;
-          color: #fff;
-          margin: 0 0 5px -20px;
-          display: inline;
+          color: $dark;
+          cite {
+            font-family: $heading_font;
+            font-style: normal;
+            font-size: 1.2em;
+            margin-bottom: 0.3em;
+          }
           &.vcard {
-            margin-top:-20px;
             img {
               display:none;
-            }
-            .fn {
-              a {
-                color:#fff;
-              }
             }
             .says {
               display:none;
             }
           }
         }
-        .comment-meta {
-          &.commentmetadata {
-            a {
-              float:right;
-            }
-          }
-        }
         .reply {
-          float:right;
           .comment-reply-link {
-            background-color: #008484;
+            font-family: $heading_font;
+            background-color: $dark;
             color: #fff;
-            padding: .3em .5em;
-            border: 0;
-            height: 40px;
-            margin: 0;
+            border: $grid-line;
+            padding: 0.5em 0.9em;
+            display: inline-block;
+            min-width: 24px;
+            text-align: center;
             &:hover {
-              background-color: rgb(252, 228, 99);
-              color:#000;
-              text-decoration:none;
+              background-color: #fff;
+              color: #000;
+              text-decoration: none;
             }
           }
         }
@@ -84,7 +67,7 @@
     }
   }
   ol {
-    border-left: 2px solid #eee;
+    border-left: 5px solid #eee;
   }
   ul{
     margin-top:2em;
@@ -103,6 +86,9 @@
       }
     }
   }
+
+
+
   ul {
     list-style-type:none;
     margin-top:2em;
@@ -174,13 +160,13 @@
     }
   }
 }
-#comments {
-  padding:0 2em 0 1.5em;
-}
 #respond {
-  padding:2em;
+  label {
+    width: 100%;
+  }
   textarea,
   input[type="text"] {
-    width:100%;
+    max-width: 792px;
+    width: 99.5%;
   }
 }

@@ -4,11 +4,7 @@ Template Name: Portal landing
 */
 get_header(); ?>
 
-<div class="portal-landing">
-
-<?php while ( have_posts() ) : the_post(); ?>
-
-	<?php
+<?php while ( have_posts() ) : the_post();
 	global $post;
     $banner_img   = make_path_relative_no_pre_path( get_feature_image_url( $post->ID, 'full', true ) );
 	$logo         = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'portal_logo', true ) );
@@ -20,10 +16,10 @@ get_header(); ?>
 	$intro_img    = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'intro_img', true ) );
 	$class        = $logo ? 'portal-branding' : 'portal-title';
 	?>
-
+<div class="portal-landing">
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
 		<?php get_template_part( 'breadcrumb' ); ?>
-		<div class="heading-banner text-center">
+		<div class="heading-banner">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 <?php echo $class ?>">
@@ -39,51 +35,52 @@ get_header(); ?>
 		} ?>
 	</div>
 	<main id="main" role="main">
-		<div class="container">
-			<div class="flex-row">
-				<div class="col-card-12">
-					<div class="intro-card">
-						<div class="intro-content">
-							<div class="intro-entry">
-								<div class="entry-content">
-									<?php the_content(); ?>
-								</div>
-							</div>
-							<div class="entry-image" style="background-image: url(<?php echo $intro_img ?>)"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="flex-row">
-				<?php
-				for ( $i=0 ; $i<=9 ; $i++ ) {
-					$url        = get_post_meta( $post->ID, 'portal_card_url_'.$i, true );
-					$title      = get_post_meta( $post->ID, 'portal_card_title_'.$i, true );
-					$excerpt    = get_post_meta( $post->ID, 'portal_card_excerpt_'.$i, true );
-					$image      = get_post_meta( $post->ID, 'portal_card_img_'.$i, true );
-					$date       = get_post_meta( $post->ID, 'portal_card_date_'.$i, true );
-					$label      = get_post_meta( $post->ID, 'portal_card_label_'.$i, true );
-					$expire     = get_post_meta( $post->ID, 'portal_card_expire_'.$i, true );
+        <div class="intro-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-8">
+                        <div class="intro-entry">
+                            <div class="entry-content">
+                                <?php the_content(); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="intro-image" style="background-image: url(<?php echo $intro_img ?>);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="container">
+                <div class="row">
+                    <?php
+                    for ( $i=0 ; $i<=9 ; $i++ ) {
+                        $url        = get_post_meta( $post->ID, 'portal_card_url_'.$i, true );
+                        $title      = get_post_meta( $post->ID, 'portal_card_title_'.$i, true );
+                        $excerpt    = get_post_meta( $post->ID, 'portal_card_excerpt_'.$i, true );
+                        $image      = get_post_meta( $post->ID, 'portal_card_img_'.$i, true );
+                        $date       = get_post_meta( $post->ID, 'portal_card_date_'.$i, true );
+                        $label      = get_post_meta( $post->ID, 'portal_card_label_'.$i, true );
+                        $expire     = get_post_meta( $post->ID, 'portal_card_expire_'.$i, true );
 
-					if ( portal_is_card_active( $expire ) ) {
+                        if ( portal_is_card_active( $expire ) ) {
 
-						echo portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label );
+                            echo display_card( $i, $url, $title, $excerpt, $image, $date, $label );
 
-					} else {
+                        } else {
 
-						echo portal_fallback_card( $i );
+                            echo portal_fallback_card( $i );
 
-					}
-				}
-				?>
-			</div>
-		</div>
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
 	</main>
-
-<?php endwhile; ?>
-
 </div>
+<?php endwhile; ?>
 
 <?php get_footer(); ?>

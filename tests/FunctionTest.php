@@ -181,9 +181,19 @@ class FunctionsTest extends PHPUnit_Framework_TestCase
         $this->assertTrue( function_exists('sidebar_save') );
     }
 
-    public function test_exists_level_one_meta_boxes()
+    public function test_exists_webchat_get_meta()
     {
-        $this->assertTrue( function_exists('level_one_meta_boxes') );
+        $this->assertTrue( function_exists('webchat_get_meta') );
+    }
+
+    public function test_exists_webchat_html()
+    {
+        $this->assertTrue( function_exists('webchat_html') );
+    }
+
+    public function test_exists_webchat_save()
+    {
+        $this->assertTrue( function_exists('webchat_save') );
     }
 
     public function test_exists_notification_meta_boxes()
