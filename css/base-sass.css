@@ -4917,6 +4917,8 @@ form .radio input[type="radio"]:focus + label::before {
   .tna-breadcrumb .breadcrumbs {
     margin: 1em 0;
     font-size: .9em; }
+    .tna-breadcrumb .breadcrumbs a:focus {
+      background-color: transparent; }
 
 .mega-menu {
   background-color: #555;
