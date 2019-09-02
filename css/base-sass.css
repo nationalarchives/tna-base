@@ -4584,6 +4584,7 @@ body {
   body a:focus {
     outline: 5px solid #007bff;
     outline-offset: 0;
+    z-index: 999;
     background-color: #fff;
     color: #26262a; }
   body ul {
@@ -4724,7 +4725,8 @@ form input[type="submit"]:focus,
 form textarea:focus,
 form select:focus {
   outline: 5px solid #007bff;
-  outline-offset: 0; }
+  outline-offset: 0;
+  z-index: 999; }
 form .form-row {
   max-width: 100%;
   margin-bottom: 1.6em; }
@@ -4842,7 +4844,8 @@ form .checkbox input[type="checkbox"]:checked + label::after {
   content: ""; }
 form .checkbox input[type="checkbox"]:focus + label::before {
   outline: 5px solid #007bff;
-  outline-offset: 0; }
+  outline-offset: 0;
+  z-index: 999; }
 form .radio input[type="radio"] {
   position: absolute;
   opacity: 0; }
@@ -4875,7 +4878,8 @@ form .radio input[type="radio"]:checked + label::after {
   content: ""; }
 form .radio input[type="radio"]:focus + label::before {
   outline: 5px solid #007bff;
-  outline-offset: 0; }
+  outline-offset: 0;
+  z-index: 999; }
 
 .error-message, .success-message {
   color: #26262a !important;
@@ -5532,7 +5536,8 @@ footer {
 
 button:focus {
   outline: 5px solid #007bff;
-  outline-offset: 0; }
+  outline-offset: 0;
+  z-index: 999; }
 
 /* TNA print styles */
 @media print {
