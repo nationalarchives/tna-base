@@ -146,6 +146,11 @@ function url_exists( $url ) {
     $response = wp_remote_get( $url );
     $response_code = wp_remote_retrieve_response_code( $response );
 
+    // Exceptions
+    if ( strpos($url, 'nationalarchives.gov.uk') !== false ) {
+        return true;
+    }
+
     if ( $response_code  == '404' || $response_code == null ) {
         return false;
     } else {
