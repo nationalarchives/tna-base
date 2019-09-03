@@ -397,6 +397,10 @@ function level_one_card_error() {
 }
 
 function make_url_https( $url ) {
+    // Exceptions
+    if ( strpos($url, 'bookshop.nationalarchives.gov.uk') !== false ) {
+        return $url;
+    }
     if ( strpos( $url, 'http:' ) !== false ) {
         $url = str_replace('http:', 'https:', $url);
         return $url;
