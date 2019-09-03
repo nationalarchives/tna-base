@@ -147,7 +147,7 @@ function url_exists( $url ) {
     $response_code = wp_remote_retrieve_response_code( $response );
 
     // Exceptions
-    if ( strpos($url, 'nationalarchives.gov.uk') !== false ) {
+    if ( strpos($url, 'bookshop.nationalarchives.gov.uk') !== false ) {
         return true;
     }
 
