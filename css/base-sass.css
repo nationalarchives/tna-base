@@ -4559,8 +4559,7 @@ body {
     font-family: "Roboto Mono", monospace;
     font-weight: 400;
     z-index: 2;
-    line-height: 1.6;
-    letter-spacing: -.025em; }
+    line-height: 1.4; }
   body h1 {
     font-size: 2.4em; }
   body h2 {
@@ -4576,13 +4575,13 @@ body {
   body p {
     margin: 0 0 1.6em; }
   body a, body a:active, body a:visited {
-    color: #007bff;
+    color: #1d70b8;
     text-decoration: none; }
   body a:hover {
-    color: #0056b3;
+    color: #003078;
     text-decoration: underline; }
   body a:focus {
-    outline: 5px solid #007bff;
+    outline: 5px solid #1d70b8;
     outline-offset: 0;
     z-index: 999;
     background-color: #fff;
@@ -4724,7 +4723,7 @@ form input[type=checkbox]:focus,
 form input[type="submit"]:focus,
 form textarea:focus,
 form select:focus {
-  outline: 5px solid #007bff;
+  outline: 5px solid #1d70b8;
   outline-offset: 0;
   z-index: 999; }
 form .form-row {
@@ -4843,7 +4842,7 @@ form .checkbox input[type="checkbox"] + label::after {
 form .checkbox input[type="checkbox"]:checked + label::after {
   content: ""; }
 form .checkbox input[type="checkbox"]:focus + label::before {
-  outline: 5px solid #007bff;
+  outline: 5px solid #1d70b8;
   outline-offset: 0;
   z-index: 999; }
 form .radio input[type="radio"] {
@@ -4877,7 +4876,7 @@ form .radio input[type="radio"] + label::after {
 form .radio input[type="radio"]:checked + label::after {
   content: ""; }
 form .radio input[type="radio"]:focus + label::before {
-  outline: 5px solid #007bff;
+  outline: 5px solid #1d70b8;
   outline-offset: 0;
   z-index: 999; }
 
@@ -4935,6 +4934,13 @@ form .radio input[type="radio"]:focus + label::before {
     margin: 0;
     padding: 0;
     list-style: none; }
+  .mega-menu .sub-menu a {
+    display: block;
+    border-top: 1px solid #444;
+    padding: 0.1em 0;
+    margin: 0; }
+  .mega-menu .imgContent a {
+    border: 0; }
   .mega-menu > ul {
     display: flex;
     flex-wrap: wrap; }
@@ -5255,7 +5261,13 @@ footer {
         min-height: auto; } }
     footer .footer-col ul {
       list-style-type: none;
-      padding-left: 0; }
+      padding-left: 0;
+      margin-bottom: 0; }
+      footer .footer-col ul a {
+        display: block;
+        border-top: 1px solid #444;
+        padding: .1em 0;
+        margin: 0; }
     footer .footer-col .square-logo {
       max-width: 157px;
       margin-bottom: 23px; }
@@ -5369,6 +5381,12 @@ footer {
 .default-page aside ul {
   list-style-type: none;
   padding: 0; }
+  .default-page aside ul li {
+    margin-bottom: 5px; }
+    .default-page aside ul li a {
+      display: block;
+      padding: 5px 0;
+      margin: 0; }
 .default-page aside .sidebar-contact {
   padding: 0; }
 .default-page aside .live-chat img {
@@ -5537,7 +5555,7 @@ footer {
     color: #fff; }
 
 button:focus {
-  outline: 5px solid #007bff;
+  outline: 5px solid #1d70b8;
   outline-offset: 0;
   z-index: 999; }
 
