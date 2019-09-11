@@ -4938,7 +4938,8 @@ form .radio input[type="radio"]:focus + label::before {
     display: block;
     border-top: 1px solid #444;
     padding: 0.1em 0;
-    margin: 0; }
+    margin: 0;
+    line-height: 1.6; }
   .mega-menu .imgContent a {
     border: 0; }
   .mega-menu > ul {
@@ -6013,6 +6014,10 @@ button:focus {
     padding-top: 0.6em; }
     .portal-landing .intro-content .intro-entry h2, .portal-landing .intro-content .intro-entry h3 {
       margin-top: 0; }
+    .portal-landing .intro-content .intro-entry a {
+      text-decoration: underline; }
+      .portal-landing .intro-content .intro-entry a:hover {
+        text-decoration: none; }
   .portal-landing .intro-content .intro-image {
     width: 100%;
     min-height: 280px;
