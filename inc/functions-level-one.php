@@ -126,7 +126,7 @@ function level_one_meta_boxes() {
                     'desc' => '',
                     'id' => 'card_level_one_label_'.$i,
                     'type' => 'select',
-                    'options' => array('Please select a label', 'About', 'Audio', 'Blog', 'Careers', 'Case study', 'Collaboration', 'Event', 'Feature', 'Guidance', 'Multimedia', 'News', 'Podcast', 'Project', 'Resource', 'Service', 'Study resource', 'Training', 'Video', 'Webinar'),
+                    'options' => array('Please select a label', 'About', 'Audio', 'Blog', 'Bookshop', 'Careers', 'Case study', 'Collaboration', 'Event', 'Feature', 'Guidance', 'Multimedia', 'News', 'Podcast', 'Project', 'Resource', 'Service', 'Study resource', 'Training', 'Video', 'Webinar'),
                 ),
                 array(
                     'name' => 'Excerpt',

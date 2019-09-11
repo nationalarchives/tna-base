@@ -130,7 +130,7 @@ function portal_landing_meta_boxes() {
 						'desc' => 'Auto will select an appropriate card label.',
 						'id' => 'portal_card_label_'.$i,
 						'type' => 'select',
-						'options' => array('Auto', 'Resource')
+						'options' => array('Auto', 'Resource', 'Bookshop')
 					),
 					array(
 						'name' => 'Event date/time',
