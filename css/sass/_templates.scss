@@ -29,6 +29,12 @@
         margin-bottom: 0.6em;
       }
     }
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   .entry-content:after {
     display: block;
@@ -50,6 +56,14 @@
     ul {
       list-style-type: none;
       padding: 0;
+      li {
+        margin-bottom: 5px;
+        a {
+          display: block;
+          padding: 5px 0;
+          margin: 0;
+        }
+      }
     }
     .sidebar-contact {
       padding: 0;
@@ -171,6 +185,12 @@
     }
     .entry-content {
       margin-bottom: 1.6em;
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
     .well {
       background-color: transparent;
@@ -194,6 +214,14 @@
       padding-top: 0.6em;
       h2 {
         margin: 0;
+      }
+    }
+    .entry-content {
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
