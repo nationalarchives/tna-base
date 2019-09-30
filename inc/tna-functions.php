@@ -73,3 +73,11 @@ function get_query_string_newsletter_previous_url() {
         return sprintf('<a class="button" href="https://www.%s">Back to home page</a>', $tna_url);
     }
 }
+
+function blog_footer_url( $blog_type ) {
+    if ($blog_type == 'amp' || $blog_type == 'blog') {
+        return 'https://www.nationalarchives.gov.uk';
+    } else {
+        return '';
+    }
+}
