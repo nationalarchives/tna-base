@@ -208,11 +208,11 @@ function display_card( $id, $url, $title, $description, $image, $date, $label ) 
         $image = make_url_https( $image );
         $url = make_url_https( $url );
 
-        if ( !url_exists( $url ) ) {
+        /*if ( !url_exists( $url ) ) {
 
             // URL return 404
             return card_fallback( '', $id );
-        }
+        }*/
 
         $image = rm_livelb( $image );
 
