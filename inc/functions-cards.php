@@ -206,7 +206,6 @@ function display_card( $id, $url, $title, $description, $image, $date, $label ) 
         }
 
         $image = make_url_https( $image );
-        $url = make_url_https( $url );
 
         /*if ( !url_exists( $url ) ) {
 
