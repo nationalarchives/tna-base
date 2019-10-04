@@ -4555,7 +4555,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #26262a; }
-  body h1, body h2, body h3, body h4 {
+  body h1, body h2, body h3, body h4, body .h1, body .h2, body .h3, body .h4 {
     font-family: "Roboto Mono", monospace;
     font-weight: 400;
     z-index: 2;

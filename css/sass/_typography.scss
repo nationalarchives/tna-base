@@ -3,7 +3,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: $dark;
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     font-family: $heading_font;
     font-weight: 400;
     z-index: 2;
