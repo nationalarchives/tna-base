@@ -5,5 +5,8 @@
   .breadcrumbs {
     margin: 1em 0;
     font-size: .9em;
+    a:focus {
+      background-color: transparent;
+    }
   }
 }

@@ -146,6 +146,11 @@ function url_exists( $url ) {
     $response = wp_remote_get( $url );
     $response_code = wp_remote_retrieve_response_code( $response );
 
+    // Exceptions
+    if ( strpos($url, 'bookshop.nationalarchives.gov.uk') !== false ) {
+        return true;
+    }
+
     if ( $response_code  == '404' || $response_code == null ) {
         return false;
     } else {
@@ -202,11 +207,11 @@ function display_card( $id, $url, $title, $description, $image, $date, $label ) 
 
         $image = make_url_https( $image );
 
-        if ( !url_exists( $url ) ) {
+        /*if ( !url_exists( $url ) ) {
 
             // URL return 404
             return card_fallback( '', $id );
-        }
+        }*/
 
         $image = rm_livelb( $image );
 
@@ -312,7 +317,7 @@ function is_card_active( $expire ) {
 function card_fallback( $fallback, $id ) {
 
     $url = 'https://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
-    $image = make_path_relative( get_template_directory_uri().'/img/events.jpg' );
+    $image = make_path_relative_no_pre_path( get_template_directory_uri().'/img/events.jpg' );
     $type = 'Event';
     $title = 'Events - The National Archives';
     $description = 'Find more information about our events programme and how to book tickets.';
@@ -391,6 +396,10 @@ function level_one_card_error() {
 }
 
 function make_url_https( $url ) {
+    // Exceptions
+    if ( strpos($url, 'bookshop.nationalarchives.gov.uk') !== false ) {
+        return $url;
+    }
     if ( strpos( $url, 'http:' ) !== false ) {
         $url = str_replace('http:', 'https:', $url);
         return $url;
