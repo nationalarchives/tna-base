@@ -110,11 +110,11 @@ function get_meta_og_data( $url ) {
 
 function get_meta_og_on_save( $post_id ) {
 
+    $theme = wp_get_theme();
 	$template_file = get_post_meta( $post_id, '_wp_page_template', true );
+    $data = $_POST;
 
-	if ( $template_file == 'page-home.php' ) {
-
-		$data = $_POST;
+	if ( $template_file == 'page-home.php' && $theme->name == 'Home page - child theme' ) {
 
 		if ( $data['home_banner_url'] ) {
 
