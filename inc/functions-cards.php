@@ -1,6 +1,53 @@
 <?php
 
 /**
+ * Returns HTML markup for a card.
+ *
+ * @since 1.0
+ *
+ * @see card_html
+ *
+ * @param string $args
+ * @return string
+ */
+function display_card( $args = '' ) {
+
+    $defaults = array(
+            'id'            => 0,
+            'url'           => '',
+            'title'         => '',
+            'description'   => '',
+            'image'         => '',
+            'author'        => '',
+            'pub_date'      => '',
+            'event_date'    => '',
+            'label'         => ''
+    );
+
+    $r = wp_parse_args( $args, $defaults );
+
+    if ( $r['url'] ) {
+
+        if ( $r['label'] == '' || $r['label'] == 'Auto' ) {
+            $type = content_type( $r['url'] );
+        } else {
+            $type = $r['label'];
+        }
+
+        $image = make_url_https( $r['image'] );
+        $image = rm_livelb( $image );
+
+        /*if ( !url_exists( $url ) ) {
+
+            // URL return 404
+            return card_fallback( '', $id );
+        }*/
+
+        return card_html( $r['id'], $r['url'], $image, $type, $r['title'], $r['description'], $r['event_date'] );
+    }
+}
+
+/**
  * @param $id
  * @param $url
  * @param $type
@@ -177,46 +224,6 @@ function rm_livelb( $url ) {
     }
 
     return $url;
-}
-
-/**
- * Returns HTML markup for a card.
- *
- * @since 1.0
- *
- * @see card_html
- *
- * @param string $id
- * @param string $url
- * @param string $title
- * @param string $description
- * @param string $image
- * @param string $date
- * @param string $label
- * @return string
- */
-function display_card( $id, $url, $title, $description, $image, $date, $label ) {
-
-    if ( $url ) {
-
-        if ( $label == '' || $label == 'Auto' ) {
-            $type = content_type( $url );
-        } else {
-            $type = $label;
-        }
-
-        $image = make_url_https( $image );
-
-        /*if ( !url_exists( $url ) ) {
-
-            // URL return 404
-            return card_fallback( '', $id );
-        }*/
-
-        $image = rm_livelb( $image );
-
-        return card_html( $id, $url, $image, $type, $title, $description, $date );
-    }
 }
 
 /**
