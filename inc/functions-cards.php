@@ -92,7 +92,7 @@ function card_image( $image, $type ) {
  * @param $type
  * @return string
  */
-function card_date( $date, $type ) {
+function card_event_date( $date, $type ) {
 
 	if ( $date && $type == 'Event' ) {
 
@@ -104,6 +104,20 @@ function card_date( $date, $type ) {
 
 		return sprintf( $html, $date );
 	}
+}
+
+/**
+ * @param $date
+ * @return string
+ */
+function card_pub_date( $date ) {
+
+    if ( $date ) {
+
+        $html = '<p class="entry-pub-date">%s</p>';
+
+        return sprintf( $html, $date );
+    }
 }
 
 /**
@@ -155,7 +169,7 @@ function banner_content( $type, $title, $description ) {
  */
 function card_html( $id, $url, $image, $type, $title, $description, $date ) {
 
-    $content = card_image( $image, $type ) . card_content( $type, $title, $description ) . card_date( $date, $type );
+    $content = card_image( $image, $type ) . card_content( $type, $title, $description ) . card_event_date( $date, $type );
 
     $html  = '<div class="col-md-4"><div class="card">';
     $html .= card_link( $id, $url, $type, $title, $content );
