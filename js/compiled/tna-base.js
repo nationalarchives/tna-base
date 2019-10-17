@@ -124,23 +124,7 @@ $.fn.append_promotional_image = function () {
         });
     };
 
-})(jQuery);;$(document).ready(function () {
-
-    // Check the position of the page
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
-            $('#goTop').stop().animate({right: '.5em'});
-        } else {
-            $('#goTop').stop().animate({right: '-100px'});
-        }
-    });
-
-    // Click event to scroll back to top
-    $('#goTop').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
-});;
+})(jQuery);;
 tnaSetThisCookie = function (name, days) {
     var d = new Date();
     d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * days);

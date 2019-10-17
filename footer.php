@@ -1,4 +1,3 @@
-<a title="Go back to top" href="#" id="goTop"></a>
 <footer id="footer" role="contentinfo">
     <?php
     global $post;
@@ -19,4 +18,5 @@
 <?php get_template_part( 'partials/footer-webtrends' ); ?>
 
 </body>
+
 </html>
