@@ -48,6 +48,35 @@ function display_card( $args = '' ) {
 }
 
 /**
+ * Returns HTML markup for the cards.
+ *
+ * @since 1.0
+ *
+ * @see card_html
+ *
+ * @param string $id
+ * @param string $url
+ * @param string $image
+ * @param string $type
+ * @param string $title
+ * @param string $description
+ * @param string $date
+ * @return string
+ */
+function card_html( $id, $url, $image, $type, $title, $description, $date ) {
+
+    $html  = '<div class="col-md-4"><div class="card">';
+    $html .= '<a ' . card_link_atts( $id, $url, $type, $title ) . '>';
+    $html .= card_image( $image, $type );
+    $html .= card_content( $type, $title, $description );
+    $html .= card_event_date( $date, $type );
+    $html .= '</a>';
+    $html .= '</div></div>';
+
+    return $html;
+}
+
+/**
  * @param $id
  * @param $url
  * @param $type
@@ -68,6 +97,30 @@ function card_link( $id, $url, $type, $title, $content ) {
 	$html = '<a id="card_%s" href="%s" %s data-gtm-name="%s" data-gtm-id="card_%s" data-gtm-position="card_position_%s" data-gtm-creative="card_type_%s" class="content-card %s">%s</a>';
 
 	return sprintf( $html, $id, $url, $target, $title, $id, $id, $type, $type, $content );
+}
+
+/**
+ * @param $id
+ * @param $url
+ * @param $type
+ * @param $title
+ * @return string
+ */
+function card_link_atts( $id, $url, $type, $title ) {
+
+    if ( $type == 'Event' ) {
+        $target = 'target="_blank"';
+    } else {
+        $target = '';
+    }
+
+    $type = strtolower($type);
+    $type = str_replace( ' ', '_', $type );
+    $class = str_replace( ' ', '-', $type );
+
+    $atts = 'id="card_%s" href="%s" %s data-gtm-name="%s" data-gtm-id="card_%s" data-gtm-position="card_position_%s" data-gtm-creative="card_type_%s" class="content-card %s"';
+
+    return sprintf( $atts, $id, $url, $target, $title, $id, $id, $type, $class );
 }
 
 /**
@@ -149,33 +202,6 @@ function banner_content( $type, $title, $description ) {
 	$html = '<div class="entry-content %s"><div class="content-type">%s</div><h3>%s</h3><p>%s</p></div>';
 
 	return sprintf( $html, $type_class, $type, $title, $description );
-}
-
-/**
- * Returns HTML markup for the cards.
- *
- * @since 1.0
- *
- * @see card_html
- *
- * @param string $id
- * @param string $url
- * @param string $image
- * @param string $type
- * @param string $title
- * @param string $description
- * @param string $date
- * @return string
- */
-function card_html( $id, $url, $image, $type, $title, $description, $date ) {
-
-    $content = card_image( $image, $type ) . card_content( $type, $title, $description ) . card_event_date( $date, $type );
-
-    $html  = '<div class="col-md-4"><div class="card">';
-    $html .= card_link( $id, $url, $type, $title, $content );
-    $html .= '</div></div>';
-
-	return $html;
 }
 
 /**
