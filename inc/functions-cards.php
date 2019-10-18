@@ -43,7 +43,7 @@ function display_card( $args = '' ) {
         $image = make_url_https( $r['image'] );
         $image = rm_livelb( $image );
 
-        return card_html( $r['id'], $r['url'], $image, $label, $r['title'], $r['description'], $r['event_date'] );
+        return card_html( $r['id'], $r['url'], $image, $label, $r['title'], $r['description'], $r['pub_date'], $r['event_date'] );
     }
 }
 
@@ -57,19 +57,28 @@ function display_card( $args = '' ) {
  * @param string $id
  * @param string $url
  * @param string $image
- * @param string $type
+ * @param string $label
  * @param string $title
  * @param string $description
- * @param string $date
+ * @param string $pub_date
+ * @param string $event_date
  * @return string
  */
-function card_html( $id, $url, $image, $type, $title, $description, $date ) {
+function card_html( $id, $url, $image, $label, $title, $description, $pub_date, $event_date ) {
+
+    $type = strtolower($label);
+    $type_id = str_replace( ' ', '_', $type );
+    $type_class = str_replace( ' ', '-', $type );
 
     $html  = '<div class="col-md-4"><div class="card">';
-    $html .= '<a ' . card_link_atts( $id, $url, $type, $title ) . '>';
-    $html .= card_image( $image, $type );
-    $html .= card_content( $type, $title, $description );
-    $html .= card_event_date( $date, $type );
+    $html .= '<a ' . card_link_atts( $id, $url, $type_id, $type_class, $title ) . '>';
+    $html .= card_image( $image, $label );
+    $html .= '<div class="entry-content">';
+    $html .= '<h3>' . $title . '</h3>';
+    $html .= card_pub_date( $pub_date );
+    $html .= '<p>' . $description . '</p>';
+    $html .= '</div>';
+    $html .= card_event_date( $event_date, $label );
     $html .= '</a>';
     $html .= '</div></div>';
 
@@ -102,34 +111,32 @@ function card_link( $id, $url, $type, $title, $content ) {
 /**
  * @param $id
  * @param $url
- * @param $type
+ * @param $type_id
+ * @param $type_class
  * @param $title
  * @return string
  */
-function card_link_atts( $id, $url, $type, $title ) {
+function card_link_atts( $id, $url, $type_id, $type_class, $title ) {
 
-    if ( $type == 'Event' ) {
+    if ( $type_id == 'event' ) {
         $target = 'target="_blank"';
     } else {
         $target = '';
     }
 
-    $type = strtolower($type);
-    $type = str_replace( ' ', '_', $type );
-    $class = str_replace( ' ', '-', $type );
-
     $atts = 'id="card_%s" href="%s" %s data-gtm-name="%s" data-gtm-id="card_%s" data-gtm-position="card_position_%s" data-gtm-creative="card_type_%s" class="content-card %s"';
 
-    return sprintf( $atts, $id, $url, $target, $title, $id, $id, $type, $class );
+    return sprintf( $atts, $id, $url, $target, $title, $id, $id, $type_id, $type_class );
 }
 
 /**
  * @param $image
+ * @param $type
  * @return string
  */
 function card_image( $image, $type ) {
 
-    if ( $type == 'Please select a label' ) {
+    if ( $type == 'Please select a label' || $type == '' ) {
         $type = '';
     } else {
         $type = '<div class="content-type">'.$type.'</div>';
@@ -363,10 +370,9 @@ function card_fallback( $fallback, $id ) {
 
     $url = 'https://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
     $image = make_path_relative_no_pre_path( get_template_directory_uri().'/img/events.jpg' );
-    $type = 'Event';
-    $title = 'Events - The National Archives';
+    $type = 'Events';
+    $title = 'Events at The National Archives';
     $description = 'Find more information about our events programme and how to book tickets.';
-    $date = '';
 
     if ( $fallback == 'Latest news' ) {
 
@@ -401,7 +407,7 @@ function card_fallback( $fallback, $id ) {
         }
     }
 
-    return card_html( $id, $url, $image, $type, $title, $description, $date );
+    return card_html( $id, $url, $image, $type, $title, $description, '', '' );
 }
 
 function check_card_labels($post_id) {
