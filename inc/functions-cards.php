@@ -88,29 +88,6 @@ function card_html( $id, $url, $image, $label, $title, $description, $pub_date, 
 /**
  * @param $id
  * @param $url
- * @param $type
- * @param $title
- * @param $content
- * @return string
- */
-function card_link( $id, $url, $type, $title, $content ) {
-
-	if ( $type == 'Event' ) {
-		$target = 'target="_blank"';
-	} else {
-		$target = '';
-	}
-
-	$type = strtolower($type);
-
-	$html = '<a id="card_%s" href="%s" %s data-gtm-name="%s" data-gtm-id="card_%s" data-gtm-position="card_position_%s" data-gtm-creative="card_type_%s" class="content-card %s">%s</a>';
-
-	return sprintf( $html, $id, $url, $target, $title, $id, $id, $type, $type, $content );
-}
-
-/**
- * @param $id
- * @param $url
  * @param $type_id
  * @param $type_class
  * @param $title
@@ -178,22 +155,6 @@ function card_pub_date( $date ) {
 
         return sprintf( $html, $date );
     }
-}
-
-/**
- * @param $type
- * @param $title
- * @param $description
- * @return string
- */
-function card_content( $type, $title, $description ) {
-
-	$type_class = strtolower( $type );
-	$description = limit_words( $description );
-
-	$html = '<div class="entry-content %s"><h3>%s</h3><p>%s</p></div>';
-
-	return sprintf( $html, $type_class, $title, $description );
 }
 
 /**
