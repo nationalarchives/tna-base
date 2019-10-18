@@ -28,22 +28,22 @@ function display_card( $args = '' ) {
 
     if ( $r['url'] ) {
 
+        if ( !url_exists( $r['url'] ) ) {
+
+            // ext URL return 404
+            return card_fallback( '', $r['id'] );
+        }
+
         if ( $r['label'] == '' || $r['label'] == 'Auto' ) {
-            $type = content_type( $r['url'] );
+            $label = content_type( $r['url'] );
         } else {
-            $type = $r['label'];
+            $label = $r['label'];
         }
 
         $image = make_url_https( $r['image'] );
         $image = rm_livelb( $image );
 
-        /*if ( !url_exists( $url ) ) {
-
-            // URL return 404
-            return card_fallback( '', $id );
-        }*/
-
-        return card_html( $r['id'], $r['url'], $image, $type, $r['title'], $r['description'], $r['event_date'] );
+        return card_html( $r['id'], $r['url'], $image, $label, $r['title'], $r['description'], $r['event_date'] );
     }
 }
 
@@ -230,19 +230,17 @@ function limit_words( $words, $number = 14 ) {
  */
 function url_exists( $url ) {
 
-    $response = wp_remote_get( $url );
-    $response_code = wp_remote_retrieve_response_code( $response );
+    if ( strpos($url, 'nationalarchives.gov.uk') == false ) {
+        $response = wp_remote_get( $url );
+        $response_code = wp_remote_retrieve_response_code( $response );
 
-    // Exceptions
-    if ( strpos($url, 'bookshop.nationalarchives.gov.uk') !== false ) {
-        return true;
+        if ( $response_code  == '404' || $response_code == null ) {
+            return false;
+        } else {
+            return true;
+        }
     }
-
-    if ( $response_code  == '404' || $response_code == null ) {
-        return false;
-    } else {
-        return true;
-    }
+    return true;
 }
 
 /**
