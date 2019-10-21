@@ -123,6 +123,11 @@
         left: 32px;
       }
     }
+    .entry-pub-date {
+      font-family: $heading_font;
+      color: $grey-mid-dark;
+      margin-bottom: 7px;
+    }
   }
   .col-md-3 {
     .entry-image {

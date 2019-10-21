@@ -28,11 +28,11 @@ function display_card( $args = '' ) {
 
     if ( $r['url'] ) {
 
-        if ( !url_exists( $r['url'] ) ) {
+        /*if ( !url_exists( $r['url'] ) ) {
 
             // ext URL return 404
             return card_fallback( '', $r['id'] );
-        }
+        }*/
 
         if ( $r['label'] == '' || $r['label'] == 'Auto' ) {
             $label = content_type( $r['url'] );
