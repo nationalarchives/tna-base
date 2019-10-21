@@ -4455,26 +4455,6 @@ button.close {
 .no-margin-top {
   margin-top: 0; }
 
-#goTop {
-  height: 40px;
-  width: 40px;
-  padding: 10px;
-  border: 2px solid #fff;
-  text-align: center;
-  background: whiteSmoke;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  position: fixed;
-  top: 47%;
-  right: -100px;
-  background: url(../img/icon-32-top.gif) center center no-repeat rgba(0, 0, 0, 0.66);
-  background-size: cover;
-  z-index: 5000;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%; }
-
 .well {
   background-color: #f3f3f3;
   padding: 20px;
@@ -4497,7 +4477,7 @@ a#cookieCutter {
   .list_left_thumbnail li, .list_right_thumbnail li {
     clear: both;
     width: 100%;
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid #ececec;
     display: inline-block;
     padding: 0 0 10px 0; }
     .list_left_thumbnail li h2, .list_right_thumbnail li h2 {
@@ -5248,7 +5228,10 @@ header {
 footer {
   color: #fff;
   background-color: #26262a; }
-  footer a, footer a:active, footer a:visited, footer a:hover {
+  footer a,
+  footer a:active,
+  footer a:visited,
+  footer a:hover {
     color: #fbe2bc; }
   footer a:focus {
     color: #26262a; }
@@ -5267,7 +5250,7 @@ footer {
       footer .footer-col ul a {
         display: block;
         border-top: 1px solid #444;
-        padding: .1em 0;
+        padding: 0.1em 0;
         margin: 0; }
     footer .footer-col .square-logo {
       max-width: 157px;
@@ -5294,7 +5277,8 @@ footer {
       display: table-row; }
     footer .opening-times .open_table .open_tableHeading {
       display: table-header-group; }
-    footer .opening-times .open_table .open_tableCell, footer .opening-times .open_table .open_tableHead {
+    footer .opening-times .open_table .open_tableCell,
+    footer .opening-times .open_table .open_tableHead {
       display: table-cell;
       padding: 3px 0; }
     footer .opening-times .open_table .open_tableHeading {
@@ -5337,7 +5321,7 @@ footer {
       margin-top: 0;
       line-height: 1; }
     footer .newsletter .news-content .button {
-      padding: .3em .9em;
+      padding: 0.3em 0.9em;
       line-height: 1;
       margin-top: 0.6em; }
 

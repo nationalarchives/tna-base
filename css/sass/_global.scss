@@ -4,27 +4,6 @@
   margin-top: 0;
 }
 
-#goTop {
-  height: 40px;
-  width: 40px;
-  padding: 10px;
-  border: 2px solid #fff;
-  text-align: center;
-  background: whiteSmoke;
-  font-weight: bold;
-  color: $tna_white;
-  text-decoration: none;
-  position: fixed;
-  top: 47%;
-  right: -100px;
-  background: url(../img/icon-32-top.gif) center center no-repeat rgba(0, 0, 0, .66);
-  background-size: cover;
-  z-index: 5000;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-}
-
 .well {
   background-color: $tna_well;
   padding: 20px;
@@ -43,29 +22,29 @@ a#cookieCutter {
 
 /* TinyMce - list left thumbnail */
 .list_left_thumbnail {
-  margin:0;
-  padding:0;
-  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   li {
     h2 {
-      padding:0;
-      margin:0;
+      padding: 0;
+      margin: 0;
     }
     img {
-      float:left;
-      width:210px;
-      max-height:260px;
-      padding:0 10px 0 0;
-      margin:0;
-      @media (max-width: 375px){
+      float: left;
+      width: 210px;
+      max-height: 260px;
+      padding: 0 10px 0 0;
+      margin: 0;
+      @media (max-width: 375px) {
         width: 100%;
       }
     }
-    clear:both;
-    width:100%;
-    border-bottom:1px solid #ECECEC;
-    display:inline-block;
-    padding:0 0 10px 0;
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    display: inline-block;
+    padding: 0 0 10px 0;
   }
 }
 /* TinyMce - list right thumbnail */
@@ -73,8 +52,8 @@ a#cookieCutter {
   @extend .list_left_thumbnail;
   li {
     img {
-      float:right;
-      padding:0 0 10px 10px;
+      float: right;
+      padding: 0 0 10px 10px;
     }
   }
 }
