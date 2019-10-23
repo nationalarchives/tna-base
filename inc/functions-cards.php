@@ -43,7 +43,10 @@ function display_card( $args = '' ) {
         $image = make_url_https( $r['image'] );
         $image = rm_livelb( $image );
 
-        return card_html( $r['id'], $r['url'], $image, $label, $r['title'], $r['description'], $r['pub_date'], $r['event_date'] );
+        $description = clean_excerpt( $r['description'] );
+        $description = limit_words( $description );
+
+        return card_html( $r['id'], $r['url'], $image, $label, $r['title'], $description, $r['pub_date'], $r['event_date'] );
     }
 }
 
