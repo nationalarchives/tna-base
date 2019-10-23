@@ -5938,6 +5938,10 @@ button:focus {
       color: #fff; }
   .cards .card .video .entry-image .content-type, .cards .card .webinar .entry-image .content-type, .cards .card .audio .entry-image .content-type, .cards .card .podcast .entry-image .content-type {
     left: 32px; }
+  .cards .card .entry-pub-date {
+    font-family: "Roboto Mono", monospace;
+    color: #555;
+    margin-bottom: 7px; }
 .cards .col-md-3 .entry-image {
   min-height: 160px; }
 .cards .col-md-4 .entry-image {
