@@ -57,17 +57,22 @@ get_header(); ?>
                 <div class="row">
                     <?php
                     for ( $i=0 ; $i<=9 ; $i++ ) {
-                        $url        = get_post_meta( $post->ID, 'portal_card_url_'.$i, true );
-                        $title      = get_post_meta( $post->ID, 'portal_card_title_'.$i, true );
-                        $excerpt    = get_post_meta( $post->ID, 'portal_card_excerpt_'.$i, true );
-                        $image      = get_post_meta( $post->ID, 'portal_card_img_'.$i, true );
-                        $date       = get_post_meta( $post->ID, 'portal_card_date_'.$i, true );
-                        $label      = get_post_meta( $post->ID, 'portal_card_label_'.$i, true );
+
                         $expire     = get_post_meta( $post->ID, 'portal_card_expire_'.$i, true );
+
+                        $args = array(
+                            'id'            => $i,
+                            'url'           => get_post_meta( $post->ID, 'portal_card_url_'.$i, true ),
+                            'title'         => get_post_meta( $post->ID, 'portal_card_title_'.$i, true ),
+                            'description'   => get_post_meta( $post->ID, 'portal_card_excerpt_'.$i, true ),
+                            'image'         => get_post_meta( $post->ID, 'portal_card_img_'.$i, true ),
+                            'event_date'    => get_post_meta( $post->ID, 'portal_card_date_'.$i, true ),
+                            'label'         => get_post_meta( $post->ID, 'portal_card_label_'.$i, true )
+                        );
 
                         if ( portal_is_card_active( $expire ) ) {
 
-                            echo display_card( $i, $url, $title, $excerpt, $image, $date, $label );
+                            echo display_card( $args );
 
                         } else {
 

@@ -10,17 +10,21 @@
             }
 
             for ($i = 1; $i <= 12; $i++) {
-                $title   = get_post_meta( $post->ID, 'card_level_one_title_' . $i, true );
-                $url     = get_post_meta( $post->ID, 'card_level_one_url_' . $i, true );
-                $image   = get_post_meta( $post->ID, 'card_level_one_image_' . $i, true );
-                $excerpt = wpautop(get_post_meta( $post->ID, 'card_level_one_excerpt_' . $i, true ));
-                $label   = get_post_meta( $post->ID, 'card_level_one_label_' . $i, true );
-                $date    = '';
-                $id      = $page.'_'.$i;
 
-                if ( $url != '' ) {
-                    if ( $label != 'Please select a label' ) {
-                        echo display_card( $id, $url, $title, $excerpt, $image, $date, $label );
+                $args = array(
+                    'id'            => $page.'_'.$i,
+                    'url'           => get_post_meta( $post->ID, 'card_level_one_url_' . $i, true ),
+                    'title'         => get_post_meta( $post->ID, 'card_level_one_title_' . $i, true ),
+                    'description'   => wpautop(get_post_meta( $post->ID, 'card_level_one_excerpt_' . $i, true )),
+                    'image'         => get_post_meta( $post->ID, 'card_level_one_image_' . $i, true ),
+                    'label'         => get_post_meta( $post->ID, 'card_level_one_label_' . $i, true )
+                );
+
+                if ( $args['url'] ) {
+                    if ( $args['label'] != 'Please select a label' ) {
+
+                        echo display_card( $args );
+
                     }
                 }
             }
