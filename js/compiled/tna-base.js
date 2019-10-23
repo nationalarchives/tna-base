@@ -124,23 +124,7 @@ $.fn.append_promotional_image = function () {
         });
     };
 
-})(jQuery);;$(document).ready(function () {
-
-    // Check the position of the page
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
-            $('#goTop').stop().animate({right: '.5em'});
-        } else {
-            $('#goTop').stop().animate({right: '-100px'});
-        }
-    });
-
-    // Click event to scroll back to top
-    $('#goTop').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
-});;
+})(jQuery);;
 tnaSetThisCookie = function (name, days) {
     var d = new Date();
     d.setTime(d.getTime() + 1000 * 60 * 60 * 24 * days);
@@ -290,44 +274,31 @@ $(document).ready(function () {
  * Newsletter Back To Origin Jquery plugin
  * */
 
-(function ($) {
-    $.fn.newsletterBackToOrigin = function (options) {
-        var settings = $.extend({}, $.fn.newsletterBackToOrigin.defaults, options);
-        return this.each(function () {
-            var thankYouURL = "https://www.nationalarchives.gov.uk/about/get-involved/newsletters/the-national-archives-newsletter/thank-you/",
-                newValue = "?oldurl=" + window.location.href;
-                return settings.$element.val(thankYouURL + newValue);
-        });
-    }
-
-    // Default settings
-    $.fn.newsletterBackToOrigin.defaults = {
-        $element: $('input[name="ReturnURL"]'),
-    }
-}(jQuery));
-
 $(function() {
-    $('a[class="anchor-link"]').on('click',function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 500);
-                return false;
-            }
-        }
-    });
+  $('a[class="anchor-link"]').on('click', function() {
+    if (
+      location.pathname.replace(/^\//, '') ==
+        this.pathname.replace(/^\//, '') &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate(
+          {
+            scrollTop: target.offset().top
+          },
+          500
+        );
+        return false;
+      }
+    }
+  });
 });
 ;$('a[target="_blank"]').add_attributes_to_target_blank();
 
-$("ul.sub-menu:last").append_promotional_image();
+$('ul.sub-menu:last').append_promotional_image();
 
-$(".mega-menu > ul > li > a").mega_menu_enhancements();
+$('.mega-menu > ul > li > a').mega_menu_enhancements();
 
 $('a', '.mega-menu').webtrends_click_handler();
-
-// Make sure the signup newsletter form matches the ID below
-// By default target element is $('input[name="ReturnURL"]')
-$('#signup').newsletterBackToOrigin();
