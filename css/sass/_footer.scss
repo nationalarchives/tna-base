@@ -1,7 +1,10 @@
 footer {
   color: #fff;
   background-color: $dark;
-  a, a:active, a:visited, a:hover {
+  a,
+  a:active,
+  a:visited,
+  a:hover {
     color: $yellow-peach;
   }
   a:focus {
@@ -23,7 +26,7 @@ footer {
       a {
         display: block;
         border-top: 1px solid #444;
-        padding: .1em 0;
+        padding: 0.1em 0;
         margin: 0;
       }
     }
@@ -60,7 +63,8 @@ footer {
       .open_tableHeading {
         display: table-header-group;
       }
-      .open_tableCell, .open_tableHead {
+      .open_tableCell,
+      .open_tableHead {
         display: table-cell;
         padding: 3px 0;
       }
@@ -97,11 +101,11 @@ footer {
         border-radius: 50%;
         padding: 7px;
         width: 40px;
-        transition:0.4s ease-in-out;
-        -webkit-transition:0.4s ease-in-out;
-        -moz-transition:0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
+        -webkit-transition: 0.4s ease-in-out;
+        -moz-transition: 0.4s ease-in-out;
         &:hover {
-          background:#555;
+          background: #555;
         }
       }
     }
@@ -117,7 +121,7 @@ footer {
         line-height: 1;
       }
       .button {
-        padding: .3em .9em;
+        padding: 0.3em 0.9em;
         line-height: 1;
         margin-top: 0.6em;
       }
