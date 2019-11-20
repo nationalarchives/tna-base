@@ -47,14 +47,6 @@
 		notification_banner();
 	}
 ?>
-    <div class="notification-banner">
-        <div class="container">
-            <div class="notice">
-                <strong class="title">Like our new ‘Search’ options?</strong> <a
-                    href="https://www.smartsurvey.co.uk/s/AV38J/" target="_blank">Tell us what you think here</a>.
-            </div>
-        </div>
-    </div>
     <header id="header" role="banner">
         <a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
         <div class="container">
