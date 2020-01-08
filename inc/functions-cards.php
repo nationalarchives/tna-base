@@ -72,12 +72,18 @@ function card_html( $id, $url, $image, $label, $title, $description, $pub_date, 
     $type = strtolower($label);
     $type_id = str_replace( ' ', '_', $type );
     $type_class = str_replace( ' ', '-', $type );
+    $sr_span = '';
+    $ext_icon = '';
+    if ( $event_date ) {
+        $sr_span = '<span class="sr-only">Opens a new window</span>';
+        $ext_icon = ' class="externals"';
+    }
 
     $html  = '<div class="col-md-4"><div class="card">';
     $html .= '<a ' . card_link_atts( $id, $url, $type_id, $type_class, $title ) . '>';
     $html .= card_image( $image, $label );
     $html .= '<div class="entry-content">';
-    $html .= '<h3>' . $title . '</h3>';
+    $html .= '<h3'.$ext_icon.'>' . $title . $sr_span . '</h3>';
     $html .= card_pub_date( $pub_date );
     $html .= '<p>' . $description . '</p>';
     $html .= card_event_date( $event_date, $label );
@@ -99,7 +105,7 @@ function card_html( $id, $url, $image, $label, $title, $description, $pub_date, 
 function card_link_atts( $id, $url, $type_id, $type_class, $title ) {
 
     if ( $type_id == 'event' ) {
-        $target = 'target="_blank"';
+        $target = 'target="_blank" title="Opens in a new window"';
     } else {
         $target = '';
     }
