@@ -5908,6 +5908,9 @@ button:focus {
       text-decoration: none; }
       .cards .card a:hover .entry-content h3, .cards .card a:hover .entry-header h3 {
         text-decoration: underline; }
+  .cards .card .externals::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0px 3px 0px 5px; }
   .cards .card .video .entry-image:before, .cards .card .webinar .entry-image:before, .cards .card .audio .entry-image:before, .cards .card .podcast .entry-image:before {
     content: " ";
     position: absolute;
