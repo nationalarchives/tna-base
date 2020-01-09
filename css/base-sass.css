@@ -5552,8 +5552,8 @@ button:focus {
   position: relative; }
   .feature-img .feature-img-caption {
     z-index: 1000;
-    width: 32px;
-    height: 32px; }
+    width: 44px;
+    height: 44px; }
   .feature-img .img-caption-bottom {
     position: absolute;
     margin-bottom: 1em;
@@ -5567,8 +5567,8 @@ button:focus {
     top: 0;
     right: 0; }
   .feature-img button {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
     padding: 0;
     border: none;
     border-radius: 50%;
