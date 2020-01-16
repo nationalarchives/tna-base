@@ -13,7 +13,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
                 </address>
             </div>
             <div class="footer-col col-xs-12 col-sm-6 col-md-12 col-lg-12">
-                <h4>Standard opening times</h4>
+                <h3>Standard opening times</h3>
                 <div class="opening-times">
                     <div class="open_table">
                         <div class="open_tableBody">
@@ -55,7 +55,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
     <div class="footer-col col-xs-12 col-sm-12 col-md-6">
         <div class="row">
             <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h4>Find out more</h4>
+                <h3>Find out more</h3>
                 <ul>
                     <li><a href="<?php echo $site_url ?>/contact-us/">Contact us</a></li>
                     <li><a href="<?php echo $site_url ?>/about/press-room/">Press room</a></li>
@@ -66,7 +66,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
                 </ul>
             </div>
             <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h4>Websites</h4>
+                <h3>Websites</h3>
                 <ul>
                     <li><a href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
                     <li><a href="https://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
@@ -80,7 +80,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
         </div>
         <div class="row">
             <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h4>Site help</h4>
+                <h3>Site help</h3>
                 <ul>
                     <li><a href="<?php echo $site_url ?>/help/">Help</a></li>
                     <li><a href="<?php echo $site_url ?>/help/a-to-z/">Website A-Z index</a></li>
@@ -88,7 +88,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
                 </ul>
             </div>
             <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h4>Legal</h4>
+                <h3>Legal</h3>
                 <ul>
                     <li><a href="<?php echo $site_url ?>/legal/">Terms of use</a></li>
                     <li><a href="<?php echo $site_url ?>/legal/privacy.htm">Privacy policy</a></li>
@@ -103,7 +103,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
     <div class="footer-col col-xs-12 col-sm-12 col-md-3">
         <div class="row">
             <div class="footer-col col-xs-12 col-sm-6 col-md-12">
-                <h4>Follow us</h4>
+                <h3>Follow us</h3>
                 <div class="follow-us">
                     <a href="https://twitter.com/@UKNatArchives" title="Follow us on Twitter - Opens a new window" target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/twitter.png"
