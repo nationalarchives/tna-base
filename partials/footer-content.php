@@ -73,8 +73,8 @@ $site_url = blog_footer_url( get_option('blog_type') )
                     <li><a href="http://bookshop.nationalarchives.gov.uk/">Bookshop</a></li>
                     <li><a href="https://images.nationalarchives.gov.uk/">Image library</a></li>
                     <li><a href="<?php echo $site_url ?>/webarchive/">UK Government Web Archive</a></li>
-                    <li><a href="http://www.legislation.gov.uk/" target="_blank">Legislation.gov.uk</a></li>
-                    <li><a href="https://www.thegazette.co.uk/" target="_blank">The Gazette</a></li>
+                    <li><a href="http://www.legislation.gov.uk/" target="_blank" title="Opens a new window">Legislation.gov.uk <span class="sr-only">Opens a new window</span></a></li>
+                    <li><a href="https://www.thegazette.co.uk/" target="_blank" title="Opens a new window">The Gazette <span class="sr-only">Opens a new window</span></a></li>
                 </ul>
             </div>
         </div>
@@ -105,24 +105,34 @@ $site_url = blog_footer_url( get_option('blog_type') )
             <div class="footer-col col-xs-12 col-sm-6 col-md-12">
                 <h4>Follow us</h4>
                 <div class="follow-us">
-                    <a href="https://twitter.com/@UKNatArchives" title="Follow us on Twitter" target="_blank">
+                    <a href="https://twitter.com/@UKNatArchives" title="Follow us on Twitter - Opens a new window" target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/twitter.png"
-                             alt="Twitter logo"></a>
-                    <a href="https://www.youtube.com/c/TheNationalArchivesUK" title="Follow us on YouTube"
+                             alt="Twitter logo">
+                        <span class="sr-only">Opens a new window</span>
+                    </a>
+                    <a href="https://www.youtube.com/c/TheNationalArchivesUK" title="Follow us on YouTube - Opens a new window"
                        target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/youtube-play.png"
-                             alt="YouTube logo"></a>
-                    <a href="https://www.flickr.com/photos/nationalarchives" title="Follow us on Flickr"
+                             alt="YouTube logo">
+                        <span class="sr-only">Opens a new window</span>
+                    </a>
+                    <a href="https://www.flickr.com/photos/nationalarchives" title="Follow us on Flickr - Opens a new window"
                        target="_blank">
-                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/flickr.png" alt="Flickr logo"></a>
-                    <a href="https://www.facebook.com/TheNationalArchives" title="Follow us on Facebook"
+                        <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/flickr.png" alt="Flickr logo">
+                        <span class="sr-only">Opens a new window</span>
+                    </a>
+                    <a href="https://www.facebook.com/TheNationalArchives" title="Follow us on Facebook - Opens a new window"
                        target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/facebook.png"
-                             alt="Facebook logo"></a>
-                    <a href="https://www.instagram.com/nationalarchivesuk/" title="Follow us on Instagram"
+                             alt="Facebook logo">
+                        <span class="sr-only">Opens a new window</span>
+                    </a>
+                    <a href="https://www.instagram.com/nationalarchivesuk/" title="Follow us on Instagram - Opens a new window"
                        target="_blank">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/instagram.png"
-                             alt="Instagram logo"></a>
+                             alt="Instagram logo">
+                        <span class="sr-only">Opens a new window</span>
+                    </a>
                     <a href="https://www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
                         <img src="https://nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/rss.png" alt="RSS logo"></a>
                 </div>
@@ -145,8 +155,9 @@ $site_url = blog_footer_url( get_option('blog_type') )
                 Government Licence v3.0</a>, except where otherwise stated </p>
     </div>
     <div class="col-xs-12 col-sm-3 col-md-3 gov-uk">
-        <a title="External website - opens in a new window" href="http://gov.uk/" target="_blank"> <img
-                    alt="GOV.UK logo"
-                    src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/gov-uk.png"> </a>
+        <a title="External website - opens in a new window" href="http://gov.uk/" target="_blank">
+            <img alt="GOV.UK logo" src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/gov-uk.png">
+            <span class="sr-only">Opens a new window</span>
+        </a>
     </div>
 </div>

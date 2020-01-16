@@ -48,12 +48,12 @@
 	}
 ?>
     <header id="header" role="banner">
-        <a id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
+        <a tabindex="1" id="skip-to-main-content" href="#breadcrumb-holder">Skip to Main Content</a>
         <div class="container">
             <div class="row">
                 <div class="col-xs-2 col-sm-5" id="logo-holder">
                     <button aria-label="Toggle menu" id="mega-menu-mobile"></button>
-                    <a href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
+                    <a tabindex="2" href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
                         class="visible-lg visible-md visible-sm">
                         <img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/logo-white.png"
                             srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-horizontal-white-logo.svg"
@@ -61,7 +61,7 @@
                     </a>
                 </div>
                 <div class="col-xs-8 col-sm-2" id="mobile-logo-holder">
-                    <button title="Main menu" aria-label="Toggle menu" id="mega-menu-pull-down"
+                    <button tabindex="5" title="Main menu" aria-label="Toggle menu" id="mega-menu-pull-down"
                         class="hidden-xs"><span>Menu</span></button>
                     <a href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
                         class="hidden-lg hidden-md hidden-sm">
@@ -74,9 +74,9 @@
                     <form action="/search/results" method="get" id="globalSearch" role="search" class="hidden-xs">
                         <span id="scope-selector">&nbsp;</span>
                         <label class="sr-only sr-only-focusable" for="tnaSearch">Search</label>
-                        <input type="text" class="search-field" placeholder="Search our website..." id="tnaSearch"
+                        <input tabindex="3" type="text" class="search-field" placeholder="Search our website..." id="tnaSearch"
                             name="_q" required aria-required="true">
-                        <input type="submit" class="search-button" id="search-button" value="">
+                        <input tabindex="4" type="submit" class="search-button" id="search-button" value="">
                     </form>
                     <ul>
                         <li><a title="Search our website" href="#" class="formDestinationChanger"
