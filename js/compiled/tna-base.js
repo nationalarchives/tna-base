@@ -105,7 +105,7 @@ $.fn.webtrends_click_handler = function () {
 $.fn.append_promotional_image = function () {
     return this.each(function () {
         var $this = $(this);
-        $this.append('<li class="imgContent"><a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/keepers-gallery/" title="1657: Rebel Christmas"><img src="//www.nationalarchives.gov.uk/images/home/menu-rebel-christmas.jpg" alt="1657: Rebel Christmas" class="img-responsive tna-img-responsive"></a></li>');
+        $this.append('<li class="imgContent"><a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/with-love/" title="With Love"><img src="//www.nationalarchives.gov.uk/images/home/menu-with-love.jpg" alt="With Love" class="img-responsive tna-img-responsive"></a></li>');
     })
 };
 ;'use strict';
