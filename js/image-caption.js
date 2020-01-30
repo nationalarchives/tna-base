@@ -1,11 +1,12 @@
-$(document).ready(function () {
+$(document).ready(function(){
     var $imageCaption = $(".image_caption_back");
-    var ariaHidden = $(".eye_caption").attr("aria-hidden") === "true";
-    var ariaExpanded = $imageCaption.attr("aria-expanded") === "true";
+    var ariaExpanded = $.parseJSON($(".eye_caption").attr("aria-expanded").toLowerCase());
+    var ariaHidden = $.parseJSON($imageCaption.attr("aria-hidden").toLowerCase());
 
-    $('.eye_caption').on('click', function () {
-        $imageCaption.toggle();
-        $imageCaption.attr('aria-expanded', !ariaExpanded);
-        $(this).attr("aria-hidden", !ariaHidden);
-    });
+    $(".eye_caption").on('click', function(){
+        ariaHidden = !ariaHidden;
+        ariaExpanded = !ariaExpanded;
+        $imageCaption.attr('aria-hidden', ariaHidden);
+        $(this).attr('aria-expanded', ariaExpanded);
+    })
 });
