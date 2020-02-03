@@ -245,6 +245,7 @@ $(document).ready(function () {
     var ariaHidden = $.parseJSON($imageCaption.attr("aria-hidden").toLowerCase());
 
     $(".eye_caption").on('click', function(){
+        $imageCaption.toggle();
         ariaHidden = !ariaHidden;
         ariaExpanded = !ariaExpanded;
         $imageCaption.attr('aria-hidden', ariaHidden);
