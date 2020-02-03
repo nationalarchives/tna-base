@@ -81,24 +81,6 @@ $.fn.mega_menu_enhancements = function () {
     })
 };
 
-// Sets up the WebTrends handlers
-
-$.fn.webtrends_click_handler = function () {
-    return this.each(function () {
-        var $this = $(this);
-        $this.on('click', function (e) {
-            if (typeof dcsMultiTrack == 'function') {
-                var text = $(e.target).text();
-                dcsMultiTrack(
-                    'DCS.dcsuri',
-                    '/menu/' + text,
-                    'WT.ti',
-                    'Menu - ' + text
-                )
-            }
-        })
-    })
-};
 
 // Displays the promotional image
 
@@ -300,5 +282,3 @@ $(function() {
 $('ul.sub-menu:last').append_promotional_image();
 
 $('.mega-menu > ul > li > a').mega_menu_enhancements();
-
-$('a', '.mega-menu').webtrends_click_handler();
