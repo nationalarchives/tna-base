@@ -166,17 +166,6 @@ if ($(window).width() < 500) {
 }
 
 
-QUnit.module("Dynamic webtrends click handlers");
-
-QUnit.test("No links should have click handlers BEFORE the plugin is applied", function (assert) {
-
-    $('a').each(function () {
-        assert.ok(typeof this.onclick !== 'function', "No links in the mega menu have click handlers");
-    });
-});
-
-
-
 QUnit.module("Promotional image");
 
 QUnit.test("The promotional image should NOT exist in the DOM before the plugin is applied", function (assert) {
