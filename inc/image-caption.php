@@ -90,8 +90,8 @@ function get_image_caption( $position='bottom' ) {
     }
     if(!empty($img_caption_desc) && !empty($img_caption_url)) : ?>
         <div class="feature-img-caption <?php echo $position; ?>">
-            <button class="eye_caption"><span class="sr-only">Feature image caption</span><span class="icon-circle icon-info icon-size-32"></span></button>
-            <div class="image_caption_back">
+            <button class="eye_caption" aria-expanded=false aria-label="View image description"><span class="sr-only">Feature image caption</span><span class="icon-circle icon-info icon-size-44"></span></button>
+            <div class="image_caption_back" aria-hidden=true>
                 <span class="clearfix"><?php echo $img_caption_desc; ?></span>
                 <a href="<?php echo $img_caption_url ?>" target="_blank">
                     <?php if  (empty($img_caption_url_desc) ) :?>

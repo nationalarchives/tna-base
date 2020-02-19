@@ -74,30 +74,6 @@ header {
     -moz-border-radius: 50%;
     z-index: 2000;
     top: 30px;
-    /*animation-name*/
-    -webkit-animation-name: subtle-bounce;
-    -moz-animation-name: subtle-bounce;
-    -ms-animation-name: subtle-bounce;
-    -o-animation-name: subtle-bounce;
-    animation-name: subtle-bounce;
-    /*animation-duration*/
-    -webkit-animation-duration: 500ms;
-    -moz-animation-duration: 500ms;
-    -ms-animation-duration: 500ms;
-    -o-animation-duration: 500ms;
-    animation-duration: 500ms;
-    /*animation-iteration-count*/
-    -webkit-animation-iteration-count: 3;
-    -moz-animation-iteration-count: 3;
-    -ms-animation-iteration-count: 3;
-    -o-animation-iteration-count: 3;
-    animation-iteration-count: 3;
-    /*animation-delay*/
-    -webkit-animation-delay: 4s;
-    -moz-animation-delay: 4s;
-    -ms-animation-delay: 4s;
-    -o-animation-delay: 4s;
-    animation-delay: 4s;
     @media only screen and (max-width: 767px) {
       display: none;
     }
