@@ -55,21 +55,5 @@ powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow
 <!-- End of LiveChat code -->
 			</div>
 		</div>
-		<div class="postal sidebar-item">
-			<div class="col-xs-8 col-sm-12 col-md-8">
-				<h3>Post</h3>
-				<p>
-					Please write to: <br>
-					The National Archives<br>
-					Kew, Richmond, Surrey,<br>
-					TW9 4DU
-				</p>
-			</div>
-			<div class="col-xs-4 col-sm-6 col-md-4">
-				<p>
-					<img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/icon-128-post.png" alt="Email us" class="img-responsive">
-				</p>
-			</div>
-		</div>
 	</div>
 </aside>
