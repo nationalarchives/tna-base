@@ -70,51 +70,9 @@
                             alt="The National Archives" class="img-responsive">
                     </a>
                 </div>
-                <div class="col-xs-2 col-sm-5" id="search-field-wrapper">
-                    <form action="/search/results" method="get" id="globalSearch" role="search" class="hidden-xs">
-                        <span id="scope-selector">&nbsp;</span>
-                        <label class="sr-only sr-only-focusable" for="tnaSearch">Search</label>
-                        <input tabindex="3" type="text" class="search-field" placeholder="Search our website..." id="tnaSearch"
-                            name="_q" required aria-required="true">
-                        <input tabindex="4" type="submit" class="search-button" id="search-button" value="">
-                    </form>
-                    <ul>
-                        <li><a title="Search our website" href="#" class="formDestinationChanger"
-                                data-target="/search/results" data-placeholder="Search our website..."
-                                data-fieldName="_q" role="button"
-                                aria-label="Change form destination to search the website">Search our website</a></li>
-                        <li><a title="Search our catalogue for records" href="#" class="formDestinationChanger"
-                                data-target="https://discovery.nationalarchives.gov.uk/results/r"
-                                data-placeholder="Search our records..." data-fieldName="_q" role="button"
-                                aria-label="Change form destination to search the catalogue">Search our records</a></li>
-                    </ul>
-                </div>
+            <?php include 'inc/global-search-desktop.php' ?>
             </div>
-            <div class="row hidden-lg hidden-md hidden-sm">
-                <div class="col-md-12">
-                    <button class="search-expander">&nbsp;</button>
-                    <form method="get" id="mobileGlobalSearch" style="display: block;" name="responsiveSearch"
-                        action="/search/results" role="search">
-                        <fieldset>
-                            <legend class="sr-only sr-only-focusable">Search our website or records</legend>
-                            <div class="input-group">
-                                <label class="sr-only sr-only-focusable" for="tnaMobileSearch">Search</label>
-                                <input type="text" placeholder="Search our website..." id="tnaMobileSearch" required
-                                    aria-required="true" name="QueryText" value="">
-                            </div>
-                            <div class="radio-search">
-                                <input name="radioSearchGroup" id="radioSearchWebsite" value="search_website" checked=""
-                                    type="radio"> <label for="radioSearchWebsite">Search our website</label>
-                            </div>
-                            <div class="radio-search">
-                                <input name="radioSearchGroup" id="radioSearchRecords" value="search_records"
-                                    type="radio"> <label for="radioSearchRecords">Search our records</label>
-                            </div>
-                            <span class="input-group-addon"><input type="submit" value="Search"></span>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
+            <?php include 'inc/global-search-mobile.php' ?>
         </div>
     </header>
 

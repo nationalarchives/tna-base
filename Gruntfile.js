@@ -60,7 +60,6 @@ module.exports = function(grunt) {
           'js/mega-menu.js',
           'js/mitigate-target-blank.js',
           'js/cookie-notice.js',
-          'js/global-search.js',
           'js/image-caption.js',
           'js/tna-global.js',
           'js/run-on-page-load.js'
