@@ -5207,6 +5207,26 @@ header {
 .js #search-field-wrapper > ul {
   display: none; }
 
+@media screen and (max-width: 768px) {
+  /* Global Search NoJS Fallback*/
+  .global-search-no-js-fallback.mobile {
+    display: block; }
+  .global-search-no-js-fallback.desktop {
+    display: none; } }
+.global-search-no-js-fallback {
+  color: #fff; }
+  .global-search-no-js-fallback.desktop {
+    float: right; }
+  .global-search-no-js-fallback nav ul li a, .global-search-no-js-fallback nav ul li a:visited {
+    color: #fff;
+    text-decoration: underline; }
+
+@media screen and (min-width: 768px) {
+  /* Global Search NoJS Fallback*/
+  .global-search-no-js-fallback.mobile {
+    display: none; }
+  .global-search-no-js-fallback.desktop {
+    display: block; } }
 footer {
   color: #fff;
   background-color: #26262a; }

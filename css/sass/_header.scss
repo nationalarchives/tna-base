@@ -290,3 +290,48 @@ header {
 }
 
 //Works with Modernizr when no JS
+
+@media screen and (max-width: 768px) {
+  /* Global Search NoJS Fallback*/
+  .global-search-no-js-fallback {
+
+    &.mobile {
+        display: block;
+    }
+    &.desktop {
+      display: none;
+    }
+  }
+}
+
+.global-search-no-js-fallback {
+  color: #fff;
+
+  &.mobile {
+
+  }
+
+  &.desktop {
+    float: right;
+  }
+
+  nav ul li {
+    a, a:visited {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Global Search NoJS Fallback*/
+  .global-search-no-js-fallback {
+
+    &.mobile {
+        display: none;
+    }
+    &.desktop {
+      display: block;
+    }
+  }
+} 
