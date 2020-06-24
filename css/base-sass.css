@@ -5215,6 +5215,8 @@ header {
     display: none; } }
 .global-search-no-js-fallback {
   color: #fff; }
+  .global-search-no-js-fallback.mobile {
+    margin-top: 24px; }
   .global-search-no-js-fallback.desktop {
     float: right; }
   .global-search-no-js-fallback nav ul li a, .global-search-no-js-fallback nav ul li a:visited {
