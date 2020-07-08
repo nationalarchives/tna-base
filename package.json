@@ -2,7 +2,7 @@
   "name": "tna-base",
   "version": "0.2.2",
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.2.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^0.13.0",
     "grunt-contrib-jasmine": "^2.0.2",
