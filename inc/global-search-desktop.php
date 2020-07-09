@@ -1,4 +1,4 @@
-<div id="global-search-desktop-component">
+<div id="global-search-desktop-component" class="gs-tna-base">
     <div class="global-search-no-js-fallback desktop">
         <nav>
             <ul>
