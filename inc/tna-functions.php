@@ -15,7 +15,7 @@ function tna_scripts() {
 	wp_register_script( 'global-jquery', get_template_directory_uri() . '/js/lib/jquery-1.11.3.min.js', array(), '1.11.3' );
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr.js', array(), '2.8.3', false );
 	wp_register_script( 'tna-base-min', get_template_directory_uri() . '/js/compiled/tna-base.min.js', array(), EDD_VERSION, true );
-	wp_register_script( 'tna-components', 'https://cdn.nationalarchives.gov.uk/react-components/dist/website-1.1.5.js', array(), EDD_VERSION, true );
+	wp_register_script( 'tna-components', 'https://cdn.nationalarchives.gov.uk/react-components/dist/website-1.1.7.js', array(), EDD_VERSION, true );
 	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php') || is_category() ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/lib/jQuery.equalHeights.js', array(),
 			EDD_VERSION, true );
