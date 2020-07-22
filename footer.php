@@ -1,4 +1,5 @@
 <footer id="footer" role="contentinfo">
+    <h2 class="sr-only">Footer</h2>
     <?php
     global $post;
     if ( is_object($post) ) {
