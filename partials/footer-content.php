@@ -8,47 +8,9 @@ $site_url = blog_footer_url( get_option('blog_type') )
             <img src="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-square-white-logo.png" srcset="<?php echo str_replace( home_url(), '', get_template_directory_uri() ); ?>/img/tna-square-white-logo.svg" alt="The National Archives"  class="img-responsive square-logo">
                 <address>
                     The National Archives<br/>
-                    Kew, Richmond, Surrey,<br/>
+                    Kew, Richmond<br/>
                     TW9 4DU
                 </address>
-            </div>
-            <div class="footer-col col-xs-12 col-sm-6 col-md-12 col-lg-12">
-                <h3>Standard opening times</h3>
-                <div class="opening-times">
-                    <div class="open_table">
-                        <div class="open_tableBody">
-                            <div class="open_tableRow">
-                                <div class="open_tableCell">Monday</div>
-                                <div class="open_tableCell">Closed</div>
-                            </div>
-                            <div class="open_tableRow">
-                                <div class="open_tableCell">Tuesday</div>
-                                <div class="open_tableCell">09:00 &ndash; 19:00</div>
-                            </div>
-                            <div class="open_tableRow">
-                                <div class="open_tableCell">Wednesday</div>
-                                <div class="open_tableCell">09:00 &ndash; 17:00</div>
-                            </div>
-                            <div class="open_tableRow">
-                                <div class="open_tableCell">Thursday</div>
-                                <div class="open_tableCell">09:00 &ndash; 19:00</div>
-                            </div>
-                            <div class="open_tableRow">
-                                <div class="open_tableCell">Friday</div>
-                                <div class="open_tableCell">09:00 &ndash; 17:00</div>
-                            </div>
-                            <div class="open_tableRow">
-                                <div class="open_tableCell">Saturday</div>
-                                <div class="open_tableCell">09:00 &ndash; 17:00</div>
-                            </div>
-                            <div class="open_tableRow">
-                                <div class="open_tableCell">Sunday</div>
-                                <div class="open_tableCell">Closed</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="<?php echo $site_url ?>/about/visit-us/opening-times/">Full opening times</a>
             </div>
         </div>
     </div>
