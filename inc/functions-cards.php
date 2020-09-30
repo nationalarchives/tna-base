@@ -421,7 +421,7 @@ function make_url_https( $url ) {
     if ( strpos($url, 'bookshop.nationalarchives.gov.uk') !== false ) {
         return $url;
     }
-    if ( strpos( $url, 'http:' ) !== false ) {
+    if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' && strpos( $url, 'http:' ) !== false) {
         $url = str_replace('http:', 'https:', $url);
         return $url;
     }
