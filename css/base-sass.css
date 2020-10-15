@@ -7624,14 +7624,11 @@ button:focus {
   .hero-card .card h3 {
     border: none;
   }
-  .hero-card .card a {
-    display: flex;
-  }
   .hero-card .card .entry-image, .hero-card .card .entry-content {
     display: table-cell;
   }
   .hero-card .card .entry-image {
-    width: 100%;
+    width: 68%;
     height: 240px;
   }
   .hero-card .card .entry-content {
