@@ -52,7 +52,7 @@
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector/our-archives-sector-role/">Our role in the archives sector</a></li>
         </ul></li>
     <li><div class="toggle-sub-menu" id="more-link">More…</div>
-        <ul class="sub-menu"><li><a data-gtm="mega-menu" href="https://bookshop.nationalarchives.gov.uk/">Bookshop</a></li>
+        <ul class="sub-menu"><li><a data-gtm="mega-menu" href="https://shop.nationalarchives.gov.uk/">Shop</a></li>
             <li><a data-gtm="mega-menu" href="https://images.nationalarchives.gov.uk/">Image library</a></li>
             <li><a data-gtm="mega-menu" href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
             <li><a data-gtm="mega-menu" href="https://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
