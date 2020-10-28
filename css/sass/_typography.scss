@@ -30,12 +30,13 @@ body {
     margin: 0 0 1.6em;
   }
   a, a:active, a:visited {
-    color: $link-blue;
-    text-decoration: none;
+    color: #134571;
+    text-decoration: underline;
   }
   a:hover {
-    color: $link-hover;
-    text-decoration: underline;
+    background-color: #134571;
+    outline: 1px solid #134571;
+    color: #ffffff;
   }
   a:focus {
     @include element-focus;

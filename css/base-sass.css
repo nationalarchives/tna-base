@@ -5822,12 +5822,13 @@ body p {
   margin: 0 0 1.6em;
 }
 body a, body a:active, body a:visited {
-  color: #1d70b8;
-  text-decoration: none;
+  color: #134571;
+  text-decoration: underline;
 }
 body a:hover {
-  color: #003078;
-  text-decoration: underline;
+  background-color: #134571;
+  outline: 1px solid #134571;
+  color: #ffffff;
 }
 body a:focus {
   outline: 5px solid #1d70b8;
