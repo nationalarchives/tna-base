@@ -56,6 +56,17 @@ header {
   }
   #logo-holder a:focus {
     background-color: $dark;
+    outline: none;
+    img {
+      outline: 5px solid #1d70b8;
+    }
+  }
+  #logo-holder a:hover {
+    background: none;
+    outline: none;
+    img {
+      outline: 5px solid #ffffff;
+    }
   }
   #mega-menu-pull-down {
     background-image: $tna_menu_collapsed;
@@ -334,4 +345,4 @@ header {
       display: block;
     }
   }
-} 
+}

@@ -6406,6 +6406,17 @@ header #search-field-wrapper ul li a:hover {
 }
 header #logo-holder a:focus {
   background-color: #26262a;
+  outline: none;
+}
+header #logo-holder a:focus img {
+  outline: 5px solid #1d70b8;
+}
+header #logo-holder a:hover {
+  background: none;
+  outline: none;
+}
+header #logo-holder a:hover img {
+  outline: 5px solid #ffffff;
 }
 header #mega-menu-pull-down {
   background-image: url("../img/menu-collapsed.png");
