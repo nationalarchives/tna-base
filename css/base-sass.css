@@ -7459,6 +7459,12 @@ button:focus {
   background-clip: content-box;
 }
 
+.cards a {
+  text-decoration: none !important;
+}
+.cards a h3 {
+  text-decoration: underline;
+}
 .cards .row {
   display: -webkit-box;
   display: -moz-box;
@@ -7534,10 +7540,14 @@ button:focus {
   width: 100%;
 }
 .cards .card a:hover {
-  text-decoration: none;
+  outline: none;
+  background: none;
 }
 .cards .card a:hover .entry-content h3, .cards .card a:hover .entry-header h3 {
-  text-decoration: underline;
+  background-color: #134571;
+}
+.cards .card a:hover .entry-date .date {
+  color: #134571;
 }
 .cards .card .externals::after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
@@ -7603,6 +7613,7 @@ button:focus {
 }
 .cards p {
   color: #26262a;
+  text-decoration: none !important;
 }
 .cards .entry-content h2 {
   margin-bottom: 10px;

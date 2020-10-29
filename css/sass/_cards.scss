@@ -1,4 +1,10 @@
 .cards {
+  a {
+    text-decoration: none !important;
+    h3 {
+      text-decoration: underline;
+    }
+  }
   .row {
     display: -webkit-box;
     display: -moz-box;
@@ -73,9 +79,15 @@
       display: block;
       width: 100%;
       &:hover {
-        text-decoration: none;
+        outline: none;
+        background: none;
         .entry-content h3, .entry-header h3 {
-          text-decoration: underline;
+          background-color: #134571;
+        }
+        .entry-date {
+          .date {
+            color: #134571;
+          }
         }
       }
     }
@@ -156,6 +168,7 @@
   }
   p {
     color: $dark;
+    text-decoration: none !important;
   }
   .entry-content {
     h2 {
