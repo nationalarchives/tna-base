@@ -101,13 +101,16 @@ header {
       font-size: 0.9em;
     }
   }
+  #mega-menu-pull-down.expanded {
+    background-image: url(../img/menu-expanded.png);
+    &:hover {
+      background-image: url(../img/menu-expanded-red.png);
+    }
+  }
   &#mobile-logo-holder {
     @media (max-width: 480px) {
       padding: 0px;
     }
-  }
-  .expanded {
-    background-image: url(../img/menu-expanded-red.png);
   }
   /* Mega menu button (mobile view only) */
   #mega-menu-mobile {

@@ -6453,13 +6453,16 @@ header #mega-menu-pull-down span {
   position: relative;
   font-size: 0.9em;
 }
+header #mega-menu-pull-down.expanded {
+  background-image: url(../img/menu-expanded.png);
+}
+header #mega-menu-pull-down.expanded:hover {
+  background-image: url(../img/menu-expanded-red.png);
+}
 @media (max-width: 480px) {
   header#mobile-logo-holder {
     padding: 0px;
   }
-}
-header .expanded {
-  background-image: url(../img/menu-expanded-red.png);
 }
 header #mega-menu-mobile {
   height: 40px;
