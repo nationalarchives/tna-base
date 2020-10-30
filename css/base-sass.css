@@ -6423,7 +6423,7 @@ header #mega-menu-pull-down {
   background-position: 50% 90%;
   background-repeat: no-repeat;
   background-color: #cb0d07;
-  border: 0;
+  border: 2px solid #cb0d07;
   display: block;
   margin: -15px auto 0 auto;
   position: relative;
@@ -6435,6 +6435,12 @@ header #mega-menu-pull-down {
   -moz-border-radius: 50%;
   z-index: 2000;
   top: 30px;
+}
+header #mega-menu-pull-down:hover {
+  color: #cb0d07;
+  background-color: #ffffff;
+  background-image: url(../img/menu-collapsed-red.png);
+  border: 2px solid #cb0d07;
 }
 @media only screen and (max-width: 767px) {
   header #mega-menu-pull-down {
@@ -6451,6 +6457,9 @@ header #mega-menu-pull-down span {
   header#mobile-logo-holder {
     padding: 0px;
   }
+}
+header .expanded {
+  background-image: url(../img/menu-expanded-red.png);
 }
 header #mega-menu-mobile {
   height: 40px;

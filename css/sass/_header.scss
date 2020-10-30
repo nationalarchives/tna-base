@@ -73,7 +73,7 @@ header {
     background-position: 50% 90%;
     background-repeat: no-repeat;
     background-color: $tna_red;
-    border: 0;
+    border: 2px solid $tna_red;
     display: block;
     margin: -15px auto 0 auto;
     position: relative;
@@ -85,6 +85,12 @@ header {
     -moz-border-radius: 50%;
     z-index: 2000;
     top: 30px;
+    &:hover {
+      color: $tna_red;
+      background-color: #ffffff;
+      background-image: url(../img/menu-collapsed-red.png);
+      border: 2px solid $tna_red;
+    }
     @media only screen and (max-width: 767px) {
       display: none;
     }
@@ -99,6 +105,9 @@ header {
     @media (max-width: 480px) {
       padding: 0px;
     }
+  }
+  .expanded {
+    background-image: url(../img/menu-expanded-red.png);
   }
   /* Mega menu button (mobile view only) */
   #mega-menu-mobile {
