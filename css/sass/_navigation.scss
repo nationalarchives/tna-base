@@ -26,6 +26,15 @@
   }
   .imgContent a {
     border: 0;
+    display: inline-block;
+    padding: 0;
+    &:hover {
+      background: none;
+      outline: 5px solid #ffffff;
+    }
+    &:focus {
+      outline: 5px solid #1d70b8;
+    }
   }
   >ul {
     display: flex;
@@ -47,9 +56,6 @@
         display: block;
       }
     }
-  }
-  img {
-    margin: 0.3em 0;
   }
   .mobile-home-link {
     display: none;

@@ -6279,6 +6279,15 @@ form .radio input[type=radio]:focus + label::before {
 }
 .mega-menu .imgContent a {
   border: 0;
+  display: inline-block;
+  padding: 0;
+}
+.mega-menu .imgContent a:hover {
+  background: none;
+  outline: 5px solid #ffffff;
+}
+.mega-menu .imgContent a:focus {
+  outline: 5px solid #1d70b8;
 }
 .mega-menu > ul {
   display: flex;
@@ -6300,9 +6309,6 @@ form .radio input[type=radio]:focus + label::before {
   margin-bottom: 0.6em;
   line-height: 1.6;
   display: block;
-}
-.mega-menu img {
-  margin: 0.3em 0;
 }
 .mega-menu .mobile-home-link {
   display: none;
