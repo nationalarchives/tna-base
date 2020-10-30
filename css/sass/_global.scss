@@ -18,6 +18,9 @@ a#cookieCutter {
   padding-top: 1px;
   padding-left: 22px;
   text-decoration: none;
+  &:hover {
+    background-color: #134571;
+  }
 }
 
 /* TinyMce - list left thumbnail */

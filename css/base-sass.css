@@ -5712,6 +5712,9 @@ a#cookieCutter {
   padding-left: 22px;
   text-decoration: none;
 }
+a#cookieCutter:hover {
+  background-color: #134571;
+}
 
 /* TinyMce - list left thumbnail */
 .list_left_thumbnail, .list_right_thumbnail {
