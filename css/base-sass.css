@@ -6855,9 +6855,6 @@ footer .newsletter .news-content .button {
 .default-page .entry-content a {
   text-decoration: underline;
 }
-.default-page .entry-content a:hover {
-  text-decoration: none;
-}
 .default-page .entry-content:after {
   display: block;
   content: "";
@@ -7011,9 +7008,6 @@ footer .newsletter .news-content .button {
 .level-two .level-two-intro .entry-content a {
   text-decoration: underline;
 }
-.level-two .level-two-intro .entry-content a:hover {
-  text-decoration: none;
-}
 .level-two .level-two-intro .well {
   background-color: transparent;
   border: 2px solid #26262a;
@@ -7040,9 +7034,6 @@ footer .newsletter .news-content .button {
 }
 .level-two .level-two-card .entry-content a {
   text-decoration: underline;
-}
-.level-two .level-two-card .entry-content a:hover {
-  text-decoration: none;
 }
 
 .button {
