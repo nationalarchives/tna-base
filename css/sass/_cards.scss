@@ -89,6 +89,10 @@
             color: #134571;
           }
         }
+        .externals::after {
+          content: url(../img/new-window-icon-white.png);
+          margin: 0px 3px 0px 5px;
+        }
       }
     }
     .externals::after {

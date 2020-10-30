@@ -7575,6 +7575,10 @@ button:focus {
 .cards .card a:hover .entry-date .date {
   color: #134571;
 }
+.cards .card a:hover .externals::after {
+  content: url(../img/new-window-icon-white.png);
+  margin: 0px 3px 0px 5px;
+}
 .cards .card .externals::after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
   margin: 0px 3px 0px 5px;
