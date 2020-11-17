@@ -5828,17 +5828,17 @@ body a, body a:active, body a:visited {
   color: #134571;
   text-decoration: underline;
 }
-body a:hover {
-  background-color: #134571;
-  outline: 1px solid #134571;
-  color: #ffffff;
-}
 body a:focus {
   outline: 5px solid #1d70b8;
   outline-offset: 0;
   z-index: 999;
   background-color: #fff;
   color: #26262a;
+}
+body a:hover {
+  background-color: #134571;
+  outline: 1px solid #134571;
+  color: #ffffff;
 }
 body ul {
   margin-bottom: 1.6em;
