@@ -6757,6 +6757,10 @@ footer .footer-base .gov-uk {
     text-align: left;
   }
 }
+footer .footer-base .gov-uk a:hover {
+  background: none;
+  outline: none;
+}
 footer .opening-times .open_table {
   display: table;
   width: 100%;

@@ -51,6 +51,10 @@ footer {
       @media (max-width: 767px) {
         text-align: left;
       }
+      a:hover {
+        background: none;
+        outline: none;
+      }
     }
   }
   .opening-times {
