@@ -95,6 +95,10 @@ footer {
     a {
       display: inline-block;
       margin: 0 0.2em 0.3em 0;
+      &:hover {
+        background: none;
+        outline: none;
+      }
       img {
         background-color: $dark;
         border: 2px solid #fff;

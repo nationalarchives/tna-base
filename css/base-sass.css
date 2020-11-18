@@ -6799,6 +6799,10 @@ footer .follow-us a {
   display: inline-block;
   margin: 0 0.2em 0.3em 0;
 }
+footer .follow-us a:hover {
+  background: none;
+  outline: none;
+}
 footer .follow-us a img {
   background-color: #26262a;
   border: 2px solid #fff;
