@@ -6287,7 +6287,7 @@ form .radio input[type=radio]:focus + label::before {
   outline: 5px solid #ffffff;
 }
 .mega-menu .imgContent a:focus {
-  outline: 5px solid #1d70b8;
+  outline: 5px solid #ffffff;
 }
 .mega-menu > ul {
   display: flex;
