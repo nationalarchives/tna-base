@@ -7683,6 +7683,24 @@ button:focus {
   }
 }
 
+a.content-card:hover h3 {
+  background-color: #134571;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a.content-card:hover + .entry-content a h3 {
+  background-color: #134571;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a.content-card + .entry-content a.content-card + p a:hover {
+  background-color: #134571;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .portal-landing .banner {
   background: #ddd center center;
   background-size: cover;
