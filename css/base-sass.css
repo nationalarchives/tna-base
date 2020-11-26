@@ -6761,6 +6761,9 @@ footer .footer-base .gov-uk a:hover {
   background: none;
   outline: none;
 }
+footer .footer-base .gov-uk a:focus {
+  background: none;
+}
 footer .opening-times .open_table {
   display: table;
   width: 100%;
