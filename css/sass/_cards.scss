@@ -238,3 +238,31 @@ a.content-card + .entry-content {
     }
   }
 }
+
+.level-two-card {
+  .entry-image:hover {
+    + .entry-header {
+      background-color: #134571;
+      h2 {
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .entry-header:hover {
+    background-color: #134571;
+    h2 {
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+  .entry-image + .entry-header {
+    h2 {
+      a:hover {
+        outline: none;
+      }
+    }
+  }
+}

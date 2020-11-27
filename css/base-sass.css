@@ -7704,6 +7704,22 @@ a.content-card + .entry-content a.content-card + p a:hover {
   text-decoration: underline;
 }
 
+.level-two-card .entry-image:hover + .entry-header {
+  background-color: #134571;
+}
+.level-two-card .entry-image:hover + .entry-header h2 a {
+  color: #ffffff;
+}
+.level-two-card .entry-header:hover {
+  background-color: #134571;
+}
+.level-two-card .entry-header:hover h2 a {
+  color: #ffffff;
+}
+.level-two-card .entry-image + .entry-header h2 a:hover {
+  outline: none;
+}
+
 .portal-landing .banner {
   background: #ddd center center;
   background-size: cover;
