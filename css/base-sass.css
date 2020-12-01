@@ -6260,7 +6260,8 @@ form .radio input[type=radio]:focus + label::before {
   color: #fff;
 }
 .mega-menu a:hover {
-  color: #fbe2bc;
+  color: #ffffff;
+  outline: 1px solid #ffffff;
 }
 .mega-menu a:focus {
   color: #26262a;
@@ -6731,6 +6732,10 @@ footer .footer-col ul a {
   padding: 0.1em 0;
   margin: 0;
 }
+footer .footer-col ul a:hover {
+  color: #ffffff;
+  outline: 1px solid #ffffff;
+}
 footer .footer-col .square-logo {
   max-width: 157px;
   margin-bottom: 23px;
@@ -6749,6 +6754,15 @@ footer .footer-base .ogl img {
     float: none;
   }
 }
+footer .footer-base .ogl > a:hover {
+  outline: none;
+}
+footer .footer-base .ogl > a:hover img {
+  outline: 5px solid #ffffff;
+}
+footer .footer-base .ogl p a:hover {
+  outline: 1px solid #ffffff;
+}
 footer .footer-base .gov-uk {
   text-align: right;
 }
@@ -6759,7 +6773,7 @@ footer .footer-base .gov-uk {
 }
 footer .footer-base .gov-uk a:hover {
   background: none;
-  outline: none;
+  outline: 5px solid #ffffff;
 }
 footer .footer-base .gov-uk a:focus {
   background: none;
