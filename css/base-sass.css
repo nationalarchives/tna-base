@@ -6851,6 +6851,7 @@ footer .newsletter .news-content .button {
   padding: 0.3em 0.9em;
   line-height: 1;
   margin-top: 0.6em;
+  text-decoration: none;
 }
 
 /* TNA template styles:
@@ -7145,6 +7146,10 @@ button:focus {
   outline: 5px solid #1d70b8;
   outline-offset: 0;
   z-index: 999;
+}
+
+.call-to-action-button a {
+  text-decoration: none;
 }
 
 /* TNA print styles */
