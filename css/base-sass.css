@@ -5520,6 +5520,8 @@ footer {
   margin-bottom: 1.6em; }
   .level-two .level-two-intro .entry-content a {
     text-decoration: underline; }
+    .level-two .level-two-intro .entry-content a.button {
+      text-decoration: none; }
 .level-two .level-two-intro .well {
   background-color: transparent;
   border: 2px solid #26262a;
@@ -5607,6 +5609,9 @@ button:focus {
 
 .call-to-action-button a {
   text-decoration: none; }
+
+.livechat_button:hover {
+  outline: 5px solid #134571; }
 
 /* TNA print styles */
 @media print {
@@ -6092,10 +6097,8 @@ a.content-card + .entry-content a.content-card + p a:hover {
     padding-top: 0.6em; }
     .portal-landing .intro-content .intro-entry h2, .portal-landing .intro-content .intro-entry h3 {
       margin-top: 0; }
-    .portal-landing .intro-content .intro-entry a {
-      text-decoration: underline; }
-      .portal-landing .intro-content .intro-entry a:hover {
-        text-decoration: none; }
+    .portal-landing .intro-content .intro-entry a.button {
+      text-decoration: none; }
   .portal-landing .intro-content .intro-image {
     width: 100%;
     min-height: 280px;
@@ -6112,6 +6115,8 @@ a.content-card + .entry-content a.content-card + p a:hover {
   background-color: rgba(0, 0, 0, 0.5); }
   .portal-landing .breadcrumbs a {
     color: #fbe2bc; }
+    .portal-landing .breadcrumbs a:hover {
+      color: #fff; }
 .portal-landing .stay-up-to-date-bar {
   padding: 0.4em 0;
   text-align: right;
