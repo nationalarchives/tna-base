@@ -28,6 +28,10 @@ footer {
         border-top: 1px solid #444;
         padding: 0.1em 0;
         margin: 0;
+        &:hover {
+          color: #ffffff;
+          outline: 1px solid #ffffff;
+        }
       }
     }
     .square-logo {
@@ -37,19 +41,39 @@ footer {
   }
   .footer-base {
     margin-bottom: 1.6em;
-    .ogl img {
-      float: left;
-      margin: 3px 25px 10px 0;
-      width: auto;
-      height: 16px;
-      @media (max-width: 767px) {
-        float: none;
+    .ogl {
+      img {
+        float: left;
+        margin: 3px 25px 10px 0;
+        width: auto;
+        height: 16px;
+        @media (max-width: 767px) {
+          float: none;
+        }
+      }
+      > a:hover {
+        outline: none;
+        img {
+          outline: 5px solid #ffffff;
+        }
+      }
+      p {
+        a:hover {
+          outline: 1px solid #ffffff;
+        }
       }
     }
     .gov-uk {
       text-align: right;
       @media (max-width: 767px) {
         text-align: left;
+      }
+      a:hover {
+        background: none;
+        outline: 5px solid #ffffff;
+      }
+      a:focus {
+        background: none;
       }
     }
   }
@@ -95,6 +119,10 @@ footer {
     a {
       display: inline-block;
       margin: 0 0.2em 0.3em 0;
+      &:hover {
+        background: none;
+        outline: none;
+      }
       img {
         background-color: $dark;
         border: 2px solid #fff;
@@ -124,6 +152,7 @@ footer {
         padding: 0.3em 0.9em;
         line-height: 1;
         margin-top: 0.6em;
+        text-decoration: none;
       }
     }
   }

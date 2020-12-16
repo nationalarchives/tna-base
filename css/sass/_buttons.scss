@@ -14,6 +14,7 @@
     background-color: #fff;
     color: $dark;
     text-decoration: none;
+    outline: none;
   }
   &:focus {
     color: $dark;
@@ -73,3 +74,14 @@ button {
   }
 }
 
+.call-to-action-button {
+  a {
+    text-decoration: none;
+  }
+}
+
+.livechat_button {
+  &:hover {
+    outline: 5px solid #134571;
+  }
+}

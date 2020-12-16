@@ -31,9 +31,6 @@
     }
     a {
       text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
     }
   }
   .entry-content:after {
@@ -187,7 +184,7 @@
       margin-bottom: 1.6em;
       a {
         text-decoration: underline;
-        &:hover {
+        &.button {
           text-decoration: none;
         }
       }
@@ -219,9 +216,6 @@
     .entry-content {
       a {
         text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
       }
     }
   }

@@ -56,13 +56,24 @@ header {
   }
   #logo-holder a:focus {
     background-color: $dark;
+    outline: none;
+    img {
+      outline: 5px solid #1d70b8;
+    }
+  }
+  #logo-holder a:hover {
+    background: none;
+    outline: none;
+    img {
+      outline: 5px solid #ffffff;
+    }
   }
   #mega-menu-pull-down {
     background-image: $tna_menu_collapsed;
     background-position: 50% 90%;
     background-repeat: no-repeat;
     background-color: $tna_red;
-    border: 0;
+    border: 2px solid $tna_red;
     display: block;
     margin: -15px auto 0 auto;
     position: relative;
@@ -74,6 +85,12 @@ header {
     -moz-border-radius: 50%;
     z-index: 2000;
     top: 30px;
+    &:hover {
+      color: $tna_red;
+      background-color: #ffffff;
+      background-image: url(../img/menu-collapsed-red.png);
+      border: 2px solid $tna_red;
+    }
     @media only screen and (max-width: 767px) {
       display: none;
     }
@@ -82,6 +99,12 @@ header {
       z-index: 999;
       position: relative;
       font-size: 0.9em;
+    }
+  }
+  #mega-menu-pull-down.expanded {
+    background-image: url(../img/menu-expanded.png);
+    &:hover {
+      background-image: url(../img/menu-expanded-red.png);
     }
   }
   &#mobile-logo-holder {
@@ -94,7 +117,7 @@ header {
     height: 40px;
     width: 40px;
     background: $tna_menu_trigram_lrg;
-    border: 0px;
+    border: 2px solid $tna_red;
     z-index: 2;
     background-color: $tna_red;
     border-radius: 100%;
@@ -103,6 +126,11 @@ header {
     cursor: pointer;
     overflow: hidden;
     position: relative;
+
+    &:hover {
+      background: $tna_menu_trigram_lrg_red;
+      background-color: $tna_white;
+    }
   }
   @media only screen and (min-width: 768px) {
     #mega-menu-mobile {
@@ -112,6 +140,10 @@ header {
   #mobile-logo-holder {
     a {
       display: block;
+      &:hover {
+        background: none;
+        outline: 5px solid #fff;
+      }
     }
     img {
       @media (max-width: 320px) {
@@ -334,4 +366,4 @@ header {
       display: block;
     }
   }
-} 
+}

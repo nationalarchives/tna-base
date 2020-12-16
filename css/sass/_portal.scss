@@ -22,11 +22,8 @@
       h2, h3 {
         margin-top: 0;
       }
-      a {
-        text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
+      a.button {
+        text-decoration: none;
       }
     }
     .intro-image {
@@ -48,6 +45,9 @@
     background-color: rgba(0,0,0,.5);
     a {
       color: $yellow-peach;
+      &:hover {
+        color: $tna_white;
+      }
     }
   }
   .stay-up-to-date-bar {

@@ -1,4 +1,10 @@
 .cards {
+  a {
+    text-decoration: none !important;
+    h3 {
+      text-decoration: underline;
+    }
+  }
   .row {
     display: -webkit-box;
     display: -moz-box;
@@ -73,9 +79,19 @@
       display: block;
       width: 100%;
       &:hover {
-        text-decoration: none;
+        outline: none;
+        background: none;
         .entry-content h3, .entry-header h3 {
-          text-decoration: underline;
+          background-color: #134571;
+        }
+        .entry-date {
+          .date {
+            color: #134571;
+          }
+        }
+        .externals::after {
+          content: url(../img/new-window-icon-white.png);
+          margin: 0px 3px 0px 5px;
         }
       }
     }
@@ -156,6 +172,7 @@
   }
   p {
     color: $dark;
+    text-decoration: none !important;
   }
   .entry-content {
     h2 {
@@ -189,6 +206,62 @@
       }
       .entry-content {
         padding: 0 1em 1em 1em;
+      }
+    }
+  }
+}
+
+a.content-card:hover {
+  h3 {
+    background-color: #134571;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+
+a.content-card:hover + .entry-content {
+  a {
+    h3 {
+      background-color: #134571;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+}
+
+a.content-card + .entry-content {
+  a.content-card + p {
+    a:hover {
+      background-color: #134571;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+}
+
+.level-two-card {
+  .entry-image:hover {
+    + .entry-header {
+      background-color: #134571;
+      h2 {
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .entry-header:hover {
+    background-color: #134571;
+    h2 {
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+  .entry-image + .entry-header {
+    h2 {
+      a:hover {
+        outline: none;
       }
     }
   }
