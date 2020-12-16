@@ -48,6 +48,9 @@
     background-color: rgba(0,0,0,.5);
     a {
       color: $yellow-peach;
+      &:hover {
+        color: $tna_white;
+      }
     }
   }
   .stay-up-to-date-bar {
