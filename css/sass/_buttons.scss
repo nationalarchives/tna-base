@@ -79,3 +79,9 @@ button {
     text-decoration: none;
   }
 }
+
+.livechat_button {
+  &:hover {
+    outline: 5px solid #134571;
+  }
+}
