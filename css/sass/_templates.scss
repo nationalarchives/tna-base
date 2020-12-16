@@ -184,6 +184,9 @@
       margin-bottom: 1.6em;
       a {
         text-decoration: underline;
+        &.button {
+          text-decoration: none;
+        }
       }
     }
     .well {
