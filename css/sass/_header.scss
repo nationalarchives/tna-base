@@ -117,7 +117,7 @@ header {
     height: 40px;
     width: 40px;
     background: $tna_menu_trigram_lrg;
-    border: 0px;
+    border: 2px solid $tna_red;
     z-index: 2;
     background-color: $tna_red;
     border-radius: 100%;
@@ -126,6 +126,11 @@ header {
     cursor: pointer;
     overflow: hidden;
     position: relative;
+
+    &:hover {
+      background: $tna_menu_trigram_lrg_red;
+      background-color: $tna_white;
+    }
   }
   @media only screen and (min-width: 768px) {
     #mega-menu-mobile {
@@ -135,6 +140,10 @@ header {
   #mobile-logo-holder {
     a {
       display: block;
+      &:hover {
+        background: none;
+        outline: 5px solid #fff;
+      }
     }
     img {
       @media (max-width: 320px) {

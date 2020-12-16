@@ -5088,7 +5088,7 @@ header {
     height: 40px;
     width: 40px;
     background: url("../img/menu-trigram-lrg.png") center no-repeat;
-    border: 0px;
+    border: 2px solid #cb0d07;
     z-index: 2;
     background-color: #cb0d07;
     border-radius: 100%;
@@ -5097,11 +5097,17 @@ header {
     cursor: pointer;
     overflow: hidden;
     position: relative; }
+    header #mega-menu-mobile:hover {
+      background: url("../img/menu-trigram-lrg-red.png") center no-repeat;
+      background-color: #fff; }
   @media only screen and (min-width: 768px) {
     header #mega-menu-mobile {
       display: none; } }
   header #mobile-logo-holder a {
     display: block; }
+    header #mobile-logo-holder a:hover {
+      background: none;
+      outline: 5px solid #fff; }
   @media (max-width: 320px) {
     header #mobile-logo-holder img {
       margin-top: 7px; } }
