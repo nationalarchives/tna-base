@@ -22,11 +22,8 @@
       h2, h3 {
         margin-top: 0;
       }
-      a {
-        text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
+      a.button {
+        text-decoration: none;
       }
     }
     .intro-image {
