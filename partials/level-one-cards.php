@@ -8,6 +8,9 @@
             if ( $heading ) {
                 echo '<div class="col-xs-12"><h2>'.$heading.'</h2></div>';
             }
+            else {
+                echo '<h2 class="sr-only">In this section</h2>';
+            }
 
             for ($i = 1; $i <= 12; $i++) {
 
