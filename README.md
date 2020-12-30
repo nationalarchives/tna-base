@@ -59,7 +59,7 @@ Click 'Remote' in SourceTree and you will be shown a full list of repositories y
 
 ### 2.6 Running Grunt
 
-Assuming that the Grunt CLI has been installed follow the instructions on the [Grunt website] (http://gruntjs.com/getting-started#working-with-an-existing-grunt-project).
+Assuming that the Grunt CLI has been installed follow the instructions on the [Grunt website](http://gruntjs.com/getting-started#working-with-an-existing-grunt-project).
 
 #### 2.6.1 Available Grunt Tasks 
 
@@ -105,5 +105,5 @@ Any JavaScript written for this theme should be unit tested with QUnit. See the 
 
 ## 3.0 Credits
 
-* [Bootstrap 3.3.6] (http://getbootstrap.com/)
-* [Dimox] (https://github.com/Dimox)
+* [Bootstrap 3.3.6](http://getbootstrap.com/)
+* [Dimox](https://github.com/Dimox)
