@@ -16,8 +16,6 @@
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?time-period=medieval,early-modern,empire-and-industry,victorians,early-20th-century,interwar,second-world-war,postwar">Time periods</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=lesson">Lessons</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=workshop">Workshops</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=video-conferences">Videoconferences</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=virtual-classroom">Virtual classroom</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/teachers/professional-development/">Professional development</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/teachers/">For teachers</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/students/">For students</a></li>

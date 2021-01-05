@@ -79,16 +79,7 @@
     <nav id="nav" role="navigation" class="navigation">
         <div class="mega-menu clearfix">
             <?php
-		global $cloud;
-		if (!$cloud) {
-			if (file_exists(PATH_TO_MEGA_MENU_HTML)) {
-				include PATH_TO_MEGA_MENU_HTML;
-			} else {
-                get_template_part( 'partials/mega-menu' );
-			}
-		} else {
             get_template_part( 'partials/mega-menu' );
-        }
 		?>
         </div>
     </nav>
