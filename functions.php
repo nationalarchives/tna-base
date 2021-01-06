@@ -1,7 +1,7 @@
 <?php
 
 // Theme version
-define( 'EDD_VERSION', '2.5' );
+define( 'EDD_VERSION', '2.6' );
 
 // Add this constant to wp-config.php
 // define( 'TNA_CLOUD', false );
@@ -100,9 +100,6 @@ add_theme_support( 'post-thumbnails' );
 
 // Call shortcode inside wordpress by using [newsletter-back-button]
 add_shortcode('newsletter-back-button', 'get_query_string_newsletter_previous_url');
-
-// Set path to mega menu HTML
-set_path_to_mega_menu(served_from_local_machine($_SERVER['SERVER_ADDR'], $_SERVER['REMOTE_ADDR']));
 
 if ( $_SERVER['REQUEST_URI'] == '/xmlrpc.php' || $_SERVER['REQUEST_URI'] == '/xmlrpc.php?rsd' ) {
 	wp_redirect( site_url() );
