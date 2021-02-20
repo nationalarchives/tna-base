@@ -30,6 +30,7 @@ include 'inc/functions-portal-landing.php';
 include 'inc/functions-level-one.php';
 include 'inc/functions-cards.php';
 include 'inc/functions-cards-og-meta.php';
+include 'inc/functions-cookies.php';
 
 // add_action
 add_action( 'wp_enqueue_scripts', 'tna_styles' );
