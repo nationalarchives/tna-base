@@ -54,7 +54,16 @@ $site_url = blog_footer_url( get_option('blog_type') )
                 <ul>
                     <li><a href="<?php echo $site_url ?>/legal/">Terms of use</a></li>
                     <li><a href="<?php echo $site_url ?>/legal/privacy.htm">Privacy policy</a></li>
-                    <li><a href="<?php echo $site_url ?>/legal/cookies.htm">Cookies</a></li>
+                    <?php
+                        global $wp;
+                        $siteUrl = add_query_arg( $wp->query_vars);
+
+                        if (strpos($siteUrl, 'latin') !== false) {
+                            echo '<li><a href="' . $site_url .'/latin/legal/cookies">Cookies</a></li>';
+                        } else {
+                            echo '<li><a href="' . $site_url . '/legal/cookies.htm">Cookies</a></li>';
+                        }
+                    ?>
                     <li><a href="<?php echo $site_url ?>/about/freedom-of-information/">Freedom of Information</a></li>
                     <li><a href="<?php echo $site_url ?>/about/our-role/transparency/">Transparency</a></li>
                     <li><a href="<?php echo $site_url ?>/legal/our-fees.htm">Our fees</a></li>
