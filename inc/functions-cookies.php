@@ -3,7 +3,7 @@
 // upon cross site roll-out
 
 function delete_GA_cookies() {
-	$domain = 'test.nationalarchives.gov.uk';
+	$domain = 'nationalarchives.gov.uk';
 	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22'];
     
 	if (isset($_SERVER['HTTP_COOKIE'])) {
