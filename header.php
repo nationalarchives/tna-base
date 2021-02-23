@@ -19,7 +19,7 @@
     <?php      
        if (function_exists('handle_GA_script')) {
             handle_GA_script('cookies_policy');
-       }
+       }  
     ?>
 </head>
 

@@ -4,7 +4,7 @@
 
 function delete_GA_cookies() {
 	$domain = 'nationalarchives.gov.uk';
-	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22'];
+	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22', '_gat_UA-2827241-1'];
     
 	if (isset($_SERVER['HTTP_COOKIE'])) {
 		$cookies = explode(';', $_SERVER['HTTP_COOKIE']);
@@ -12,7 +12,8 @@ function delete_GA_cookies() {
 			$parts = explode('=', $cookie);
 			$name = trim($parts[0]);
 			foreach($cookie_list as $single_cookie) {
-				if($name == $single_cookie) {  
+				if($name == $single_cookie) {
+                    unset( $_COOKIE[$name] );
                     setcookie($name, '', time()-1000, '/', '.' . $domain);
                     setcookie($name, '', time()-1000, '/', $domain);
                     setcookie($name, '', time()-1000, '/');
