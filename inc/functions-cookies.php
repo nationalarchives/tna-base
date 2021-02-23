@@ -3,8 +3,7 @@
 // upon cross site roll-out
 
 function delete_GA_cookies() {
-    $site_url = blog_footer_url( get_option('blog_type') );
-	$domain = $site_url == '' ? 'nationalarchives.gov.uk' :  $site_url ;
+	$domain = 'nationalarchives.gov.uk';
 	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-1'];
     
 	if (isset($_SERVER['HTTP_COOKIE'])) {
