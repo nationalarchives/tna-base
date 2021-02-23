@@ -4,7 +4,7 @@
 
 function delete_GA_cookies() {
     $site_url = blog_footer_url( get_option('blog_type') );
-	$domain = $site_url == '' ? 'nationalarchives.local' :  $site_url ;
+	$domain = $site_url == '' ? 'nationalarchives.gov.uk' :  $site_url ;
 	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-1'];
     
 	if (isset($_SERVER['HTTP_COOKIE'])) {
@@ -32,7 +32,7 @@ function handle_GA_script(string $global_cookie) {
             $cookies_policy_to_obj = json_decode( $clean_cookie );
             if($cookies_policy_to_obj->usage == true) { 
                 include 'gtm-script.php';
-            } 
+            }
         }
 
     } else { 
