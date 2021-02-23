@@ -13,8 +13,10 @@ function delete_GA_cookies() {
 			$name = trim($parts[0]);
 			foreach($cookie_list as $single_cookie) {
 				if($name == $single_cookie) {  
-					setcookie($name, '', time()-1000, '/', '.' . $domain);
-				}
+                    setcookie($name, '', time()-1000, '/', '.' . $domain);
+                    setcookie($name, '', time()-1000, '/', $domain);
+                    setcookie($name, '', time()-1000, '/');
+                }
 			}
 		}
 	}
