@@ -106,3 +106,11 @@ if ( $_SERVER['REQUEST_URI'] == '/xmlrpc.php' || $_SERVER['REQUEST_URI'] == '/xm
 	wp_redirect( site_url() );
 	exit;
 }
+
+// New Cookie Consent
+// This part of the code is going to be moved into the plugin
+if ( isset($_POST['measure-website-use']) ) {
+	if (function_exists('delete_GA_cookies')) {
+		add_action( 'init', 'delete_GA_cookies' );
+   }
+}
