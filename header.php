@@ -20,9 +20,6 @@
        if (function_exists('handle_GA_script')) {
             handle_GA_script('cookies_policy');
        }
-       if(function_exists('remove_cookies_on_page_load')) {
-            remove_cookies_on_page_load();
-       }  
     ?>
 </head>
 
