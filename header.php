@@ -17,11 +17,9 @@
 
     <!-- Manage Google Analytics Cookies -->
     <?php      
-       if (function_exists('handle_cookies')) {
-           $domain = 'nationalarchives.local';
-           $cookies_to_remove = ['_ga', '_gid', '_gat_UA-2827241-1'];
-           handle_cookies('cookies_policy', $cookies_to_remove, $domain);
-       }
+       if (function_exists('handle_GA_script')) {
+            handle_GA_script('cookies_policy');
+       }   
     ?>
 </head>
 
