@@ -118,6 +118,7 @@ if ( isset($_POST['measure-website-use']) ) {
 function remove_cookies_on_page_load() {
 	$siteUrl = site_url();
 	$global_cookie = 'cookies_policy';
+	
 	if (strpos($siteUrl, 'latin') !== false) {            
 		if(isset($_COOKIE[$global_cookie])) {
 			$cookie = $_COOKIE[$global_cookie];
