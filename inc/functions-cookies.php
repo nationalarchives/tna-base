@@ -24,9 +24,8 @@ function delete_GA_cookies() {
 }
 
 function handle_GA_script(string $global_cookie) {
-    global $wp;
-    $siteUrl = add_query_arg( $wp->query_vars);
-    
+    $siteUrl = site_url();
+
     if (strpos($siteUrl, 'latin') !== false) {            
         if(isset($_COOKIE[$global_cookie])) {
             $cookie = $_COOKIE[$global_cookie];
