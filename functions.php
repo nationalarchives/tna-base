@@ -124,11 +124,11 @@ function remove_cookies_on_page_load() {
 			$cookie = $_COOKIE[$global_cookie];
 			$clean_cookie = preg_replace('/\\\\/', '', $cookie);
 			$cookies_policy_to_obj = json_decode( $clean_cookie );
-			if($cookies_policy_to_obj->usage == false) { 
+			if($cookies_policy_to_obj->usage === false) { 
 				add_action( 'init', 'delete_GA_cookies' );
 			}
 		}
 	}
 }
 
-remove_cookies_on_page_load();
+//remove_cookies_on_page_load();
