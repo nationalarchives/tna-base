@@ -14,9 +14,10 @@ function delete_GA_cookies() {
 			foreach($cookie_list as $single_cookie) {
 				if($name == $single_cookie) {
                     unset( $_COOKIE[$name] );
-                    setcookie($name, '', time()-1000, '/', '.' . $domain);
-                    setcookie($name, '', time()-1000, '/', $domain);
-                    setcookie($name, '', time()-1000, '/');
+                    setcookie($name, '', time()-10000000, '/', '.' . $domain);
+                    echo $name;
+                    setcookie($name, '', time()-10000000, '/', $domain);
+                    setcookie($name, '', time()-10000000, '/');
                 }
 			}
 		}
@@ -33,6 +34,9 @@ function handle_GA_script(string $global_cookie) {
             $cookies_policy_to_obj = json_decode( $clean_cookie );
             if($cookies_policy_to_obj->usage == true) { 
                 include 'gtm-script.php';
+            } 
+            if($cookies_policy_to_obj->usage === false) { 
+                delete_GA_cookies();
             }
         }
 
