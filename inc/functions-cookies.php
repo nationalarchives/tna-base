@@ -35,9 +35,6 @@ function handle_GA_script(string $global_cookie) {
             if($cookies_policy_to_obj->usage == true) { 
                 include 'gtm-script.php';
             } 
-            if($cookies_policy_to_obj->usage === false) { 
-                delete_GA_cookies();
-            }
         }
 
     } else { 
