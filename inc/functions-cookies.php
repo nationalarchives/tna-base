@@ -15,9 +15,9 @@ function delete_GA_cookies() {
 				if($name == $single_cookie) {
                     unset( $_COOKIE[$name] );
                     setcookie($name, '', time()-10000000, '/', '.' . $domain);
-                    echo $name;
                     setcookie($name, '', time()-10000000, '/', $domain);
                     setcookie($name, '', time()-10000000, '/');
+                    echo $name;
                 }
 			}
 		}
