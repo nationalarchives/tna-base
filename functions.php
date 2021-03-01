@@ -131,4 +131,4 @@ function remove_cookies_on_page_load() {
 	}
 }
 
-//remove_cookies_on_page_load();
+remove_cookies_on_page_load();
