@@ -4,6 +4,7 @@
 	<div id="primary" class="content-area default-page">
 		<div class="container">
 			<div class="row">
+				This is serious!
 				<main id="main" class="col-xs-12 col-sm-8" role="main">
 					<?php
 					while ( have_posts() ) : the_post();

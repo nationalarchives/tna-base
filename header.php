@@ -28,8 +28,10 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8DSWV" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <?php
+    if(function_exists('wp_cookie_banner_hook')) {
+        wp_cookie_banner_hook();
+    }
 	if (function_exists('notification_banner')){
 		notification_banner();
 	}
