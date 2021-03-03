@@ -106,29 +106,3 @@ if ( $_SERVER['REQUEST_URI'] == '/xmlrpc.php' || $_SERVER['REQUEST_URI'] == '/xm
 	wp_redirect( site_url() );
 	exit;
 }
-
-// New Cookie Consent
-// This part of the code is going to be moved into the plugin
-if ( isset($_POST['measure-website-use']) ) {
-	if (function_exists('delete_GA_cookies')) {
-		add_action( 'init', 'delete_GA_cookies' );
-   }
-}
-// Remove cookies if available when coming from Latin
-function remove_cookies_on_page_load() {
-	$siteUrl = site_url();
-	$global_cookie = 'cookies_policy';
-	
-	if (strpos($siteUrl, 'latin') !== false) {            
-		if(isset($_COOKIE[$global_cookie])) {
-			$cookie = $_COOKIE[$global_cookie];
-			$clean_cookie = preg_replace('/\\\\/', '', $cookie);
-			$cookies_policy_to_obj = json_decode( $clean_cookie );
-			if($cookies_policy_to_obj->usage === false) { 
-				add_action( 'init', 'delete_GA_cookies' );
-			}
-		}
-	}
-}
-
-remove_cookies_on_page_load();
