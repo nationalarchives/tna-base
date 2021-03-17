@@ -58,7 +58,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
                         $siteUrl = site_url();
 
                         if (strpos($siteUrl, 'latin') !== false) { ?>
-                            <li><a href="<?php echo $site_url ?>/latin/legal/cookies/">Cookies</a></li>
+                            <li><a href="<?php echo $site_url ?>/latin/cookies/">Cookies</a></li>
                         <?php } else { ?>
                             <li><a href="<?php echo $site_url ?>/legal/cookies/">Cookies</a></li> 
                         <?php }
