@@ -3,7 +3,7 @@
 // upon cross site roll-out
 
 function delete_GA_cookies() {
-	$domain = 'nationalarchives.gov.uk';
+	$domain = 'nationalarchives.local';
 	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22', '_gat_UA-2827241-1'];
     
 	if (isset($_SERVER['HTTP_COOKIE'])) {
@@ -13,10 +13,7 @@ function delete_GA_cookies() {
 			$name = trim($parts[0]);
 			foreach($cookie_list as $single_cookie) {
 				if($name == $single_cookie) {
-                    unset( $_COOKIE[$name] );
-                    setcookie($name, '', time()-10000000, '/', '.' . $domain);
-                    setcookie($name, '', time()-10000000, '/', $domain);
-                    setcookie($name, '', time()-10000000, '/');
+                    clear_cookie($name, $domain);
                 }
 			}
 		}
@@ -31,9 +28,9 @@ function handle_GA_script(string $global_cookie) {
             $cookie = $_COOKIE[$global_cookie];
             $clean_cookie = preg_replace('/\\\\/', '', $cookie);
             $cookies_policy_to_obj = json_decode( $clean_cookie );
-            if($cookies_policy_to_obj->usage == true) { 
-                include 'gtm-script.php';
-            } 
+			if($cookies_policy_to_obj->usage == true) { 
+				include 'gtm-script.php';
+			} 
         }
 
     } else { 
@@ -69,6 +66,13 @@ function remove_cookies_on_page_load() {
 // Cookie banner custom hook
 function wp_cookie_banner_hook() {
 	do_action('wp_cookie_banner_hook');
+}
+
+function clear_cookie($cookie_name, $cookie_domain) {
+	unset( $_COOKIE[$cookie_name] );
+	setcookie($cookie_name, '', time()-10000000, '/', '.' . $cookie_domain);
+	setcookie($cookie_name, '', time()-10000000, '/', $cookie_domain);
+	setcookie($cookie_name, '', time()-10000000, '/');
 }
 
 // Remove GA cookies on page load
