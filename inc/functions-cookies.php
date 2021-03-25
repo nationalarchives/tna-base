@@ -3,7 +3,7 @@
 // upon cross site roll-out
 
 function delete_GA_cookies() {
-	$domain = 'nationalarchives.gov.uk';
+	$domain = 'nationalarchives.local';
 	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22', '_gat_UA-2827241-1'];
     
 	if (isset($_SERVER['HTTP_COOKIE'])) {
@@ -28,9 +28,11 @@ function handle_GA_script(string $global_cookie) {
             $cookie = $_COOKIE[$global_cookie];
             $clean_cookie = preg_replace('/\\\\/', '', $cookie);
             $cookies_policy_to_obj = json_decode( $clean_cookie );
-			if($cookies_policy_to_obj->usage == true) { 
-				include 'gtm-script.php';
-			} 
+			if(property_exists($cookies_policy_to_obj, 'usage')) {
+				if($cookies_policy_to_obj->usage == true) { 
+					include 'gtm-script.php';
+				} 
+			}			
         }
 
     } else { 
@@ -56,9 +58,12 @@ function remove_cookies_on_page_load() {
 			$cookie = $_COOKIE[$global_cookie];
 			$clean_cookie = preg_replace('/\\\\/', '', $cookie);
 			$cookies_policy_to_obj = json_decode( $clean_cookie );
-			if($cookies_policy_to_obj->usage === false) { 
-				add_action( 'init', 'delete_GA_cookies' );
+			if(property_exists($cookies_policy_to_obj, 'usage')) {
+				if($cookies_policy_to_obj->usage === false) { 
+					add_action( 'init', 'delete_GA_cookies' );
+				}
 			}
+			
 		}
 	}
 }
