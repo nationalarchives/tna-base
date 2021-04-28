@@ -49,8 +49,8 @@ function remove_cookies_on_page_load() {
 	$allowed_web_section = preg_match($url_paths, $siteUrl);
 
 	// Remove GA cookies on page load
-	if ($allowed_web_section === 1)) {   
-		if(isset($_COOKIE[$global_cookie]) {
+	if ($allowed_web_section === 1) {   
+		if(isset($_COOKIE[$global_cookie])) {
 			$cookie = $_COOKIE[$global_cookie];
 			$clean_cookie = preg_replace('/\\\\/', '', $cookie);
 			$cookies_policy_to_obj = json_decode( $clean_cookie );
