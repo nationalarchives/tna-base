@@ -11,8 +11,15 @@ function delete_GA_cookies() {
 
 // Delete legacy cookies on WP init
 function delete_legacy_cookies() {
+	$domain = 'nationalarchives.gov.uk';
+	$cookie_list = ['__atuvs', '__atuvc'];
+	handle_cookies($cookie_list, $domain);
+}
+
+// Delete legacy cookies on WP init
+function delete_AddThis_cookies() {
 	$domain = 'addthis.com';
-	$cookie_list = ['loc', 'uvc', 'xtc', '__atuvs', '__atuvc', 'na_tc', 'na_id'];
+	$cookie_list = ['uvc', 'na_tc', 'ouid', 'na_id', 'loc', 'uid'];
 	handle_cookies($cookie_list, $domain);
 }
 
@@ -60,6 +67,7 @@ function remove_cookies_on_page_load() {
 		}
 		// Remove legacy cookies
 		add_action( 'init', 'delete_legacy_cookies' );   
+		add_action( 'init', 'delete_AddThis_cookies' );   
 	}
 }
 
