@@ -11,8 +11,8 @@ function delete_GA_cookies() {
 
 // Delete legacy cookies on WP init
 function delete_legacy_cookies() {
-	$domain = 'nationalarchives.gov.uk';
-	$cookie_list = ['loc', 'uvc', 'xtc'];
+	$domain = 'addthis.com';
+	$cookie_list = ['loc', 'uvc', 'xtc', '__atuvs', '__atuvc', 'na_tc', 'na_id'];
 	handle_cookies($cookie_list, $domain);
 }
 
