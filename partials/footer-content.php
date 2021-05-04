@@ -60,7 +60,10 @@ $site_url = blog_footer_url( get_option('blog_type') )
                         $newCookiePageLink = '<a href=' . '"' . $site_url . '/latin/cookies/">Cookies</a>';
                         $oldCookiePageLink = '<a href=' . '"' . $site_url . '/legal/cookies/">Cookies</a>';
 
-                        if (strpos($siteUrl, 'latin') !== false) { ?>
+                        $url_paths = "/latin|blog/i";
+	                    $allowed_web_section = preg_match($url_paths, $siteUrl);
+
+                        if ($allowed_web_section === 1) { ?>
                             <li><?php echo $newCookiePageLink ?></li>
                         <?php } else { ?>
                             <li><?php echo $oldCookiePageLink ?></li>
