@@ -122,11 +122,8 @@ $site_url = blog_footer_url( get_option('blog_type') )
 
 <div class="row footer-base">
     <div class="col-xs-12 col-sm-9 col-md-9 ogl">
-        <a title="External website - opens in a new window"
-           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img
-                    alt="Open Government License logo"
-                    src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png">
-        </a>
+        <img alt="Open Government License logo" src="<?php echo str_replace(home_url(), '', get_template_directory_uri()); ?>/img/logo-ogl.png">
+
         <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/">Open
                 Government Licence v3.0</a>, except where otherwise stated </p>
     </div>
