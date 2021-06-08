@@ -9,6 +9,8 @@
 }
 .default-page {
   .entry-header {
+    overflow-wrap: break-word;
+    hyphens: auto;
     border-left: $grid-line;
     border-right: $grid-line;
     border-bottom: $grid-line;
@@ -19,6 +21,8 @@
     }
   }
   .entry-content {
+    overflow-wrap: break-word;
+    hyphens: auto;
     border-left: $grid-line;
     border-right: $grid-line;
     padding: 1.6em;
