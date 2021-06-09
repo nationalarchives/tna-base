@@ -95,6 +95,11 @@
     > ul > li > a:focus {
       background: #FCE45C !important;
     }
+    > ul > li > .toggle-sub-menu:focus {
+      background: #FCE45C !important;
+      outline: #1d70b8 solid 5px;
+      color: #000000;
+    }
     .mobile-home-link {
       display: block;
     }

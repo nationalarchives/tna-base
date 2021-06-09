@@ -6348,6 +6348,11 @@ form .radio input[type=radio]:focus + label::before {
   .mega-menu > ul > li > a:focus {
     background: #FCE45C !important;
   }
+  .mega-menu > ul > li > .toggle-sub-menu:focus {
+    background: #FCE45C !important;
+    outline: #1d70b8 solid 5px;
+    color: #000000;
+  }
   .mega-menu .mobile-home-link {
     display: block;
   }

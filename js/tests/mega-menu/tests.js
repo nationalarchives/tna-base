@@ -80,37 +80,7 @@ QUnit.test("The .toggle-sub-menu links should NOT exist before the plugin is app
 
 });
 
-QUnit.test("Every target element should have a .toggle-sub-menu link after the plugin is applied", function (assert) {
-
-    $items = $(".mega-menu > ul > li > a");
-
-    $items.mega_menu_enhancements();
-
-    $items.each(function () {
-
-        assert.ok($(this).hasClass('toggle-sub-menu'), 'All .toggle-sub-menu links are in the DOM');
-    })
-
-});
-
-QUnit.test("The first link in every .sub-menu should have the class .mobile-home-link (unless it is the 'More...' link)", function (assert) {
-
-    $(".mega-menu > ul > li > a").mega_menu_enhancements();
-
-    $('.sub-menu li:first-child').each(function () {
-
-        var $this = $(this);
-
-        // This is brittle but will suffice for the refactoring
-
-        if ($this.text() !== 'Bookshop') {
-            assert.ok($this.hasClass('mobile-home-link'), $this.text() + ' has the ".mobile-home-link" class');
-        }
-    })
-
-});
-
-if ($(window).width() > 500) {
+if ($(window).width() >= 480) {
     QUnit.test("The 'More...' link should not toggle its siblings at larger screen sizes", function (assert) {
 
 
@@ -135,7 +105,7 @@ if ($(window).width() > 500) {
 }
 
 
-if ($(window).width() < 500) {
+if ($(window).width() <= 480) {
     QUnit.test("Clicking '.toggle-sub-menu' has the desired effect", function (assert) {
 
         $(".mega-menu > ul > li > a").mega_menu_enhancements();
