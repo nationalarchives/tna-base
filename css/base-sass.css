@@ -6278,6 +6278,9 @@ form .radio input[type=radio]:focus + label::before {
   margin: 0;
   line-height: 1.6;
 }
+.mega-menu .sub-menu a:hover:focus {
+  color: #fff;
+}
 .mega-menu .imgContent a {
   border: 0;
   display: inline-block;
@@ -6348,6 +6351,11 @@ form .radio input[type=radio]:focus + label::before {
   .mega-menu > ul > li > a:focus {
     background: #FCE45C !important;
   }
+  .mega-menu > ul > li > .toggle-sub-menu:focus {
+    background: #FCE45C !important;
+    outline: #1d70b8 solid 5px;
+    color: #000000;
+  }
   .mega-menu .mobile-home-link {
     display: block;
   }
@@ -6355,6 +6363,10 @@ form .radio input[type=radio]:focus + label::before {
 
 .js #nav {
   display: none;
+}
+
+#more-link[tabindex="0"] {
+  text-decoration: underline;
 }
 
 /* TNA header styles */

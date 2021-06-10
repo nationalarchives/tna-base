@@ -16,8 +16,17 @@ $.fn.mega_menu_enhancements = function () {
 
     // Establishing toggle behaviour for links with .toggle-sub-menu
 
-    $(document).on('click', '.toggle-sub-menu', function (e) {
-        if ($(window).width() < 480) {
+    $(document).on('click keydown keyup', '.toggle-sub-menu', function (e) {
+
+        if(e.type ==="keyup") {
+            return;
+        }
+
+        if(e.type === "keydown" && e.key !== "Enter") {
+            return;
+        }
+
+        if ($(window).width() <= 480) {
             var $this = $(this);
             e.preventDefault();
             $this.toggleClass('expanded').next().slideToggle('fast');
@@ -35,26 +44,6 @@ $.fn.mega_menu_enhancements = function () {
             'id': 'more-link'
         }));
     });
-
-    return this.each(function () {
-        var $this = $(this),
-            $items = $this.next(),
-            $link,
-            $li;
-
-        $this.addClass('toggle-sub-menu');
-
-
-        $link = $('<a>', {
-            'href': $this.attr('href'),
-            'text': $this.text() + ' home'
-        });
-
-        $li = $('<li class="mobile-home-link">').append($link);
-
-        $li.prependTo($items);
-
-    })
 };
 
 
@@ -66,3 +55,22 @@ $.fn.append_promotional_image = function () {
         $this.append('<li class="imgContent"><a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/with-love/" title="With Love"><img src="//www.nationalarchives.gov.uk/images/home/menu-with-love.jpg" alt="With Love" class="img-responsive tna-img-responsive"></a></li>');
     })
 };
+
+// moreLinkFocusManager()
+
+// The purpose of this function is to ensure that the more link can receive keyboard focus
+// at the point when event handlers are attached to it.
+
+$.moreLinkFocusManager = function() {
+
+    $('#more-link').attr('tabindex', function () {
+        return $(window).width() > 480 ? '-1' : '0';
+    });
+};
+
+// Bindings to window
+$(window).on({
+    resize: function() {
+        $.moreLinkFocusManager();
+    }
+});

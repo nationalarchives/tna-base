@@ -24,6 +24,9 @@
     padding: 0.1em 0;
     margin: 0;
     line-height: 1.6;
+    &:hover:focus {
+      color: $tna_white;
+    }
   }
   .imgContent a {
     border: 0;
@@ -95,6 +98,11 @@
     > ul > li > a:focus {
       background: #FCE45C !important;
     }
+    > ul > li > .toggle-sub-menu:focus {
+      background: #FCE45C !important;
+      outline: #1d70b8 solid 5px;
+      color: #000000;
+    }
     .mobile-home-link {
       display: block;
     }
@@ -102,4 +110,8 @@
 }
 .js #nav {
   display: none;
+}
+
+#more-link[tabindex="0"] {
+  text-decoration: underline;
 }
