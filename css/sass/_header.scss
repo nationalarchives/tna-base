@@ -141,8 +141,12 @@ header {
     a {
       display: block;
       &:hover {
-        background: none;
         outline: 5px solid #fff;
+      }
+      &:focus {
+        img {
+          background-color: $dark;
+        }
       }
     }
     img {
