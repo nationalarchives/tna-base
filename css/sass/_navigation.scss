@@ -24,6 +24,9 @@
     padding: 0.1em 0;
     margin: 0;
     line-height: 1.6;
+    &:hover:focus {
+      color: $tna_white;
+    }
   }
   .imgContent a {
     border: 0;
@@ -107,4 +110,8 @@
 }
 .js #nav {
   display: none;
+}
+
+#more-link[tabindex="0"] {
+  text-decoration: underline;
 }

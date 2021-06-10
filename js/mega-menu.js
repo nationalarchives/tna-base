@@ -26,7 +26,7 @@ $.fn.mega_menu_enhancements = function () {
             return;
         }
 
-        if ($(window).width() < 480) {
+        if ($(window).width() <= 480) {
             var $this = $(this);
             e.preventDefault();
             $this.toggleClass('expanded').next().slideToggle('fast');
