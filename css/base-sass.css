@@ -6513,8 +6513,10 @@ header #mobile-logo-holder a {
   display: block;
 }
 header #mobile-logo-holder a:hover {
-  background: none;
   outline: 5px solid #fff;
+}
+header #mobile-logo-holder a:focus img {
+  background-color: #26262a;
 }
 @media (max-width: 320px) {
   header #mobile-logo-holder img {
