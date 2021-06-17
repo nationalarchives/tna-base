@@ -80,7 +80,7 @@ QUnit.test("The .toggle-sub-menu links should NOT exist before the plugin is app
 
 });
 
-if ($(window).width() >= 480) {
+if (window.innerWidth >= 480) {
     QUnit.test("The 'More...' link should not toggle its siblings at larger screen sizes", function (assert) {
 
 
@@ -105,7 +105,7 @@ if ($(window).width() >= 480) {
 }
 
 
-if ($(window).width() <= 480) {
+if (window.innerWidth <= 480) {
     QUnit.test("Clicking '.toggle-sub-menu' has the desired effect", function (assert) {
 
         $(".mega-menu > ul > li > a").mega_menu_enhancements();
