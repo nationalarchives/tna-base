@@ -1,5 +1,5 @@
 <?php
-// 404 Redirection function - called in header.php
+// DISABLED: 404 Redirection function - called in header.php
 if ( ! function_exists( 'redirect_if_404' ) ) :
 	function redirect_if_404() {
 		if ( is_404() ) {
