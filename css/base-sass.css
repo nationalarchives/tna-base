@@ -6080,10 +6080,10 @@ form .form-row .optional {
   color: #6f777b;
 }
 form .form-row .form-error {
-  color: #000;
+  color: #fff;
   display: block;
   padding: 3px 7px;
-  background: #f9f7e2;
+  background: #d4351c;
   width: 100%;
   max-width: 480px;
 }
@@ -6091,7 +6091,7 @@ form .form-row .form-error span {
   font-size: 1.6em;
 }
 form .form-row .form-warning {
-  border: 2px solid #EBAB2C;
+  border: 2px solid #d4351c !important;
 }
 @media (max-width: 768px) {
   form .form-row {
@@ -6209,7 +6209,8 @@ form .radio input[type=radio]:focus + label::before {
 }
 
 .error-message {
-  background-color: #f9f7e2 !important;
+  color: #fff !important;
+  background-color: #d4351c !important;
 }
 
 .success-message {
