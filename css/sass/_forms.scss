@@ -121,10 +121,10 @@ form {
       color: #6f777b;
     }
     .form-error {
-      color: #000;
+      color: #fff;
       display: block;
       padding: 3px 7px;
-      background: $yellow-light;
+      background: #d4351c;
       width: 100%;
       max-width: 480px;
       span {
@@ -132,7 +132,7 @@ form {
       }
     }
     .form-warning {
-      border: 2px solid #EBAB2C;
+      border: 2px solid #d4351c !important;
     }
     @media (max-width: 768px) {
       max-width: 100%;
@@ -248,7 +248,8 @@ form {
   margin-bottom: 1.6em;
 }
 .error-message {
-  background-color: $yellow-light !important;
+  color: #fff !important;
+  background-color: #d4351c !important;
 }
 .success-message {
   padding: 1em;
