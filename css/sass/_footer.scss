@@ -11,6 +11,7 @@ footer {
     color: $dark;
     outline-color: $outline-dark-bg;
   }
+
   .footer-content {
     padding-top: 1.6em;
   }
@@ -148,6 +149,9 @@ footer {
         margin-top: 0.6em;
         text-decoration: none;
       }
+    }
+    a:focus {
+      outline-color: #1d70b8;
     }
   }
 }

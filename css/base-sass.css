@@ -5412,6 +5412,8 @@ footer {
       line-height: 1;
       margin-top: 0.6em;
       text-decoration: none; }
+    footer .newsletter a:focus {
+      outline-color: #1d70b8; }
 
 /* TNA template styles:
  - Default page
