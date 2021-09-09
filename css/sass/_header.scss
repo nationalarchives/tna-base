@@ -58,7 +58,7 @@ header {
     background-color: $dark;
     outline: none;
     img {
-      outline: 5px solid #1d70b8;
+      outline: 5px solid $outline-dark-bg;
     }
   }
   #logo-holder a:hover {
@@ -90,6 +90,10 @@ header {
       background-color: #ffffff;
       background-image: url(../img/menu-collapsed-red.png);
       border: 2px solid $tna_red;
+    }
+    &:focus {
+      outline-color: $outline-dark-bg;
+      outline-offset: 0.3rem;
     }
     @media only screen and (max-width: 767px) {
       display: none;
@@ -131,6 +135,11 @@ header {
       background: $tna_menu_trigram_lrg_red;
       background-color: $tna_white;
     }
+
+    &:focus {
+      outline-color: $outline-dark-bg;
+      outline-offset: 0.3rem;
+    }
   }
   @media only screen and (min-width: 768px) {
     #mega-menu-mobile {
@@ -140,6 +149,9 @@ header {
   #mobile-logo-holder {
     a {
       display: block;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
       &:hover {
         outline: 5px solid #fff;
       }
@@ -147,6 +159,7 @@ header {
         img {
           background-color: $dark;
         }
+        outline-color: $outline-dark-bg;
       }
     }
     img {

@@ -4913,7 +4913,11 @@ form .radio input[type="radio"]:focus + label::before {
     color: #ffffff;
     outline: 1px solid #ffffff; }
   .mega-menu a:focus {
-    color: #26262a; }
+    color: #26262a;
+    outline-color: #8ec0ec; }
+    .mega-menu a:focus:hover {
+      color: #fff;
+      outline-color: #fff; }
   .mega-menu ul {
     margin: 0;
     padding: 0;
@@ -4978,11 +4982,19 @@ form .radio input[type="radio"]:focus + label::before {
     .mega-menu > ul > li > a.expanded, .mega-menu > ul > li > div.expanded {
       background: url(../img/minus.png) 0 14px no-repeat; }
     .mega-menu > ul > li > a:focus {
-      background: #FCE45C !important; }
+      background: #FFF !important; }
+    .mega-menu > ul > li > a:hover {
+      background: #134571 !important;
+      outline: 1px solid #fff;
+      color: #fff; }
     .mega-menu > ul > li > .toggle-sub-menu:focus {
-      background: #FCE45C !important;
-      outline: #1d70b8 solid 5px;
+      background: #FFF !important;
+      outline: #8ec0ec solid 5px;
       color: #000000; }
+    .mega-menu > ul > li > .toggle-sub-menu:hover {
+      background: #134571 !important;
+      outline: #fff solid 1px;
+      color: #fff; }
     .mega-menu .mobile-home-link {
       display: block; } }
 
@@ -5044,7 +5056,7 @@ header {
     background-color: #26262a;
     outline: none; }
     header #logo-holder a:focus img {
-      outline: 5px solid #1d70b8; }
+      outline: 5px solid #8ec0ec; }
   header #logo-holder a:hover {
     background: none;
     outline: none; }
@@ -5072,6 +5084,9 @@ header {
       background-color: #ffffff;
       background-image: url(../img/menu-collapsed-red.png);
       border: 2px solid #cb0d07; }
+    header #mega-menu-pull-down:focus {
+      outline-color: #8ec0ec;
+      outline-offset: 0.3rem; }
     @media only screen and (max-width: 767px) {
       header #mega-menu-pull-down {
         display: none; } }
@@ -5103,15 +5118,23 @@ header {
     header #mega-menu-mobile:hover {
       background: url("../img/menu-trigram-lrg-red.png") center no-repeat;
       background-color: #fff; }
+    header #mega-menu-mobile:focus {
+      outline-color: #8ec0ec;
+      outline-offset: 0.3rem; }
   @media only screen and (min-width: 768px) {
     header #mega-menu-mobile {
       display: none; } }
   header #mobile-logo-holder a {
-    display: block; }
+    display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto; }
     header #mobile-logo-holder a:hover {
       outline: 5px solid #fff; }
-    header #mobile-logo-holder a:focus img {
-      background-color: #26262a; }
+    header #mobile-logo-holder a:focus {
+      outline-color: #8ec0ec; }
+      header #mobile-logo-holder a:focus img {
+        background-color: #26262a; }
   @media (max-width: 320px) {
     header #mobile-logo-holder img {
       margin-top: 7px; } }
@@ -5274,7 +5297,8 @@ footer {
   footer a:hover {
     color: #fbe2bc; }
   footer a:focus {
-    color: #26262a; }
+    color: #26262a;
+    outline-color: #8ec0ec; }
   footer .footer-content {
     padding-top: 1.6em; }
   footer .footer-col {

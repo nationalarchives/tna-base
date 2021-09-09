@@ -12,6 +12,12 @@
   }
   a:focus {
     color: $dark;
+    outline-color: $outline-dark-bg;
+
+    &:hover {
+      color: #fff;
+      outline-color: #fff;
+    }
   }
   ul {
     margin: 0;
@@ -96,12 +102,22 @@
       background: url(../img/minus.png) 0 14px no-repeat;
     }
     > ul > li > a:focus {
-      background: #FCE45C !important;
+      background: #FFF !important;
+    }
+    > ul > li > a:hover {
+      background: #134571 !important;
+      outline: 1px solid #fff;
+      color: #fff
     }
     > ul > li > .toggle-sub-menu:focus {
-      background: #FCE45C !important;
-      outline: #1d70b8 solid 5px;
+      background: #FFF !important;
+      outline: $outline-dark-bg solid 5px;
       color: #000000;
+    }
+    > ul > li > .toggle-sub-menu:hover {
+      background: #134571 !important;
+      outline: #fff solid 1px;
+      color: #fff;
     }
     .mobile-home-link {
       display: block;

@@ -9,6 +9,7 @@ footer {
   }
   a:focus {
     color: $dark;
+    outline-color: $outline-dark-bg;
   }
   .footer-content {
     padding-top: 1.6em;
