@@ -51,16 +51,9 @@ footer {
           float: none;
         }
       }
-      > a:hover {
-        outline: none;
-        img {
-          outline: 5px solid #ffffff;
-        }
-      }
-      p {
-        a:hover {
-          outline: 1px solid #ffffff;
-        }
+      a:hover {
+        color: #fff;
+        outline: 1px solid #fff;
       }
     }
     .gov-uk {
