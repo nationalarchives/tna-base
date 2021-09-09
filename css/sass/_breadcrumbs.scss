@@ -6,7 +6,15 @@
     margin: 1em 0;
     font-size: .9em;
     a:focus {
-      background-color: transparent;
+      background-color: #fff;
+      outline: 5px solid #1d70b8;
+      color: #000;
+
+      &:hover {
+        background-color: #134571;
+        color: #fff;
+        outline: 1px solid #fff;
+      }
     }
   }
 }
