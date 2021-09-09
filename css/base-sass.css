@@ -4900,7 +4900,13 @@ form .radio input[type="radio"]:focus + label::before {
     margin: 1em 0;
     font-size: .9em; }
     .tna-breadcrumb .breadcrumbs a:focus {
-      background-color: transparent; }
+      background-color: #fff;
+      outline: 5px solid #1d70b8;
+      color: #000; }
+      .tna-breadcrumb .breadcrumbs a:focus:hover {
+        background-color: #134571;
+        color: #fff;
+        outline: 1px solid #fff; }
 
 .mega-menu {
   background-color: #555;
