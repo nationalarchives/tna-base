@@ -385,3 +385,14 @@ header {
     }
   }
 }
+
+div.global-search-no-js-fallback nav > ul > li > a {
+  &:focus {
+    color: #000;
+    outline-color: $outline-dark-bg;
+    &:hover {
+      color: #fff;
+      outline: 1px solid #fff;
+    }
+  }
+}
