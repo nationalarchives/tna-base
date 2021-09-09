@@ -93,7 +93,6 @@ header {
     }
     &:focus {
       outline-color: $outline-dark-bg;
-      outline-offset: 0.3rem;
     }
     @media only screen and (max-width: 767px) {
       display: none;
@@ -138,7 +137,6 @@ header {
 
     &:focus {
       outline-color: $outline-dark-bg;
-      outline-offset: 0.3rem;
     }
   }
   @media only screen and (min-width: 768px) {
