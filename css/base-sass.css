@@ -5004,6 +5004,9 @@ form .radio input[type="radio"]:focus + label::before {
 #more-link[tabindex="0"] {
   text-decoration: underline; }
 
+.imgContent > a > img {
+  width: 100%; }
+
 /* TNA header styles */
 header {
   background-color: #26262a;
@@ -5052,6 +5055,8 @@ header {
         header #search-field-wrapper ul li a:hover {
           background-color: #fce45c;
           color: #26262a; }
+  header #logo-holder a {
+    max-width: 320px; }
   header #logo-holder a:focus {
     background-color: #26262a;
     outline: none; }
