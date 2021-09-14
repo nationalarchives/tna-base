@@ -4,14 +4,14 @@
 
 // Delete Google Analytics cookies on WP init
 function delete_GA_cookies() {
-	$domain = 'nationalarchives.local';
+	$domain = '.nationalarchives.gov.uk';
 	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22', '_gat_UA-2827241-1'];
 	handle_cookies($cookie_list, $domain);
 }
 
 // Delete legacy cookies on WP init
 function delete_legacy_cookies() {
-	$domain = 'nationalarchives.local';
+	$domain = '.nationalarchives.gov.uk';
 	$cookie_list = ['__atuvs', '__atuvc'];
 	handle_cookies($cookie_list, $domain);
 }
