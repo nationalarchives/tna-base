@@ -4,14 +4,14 @@
 
 // Delete Google Analytics cookies on WP init
 function delete_GA_cookies() {
-	$domain = 'nationalarchives.gov.uk';
+	$domain = '.nationalarchives.gov.uk';
 	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22', '_gat_UA-2827241-1'];
 	handle_cookies($cookie_list, $domain);
 }
 
 // Delete legacy cookies on WP init
 function delete_legacy_cookies() {
-	$domain = 'nationalarchives.gov.uk';
+	$domain = '.nationalarchives.gov.uk';
 	$cookie_list = ['__atuvs', '__atuvc'];
 	handle_cookies($cookie_list, $domain);
 }
@@ -24,16 +24,11 @@ function delete_AddThis_cookies() {
 }
 
 function handle_GA_script(string $global_cookie) {
-    $siteUrl = site_url();
-
-	$url_paths = "/latin|blog/i";
-	$allowed_web_section = preg_match($url_paths, $siteUrl);
-
-	if ($allowed_web_section === 1 && isset($_COOKIE[$global_cookie])) {            
+	if (isset($_COOKIE[$global_cookie])) {            
 		$cookie = $_COOKIE[$global_cookie];
 		$clean_cookie = preg_replace('/\\\\/', '', $cookie);
 		$cookies_policy_to_obj = json_decode( $clean_cookie );
-		if(property_exists($cookies_policy_to_obj, 'usage') && $cookies_policy_to_obj->usage == true) {
+		if(property_exists($cookies_policy_to_obj, 'usage') && $cookies_policy_to_obj->usage) {
 			include 'gtm-script.php';
 		}			
 	} else { 
@@ -49,26 +44,19 @@ if ( isset($_POST['measure-website-use']) && function_exists('delete_GA_cookies'
 
 // Remove cookies if available when coming from Latin
 function remove_cookies_on_page_load() {
-	$siteUrl = site_url();
 	$global_cookie = 'cookies_policy';
-	
-	$url_paths = "/latin|blog/i";
-	$allowed_web_section = preg_match($url_paths, $siteUrl);
 
-	// Remove GA cookies on page load
-	if ($allowed_web_section === 1) {   
-		if(isset($_COOKIE[$global_cookie])) {
-			$cookie = $_COOKIE[$global_cookie];
-			$clean_cookie = preg_replace('/\\\\/', '', $cookie);
-			$cookies_policy_to_obj = json_decode( $clean_cookie );
-			if(property_exists($cookies_policy_to_obj, 'usage') && $cookies_policy_to_obj->usage == false) {
-				add_action( 'init', 'delete_GA_cookies' );
-			}
+	if(isset($_COOKIE[$global_cookie])) {
+		$cookie = $_COOKIE[$global_cookie];
+		$clean_cookie = preg_replace('/\\\\/', '', $cookie);
+		$cookies_policy_to_obj = json_decode( $clean_cookie );
+		if(property_exists($cookies_policy_to_obj, 'usage') && $cookies_policy_to_obj->usage == false) {
+			add_action( 'init', 'delete_GA_cookies' );
 		}
-		// Remove legacy cookies
-		add_action( 'init', 'delete_legacy_cookies' );   
-		add_action( 'init', 'delete_AddThis_cookies' );   
 	}
+	// Remove legacy cookies
+	add_action( 'init', 'delete_legacy_cookies' );   
+	add_action( 'init', 'delete_AddThis_cookies' );   
 }
 
 // Cookie banner custom hook
