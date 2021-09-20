@@ -54,21 +54,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
                 <ul>
                     <li><a href="<?php echo $site_url ?>/legal/">Terms of use</a></li>
                     <li><a href="<?php echo $site_url ?>/legal/privacy.htm">Privacy policy</a></li>
-                    <?php
-                        $siteUrl = site_url();
-                        // The new Cookie settings page seats under Latin website
-                        $newCookiePageLink = '<a href=' . '"' . $site_url . '/latin/cookies/">Cookies</a>';
-                        $oldCookiePageLink = '<a href=' . '"' . $site_url . '/legal/cookies/">Cookies</a>';
-
-                        $url_paths = "/latin|blog/i";
-	                    $allowed_web_section = preg_match($url_paths, $siteUrl);
-
-                        if ($allowed_web_section === 1) { ?>
-                            <li><?php echo $newCookiePageLink ?></li>
-                        <?php } else { ?>
-                            <li><?php echo $oldCookiePageLink ?></li>
-                        <?php }
-                    ?>
+                    <li><a href="<?php echo $site_url ?>/latin/cookies/">Cookies</a></li>
                     <li><a href="<?php echo $site_url ?>/about/freedom-of-information/">Freedom of Information</a></li>
                     <li><a href="<?php echo $site_url ?>/about/our-role/transparency/">Transparency</a></li>
                     <li><a href="<?php echo $site_url ?>/legal/our-fees.htm">Our fees</a></li>
