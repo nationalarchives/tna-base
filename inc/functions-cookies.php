@@ -5,7 +5,7 @@
 // Delete Google Analytics cookies on WP init
 function delete_GA_cookies() {
 	$domain = '.nationalarchives.gov.uk';
-	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22', '_gat_UA-2827241-1'];
+	$cookie_list = ['_ga', '_gid', '_gat_UA-2827241-22', '_gat_UA-2827241-1', '_ga_2CP7QT8TDG'];
 	handle_cookies($cookie_list, $domain);
 }
 
@@ -42,7 +42,7 @@ if ( isset($_POST['measure-website-use']) && function_exists('delete_GA_cookies'
 	add_action( 'init', 'delete_GA_cookies' );
 }
 
-// Remove cookies if available when coming from Latin
+// Remove cookies if available 
 function remove_cookies_on_page_load() {
 	$global_cookie = 'cookies_policy';
 
