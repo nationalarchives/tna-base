@@ -84,7 +84,58 @@ function portal_landing_meta_boxes() {
 					'options' => array('Disable', 'Enable')
 				)
 			)
-		)
+		),
+        array(
+            'id' => 'feature_banner_options',
+            'title' => 'Feature banner options',
+            'pages' => 'page',
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Feature banner below introduction',
+                    'desc' => '',
+                    'id' => 'feature_banner',
+                    'type' => 'select',
+                    'options' => array('Disable', 'Enable')
+                ),
+                array(
+                    'name' => 'Feature banner background colour',
+                    'desc' => 'Hex value. Default #FFFFFF white.',
+                    'id'   => 'feature_banner_colour',
+                    'type' => 'text',
+                    'std'  => ''
+                ),
+                array(
+                    'name' => 'Feature banner body',
+                    'desc' => '',
+                    'id'   => 'feature_banner_body',
+                    'type' => 'textarea',
+                    'std'  => ''
+                ),
+                array(
+                    'name' => 'Feature banner body image',
+                    'desc' => '',
+                    'id' => 'feature_banner_body_img',
+                    'type' => 'media',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Feature banner body image alt text',
+                    'desc' => '',
+                    'id' => 'feature_banner_body_img_alt',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Feature banner background image',
+                    'desc' => '',
+                    'id' => 'feature_banner_background_img',
+                    'type' => 'media',
+                    'std' => ''
+                )
+            )
+        )
 	);
 
 	for ( $i = 0; $i <= 9; $i ++ ) {
