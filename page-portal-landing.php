@@ -53,31 +53,16 @@ get_header(); ?>
             </div>
         </div>
         <?php
-        $banner_background_img_url = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'feature_banner_background_img', true ) );
-        $banner_background_img = 'style="background-image: url('. $banner_background_img_url . ');"';
-        $banner_background_color = 'style="background-color: '. get_post_meta( $post->ID, 'feature_banner_colour', true ) . ';"';
         if (get_post_meta( $post->ID, 'feature_banner', true ) == 'Enable') {
-        ?>
-        <div class="secondary-banner" <?php echo $banner_background_img ?>>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="secondary-banner-content" <?php echo $banner_background_color ?>>
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <?php echo get_post_meta( $post->ID, 'feature_banner_body', true ) ?>
-                                </div>
-                                <div class="col-sm-4">
-                                    <img src="<?php echo make_path_relative_no_pre_path(get_post_meta( $post->ID, 'feature_banner_body_img', true )) ?>"
-                                         class="img-responsive" alt="<?php echo get_post_meta( $post->ID, 'feature_banner_body_img_alt', true ) ?>">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php } ?>
+            $banner_background_img_url = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'feature_banner_background_img', true ) );
+            $banner_background_img = !empty($banner_background_img_url) ? 'style="background-image: url('. $banner_background_img_url . ');"' : '';
+            $background_color = get_post_meta( $post->ID, 'feature_banner_colour', true );
+            $banner_background_color = !empty($background_color) ? 'style="background-color: '. $background_color . ';"' : '';
+            $banner_body = get_post_meta( $post->ID, 'feature_banner_body', true );
+            $body_img_url = make_path_relative_no_pre_path(get_post_meta( $post->ID, 'feature_banner_body_img', true ));
+            $banner_body_img = !empty($body_img_url) ? '<img src="'.$body_img_url.'" class="img-responsive" alt="'.get_post_meta( $post->ID, 'feature_banner_body_img_alt', true ).'">' : '';
+            echo portal_display_feature_banner($banner_background_img, $banner_background_color, $banner_body, $banner_body_img);
+        } ?>
         <div class="cards">
             <div class="container">
                 <div class="row">

@@ -413,6 +413,29 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 	}
 }
 
+function portal_display_feature_banner($bg_img, $bg_color, $body, $body_img) {
+    $html = '<div class="secondary-banner" %s>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="secondary-banner-content" %s>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    %s
+                                </div>
+                                <div class="col-sm-4">
+                                    %s
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+
+    return sprintf( $html, $bg_img, $bg_color, $body, $body_img );
+}
+
 /**
  * Stay up-to-date bar html
  *
