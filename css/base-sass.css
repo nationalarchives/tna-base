@@ -7898,9 +7898,23 @@ a.content-card + .entry-content a.content-card + p a:hover {
 }
 .portal-landing .link-cards {
   padding: 1.3em;
-  background-color: #dde5d5;
+  background-color: #eee;
+}
+.portal-landing .link-cards .link-cards-content .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.portal-landing .link-cards .link-cards-content .row .col-* {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .portal-landing .link-cards .link-cards-content .link-card {
+  height: 100%;
   padding: 1em;
   color: #fff;
   background-color: #26262a;

@@ -511,10 +511,12 @@ function portal_display_link_cards($title, $cards) {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="link-cards-content">
-                            <div class="row">
+                        <div class="row">
                                 <div class="col-md-12">
                                     <h3>%s</h3>
                                 </div>
+                            </div>
+                            <div class="row">
                                 %s
                             </div>
                         </div>
