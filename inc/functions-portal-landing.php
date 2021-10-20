@@ -48,6 +48,13 @@ function portal_landing_meta_boxes() {
 					'type' => 'media',
 					'std' => ''
 				),
+                array(
+                    'name' => 'Portal background theme colour',
+                    'desc' => 'Hex value. Default #FFFFFF white.',
+                    'id'   => 'portal_theme_colour',
+                    'type' => 'text',
+                    'std'  => ''
+                ),
 				array(
 					'name' => 'Stay up-to-date bar',
 					'desc' => '',
@@ -98,13 +105,6 @@ function portal_landing_meta_boxes() {
                     'id' => 'feature_banner',
                     'type' => 'select',
                     'options' => array('Disable', 'Enable')
-                ),
-                array(
-                    'name' => 'Feature banner background colour',
-                    'desc' => 'Hex value. Default #FFFFFF white.',
-                    'id'   => 'feature_banner_colour',
-                    'type' => 'text',
-                    'std'  => ''
                 ),
                 array(
                     'name' => 'Feature banner body',
@@ -499,14 +499,14 @@ function portal_link_card($url, $title) {
     return sprintf( $html, $url, $title );
 }
 
-function portal_display_link_cards($title, $cards) {
+function portal_display_link_cards($color, $title, $cards) {
 
     $cards_html = '';
     foreach ($cards as $c) {
         $cards_html .= portal_link_card($c['url'], $c['title']);
     }
 
-    $html = '<div class="link-cards">
+    $html = '<div class="link-cards" %s>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -525,7 +525,7 @@ function portal_display_link_cards($title, $cards) {
             </div>
         </div>';
 
-    return sprintf( $html, $title, $cards_html );
+    return sprintf( $html, $color, $title, $cards_html );
 }
 
 /**

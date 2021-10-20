@@ -56,7 +56,7 @@ get_header(); ?>
         if (get_post_meta( $post->ID, 'feature_banner', true ) == 'Enable') {
             $banner_background_img_url = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'feature_banner_background_img', true ) );
             $banner_background_img = !empty($banner_background_img_url) ? 'style="background-image: url('. $banner_background_img_url . ');"' : '';
-            $background_color = get_post_meta( $post->ID, 'feature_banner_colour', true );
+            $background_color = get_post_meta( $post->ID, 'portal_theme_colour', true );
             $banner_background_color = !empty($background_color) ? 'style="background-color: '. $background_color . ';"' : '';
             $banner_body = get_post_meta( $post->ID, 'feature_banner_body', true );
             $body_img_url = make_path_relative_no_pre_path(get_post_meta( $post->ID, 'feature_banner_body_img', true ));
@@ -96,6 +96,8 @@ get_header(); ?>
             </div>
         </div>
         <?php if (get_post_meta( $post->ID, 'display_link_cards', true ) == 'Enable') {
+            $background_color = get_post_meta( $post->ID, 'portal_theme_colour', true );
+            $background_color = !empty($background_color) ? 'style="background-color: '. $background_color . ';"' : '';
             $cards = [];
             for ( $i=0 ; $i<=5 ; $i++ ) {
                 if (!empty(get_post_meta( $post->ID, 'portal_link_card_url_'.$i, true ))) {
@@ -106,7 +108,7 @@ get_header(); ?>
                     array_push($cards, $card);
                 }
             }
-            echo portal_display_link_cards(get_post_meta( $post->ID, 'portal_link_card_section_heading', true ), $cards);
+            echo portal_display_link_cards($background_color, get_post_meta( $post->ID, 'portal_link_card_section_heading', true ), $cards);
         } ?>
 	</main>
 </div>
