@@ -95,6 +95,19 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+        <?php if (get_post_meta( $post->ID, 'display_link_cards', true ) == 'Enable') {
+            $cards = [];
+            for ( $i=0 ; $i<=5 ; $i++ ) {
+                if (!empty(get_post_meta( $post->ID, 'portal_link_card_url_'.$i, true ))) {
+                    $card = [
+                        'url'           => get_post_meta( $post->ID, 'portal_link_card_url_'.$i, true ),
+                        'title'         => get_post_meta( $post->ID, 'portal_link_card_title_'.$i, true )
+                    ];
+                    array_push($cards, $card);
+                }
+            }
+            echo portal_display_link_cards(get_post_meta( $post->ID, 'portal_link_card_section_heading', true ), $cards);
+        } ?>
 	</main>
 </div>
 <?php endwhile; ?>

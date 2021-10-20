@@ -76,7 +76,21 @@
     background-repeat: no-repeat;
     .feature-banner-content{
       padding: 1em;
-      background: #fff;
+      background-color: $tna_white;
+    }
+  }
+  .link-cards {
+    padding: 1.3em;
+    background-color: $green;
+    .link-cards-content{
+      .link-card {
+        padding: 1em;
+        color: $tna_white;
+        background-color: $dark;
+        a {
+          color: $tna_white;
+        }
+      }
     }
   }
 }

@@ -201,6 +201,59 @@ function portal_landing_meta_boxes() {
 		);
 	}
 
+    $portal_meta_boxes[] =
+        array(
+            'id' => 'portal_link_card_options',
+            'title' => 'Link Card Options',
+            'pages' => 'page',
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Display link cards',
+                    'desc' => '',
+                    'id' => 'display_link_cards',
+                    'type' => 'select',
+                    'options' => array('Disable', 'Enable')
+                ),
+                array(
+                    'name' => 'Heading',
+                    'desc' => '',
+                    'id' => 'portal_link_card_section_heading',
+                    'type' => 'text',
+                    'std' => ''
+                )
+            )
+        );
+
+    for ( $i = 0; $i <= 5; $i ++ ) {
+
+        $portal_meta_boxes[] =
+            array(
+                'id' => 'portal_link_card_' . $i,
+                'title' => 'Link Card ' . ($i+1),
+                'pages' => 'page',
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Title',
+                        'desc' => '',
+                        'id' => 'portal_link_card_title_' . $i,
+                        'type' => 'text',
+                        'std' => ''
+                    ),
+                    array(
+                        'name' => 'URL',
+                        'desc' => '',
+                        'id' => 'portal_link_card_url_' . $i,
+                        'type' => 'text',
+                        'std' => ''
+                    )
+                )
+            );
+    }
+
 	$template_file = get_post_meta($post_id, '_wp_page_template', true);
 
 	if( $template_file == 'page-portal-landing.php' ) {
@@ -434,6 +487,43 @@ function portal_display_feature_banner($bg_img, $bg_color, $body, $body_img) {
         </div>';
 
     return sprintf( $html, $bg_img, $bg_color, $body, $body_img );
+}
+
+function portal_link_card($url, $title) {
+    $html = '<div class="col-md-2">
+                    <div class="link-card">
+                        <h4><a href="%s">%s</a></h4>
+                    </div>
+                </div>';
+
+    return sprintf( $html, $url, $title );
+}
+
+function portal_display_link_cards($title, $cards) {
+
+    $cards_html = '';
+    foreach ($cards as $c) {
+        $cards_html .= portal_link_card($c['url'], $c['title']);
+    }
+
+    $html = '<div class="link-cards">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="link-cards-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>%s</h3>
+                                </div>
+                                %s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+
+    return sprintf( $html, $title, $cards_html );
 }
 
 /**

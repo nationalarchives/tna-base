@@ -7894,7 +7894,19 @@ a.content-card + .entry-content a.content-card + p a:hover {
 }
 .portal-landing .feature-banner .feature-banner-content {
   padding: 1em;
-  background: #fff;
+  background-color: #fff;
+}
+.portal-landing .link-cards {
+  padding: 1.3em;
+  background-color: #dde5d5;
+}
+.portal-landing .link-cards .link-cards-content .link-card {
+  padding: 1em;
+  color: #fff;
+  background-color: #26262a;
+}
+.portal-landing .link-cards .link-cards-content .link-card a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=base-sass.css.map */
