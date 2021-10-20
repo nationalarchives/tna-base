@@ -7886,13 +7886,13 @@ a.content-card + .entry-content a.content-card + p a:hover {
 .portal-landing .stay-up-to-date-bar a .icon-circle {
   margin: 0 2px 0;
 }
-.portal-landing .secondary-banner {
+.portal-landing .feature-banner {
   padding: 1.3em;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.portal-landing .secondary-banner .secondary-banner-content {
+.portal-landing .feature-banner .feature-banner-content {
   padding: 1em;
   background: #fff;
 }
