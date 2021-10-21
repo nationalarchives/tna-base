@@ -71,6 +71,7 @@
   }
   .feature-banner {
     padding: 1.3em;
+    margin-bottom: 1.6em;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -105,6 +106,13 @@
           color: $tna_white;
         }
       }
+    }
+  }
+  .card-section-heading.bg-color {
+    padding: 1em;
+    margin-bottom: 1em;
+    h3 {
+      border: none;
     }
   }
 }

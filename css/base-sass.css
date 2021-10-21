@@ -7888,6 +7888,7 @@ a.content-card + .entry-content a.content-card + p a:hover {
 }
 .portal-landing .feature-banner {
   padding: 1.3em;
+  margin-bottom: 1.6em;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7921,6 +7922,13 @@ a.content-card + .entry-content a.content-card + p a:hover {
 }
 .portal-landing .link-cards .link-cards-content .link-card a {
   color: #fff;
+}
+.portal-landing .card-section-heading.bg-color {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.portal-landing .card-section-heading.bg-color h3 {
+  border: none;
 }
 
 /*# sourceMappingURL=base-sass.css.map */

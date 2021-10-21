@@ -140,14 +140,42 @@ function portal_landing_meta_boxes() {
 
 	for ( $i = 0; $i <= 9; $i ++ ) {
 
+	    /*if ($i == 0 || $i == 3 || $i == 6)
+        {
+            $portal_meta_boxes[] =
+                array(
+                    'id' => 'portal_card_'.$i.'_heading',
+                    'title' => 'Card '.($i+1).' heading',
+                    'pages' => 'page',
+                    'context' => 'normal',
+                    'priority' => 'high',
+                    'fields' => array(
+                        array(
+                            'name' => 'Heading',
+                            'desc' => '',
+                            'id' => 'portal_card_section_heading_'.$i,
+                            'type' => 'text',
+                            'std' => ''
+                        )
+                    )
+                );
+        }*/
+
 		$portal_meta_boxes[] =
 			array(
 				'id'       => 'portal_card_'.$i,
-				'title'    => 'Card '.$i,
+				'title'    => 'Card '.($i+1),
 				'pages'    => 'page',
 				'context'  => 'normal',
 				'priority' => 'high',
 				'fields'   => array(
+                    array(
+                        'name' => 'Section heading',
+                        'desc' => 'This heading will appear above this card as a section divider.',
+                        'id'   => 'portal_card_section_heading_'.$i,
+                        'type' => 'text',
+                        'std'  => ''
+                    ),
 					array(
 						'name' => 'Content URL*',
 						'desc' => $descUrl,
@@ -471,6 +499,21 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 			$date_html
 		);
 	}
+}
+
+function display_card_section_heading($heading, $theme_bg_color) {
+    $background_color = '';
+    $class = '';
+    if (!empty($theme_bg_color))
+    {
+        $background_color = ' style="background-color: '. $theme_bg_color . ';"';
+        $class = ' bg-color';
+    }
+    $html = '<div class="col-xs-12"><div class="card-section-heading%s"%s>
+					<h3>%s</h3>
+			</div></div>';
+
+    return sprintf( $html, $class, $background_color, $heading );
 }
 
 function portal_display_feature_banner($bg_img, $bg_color, $body, $body_img) {

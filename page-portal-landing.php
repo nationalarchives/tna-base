@@ -15,6 +15,7 @@ get_header(); ?>
 	$newsletter   = get_post_meta( $post->ID, 'newsletter_link', true );
 	$intro_img    = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'intro_img', true ) );
 	$class        = $logo ? 'portal-branding' : 'portal-title';
+    $theme_bg_color = get_post_meta( $post->ID, 'portal_theme_colour', true );
 	?>
 <div class="portal-landing">
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
@@ -56,8 +57,7 @@ get_header(); ?>
         if (get_post_meta( $post->ID, 'feature_banner', true ) == 'Enable') {
             $banner_background_img_url = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'feature_banner_background_img', true ) );
             $banner_background_img = !empty($banner_background_img_url) ? 'style="background-image: url('. $banner_background_img_url . ');"' : '';
-            $background_color = get_post_meta( $post->ID, 'portal_theme_colour', true );
-            $banner_background_color = !empty($background_color) ? 'style="background-color: '. $background_color . ';"' : '';
+            $banner_background_color = !empty($theme_bg_color) ? 'style="background-color: '. $theme_bg_color . ';"' : '';
             $banner_body = get_post_meta( $post->ID, 'feature_banner_body', true );
             $body_img_url = make_path_relative_no_pre_path(get_post_meta( $post->ID, 'feature_banner_body_img', true ));
             $banner_body_img = !empty($body_img_url) ? '<img src="'.$body_img_url.'" class="img-responsive" alt="'.get_post_meta( $post->ID, 'feature_banner_body_img_alt', true ).'">' : '';
@@ -81,6 +81,12 @@ get_header(); ?>
                             'label'         => get_post_meta( $post->ID, 'portal_card_label_'.$i, true )
                         );
 
+                        $heading = get_post_meta( $post->ID, 'portal_card_section_heading_'.$i, true );
+                        if (!empty($heading))
+                        {
+                            echo display_card_section_heading($heading, $theme_bg_color);
+                        }
+
                         if ( portal_is_card_active( $expire ) ) {
 
                             echo display_card( $args );
@@ -96,8 +102,7 @@ get_header(); ?>
             </div>
         </div>
         <?php if (get_post_meta( $post->ID, 'display_link_cards', true ) == 'Enable') {
-            $background_color = get_post_meta( $post->ID, 'portal_theme_colour', true );
-            $background_color = !empty($background_color) ? 'style="background-color: '. $background_color . ';"' : '';
+            $background_color = !empty($theme_bg_color) ? 'style="background-color: '. $theme_bg_color . ';"' : '';
             $cards = [];
             $content_type = get_post_meta( $post->ID, 'content_link_cards', true );
             for ( $i=0 ; $i<=5 ; $i++ ) {
