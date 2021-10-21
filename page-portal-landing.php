@@ -31,8 +31,9 @@ get_header(); ?>
 				<?php get_image_caption( 'top' ); ?>
 			</div>
 		</div>
-		<?php if ($bar == 'Enable') {
-			echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter, $theme_bg_color );
+		<?php if ($bar == 'Enable' || $bar == 'Top location') {
+            $text = get_post_meta( $post->ID, 'stay_up_to_date_content', true );
+			echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter, $theme_bg_color, $text );
 		} ?>
 	</div>
 	<main id="main" role="main">
@@ -115,6 +116,10 @@ get_header(); ?>
                 }
             }
             echo portal_display_link_cards($background_color, get_post_meta( $post->ID, 'portal_link_card_section_heading', true ), $cards, $content_type);
+        }
+        if ($bar == 'Bottom location') {
+            $text = get_post_meta( $post->ID, 'stay_up_to_date_content', true );
+            echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter, $theme_bg_color, $text );
         } ?>
 	</main>
 </div>

@@ -7895,7 +7895,7 @@ a.content-card + .entry-content a.content-card + p a:hover {
 }
 .portal-landing .feature-banner .feature-banner-content {
   padding: 1em;
-  background-color: #fff;
+  background-color: #eee;
 }
 .portal-landing .link-cards {
   padding: 1.3em;
@@ -7924,7 +7924,7 @@ a.content-card + .entry-content a.content-card + p a:hover {
   color: #fff;
 }
 .portal-landing .card-section-heading.bg-color {
-  padding: 1em;
+  padding: 0.5em 1em;
   margin-bottom: 1em;
 }
 .portal-landing .card-section-heading.bg-color h3 {

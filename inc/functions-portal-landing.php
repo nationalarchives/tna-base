@@ -35,22 +35,22 @@ function portal_landing_meta_boxes() {
 			'priority' => 'high',
 			'fields' => array(
 				array(
-					'name' => 'Logo',
-					'desc' => '',
+					'name' => 'Masthead logo',
+					'desc' => 'Logo appears over the masthead image and above the H1.',
 					'id' => 'portal_logo',
 					'type' => 'media',
 					'std' => ''
 				),
 				array(
 					'name' => 'Introduction image',
-					'desc' => '',
+					'desc' => 'Image appears right of the introduction text.',
 					'id' => 'intro_img',
 					'type' => 'media',
 					'std' => ''
 				),
                 array(
                     'name' => 'Portal background theme colour',
-                    'desc' => 'Hex value. Default #FFFFFF white.',
+                    'desc' => 'Hex value. Default: #EEEEEE.',
                     'id'   => 'portal_theme_colour',
                     'type' => 'text',
                     'std'  => ''
@@ -60,8 +60,15 @@ function portal_landing_meta_boxes() {
 					'desc' => '',
 					'id' => 'stay_up_to_date',
 					'type' => 'select',
-					'options' => array('Disable', 'Enable')
+					'options' => array('Hide', 'Top location', 'Bottom location')
 				),
+                array(
+                    'name' => 'Stay up-to-date bar content',
+                    'desc' => 'Default: Stay up-to-date with all our activity.',
+                    'id' => 'stay_up_to_date_content',
+                    'type' => 'text',
+                    'std' => ''
+                ),
 				array(
 					'name' => 'Facebook link',
 					'desc' => '',
@@ -139,27 +146,6 @@ function portal_landing_meta_boxes() {
 	);
 
 	for ( $i = 0; $i <= 9; $i ++ ) {
-
-	    /*if ($i == 0 || $i == 3 || $i == 6)
-        {
-            $portal_meta_boxes[] =
-                array(
-                    'id' => 'portal_card_'.$i.'_heading',
-                    'title' => 'Card '.($i+1).' heading',
-                    'pages' => 'page',
-                    'context' => 'normal',
-                    'priority' => 'high',
-                    'fields' => array(
-                        array(
-                            'name' => 'Heading',
-                            'desc' => '',
-                            'id' => 'portal_card_section_heading_'.$i,
-                            'type' => 'text',
-                            'std' => ''
-                        )
-                    )
-                );
-        }*/
 
 		$portal_meta_boxes[] =
 			array(
@@ -598,11 +584,11 @@ function portal_display_link_cards($color, $title, $cards, $content_type) {
  * @param string $twitter
  * @param string $insatgram
  * @param string $newsletter
- *
  * @param string $theme_bg_color
+ * @param string $text
  * @return string
  */
-function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='', $theme_bg_color='' ) {
+function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='', $theme_bg_color='', $text='' ) {
 
 	if ( $facebook ) {
 		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-facebook icon-size-26"></div></a>';
@@ -624,13 +610,19 @@ function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newslett
     {
         $background_color = ' style="background-color: '. $theme_bg_color . ';"';
     }
+    if (!empty($text))
+    {
+        $title = $text;
+    } else {
+        $title = 'Stay up-to-date with all our activity';
+    }
 
 	$html =     '<div class="stay-up-to-date-bar"'.$background_color.'>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="text-right">
-									<span>Stay up-to-date with all our activity</span> '
+								<div class="text-center">
+									<span>'.$title.'</span> '
 									.$facebook.$twitter.$insatgram.$newsletter.
 								'</div>
 							</div>
