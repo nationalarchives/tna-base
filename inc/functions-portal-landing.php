@@ -217,6 +217,13 @@ function portal_landing_meta_boxes() {
                     'options' => array('Disable', 'Enable')
                 ),
                 array(
+                    'name' => 'Content',
+                    'desc' => '[Child pages] will populate cards from child pages. [Custom cards] will populate from Link Card fields below.',
+                    'id' => 'content_link_cards',
+                    'type' => 'select',
+                    'options' => array('Child pages', 'Custom cards')
+                ),
+                array(
                     'name' => 'Heading',
                     'desc' => '',
                     'id' => 'portal_link_card_section_heading',
@@ -499,11 +506,24 @@ function portal_link_card($url, $title) {
     return sprintf( $html, $url, $title );
 }
 
-function portal_display_link_cards($color, $title, $cards) {
+function portal_display_link_cards($color, $title, $cards, $content_type) {
 
     $cards_html = '';
-    foreach ($cards as $c) {
-        $cards_html .= portal_link_card($c['url'], $c['title']);
+    if ($content_type == 'Custom cards')
+    {
+        foreach ($cards as $c) {
+            $cards_html .= portal_link_card($c['url'], $c['title']);
+        }
+    } else {
+        Global $post;
+        $children = get_pages('child_of='.$post->ID.'&sort_column=menu_order');
+        if (isset($children) && count($children) > 0)
+        {
+            foreach ($children as $child)
+            {
+                $cards_html .= portal_link_card(esc_url( get_page_link( $child->ID ) ), $child->post_title);
+            }
+        }
     }
 
     $html = '<div class="link-cards" %s>

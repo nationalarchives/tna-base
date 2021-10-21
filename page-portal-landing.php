@@ -99,6 +99,7 @@ get_header(); ?>
             $background_color = get_post_meta( $post->ID, 'portal_theme_colour', true );
             $background_color = !empty($background_color) ? 'style="background-color: '. $background_color . ';"' : '';
             $cards = [];
+            $content_type = get_post_meta( $post->ID, 'content_link_cards', true );
             for ( $i=0 ; $i<=5 ; $i++ ) {
                 if (!empty(get_post_meta( $post->ID, 'portal_link_card_url_'.$i, true ))) {
                     $card = [
@@ -108,7 +109,7 @@ get_header(); ?>
                     array_push($cards, $card);
                 }
             }
-            echo portal_display_link_cards($background_color, get_post_meta( $post->ID, 'portal_link_card_section_heading', true ), $cards);
+            echo portal_display_link_cards($background_color, get_post_meta( $post->ID, 'portal_link_card_section_heading', true ), $cards, $content_type);
         } ?>
 	</main>
 </div>
