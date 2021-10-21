@@ -596,11 +596,13 @@ function portal_display_link_cards($color, $title, $cards, $content_type) {
  *
  * @param string $facebook
  * @param string $twitter
+ * @param string $insatgram
  * @param string $newsletter
  *
+ * @param string $theme_bg_color
  * @return string
  */
-function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='' ) {
+function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='', $theme_bg_color='' ) {
 
 	if ( $facebook ) {
 		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-facebook icon-size-26"></div></a>';
@@ -617,7 +619,13 @@ function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newslett
         $newsletter = '';
     }
 
-	$html =     '<div class="stay-up-to-date-bar">
+    $background_color = '';
+    if (!empty($theme_bg_color))
+    {
+        $background_color = ' style="background-color: '. $theme_bg_color . ';"';
+    }
+
+	$html =     '<div class="stay-up-to-date-bar"'.$background_color.'>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">

@@ -32,7 +32,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<?php if ($bar == 'Enable') {
-			echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter );
+			echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter, $theme_bg_color );
 		} ?>
 	</div>
 	<main id="main" role="main">
