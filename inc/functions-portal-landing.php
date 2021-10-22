@@ -495,7 +495,7 @@ function display_card_section_heading($heading, $theme_bg_color) {
         $background_color = ' style="background-color: '. $theme_bg_color . ';"';
         $class = ' bg-color';
     }
-    $html = '<div class="col-xs-12"><div class="card-section-heading%s"%s>
+    $html = '<div class="col-md-12"><div class="card-section-heading%s"%s>
 					<h3>%s</h3>
 			</div></div>';
 

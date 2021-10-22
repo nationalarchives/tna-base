@@ -113,4 +113,14 @@
       border: none;
     }
   }
+  .cards {
+    .col-md-12 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
 }

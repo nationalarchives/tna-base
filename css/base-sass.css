@@ -7928,5 +7928,13 @@ a.content-card + .entry-content a.content-card + p a:hover {
 .portal-landing .card-section-heading.bg-color h3 {
   border: none;
 }
+.portal-landing .cards .col-md-12 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
 
 /*# sourceMappingURL=base-sass.css.map */
