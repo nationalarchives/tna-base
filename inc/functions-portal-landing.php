@@ -420,7 +420,7 @@ function portal_card_date( $date, $type ) {
  *
  * @return string
  */
-function portal_limit_words( $words, $number = 14 ) {
+function portal_limit_words( $words, $number = 22 ) {
 	if (str_word_count($words, 0) > $number) {
 		$explode_words = explode( ' ', $words );
 		$words = implode(' ', array_splice( $explode_words , 0, $number)) . '...';
