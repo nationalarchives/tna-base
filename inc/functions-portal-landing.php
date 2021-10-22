@@ -195,7 +195,7 @@ function portal_landing_meta_boxes() {
 						'desc' => 'Auto will select an appropriate card label.',
 						'id' => 'portal_card_label_'.$i,
 						'type' => 'select',
-						'options' => array('Auto', 'Resource', 'Bookshop')
+						'options' => array('Auto', 'About', 'Audio', 'Blog', 'Bookshop', 'Careers', 'Case study', 'Collaboration', 'Event', 'Feature', 'Guidance', 'Multimedia', 'News', 'Podcast', 'Project', 'Resource', 'Service', 'Study resource', 'Training', 'Video', 'Webinar')
 					),
 					array(
 						'name' => 'Event date/time',
