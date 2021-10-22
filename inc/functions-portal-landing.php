@@ -60,7 +60,7 @@ function portal_landing_meta_boxes() {
 					'desc' => '',
 					'id' => 'stay_up_to_date',
 					'type' => 'select',
-					'options' => array('Hide', 'Top location', 'Bottom location')
+					'options' => array('Top location', 'Bottom location', 'Hide')
 				),
                 array(
                     'name' => 'Stay up-to-date bar content',
@@ -590,47 +590,49 @@ function portal_display_link_cards($color, $title, $cards, $content_type) {
  */
 function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='', $theme_bg_color='', $text='' ) {
 
-	if ( $facebook ) {
-		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-facebook icon-size-26"></div></a>';
-	}
-	if ( $twitter ) {
-		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-twitter icon-size-26"></div></a>';
-	}
-    if ( $insatgram ) {
-        $insatgram = '<a href="'.$insatgram.'" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-instgram icon-size-26"></div></a>';
-    }
-	if ( $newsletter=='Enable' ) {
-		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><div class="icon-circle icon-envelope icon-size-26"></div></a>';
-	} else {
-        $newsletter = '';
-    }
+    if (!empty($facebook) || !empty($twitter) || !empty($insatgram)) {
+        if ( $facebook ) {
+            $facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-facebook icon-size-26"></div></a>';
+        }
+        if ( $twitter ) {
+            $twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-twitter icon-size-26"></div></a>';
+        }
+        if ( $insatgram ) {
+            $insatgram = '<a href="'.$insatgram.'" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-instgram icon-size-26"></div></a>';
+        }
+        if ( $newsletter=='Enable' ) {
+            $newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><div class="icon-circle icon-envelope icon-size-26"></div></a>';
+        } else {
+            $newsletter = '';
+        }
 
-    $background_color = '';
-    if (!empty($theme_bg_color))
-    {
-        $background_color = ' style="background-color: '. $theme_bg_color . ';"';
-    }
-    if (!empty($text))
-    {
-        $title = $text;
-    } else {
-        $title = 'Stay up-to-date with all our activity';
-    }
+        $background_color = '';
+        if (!empty($theme_bg_color))
+        {
+            $background_color = ' style="background-color: '. $theme_bg_color . ';"';
+        }
+        if (!empty($text))
+        {
+            $title = $text;
+        } else {
+            $title = 'Stay up-to-date with all our activity';
+        }
 
-	$html =     '<div class="stay-up-to-date-bar"'.$background_color.'>
+        $html =     '<div class="stay-up-to-date-bar"'.$background_color.'>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
 								<div class="text-center">
-									<span>'.$title.'</span> '
-									.$facebook.$twitter.$insatgram.$newsletter.
-								'</div>
+									<span class="h4">'.$title.'</span> '
+            .$facebook.$twitter.$insatgram.$newsletter.
+            '</div>
 							</div>
 						</div>
 					</div>
 				</div>';
 
-	return $html;
+        return $html;
+    }
 }
 
 /**
