@@ -7917,6 +7917,7 @@ a.content-card + .entry-content a.content-card + p a:hover {
 .portal-landing .link-cards .link-cards-content .link-card {
   height: 100%;
   padding: 1em;
+  margin-bottom: 1.4em;
   color: #fff;
   background-color: #26262a;
 }
