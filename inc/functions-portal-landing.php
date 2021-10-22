@@ -526,7 +526,7 @@ function portal_display_feature_banner($bg_img, $bg_color, $body, $body_img) {
 }
 
 function portal_link_card($url, $title) {
-    $html = '<div class="col-md-2">
+    $html = '<div class="col-md-2 col-sm-4 col-xs-12">
                     <div class="link-card">
                         <h4><a href="%s">%s</a></h4>
                     </div>

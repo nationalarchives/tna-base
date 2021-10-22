@@ -7909,15 +7909,12 @@ a.content-card + .entry-content a.content-card + p a:hover {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.portal-landing .link-cards .link-cards-content .row .col-* {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.portal-landing .link-cards .link-cards-content .row .col-md-2, .portal-landing .link-cards .link-cards-content .row .col-sm-4, .portal-landing .link-cards .link-cards-content .row .col-xs-12 {
+  margin-bottom: 1.6em;
 }
 .portal-landing .link-cards .link-cards-content .link-card {
   height: 100%;
   padding: 1em;
-  margin-bottom: 1.4em;
   color: #fff;
   background-color: #26262a;
 }
