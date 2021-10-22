@@ -63,7 +63,7 @@ function portal_landing_meta_boxes() {
 					'options' => array('Top location', 'Bottom location', 'Hide')
 				),
                 array(
-                    'name' => 'Stay up-to-date bar content',
+                    'name' => 'Stay up-to-date bar title',
                     'desc' => 'Default: Stay up-to-date with all our activity.',
                     'id' => 'stay_up_to_date_content',
                     'type' => 'text',
