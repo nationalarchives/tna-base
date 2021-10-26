@@ -35,26 +35,40 @@ function portal_landing_meta_boxes() {
 			'priority' => 'high',
 			'fields' => array(
 				array(
-					'name' => 'Logo',
-					'desc' => '',
+					'name' => 'Masthead logo',
+					'desc' => 'Logo appears over the masthead image and above the H1.',
 					'id' => 'portal_logo',
 					'type' => 'media',
 					'std' => ''
 				),
 				array(
 					'name' => 'Introduction image',
-					'desc' => '',
+					'desc' => 'Image appears right of the introduction text.',
 					'id' => 'intro_img',
 					'type' => 'media',
 					'std' => ''
 				),
+                array(
+                    'name' => 'Portal background theme colour',
+                    'desc' => 'Hex value. Default: #EEEEEE.',
+                    'id'   => 'portal_theme_colour',
+                    'type' => 'text',
+                    'std'  => ''
+                ),
 				array(
 					'name' => 'Stay up-to-date bar',
 					'desc' => '',
 					'id' => 'stay_up_to_date',
 					'type' => 'select',
-					'options' => array('Disable', 'Enable')
+					'options' => array('Top location', 'Bottom location', 'Hide')
 				),
+                array(
+                    'name' => 'Stay up-to-date bar title',
+                    'desc' => 'Default: Stay up-to-date with all our activity.',
+                    'id' => 'stay_up_to_date_content',
+                    'type' => 'text',
+                    'std' => ''
+                ),
 				array(
 					'name' => 'Facebook link',
 					'desc' => '',
@@ -84,7 +98,51 @@ function portal_landing_meta_boxes() {
 					'options' => array('Disable', 'Enable')
 				)
 			)
-		)
+		),
+        array(
+            'id' => 'feature_banner_options',
+            'title' => 'Feature banner options',
+            'pages' => 'page',
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Feature banner below introduction',
+                    'desc' => '',
+                    'id' => 'feature_banner',
+                    'type' => 'select',
+                    'options' => array('Disable', 'Enable')
+                ),
+                array(
+                    'name' => 'Feature banner body',
+                    'desc' => '',
+                    'id'   => 'feature_banner_body',
+                    'type' => 'textarea',
+                    'std'  => ''
+                ),
+                array(
+                    'name' => 'Feature banner body image',
+                    'desc' => '',
+                    'id' => 'feature_banner_body_img',
+                    'type' => 'media',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Feature banner body image alt text',
+                    'desc' => '',
+                    'id' => 'feature_banner_body_img_alt',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Feature banner background image',
+                    'desc' => '',
+                    'id' => 'feature_banner_background_img',
+                    'type' => 'media',
+                    'std' => ''
+                )
+            )
+        )
 	);
 
 	for ( $i = 0; $i <= 9; $i ++ ) {
@@ -92,11 +150,18 @@ function portal_landing_meta_boxes() {
 		$portal_meta_boxes[] =
 			array(
 				'id'       => 'portal_card_'.$i,
-				'title'    => 'Card '.$i,
+				'title'    => 'Card '.($i+1),
 				'pages'    => 'page',
 				'context'  => 'normal',
 				'priority' => 'high',
 				'fields'   => array(
+                    array(
+                        'name' => 'Section heading',
+                        'desc' => 'This heading will appear above this card as a section divider.',
+                        'id'   => 'portal_card_section_heading_'.$i,
+                        'type' => 'text',
+                        'std'  => ''
+                    ),
 					array(
 						'name' => 'Content URL*',
 						'desc' => $descUrl,
@@ -130,7 +195,7 @@ function portal_landing_meta_boxes() {
 						'desc' => 'Auto will select an appropriate card label.',
 						'id' => 'portal_card_label_'.$i,
 						'type' => 'select',
-						'options' => array('Auto', 'Resource', 'Bookshop')
+						'options' => array('Auto', 'About', 'Audio', 'Blog', 'Shop', 'Careers', 'Case study', 'Collaboration', 'Event', 'Feature', 'Guidance', 'Multimedia', 'News', 'Newsletter', 'Podcast', 'Project', 'Resource', 'Service', 'Study resource', 'Training', 'Video', 'Webinar')
 					),
 					array(
 						'name' => 'Event date/time',
@@ -149,6 +214,66 @@ function portal_landing_meta_boxes() {
 				)
 		);
 	}
+
+    $portal_meta_boxes[] =
+        array(
+            'id' => 'portal_link_card_options',
+            'title' => 'Link Card Options',
+            'pages' => 'page',
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Display link cards',
+                    'desc' => '',
+                    'id' => 'display_link_cards',
+                    'type' => 'select',
+                    'options' => array('Disable', 'Enable')
+                ),
+                array(
+                    'name' => 'Content',
+                    'desc' => '[Child pages] will populate cards from child pages. [Custom cards] will populate from Link Card fields below.',
+                    'id' => 'content_link_cards',
+                    'type' => 'select',
+                    'options' => array('Child pages', 'Custom cards')
+                ),
+                array(
+                    'name' => 'Heading',
+                    'desc' => '',
+                    'id' => 'portal_link_card_section_heading',
+                    'type' => 'text',
+                    'std' => ''
+                )
+            )
+        );
+
+    for ( $i = 0; $i <= 5; $i ++ ) {
+
+        $portal_meta_boxes[] =
+            array(
+                'id' => 'portal_link_card_' . $i,
+                'title' => 'Link Card ' . ($i+1),
+                'pages' => 'page',
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Title',
+                        'desc' => '',
+                        'id' => 'portal_link_card_title_' . $i,
+                        'type' => 'text',
+                        'std' => ''
+                    ),
+                    array(
+                        'name' => 'URL',
+                        'desc' => '',
+                        'id' => 'portal_link_card_url_' . $i,
+                        'type' => 'text',
+                        'std' => ''
+                    )
+                )
+            );
+    }
 
 	$template_file = get_post_meta($post_id, '_wp_page_template', true);
 
@@ -295,7 +420,7 @@ function portal_card_date( $date, $type ) {
  *
  * @return string
  */
-function portal_limit_words( $words, $number = 14 ) {
+function portal_limit_words( $words, $number = 22 ) {
 	if (str_word_count($words, 0) > $number) {
 		$explode_words = explode( ' ', $words );
 		$words = implode(' ', array_splice( $explode_words , 0, $number)) . '...';
@@ -362,46 +487,152 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 	}
 }
 
+function display_card_section_heading($heading, $theme_bg_color) {
+    $background_color = '';
+    $class = '';
+    if (!empty($theme_bg_color))
+    {
+        $background_color = ' style="background-color: '. $theme_bg_color . ';"';
+        $class = ' bg-color';
+    }
+    $html = '<div class="col-md-12"><div class="card-section-heading%s"%s>
+					<h3>%s</h3>
+			</div></div>';
+
+    return sprintf( $html, $class, $background_color, $heading );
+}
+
+function portal_display_feature_banner($bg_img, $bg_color, $body, $body_img) {
+    $html = '<div class="feature-banner" %s>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="feature-banner-content" %s>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    %s
+                                </div>
+                                <div class="col-sm-4">
+                                    %s
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+
+    return sprintf( $html, $bg_img, $bg_color, $body, $body_img );
+}
+
+function portal_link_card($url, $title) {
+    $html = '<div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="link-card">
+                        <h4><a href="%s">%s</a></h4>
+                    </div>
+                </div>';
+
+    return sprintf( $html, $url, $title );
+}
+
+function portal_display_link_cards($color, $title, $cards, $content_type) {
+
+    $cards_html = '';
+    if ($content_type == 'Custom cards')
+    {
+        foreach ($cards as $c) {
+            $cards_html .= portal_link_card($c['url'], $c['title']);
+        }
+    } else {
+        Global $post;
+        $children = get_pages('child_of='.$post->ID.'&sort_column=menu_order');
+        if (isset($children) && count($children) > 0)
+        {
+            foreach ($children as $child)
+            {
+                $cards_html .= portal_link_card(esc_url( get_page_link( $child->ID ) ), $child->post_title);
+            }
+        }
+    }
+
+    $html = '<div class="link-cards" %s>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="link-cards-content">
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <h3>%s</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                %s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>';
+
+    return sprintf( $html, $color, $title, $cards_html );
+}
+
 /**
  * Stay up-to-date bar html
  *
  * @param string $facebook
  * @param string $twitter
+ * @param string $insatgram
  * @param string $newsletter
- *
+ * @param string $theme_bg_color
+ * @param string $text
  * @return string
  */
-function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='' ) {
+function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='', $theme_bg_color='', $text='' ) {
 
-	if ( $facebook ) {
-		$facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-facebook icon-size-26"></div></a>';
-	}
-	if ( $twitter ) {
-		$twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-twitter icon-size-26"></div></a>';
-	}
-    if ( $insatgram ) {
-        $insatgram = '<a href="'.$insatgram.'" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-instgram icon-size-26"></div></a>';
-    }
-	if ( $newsletter=='Enable' ) {
-		$newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><div class="icon-circle icon-envelope icon-size-26"></div></a>';
-	} else {
-        $newsletter = '';
-    }
+    if (!empty($facebook) || !empty($twitter) || !empty($insatgram)) {
+        if ( $facebook ) {
+            $facebook = '<a href="'.$facebook.'" title="Follow us on Facebook" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-facebook icon-size-26"></div></a>';
+        }
+        if ( $twitter ) {
+            $twitter = '<a href="'.$twitter.'" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-twitter icon-size-26"></div></a>';
+        }
+        if ( $insatgram ) {
+            $insatgram = '<a href="'.$insatgram.'" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><div class="icon-circle icon-instgram icon-size-26"></div></a>';
+        }
+        if ( $newsletter=='Enable' ) {
+            $newsletter = '<a href="#newsletterAccessibility" title="Send me The National Archives’ newsletter" rel="noopener noreferrer" class="anchor-link"><div class="icon-circle icon-envelope icon-size-26"></div></a>';
+        } else {
+            $newsletter = '';
+        }
 
-	$html =     '<div class="stay-up-to-date-bar">
+        $background_color = '';
+        if (!empty($theme_bg_color))
+        {
+            $background_color = ' style="background-color: '. $theme_bg_color . ';"';
+        }
+        if (!empty($text))
+        {
+            $title = $text;
+        } else {
+            $title = 'Stay up-to-date with all our activity';
+        }
+
+        $html =     '<div class="stay-up-to-date-bar"'.$background_color.'>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="text-right">
-									<span>Stay up-to-date with all our activity</span> '
-									.$facebook.$twitter.$insatgram.$newsletter.
-								'</div>
+								<div class="text-center">
+									<span class="h4">'.$title.'</span> '
+            .$facebook.$twitter.$insatgram.$newsletter.
+            '</div>
 							</div>
 						</div>
 					</div>
 				</div>';
 
-	return $html;
+        return $html;
+    }
 }
 
 /**

@@ -15,6 +15,7 @@ get_header(); ?>
 	$newsletter   = get_post_meta( $post->ID, 'newsletter_link', true );
 	$intro_img    = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'intro_img', true ) );
 	$class        = $logo ? 'portal-branding' : 'portal-title';
+    $theme_bg_color = get_post_meta( $post->ID, 'portal_theme_colour', true );
 	?>
 <div class="portal-landing">
 	<div class="banner feature-img" role="banner" <?php echo $banner_img ?>>
@@ -30,8 +31,9 @@ get_header(); ?>
 				<?php get_image_caption( 'top' ); ?>
 			</div>
 		</div>
-		<?php if ($bar == 'Enable') {
-			echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter );
+		<?php if ($bar == 'Enable' || $bar == 'Top location') {
+            $text = get_post_meta( $post->ID, 'stay_up_to_date_content', true );
+			echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter, $theme_bg_color, $text );
 		} ?>
 	</div>
 	<main id="main" role="main">
@@ -52,6 +54,16 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+        <?php
+        if (get_post_meta( $post->ID, 'feature_banner', true ) == 'Enable') {
+            $banner_background_img_url = make_path_relative_no_pre_path( get_post_meta( $post->ID, 'feature_banner_background_img', true ) );
+            $banner_background_img = !empty($banner_background_img_url) ? 'style="background-image: url('. $banner_background_img_url . ');"' : '';
+            $banner_background_color = !empty($theme_bg_color) ? 'style="background-color: '. $theme_bg_color . ';"' : '';
+            $banner_body = get_post_meta( $post->ID, 'feature_banner_body', true );
+            $body_img_url = make_path_relative_no_pre_path(get_post_meta( $post->ID, 'feature_banner_body_img', true ));
+            $banner_body_img = !empty($body_img_url) ? '<img src="'.$body_img_url.'" class="img-responsive" alt="'.get_post_meta( $post->ID, 'feature_banner_body_img_alt', true ).'">' : '';
+            echo portal_display_feature_banner($banner_background_img, $banner_background_color, $banner_body, $banner_body_img);
+        } ?>
         <div class="cards">
             <div class="container">
                 <div class="row">
@@ -70,6 +82,12 @@ get_header(); ?>
                             'label'         => get_post_meta( $post->ID, 'portal_card_label_'.$i, true )
                         );
 
+                        $heading = get_post_meta( $post->ID, 'portal_card_section_heading_'.$i, true );
+                        if (!empty($heading))
+                        {
+                            echo display_card_section_heading($heading, $theme_bg_color);
+                        }
+
                         if ( portal_is_card_active( $expire ) ) {
 
                             echo display_card( $args );
@@ -84,6 +102,25 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+        <?php if (get_post_meta( $post->ID, 'display_link_cards', true ) == 'Enable') {
+            $background_color = !empty($theme_bg_color) ? 'style="background-color: '. $theme_bg_color . ';"' : '';
+            $cards = [];
+            $content_type = get_post_meta( $post->ID, 'content_link_cards', true );
+            for ( $i=0 ; $i<=5 ; $i++ ) {
+                if (!empty(get_post_meta( $post->ID, 'portal_link_card_url_'.$i, true ))) {
+                    $card = [
+                        'url'           => get_post_meta( $post->ID, 'portal_link_card_url_'.$i, true ),
+                        'title'         => get_post_meta( $post->ID, 'portal_link_card_title_'.$i, true )
+                    ];
+                    array_push($cards, $card);
+                }
+            }
+            echo portal_display_link_cards($background_color, get_post_meta( $post->ID, 'portal_link_card_section_heading', true ), $cards, $content_type);
+        }
+        if ($bar == 'Bottom location') {
+            $text = get_post_meta( $post->ID, 'stay_up_to_date_content', true );
+            echo portal_connect_bar( $facebook, $twitter, $instagram, $newsletter, $theme_bg_color, $text );
+        } ?>
 	</main>
 </div>
 <?php endwhile; ?>
