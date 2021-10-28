@@ -5763,6 +5763,11 @@ a#cookieCutter:hover {
   color: #26262a;
 }
 
+.hue-hot-pink {
+  background-color: #E71A62;
+  color: #000;
+}
+
 .hue-grey-dark {
   background-color: #26262a;
   color: #fff;
