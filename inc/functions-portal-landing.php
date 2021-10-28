@@ -48,13 +48,6 @@ function portal_landing_meta_boxes() {
 					'type' => 'media',
 					'std' => ''
 				),
-                array(
-                    'name' => 'Portal background theme colour',
-                    'desc' => 'Hex value. Default: #EEEEEE.',
-                    'id'   => 'portal_theme_colour',
-                    'type' => 'text',
-                    'std'  => ''
-                ),
 				array(
 					'name' => 'Stay up-to-date bar',
 					'desc' => '',
@@ -62,6 +55,13 @@ function portal_landing_meta_boxes() {
 					'type' => 'select',
 					'options' => array('Top location', 'Bottom location', 'Hide')
 				),
+                array(
+                    'name' => 'Stay up-to-date background colour',
+                    'desc' => '',
+                    'id' => 'stay_up_to_date_colour',
+                    'type' => 'select',
+                    'options' => array('Green', 'Light pink', 'Hot pink')
+                ),
                 array(
                     'name' => 'Stay up-to-date bar title',
                     'desc' => 'Default: Stay up-to-date with all our activity.',
@@ -96,7 +96,14 @@ function portal_landing_meta_boxes() {
 					'id' => 'newsletter_link',
 					'type' => 'select',
 					'options' => array('Disable', 'Enable')
-				)
+				),
+                array(
+                    'name' => 'Card section background colour',
+                    'desc' => '',
+                    'id' => 'portal_card_section_color',
+                    'type' => 'select',
+                    'options' => array('None', 'Green', 'Light pink', 'Hot pink')
+                )
 			)
 		),
         array(
@@ -112,6 +119,13 @@ function portal_landing_meta_boxes() {
                     'id' => 'feature_banner',
                     'type' => 'select',
                     'options' => array('Disable', 'Enable')
+                ),
+                array(
+                    'name' => 'Background colour',
+                    'desc' => '',
+                    'id' => 'feature_banner_colour',
+                    'type' => 'select',
+                    'options' => array('Green', 'Light pink', 'Hot pink', 'White')
                 ),
                 array(
                     'name' => 'Feature banner body',
@@ -229,6 +243,13 @@ function portal_landing_meta_boxes() {
                     'id' => 'display_link_cards',
                     'type' => 'select',
                     'options' => array('Disable', 'Enable')
+                ),
+                array(
+                    'name' => 'Background colour',
+                    'desc' => '',
+                    'id' => 'link_cards_colour',
+                    'type' => 'select',
+                    'options' => array('Green', 'Light pink', 'Hot pink')
                 ),
                 array(
                     'name' => 'Content',
@@ -487,27 +508,40 @@ function portal_display_card( $i, $url, $title, $excerpt, $image, $date, $label 
 	}
 }
 
-function display_card_section_heading($heading, $theme_bg_color) {
-    $background_color = '';
-    $class = '';
-    if (!empty($theme_bg_color))
-    {
-        $background_color = ' style="background-color: '. $theme_bg_color . ';"';
-        $class = ' bg-color';
+function display_card_section_heading($heading, $color) {
+
+    $color_class = '';
+    if ($color == 'Light pink') {
+        $color_class = 'bg-color hue-pink';
+    } elseif ($color == 'Hot pink') {
+        $color_class = 'bg-color hue-hot-pink';
+    } elseif ($color == 'Green') {
+        $color_class = 'bg-color hue-green';
     }
-    $html = '<div class="col-md-12"><div class="card-section-heading%s"%s>
+
+    $html = '<div class="col-md-12"><div class="card-section-heading %s">
 					<h3>%s</h3>
 			</div></div>';
 
-    return sprintf( $html, $class, $background_color, $heading );
+    return sprintf( $html, $color_class, $heading );
 }
 
-function portal_display_feature_banner($bg_img, $bg_color, $body, $body_img) {
+function portal_display_feature_banner($bg_img, $color, $body, $body_img) {
+
+    $color_class = 'hue-green';
+    if ($color == 'Light pink') {
+        $color_class = 'hue-pink';
+    } elseif ($color == 'Hot pink') {
+        $color_class = 'hue-hot-pink';
+    } elseif ($color == 'White') {
+        $color_class = 'hue-white';
+    }
+
     $html = '<div class="feature-banner" %s>
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <div class="feature-banner-content" %s>
+                        <div class="feature-banner-content %s">
                             <div class="row">
                                 <div class="col-sm-8">
                                     %s
@@ -522,7 +556,7 @@ function portal_display_feature_banner($bg_img, $bg_color, $body, $body_img) {
             </div>
         </div>';
 
-    return sprintf( $html, $bg_img, $bg_color, $body, $body_img );
+    return sprintf( $html, $bg_img, $color_class, $body, $body_img );
 }
 
 function portal_link_card($url, $title) {
@@ -537,6 +571,12 @@ function portal_link_card($url, $title) {
 
 function portal_display_link_cards($color, $title, $cards, $content_type) {
 
+    $color_class = 'hue-green';
+    if ($color == 'Light pink') {
+        $color_class = 'hue-pink';
+    } elseif ($color == 'Hot pink') {
+        $color_class = 'hue-hot-pink';
+    }
     $cards_html = '';
     if ($content_type == 'Custom cards')
     {
@@ -555,7 +595,7 @@ function portal_display_link_cards($color, $title, $cards, $content_type) {
         }
     }
 
-    $html = '<div class="link-cards" %s>
+    $html = '<div class="link-cards %s">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -574,7 +614,7 @@ function portal_display_link_cards($color, $title, $cards, $content_type) {
             </div>
         </div>';
 
-    return sprintf( $html, $color, $title, $cards_html );
+    return sprintf( $html, $color_class, $title, $cards_html );
 }
 
 /**
@@ -588,7 +628,7 @@ function portal_display_link_cards($color, $title, $cards, $content_type) {
  * @param string $text
  * @return string
  */
-function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='', $theme_bg_color='', $text='' ) {
+function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newsletter='', $color='', $text='' ) {
 
     if (!empty($facebook) || !empty($twitter) || !empty($insatgram)) {
         if ( $facebook ) {
@@ -606,10 +646,11 @@ function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newslett
             $newsletter = '';
         }
 
-        $background_color = '';
-        if (!empty($theme_bg_color))
-        {
-            $background_color = ' style="background-color: '. $theme_bg_color . ';"';
+        $color_class = 'hue-green';
+        if ($color == 'Light pink') {
+            $color_class = 'hue-pink';
+        } elseif ($color == 'Hot pink') {
+            $color_class = 'hue-hot-pink';
         }
         if (!empty($text))
         {
@@ -618,7 +659,7 @@ function portal_connect_bar( $facebook='', $twitter='', $insatgram='', $newslett
             $title = 'Stay up-to-date with all our activity';
         }
 
-        $html =     '<div class="stay-up-to-date-bar"'.$background_color.'>
+        $html =     '<div class="stay-up-to-date-bar '.$color_class.'">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">

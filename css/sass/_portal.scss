@@ -53,7 +53,6 @@
   .stay-up-to-date-bar {
     padding: 0.7em 0;
     text-align: right;
-    background-color: $green;
     span {
       margin-right: 1em;
       @media (max-width: 480px) {
@@ -77,12 +76,10 @@
     background-repeat: no-repeat;
     .feature-banner-content{
       padding: 1em;
-      background-color: $tna_light;
     }
   }
   .link-cards {
     padding: 1.3em;
-    background-color: $tna_light;
     .link-cards-content{
       .row {
         display: -webkit-flex;

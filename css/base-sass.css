@@ -5788,6 +5788,11 @@ a#cookieCutter:hover {
   color: #26262a;
 }
 
+.hue-white {
+  background-color: #fff;
+  color: #26262a;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -7873,7 +7878,6 @@ a.content-card + .entry-content a.content-card + p a:hover {
 .portal-landing .stay-up-to-date-bar {
   padding: 0.7em 0;
   text-align: right;
-  background-color: #dde5d5;
 }
 .portal-landing .stay-up-to-date-bar span {
   margin-right: 1em;
@@ -7900,11 +7904,9 @@ a.content-card + .entry-content a.content-card + p a:hover {
 }
 .portal-landing .feature-banner .feature-banner-content {
   padding: 1em;
-  background-color: #eee;
 }
 .portal-landing .link-cards {
   padding: 1.3em;
-  background-color: #eee;
 }
 .portal-landing .link-cards .link-cards-content .row {
   display: -webkit-flex;
