@@ -77,7 +77,7 @@ $.fn.mega_menu_enhancements = function () {
 $.fn.append_promotional_image = function () {
     return this.each(function () {
         var $this = $(this);
-        $this.append('<li class="imgContent"><a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/with-love/" title="With Love"><img src="//www.nationalarchives.gov.uk/images/home/menu-with-love.jpg" alt="With Love" class="img-responsive tna-img-responsive"></a></li>');
+        $this.append('<li class="imgContent"><a href="https://www.nationalarchives.gov.uk/20s-people/" title="20s People"><img src="https://cdn.nationalarchives.gov.uk/images/20s-people-mega-menu-image.jpg" alt="20s People" class="img-responsive tna-img-responsive"></a></li>');
     })
 };
 
@@ -98,7 +98,8 @@ $(window).on({
     resize: function() {
         $.moreLinkFocusManager();
     }
-});;'use strict';
+});
+;'use strict';
 
 // Note:    This is a jQuery plugin and therefore has a dependency on jQuery being
 //          loaded before the script is run
