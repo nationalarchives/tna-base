@@ -28,8 +28,7 @@ function display_card( $args = '' ) {
 
     if ( $r['url'] ) {
 
-        if ( !url_exists( $r['url'] ) ) {
-
+        if ( !url_exists( $r['url'] && !strpos($r['url'], 'koha-ptfs' ) ) {
             // ext URL return 404
             return card_fallback( '', $r['id'] );
         }
