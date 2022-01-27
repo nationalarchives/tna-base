@@ -5,8 +5,8 @@
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/">Visit us</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/opening-times/">Opening times</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/">What’s on</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/venue-hire/">Venue hire</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/jobs/">Jobs</a></li>
+            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/exhibitions/">Exhibitions</a></li>
+            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/">Events</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/get-involved/">Get involved</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/news/">News</a></li>
             <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/commercial-opportunities/">Commercial opportunities</a></li>
