@@ -30,7 +30,7 @@ switch( $webchat ) {
 					Live chat
 				</h3>
 				<p>
-					For quick pointers<br>
+					For general enquiries and help with your research <br>
 					Tuesday to Saturday<br>
 					09:00 to 17:00
 				</p>
