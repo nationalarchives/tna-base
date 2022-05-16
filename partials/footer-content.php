@@ -36,6 +36,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
                     <li><a href="https://images.nationalarchives.gov.uk/">Image library</a></li>
                     <li><a href="<?php echo $site_url ?>/webarchive/">UK Government Web Archive</a></li>
                     <li><a href="http://www.legislation.gov.uk/" target="_blank" title="Opens a new window">Legislation.gov.uk <span class="sr-only">Opens a new window</span></a></li>
+                    <li><a href="https://caselaw.nationalarchives.gov.uk/">Find case law</a></li>
                     <li><a href="https://www.thegazette.co.uk/" target="_blank" title="Opens a new window">The Gazette <span class="sr-only">Opens a new window</span></a></li>
                 </ul>
             </div>
