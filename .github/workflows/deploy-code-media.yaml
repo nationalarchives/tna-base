@@ -1,0 +1,36 @@
+---
+name: Media Theme Deployment
+
+permissions:
+  id-token: write
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy-environment:
+        type: choice
+        description: Environment
+        required: true
+        default: "dev"
+        options:
+          - dev
+          - staging
+          - live
+      release:
+        type: string
+        description: Release
+        required: false
+        default: ""
+
+jobs:
+  deployment-run:
+    uses: nationalarchives/ds-github-actions/.github/workflows/media-theme-deploy.yml@main
+    with:
+      deploy-repo: "${{ github.event.repository.name }}"
+      deploy-environment: "${{ inputs.deploy-environment }}"
+      release: "${{ inputs.release }}"
+      branch: "${{ inputs.branch }}"
+    secrets:
+      AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN_DEV }}
+...
