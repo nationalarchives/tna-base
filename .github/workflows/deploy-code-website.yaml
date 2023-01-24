@@ -1,0 +1,60 @@
+---
+name: Website Theme Deployment
+
+permissions:
+  id-token: write
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy-environment:
+        type: choice
+        description: Environment
+        required: true
+        default: "dev"
+        options:
+          - dev
+          - staging
+          - live
+      release:
+        type: string
+        description: Release
+        required: false
+        default: ""
+
+jobs:
+  deployment-run-dev:
+    if: ${{ inputs.deploy-environment  == 'dev' }}
+    uses: nationalarchives/ds-github-actions/.github/workflows/website-theme-deploy.yml@main
+    with:
+      deploy-repo: "${{ github.event.repository.name }}"
+      deploy-environment: "${{ inputs.deploy-environment }}"
+      release: "${{ inputs.release }}"
+      branch: "${{ inputs.branch }}"
+      github-environment: "dev-deploy"
+    secrets:
+      AWS_ROLE_ARN: ${{ secrets.AWS_WEBSITE_ROLE_ARN_DEV }}
+  deployment-run-staging:
+    if: ${{ inputs.deploy-environment  == 'staging' }}
+    uses: nationalarchives/ds-github-actions/.github/workflows/website-theme-deploy.yml@main
+    with:
+      deploy-repo: "${{ github.event.repository.name }}"
+      deploy-environment: "${{ inputs.deploy-environment }}"
+      release: "${{ inputs.release }}"
+      branch: "${{ inputs.branch }}"
+      github-environment: "staging-deploy"
+    secrets:
+      AWS_ROLE_ARN: ${{ secrets.AWS_WEBSITE_ROLE_ARN_STAGING }}
+  deployment-run-live:
+    if: ${{ inputs.deploy-environment  == 'live' }}
+    uses: nationalarchives/ds-github-actions/.github/workflows/website-theme-deploy.yml@main
+    with:
+      deploy-repo: "${{ github.event.repository.name }}"
+      deploy-environment: "${{ inputs.deploy-environment }}"
+      release: "${{ inputs.release }}"
+      branch: "${{ inputs.branch }}"
+      github-environment: "live-deploy"
+    secrets:
+      AWS_ROLE_ARN: ${{ secrets.AWS_WEBSITE_ROLE_ARN_LIVE }}
+...
