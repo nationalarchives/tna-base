@@ -62,7 +62,8 @@ module.exports = function(grunt) {
           'js/cookie-notice.js',
           'js/image-caption.js',
           'js/tna-global.js',
-          'js/run-on-page-load.js'
+          'js/run-on-page-load.js',
+          'js/hid-search-box.js'
         ],
         dest: 'js/compiled/tna-base.js'
       }
