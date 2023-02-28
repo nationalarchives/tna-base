@@ -58,7 +58,7 @@ powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow
 	</div>
 	<div class="row sidebar-contact clearfix">
 		<div class="sidebar-item">
-			<div class="col-12">
+			<div class="col-sm-12">
                 <h3>Call us</h3>
 				<p>
                 For general (non-research) enquiries<br/>
