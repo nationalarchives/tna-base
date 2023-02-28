@@ -59,8 +59,9 @@ powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow
 	<div class="row sidebar-contact clearfix">
 		<div class="live-chat sidebar-item">
 			<div class="col-xs-8 col-sm-12 col-md-8">
+                <h3>Call us</h3>
 				<p>
-                Our information line is open for general (non-research) enquiries<br/>
+                For general (non-research) enquiries<br/>
                 Tuesday to Friday<br/>
                 14:00 to 16:00<br/>
                 020 8876 3444 
