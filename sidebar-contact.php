@@ -31,7 +31,7 @@ switch( $webchat ) {
 				</h3>
 				<p>
 					For quick pointers<br>
-					Tuesday to Saturday<br>
+					Tuesday to Saturday (excluding bank holiday weekends)<br>
 					09:00 to 17:00
 				</p>
 			</div>
