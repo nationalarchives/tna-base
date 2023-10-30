@@ -56,17 +56,4 @@ powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow
 			</div>
 		</div>
 	</div>
-	<div class="row sidebar-contact clearfix">
-		<div class="sidebar-item">
-			<div class="col-sm-12">
-                <h3>Call us</h3>
-				<p>
-                For general (non-research) enquiries<br/>
-                Tuesday to Friday<br/>
-                14:00 to 16:00<br/>
-                020 8876 3444 
-				</p>
-			</div>
-		</div>
-	</div>
 </aside>
