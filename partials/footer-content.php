@@ -24,6 +24,7 @@ $site_url = blog_footer_url( get_option('blog_type') )
                     <li><a href="<?php echo $site_url ?>/about/jobs/">Jobs and careers</a></li>
                     <li><a href="<?php echo $site_url ?>/about/get-involved/friends-of-the-national-archives/">Friends of The National
                             Archives</a>
+                    <li><a href="<?php echo $site_url ?>/about/the-national-archives-trust/">The National Archives Trust</a>
                     </li>
                 </ul>
             </div>
