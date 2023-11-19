@@ -1,4 +1,9 @@
 module.exports = function(grunt) {
+
+  var chromiumFlags = process.env.CI
+    ? ['--no-sandbox']
+    : (process.env.CHROMIUM_FLAGS || '').split(' ');
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -36,16 +41,18 @@ module.exports = function(grunt) {
       small: {
         src: ['js/tests/**/*.html'],
         options: {
-          page: {
-            viewportSize: { width: 300, height: 400 }
+          puppeteer: {
+            args: chromiumFlags,
+            defaultViewport: { width: 300, height: 400 }
           }
         }
       },
       large: {
         src: ['js/tests/**/*.html'],
         options: {
-          page: {
-            viewportSize: { width: 1024, height: 400 }
+          puppeteer: {
+            args: chromiumFlags,
+            defaultViewport: { width: 1024, height: 400 }
           }
         }
       }
