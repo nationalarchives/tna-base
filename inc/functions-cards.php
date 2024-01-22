@@ -28,7 +28,7 @@ function display_card( $args = '' ) {
 
     if ( $r['url'] ) {
 
-	if ( !strpos( $r['url'] , 'koha' ) || !strpos( $r['url'], 'doris.web.local' ) || !strpos( $r['url'], 'prologon.web.local' ) ) {
+	if ( !strpos( $r['url'] , 'koha' ) && !strpos( $r['url'], 'doris.web.local' ) && !strpos( $r['url'], 'prologon.web.local' ) ) {
             if ( !url_exists( $r['url']) ) {
                 // ext URL return 404
                 return card_fallback( '', $r['id'] );
