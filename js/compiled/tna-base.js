@@ -77,7 +77,7 @@ $.fn.mega_menu_enhancements = function () {
 $.fn.append_promotional_image = function () {
     return this.each(function () {
         var $this = $(this);
-        $this.append('<li class="imgContent"><a href="https://www.nationalarchives.gov.uk/20s-people/" title="20s People"><img src="https://cdn.nationalarchives.gov.uk/images/20s-people-mega-menu-image.jpg" alt="20s People" class="img-responsive tna-img-responsive"></a></li>');
+        $this.append('<li class="imgContent"><a href="https://www.nationalarchives.gov.uk/great-escapes/?utm_source=megamenu&utm_medium=banner" title="Great Escapes exhibition"><img src="https://cdn.nationalarchives.gov.uk/images/great-escapes-mega-menu-banner.jpg" alt="An illustrated picture of a watchtower looking over a prison camp, in charcoal and pink colour palette." class="img-responsive tna-img-responsive"></a></li>');
     })
 };
 
