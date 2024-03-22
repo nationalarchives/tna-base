@@ -48,8 +48,10 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
+                        <?php if ($intro_img){ ?>
                         <div class="intro-image" style="background-image: url(<?php echo $intro_img ?>);">
                         </div>
+        <?php }?>
                     </div>
                 </div>
             </div>
