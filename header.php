@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-gb" class="no-js">
+<html lang="en-gb" class="no-js tna-template tna-template--light-theme">
 
 <head>
     <meta charset="utf-8">
@@ -23,7 +23,7 @@
     ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('tna-template__body'); ?>>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8DSWV" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
