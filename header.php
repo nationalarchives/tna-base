@@ -43,7 +43,7 @@
         <div class="tna-container tna-global-header__main">
             <div class="tna-column tna-column--flex-1 tna-column--order-2">
                 <span class="tna-global-header__logo-wrapper">
-                    <a href="/" class="tna-global-header__logo" title="The National Archives">
+                    <a href="https://www.nationalarchives.gov.uk/" class="tna-global-header__logo" title="The National Archives">
                     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="tna-logo" viewBox="0 0 160 160" width="96" height="96">
                         <title>The National Archives</title>
                         <path fill="transparent" d="M0 0h160v160H0z" class="tna-logo__background" />
