@@ -1364,6 +1364,7 @@ th {
 }
 
 html {
+  font-size: 16px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -5610,6 +5611,7 @@ a#cookieCutter:hover {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: #26262a;
 }
