@@ -116,7 +116,7 @@
           </li>
           <li class="tna-footer__navigation-block-item">
             <a href="<?php echo $site_url ?>/about/jobs/" class="tna-footer__navigation-block-item-link">
-              Jobs and careers
+              Jobs
             </a>
           </li>
           <li class="tna-footer__navigation-block-item">
