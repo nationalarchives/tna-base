@@ -70,7 +70,7 @@
                         <a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/" class="tna-global-header__navigation-item-link" tabindex="0">What’s on</a>
                     </li>
                     <li class="tna-global-header__navigation-item">
-                        <a href="https://develop-sr3snxi-rasrzs7pi6sd4.uk-1.platformsh.site/" class="tna-global-header__navigation-item-link" tabindex="0">Explore the collection</a>
+                        <a href="https://develop-sr3snxi-rasrzs7pi6sd4.uk-1.platformsh.site/explore-the-collection/" class="tna-global-header__navigation-item-link" tabindex="0">Explore the collection</a>
                     </li>
                     <li class="tna-global-header__navigation-item">
                         <a href="https://www.nationalarchives.gov.uk/help-with-your-research/" class="tna-global-header__navigation-item-link" tabindex="0">Using the archive</a>
