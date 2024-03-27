@@ -189,27 +189,27 @@
     <nav class="tna-footer__legal tna-column tna-column--full" role="navigation" aria-label="Legal">
       <ul class="tna-footer__legal-items tna-ul tna-ul--plain">
         <li class="tna-footer__legal-item">
-          <a href="#/accessibility" class="tna-footer__legal-item-link">
+          <a href="/help/web-accessibility/" class="tna-footer__legal-item-link">
             Accessibility statement
           </a>
         </li>
         <li class="tna-footer__legal-item">
-          <a href="#/freedom-of-information" class="tna-footer__legal-item-link">
+          <a href="/about/freedom-of-information/" class="tna-footer__legal-item-link">
             Freedom of information
           </a>
         </li>
         <li class="tna-footer__legal-item">
-          <a href="#/terms-and-conditions" class="tna-footer__legal-item-link">
+          <a href="/legal/" class="tna-footer__legal-item-link">
             Terms and conditions
           </a>
         </li>
         <li class="tna-footer__legal-item">
-          <a href="#/privacy" class="tna-footer__legal-item-link">
+          <a href="/legal/privacy.htm" class="tna-footer__legal-item-link">
             Privacy policy
           </a>
         </li>
         <li class="tna-footer__legal-item">
-          <a href="#/cookies" class="tna-footer__legal-item-link">
+          <a href="/legal/cookies/" class="tna-footer__legal-item-link">
             Cookies
           </a>
         </li>
