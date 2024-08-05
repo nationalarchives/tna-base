@@ -8,7 +8,7 @@ function tna_styles() {
 	wp_register_style( 'tna-styles', get_template_directory_uri() . '/css/base-sass.min.css', array(), EDD_VERSION, 'all' );
 	wp_register_style( 'tna-google-fonts',
 		'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Roboto+Mono:400,700&display=swap', '', '', 'all' );
-	wp_register_style( 'tna-frontend', get_template_directory_uri() . '/css/tna-frontend-global-header-package.css', array(), '0.1.48', 'all' );
+	wp_register_style( 'tna-frontend', get_template_directory_uri() . '/css/tna-frontend-global-header-package.css', array(), '0.2.6', 'all' );
 	wp_enqueue_style( 'tna-styles' );
 	wp_enqueue_style( 'tna-google-fonts' );
 	wp_enqueue_style( 'tna-frontend' );
@@ -18,8 +18,8 @@ function tna_scripts() {
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr.js', array(), '2.8.3', false );
 	wp_register_script( 'tna-base-min', get_template_directory_uri() . '/js/compiled/tna-base.min.js', array(), EDD_VERSION, true );
 	wp_register_script( 'tna-components', 'https://cdn.nationalarchives.gov.uk/react-components/dist/website-1.1.8.js', array(), EDD_VERSION, true );
-	wp_register_script( 'tna-frontend', get_template_directory_uri() . '/js/lib/tna-frontend.js', array(), '0.1.48', true );
-	wp_register_script( 'tna-frontend-analytics', get_template_directory_uri() . '/js/lib/tna-frontend-analytics.js', array(), '0.1.48', true );
+	wp_register_script( 'tna-frontend', get_template_directory_uri() . '/js/lib/tna-frontend.js', array(), '0.2.6', true );
+	wp_register_script( 'tna-frontend-analytics', get_template_directory_uri() . '/js/lib/tna-frontend-analytics.js', array(), '0.2.6', true );
 	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php') || is_category() ) {
 		wp_register_script( 'equal-heights', get_template_directory_uri() . '/js/lib/jQuery.equalHeights.js', array(),
 			EDD_VERSION, true );
