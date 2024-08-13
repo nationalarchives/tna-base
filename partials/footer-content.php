@@ -179,7 +179,7 @@
             Hear about our latest news, stories from the collection and priority booking for events.
           </p>
           <div class="tna-button-group">
-            <a href="https://pages.enews.nationalarchives.gov.uk/pages/subscribe" class="tna-button tna-button--accent">
+            <a href="https://pages.enews.nationalarchives.gov.uk/pages/subscribe" class="tna-button">
               Subscribe
             </a>
           </div>
