@@ -236,4 +236,5 @@ $(document).ready(function () {
 if (window.location.href.indexOf("/webarchive") != -1) {
     document.getElementById("global-search-desktop-component").style.display = "none";
     document.getElementById("global-search-mobile-component").style.display = "none";
+    document.getElementById("tna-header__top-navigation").style.display = "none";
 }
