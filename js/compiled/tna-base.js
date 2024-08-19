@@ -233,8 +233,15 @@ $(document).ready(function () {
  * Hiding the search box in the header for the /webarchives pages
  * */
 
+function hideElementByIdIfExists(id) {
+    const $el = document.getElementById(id)
+    if($el) {
+        $el.style.display = "none";
+    }
+}
+
 if (window.location.href.indexOf("/webarchive") != -1) {
-    document.getElementById("global-search-desktop-component").style.display = "none";
-    document.getElementById("global-search-mobile-component").style.display = "none";
-    document.getElementById("tna-header__top-navigation").style.display = "none";
+    hideElementByIdIfExists("global-search-desktop-component")
+    hideElementByIdIfExists("global-search-mobile-component")
+    hideElementByIdIfExists("tna-header__top-navigation")
 }
