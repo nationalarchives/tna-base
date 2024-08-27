@@ -105,3 +105,6 @@
             </nav>
         </div>
     </header>
+    <div aria-hidden="true" tabindex="-1" hidden>
+        <?php include 'inc/global-search-desktop.php' ?>
+    </div>
