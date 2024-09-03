@@ -31,7 +31,7 @@ function tna_scripts() {
 	wp_enqueue_script( 'global-jquery' );
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'tna-base-min' );
-	wp_enqueue_script( 'tna-components' );
+	// wp_enqueue_script( 'tna-components' );
 	wp_enqueue_script( 'tna-frontend' );
 	wp_enqueue_script( 'tna-frontend-analytics' );
 }
