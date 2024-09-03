@@ -12,7 +12,7 @@
 		}
 	}
 	if(window.TNAFrontendAnalytics && window.TNAFrontendAnalytics.GA4) {
-		new TNAFrontendAnalytics.GA4({ addTrackingCode: false, domain:  })
+		new TNAFrontendAnalytics.GA4({ addTrackingCode: false })
 	}
 </script>
 
