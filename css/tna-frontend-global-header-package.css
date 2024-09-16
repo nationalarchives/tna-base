@@ -6,7 +6,12 @@ a.tna-link--no-visited-state:visited{color:var(--link, #005fa3)}small{font-size:
 
 .tna-global-header *,.tna-footer__inner *{color:inherit}
 
-.tna-global-header a:not(.tna-button),.tna-footer a:not(.tna-button){text-decoration:none;text-decoration-thickness:1.5px}.tna-global-header a:not(.tna-button),.tna-global-header a:not(.tna-button):link,.tna-footer a:not(.tna-button),.tna-footer a:not(.tna-button):link{color:var(--link, #005fa3) !important}.tna-global-header a:not(.tna-button):visited,.tna-footer a:not(.tna-button):visited{color:var(--link-visited, #4c2c92)}.tna-global-header a:not(.tna-button):hover,.tna-global-header a:not(.tna-button):active,.tna-footer a:not(.tna-button):hover,.tna-footer a:not(.tna-button):active{text-decoration:underline;text-decoration-thickness:3.5px;background:none !important;outline:none}.tna-global-header a:not(.tna-button):focus,.tna-footer a:not(.tna-button):focus{background:none !important}.tna-global-header a:not(.tna-button):hover:focus,.tna-footer a:not(.tna-button):hover:focus{color:unset !important;background:unset !important}.tna-global-header a:not(.tna-button).tna-link--no-visited-state:visited,.tna-footer a:not(.tna-button).tna-link--no-visited-state:visited{color:var(--link, #005fa3)}
+.tna-global-header a:not(.tna-button),.tna-footer a:not(.tna-button){text-decoration:none;text-decoration-thickness:1.5px}
+
+.tna-global-header a:not(.tna-button),.tna-global-header a:not(.tna-button):link,.tna-footer a:not(.tna-button),.tna-footer a:not(.tna-button):link{color:var(--base-font, #005fa3) !important}
+.tna-global-header a:not(.tna-button):visited,.tna-footer a:not(.tna-button):visited{color:var(--base-font, #4c2c92)}
+
+.tna-global-header a:not(.tna-button):hover,.tna-global-header a:not(.tna-button):active,.tna-footer a:not(.tna-button):hover,.tna-footer a:not(.tna-button):active{text-decoration:underline;text-decoration-thickness:3.5px;background:none !important;outline:none}.tna-global-header a:not(.tna-button):focus,.tna-footer a:not(.tna-button):focus{background:none !important}.tna-global-header a:not(.tna-button):hover:focus,.tna-footer a:not(.tna-button):hover:focus{color:unset !important;background:unset !important}.tna-global-header a:not(.tna-button).tna-link--no-visited-state:visited,.tna-footer a:not(.tna-button).tna-link--no-visited-state:visited{color:var(--link, #005fa3)}
 
 #ds-cookie-consent-banner {
     padding: 0 !important;
