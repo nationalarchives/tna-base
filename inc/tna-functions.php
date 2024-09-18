@@ -17,7 +17,7 @@ function tna_scripts() {
 	wp_register_script( 'global-jquery', get_template_directory_uri() . '/js/lib/jquery-1.11.3.min.js', array(), '1.11.3' );
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/lib/modernizr.js', array(), '2.8.3', false );
 	wp_register_script( 'tna-base-min', get_template_directory_uri() . '/js/compiled/tna-base.min.js', array(), EDD_VERSION, true );
-	wp_register_script( 'tna-components', 'https://cdn.nationalarchives.gov.uk/react-components/dist/website-1.1.8.js', array(), EDD_VERSION, true );
+	// wp_register_script( 'tna-components', 'https://cdn.nationalarchives.gov.uk/react-components/dist/website-1.1.8.js', array(), EDD_VERSION, true );
 	wp_register_script( 'tna-frontend', get_template_directory_uri() . '/js/lib/tna-frontend.js', array(), '0.2.6', true );
 	wp_register_script( 'tna-frontend-analytics', get_template_directory_uri() . '/js/lib/tna-frontend-analytics.js', array(), '0.2.10-prerelease', true );
 	if ( is_page_template( 'page-section-landing.php' ) || is_page_template( 'page-level-1-landing.php') || is_category() ) {
@@ -31,7 +31,7 @@ function tna_scripts() {
 	wp_enqueue_script( 'global-jquery' );
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'tna-base-min' );
-	wp_enqueue_script( 'tna-components' );
+	// wp_enqueue_script( 'tna-components' );
 	wp_enqueue_script( 'tna-frontend' );
 	wp_enqueue_script( 'tna-frontend-analytics' );
 }
