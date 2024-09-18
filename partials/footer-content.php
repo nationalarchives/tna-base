@@ -190,27 +190,27 @@
       <nav class="tna-footer__legal tna-column tna-column--full" role="navigation" aria-label="Legal">
         <ul class="tna-footer__legal-items tna-ul tna-ul--plain">
           <li class="tna-footer__legal-item">
-            <a href="/help/web-accessibility/" class="tna-footer__legal-item-link">
+            <a href="https://www.nationalarchives.gov.uk/help/web-accessibility/" class="tna-footer__legal-item-link">
               Accessibility statement
             </a>
           </li>
           <li class="tna-footer__legal-item">
-            <a href="/about/freedom-of-information/" class="tna-footer__legal-item-link">
+            <a href="https://www.nationalarchives.gov.uk/about/freedom-of-information/" class="tna-footer__legal-item-link">
               Freedom of information
             </a>
           </li>
           <li class="tna-footer__legal-item">
-            <a href="/legal/" class="tna-footer__legal-item-link">
+            <a href="https://www.nationalarchives.gov.uk/legal/" class="tna-footer__legal-item-link">
               Terms and conditions
             </a>
           </li>
           <li class="tna-footer__legal-item">
-            <a href="/legal/privacy.htm" class="tna-footer__legal-item-link">
+            <a href="https://www.nationalarchives.gov.uk/legal/privacy.htm" class="tna-footer__legal-item-link">
               Privacy policy
             </a>
           </li>
           <li class="tna-footer__legal-item">
-            <a href="/legal/cookies/" class="tna-footer__legal-item-link">
+            <a href="https://www.nationalarchives.gov.uk/legal/cookies/" class="tna-footer__legal-item-link">
               Cookies
             </a>
           </li>
