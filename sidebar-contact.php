@@ -23,10 +23,9 @@ switch( $webchat ) {
 		</h2>
 	</div>
 	<div class="row sidebar-contact clearfix">
-		<div class="live-chat sidebar-item">
+		<div class="live-chat sidebar-item" id="livechat">
 			<div class="col-xs-8 col-sm-12 col-md-8">
 				<h3>
-					<a id="livechat" class="anchor" href="#livechat" aria-hidden="true"></a>
 					Live chat
 				</h3>
 				<p>
