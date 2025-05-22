@@ -149,7 +149,7 @@
             </li>
             <li class="tna-footer__navigation-block-item">
               <a href="https://caselaw.nationalarchives.gov.uk/" class="tna-footer__navigation-block-item-link">
-                Find case law
+                Find Case Law
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
