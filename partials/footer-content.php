@@ -159,6 +159,11 @@
                 Friends of The National Archives
               </a>
             </li>
+            <li class="tna-footer__navigation-block-item">
+              <a href="https://design-system.nationalarchives.gov.uk/" class="tna-footer__navigation-block-item-link">
+                The National Archives Design System
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
