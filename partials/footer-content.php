@@ -73,22 +73,22 @@
           </h3>
           <ul class="tna-footer__navigation-block-items tna-ul tna-ul--plain">
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/about/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/about/" class="tna-footer__navigation-block-item-link">
                 About us
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/contact-us/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/contact-us/" class="tna-footer__navigation-block-item-link">
                 Contact us
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/about/news/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/about/news/" class="tna-footer__navigation-block-item-link">
                 News
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="https://blog.nationalarchives.gov.uk/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/blogs/" class="tna-footer__navigation-block-item-link">
                 Blog
               </a>
             </li>
@@ -103,22 +103,22 @@
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/about/press-room/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/about/press-room/" class="tna-footer__navigation-block-item-link">
                 Press room
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/about/jobs/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/about/jobs/" class="tna-footer__navigation-block-item-link">
                 Jobs
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/contact-us/british-citizenship-services/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/contact-us/british-citizenship-services/" class="tna-footer__navigation-block-item-link">
                 British citizenship services
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/archives-sector/our-archives-sector-role/historical-manuscripts-commission/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/archives-sector/our-archives-sector-role/historical-manuscripts-commission/" class="tna-footer__navigation-block-item-link">
                 Historical Manuscripts Commission
               </a>
             </li>
@@ -130,7 +130,7 @@
           </h3>
           <ul class="tna-footer__navigation-block-items tna-ul tna-ul--plain">
             <li class="tna-footer__navigation-block-item">
-              <a href="<?php echo $site_url ?>/webarchive/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/webarchive/" class="tna-footer__navigation-block-item-link">
                 UK Government Web Archive
               </a>
             </li>
@@ -223,7 +223,7 @@
         </svg>
       </div>
       <div class="tna-column tna-column--flex-1">
-        <p>All content is available under the <a href="<?php echo $site_url ?>/doc/open-government-licence/version/3/" class="tna-footer__link">Open Government Licence v3.0</a>, except where otherwise stated</p>
+        <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="tna-footer__link">Open Government Licence v3.0</a>, except where otherwise stated</p>
       </div>
       <div class="tna-column tna-column--full-small tna-column--full-tiny tna-footer__govuk">
         <a href="https://www.gov.uk/" class="tna-footer__govuk-link">
