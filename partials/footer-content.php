@@ -89,7 +89,7 @@
             </li>
             <li class="tna-footer__navigation-block-item">
               <a href="https://www.nationalarchives.gov.uk/blogs/" class="tna-footer__navigation-block-item-link">
-                Blog
+                Blogs
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
