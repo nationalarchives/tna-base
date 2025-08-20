@@ -339,7 +339,7 @@ function is_card_active( $expire ) {
  */
 function card_fallback( $fallback, $id ) {
 
-    $url = 'https://www.nationalarchives.gov.uk/about/visit-us/whats-on/events/';
+    $url = 'https://www.nationalarchives.gov.uk/whats-on/events/';
     $image = make_path_relative_no_pre_path( get_template_directory_uri().'/img/events.jpg' );
     $type = 'Events';
     $title = 'Events at The National Archives';

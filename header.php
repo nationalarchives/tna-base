@@ -67,7 +67,7 @@
                         <a href="https://www.nationalarchives.gov.uk/about/visit-us/" class="tna-global-header__navigation-item-link" tabindex="0">Visit</a>
                     </li>
                     <li class="tna-global-header__navigation-item">
-                        <a href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/" class="tna-global-header__navigation-item-link" tabindex="0">What’s on</a>
+                        <a href="https://www.nationalarchives.gov.uk/whats-on/" class="tna-global-header__navigation-item-link" tabindex="0">What’s on</a>
                     </li>
                     <li class="tna-global-header__navigation-item">
                         <a href="https://www.nationalarchives.gov.uk/explore-the-collection/" class="tna-global-header__navigation-item-link" tabindex="0">Explore the collection</a>

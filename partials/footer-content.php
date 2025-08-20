@@ -93,8 +93,8 @@
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="https://media.nationalarchives.gov.uk/index.php/category/podcasts-2/" class="tna-footer__navigation-block-item-link">
-                Podcasts
+              <a href="https://www.nationalarchives.gov.uk/explore-the-collection/on-the-record-podcast/" class="tna-footer__navigation-block-item-link">
+                Podcast
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
@@ -207,7 +207,7 @@
             </a>
           </li>
           <li class="tna-footer__legal-item">
-            <a href="https://www.nationalarchives.gov.uk/legal/cookies/" class="tna-footer__legal-item-link">
+            <a href="https://www.nationalarchives.gov.uk/cookies/" class="tna-footer__legal-item-link">
               Cookies
             </a>
           </li>
