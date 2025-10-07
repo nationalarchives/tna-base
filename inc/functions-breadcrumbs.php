@@ -92,7 +92,7 @@ function dimox_breadcrumbs() {
 				while ($parent_id) {
 					$page = get_page($parent_id);
 					if ($parent_id != $frontpage_id) {
-						$breadcrumbs[] = sprintf($link, str_replace(home_url(), $pre_path, get_permalink($page->ID)), get_the_title($page->ID));
+						$breadcrumbs[] = sprintf($link, str_replace(home_url(), $pre_path ?? '', get_permalink($page->ID)), get_the_title($page->ID));
 					}
 					$parent_id = $page->post_parent;
 				}

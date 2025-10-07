@@ -18,7 +18,7 @@ function make_path_relative( $url ) {
 	global $cloud;
 	if (!$cloud && function_exists('site_url')) {
 		global $pre_path;
-		return str_replace( site_url(), $pre_path, $url );
+		return str_replace( site_url(), $pre_path ?? '', $url );
 	} else {
 		return $url;
 	}
@@ -54,7 +54,7 @@ function make_content_urls_relative( $content ) {
 	global $cloud;
 	if (!$cloud) {
 		global $pre_path;
-		return str_replace( site_url(), $pre_path, $content );
+		return str_replace( site_url(), $pre_path ?? '', $content );
 	} else {
 		return $content;
 	}
