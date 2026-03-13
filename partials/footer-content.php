@@ -83,7 +83,7 @@
               </a>
             </li>
             <li class="tna-footer__navigation-block-item">
-              <a href="https://www.nationalarchives.gov.uk/about/news/" class="tna-footer__navigation-block-item-link">
+              <a href="https://www.nationalarchives.gov.uk/news/" class="tna-footer__navigation-block-item-link">
                 News
               </a>
             </li>
@@ -192,7 +192,7 @@
             </a>
           </li>
           <li class="tna-footer__legal-item">
-            <a href="https://www.nationalarchives.gov.uk/about/freedom-of-information/" class="tna-footer__legal-item-link">
+            <a href="https://www.nationalarchives.gov.uk/freedom-of-information/" class="tna-footer__legal-item-link">
               Freedom of information
             </a>
           </li>
